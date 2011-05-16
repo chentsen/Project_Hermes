@@ -1,0 +1,16 @@
+<form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
+	method = "<?=$this->element->getMethod() ?>">
+
+<div>
+<p>
+Email: <?=$this->element->email;?>
+</p>
+<p>
+Password: <?=$this->element->password; ?>
+</p>
+<p>
+<?= $this->element->login; ?>
+</p>
+</div>
+	
+</form>
