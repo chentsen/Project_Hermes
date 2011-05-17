@@ -1,0 +1,21 @@
+<form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
+	method = "<?=$this->element->getMethod() ?>">
+	
+<p> Register here..</p>
+
+<p> Email: <?= $this->element->email; ?> </p>
+
+<p> First Name: <?= $this->element->firstName; ?></p>
+
+<p> Last Name: <?= $this->element->lastName; ?></p>
+
+<p> City: <?= $this->element->city; ?> </p>
+
+<p> Gender: <?= $this->element->gender; ?> </p>
+
+<p> Password: <?= $this->element->password; ?> </p>
+
+<p> Re-Enter Password: <?= $this->element->password2; ?> </p>
+<p><?= $this->element->register; ?>
+
+</form>

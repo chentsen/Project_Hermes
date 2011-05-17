@@ -9,6 +9,7 @@ class Application_Form_Login extends Zend_Form
     }
     public function __construct($options = null){
     	parent::__construct($options);
+    	
     	$this->setName('login');
 		$this->setAction('/login/login');
 		$this->setMethod('post');
