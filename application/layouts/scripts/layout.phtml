@@ -3,12 +3,13 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title><?= $this->pageTitle; ?></title>
-  <?php echo $this->headLink()->appendStylesheet('/Project_Hermes/public/css/hermesv1.css') ?>
+ 	
+  <?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/hermesv1.css')); ?>
 </head>
 <body>
 	<div id="header_area">
 		<div class="page">
-		<div id="logo"><h1><image src="/Project_Hermes/public/images/logo.png" /></h1></div>
+		<div id="logo"><h1><img src= "<?= $this->baseUrl('images/logo.png') ?>" /></h1></div>
 			<div id="mini_menu">
 				<ul>
 					<li>Sign Up</li>
