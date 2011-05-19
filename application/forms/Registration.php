@@ -49,6 +49,7 @@ class Application_Form_Registration extends Zend_Form
 		
 			
 		$register = new Zend_Form_Element_Submit('register');
+		$register->removeDecorator('DtDdWrapper');
 		
 		$this->addElements(array($firstName,$lastName,$email,$city,$password,$password2,$register,$gender));
 		
