@@ -128,9 +128,9 @@ class HydratorFactory
      * @param string $className
      * @return Doctrine\ODM\MongoDB\Hydrator\HydratorInterface $hydrator
      */
-    public function getHydratorFor($className)
+    public function getHydratorFor($className)  
     {
-        if (isset($this->hydrators[$className])) {
+    	if (isset($this->hydrators[$className])) {
             return $this->hydrators[$className];
         }
         $hydratorClassName = str_replace('\\', '', $className) . 'Hydrator';
