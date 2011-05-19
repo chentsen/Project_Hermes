@@ -1,2 +1,40 @@
-
-<?php echo $this->layout()->content; ?>
+<?php echo $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title><?= $this->pageTitle; ?></title>
+  <?php echo $this->headLink()->appendStylesheet('/Project_Hermes/public/css/hermesv1.css') ?>
+</head>
+<body>
+	<div id="header_area">
+		<div class="page">
+		<div id="logo"><h1><image src="/Project_Hermes/public/images/logo.png" /></h1></div>
+			<div id="mini_menu">
+				<ul>
+					<li>Sign Up</li>
+					<li>Login</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+ 	<div id="content_area">
+ 		<div class="page">
+		<?php echo $this->layout()->content ?>
+		</div>
+	</div>	
+	<div id="footer_area">
+		<div class="page">
+			<div id="footer_menu">
+			<ul>
+				<li>About Us</li>
+				<li>Contact Us</li>
+				<li>Privacy Policy</li>
+				<li>Terms & Conditions</li>
+				<li>Sitemap</li>
+			</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
