@@ -10,10 +10,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         return $container;
     }
      protected function _initDefaultModuleAutoloader(){	
-    	$resourceLoader = new Zend_Loader_Autoloader_Resource(array(
-    'basePath'  => APPLICATION_PATH.'/models/documents/',
-    'namespace' => 'Documents',
-));
+    
     	
 	}
     	
