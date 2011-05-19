@@ -1,17 +1,12 @@
 <form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
 	method = "<?=$this->element->getMethod() ?>">
 
-<div>
-<p>
-Email: <?=$this->element->email;?>
-</p>
-<p>
-Password: <?=$this->element->password; ?>
-</p>
-<p>
-<?= $this->element->login; ?>
-</p>
+<div id="registration">
+<ul>
+	<li><div class="form_text">Email:</div><div class="form_element"><?= $this->element->email; ?></div></li>
+	<li><div class="form_text">Password:</div><div class="form_element"><?= $this->element->password; ?></div></li>
+	<li><div class="form_submit"><?= $this->element->login; ?> or <a href ="<?= $this->url(array('controller'=>'registration','action'=>'index'));?>">Register</a></div></li>
+	<li>
+</ul>
 </div>
-
-	
 </form>

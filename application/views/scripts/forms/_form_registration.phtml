@@ -1,21 +1,16 @@
 <form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
 	method = "<?=$this->element->getMethod() ?>">
 	
-<p> Register here..</p>
 
-<p> Email: <?= $this->element->email; ?> </p>
-
-<p> First Name: <?= $this->element->firstName; ?></p>
-
-<p> Last Name: <?= $this->element->lastName; ?></p>
-
-<p> City: <?= $this->element->city; ?> </p>
-
-<p> Gender: <?= $this->element->gender; ?> </p>
-
-<p> Password: <?= $this->element->password; ?> </p>
-
-<p> Re-Enter Password: <?= $this->element->password2; ?> </p>
-<p><?= $this->element->register; ?>
-
+<div id="registration">
+<ul>
+	<li><div class="form_text">Email:</div><div class="form_element"><?= $this->element->email; ?></div></li>
+	<li><div class="form_text">First Name:</div><div class="form_element"><?= $this->element->firstName; ?></div></li>
+	<li><div class="form_text">Last Name:</div><div class="form_element"><?= $this->element->lastName; ?></div></li>
+	<li><div class="form_text">City:</div><div class="form_element"><?= $this->element->city; ?></div></li>
+	<li><div class="form_text">Gender:</div><div class="form_element"><?= $this->element->gender; ?></div></li>
+	<li><div class="form_text">Password:</div><div class="form_element"><?= $this->element->password; ?></div></li>
+	<li><div class="form_text">Password Again:</div><div class="form_element"><?= $this->element->password2; ?></div></li>
+	<li><div class="form_submit"><?= $this->element->register; ?> or <a href ="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">Login</a></div></li>
 </form>
+</div>
