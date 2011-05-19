@@ -6,6 +6,10 @@ class RegistrationController extends Zend_Controller_Action
     public function init()
     {
 		$this->view->pageTitle = 'Register';
+    	$bootstrap = $this->getInvokeArg('bootstrap');
+    	$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
+    	
+		$this->userSettings = new Application_Model_UserSettings($this->mongoContainer);
     	/* Initialize action controllers here */
     }
 
@@ -15,11 +19,16 @@ class RegistrationController extends Zend_Controller_Action
     	$form = new Application_Form_Registration();
 		$form->addIdentical($_POST['password']);
 		if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
-			$this->view->successMessage = "Success!";
+			if($this->userSettings->register($this->_request->getPost())){
+				$this->view->successMessage ='SUCCESS';
+				// redirect to some page and fire off email and return
+				return;			
+			}
+			else{
+				//retrieve error message from application.ini here and add it to the view
+			}
 		}
-		else{
 			$this->view->form = $form;
-		}
     	// action body
     }
 
