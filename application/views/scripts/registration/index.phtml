@@ -3,6 +3,8 @@
 <h1><?= $this->pageTitle; ?></h1>	
 
 <p>
+<!-- errors formatted with the div id "errors" -->
+<?= $this->Errors($this->errors); ?>
 <?= $this->form; ?>	
 <br /> 
 <?= $this->successMessage; ?>

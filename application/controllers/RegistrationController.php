@@ -25,8 +25,13 @@ class RegistrationController extends Zend_Controller_Action
 				return;			
 			}
 			else{
+				$this->view->errors = array("emailExists"=>array("This email is already registered with a user account. Forgot your password? No worries, click here"));
 				//retrieve error message from application.ini here and add it to the view
 			}
+		}
+		else{
+			$this->view->errors = $form->getMessages();
+			
 		}
 			$this->view->form = $form;
     	// action body

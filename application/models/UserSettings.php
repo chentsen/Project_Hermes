@@ -1,7 +1,7 @@
 <?php
 //use bootstrap later
-//require_once('documents/User.php');
-//require_once('repositories/User.php');
+require_once('documents/User.php');
+require_once('repositories/User.php');
 use Documents\User;
 class Application_Model_UserSettings{
 	private $user;
