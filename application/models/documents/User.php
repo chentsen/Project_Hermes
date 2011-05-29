@@ -45,6 +45,9 @@ class User{
 	public function setConfirmation($randomHash){
 		$this->confirmation = $randomHash;
 	}
+	public function getConfirmation(){
+		return $this->confirmation;
+	}
 	
 				
 }

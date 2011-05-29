@@ -11,7 +11,7 @@ class Application_Model_UserSettings{
 	}
 	
 	
-	//returns boolean if fails, otherwise returns true
+	//returns boolean if fails, otherwise returns the activation code
 	public function register($userInfo){
 		//if email doesnt exist then serialize and return true
 		
@@ -32,7 +32,7 @@ class Application_Model_UserSettings{
 			$user->setConfirmation($randomHash);
 			$this->dm->persist($user);
 			$this->dm->flush();
-			return true;
+			return $user->getConfirmation();
 		}
 		else{
 			return false;
@@ -40,6 +40,18 @@ class Application_Model_UserSettings{
 	}
 	private function encryptPassword(){
 		
+	}
+	public function confirmAccount($key){
+		$foundUser = $this->dm->getRepository('Documents\User')->findOneBy(array('confirmation' => $key));
+		if($foundUser){
+				$foundUser->setConfirmation(null);
+				$this->dm->persist($foundUser);
+				$this->dm->flush();
+				return true;
+		}		
+		else{
+			return false;
+		}
 	}
 }
 

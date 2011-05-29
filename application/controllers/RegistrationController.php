@@ -10,6 +10,8 @@ class RegistrationController extends Zend_Controller_Action
     	$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
     	
 		$this->userSettings = new Application_Model_UserSettings($this->mongoContainer);
+    	$this->url = Zend_Registry::get('config')->siteInformation->url;
+    	
     	/* Initialize action controllers here */
     }
 
@@ -19,8 +21,21 @@ class RegistrationController extends Zend_Controller_Action
     	$form = new Application_Form_Registration();
 		$form->addIdentical($_POST['password']);
 		if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
-			if($this->userSettings->register($this->_request->getPost())){
+			$activationCode = $this->userSettings->register($this->_request->getPost());
+			//returns either false for unsuccessful serialization, or the activationCode
+			if($activationCode){
 				$this->view->successMessage ='SUCCESS';
+				$mail = new Zend_Mail();
+				$htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_confirm_registration.phtml',
+																	  array('name'=>$_POST['firstName'],
+																	 'activationUrl'=>$this->url,
+																	 'activationCode'=>$activationCode));
+				//$this->view->htmlBody = $htmlBody;
+				$mail->setBodyHtml($htmlBody);
+				$mail->setFrom('admin@plumetype.com', 'Andy');
+				$mail->addTo($_POST['email']);
+				$mail->setSubject('Confirm your registration with plumetype');
+				$mail->send();
 				// redirect to some page and fire off email and return
 				return;			
 			}

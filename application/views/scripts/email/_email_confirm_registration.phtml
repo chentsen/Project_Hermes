@@ -1,0 +1,17 @@
+<html>
+	<body>
+		Dear <?= $this->inputs['name'] ?> , <br />
+		Thank you for signing up to Project Hermes. 
+		<br />
+		Confirm your email by clicking on the link below
+		<br />
+		<a href = "
+				<?= $this->inputs['activationUrl'].
+					$this->url(array('controller'=>'account',
+						'action'=>'confirm',
+						'key'=>$this->inputs['activationCode']))?>">
+				Confirm Registration</a>
+		
+		
+	</body>
+</html>
