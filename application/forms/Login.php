@@ -11,12 +11,16 @@ class Application_Form_Login extends Zend_Form
     	parent::__construct($options);
     	
     	$this->setName('login');
-		$this->setAction('/login/login');
+		$this->setAction('/index/index');
 		$this->setMethod('post');
 		$email = new Zend_Form_Element_Text('email');
 		$email->setRequired(true)
 			  ->removeDecorator('label')
-			  ->removeDecorator('htmlTag');
+			  ->removeDecorator('htmlTag')
+			  ->addValidator("EmailAddress",true,array('messages'=>
+			  											array('emailAddressInvalidFormat' => 
+			  												  'Please enter a valid email address. EX: jane@emailaddress.com')));
+			  										
 		
 		$password = new Zend_Form_Element_Password('password');
 		$password->setRequired(true)
@@ -31,6 +35,7 @@ class Application_Form_Login extends Zend_Form
 		$this->setDecorators(array(array('ViewScript',array('viewScript'=>'_form_login.phtml'))));
 		
 		$this->addElements(array($email,$password,$login));
+		$this->setElementDecorators(array('ViewHelper'),null,false);
     	/* Form Elements & Other Definitions Here ... */
     }
 

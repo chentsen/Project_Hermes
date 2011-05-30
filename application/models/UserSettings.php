@@ -1,7 +1,7 @@
 <?php
 //use bootstrap later
-require_once('documents/User.php');
-require_once('repositories/User.php');
+//require_once('Documents/User.php');
+//require_once('repositories/User.php');
 use Documents\User;
 class Application_Model_UserSettings{
 	private $user;
@@ -44,11 +44,43 @@ class Application_Model_UserSettings{
 	public function confirmAccount($key){
 		$foundUser = $this->dm->getRepository('Documents\User')->findOneBy(array('confirmation' => $key));
 		if($foundUser){
-				$foundUser->setConfirmation(null);
+				$foundUser->setConfirmation("confirmed");
 				$this->dm->persist($foundUser);
 				$this->dm->flush();
 				return true;
 		}		
+		else{
+			return false;
+		}
+	}
+	public function authenticateUser($email,$password){
+		//get the correct mongoDB url and also
+		$m = new Mongo(Zend_Registry::get('config')->siteInformation->mongoDB);
+		// connect
+		
+		$usersCollection = $m->selectCollection("doctrine","users");
+	
+		//print_r(iterator_to_array($usersCollection->find()));
+		//echo $usersCollection;
+		$authAdapter = new Zend_Auth_Adapter_MongoDB($usersCollection, '_id',"password",null);
+		$authAdapter->setIdentity($email);
+		//echo $email;
+		$hashedPassword = MD5($password);
+		//echo $hashedPassword;
+		$authAdapter->setCredential($hashedPassword);
+		
+		$auth = Zend_Auth::getInstance();
+		$result = $auth->authenticate($authAdapter);
+		//login the user
+		if($result->isValid()){
+			
+			$this->user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$email));
+			echo $this->user->getEmail();
+			if($this->user->getConfirmation() == "confirmed"){
+				Zend_Session::rememberMe(1209600);
+				return true;
+			}	
+		}
 		else{
 			return false;
 		}

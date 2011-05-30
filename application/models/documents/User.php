@@ -48,6 +48,9 @@ class User{
 	public function getConfirmation(){
 		return $this->confirmation;
 	}
+	public function getEmail(){
+		return $this->email;
+	}
 	
 				
 }

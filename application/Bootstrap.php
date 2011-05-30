@@ -16,7 +16,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         return $container;
     }
      protected function _initDefaultModuleAutoloader(){	
-    
+    	
     	
 	}
 	/**
@@ -29,7 +29,21 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	    Zend_Registry::set('config', $config);
 	    return $config;
 	}
-    	
+	
+	protected function _initAutoloader(){
+		$autoloader = Zend_Loader_Autoloader::getInstance();
+		require_once 'Doctrine/Common/ClassLoader.php';
+		 $documentAutoloader = array(new \Doctrine\Common\ClassLoader('Documents', APPLICATION_PATH . '/models'), 'loadClass');
+   		 $autoloader->pushAutoloader($documentAutoloader, 'Documents\\');
+	    
+   		// $documentAutoloader = new \Doctrine\Common\ClassLoader('Documents', APPLICATION_PATH . '/models');
+	    //$autoloader->pushAutoloader(array($documentAutoloader, 'loadClass'), 'Documents');
+	
+	    $repositoryAutoloader = new \Doctrine\Common\ClassLoader('Repositories', APPLICATION_PATH . '/models');
+	    $autoloader->pushAutoloader(array($repositoryAutoloader, 'loadClass'), 'Repositories');
+	
+	    return $autoloader;
+	}
 
 }
 

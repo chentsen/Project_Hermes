@@ -5,7 +5,7 @@ class AccountController extends Zend_Controller_Action
 
     public function init()
     {
-        $this->view->pageTitle = 'Register';
+        $this->view->pageTitle = 'Verification';
     	$bootstrap = $this->getInvokeArg('bootstrap');
     	$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
     	
