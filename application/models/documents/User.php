@@ -24,6 +24,31 @@ class User{
 	/** @Field(type="string")*/
 	private $confirmation;
 	
+	/**
+     * @ReferenceMany(targetDocument="User", mappedBy="friends")
+     */
+    public $friendsWithUser;
+	
+     /**
+     * @ReferenceMany(targetDocument="User", inversedBy="friendsWithUser")
+     */
+    public $friends;
+	public function __construct()
+    {
+        $this->friendsWithUser = new \Doctrine\Common\Collections\ArrayCollection();
+        $this->Friends = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+	/**
+	 * 
+	 * function to add friend to the user, must be called for both friends.
+	 * @param User $user
+	 */
+    public function addFriend(User $user)
+    {
+        $user->friendsWithUser[] = $this;
+        $this->friends[] = $user;
+    }
+	
 	public function setEmail($email){
 		$this->email = $email;
 	}
@@ -51,6 +76,8 @@ class User{
 	public function getEmail(){
 		return $this->email;
 	}
-	
+	public function getFriends(){
+		return $this->friends;
+	}
 				
 }
