@@ -12,7 +12,11 @@ abstract class Hermes_Controller_SessionController extends Zend_Controller_Actio
     public function init()
     {
 		$this->identity = $this->_helper->GetIdentity->GetIdentity();
-    	//echo $this->identity;
+    	//if i'm not logged in then redirect to login page no matter what.
+		if(!$this->identity){
+    		$this->_helper->redirector('index','index');
+    	}
+		//echo $this->identity;
     	/* Initialize action controller here */
     }
 	public function indexAction(){

@@ -1329,6 +1329,7 @@ class UnitOfWork implements PropertyChangedListener
         if (isset($this->identityMap[$className][$id])) {
             return false;
         }
+		
         $this->identityMap[$className][$id] = $document;
         if ($document instanceof NotifyPropertyChanged) {
             $document->addPropertyChangedListener($this);
