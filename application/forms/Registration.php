@@ -108,7 +108,7 @@ class Application_Form_Registration extends Zend_Form
 										   array('viewScript' => '_form_registration.phtml'))  
 								  )	 	
 							);
-		$this->setElementDecorators(array('ViewHelper'),null,false);
+		$this->setElementDecorators(array('ViewHelper','Errors'),null,false);
 		
 	}
 	public function addIdentical($postData){
