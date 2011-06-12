@@ -22,6 +22,7 @@ class IndexController extends Zend_Controller_Action
     	$this->view->form = $form;
     	if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
     		$authenticated = $this->userSettings->authenticateUser($_POST['email'], $_POST['password']);
+    		
     		if($authenticated){
     			$this->_helper->redirector('index','profile');
     			//$this->view->message = "SUCCESS";

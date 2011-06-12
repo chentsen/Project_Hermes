@@ -2,8 +2,13 @@
 namespace Documents;
 /** @Document(collection="users", repositoryClass="Repositories\User") */
 class User{
+	//EMAIL, ALTHOUGH UNIQUE, SHOULD NOT BE USED AS PRIMARY KEY, FOR INDEXING SECURITY REASONS
+	/** @Id*
+	 *  
+	 */
+	private $uid;
 	
-	/** @Id(strategy="NONE",type="string") */
+	/** @Field(type="string")*/
 	private $email;
 	
 	/** @Field(type="string")*/

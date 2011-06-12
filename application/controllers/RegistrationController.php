@@ -18,6 +18,7 @@ class RegistrationController extends Zend_Controller_Action
     public function indexAction()
     {
 		
+    	$document = new SolrInputDocument();
     	$form = new Application_Form_Registration();
 		$form->addIdentical($_POST['password']);
 		if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
