@@ -31,6 +31,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	}
 	
 	protected function _initAutoloader(){
+		//$document = new SolrInputDocument();
 		$autoloader = Zend_Loader_Autoloader::getInstance();
 		require_once 'Doctrine/Common/ClassLoader.php';
 		 $documentAutoloader = array(new \Doctrine\Common\ClassLoader('Documents', APPLICATION_PATH . '/models'), 'loadClass');
@@ -44,6 +45,31 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	
 	    return $autoloader;
 	}
-
+	
+	protected function _initSolr(){
+		$host = Zend_Registry::get('config')->siteInformation->solrHost;
+		$port = Zend_Registry::get('config')->siteInformation->solrPort;
+		$path = Zend_Registry::get('config')->siteInformation->solrPath;
+		$options = array
+			(
+			    'hostname' => $host,   
+			    'port'     => $port,
+				'path'	   => $path,
+				
+			);
+		$client = new SolrClient($options);
+		
+		
+	    Zend_Registry::set('solr', $client);
+	    return $client;
+	}
+	/*
+	protected function _initSolrIndexer(){
+		require_once 'Hermes/SolrIndexer.php';
+		$indexer = new SolrIndexer();
+		$indexer->startIndexer();
+		
+	}
+	*/
 }
 

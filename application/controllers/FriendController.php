@@ -25,7 +25,7 @@ class FriendController extends Hermes_Controller_SessionController
         	$this->view->form = $form;
     }
 	public function searchAction(){
-
+		
 		
 	}
 	public function friendrequestAction(){
