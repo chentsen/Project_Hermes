@@ -9,13 +9,20 @@
 <body>
 	<div id="header_area">
 		<div class="page">
-		<div id="logo"><h1><img src= "<?= $this->baseUrl('images/plume-type.png') ?>" /></h1></div>
+		<div id="logo"><h1><img src= "<?= $this->baseUrl('images/plumetype-logo.png') ?>" /></h1></div>
 			<div id="mini_menu">
 				<ul>
-					<li>Sign Up</li>
-					<li>Login</li>
+					<li><div id="registration_link"><a href ="<?= $this->url(array('controller'=>'registration','action'=>'index'));?>">Register</a></div></li>
+					<li><div id="login_link"><a href ="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">Login</a></div></li>
 				</ul>
 			</div>
+                <div id="topmenu"><ul>
+                    <li><a href="">My Page</a></li>
+                    <li><a href="">Friends</a></li>
+                    <li><a href="">Events</a></li>
+                    <li><a href="">Another link</a></li>
+                    </ul>
+                </div>
 		</div>
 	</div>
  	<div id="content_area">
