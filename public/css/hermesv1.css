@@ -89,7 +89,7 @@ p { font-size: 1em; }
 	padding: 0px 5px;
 }
 /**registration**/
-#registration input {
+/*#registration input {
 	
 }
 #registration ul {
@@ -135,5 +135,8 @@ p { font-size: 1em; }
 }
 .form_register {
 	width: 200px;
-	float:left;
+	float: left;
 }
+#registration .errors {
+	height: 20px;
+}*/
