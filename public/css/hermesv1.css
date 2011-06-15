@@ -1,66 +1,47 @@
-* {
-	font-size: 100.01%;
-}
 body { 
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
+	background-color: #cccccc;
 }
-h1 { font-size: 2em; }
-h2 { font-size: 1.8em; }
-h3 { font-size: 1.5em; }
-h4 { font-size: 1em; }
-h5 { font-size: .85em; }
-h6 { font-size: .7em; }
-p { font-size: 1em; }
+div { display: block; }
 /**allows for full width or page width framework**/
-.page {
-	margin: 0px auto;
+.custom {
+	margin: 0 auto;
 	width: 800px;
+	min-height: 600px;
+	background-color: white;
+	box-shadow: 0 0 3px 3px #bbbbbb;
+	-webkit-box-shadow: 0 0 3px 3px #bbbbbb;
+	-moz-box-shadow: 0 0 3px 3px #bbbbbb;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-bottom: 100px;
 }
-/**header logo and mini menu**/
-#header_area {
-	/**border-bottom: 1px solid #ccc;**/
+.page {
 }
+/**header**/
 #header_area .page {
-	position: relative;
+	height: 120px;
 }
-.page #mini_menu {
-	position: absolute;
-	top: 57px;
-	right: 10px;
-}
-#mini_menu ul li{
-	list-style: none;
-	display: inline;
-	padding: 0px;
-        float: left;
-        
-}
-#mini_menu ul li a{
-        text-decoration: none;
-        padding: 5px;
-}
-#mini_menu a:visited{
-        color: white;
-}
-#mini_menu a:link{
-        color: white;
-}
+/**logo**/
 #logo { 
         width: 200px;
         height: 47px;
+        padding: 40px 20px 0px 20px;
+        margin: 0px;
+        float: left;
 }
 #logo h1{
-        padding: 0px;
-        font-size: 1em;
+        
+}
+
+/**top menu**/
+#topmenu {
+	margin-top: 10px;
+	float: left;
 }
 #topmenu ul{
-        height: 30px;
-        padding-left: 5px;
-        padding-bottom: 5px;
-        background-color: #008182;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        width: 400px;
 }
 
 #topmenu ul li{
@@ -72,27 +53,83 @@ p { font-size: 1em; }
         color: white;
         text-decoration: none;
         float: left;
-        padding: 10px;
+        padding: 51px 10px 11px 10px;
         text-align: center;
-        border-right: solid 2px white;
+        background-color: orange;
+        border-radius: 5px;
+        width: 70px;
+        margin-left: 5px;
+        margin-right: 5px;
+        box-shadow: 0 0 1px 1px #cccccc;
+        -moz-box-shadow: 0 0 1px 1px #cccccc;
+        -webkit-box-shadow: 0 0 1px 1px #cccccc;
 }
+#topmenu ul li a:hover {
+	opacity: .8;
+
+}
+/** mini menu**/
+#reg_links {
+	float: left;
+	margin-top: 10px;
+		box-shadow: 0 0 1px 1px #bbbbbb;
+	background: orange;
+	border-radius: 5px;
+	 box-shadow: 0 0 1px 1px #cccccc;
+        -moz-box-shadow: 0 0 1px 1px #cccccc;
+        -webkit-box-shadow: 0 0 1px 1px #cccccc;
+        padding: 12px;
+        margin-left: 8px;
+        
+        
+}
+#reg_links li {
+	list-style: none;
+	display: block;
+}
+#reg_links li a{
+	
+	text-decoration: none;
+	padding: 10px;
+}
+#registration_link {
+	padding-bottom: 10px;
+}
+#login_link {
+	padding-top: 10px;
+}
+
 /**footer area and footer menu**/
 #footer_area {
-	border-top: 1px solid #ccc;
+	
+	
+}
+#footer_area .page {
+	
 }
 #footer_menu {
+	padding: 10px;
+}
+#footer_menu ul {
 	text-align: center;
+	padding: 0px;
 }
 #footer_menu ul li{
 	list-style: none;
 	display: inline;
 	padding: 0px 5px;
 }
+
+/** content area **/
+#content_area {
+	padding: 20px 15px;
+	min-height: 420px;
+}
 /**registration**/
-/*#registration input {
+#registration input {
 	
 }
-#registration ul {
+/*#registration ul {
 	margin: 0px auto;
 	width: 460px;
 	height: 350px;
@@ -102,7 +139,7 @@ p { font-size: 1em; }
 	list-style: none;
 	height: 28px;
 	
-}
+}*
 #registration {
 	
 }
@@ -136,7 +173,7 @@ p { font-size: 1em; }
 .form_register {
 	width: 200px;
 	float: left;
-}
+}*/
 #registration .errors {
 	height: 20px;
-}*/
+}

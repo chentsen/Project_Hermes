@@ -1,0 +1,52 @@
+/** css reset style sheet **/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, .search_box p
+{
+	margin:0;
+	padding:0;
+	border:0;
+	font-weight:inherit;
+	font-style:inherit;
+	font-size:100%;
+	font-family:inherit;
+	vertical-align:baseline;
+}
+.buttonhover:hover { background: url("../images/buy-now-2.png") top center no-repeat;}
+.buttonhover {margin-bottom:0px;padding-top:16px; padding-bottom:5px; height:111px; margin:-16px;}
+body 
+{
+	line-height:1.5;
+}
+blockquote:before, blockquote:after, q:before, q:after 
+{
+	content:"";
+}
+blockquote, q 
+{
+	quotes:"" "";
+}
+a img 
+{
+	border:none;
+}
+/** yahoo yui reset**/
+
+h1 {
+	/*18px via YUI Fonts CSS foundation*/
+	font-size:138.5%;  
+}
+h2 {
+	/*16px via YUI Fonts CSS foundation*/
+	font-size:123.1%; 
+}
+h3 {
+	/*14px via YUI Fonts CSS foundation*/
+	font-size:108%;  
+}
+h1,h2,h3 {
+	/* top & bottom margin based on font size */
+	margin:1em 0;
+}
+h1,h2,h3,h4,h5,h6,strong {
+	/*bringing boldness back to headers and the strong element*/
+	font-weight:bold; 
+}
