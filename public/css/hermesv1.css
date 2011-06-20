@@ -1,33 +1,34 @@
 body { 
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
-	background-color: #cccccc;
+
+        background: #cccccc url('../images/bgsprite.png');
 }
 div { display: block; }
 /**allows for full width or page width framework**/
 .custom {
 	margin: 0 auto;
 	width: 800px;
-	min-height: 600px;
 	background-color: white;
-	box-shadow: 0 0 3px 3px #bbbbbb;
-	-webkit-box-shadow: 0 0 3px 3px #bbbbbb;
-	-moz-box-shadow: 0 0 3px 3px #bbbbbb;
+	box-shadow: 0 0 3px 3px #000;
+	-webkit-box-shadow: 0 0 3px 3px #000;
+	-moz-box-shadow: 0 0 3px 3px #000;
+      
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
-	margin-bottom: 100px;
+
 }
 .page {
 }
 /**header**/
 #header_area .page {
-	height: 120px;
+	height: 100px;
+        background: #ddd;
 }
 /**logo**/
 #logo { 
-        width: 200px;
-        height: 47px;
-       margin: 15px 20px 0px 20px;
+        
+       margin: 5px 20px 0px 20px;
         float: left;
 }
 #logo h1{
@@ -100,8 +101,8 @@ div { display: block; }
 
 /**footer area and footer menu**/
 #footer_area {
-	
-	
+	text-shadow: 1px 1px 1px #000;
+	color: #fff;
 }
 #footer_area .page {
 	
@@ -122,8 +123,8 @@ div { display: block; }
 /** content area **/
 #content_area {
 	padding: 20px 15px;
-	min-height: 420px;
-        margin-bottom: 50px;
+	min-height: 430px;
+     
 }
 /**registration**/
 #registration input {

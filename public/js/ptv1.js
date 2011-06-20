@@ -16,7 +16,6 @@ function doValidation(id)
      });
      $.post(url,data,function(resp)
      {
-       
         $("#"+id).parent().parent().find('.errors').remove();
         $("#"+id).parent().parent().append(getErrorHtml(resp[id], id));
      },'json');
