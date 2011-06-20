@@ -5,13 +5,14 @@
   <title><?= $this->pageTitle; ?></title>
   <?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/hermesvy.css')); ?>
   <?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/hermesv1.css')); ?>
-  
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <?php echo $this->headScript()->appendFile($this->baseUrl('js/ptv1.js')); ?>
 </head>
 <body>
 <div class="custom">
 	<div id="header_area">
 		<div class="page">
-			<div id="logo"><h1><img src= "<?= $this->baseUrl('images/plumetype-logo.png') ?>" /></h1></div>
+			<div id="logo"><h1><a href=""><img src= "<?= $this->baseUrl('images/plumetype-logo.png') ?>" /></a></h1></div>
 			<div id="topmenu">
 					<ul>
                     <li><a href="">My Page</a></li>

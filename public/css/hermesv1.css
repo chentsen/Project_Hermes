@@ -27,8 +27,7 @@ div { display: block; }
 #logo { 
         width: 200px;
         height: 47px;
-        padding: 40px 20px 0px 20px;
-        margin: 0px;
+       margin: 15px 20px 0px 20px;
         float: left;
 }
 #logo h1{
@@ -124,22 +123,26 @@ div { display: block; }
 #content_area {
 	padding: 20px 15px;
 	min-height: 420px;
+        margin-bottom: 50px;
 }
 /**registration**/
 #registration input {
 	
 }
-/*#registration ul {
-	margin: 0px auto;
-	width: 460px;
-	height: 350px;
+
+#registration {
+	margin: 0 auto;
+	width: 500px;
+
 }
-#registration ul li {
-	margin-bottom: 15px;
+
+.reglist {
+	margin-bottom: 25px;
 	list-style: none;
 	height: 28px;
+        display: block;
 	
-}*
+}
 #registration {
 	
 }
@@ -152,7 +155,9 @@ div { display: block; }
 	border-radius: 3px;
 	border: 1px solid #ddd;
 	background: #fff4ff;
+      
 }
+
 .form_text {
 	width: 120px;
 	float: left;
@@ -162,7 +167,7 @@ div { display: block; }
 }
 .form_element {
 	float: left;
-	width: 200px;
+	
 	
 }
 .form_submit {
@@ -173,7 +178,13 @@ div { display: block; }
 .form_register {
 	width: 200px;
 	float: left;
-}*/
-#registration .errors {
-	height: 20px;
 }
+#registration .errors {
+	width: 420px;
+        float: left;
+     
+}
+#registration .errors li {
+    list-style: none;
+}
+/**registration ajax**/
