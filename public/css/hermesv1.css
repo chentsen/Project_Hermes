@@ -55,7 +55,7 @@ div { display: block; }
         float: left;
         padding: 51px 10px 11px 10px;
         text-align: center;
-        background-color: orange;
+        background-color: transparent;
         border-radius: 5px;
         width: 70px;
         margin-left: 5px;
@@ -63,6 +63,9 @@ div { display: block; }
         box-shadow: 0 0 1px 1px #cccccc;
         -moz-box-shadow: 0 0 1px 1px #cccccc;
         -webkit-box-shadow: 0 0 1px 1px #cccccc;
+}
+#topmenu ul li a:hover {
+    background-color: #bbb;
 }
 #topmenu ul li a:hover {
 	opacity: .8;

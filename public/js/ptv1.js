@@ -4,12 +4,20 @@ $(function()
 			{
 			var formElementId = $(this).parent().prev().find('label').attr('for');
                              
-                        doValidation(formElementId);                           
+                        doValidation(formElementId);   
+                  
 		});
 	});
 function doValidation(id)
 {
-    var url = '/registration/ajaxform'
+    if (window.location=='http://localhost/')
+        {
+            var url = window.location+'/index/ajaxform'
+        }
+    else
+        {
+    var url = window.location+'/ajaxform'
+        }
     var data = {};
     $("input").each(function() {
            data[$(this).attr('name')] = $(this).val();

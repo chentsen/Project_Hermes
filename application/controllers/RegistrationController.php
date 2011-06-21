@@ -61,8 +61,9 @@ class RegistrationController extends Zend_Controller_Action
 	public function ajaxformAction()
 	{
 		$this->_helper->viewRenderer->setNoRender();
-		$this->_helper->getHelper('layout')->disableLayout();
+                $this->_helper->getHelper('layout')->disableLayout();
                 
+                //pull content json
                 $form = new Application_Form_Registration();
                 $form->isValid($this->_getAllParams());
 		$json = $form->getMessages();
