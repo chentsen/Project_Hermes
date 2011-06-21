@@ -2,7 +2,7 @@
 
 class IndexController extends Zend_Controller_Action
 {
-
+	
     public function init()
     {
 		if($this->_helper->FlashMessenger->hasMessages()){
@@ -17,7 +17,9 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-		
+	
+		//$test = new Application_Model_Feed_EventFeedModel();	
+		//$test->testFunction();
     	$form = new Application_Form_Login();
     	$this->view->form = $form;
     	if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
