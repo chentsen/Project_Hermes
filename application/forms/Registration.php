@@ -10,12 +10,13 @@ class Application_Form_Registration extends Zend_Form
 	public function __construct($options = null){
 		parent::__construct($options);
 		$this->setName('registration');
-		$this->setAction('/registration/index');
+                $this->setAction('/registration/index');
 		$this->setMethod('post');
 		
 		
 		$nameValidator = new Zend_Validate_Regex(array('pattern'=>'/^[a-zA-Z\-\' ]+$/','messages'=>
 				array('regexNotMatch'=>"NOT MATCH")));
+               
 		
 		$email = new Zend_Form_Element_Text('email');
 		$email->setRequired(true)
@@ -28,6 +29,7 @@ class Application_Form_Registration extends Zend_Form
           			'isEmpty' => 'An email address is required.'
     			 )
   				));
+             
 			  
 		$firstName = new Zend_Form_Element_Text('firstName');
 		$firstName->setRequired(true)
@@ -68,7 +70,7 @@ class Application_Form_Registration extends Zend_Form
 				  ->addValidator('Regex',true, array(
 				 	    'pattern' => '/^[a-zA-Z\-\' ]+$/',
      					'messages' => array(
-          				'regexNotMatch' => 'Please enter a valid city name'
+          				'regexNotMatch' => 'Please enter a valid city name.'
     					 )
   				  ))
 				  ->addValidator('NotEmpty', true, array(
