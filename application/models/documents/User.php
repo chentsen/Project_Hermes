@@ -3,7 +3,7 @@ namespace Documents;
 /** @Document(collection="users", repositoryClass="Repositories\User") */
 class User{
 	//EMAIL, ALTHOUGH UNIQUE, SHOULD NOT BE USED AS PRIMARY KEY, FOR INDEXING SECURITY REASONS
-	/** @Id*
+	/** @Id(strategy = "NONE")*
 	 *  
 	 */
 	private $uid;
@@ -28,6 +28,19 @@ class User{
 	
 	/** @Field(type="string")*/
 	private $confirmation;
+	/** @ReferenceMany(targetDocument="Event")
+	 * 
+	 */
+	private $events;
+	
+	/** @ReferenceOne(targetDocument="Documents\Feed\EventFeed", inversedBy = "user")
+	 * 
+	 */
+	private $eventFeed = null;
+	/** @ReferenceOne(targetDocument="Documents\Feed\GeneralFeed", inversedBy = "user")
+	 * 
+	 */
+	private $generalFeed = null;
 	
 	/**
      * @ReferenceMany(targetDocument="User", mappedBy="friends")
@@ -40,7 +53,9 @@ class User{
     public $friends;
 	public function __construct()
     {
-        $this->friendsWithUser = new \Doctrine\Common\Collections\ArrayCollection();
+        
+    	$this->uid = uniqid(rand(),false);
+    	$this->friendsWithUser = new \Doctrine\Common\Collections\ArrayCollection();
         $this->Friends = new \Doctrine\Common\Collections\ArrayCollection();
     }
 	/**
@@ -83,6 +98,36 @@ class User{
 	}
 	public function getFriends(){
 		return $this->friends;
+	}
+	public function getFirstName(){
+		return $this->firstName;
+	}
+	public function getLastName(){
+		return $this->lastName;
+	}
+	public function getEvents(){
+		return $this->events;
+	}
+	public function addEvent(Event $event){
+		$this->events[] = $event;
+	}
+	public function removeEvent(Event $event){
+		
+	}
+	public function getEventFeed(){
+		return $this->eventFeed;
+	}
+	public function setEventFeed($eventFeed){
+		$this->eventFeed = $eventFeed;
+	}
+	public function setGeneralFeed($generalFeed){
+		$this->generalFeed = $generalFeed;
+	}
+	public function getGeneralFeed(){
+	 return	$this->generalFeed;
+	}
+	public function getUid(){
+		return $this->uid;
 	}
 				
 }

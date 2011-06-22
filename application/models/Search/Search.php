@@ -21,13 +21,20 @@ class Application_Model_Search_Search{
 		$documents = $response['response']['docs'];
 		if($response['response']['docs']!=''){
 			foreach($documents as $document){
+			//	echo "I'm HERE";		
 				$this->results[] = $this->process->process($document);
+				
 			}	
 		}
-		else
-			$this->results = null;
+		else{
+		//	echo 'THIS SHIT IS BEING INEXPLICABLY CALLED';
+			$this->results = null;	
+			
+		}
 	}
 	public function getResults(){
+	//	echo "I'm HERE";
+		//echo count($this->results);
 		return $this->results;
 	}
 	

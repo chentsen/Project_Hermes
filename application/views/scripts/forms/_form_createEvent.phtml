@@ -1,0 +1,16 @@
+<!--  Julian you need to modify this so that the day gets updated when the month gets updated. Right now there is just a placeholder -->
+<form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
+	method = "<?=$this->element->getMethod() ?>">
+	
+	<div class="form_text">I want to</div><div class="form_element"><?= $this->element->createEvent_shortDescription; ?></div>
+	<div class="form_text">On</div><div class="form_element"><?= $this->element->createEvent_month; ?></div><div class="form_text">/</div><div class="form_element"><?= $this->element->createEvent_day; ?></div><div class="form_text">/</div><div class="form_element"><?= $this->element->createEvent_year; ?></div>
+	<div class="form_text">@</div><div class="form_element"><?= $this->element->createEvent_location; ?></div>
+	<div class="form_text">And it</div><div class="form_element"><?= $this->element->createEvent_private ?></div>  <div class = "form_text"> be private.</div>
+	
+	<p>
+	Tell everyone a bit about your event (140 characters max):
+	</p>
+	<div class = "form_element"> <?= $this->element->createEvent_longDescription ?></div>
+	<div class="form_submit"><?= $this->element->createEvent_submit; ?></div>
+	
+</form>

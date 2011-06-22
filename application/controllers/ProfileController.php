@@ -6,6 +6,7 @@ class ProfileController extends Hermes_Controller_SessionController
     public function init()
     {
         parent::init();
+		$this->view->identity = $this->identity;
         /* Initialize action controller here */
     }
 

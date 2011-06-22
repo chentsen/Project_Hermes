@@ -30,8 +30,8 @@ class FriendController extends Hermes_Controller_SessionController
 	}
 	public function friendrequestAction(){
 	    //$this->_helper->viewRenderer->setNoRender(true);
-		
-		$request = $this->friendRelation->createFriendRequest($_GET['friendSearch_field']);
+		$param = $this->_request->getParam('requestee');
+		$request = $this->friendRelation->createFriendRequest($param);
 		
 		if($request){
 			$this->view->requestStatus = 'Request Created!';

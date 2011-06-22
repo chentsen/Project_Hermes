@@ -1,0 +1,10 @@
+<br /><br />
+<div id="view-content">
+	<b>Event Public Page</b>
+	<?= $this->event->getCreator->getFirstName." Wants to ".$this->event->getShortDescription() ?>
+<br />
+<p>
+	<div class='longDescription'>
+		<?= $this->event->getLongDescription() ?>
+</div>	
+</div>
