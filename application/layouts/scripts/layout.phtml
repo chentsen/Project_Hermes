@@ -12,11 +12,11 @@
 <div class="custom">
 	<div id="header_area">
 		<div class="page">
-			<div id="logo"><h1><a href=""><img src= "<?= $this->baseUrl('images/plumetype-logo.png') ?>" /></a></h1></div>
+			<div id="logo"><h1><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>"><img src= "<?= $this->baseUrl('images/plumetype-logo.png') ?>" /></a></h1></div>
 			<div id="topmenu">
 					<ul>
-                    <li><a href="">My Page</a></li>
-                    <li><a href="">Friends</a></li>
+                    <li><a href="<?= $this->url(array('controller'=>'profile','action'=>'index'));?>">My Page</a></li>
+                    <li><a href="<?= $this->url(array('controller'=>'friend','action'=>'index'));?>">Friends</a></li>
                     <li><a href="">Events</a></li>
                     <li><a href="">Another link</a></li>
                     </ul>
@@ -27,13 +27,15 @@
 					<li id="login_link"><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">Login</a></li>
 				</ul>
 				
-	</div>
+                 </div>
+        </div>
  	<div id="content_area">
  		<div class="page">
 		<?php echo $this->layout()->content ?>
 		</div>
 	</div>	
-	<div id="footer_area">
+</div>
+       <div id="footer_area">
 		<div class="page">
 			<div id="footer_menu">
 			<ul>
@@ -46,6 +48,5 @@
 			</div>
 		</div>
 	</div>
-</div>
 </body>
 </html>
