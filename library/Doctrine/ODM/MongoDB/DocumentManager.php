@@ -490,7 +490,8 @@ class DocumentManager implements ObjectManager
      */
     public function flush(array $options = array())
     {
-        $this->errorIfClosed();
+        
+    	$this->errorIfClosed();
         $this->unitOfWork->commit($options);
     }
 

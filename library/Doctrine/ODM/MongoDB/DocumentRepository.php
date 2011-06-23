@@ -146,6 +146,7 @@ class DocumentRepository implements ObjectRepository
     public function findBy(array $criteria)
     {
         return $this->uow->getDocumentPersister($this->documentName)->loadAll($criteria);
+    	
     }
 
     /**

@@ -104,7 +104,6 @@ class AnnotationDriver implements Driver
     public function loadMetadataForClass($className, ClassMetadataInfo $class)
     {
         $reflClass = $class->getReflectionClass();
-
         $classAnnotations = $this->reader->getClassAnnotations($reflClass);
         if (isset($classAnnotations['Doctrine\ODM\MongoDB\Mapping\Document'])) {
             $documentAnnot = $classAnnotations['Doctrine\ODM\MongoDB\Mapping\Document'];
