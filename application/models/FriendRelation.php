@@ -90,7 +90,7 @@ class Application_Model_FriendRelation{
 		$generalFeed = $user->getGeneralFeed();
 		if(!$user->getGeneralFeed()){
 			$generalFeed = new GeneralFeed($user);
-			$user->setEventFeed($generalFeed);
+			$user->setGeneralFeed($generalFeed);
 		}
 		$inputs = array(
   					'lastName'=>$otherUser->getLastName(),
