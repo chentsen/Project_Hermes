@@ -53,7 +53,13 @@ class IndexController extends Zend_Controller_Action
 		header('Content-type: application/json');
 		echo Zend_Json::encode($json);
 	}
-
+    public function logoutAction()
+        {
+                 $auth = Zend_Auth::getInstance();
+                 $auth->clearIdentity();
+                 $this->_redirect('/index');
+                 
+        }
 
 }
 
