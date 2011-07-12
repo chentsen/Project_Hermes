@@ -10,10 +10,14 @@ $(function()
 	});
 function doValidation(id)
 {
-    if (window.location=='http://localhost/')
+    if (window.location.pathname=='/index')
         {
-            var url = window.location+'/index/ajaxform'
+            var url = window.location+'/ajaxform'
         }
+    else if (window.location.pathname=='/registration')
+       {
+           var url = window.location+'/ajaxform'
+       }
     else
         {
     var url = window.location+'/ajaxform'
