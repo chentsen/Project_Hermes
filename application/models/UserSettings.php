@@ -59,14 +59,14 @@ class Application_Model_UserSettings{
 		// connect
 		
 		$usersCollection = $m->selectCollection("doctrine","users");
-		echo 'AUTHENTICATING';
+		//echo 'AUTHENTICATING';
 		//print_r(iterator_to_array($usersCollection->find()));
 		//echo $usersCollection;
 		$authAdapter = new Zend_Auth_Adapter_MongoDB($usersCollection, 'email',"password",null);
 		$authAdapter->setIdentity($email);
 		//echo $email;
 		$hashedPassword = MD5($password);
-		echo $hashedPassword;
+		//echo $hashedPassword;
 		//echo $hashedPassword;
 		$authAdapter->setCredential($hashedPassword);
 		

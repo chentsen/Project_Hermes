@@ -37,6 +37,9 @@ class Event{
 	/** @ReferenceOne(targetDocument="User")*/
 	private $creator;
 	
+	/** @ReferenceOne(targetDocument="Wall")*/
+	private $wall;
+	
 	//list of users
 	/** @ReferenceMany(targetDocument="User")*/
 	private $waitingList;
@@ -56,6 +59,7 @@ class Event{
 		$this->creator = $options['creator'];
 		$this->timestamp = new \DateTime("now");
 		$this->eid = $options['id'];
+		$this->wall = new Wall($this);
 	}
 	
 	public function getCreator(){
@@ -94,9 +98,10 @@ class Event{
 			
 			//terrible code. to fix 
 			//if waiting
-			
+				//echo $this->waitingList;
 				if($this->waitingList[$i]->getEmail() == $user->getEmail()){
 					unset($this->waitingList[$i]);
+					//this may be an issue
 					if($i>0)
 						$this->waitingList = array_values($this->waitingList);
 					else return;
@@ -106,5 +111,8 @@ class Event{
 	}
 	public function getEid(){
 		return $this->eid;
+	}
+	public function getWall(){
+		return $this->wall;
 	}
 }

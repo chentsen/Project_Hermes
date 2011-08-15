@@ -1,24 +1,26 @@
 <?php
 
-class EventController extends Hermes_Controller_SessionController
+class EventController extends Hermes_Controller_Wall_WallController
 {
-
-    public function init()
+	//private $event;
+    
+	public function init()
     {
         parent::init();
-        $this->mongoContainer = Zend_Registry::get('Wildkat\DoctrineContainer');
-		$this->dm = $this->mongoContainer->getDocumentManager('default');
+      
         /* Initialize action controller here */
     }
 
     public function indexAction()
     {
-        $eid = $this->_request->getParam("eid");
+        $this->view->identity = $this->identity;
+    	$eid = $this->_request->getParam("eid");
     	//page that is shown depends on the user's status for now, use if statement to determine
         //potential pages 1.Member 2.Creator 3.Public we might want to push display logic further down, at the view
         //helper level (consult with Julian)
-        $eventModel = new Application_Model_EventModel($event);
         $event = $this->dm->getRepository('Documents\Event')->findOneBy(array('eid'=>$eid));
+        $eventModel = new Application_Model_EventModel($event);
+       
     	$this->view->event = $event;
         //1. if I am creator
         if($this->identity == $event->getCreator()->getEmail()){

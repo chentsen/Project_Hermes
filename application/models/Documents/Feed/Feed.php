@@ -17,7 +17,7 @@ abstract class Feed{
 	public function addFeedObject(FeedObject\FeedObject $feedObject){
 		//$this->feedObjects[] = $feedObject;
 		//echo 'COUNT VALUES :'. array_count_values($this->feedObjects);
-		echo 'being called';
+		//echo 'being called';
 		$this->feedObjects = $this->collectionUnshift($this->feedObjects,$feedObject);
 		//array_unshift($this->feedObjects,$feedObject);
 		

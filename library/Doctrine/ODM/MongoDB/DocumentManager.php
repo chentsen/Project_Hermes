@@ -359,7 +359,8 @@ class DocumentManager implements ObjectManager
     public function persist($document)
     {
         if ( ! is_object($document)) {
-            throw new \InvalidArgumentException(gettype($document));
+            //echo 'invalid object';
+        	throw new \InvalidArgumentException(gettype($document));
         }
         $this->errorIfClosed();
         $this->unitOfWork->persist($document);

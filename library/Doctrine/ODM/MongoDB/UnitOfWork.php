@@ -1326,6 +1326,8 @@ class UnitOfWork implements PropertyChangedListener
             throw new \InvalidArgumentException("The given document has no identity.");
         }
         $className = $classMetadata->rootDocumentName;
+        
+        //echo $className." is id name!";
         if (isset($this->identityMap[$className][$id])) {
             return false;
         }

@@ -38,15 +38,13 @@ class Application_Model_EventModel{
 		$this->event = new Event($options);
 		echo 'ID is '. $this->event->getEid();
 		if($this->event){
-			//print_r($options);
-			
+			//print_r($options);	
 			$this->dm->persist($this->event);	
+			$this->dm->persist($this->event->getWall());
 			$eventFeedObject = $this->addToEventFeed($creator);
 			//echo 'ADDING';
 			$this->addToGeneralFeed($creator,$eventFeedObject);
-			$this->dm->flush();
-			
-			
+			$this->dm->flush();		
 			return true;
 		}
 		else{

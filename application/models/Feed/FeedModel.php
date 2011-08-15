@@ -37,7 +37,7 @@ abstract class Application_Model_Feed_FeedModel{
 		$feedObject->hidden = FALSE;
 	}
 	public function push(FeedObject $feedObject){
-		echo 'BEING CALLED';
+		//echo 'BEING CALLED';
 		$this->feed->addFeedObject($feedObject);
 		if($this->feed->countFeedObjects() > $this->feedLimit)
 			$this->feed->pop();

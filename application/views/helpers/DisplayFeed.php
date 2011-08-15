@@ -16,7 +16,7 @@ class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
 			}
 		}
 	public function getEventFeedMessage(FeedObject $feedObject){
-		echo 'You have joined '.$feedObject->getCreator()->getFirstName().' '.$feedObject->getCreator()->getLastName().'\'s event';
+		echo 'Your friend '.$feedObject->getCreator()->getFirstName().' '.$feedObject->getCreator()->getLastName().' wants to';
 		echo '<br />'.$feedObject->getShortDescription();
 		echo '<br /> at '.$feedObject->getDate()->format('Y-m-d H:i:s');;
 	}
@@ -27,3 +27,6 @@ class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
 	}
 
 }
+// DisplayFeed could instead be FeedConstructor a set of algorithms abstract which are inherited by EventFeedConstructor or 
+//GeneralFeedConstructor, DisplayEvent and DisplayGeneral both call different feeds based on the subclassed constructor it calls
+//you could even potentially merge generalfeed and eventfeed into one construct
