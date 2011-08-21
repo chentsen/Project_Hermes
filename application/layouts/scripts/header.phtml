@@ -1,0 +1,18 @@
+<div id="header_area">
+	<div class="page">
+                <div id="logo"><h1><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>"><img src= "<?= $this->baseUrl('images/plumetype-logo.png') ?>" /></a></h1></div>
+                <div id="topmenu">
+                    <ul>
+                        <li><a href="<?= $this->url(array('controller'=>'profile','action'=>'index'));?>">My Page</a></li>
+                        <li><a href="<?= $this->url(array('controller'=>'friend','action'=>'index'));?>">Friends</a></li>
+                        <li><a href="<?= $this->url(array('controller'=>'eventCreation','action'=>'index'));?>">Events</a></li>
+                        <li><a href="">Another link</a></li>
+                    </ul>
+                </div>			
+			<ul id="reg_links">
+				<li id="registration_link"><a href="<?= $this->url(array('controller'=>'registration','action'=>'index'));?>">Register</a></li>
+				<li id="login_link"><?= $this->Logout(); ?></li>
+                        </ul>
+				
+        </div>
+        </div>
