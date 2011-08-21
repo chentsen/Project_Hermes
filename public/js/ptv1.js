@@ -48,3 +48,21 @@ function getErrorHtml(formErrors, id)
     return output;
     
 }
+
+//close status
+
+
+$(document).ready(function(){
+     $('.loginonce').click(function(){
+            $(this).hide(2000, function(){
+            $(this).remove();
+            });
+            $.cookie('loginOnce','removed');
+     });
+     
+     var loginOnce = $.cookie('loginOnce')
+     
+     if(loginOnce == 'removed') {
+         $('.loginonce').hide();
+     }
+});
