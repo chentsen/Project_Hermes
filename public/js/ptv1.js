@@ -18,6 +18,10 @@ function doValidation(id)
        {
            var url = window.location+'/ajaxform'
        }
+    else if (window.location.pathname=='/')
+           {
+        var url = window.location+'/index/ajaxform'
+           }
     else
         {
     var url = window.location+'/ajaxform'
