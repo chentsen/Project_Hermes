@@ -10,8 +10,9 @@ class Zend_View_Helper_DisplayFriends extends Zend_View_Helper_Abstract{
 			echo '<ul>';
 			if($list){
 				foreach($list as $friend){
-					echo '<li>';
-					echo "{$friend->getEmail()} is your friend";
+                                        echo '<img src="images/placeholder.png"/>';
+                                        echo '<li class="friend_name">';
+					echo "{$friend->getFirstName()} {$friend->getLastName()}";
 					echo '</li>';
 				}				
 			}else 'You have no friends yet, add some!';

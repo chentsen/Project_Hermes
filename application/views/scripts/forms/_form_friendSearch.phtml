@@ -1,7 +1,11 @@
-	
 <form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
 	method = "<?=$this->element->getMethod() ?>">
 	
-	<div class="form_text">Search For A Friend:</div><div class="form_element"><?= $this->element->friendSearch_field; ?></div>
-	<div class="form_submit"><?= $this->element->search; ?> </div>
+    <div class="friend_finder">
+        <div class="friend_finder_inner">
+        
+            <div class="search_friend_form"><?= $this->element->friendSearch_field; ?></div>
+	<div class="search_friend_submit"><?= $this->element->search; ?></div>
+        </div>
+    </div>
 </form>

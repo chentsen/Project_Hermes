@@ -12,7 +12,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         $container = new DoctrineContainer($this->getOption('doctrine'));
         Zend_Registry::set('Wildkat\DoctrineContainer', $container);
-
+        //once login use zend_registry 
         return $container;
     }
      protected function _initDefaultModuleAutoloader(){	

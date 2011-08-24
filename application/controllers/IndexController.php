@@ -13,15 +13,16 @@ class IndexController extends Zend_Controller_Action
     	
 		$this->userSettings = new Application_Model_UserSettings($this->mongoContainer);
     	/* Initialize action controller here */
-                $auth = Zend_Auth::getInstance();
-		if($auth->hasIdentity()){
-                    $this->_redirect('/profile');
-                }
+                 
     }
 
     public function indexAction()
     {
-	
+       $auth = Zend_Auth::getInstance();
+	if($auth->hasIdentity()){
+                    $this->_redirect('/profile');
+                }
+		
 		//$test = new Application_Model_Feed_EventFeedModel();	
 		//$test->testFunction();
     	$form = new Application_Form_Login();
@@ -44,6 +45,7 @@ class IndexController extends Zend_Controller_Action
     	}
     	$this->view->form = $form;
     	// action body
+        
     }
     public function ajaxformAction()
 	{

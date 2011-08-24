@@ -1,3 +1,8 @@
+<?php 
+    $options = array('formName'=>'profileSearch','fieldName' => 'profileSearch_field','viewScriptName'=>'_form_profileSearch.phtml','formAction'=>'/Search/index');
+        $form = new Application_Form_Search($options);
+        $this->form = $form;
+?>
 <div id="header_area">
 	<div class="page">
                 <div id="logo"><h1><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>"><img src= "<?= $this->baseUrl('images/plumetype-logo.png') ?>" /></a></h1></div>
@@ -16,3 +21,5 @@
 				
         </div>
         </div>
+<?php $auth = Zend_Auth::getInstance();
+        if($auth->hasIdentity()){ echo $this->form; }?>

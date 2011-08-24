@@ -1,8 +1,37 @@
 	
 <form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
 	method = "<?=$this->element->getMethod() ?>">
+    <div class="friend_finder">
+        <div class="left_icon_bar">
+          
+                  <a href = "<?= $this->url(array('controller'=>'eventCreation','action'=>'index')) ?>">
+                     <img src="<?= $this->baseUrl('images/create.png') ?>" />
+                 </a>
+        </div>
+        <div class="friend_finder_inner">
+        
+            <div class="search_friend_form"><?= $this->element->profileSearch_field; ?></div>
 	
-	<div class="form_text">Search:</div><div class="form_element"><?= $this->element->profileSearch_field; ?></div>
-	<div class="form_submit"><div class="form_submit"><?= $this->element->search; ?> </div> </div>
-	<div class="form_submit"><?= $this->element->hidden_formName; ?> </div>
+            <div class="search_friend_submit"><?= $this->element->search; ?></div>
+        </div>
+        <div class="icon_bar">
+            <ul>
+                <li>
+                  <a href = "<?= $this->url(array('controller'=>'friend','action'=>'index')) ?>">
+                     <img src="<?= $this->baseUrl('images/friendsicon.png') ?>" />
+                  </a></li>
+                <li><a href = "">
+                         <img src="<?= $this->baseUrl('images/mailbox.png') ?>" />
+                  </a></li>
+                <li>
+                 <a href = "<?= $this->url(array('controller'=>'friend','action'=>'index')) ?>">
+                     <img src="<?= $this->baseUrl('images/notifications.png') ?>" />
+                 </a></li>
+            </ul>
+	
+        </div>
+     </div>
+            
+        <div class="form_submit"><?= $this->element->hidden_formName; ?> </div>
+        
 </form>

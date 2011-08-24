@@ -77,7 +77,7 @@ class Application_Model_UserSettings{
 		if($result->isValid()){
 			
 			$this->user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$email));
-			echo $this->user->getEmail();
+			//echo $this->user->getEmail();
 			if($this->user->getConfirmation() == "confirmed"){
 				Zend_Session::rememberMe(1209600);
 				return true;

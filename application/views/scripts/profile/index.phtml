@@ -1,9 +1,8 @@
 <div id="view-content">
 	<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>
-	<?= $this->form; ?>
-	<?= $this->identity; ?>
-	<p> <a href = " <?= $this->url(array('controller'=>'eventCreation','action'=>'index')) ?>">Create Event Test</a></p>
-	<p><a href = "<?= $this->url(array('controller'=>'friend','action'=>'index')) ?>"> Add a friend</a></p>
+	
+	<?= $this->firstname; ?>
+        <?= $this->lastname; ?>
 	<p>
 		<b>Feed</b>
 		<?= $this->DisplayGeneralFeed($this->identity); ?>

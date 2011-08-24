@@ -1,53 +1,19 @@
 <?php echo $this->doctype(); ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title><?= $this->pageTitle; ?></title>
-  <?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/hermesvy.css')); ?>
-  <?php echo $this->headLink()->appendStylesheet($this->baseUrl('css/hermesv1.css')); ?>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
-  <?php echo $this->headScript()->appendFile($this->baseUrl('js/jquery.cookie.js')); ?>
-  <?php echo $this->headScript()->appendFile($this->baseUrl('js/ptv1.js')); ?>
+    <?php echo $this->render('head.phtml') ?>
 </head>
 <body>
 <div class="custom">
-	<div id="header_area">
-	<div class="page">
-                <div id="logo"><h1><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>"><img src= "<?= $this->baseUrl('images/plumetype-logo.png') ?>" /></a></h1></div>
-                <div id="topmenu">
-                    <ul>
-                        <li><a href="<?= $this->url(array('controller'=>'profile','action'=>'index'));?>">My Page</a></li>
-                        <li><a href="<?= $this->url(array('controller'=>'friend','action'=>'index'));?>">Friends</a></li>
-                        <li><a href="<?= $this->url(array('controller'=>'eventCreation','action'=>'index'));?>">Events</a></li>
-                        <li><a href="">Another link</a></li>
-                    </ul>
-                </div>			
-			<ul id="reg_links">
-				<li id="registration_link"><a href="<?= $this->url(array('controller'=>'registration','action'=>'index'));?>">Register</a></li>
-				<li id="login_link"><?= $this->Logout(); ?></li>
-                        </ul>
-				
-        </div>
-        </div>
+    <?php echo $this->render('header.phtml') ?>
+    
  	<div id="content_area">
- 		<div class="page">
+ 		<div class="page">              
                     <?php echo $this->layout()->content ?>
 		</div>
 	</div>	
 </div>
-       <div id="footer_area">
-		<div class="page">
-		<div id="footer_menu">
-			<ul>
-				<li>About Us</li>
-				<li>Contact Us</li>
-				<li>Privacy Policy</li>
-				<li>Terms & Conditions</li>
-				<li>Sitemap</li>
-			</ul>
-		</div>
-		</div>
-	</div>
+       <?php echo $this->render('footer.phtml') ?>
+    
 </body>
 </html>

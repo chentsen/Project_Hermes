@@ -4,11 +4,19 @@ body {
 
         background: #cccccc url('../images/bgsprite2.png');
 }
+#content_area h1, #content_area p {
+    padding: 0px;
+    margin: 0px;
+}
+
 div { display: block; }
 /**allows for full width or page width framework**/
 .custom {
-	margin: 0 auto;
+	margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
         margin-top: 30px;
+        padding: 0px;
 	width: 800px;
 	background-color: white;
 	box-shadow: 0 0 5px 5px #000;
@@ -38,7 +46,7 @@ div { display: block; }
 
 /**top menu**/
 #topmenu {
-	margin-top: 10px;
+	
 	float: left;
 }
 #topmenu ul{
@@ -75,7 +83,7 @@ div { display: block; }
 /** mini menu**/
 #reg_links {
 	float: left;
-	margin-top: 10px;
+	margin-top: 13px;
 		box-shadow: 0 0 1px 1px #bbbbbb;
 	background: orange;
 	border-radius: 5px;
@@ -104,29 +112,27 @@ div { display: block; }
 }
 
 /**footer area and footer menu**/
-#footer_area {
-	text-shadow: 1px 1px 1px #000;
-	color: #616161;
-}
-#footer_area .page {
-	
-}
+
 #footer_menu {
-	padding: 10px;
+
 }
 #footer_menu ul {
+        
 	text-align: center;
-	padding: 0px;
+        margin: 0;
+        padding: 10px 0;
 }
 #footer_menu ul li{
 	list-style: none;
 	display: inline;
 	padding: 0px 5px;
+        text-shadow: 1px 1px 1px #000;
+	color: #616161;
 }
 
 /** content area **/
 #content_area {
-	padding: 20px 15px;
+	/*padding: 20px 15px;*/
 	min-height: 430px;
         background: #eee;
      
@@ -209,4 +215,76 @@ div { display: block; }
     position: absolute;
     top: 10px;
     right: 10px;
+}
+/****search friend*****/
+.friend_finder {
+   background: #d6d6d6;
+   position: relative;
+}
+.search_friend_form
+{
+    float: left;
+}
+.friend_finder_inner {
+    width: 290px;
+    height: 22px;
+    margin: 0 auto;
+    padding: 10px 0;
+    
+}
+.search_friend_form input{
+   
+}
+.search_friend_form input {
+    width: 250px;
+    border: none;
+    height: 20px;
+}
+.search_friend_submit 
+{
+    float: right;
+}
+.search_friend_submit input {
+    width: 30px;
+    height: 30px;
+ 
+    border: none;
+    background: url('../images/search.png') no-repeat top center;
+    text-indent: -9999px;
+}
+/***icon bar ****/
+.icon_bar {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    margin: 0px 6px 0px 0px;
+    padding: 0px;
+}
+.icon_bar ul {
+    margin: 6px 0px 0px 0px;
+    padding-top: 0;
+}
+.icon_bar ul li {
+    list-style: none;
+    float: left;
+    margin: 0px;
+    padding: 0px 3px;
+}
+/** left icon bar ***/
+.left_icon_bar{
+    float: left;
+}
+.left_icon_bar img {
+    margin: 6px 0 0 8px;
+}
+/**** friend stuff*****/
+.friend_name {
+    list-style: none;
+    padding: 3px 0 0 3px;
+    font-weight: bold;
+    font-size: 12px;
+}
+#friendsList ul {
+    margin: 0px;
+    padding-top: 10px;
 }
