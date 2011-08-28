@@ -1,14 +1,14 @@
-<div id="view-content">
-	<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>
+<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>
+<?= $this->firstname; ?> <?= $this->lastname; ?>
+<div id="view-content">	
 	
-	<?= $this->firstname; ?>
-        <?= $this->lastname; ?>
-	<p>
-		<b>Feed</b>
+	<div class="left_col">
+		<h2>Feed</h2>
 		<?= $this->DisplayGeneralFeed($this->identity); ?>
-	</p>
-	<p>
-		<b>Upcoming Events</b>
+               
+	</div>
+        <div class="right_col">
+		<h2>Upcoming Events</h2>
 		<?= $this->DisplayEventFeed($this->identity); ?>
-	</p>
+        </div>
 </div>

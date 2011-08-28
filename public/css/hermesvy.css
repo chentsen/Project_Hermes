@@ -1,5 +1,5 @@
 /** css reset style sheet **/
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, .search_box p
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, .search_box p
 {
 	margin:0;
 	padding:0;
@@ -32,7 +32,7 @@ a img
 
 h1 {
 	/*18px via YUI Fonts CSS foundation*/
-	font-size:138.5%;  
+	font-size: 36px;
 }
 h2 {
 	/*16px via YUI Fonts CSS foundation*/
@@ -42,11 +42,7 @@ h3 {
 	/*14px via YUI Fonts CSS foundation*/
 	font-size:108%;  
 }
-h1,h2,h3 {
-	/* top & bottom margin based on font size */
-	margin:0px;
-     
-}
+
 
 h1,h2,h3,h4,h5,h6,strong {
 	/*bringing boldness back to headers and the strong element*/
@@ -56,6 +52,4 @@ h1,h2,h3,h4,h5,h6,strong {
 ul li {
     list-style: none;
 }
-ul {
-    
-}
+       
