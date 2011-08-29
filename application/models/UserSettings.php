@@ -6,8 +6,11 @@ use Documents\User;
 class Application_Model_UserSettings{
 	private $user;
 	private $dm;
-	public function __construct($mongoContainer){
+	public function __construct($mongoContainer,$user = null){
 		$this->dm = $mongoContainer->getDocumentManager('default');
+		if($user){
+			$this->user = $user;
+		}
 	}
 	
 	
@@ -87,6 +90,18 @@ class Application_Model_UserSettings{
 			echo 'RESULT WASNT VALID';
 			return false;
 		}
+	}
+	public function hasDescription(){
+		if(!$this->user->getDescription()){
+			return false;
+		}else{
+			return true;
+		}
+	}
+	public function setDescription($description){
+		$this->user->setDescription($description);
+		$this->dm->persist($this->user);
+		$this->dm->flush();
 	}
 }
 

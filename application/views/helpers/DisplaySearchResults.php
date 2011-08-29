@@ -56,8 +56,8 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 			echo "<div class = 'user_viewProfile'>";
 				echo "{$user->getFirstName()}";
 				echo "<br />";
-				
-				echo "<a href = '/profile/index'> profile </a>";
+				$email = $user->getEmail();
+				echo "<a href = '/profile/public/email/{$email}'> profile </a>";
 			echo "</div>";
 			//check if currently friends- are we? omit add as friend
 			//view profile
