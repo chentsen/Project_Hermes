@@ -1,9 +1,9 @@
 <form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
 	method = "<?=$this->element->getMethod() ?>">
-
+<h1>Login or <a href ="<?= $this->url(array('controller'=>'registration','action'=>'index'));?>">Register</a></h1>
 <ul id="registration">
-	<li class="reglist"><dt class="form_text"><label for="email" class="required">Email:</label></dt><dd class="form_element"><?= $this->element->email; ?></dd></li>
-	<li class="reglist"><dt  class="form_text"><label for="password" class="required">Password:</label></dt><dd class="form_element"><?= $this->element->password; ?></dd></li>
-	<li class="reglist"><div class="form_submit"><?= $this->element->login; ?> or <a href ="<?= $this->url(array('controller'=>'registration','action'=>'index'));?>">Register</a></div></li>
+	<li class="reglist"><dt class="form_text float_left"><label for="email" class="required">Email:</label></dt><dd class="form_element"><?= $this->element->email; ?></dd></li>
+	<li class="reglist"><dt  class="form_text float_left"><label for="password" class="required">Password:</label></dt><dd class="form_element"><?= $this->element->password; ?></dd></li>
+	<li class="reglist"><div class="form_submit float_left"><?= $this->element->login; ?></div></li>
 </ul>
 </form>

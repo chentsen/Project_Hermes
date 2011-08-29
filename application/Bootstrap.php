@@ -15,7 +15,14 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         //once login use zend_registry 
         return $container;
     }
-     protected function _initDefaultModuleAutoloader(){	
+        protected function _initViewHelpers()
+    {
+  
+        $this->view->addHelperPath("ZendX/JQuery/View/Helper", "ZendX_JQuery_View_Helper");
+
+        }
+    
+    protected function _initDefaultModuleAutoloader(){	
     	
     	
 	}
@@ -71,6 +78,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		
 	}
 	*/
-        
+    
 }
 

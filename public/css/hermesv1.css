@@ -6,14 +6,77 @@ body {
 }
 
 div { display: block; }
+
+#content_area h1 {
+    margin-left: 70px;
+}
+.clear_form {clear: both; display: block; }
+/*** form styles*****/
+.form_area {
+    margin-left: auto;
+    margin-right: auto;
+    width: 440px;
+    margin-bottom: 20px;
+}
+select {
+    margin: 12px;
+}
+textarea {
+        width: 300px;
+	
+	font-size: 18px;
+        -moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	background: #fff4ff;
+}
+input[type=text], input[type=password] {
+	width: 300px;
+	height: 30px;
+	font-size: 18px;
+        -moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	background: #fff4ff;
+}      
+.form_date {
+    float: left;
+}
+.float_left {
+    float: left;
+}
+.float_right {
+    float: right;
+}
+.form_text {
+	line-height: 34px;
+	font-size: 14px;
+        margin: 5px 0px;
+        font-weight: bold;
+        width: 120px;
+        
+}
+.form_submitter input[type=submit]
+{   padding: 10px;
+    text-decoration: none;
+    border: none;
+    font-size: 14px;
+    background: #aaa;
+    color: #fff;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
 /**allows for full width or page width framework**/
+
 .custom {
 	margin-left: auto;
         margin-right: auto;
         margin-bottom: 0px;
         margin-top: 30px;
         padding: 0px;
-	width: 800px;
+	width: 600px;
 	background-color: white;
 	box-shadow: 0 0 5px 5px #000;
 	-webkit-box-shadow: 0 0 2px 2px #454545;
@@ -36,11 +99,11 @@ div { display: block; }
         
        margin: 12px 20px 0px 20px;
         float: left;
+        width: 200px;
 }
 #logo h1{
         
 }
-
 /**top menu**/
 #topmenu {
 	
@@ -134,7 +197,7 @@ div { display: block; }
 	padding: 10px 10px;
 	overflow: auto;
         background: #eee;
-       
+        
      
 }
 #view-content {
@@ -164,24 +227,9 @@ div { display: block; }
 #registration {
 	
 }
-#registration input[type=text],
-#registration input[type=password] {
-	width: 300px;
-	height: 30px;
-	font-size: 18px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	border: 1px solid #ddd;
-	background: #fff4ff;
-      
-}
 
-.form_text {
-	width: 120px;
-	float: left;
-	line-height: 30px;
-	font-size: 14px;
-	font-weight: bold;
+
+font-weight: bold;
 }
 .form_element {
 	float: left;
@@ -238,12 +286,9 @@ div { display: block; }
     padding: 10px 0;
     
 }
-.search_friend_form input{
-   
-}
+
 .search_friend_form input {
     width: 250px;
-    border: none;
     height: 20px;
 }
 .search_friend_submit 
@@ -294,20 +339,32 @@ div { display: block; }
 .left_col {
     overflow: auto;
     float: left;
-    width: 384px;
-    border-right: 1px solid #bbb;
+    width: 49%;
+    border-right: 2px solid #ccc;
+    padding-right: 5px;
     min-height: 400px;
     
     
 }
-.left_col p, right_col p {
-    border-top: 1px solid #ddd;
+.eventFeedObject, .generalFeedObject {
+    background: #d6d6d6;
     padding: 5px;
 
 }
 .right_col {
     overflow: auto;
-    width: 379px;
+    width: 49%;
     float: right;
     min-height: 400px;
+}
+/**** event creation ****/
+.event_creation input[type=text]{
+     margin: 5px;
+}
+.event_creation textarea {
+    margin: 5px 10px 5px 5px;
+}
+.event_creation input[type=submit] {
+    padding: 10px;
+    margin: 5px 10px 5px 5px;
 }
