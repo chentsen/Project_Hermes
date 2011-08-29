@@ -16,13 +16,15 @@ class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
 			}
 		}
 	public function getEventFeedMessage(FeedObject $feedObject){
-		echo 'Your friend '.$feedObject->getCreator()->getFirstName().' '.$feedObject->getCreator()->getLastName().' wants to';
+		$creatorEmail = $feedObject->getCreator()->getEmail();
+		echo "Your friend <a href='/profile/public/email/{$creatorEmail}'> ".addslashes($feedObject->getCreator()->getFirstName())." ".addslashes($feedObject->getCreator()->getLastName())."</a> wants to";
 		echo '<br />'.$feedObject->getShortDescription();
 		echo '<br /> at '.$feedObject->getDate()->format('Y-m-d H:i:s');;
 	}
 	
 	public function getFriendAcceptFeedMessage(FeedObject $feedObject){
-		echo 'You and '.$feedObject->getFirstName()." ".$feedObject->getLastName()." Became friends!";
+		$creatorEmail = $feedObject->getEmail();
+		echo "You and <a href='/profile/public/email/{$creatorEmail}'> ".addslashes($feedObject->getFirstName())." ".addslashes($feedObject->getLastName())."</a> Became friends!";
 		echo '<br /> at '.$feedObject->getDate()->format('Y-m-d H:i:s');
 	}
 

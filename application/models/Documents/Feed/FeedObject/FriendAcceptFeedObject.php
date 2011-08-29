@@ -24,4 +24,7 @@ class FriendAcceptFeedObject extends FeedObject{
 	public function getLastName(){
 		return $this->lastName;
 	}
+	public function getEmail(){
+		return $this->email;
+	}
 }

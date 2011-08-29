@@ -24,6 +24,9 @@ class User{
 	private $city;
 	
 	/** @Field(type="string")*/
+	private $description;
+	
+	/** @Field(type="string")*/
 	private $password;
 	
 	/** @Field(type="string")*/
@@ -128,6 +131,12 @@ class User{
 	}
 	public function getUid(){
 		return $this->uid;
+	}
+	public function getDescription(){
+		return $this->description;
+	}
+	public function setDescription($description){
+		$this->description = $description;
 	}
 				
 }
