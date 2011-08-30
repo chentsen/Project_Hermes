@@ -10,6 +10,7 @@ div { display: block; }
 #content_area h1 {
     margin-left: 70px;
 }
+.default_form {color:#eee;}
 .clear_form {clear: both; display: block; }
 /*** form styles*****/
 .form_area {
