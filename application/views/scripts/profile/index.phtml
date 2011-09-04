@@ -4,12 +4,28 @@
 	
 	<div class="left_col">
 		<h2>Feed</h2>
-		<?= $this->DisplayGeneralFeed($this->identity); ?>
-               
+		<div id = "main_feed">
+			<?= $this->DisplayGeneralFeed($this->identity); ?>
+         </div>      
+		<a href = "#" onclick = "loadFeeds('<?= $this->identity ?>')">Refresh Feed</a>
 	</div>
         <div class="right_col">
 		<?= $this->userDescription ?>
 		<h2>Upcoming Events</h2>
-		<?= $this->DisplayEventFeed($this->identity); ?>
+			<?= $this->DisplayEventFeed($this->identity); ?>	
         </div>
 </div>
+
+<script type="text/javascript">
+     var loadFeeds = function(identity){
+		$("#main_feed").html('<img src="/images/loading.gif" alt=""/>');
+ 		$.ajax({
+			url:"/ajax/load-feed/identity/"+identity,
+			context:document.body,
+			success:function(data){
+				$("#main_feed").html(data);
+			}
+
+		});
+     }   
+</script>
