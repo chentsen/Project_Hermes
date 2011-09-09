@@ -1,0 +1,14 @@
+<form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
+	method = "<?=$this->element->getMethod() ?>">
+
+<h1>Quick Start</h1>
+<ul id="generic_form">
+    <li class=""><dt class=""><label for="music" class="required">1. My favorite type(s) of music</label></dt><dd class="form_element"><?= $this->element->musictype; ?></dd><dd class="form_element"><?= $this->element->musictype2; ?></dd></li>
+    <li class=""><dt class=""><label for="music" class="required">2. My favorite film genre(s)</label></dt><dd class="form_element"><?= $this->element->filmgenre; ?></dd></li>
+    <li class=""><dt class=""><label for="music" class="required">3. Where do you like to hang out on a typical weekday? </label></dt><dd class="form_element"><?= $this->element->hangout; ?></dd></li>
+    <li class=""><dt class=""><label for="music" class="required">4. It's Friday night. Where are you hanging out?</label></dt><dd class="form_element"><?= $this->element->friday; ?></dd></li>
+    <li class=""><dt class=""><label for="music" class="required">5. What kind of sports do you like doing?</label></dt><dd class="form_element"><?= $this->element->sports; ?></dd></li>
+    <li class=""><dt class=""><label for="music" class="required">6. Play any video games?</label></dt><dd class="form_element"><?= $this->element->videogames; ?></dd></li>
+
+</ul>
+</form>
