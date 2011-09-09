@@ -54,6 +54,13 @@ class User{
      * @ReferenceMany(targetDocument="User", inversedBy="friendsWithUser")
      */
     public $friends;
+    
+    /**
+     * 
+     * @ReferenceOne(targetDocument="Documents\Interest")
+     * 
+     */
+    private $interest;
 	public function __construct()
     {
         
@@ -137,6 +144,12 @@ class User{
 	}
 	public function setDescription($description){
 		$this->description = $description;
+	}
+	public function setInterest(Interest $interest){
+		$this->interest = $interest;
+	}
+	public function getInterest(){
+		return $this->interest;
 	}
 				
 }
