@@ -2,6 +2,7 @@
 //use bootstrap later
 //require_once('Documents/User.php');
 //require_once('repositories/User.php');
+use Documents\Interest;
 use Documents\User;
 class Application_Model_UserSettings{
 	private $user;
@@ -33,6 +34,7 @@ class Application_Model_UserSettings{
 			//set a random hash for account confirmation
 			$randomHash = md5(uniqid(rand(),true));
 			$user->setConfirmation($randomHash);
+			$user->setInterest(new Interest());
 			$this->dm->persist($user);
 			$this->dm->flush();
 			return $user->getConfirmation();

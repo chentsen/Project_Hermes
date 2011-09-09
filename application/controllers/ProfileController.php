@@ -28,6 +28,8 @@ class ProfileController extends Hermes_Controller_SessionController
     		$userDescription = new Application_Form_PersonalDescription();
     		$this->view->userDescription = $userDescription;
     	}
+    	$tagForm = new Application_Form_CreateTag();
+    	$this->view->tagForm = $tagForm;
         //if logged in
     	if($this->identity){
 			$this->view->message = 'You are logged in.';
