@@ -77,12 +77,12 @@ class Application_Form_Questions extends Zend_Form
                                               'l'=>'Library/Study Hall',
                                               'o'=>'Outdoors',
                                               'h'=>'Home',
-                                              'sm'=>'Shopping Mall'
+                                              'm'=>'Museum'
                                                  ));
                 
+                
                 $hobbies = new Zend_Form_Element_Text('hobbies');
-                $hobbies->setRequired(false) 
-                             ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
+                $hobbies->setRequired(false);
                 
                 $friday = new Zend_Form_Element_MultiCheckbox('friday');
                 $friday->setRequired(false)
@@ -96,41 +96,103 @@ class Application_Form_Questions extends Zend_Form
                                               'r'=>'Restaurant',
                                               'c'=>'Concert'
                                               ));
+                $boardgames = new Zend_Form_Element_MultiCheckbox('boardgames');
+                $boardgames->setRequired(false)
+                      ->removeDecorator('label')
+                      ->removeDecorator('htmlTag')
+                      ->addMultiOptions(array(
+                                              'b'=>'Board Games',
+                                              'c'=>'Chess',
+                                              'ca'=>'Cards (Deuces, Go Fish)',
+                                              'p'=>'Poker',
+                                              't'=>'Tabletop RPGs',
+                                              'w'=>'Word Games (Charades, Taboo)'
+                                              ));
+                
+                $books = new Zend_Form_Element_Text('books');
+                $books->setRequired(false) 
+                             ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true)); 
+                
+                $bookswriters = new Zend_Form_Element_Text('bookswriters');
+                $bookswriters->setRequired(false) 
+                             ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
+                
+               
+                
+                $news = new Zend_Form_Element_MultiCheckbox('news');
+                $news->setRequired(false)
+                      ->removeDecorator('label')
+                      ->removeDecorator('htmlTag')
+                      ->addMultiOptions(array(
+                                                'w'=>'World News',
+                                                'u'=>'US',
+                                                'p'=>'Politics',
+                                                'b'=>'Business',
+                                                'f'=>'Finance',
+                                                't'=>'Tech',
+                                                's'=>'Sports',
+                                                'sc'=>'Science',
+                                                'h'=>'Health',
+                                                'a'=>'Arts',
+                                                's'=>'Style/fashion',
+                                                't'=>'Travel'
+                                            ));
+                
+                $cuisine = new Zend_Form_Element_MultiCheckbox('cuisine');
+                $cuisine->setRequired(false)
+                      ->removeDecorator('label')
+                      ->removeDecorator('htmlTag')
+                      ->addMultiOptions(array(
+                                                'a'=>'American',
+                                                'e'=>'European',
+                                                'v'=>'Vietnamese',
+                                                'j'=>'Japanese',
+                                                'k'=>'Korean',
+                                                't'=>'Thai',
+                                                'c'=>'Chinese',
+                                                'i'=>'Indian',
+                                                'm'=>'Middle Eastern',
+                                                'af'=>'African',
+                                                'm'=>'Mediterranean'
+                                             ));
+                
+                $inorout = new Zend_Form_Element_MultiCheckbox('inorout');
+                $inorout->setRequired(false)
+                      ->removeDecorator('label')
+                      ->removeDecorator('htmlTag')
+                      ->addMultiOptions(array(
+                                            'i'=>'Indoors',
+                                            'o'=>'Outdoors'
+                                            ));
                 
                 $sports = new Zend_Form_Element_MultiCheckbox('sports');
                 $sports->setRequired(false)
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
-                      ->addMultiOptions(array(
+                      ->addMultiOptions(array( 
                                                 'b'=>'Baseball',
                                                 'ba'=>'Basketball',
+                                                'c'=>'Cricket',
+                                                'cy'=>'Cycling',
+                                                'f'=>'Field hockey',
+                                                'i'=>'Ice hockey',
                                                 'f'=>'Football',
-                                                's'=>'Soccer',
-                                                'g'=>'Gym',
-                                                'sw'=>'Swimming',
-                                                't'=>'Track/running',
-                                                'h'=>'Hiking',
-                                                'bad'=>'Badminton',
-                                                't'=>'Table tennis',
-                                                'te'=>'Tennis',
-                                                'sq'=>'Squash',
-                                                'fr'=>'Frisbee',
-                                                'n'=>'Nerf ball',
-                                                'h'=>'Hockey',
+                                                'g'=>'Golf',
                                                 'l'=>'Lacrosse',
-                                                'gy'=>'Gymnastics',
                                                 'm'=>'Martial arts',
-                                                'v'=>'Volleyball',
-                                                'no'=>'Not really an outdoors person'
-                                                        ));
+                                                'r'=>'Rugby',
+                                                's'=>'Softball',
+                                                'so'=>'Soccer',
+                                                'sq'=>'Squash',
+                                                't'=>'Tennis',
+                                                'ta'=>'Table tennis',
+                                                'v'=>'Volleyball'
+                                                  ));
+                
                 $teams = new Zend_Form_Element_Text('teams');
                 $teams->setRequired(false) 
                              ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
                 
-                $brands = new Zend_Form_Element_Text('brands');
-                $brands->setRequired(false) 
-                             ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
-
                 $videogames = new Zend_Form_Element_MultiCheckbox('videogames');
                 $videogames->setRequired(false)
                       ->removeDecorator('label')
@@ -152,7 +214,26 @@ class Application_Form_Questions extends Zend_Form
                                                   ));
            
                
+                $brands = new Zend_Form_Element_Text('brands');
+                $brands->setRequired(false) 
+                             ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
+
+                $websites = new Zend_Form_Element_Text('websites');
+                $websites->setRequired(false) 
+                             ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
                 
+                $major = new Zend_Form_Element_Text('major');
+                $major->setRequired(false) 
+                             ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
+
+                $career = new Zend_Form_Element_Text('career');
+                $career->setRequired(false) 
+                             ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
+                
+                $personality = new Zend_Form_Element_Text('personality');
+                $personality->setRequired(false) 
+                             ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
+
                 $submit = new Zend_Form_Element_Submit('submit');
 		$submit->removeDecorator('label')
 				->removeDecorator('htmlTag')
@@ -160,7 +241,8 @@ class Application_Form_Questions extends Zend_Form
 		
 		$this->setDecorators(array(array('ViewScript',array('viewScript'=>'_form_questions.phtml'))));
 		
-		$this->addElements(array($musictype, $musictype2, $filmgenre, $hangout, $friday, $sports, $videogames));
+		$this->addElements(array($submit, $personality, $career, $major, $websites, $brands, $teams, $inorout, $cuisine, $news, $books, $bookswriters,
+                                            $musictype, $filmgenre, $films, $hangout, $artists, $friday, $sports, $videogames, $boardgames, $hobbies));
 		$this->setElementDecorators(array('ViewHelper'),null,false);
                 	/**test**/  
 		/*$firstName = new Zend_Form_Element_Text('firstName');
