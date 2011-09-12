@@ -1,6 +1,6 @@
 <?php
 
-class QuestionsController extends Zend_Controller_Action
+class QuestionsController extends Hermes_Controller_SessionController
 {
 
     public function init()
@@ -17,6 +17,7 @@ class QuestionsController extends Zend_Controller_Action
        
     	$form = new Application_Form_Questions();
         $this->view->form = $form;
+        
         // action body
     }
 

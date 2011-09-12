@@ -16,6 +16,7 @@ class Application_Form_EditAccount extends Zend_Form
                 
 		$firstName = new Zend_Form_Element_Text('firstName');
 		$firstName->setRequired(true)
+                        ->setValue($options['firstName'])
 				  ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true))
 				  ->addValidator('Regex',true, array(
 				  		'pattern' => '/^[a-zA-Z\-\' ]+$/',
@@ -31,6 +32,7 @@ class Application_Form_EditAccount extends Zend_Form
 		
 		$lastName = new Zend_Form_Element_Text('lastName');
 		$lastName->setRequired(true)
+                        ->setValue($options['lastName'])
 				  ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true))
 				  ->addValidator('Regex',true, array(
 				 		 'pattern' => '/^[a-zA-Z\-\' ]+$/',
@@ -45,6 +47,7 @@ class Application_Form_EditAccount extends Zend_Form
   				  ));
                 $city = new Zend_Form_Element_Text('city');
 		$city->setRequired(true)
+                                ->setValue($options['city'])
 				  ->addValidator('StringLength',array('max'=>40,'allowWhiteSpace'=>true))
 				  ->addValidator('Regex',true, array(
 				 	    'pattern' => '/^[a-zA-Z\-\' ]+$/',
