@@ -1,7 +1,7 @@
 <?php 
 namespace Documents;
 
-/** @Document(collection="tags, repositoryClass="Repositories\Tag)*/
+/** @Document(collection="tags", repositoryClass="Repositories\Tag")*/
 class Tag{
 	/** @Id
 	 * 
@@ -23,7 +23,6 @@ class Tag{
 	 */
 	private $isCurated;
 	
-	private $count;
 	
 	public function __construct($options){
 		if($option['tagName']){

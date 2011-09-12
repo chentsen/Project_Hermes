@@ -57,7 +57,7 @@ class User{
     
     /**
      * 
-     * @ReferenceOne(targetDocument="Documents\Interest")
+     * @ReferenceOne(targetDocument="Interest")
      * 
      */
     private $interest;

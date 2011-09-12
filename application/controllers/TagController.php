@@ -8,7 +8,7 @@ class TagController extends Hermes_Controller_SessionController{
 	}
 	public function addTagAction(){
 		$tagName = $this->_request->getParam('tag_input');
-		$tagModel = new TagModel($this->curUser);
+		$tagModel = new Application_Model_Tag_Model($this->curUser);
 		$tagModel->addTag($tagName,false);
 	}
 }

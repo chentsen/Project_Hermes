@@ -2,11 +2,11 @@
 namespace Documents;
 /** @Document(collection="interests", repositoryClass="Repositories\Interest") */
 class Interest{
-	/** @Id()
+	/** @Id(strategy="NONE")
 	 * 
 	 */
 	private $id;
-	/** @ReferenceMany(targetDocument="Documents\Tag")*/
+	/** @ReferenceMany(targetDocument="Tag")*/
 	private $tags; 
 	public function __construct(){
 	   $this->tags = new \Doctrine\Common\Collections\ArrayCollection();	
@@ -17,7 +17,7 @@ class Interest{
 	public function setTag($tags){
 		$this->tags = $tags;
 	}
-	public function addUserTag(Documents\Tag $tag){
+	public function addUserTag(Tag $tag){
 		$this->tags[] = $tag;
 	}
 }

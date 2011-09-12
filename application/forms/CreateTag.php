@@ -11,7 +11,7 @@ class Application_Form_CreateTag extends Zend_Form
     	parent::__construct($options);
     	
     	$this->setName('tag');
-		$this->setAction('/tag/add_tag');
+		$this->setAction('/tag/add-tag');
 		$this->setMethod('post');
 		$email = new Zend_Form_Element_Text('tag_input');
 		$email->setRequired(true)
