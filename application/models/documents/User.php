@@ -151,5 +151,8 @@ class User{
 	public function getInterest(){
 		return $this->interest;
 	}
+        public function getCity(){
+                return $this->city;
+        }
 				
 }
