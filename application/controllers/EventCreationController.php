@@ -8,7 +8,7 @@ class EventCreationController extends Hermes_Controller_SessionController{
     	parent::init();
     	$this->form = new Application_Form_CreateEvent();
     	/* Initialize action controller here */
-    }
+           }
 
     public function indexAction()
     {
