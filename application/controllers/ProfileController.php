@@ -9,6 +9,7 @@ class ProfileController extends Hermes_Controller_SessionController
 		$this->view->identity = $this->identity;
                 $this->firstname = $this->curUser->getFirstName();
                 $this->lastname = $this->curUser->getLastName();
+               
                 /* Initialize action controller here */
         $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
@@ -19,6 +20,7 @@ class ProfileController extends Hermes_Controller_SessionController
 		
     	$this->view->firstname = $this->firstname;
         $this->view->lastname = $this->lastname;
+        
         
         $options = array('formName'=>'profileSearch','fieldName' => 'profileSearch_field','viewScriptName'=>'_form_profileSearch.phtml','formAction'=>'/Search/index');
         $form = new Application_Form_Search($options);
