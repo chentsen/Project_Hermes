@@ -8,4 +8,9 @@ class Application_Model_Utils_CollectionUtil{
 		}
 		return $newCollection;	
 	}
+	public static function collection_search(Doctrine\ODM\MongoDB\PersistentCollection $collection){
+		foreach($collection as $object){
+			
+		}
+	}
 }

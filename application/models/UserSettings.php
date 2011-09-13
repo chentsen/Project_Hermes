@@ -34,8 +34,10 @@ class Application_Model_UserSettings{
 			//set a random hash for account confirmation
 			$randomHash = md5(uniqid(rand(),true));
 			$user->setConfirmation($randomHash);
-			$user->setInterest(new Interest());
+			$interest = new Interest();
+			$user->setInterest($interest);
 			$this->dm->persist($user);
+			$this->dm->persist($interest);
 			$this->dm->flush();
 			return $user->getConfirmation();
 		}

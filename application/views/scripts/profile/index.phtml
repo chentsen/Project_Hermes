@@ -11,6 +11,8 @@
 	</div>
         <div class="right_col">
 		<?= $this->userDescription ?>
+		Existing tags: <br />
+		<?= $this->DisplayTags($this->user->getInterest()) ?>
 		<?= $this->tagForm; ?>
 		<h2>Upcoming Events</h2>
 			<?= $this->DisplayEventFeed($this->identity); ?>	
