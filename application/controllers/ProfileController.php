@@ -9,6 +9,7 @@ class ProfileController extends Hermes_Controller_SessionController
 		$this->view->identity = $this->identity;
                 $this->firstname = $this->curUser->getFirstName();
                 $this->lastname = $this->curUser->getLastName();
+               
                 /* Initialize action controller here */
         $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
