@@ -1,0 +1,30 @@
+<!--  Julian you need to modify this so that the day gets updated when the month gets updated. Right now there is just a placeholder -->
+<form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
+	method = "<?=$this->element->getMethod() ?>">
+	
+    <div class="form_area event_creation">
+	<div class="form_text float_left">I want to</div><?= $this->element->createEvent_shortDescription ?>
+        <div class="clear_form"></div>
+<<<<<<< HEAD
+        <div class="form_text float_left">On</div><div class="form_date"><?php echo $this->datePicker('createEventDP','', array()); ?></div>
+=======
+        <div class="form_text float_left">On</div><div class="form_date"><?= $this->element->createEvent_date ?></div> 
+>>>>>>> f00b9d69b1bfcf7c1b30fbab72bf49d479e29718
+        <div class="clear_form"></div>
+        <div class="form_text float_left">@</div><?= $this->element->createEvent_location ?>
+	<div class="clear_form"></div>
+        <div class="form_text float_left">And it</div>
+        <div class="float_left"><?= $this->element->createEvent_private ?></div>
+        <div class = "form_text float_left">be private.</div>
+       
+        <div class="clear_form"></div>
+        <div class="float_right"><?= $this->element->createEvent_longDescription; ?></div>
+        <div class="clear_form"></div>
+        <div class="form_submitter float_right"><?= $this->element->createEvent_submit; ?></div>
+       <div class="clear_form"></div>
+    </div>
+    
+    
+    
+	
+</form>

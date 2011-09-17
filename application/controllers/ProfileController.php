@@ -20,8 +20,7 @@ class ProfileController extends Hermes_Controller_SessionController
 		
     	$this->view->firstname = $this->firstname;
         $this->view->lastname = $this->lastname;
-        
-        
+        $this->view->user = $this->curUser;
         $options = array('formName'=>'profileSearch','fieldName' => 'profileSearch_field','viewScriptName'=>'_form_profileSearch.phtml','formAction'=>'/Search/index');
         $form = new Application_Form_Search($options);
         $this->view->form = $form;

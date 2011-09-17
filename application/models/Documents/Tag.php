@@ -25,10 +25,9 @@ class Tag{
 	
 	
 	public function __construct($options){
-		if($option['tagName']){
-			$this->tagName = $option['tagName'];
-		}
-		if($option['isCurated']){
+		
+		$this->tagName = $options['tagName'];
+		if($options['isCurated']){
 			$this->isCurated = true;
 		}else{
 			$this->isCurated = false;

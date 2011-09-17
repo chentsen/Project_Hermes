@@ -1,34 +1,58 @@
 <?php
 use Documents\Tag;
-class TagModel{
+class Application_Model_TagModel{
 	private $tagArray;
 	private $currentTag;
 	private $user;
+	private $rankedTagArray;
 	public function __construct(Documents\User $user = null){
 		$this->dm = Zend_Registry::get('Wildkat\DoctrineContainer')->getDocumentManager('default');
 		$this->user = $user;
 		if($this->user){
 			$userInterest = $this->user->getInterest();
-			$this->interestModel = new InterestModel($userInterest);	
+			$this->interestModel = new Application_Model_InterestModel($userInterest);	
+			
 		}
+		$this->setTagArray();
 	}
 	/**
+	 * 
+	 * Returns a list of tags that have a count above countNumberLimit
+	 * @param unknown_type $countNumberLimit
+	 */
+	public function setRankedTags($countNumberLimit)
+	{
+		foreach($this->tagArray as $tag){
+			if($tag->getCount() >= $countNumberLimit)
+				$this->rankedTagArray[] = $tag;	
+		}		
+	}
+	public function getRankedTags(){
+		return $this->rankedTagArray;
+	}
+	
+		/**
 	 * 
 	 * If tag exists then increment count, and add tag to user's interest model else,
 	 * serialize a new entry and then add
 	 * @param unknown_type $tagName
 	 */
 	public function addTag($tagName,$isCurated = false){
-		
-		if($tagKey = $this->tagExists($tagName)){
+		$tagKey = $this->tagExists($tagName);
+
+		if($tagKey){
+			if($tagKey == 'zero')
+				$tagKey = 0;
+			//echo 'WITHIN TAG KEY BRANCH key is'.$tagKey;
+			print_r($this->tagArray[$tagKey]);
 			$this->tagArray[$tagKey]->incrementCount();
 			$this->dm->persist($this->tagArray[$tagKey]);
 			$this->interestModel->addUserTag($this->tagArray[$tagKey]);
 			$this->dm->flush();
 		}else{
-			$newTag = new Tag(array('tagName'=>$tagName,'isCurated'=>isCurated));
-			$this->interestModel->addUserTag($this->tagArray[$tagKey]);
+			$newTag = new Tag(array('tagName'=>$tagName,'isCurated'=>$isCurated));
 			$this->dm->persist($newTag);
+			$this->interestModel->addUserTag($newTag);
 			$this->dm->flush();
 		}
 	}
@@ -69,14 +93,19 @@ class TagModel{
 	 * Deletes the tag from the user
 	 * @param unknown_type $tag
 	 */
-	private function deleteTag($tag){
-		$this->interestModel->deleteTag($tag);
-		$tag->decrementCount();
-		if($tag->getCount == 0){
-			$this->dm->remove($tag);
-		}else{
-			$this->dm->persist($tag);
-		}
+	private function deleteTag($tagName){
+		$this->interestModel->deleteTag($tagName);
+		if($this->tagExists($tagName)){	
+			if($tagKey == 'zero')
+				$tagKey = 0;
+			$tag = $this->tagArray[$tagKey];
+			$tag->decrementCount();
+			if($tag->getCount == 0){
+				$this->dm->remove($tag);
+			}else{
+				$this->dm->persist($tag);
+			}
+		}	
 		$this->dm->persist();
 		
 	}
@@ -86,7 +115,23 @@ class TagModel{
 	 * @param unknown_type $tagName
 	 */
 	private function tagExists($tagName){
-		return array_search($tagname,$this->tagArray);
+		if($this->tagArray){
+			//super slow search -- refactor later
+			foreach($this->tagArray as $key => $tag ){
+				//echo 'new tag is '. $tagName;
+			//	echo $tag->getTagName()."<br>";
+				if($tag->getTagName() == $tagName){
+					//echo 'tag exists returning key';
+					if($key == 0){
+						return 'zero';
+					}
+					return $key;
+				}
+			}
+			return false;
+		}else{
+			return false;
+		}
 	}
 	/**
 	 * 
@@ -104,10 +149,13 @@ class TagModel{
 	 * Gets a list of tags from mongoDB with a count attribute greater than countNUmber
 	 */
 	//gets the tags from mongoDB
-	private function setTagArray($countNumber,$limit = 1000){
-		$tagCursor = $this->dm->createQueryBuilder('Documents\Tag')->find()->limit($limit)->
-		sort('count', 'desc');
+	private function setTagArray($countNumber = 1,$limit = 1000){
+		$query = $this->dm->createQueryBuilder('Documents\Tag')->find()->limit($limit)->sort('count', 'desc');
+		$statement = $query->getQuery();
+		$tagCursor = $statement->execute();
+		
 		foreach($tagCursor as $tag){
+			//echo 'IN THE LOOP';
 			$this->tagArray[] = $tag;
 		}
 	}

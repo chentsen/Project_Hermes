@@ -2,7 +2,7 @@
 namespace Documents;
 /** @Document(collection="interests", repositoryClass="Repositories\Interest") */
 class Interest{
-	/** @Id(strategy="NONE")
+	/** @Id
 	 * 
 	 */
 	private $id;
@@ -11,13 +11,16 @@ class Interest{
 	public function __construct(){
 	   $this->tags = new \Doctrine\Common\Collections\ArrayCollection();	
 	}
-	public function getTag(){
+	public function getTags(){
 		return $this->tags;
 	}
-	public function setTag($tags){
+	public function setTags($tags){
 		$this->tags = $tags;
 	}
 	public function addUserTag(Tag $tag){
 		$this->tags[] = $tag;
+	}
+	public function deleteTag(Tag $tag){
+		
 	}
 }
