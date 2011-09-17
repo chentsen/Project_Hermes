@@ -18,7 +18,7 @@ class Application_Model_UserSettings{
 	//returns boolean if fails, otherwise returns the activation code
 	public function register($userInfo){
 		//if email doesnt exist then serialize and return true
-		
+            
 		if(!$this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$userInfo['email']))){
 			$user = new User();
 			$user->setEmail($userInfo['email']);
@@ -43,6 +43,15 @@ class Application_Model_UserSettings{
 			return false;
 		}	
 	}
+       public function updateinfo($userInfo){
+            
+                $this->user->setFirstName($userInfo['firstName']);
+                $this->user->setLastName($userInfo['lastName']);
+                $this->user->setCity($userInfo['city']);
+		$this->dm->persist($this->user);
+		$this->dm->flush();
+            
+        }
 	private function encryptPassword(){
 		
 	}

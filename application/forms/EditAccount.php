@@ -11,7 +11,7 @@ class Application_Form_EditAccount extends Zend_Form
     	parent::__construct($options);
     	
     	$this->setName('editAccount');
-		$this->setAction('/accountedit/index');
+		$this->setAction('/accountEdit/updateaccount');
 		$this->setMethod('post');
                 
 		$firstName = new Zend_Form_Element_Text('firstName');
@@ -70,5 +70,7 @@ class Application_Form_EditAccount extends Zend_Form
 		$this->addElements(array($submit, $firstName, $city, $lastName));
 		$this->setElementDecorators(array('ViewHelper'),null,false);
                 
+                
+            
     }
 }
