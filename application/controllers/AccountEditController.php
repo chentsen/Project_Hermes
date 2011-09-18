@@ -31,13 +31,21 @@ class AccountEditController extends Hermes_Controller_SessionController
         $this->view->city = $this->city;
         
         
-        $options = array('firstName'=>$this->firstname,'lastName'=>$this->lastName, 'city'=>$this->city);
+        $options = array('firstName'=>$this->firstname,'lastName'=>$this->lastname, 'city'=>$this->city);
         $form = new Application_Form_EditAccount($options);
         $this->view->form = $form;
         
       
+        
     }
-
+    public function updateaccountAction() 
+    {
+        $this->_helper->viewRenderer->setNoRender();
+    	$userSettings = new Application_Model_UserSettings($this->mongoContainer,$this->curUser);
+    	$userInfo = $userSettings->updateinfo($this->_request->getPost());
+        
+    	$this->_redirect('/accountEdit');
+    }
 
 }
 
