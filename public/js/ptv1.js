@@ -78,38 +78,49 @@ $(document).ready(function(){
          $(this).css({'color': '#000'}).val('').unbind(event);
         });
         
-        //login page
         
-      //input field border color
-     /*  $('.email #email').addClass(function(){
-          if ($.trim(this.value) != '') { 
-          $(this).addClass('removebg');
-          }
-         }); NOT WORKING */
-             
        
-       $('.email #email').focus(function(){
+        //registration page
+      function BdOrange(nClass, rClass){
+           
+          $(nClass).focus(function(){
           $(this).addClass('change_border_color')
-          
           $(this).addClass('removebg');
-            
-          $('#password').addClass('remove_top_border');
-        });
-        
-       
-        $('.email #email, .password #password').blur(function(){
-            if ($.trim(this.value) == '') { 
+          $(rClass).addClass('remove_top_border');
+          });
+          $(nClass).blur(function(){
+              if ($.trim(this.value) == '') { 
                   $(this).removeClass('removebg');
              }
-          $(this).removeClass('change_border_color');
-          $('#password').removeClass('remove_top_border');
-        });
-        $('.password #password').focus(function(){
-          $(this).addClass('change_border_color').addClass('removebg');
-          $('#password').addClass('remove_top_border');
-        });
-      
+               $(this).removeClass('change_border_color');
+               $(rClass).removeClass('remove_top_border');
+          });
+       }
+        BdOrange('#login #email', '#login #password');
+        BdOrange('#login #password', '#login #password');
+        BdOrange('#registration #email', '#registration #firstName');
+        BdOrange('#registration #firstName', '#registration #lastName');
+        BdOrange('#registration #lastName', '#registration #city');
+        BdOrange('#registration #city', '');
+        BdOrange('#registration #password', '#registration #password2');
+        BdOrange('#registration #password2', '');
         
+  //login page and registration remove bg
         
-   
+        function BgRemove(nClass) {
+           //email 
+           
+            if($(nClass).val().length === 0)
+            {
+                    $(nClass).removeClass('removebg');
+            }
+           else {
+               $(nClass).addClass('removebg');
+           }
+          
+          }
+          BgRemove('#email');
+          BgRemove('#firstName');
+          BgRemove('#lastName');
+          BgRemove('#city');
 });
