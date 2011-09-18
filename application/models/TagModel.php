@@ -39,21 +39,22 @@ class Application_Model_TagModel{
 	 */
 	public function addTag($tagName,$isCurated = false){
 		$tagKey = $this->tagExists($tagName);
-
-		if($tagKey){
-			if($tagKey == 'zero')
-				$tagKey = 0;
-			//echo 'WITHIN TAG KEY BRANCH key is'.$tagKey;
-			print_r($this->tagArray[$tagKey]);
-			$this->tagArray[$tagKey]->incrementCount();
-			$this->dm->persist($this->tagArray[$tagKey]);
-			$this->interestModel->addUserTag($this->tagArray[$tagKey]);
-			$this->dm->flush();
-		}else{
-			$newTag = new Tag(array('tagName'=>$tagName,'isCurated'=>$isCurated));
-			$this->dm->persist($newTag);
-			$this->interestModel->addUserTag($newTag);
-			$this->dm->flush();
+		if(!$this->interestModel->hasTag($tagName)){
+			if($tagKey){
+				if($tagKey == 'zero')
+					$tagKey = 0;
+				//echo 'WITHIN TAG KEY BRANCH key is'.$tagKey;
+				//print_r($this->tagArray[$tagKey]);
+				$this->tagArray[$tagKey]->incrementCount();
+				$this->dm->persist($this->tagArray[$tagKey]);
+				$this->interestModel->addUserTag($this->tagArray[$tagKey]);
+				$this->dm->flush();
+			}else{
+				$newTag = new Tag(array('tagName'=>$tagName,'isCurated'=>$isCurated));
+				$this->dm->persist($newTag);
+				$this->interestModel->addUserTag($newTag);
+				$this->dm->flush();
+			}
 		}
 	}
 	/**
@@ -153,10 +154,13 @@ class Application_Model_TagModel{
 		$query = $this->dm->createQueryBuilder('Documents\Tag')->find()->limit($limit)->sort('count', 'desc');
 		$statement = $query->getQuery();
 		$tagCursor = $statement->execute();
-		
-		foreach($tagCursor as $tag){
-			//echo 'IN THE LOOP';
-			$this->tagArray[] = $tag;
+		if($tagCursor){
+			foreach($tagCursor as $tag){
+				//echo 'IN THE LOOP';
+				$this->tagArray[] = $tag;
+			}
+		}else{
+			exit;
 		}
 	}
 	/**
