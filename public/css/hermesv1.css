@@ -2,13 +2,17 @@ body {
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 12px;
 
-        background: #cccccc url('../images/bgsprite2.png');
+        background: #cccccc url('../images/bgsprite.png');
 }
+
+#login { }
 
 div { display: block; }
 
+
 #content_area h1 {
-    margin-left: 70px;
+    margin-left: 110px;
+    margin-bottom:10px;
 }
 .default_form {color:#eee;}
 .clear_form {clear: both; display: block; }
@@ -26,20 +30,37 @@ textarea {
         width: 300px;
 	
 	font-size: 18px;
-        -moz-border-radius: 3px;
-	border-radius: 3px;
+        
 	border: 1px solid #ddd;
-	background: #fff4ff;
+	background: #f0f0f0;
 }
 input[type=text], input[type=password] {
-	width: 300px;
-	height: 30px;
-	font-size: 18px;
-        -moz-border-radius: 3px;
-	border-radius: 3px;
-	border: 1px solid #ddd;
-	background: #fff4ff;
-}      
+	width: 350px;
+	height: 50px;
+	font-size: 24px; 
+	border: none;
+	border-top: 1px solid #ddd;
+        background: #f0f0f0;
+        outline: 0;
+        padding: 0 10px;    
+    border: 1px solid #454545;
+    
+}     
+input[type="submit"] {
+    
+    color: white;
+    font-size: 24px;
+    border: none;
+    
+}
+input[type=text]:first,input[type=password]:first {
+    border-top: none;
+}
+
+.focusinput {
+    border: 1px solid #FC6C0C;
+}
+
 .form_date {
     float: left;
 }
@@ -78,12 +99,14 @@ input[type=text], input[type=password] {
         margin-top: 30px;
         padding: 0px;
 	width: 600px;
-	background-color: white;
-	box-shadow: 0 0 5px 5px #000;
-	-webkit-box-shadow: 0 0 2px 2px #454545;
-	-moz-box-shadow: 0 0 2px 2px #454545;
-      
-	/*border-bottom-left-radius: 10px;
+	-webkit-box-shadow: 0 0 1px 0px #bbb;
+	-moz-box-shadow: 0 0 1px 0px #bbb;
+	border-radius: 5px;
+        -mob-border-radius: 5px;
+        /*box-shadow: 0 0 5px 5px #000;
+	
+        back
+	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;*/
         /*custom class*/
 }
@@ -92,15 +115,17 @@ input[type=text], input[type=password] {
 }
 /**header**/
 #header_area .page {
-
+        border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
         background: #ddd;
+        
 }
 /**logo**/
 #logo { 
         
        margin: 12px 20px 0px 20px;
         float: left;
-        width: 200px;
+        width: 205px;
 }
 #logo h1{
         
@@ -144,7 +169,7 @@ input[type=text], input[type=password] {
 }
 /** mini menu**/
 #reg_links {
-    margin-top: 30px;
+    margin-top: 26px;
     margin-right: 15px;
     float: right;
     width: 200px;
@@ -165,11 +190,9 @@ input[type=text], input[type=password] {
 	border-radius: 3px;
 }
 #reg_links li a:hover {
-    background: #454545;
+    background: #fc6c0c;
 }
-#registration_link {
 
-}
 #login_link {
 	
 }
@@ -186,18 +209,26 @@ input[type=text], input[type=password] {
         padding: 10px 0;
 }
 #footer_menu ul li{
+        font-size: 10px;
 	list-style: none;
 	display: inline;
 	padding: 0px 5px;
-        text-shadow: 1px 1px 1px #000;
+
 	color: #616161;
+}
+#footer_menu ul li:hover 
+{
+    text-decoration: underline;
 }
 
 /** content area **/
 #content_area {
 	padding: 10px 10px;
-	overflow: auto;
+	
         background: #eee;
+       border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+       
         
      
 }
@@ -205,32 +236,24 @@ input[type=text], input[type=password] {
     overflow: auto;
 }
 /**registration**/
-#registration input {
-	
+#registration li input {
+	 
 }
 
 #registration {
-	margin-top: 30px;
-        margin-left: auto;
-        margin-right: auto;
-	width: 500px;
-        
+	
 
 }
 
 .reglist {
 	margin-bottom: 25px;
 	list-style: none;
-	height: 28px;
+	height: 40px;
         display: block;
 	
 }
-#registration {
-	
-}
 
 
-font-weight: bold;
 }
 .form_element {
 	float: left;
@@ -281,8 +304,8 @@ font-weight: bold;
     float: left;
 }
 .friend_finder_inner {
-    width: 290px;
-    height: 22px;
+    width: 310px;
+    height: 30px;
     margin: 0 auto;
     padding: 10px 0;
     
@@ -290,7 +313,10 @@ font-weight: bold;
 
 .search_friend_form input {
     width: 250px;
-    height: 20px;
+    height: 30px;
+    font-size: 16px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
 }
 .search_friend_submit 
 {
@@ -299,7 +325,7 @@ font-weight: bold;
 .search_friend_submit input {
     width: 30px;
     height: 30px;
- 
+    margin-top: 3px;
     border: none;
     background: url('../images/search.png') no-repeat top center;
     text-indent: -9999px;
@@ -309,7 +335,7 @@ font-weight: bold;
     position: absolute;
     right: 0px;
     top: 0px;
-    margin: 0px 6px 0px 0px;
+    margin: 3px 6px 0px 0px;
     padding: 0px;
 }
 .icon_bar ul {
@@ -324,6 +350,7 @@ font-weight: bold;
 }
 /** left icon bar ***/
 .left_icon_bar{
+    margin-top: 5px;
     float: left;
 }
 .left_icon_bar img {
@@ -368,4 +395,56 @@ font-weight: bold;
 .event_creation input[type=submit] {
     padding: 10px;
     margin: 5px 10px 5px 5px;
+}
+/**app style registration**/
+.email input{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  
+    border-bottom: none;
+    background: url("../images/email-form.png") no-repeat 10px center ;
+        
+}
+.password input {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    
+     background: url("../images/password-form.png") no-repeat 10px center ;
+    
+     
+}
+.removebg {
+    background: none !important;
+}
+.remove_top_border {
+    border-top: none !important;
+}
+.change_border_color {
+    border: 1px solid #FC6C0C !important;
+}
+.centerform {
+    margin: 0 auto; 
+    width: 372px;
+}
+.button { margin-top: 20px;}
+.inner_button #login { width: 182px; height: 54px;border: none; background: url("../images/button.png") no-repeat top center;}
+.inner_button { width:372px; margin: 0 auto; }
+.inner_button .register_button {
+    float:right;
+    width: 182px;}
+.inner_button .register_button a{
+    width: inherit;
+    text-decoration: none;
+    
+    
+}
+.inner_button .register_button a h1 {
+    width: inherit;
+    margin-left: 0px !important;
+    padding-top: 5px;
+    color: white;
+   font-weight: normal; 
+   text-align: center;
+    background: url("../images/button.png") no-repeat top center;
+    height: 54px;
 }
