@@ -25,9 +25,7 @@ class SearchController extends Hermes_Controller_SessionController
 		//echo 'Query string is: '. $getData[$field];
     	//echo 'didn\'t make it here';
 		//returns results of search engine
-    	
-		$this->results = $this->_helper->SearchIndex->search($queryString,$this->mongoContainer);
-    	
+		$this->results = $this->_helper->SearchIndex->search($queryString,$this->mongoContainer,$this->curUser);
     	if($this->results){
     		//echo 'COUNT = '. count($this->results);
     		$this->view->results = $this->results;

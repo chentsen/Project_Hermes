@@ -19,11 +19,12 @@ class Application_Model_EventModel{
 		$longDescription = ($raw['createEvent_longDescription'] == '') ? null : $raw['createEvent_longDescription'];
 		$private = (($raw['createEvent_private'] == 'y') ? true : false);
 		
-		$dateArray = explode('/',$raw['createEventDP']);
+		$dateArray = explode('/',$raw['createEvent_date']);
 		//var_dump($dateArray);
 		$date = new DateTime();
 		//$date->setDate($year, $month, $day)
-		$date->setDate($dateArray[2],$dateArray[0],$dateArray[1]);	
+	
+		$date->setDate($dateArray[2],$dateArray[1],$dateArray[0]);	
 		$creator = $this->dm->getRepository('Documents\User')->findOneBy(array('email' => $raw['credential']));
 		//we have to randomize to avoid flushing twice
 		$id = uniqid(rand(),false);

@@ -174,7 +174,6 @@ class DoctrineContainer
 	private function _getOdmConfigFromArray(array $options=array())
 	{
 		$config = new ODMConfig();
-		 print_r($options);
 		if (isset($options['autoGenerateHydrationClasses']) === true) {
 			$config->setAutoGenerateHydratorClasses(
 				$this->_stringToBoolean(

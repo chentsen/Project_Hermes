@@ -31,8 +31,8 @@ class Application_Model_InterestModel{
 		}
 	public function hasTag($tagName){
 		$tags = $this->interest->getTags();
-		foreach($tags as $tagName){
-			if($userTag->getTagName()==$tagName)
+		foreach($tags as $tag){
+			if($tag->getTagName()==$tagName)
 				return true;	
 		}
 		return false;

@@ -1,17 +1,20 @@
 <?php
 class Application_Model_Search_Search{
 	private $client;
-	private $results;
+	private $eventResults;
+	private $userResults;
 	private $process;
 	private $dm;
-	public function __construct($mongoContainer){
+	private $user;
+	private $currentUser;
+	public function __construct($mongoContainer,$user){
 			$this->client = Zend_Registry::get('solr');	
 			$this->dm = $mongoContainer->getDocumentManager('default');
 			$this->process = new Application_Model_Search_Process($this->dm);
-			$this->results = array();
+			$this->currentUser = $user;
 	}
 	
-	public function search($queryString){
+	public function search($queryString,$rankByTags = true){
 		$query = new SolrQuery();
 		$query->setStart(0);
 		$query->setRows(50);
@@ -20,10 +23,16 @@ class Application_Model_Search_Search{
 		$response = $query_response->getResponse();
 		$documents = $response['response']['docs'];
 		if($response['response']['docs']!=''){
-			foreach($documents as $document){
-			//	echo "I'm HERE";		
-				$this->results[] = $this->process->process($document);
-				
+			foreach($documents as $document){		
+				$object = $this->process->process($document);
+				if($object instanceof Documents\Event)
+					$this->eventResults[] = new Documents\Search\EventResult($object);	
+				else if($object instanceof Documents\User)			
+					$this->userResults[] =  new Documents\Search\UserResult($object);	
+			}
+			if($rankByTags){
+				$this->eventResults = $this->doRankEventByTags($this->eventResults);
+				$this->userResults = $this->doRankUserByTags($this->userResults);
 			}	
 		}
 		else{
@@ -35,7 +44,56 @@ class Application_Model_Search_Search{
 	public function getResults(){
 	//	echo "I'm HERE";
 		//echo count($this->results);
-		return $this->results;
+		return array('eventResults'=>$this->eventResults,'userResults'=>$this->userResults);
+	}
+	/**
+	 * 
+	 * Ranks the event results according to # of tag matches
+	 */
+	private function doRankEventByTags($results){
+		$userInterestModel = new Application_Model_InterestModel($this->currentUser->getInterest());
+		$userTags = $userInterestModel->getTags();
+		if($results){
+			foreach($results as &$result){
+				$interest = new Application_Model_InterestModel($result->result->getCreator()->getInterest());	
+				foreach($userTags as $userTag){
+					if($interest->hasTag($userTag->getTagName())){
+						$result->match[]=$userTag;	
+					}	
+				}
+			}
+			$this->sortResults($results);
+			return $results;
+		}else return;
+	}
+
+		
+	private function doRankUserByTags($results){
+	
+		$userInterestModel = new Application_Model_InterestModel($this->currentUser->getInterest());
+		$userTags = $userInterestModel->getTags();
+		if($results){
+			foreach($results as &$result){
+				$interest = new Application_Model_InterestModel($result->result->getInterest());			
+				foreach($userTags as $userTag){
+					if($interest->hasTag($userTag->getTagName())){
+						$result->match[]=$userTag;	
+					}
+				}
+			}
+			//var_dump($results);
+			$this->sortResults($results);
+			//print_r($results[0]->match->getTagName());
+			return $results;
+		}else return;
+	}
+	private function sortResults(&$results){
+		function cmpResults( $a, $b )
+		{ 
+		  if(  $a->getCount() ==  $b->getCount() ){ return 0 ; } 
+		  return ($a->getCount() > $b->getCount()) ? -1 : 1;
+		} 
+		usort($results, 'cmpResults');
 	}
 	
 }

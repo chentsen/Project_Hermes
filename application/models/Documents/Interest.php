@@ -8,8 +8,7 @@ class Interest{
 	private $id;
 	/** @ReferenceMany(targetDocument="Tag")*/
 	private $tags; 
-	public function __construct(){
-	   $this->tags = new \Doctrine\Common\Collections\ArrayCollection();	
+	public function __construct(){	
 	}
 	public function getTags(){
 		return $this->tags;
