@@ -17,22 +17,19 @@ div { display: block; }
 .default_form {color:#eee;}
 .clear_form {clear: both; display: block; }
 /*** form styles*****/
-.form_area {
-    margin-left: auto;
-    margin-right: auto;
-    width: 440px;
-    margin-bottom: 20px;
-}
+
 select {
     margin: 12px;
 }
 textarea {
-        width: 300px;
-	
-	font-size: 18px;
-        
-	border: 1px solid #ddd;
-	background: #f0f0f0;
+        width: 350px;
+	font-size: 24px; 
+	border: none;
+	border-top: 1px solid #ddd;
+        background: #f0f0f0;
+        outline: 0;
+        padding:  10px;    
+        border: 1px solid #454545;
 }
 input[type=text], input[type=password] {
 	width: 350px;
@@ -44,6 +41,7 @@ input[type=text], input[type=password] {
         outline: 0;
         padding: 0 10px;    
     border: 1px solid #454545;
+   
     
 }     
 input[type="submit"] {
@@ -362,19 +360,19 @@ input[type=text]:first,input[type=password]:first {
     border-top-right-radius: 5px;
   
     border-bottom: none;
-    background: url("../images/email-form.png") no-repeat 10px center ;
+    background: url("../images/email-form.png") no-repeat 10px center #f8f8f8;
         
 }
 .password input {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     
-     background: url("../images/password-form.png") no-repeat 10px center ;
+     background: url("../images/password-form.png") no-repeat 10px center #f8f8f8;
     
      
 }
 .removebg {
-    background: none !important;
+    background-image: none !important;
 }
 .remove_top_border {
     border-top: none !important;
@@ -387,7 +385,7 @@ input[type=text]:first,input[type=password]:first {
     width: 372px;
 }
 .button { margin-top: 20px;}
-.inner_button #login, .inner_button #register { width: 182px; height: 54px;border: none; background: url("../images/button.png") no-repeat top center;}
+.inner_button #login, .inner_button #register, .inner_button #createEvent_submit { width: 182px; height: 54px;border: none; background: url("../images/button.png") no-repeat top center;}
 .inner_button { width:372px; margin: 0 auto; }
 .inner_button .register_button {
     float:right;
@@ -410,15 +408,15 @@ input[type=text]:first,input[type=password]:first {
 }
 /** app style registration **/
 #registration .first_name input{ 
-    background: url("../images/first-name-form.png") no-repeat 10px center;
+    background: url("../images/first-name-form.png") no-repeat 10px center #f8f8f8;
     border-bottom: none;
 }
 #registration .last_name input{
-   background: url("../images/last-name-form.png") no-repeat 10px center;
+   background: url("../images/last-name-form.png") no-repeat 10px center #f8f8f8;
    border-bottom: none;
 }
 #registration .city input{
-    background: url("../images/city-form.png") no-repeat 10px center;
+    background: url("../images/city-form.png") no-repeat 10px center #f8f8f8;
     border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
 }
@@ -436,5 +434,36 @@ border-bottom-right-radius: 5px;
     border-bottom-right-radius: 5px;
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
-    background: url("../images/password-again-form.png") no-repeat 10px center;
+    background: url("../images/password-again-form.png") no-repeat 10px center #f8f8f8;
 }
+/** app style event creation page **/
+#createEvent #createEvent_shortDescription {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 245px;
+    float: right;
+    border-bottom: none;
+    z-index: 100;
+}
+#createEvent #createEvent_date {
+    width: 245px;
+    float: right;
+    margin-left: 5px;
+    border-bottom: none;
+    z-index: 200;
+}
+#createEvent #createEvent_location {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 245px;
+    float: right;
+    z-index: 300;
+}
+#createEvent #createEvent_longDescription {
+    border-radius: 5px;
+    
+}
+#createEvent .centerform {height: 310px;}
+#createEvent .centerform li {height: 51px; line-height: 51px;}
+#createEvent .centerform li .createEvent_text { font-size: 24px; width: 100px; }
+#createEvent .centerform .form_date {overflow: hidden;}

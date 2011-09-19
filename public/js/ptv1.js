@@ -67,17 +67,7 @@ $(document).ready(function(){
      }
      
      
-     /****** events page *******/
-     $( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});
-     
-     $('#createEvent_shortDescription').val('eat pizza'); 
-     $('#createEvent_location').val("Tony's Pizzeria");
-     $('#createEvent_longDescription').val('At 7pm\n155 Main St.\nSan Francisco, CA 94333');
-    
-     $('#createEvent_longDescription, #createEvent_location, #createEvent_shortDescription').css({'color': '#bbb'}).focus(function(){
-         $(this).css({'color': '#000'}).val('').unbind(event);
-        });
-        
+   
         
        
         //registration page
@@ -104,6 +94,24 @@ $(document).ready(function(){
         BdOrange('#registration #city', '');
         BdOrange('#registration #password', '#registration #password2');
         BdOrange('#registration #password2', '');
+        BdOrange('#profileSearch_field', '');
+       
+        BdOrange('#createEvent_shortDescription', '#createEvent_date');
+        BdOrange('#createEvent_date', '#createEvent_location');
+        BdOrange('#createEvent_location', '');
+        BdOrange('#createEvent_longDescription', '');
+          
+          
+            /****** events page *******/
+     $( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});
+     
+     $('#createEvent_shortDescription').val('eat pizza'); 
+     $('#createEvent_location').val("Tony's Pizzeria");
+     $('#createEvent_longDescription').val('At 7pm\n155 Main St.\nSan Francisco, CA 94333');
+    
+     $('#createEvent_longDescription, #createEvent_location, #createEvent_shortDescription').css({'color': '#bbb'}).focus(function(){
+         $(this).css({'color': '#000'}).val('');//.unbind(event);
+        });
         
   //login page and registration remove bg
         
