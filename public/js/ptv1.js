@@ -67,7 +67,45 @@ $(document).ready(function(){
      }
      
      
-     /****** events page *******/
+   
+        
+       
+        //registration page
+      function BdOrange(nClass, rClass){
+           
+          $(nClass).focus(function(){
+          $(this).addClass('change_border_color')
+          $(this).addClass('removebg');
+          $(rClass).addClass('remove_top_border');
+          });
+          $(nClass).blur(function(){
+              if ($.trim(this.value) == '') { 
+                  $(this).removeClass('removebg');
+             }
+               $(this).removeClass('change_border_color');
+               $(rClass).removeClass('remove_top_border');
+          });
+       }
+        BdOrange('#login #email', '#login #password');
+        BdOrange('#login #password', '#login #password');
+        BdOrange('#registration #email', '#registration #firstName');
+        BdOrange('#registration #firstName', '#registration #lastName');
+        BdOrange('#registration #lastName', '#registration #city');
+        BdOrange('#registration #city', '');
+        BdOrange('#registration #password', '#registration #password2');
+        BdOrange('#registration #password2', '');
+        BdOrange('#profileSearch_field', '');
+       
+        BdOrange('#createEvent_shortDescription', '#createEvent_date');
+        BdOrange('#createEvent_date', '#createEvent_location');
+        BdOrange('#createEvent_location', '');
+        BdOrange('#createEvent_longDescription', '');
+        BdOrange('#editAccount #firstName','#editAccount #lastName');
+        BdOrange('#editAccount #lastName','#editAccount #city');
+        BdOrange('#editAccount #city','');
+          
+          
+            /****** events page *******/
      $( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});
      
      $('#createEvent_shortDescription').val('eat pizza'); 
@@ -75,41 +113,25 @@ $(document).ready(function(){
      $('#createEvent_longDescription').val('At 7pm\n155 Main St.\nSan Francisco, CA 94333');
     
      $('#createEvent_longDescription, #createEvent_location, #createEvent_shortDescription').css({'color': '#bbb'}).focus(function(){
-         $(this).css({'color': '#000'}).val('').unbind(event);
+         $(this).css({'color': '#000'}).val('');//.unbind(event);
         });
         
-        //login page
+  //login page and registration remove bg
         
-      //input field border color
-     /*  $('.email #email').addClass(function(){
-          if ($.trim(this.value) != '') { 
-          $(this).addClass('removebg');
-          }
-         }); NOT WORKING */
-             
-       
-       $('.email #email').focus(function(){
-          $(this).addClass('change_border_color')
+        function BgRemove(nClass) {
+           //email 
+           
+            if($(nClass).val().length === 0)
+            {
+                    $(nClass).removeClass('removebg');
+            }
+           else {
+               $(nClass).addClass('removebg');
+           }
           
-          $(this).addClass('removebg');
-            
-          $('#password').addClass('remove_top_border');
-        });
-        
-       
-        $('.email #email, .password #password').blur(function(){
-            if ($.trim(this.value) == '') { 
-                  $(this).removeClass('removebg');
-             }
-          $(this).removeClass('change_border_color');
-          $('#password').removeClass('remove_top_border');
-        });
-        $('.password #password').focus(function(){
-          $(this).addClass('change_border_color').addClass('removebg');
-          $('#password').addClass('remove_top_border');
-        });
-      
-        
-        
-   
+          }
+          BgRemove('#email');
+          BgRemove('#firstName');
+          BgRemove('#lastName');
+          BgRemove('#city');
 });

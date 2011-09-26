@@ -17,22 +17,19 @@ div { display: block; }
 .default_form {color:#eee;}
 .clear_form {clear: both; display: block; }
 /*** form styles*****/
-.form_area {
-    margin-left: auto;
-    margin-right: auto;
-    width: 440px;
-    margin-bottom: 20px;
-}
+
 select {
     margin: 12px;
 }
 textarea {
-        width: 300px;
-	
-	font-size: 18px;
-        
-	border: 1px solid #ddd;
-	background: #f0f0f0;
+        width: 350px;
+	font-size: 24px; 
+	border: none;
+	border-top: 1px solid #ddd;
+        background: #f0f0f0;
+        outline: 0;
+        padding:  10px;    
+        border: 1px solid #454545;
 }
 input[type=text], input[type=password] {
 	width: 350px;
@@ -44,6 +41,7 @@ input[type=text], input[type=password] {
         outline: 0;
         padding: 0 10px;    
     border: 1px solid #454545;
+   
     
 }     
 input[type="submit"] {
@@ -172,7 +170,7 @@ input[type=text]:first,input[type=password]:first {
     margin-top: 26px;
     margin-right: 15px;
     float: right;
-    width: 200px;
+    width: 250px;
   
     text-align: right;
 }
@@ -236,47 +234,7 @@ input[type=text]:first,input[type=password]:first {
     overflow: auto;
 }
 /**registration**/
-#registration li input {
-	 
-}
 
-#registration {
-	
-
-}
-
-.reglist {
-	margin-bottom: 25px;
-	list-style: none;
-	height: 40px;
-        display: block;
-	
-}
-
-
-}
-.form_element {
-	float: left;
-	
-	
-}
-.form_submit {
-	width:300px;
-	text-align: center;
-	float: left;
-}
-.form_register {
-	width: 200px;
-	float: left;
-}
-#registration .errors {
-	width: 420px;
-        float: left;
-     
-}
-#registration .errors li {
-    list-style: none;
-}
 /**registration ajax**/
 
 /*****login message*****/
@@ -396,25 +354,25 @@ input[type=text]:first,input[type=password]:first {
     padding: 10px;
     margin: 5px 10px 5px 5px;
 }
-/**app style registration**/
+/**app style login**/
 .email input{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
   
     border-bottom: none;
-    background: url("../images/email-form.png") no-repeat 10px center ;
+    background: url("../images/email-form.png") no-repeat 10px center #f8f8f8;
         
 }
 .password input {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     
-     background: url("../images/password-form.png") no-repeat 10px center ;
+     background: url("../images/password-form.png") no-repeat 10px center #f8f8f8;
     
      
 }
 .removebg {
-    background: none !important;
+    background-image: none !important;
 }
 .remove_top_border {
     border-top: none !important;
@@ -426,9 +384,40 @@ input[type=text]:first,input[type=password]:first {
     margin: 0 auto; 
     width: 372px;
 }
+
 .button { margin-top: 20px;}
-.inner_button #login { width: 182px; height: 54px;border: none; background: url("../images/button.png") no-repeat top center;}
-.inner_button { width:372px; margin: 0 auto; }
+/****** Buttons *********************
+*************************************
+*****Separate with a comma***********
+*************************************
+*****************************/
+.inner_button #login, 
+.inner_button #register, 
+.inner_button #createEvent_submit,
+#personalDescription_submit,
+#submit_tag, 
+#submit
+{  
+  height: 50px;
+  border: 1px solid #fc6c0c; 
+  border-radius: 5px;
+  background: url("../images/button.png") repeat-x center;
+  text-shadow: 0px 1px #454545;
+  color: #eee;
+  font-weight: bold;
+  
+}
+.inner_button #login:hover, 
+.inner_button #register:hover, 
+.inner_button #createEvent_submit:hover,
+#personalDescription_submit:hover,
+#submit_tag:hover, 
+#submit:hover
+{
+    background: url("../images/button-hover.png") repeat-x center;
+    text-shadow: 0px 1px #454545;
+}
+.inner_button { width:372px; margin: 0 auto;  }
 .inner_button .register_button {
     float:right;
     width: 182px;}
@@ -441,10 +430,97 @@ input[type=text]:first,input[type=password]:first {
 .inner_button .register_button a h1 {
     width: inherit;
     margin-left: 0px !important;
-    padding-top: 5px;
+    padding-top: 2px;
+    font-size: 24px;
     color: white;
    font-weight: normal; 
    text-align: center;
-    background: url("../images/button.png") no-repeat top center;
-    height: 54px;
+    background: url("../images/button.png") no-repeat center 0px;
+    height: 40px;
+}
+/** app style registration **/
+#registration .first_name input{ 
+    background: url("../images/first-name-form.png") no-repeat 10px center #f8f8f8;
+    border-bottom: none;
+}
+#registration .last_name input{
+   background: url("../images/last-name-form.png") no-repeat 10px center #f8f8f8;
+   border-bottom: none;
+}
+#registration .city input{
+    background: url("../images/city-form.png") no-repeat 10px center #f8f8f8;
+    border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+#registration .gender input{
+    }
+#registration .password input {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+   }
+#registration .password_again input{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background: url("../images/password-again-form.png") no-repeat 10px center #f8f8f8;
+}
+/** app style event creation page **/
+#createEvent #createEvent_shortDescription {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 245px;
+    float: right;
+    border-bottom: none;
+    z-index: 100;
+}
+#createEvent #createEvent_date {
+    width: 245px;
+    float: right;
+    margin-left: 5px;
+    border-bottom: none;
+    z-index: 200;
+}
+#createEvent #createEvent_location {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 245px;
+    float: right;
+    z-index: 300;
+}
+#createEvent #createEvent_longDescription {
+    border-radius: 5px;
+    
+}
+#createEvent .centerform {height: 310px;}
+#createEvent .centerform li {height: 51px; line-height: 51px;}
+#createEvent .centerform li .createEvent_text { font-size: 24px; width: 100px; }
+#createEvent .centerform .form_date {overflow: hidden;}
+
+/*** app style profile page ***/
+#personalDescription_description, #tag_input {
+     border-radius: 5px;
+}
+
+/** app style account edit **/
+#editAccount #firstName {
+     border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+}
+#editAccount #lastName {
+    border-bottom: none;
+   
+}
+#editAccount #city {
+     border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
 }

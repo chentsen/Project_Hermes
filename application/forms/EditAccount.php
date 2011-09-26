@@ -63,7 +63,8 @@ class Application_Form_EditAccount extends Zend_Form
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->removeDecorator('label')
 				->removeDecorator('htmlTag')
-				->removeDecorator('DtDdWrapper');
+				->removeDecorator('DtDdWrapper')
+                                ->setLabel('Submit');
 		
 		$this->setDecorators(array(array('ViewScript',array('viewScript'=>'_form_accountEdit.phtml'))));
 		

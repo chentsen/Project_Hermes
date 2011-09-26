@@ -30,7 +30,8 @@ class Application_Form_Login extends Zend_Form
 		$login = new Zend_Form_Element_Submit('login');
 		$login->removeDecorator('label')
 				->removeDecorator('htmlTag')
-				->removeDecorator('DtDdWrapper');
+				->removeDecorator('DtDdWrapper')
+                                ->setLabel('Login');
 		
 		$this->setDecorators(array(array('ViewScript',array('viewScript'=>'_form_login.phtml'))));
 		

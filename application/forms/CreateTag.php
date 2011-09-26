@@ -20,7 +20,8 @@ class Application_Form_CreateTag extends Zend_Form
 		$submit_tag = new Zend_Form_Element_Submit('submit_tag');
 		$submit_tag->removeDecorator('label')
 				->removeDecorator('htmlTag')
-				->removeDecorator('DtDdWrapper');
+				->removeDecorator('DtDdWrapper')
+                                ->setLabel('Add');
 		$this->addElements(array($submit_tag,$email));
 		$this->setElementDecorators(array('ViewHelper'),null,false);
     	/* Form Elements & Other Definitions Here ... */

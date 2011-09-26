@@ -1,7 +1,14 @@
 <div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>
-<?= $this->firstname; ?> <?= $this->lastname; ?>
+<?//= $this->firstname; ?> <?//= $this->lastname; ?>
 <div id="view-content">	
-	
+    <div class="top_col">
+        
+        <?= $this->userDescription ?>
+		Existing tags: <br />
+		<?= $this->DisplayTags($this->user->getInterest()) ?>
+		<?= $this->tagForm; ?>
+    </div>
+             
 	<div class="left_col">
 		<h2>Feed</h2>
 		<div id = "main_feed">

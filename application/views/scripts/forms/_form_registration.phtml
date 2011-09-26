@@ -2,15 +2,19 @@
 	method = "<?=$this->element->getMethod() ?>">
 
 <h1>Register</h1>
-<ul id="registration">
-  
-	<li class="reglist"><dt class="form_text float_left"><label for="email" class="required">Email:</label></dt><dd class="form_element"><?= $this->element->email; ?></dd></li>
-	<li class="reglist"><dt  class="form_text float_left"><label for="firstName" class="required">First Name:</label></dt><dd class="form_element"><?= $this->element->firstName; ?></dd></li>
-	<li class="reglist"><dt  class="form_text float_left"><label for="lastName" class="required">Last Name:</label></dt><dd class="form_element"><?= $this->element->lastName; ?></dd></li>
-	<li class="reglist"><dt  class="form_text float_left"><label for="city" class="required">City:</label></dt><dd class="form_element"><?= $this->element->city; ?></dd></li>
-	<li class="reglist"><dt  class="form_text float_left"><label for="gender">Gender:</label></dt><div class="form_element"><?= $this->element->gender; ?></dd></li>
-	<li class="reglist"><dt  class="form_text float_left"><label for="password" class="required">Password:</label></dt><dd class="form_element"><?= $this->element->password; ?></dd></li>
-	<li class="reglist"><dt  class="form_text float_left"><label for="password2" class="required">Password Again:</label></dt><dd class="form_element"><?= $this->element->password2; ?></dd></li>
-	<li class="reglist"><dt  class="form_submit"><?= $this->element->register; ?></dd></li>
-</ul>
-        </form>
+    <ul class="centerform">
+        <li class="email"><?= $this->element->email; ?></li>
+            <li class="first_name"><?= $this->element->firstName; ?></li>
+            <li class="last_name"><?= $this->element->lastName; ?></li>
+            <li class="city"><?= $this->element->city; ?></li>
+            <li class="gender"><?= $this->element->gender; ?></li>
+            <li class="password"><?= $this->element->password; ?></li>
+            <li class="password_again"><?= $this->element->password2; ?></li>
+            </ul>
+            <div class="button">
+            <div class="inner_button">
+                <?= $this->element->register; ?> 
+                </div>
+            </div>
+    
+</form>
