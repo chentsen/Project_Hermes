@@ -100,6 +100,9 @@ $(document).ready(function(){
         BdOrange('#createEvent_date', '#createEvent_location');
         BdOrange('#createEvent_location', '');
         BdOrange('#createEvent_longDescription', '');
+        BdOrange('#editAccount #firstName','#editAccount #lastName');
+        BdOrange('#editAccount #lastName','#editAccount #city');
+        BdOrange('#editAccount #city','');
           
           
             /****** events page *******/

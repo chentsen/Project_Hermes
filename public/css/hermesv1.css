@@ -170,7 +170,7 @@ input[type=text]:first,input[type=password]:first {
     margin-top: 26px;
     margin-right: 15px;
     float: right;
-    width: 200px;
+    width: 250px;
   
     text-align: right;
 }
@@ -385,7 +385,13 @@ input[type=text]:first,input[type=password]:first {
     width: 372px;
 }
 .button { margin-top: 20px;}
-.inner_button #login, .inner_button #register, .inner_button #createEvent_submit { width: 182px; height: 54px;border: none; background: url("../images/button.png") no-repeat top center;}
+.inner_button #login, 
+.inner_button #register, 
+.inner_button #createEvent_submit,
+#personalDescription_submit,
+#submit_tag, 
+#submit
+{ width: 182px; height: 40px;border: none; background: url("../images/button.png") no-repeat top center;}
 .inner_button { width:372px; margin: 0 auto; }
 .inner_button .register_button {
     float:right;
@@ -399,12 +405,13 @@ input[type=text]:first,input[type=password]:first {
 .inner_button .register_button a h1 {
     width: inherit;
     margin-left: 0px !important;
-    padding-top: 5px;
+    padding-top: 2px;
+    font-size: 24px;
     color: white;
    font-weight: normal; 
    text-align: center;
     background: url("../images/button.png") no-repeat center 0px;
-    height: 54px;
+    height: 40px;
 }
 /** app style registration **/
 #registration .first_name input{ 
@@ -467,3 +474,28 @@ border-bottom-right-radius: 5px;
 #createEvent .centerform li {height: 51px; line-height: 51px;}
 #createEvent .centerform li .createEvent_text { font-size: 24px; width: 100px; }
 #createEvent .centerform .form_date {overflow: hidden;}
+
+/*** app style profile page ***/
+#personalDescription_description, #tag_input {
+     border-radius: 5px;
+}
+
+/** app style account edit **/
+#editAccount #firstName {
+     border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none;
+}
+#editAccount #lastName {
+    border-bottom: none;
+   
+}
+#editAccount #city {
+     border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+}

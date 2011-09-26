@@ -6,15 +6,18 @@ class Zend_View_Helper_Logout extends Zend_View_Helper_Abstract {
                  if ($auth->hasIdentity()) {
                      $loginUrl = $this->view->url(array('controller' => 'index', 'action' => 'logout'));
                      $profileUrl = $this->view->url(array('controller' => 'profile', 'action' => 'index'));
+                      $editUrl = $this->view->url(array('controller' => 'accountEdit', 'action' => 'index'));
                      return '
+                          <li><a href="'. $editUrl . '">Edit Info</a></li>
                             <li><a href="'. $profileUrl . '">Profile</a></li>
                             <li><a href="'. $loginUrl . '">Logout</a></li>';
                  }
                  else {
                      $registerUrl = $this->view->url(array('controller'=>'registration','action'=>'index'));
-                   
+                    
                      $loginUrl = $this->view->url(array('controller' => 'index', 'action' => 'index'));
                      return '
+                        
                          <li><a href="'. $registerUrl . '">Register</a></li>
                              <li><a href="'. $loginUrl . '">Login</a></li>';
                  }

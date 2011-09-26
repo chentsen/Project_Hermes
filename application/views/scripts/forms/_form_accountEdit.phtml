@@ -2,11 +2,16 @@
 	method = "<?=$this->element->getMethod() ?>">
 
 <h1>Edit Your Account</h1>
-<ul id="registration">
+<ul class="centerform">
   
-	<li class="reglist"><dt  class="form_text float_left"><label for="firstName" class="required">First Name:</label></dt><dd class="form_element"><?= $this->element->firstName; ?></dd></li>
-	<li class="reglist"><dt  class="form_text float_left"><label for="lastName" class="required">Last Name:</label></dt><dd class="form_element"><?= $this->element->lastName; ?></dd></li>
-	<li class="reglist"><dt  class="form_text float_left"><label for="city" class="required">City:</label></dt><dd class="form_element"><?= $this->element->city; ?></dd></li>
-	<li class="reglist"><dt  class="form_submit"><?= $this->element->submit; ?></dd></li>
+	<li class="reglist"><?= $this->element->firstName; ?></li>
+	<li class="reglist"><?= $this->element->lastName; ?></li>
+	<li class="reglist"><?= $this->element->city; ?></li>
+        <div class="button">
+            <div class="inner_button">
+                <?= $this->element->submit; ?> 
+                </div>
+            </div>
+	
 </ul>
 </form>
