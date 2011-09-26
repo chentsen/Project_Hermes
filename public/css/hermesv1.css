@@ -384,15 +384,40 @@ input[type=text]:first,input[type=password]:first {
     margin: 0 auto; 
     width: 372px;
 }
+
 .button { margin-top: 20px;}
+/****** Buttons *********************
+*************************************
+*****Separate with a comma***********
+*************************************
+*****************************/
 .inner_button #login, 
 .inner_button #register, 
 .inner_button #createEvent_submit,
 #personalDescription_submit,
 #submit_tag, 
 #submit
-{ width: 182px; height: 40px;border: none; background: url("../images/button.png") no-repeat top center;}
-.inner_button { width:372px; margin: 0 auto; }
+{  
+  height: 50px;
+  border: 1px solid #fc6c0c; 
+  border-radius: 5px;
+  background: url("../images/button.png") repeat-x center;
+  text-shadow: 0px 1px #454545;
+  color: #eee;
+  font-weight: bold;
+  
+}
+.inner_button #login:hover, 
+.inner_button #register:hover, 
+.inner_button #createEvent_submit:hover,
+#personalDescription_submit:hover,
+#submit_tag:hover, 
+#submit:hover
+{
+    background: url("../images/button-hover.png") repeat-x center;
+    text-shadow: 0px 1px #454545;
+}
+.inner_button { width:372px; margin: 0 auto;  }
 .inner_button .register_button {
     float:right;
     width: 182px;}
