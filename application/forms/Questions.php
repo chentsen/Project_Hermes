@@ -15,24 +15,26 @@ class Application_Form_Questions extends Zend_Form
 		$this->setMethod('post');
                 
 		
-                //ten main questions to answer
+                //ten main questions to answer 
+                //Andy:Uses keys as tags! to extend this we want to pass multioptions in from $options 
                 $musictype = new Zend_Form_Element_MultiCheckbox('musictype');
+                $musictype->class="musicMulti";
                 $musictype->setRequired(false)
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
-                      ->addMultiOptions(array('r'=>'Rock',
-                                              'p'=>'Pop',
-                                              'e'=>'Electronic',
-                                              'rnb' => 'R&B',
-                                              'p' => 'Punk',
-                                              'm' => 'Metal',
-                                              'j' => 'Jazz',
-                                              'f' => 'Funk',
-                                              'fo' => 'Folk',
-                                              'h' => 'Hip Hop',
-                                              'c' => 'Classical',
-                                              'b' => 'Blues',
-                                              'i' => 'Indie'
+                      ->addMultiOptions(array('Rock'=>'Rock',
+                                              'Pop'=>'Pop',
+                                              'Electronic'=>'Electronic',
+                                              'R&B' => 'R&B',
+                                              'Punk' => 'Punk',
+                                              'Metal' => 'Metal',
+                                              'Jazz' => 'Jazz',
+                                              'Funk' => 'Funk',
+                                              'Folk' => 'Folk',
+                                              'Hip Hop' => 'Hip Hop',
+                                              'Classical' => 'Classical',
+                                              'Blues' => 'Blues',
+                                              'Indie' => 'Indie'
                                               ));
                 $artists = new Zend_Form_Element_Text('artists');
                 $artists->setRequired(false) 
@@ -43,25 +45,25 @@ class Application_Form_Questions extends Zend_Form
                 $filmgenre->setRequired(false)
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
-                      ->addMultiOptions(array(  'a'=>'Action',
-                                                'ad'=>'Adventure',
-                                                'c'=>'Cartoon/Animation',
-                                                'co'=>'Comedy',
-                                                'cr'=>'Crime',
-                                                'd'=>'Documentary',
-                                                'dr'=>'Drama',
-                                                'e'=>'Experimental',
-                                                'f'=>'Fantasy',
-                                                'fn'=>'Film noir',
-                                                'h'=>'Historical',
-                                                'ho'=>'Horror',
-                                                'm'=>'Musical',
-                                                'my'=>'Mystery',
-                                                'r'=>'Romance',
-                                                'sf'=>'Science fiction',
-                                                'su'=>'Supernatural',
-                                                't'=>'Thriller',
-                                                'w'=>'Western'
+                      ->addMultiOptions(array(  'Action'=>'Action',
+                                                'Adventure'=>'Adventure',
+                                                'Cartoon/Animation'=>'Cartoon/Animation',
+                                                'Comedy'=>'Comedy',
+                                                'Crime'=>'Crime',
+                                                'Documentary'=>'Documentary',
+                                                'Drama'=>'Drama',
+                                                'Experimental'=>'Experimental',
+                                                'Fantasy'=>'Fantasy',
+                                                'Film Noir'=>'Film noir',
+                                                'Historical'=>'Historical',
+                                                'Horror'=>'Horror',
+                                                'Musical'=>'Musical',
+                                                'Mystery'=>'Mystery',
+                                                'Romance'=>'Romance',
+                                                'Science fiction'=>'Science fiction',
+                                                'Supernatural'=>'Supernatural',
+                                                'Thriller'=>'Thriller',
+                                                'Western'=>'Western'
                                                      ));
                 $films = new Zend_Form_Element_Text('films');
                 $films->setRequired(false) 
@@ -72,12 +74,12 @@ class Application_Form_Questions extends Zend_Form
                 $hangout->setRequired(false)
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
-                      ->addMultiOptions(array('c'=>'Cafe',
-                                              'r'=>'Restaurant',
-                                              'l'=>'Library/Study Hall',
-                                              'o'=>'Outdoors',
-                                              'h'=>'Home',
-                                              'm'=>'Museum'
+                      ->addMultiOptions(array('Cafe'=>'Cafe',
+                                              'Restaurant'=>'Restaurant',
+                                              'Library'=>'Library/Study Hall',
+                                              'Outdoors'=>'Outdoors',
+                                              'Home'=>'Home',
+                                              'Museum'=>'Museum'
                                                  ));
                 
                 
@@ -89,24 +91,24 @@ class Application_Form_Questions extends Zend_Form
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
                       ->addMultiOptions(array(
-                                              'm'=>'Movies',
-                                              'hp'=>'House Party',
-                                              'c'=>'Club',
-                                              'b'=>'Bar/Lounge',
-                                              'r'=>'Restaurant',
-                                              'c'=>'Concert'
+                                              'Movies'=>'Movies',
+                                              'House Party'=>'House Party',
+                                              'Club'=>'Club',
+                                              'Bar/Lounge'=>'Bar/Lounge',
+                                              'Restaurant'=>'Restaurant',
+                                              'Concert'=>'Concert'
                                               ));
                 $boardgames = new Zend_Form_Element_MultiCheckbox('boardgames');
                 $boardgames->setRequired(false)
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
                       ->addMultiOptions(array(
-                                              'b'=>'Board Games',
-                                              'c'=>'Chess',
-                                              'ca'=>'Cards (Deuces, Go Fish)',
-                                              'p'=>'Poker',
-                                              't'=>'Tabletop RPGs',
-                                              'w'=>'Word Games (Charades, Taboo)'
+                                              'Board Games'=>'Board Games',
+                                              'Chess'=>'Chess',
+                                              'Cards'=>'Cards (Deuces, Go Fish)',
+                                              'Poker'=>'Poker',
+                                              'Tabletop RPGs'=>'Tabletop RPGs',
+                                              'Word Games'=>'Word Games (Charades, Taboo)'
                                               ));
                 
                 $books = new Zend_Form_Element_Text('books');
@@ -124,18 +126,18 @@ class Application_Form_Questions extends Zend_Form
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
                       ->addMultiOptions(array(
-                                                'w'=>'World News',
-                                                'u'=>'US',
-                                                'p'=>'Politics',
-                                                'b'=>'Business',
-                                                'f'=>'Finance',
-                                                't'=>'Tech',
-                                                's'=>'Sports',
-                                                'sc'=>'Science',
-                                                'h'=>'Health',
-                                                'a'=>'Arts',
-                                                's'=>'Style/fashion',
-                                                't'=>'Travel'
+                                                'World News'=>'World News',
+                                                'US'=>'US',
+                                                'Politics'=>'Politics',
+                                                'Business'=>'Business',
+                                                'Finance'=>'Finance',
+                                                'Tech'=>'Tech',
+                                                'Sports'=>'Sports',
+                                                'Science'=>'Science',
+                                                'Health'=>'Health',
+                                                'Arts'=>'Arts',
+                                                'Style/fashion'=>'Style/fashion',
+                                                'Travel'=>'Travel'
                                             ));
                 
                 $cuisine = new Zend_Form_Element_MultiCheckbox('cuisine');
@@ -143,17 +145,17 @@ class Application_Form_Questions extends Zend_Form
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
                       ->addMultiOptions(array(
-                                                'a'=>'American',
-                                                'e'=>'European',
-                                                'v'=>'Vietnamese',
-                                                'j'=>'Japanese',
-                                                'k'=>'Korean',
-                                                't'=>'Thai',
-                                                'c'=>'Chinese',
-                                                'i'=>'Indian',
-                                                'm'=>'Middle Eastern',
-                                                'af'=>'African',
-                                                'm'=>'Mediterranean'
+                                                'American'=>'American',
+                                                'European'=>'European',
+                                                'Vietnamese'=>'Vietnamese',
+                                                'Japanese'=>'Japanese',
+                                                'Korean'=>'Korean',
+                                                'Thai'=>'Thai',
+                                                'Chinese'=>'Chinese',
+                                                'Indian'=>'Indian',
+                                                'Middle Eastern'=>'Middle Eastern',
+                                                'African'=>'African',
+                                                'Mediterranean'=>'Mediterranean'
                                              ));
                 
                 $inorout = new Zend_Form_Element_MultiCheckbox('inorout');
@@ -161,8 +163,8 @@ class Application_Form_Questions extends Zend_Form
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
                       ->addMultiOptions(array(
-                                            'i'=>'Indoors',
-                                            'o'=>'Outdoors'
+                                            'Indoors'=>'Indoors',
+                                            'Outdoors'=>'Outdoors'
                                             ));
                 
                 $sports = new Zend_Form_Element_MultiCheckbox('sports');
@@ -170,29 +172,30 @@ class Application_Form_Questions extends Zend_Form
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
                       ->addMultiOptions(array( 
-                                                'b'=>'Baseball',
-                                                'ba'=>'Basketball',
-                                                'c'=>'Cricket',
-                                                'cy'=>'Cycling',
-                                                'f'=>'Field hockey',
-                                                'i'=>'Ice hockey',
-                                                'f'=>'Football',
-                                                'g'=>'Golf',
-                                                'l'=>'Lacrosse',
-                                                'm'=>'Martial arts',
-                                                'r'=>'Rugby',
-                                                's'=>'Softball',
-                                                'so'=>'Soccer',
-                                                'sq'=>'Squash',
-                                                't'=>'Tennis',
-                                                'ta'=>'Table tennis',
-                                                'v'=>'Volleyball'
+                                                'Baseball'=>'Baseball',
+                                                'Basketball'=>'Basketball',
+                                                'Cricket'=>'Cricket',
+                                                'Cycline'=>'Cycling',
+                                                'Field Hockey'=>'Field hockey',
+                                                'Ice Hockey'=>'Ice hockey',
+                                                'Football'=>'Football',
+                                                'Golf'=>'Golf',
+                                                'Lacross'=>'Lacrosse',
+                                                'Martial arts'=>'Martial arts',
+                                                'Rugby'=>'Rugby',
+                                                'Softball'=>'Softball',
+                                                'Soccer'=>'Soccer',
+                                                'Squash'=>'Squash',
+                                                'Tennis'=>'Tennis',
+                                                'Table Tennis'=>'Table tennis',
+                                                'Volleyball'=>'Volleyball'
                                                   ));
                 
                 $teams = new Zend_Form_Element_Text('teams');
                 $teams->setRequired(false) 
                              ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
                 
+                             
                 $videogames = new Zend_Form_Element_MultiCheckbox('videogames');
                 $videogames->setRequired(false)
                       ->removeDecorator('label')
@@ -212,7 +215,7 @@ class Application_Form_Questions extends Zend_Form
                                                 'fi'=>'Fighting',
                                                 'v'=>'Virtual novels'
                                                   ));
-           
+           	   
                
                 $brands = new Zend_Form_Element_Text('brands');
                 $brands->setRequired(false) 
@@ -229,11 +232,11 @@ class Application_Form_Questions extends Zend_Form
                 $career = new Zend_Form_Element_Text('career');
                 $career->setRequired(false) 
                              ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
-                
+                /*
                 $personality = new Zend_Form_Element_Text('personality');
                 $personality->setRequired(false) 
                              ->addValidator('StringLength',array('max'=>30,'allowWhiteSpace'=>true));
-
+				*/
                 $submit = new Zend_Form_Element_Submit('submit');
 		$submit->removeDecorator('label')
 				->removeDecorator('htmlTag')

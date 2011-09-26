@@ -56,6 +56,11 @@ class User{
     public $friends;
     
     /**
+     *@ReferenceOne(targetDocument="Userflow") 
+     */
+    public $userflow;
+    
+    /**
      * 
      * @ReferenceOne(targetDocument="Interest")
      * 
@@ -151,8 +156,18 @@ class User{
 	public function getInterest(){
 		return $this->interest;
 	}
-        public function getCity(){
-                return $this->city;
-        }
+    public function getCity(){
+        return $this->city;
+    }
+    public function getUserflow(){
+    	if($this->userflow){
+    		return $this->userflow;
+    	}else{
+    		$this->userflow = new Userflow();
+    	} 	
+    }
+    public function setUserflow(Userflow $userflow){
+    	$this->userflow = $userflow;
+    }
 				
 }

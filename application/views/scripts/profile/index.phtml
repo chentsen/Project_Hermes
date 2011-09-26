@@ -10,6 +10,7 @@
 		<a href = "#" onclick = "loadFeeds('<?= $this->identity ?>')">Refresh Feed</a>
 	</div>
         <div class="right_col">
+		<?=$this->DisplayNewUserFlow($this->flowStatus)?>
 		<?= $this->userDescription ?>
 		Existing tags: <br />
 		<?= $this->DisplayTags($this->user->getInterest()) ?>

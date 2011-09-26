@@ -23,7 +23,7 @@ class Application_Model_EventModel{
 		//var_dump($dateArray);
 		$date = new DateTime();
 		//$date->setDate($year, $month, $day)
-	
+		
 		$date->setDate($dateArray[2],$dateArray[1],$dateArray[0]);	
 		$creator = $this->dm->getRepository('Documents\User')->findOneBy(array('email' => $raw['credential']));
 		//we have to randomize to avoid flushing twice

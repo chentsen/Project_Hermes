@@ -4,6 +4,7 @@
 //require_once('repositories/User.php');
 use Documents\Interest;
 use Documents\User;
+use Documents\Userflow;
 class Application_Model_UserSettings{
 	private $user;
 	private $dm;
@@ -36,6 +37,9 @@ class Application_Model_UserSettings{
 			$user->setConfirmation($randomHash);
 			$interest = new Interest();
 			$user->setInterest($interest);
+			$flow = new Userflow();
+			$user->setUserflow($flow);
+			$this->dm->persist($flow);
 			$this->dm->persist($user);
 			$this->dm->persist($interest);
 			$this->dm->flush();

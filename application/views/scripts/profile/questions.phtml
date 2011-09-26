@@ -1,0 +1,5 @@
+<script src="../js/questions.js">
+</script>
+
+<?= $this->form; ?>
+<?= $this->inlineScript()->appendScript("$(document).ready(Questions.loadQuestions({$this->questionStatus}))");?>

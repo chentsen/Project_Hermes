@@ -38,7 +38,7 @@ class Application_Model_TagModel{
 	 * serialize a new entry and then add
 	 * @param unknown_type $tagName
 	 */
-	public function addTag($tagName,$isCurated = false){
+	public function addTag($tagName,$isCurated = false,$flush = true){
 		$tagKey = $this->tagExists($tagName);
 		if(!$this->interestModel->hasTag($tagName)){
 			if($tagKey){
@@ -49,12 +49,14 @@ class Application_Model_TagModel{
 				$this->tagArray[$tagKey]->incrementCount();
 				$this->dm->persist($this->tagArray[$tagKey]);
 				$this->interestModel->addUserTag($this->tagArray[$tagKey]);
-				$this->dm->flush();
+				if($flush)
+					$this->dm->flush();
 			}else{
 				$newTag = new Tag(array('tagName'=>$tagName,'isCurated'=>$isCurated));
 				$this->dm->persist($newTag);
 				$this->interestModel->addUserTag($newTag);
-				$this->dm->flush();
+				if($flush)
+					$this->dm->flush();
 			}
 		}
 	}
@@ -173,4 +175,27 @@ class Application_Model_TagModel{
 		return $this->tagArray;
 	}
 	
+	public function processQuestionTags($raw){
+		
+		foreach($raw as $key=>$tagCat){
+			if($key =='controller')
+				continue;
+			if($key=='action')
+				continue;
+			if($key=='module')
+				continue;
+			if(empty($tagCat))
+				continue;	
+			if($key=='q_state')
+				continue;
+			if(is_array($tagCat)){
+				foreach($tagCat as $tagName=>$value){
+					$this->addTag($value,false,false);
+				} 
+			}else{
+				$this->addTag($tagCat,false,false);
+			}	
+			$this->dm->flush();
+		}
+	}
 }
