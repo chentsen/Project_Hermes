@@ -1,4 +1,11 @@
-<br /><br />
 <div id="view-content">
-	<p>View script for controller <b>Contact</b> and script/action name <b>index</b></p>
+    <div id="content-page">
+    <?= $this->Errors($this->errors); ?>
+    <p>
+        <?=$this->DisplayFlashMessages($this->flashMessages); ?>
+    </p>
+    <h1>Contact Us</h1>
+    <p>Site not working? Have any questions? Want to learn more about PlumeType? Fill in the contact form below and we'll get back to you ASAP. We're also open to chat about pretty much anything, so feel free to just drop in and say hi!</p>
+    </div>
+    <?= $this->form ?>
 </div>

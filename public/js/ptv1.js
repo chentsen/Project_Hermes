@@ -103,6 +103,11 @@ $(document).ready(function(){
         BdOrange('#editAccount #firstName','#editAccount #lastName');
         BdOrange('#editAccount #lastName','#editAccount #city');
         BdOrange('#editAccount #city','');
+        /*contact page*/
+        BdOrange('#contact #email','#contact #name');
+        BdOrange('#contact #name','#contact #subject');
+        BdOrange('#contact #subject','#contact #text');
+        BdOrange('#contact #text','');
           
           
             /****** events page *******/
