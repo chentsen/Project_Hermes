@@ -1,4 +1,21 @@
-<br /><br />
 <div id="view-content">
-	<p>View script for controller <b>About</b> and script/action name <b>index</b></p>
+    <div id="content-page">
+    <?= $this->Errors($this->errors); ?>
+    <p>
+        <?=$this->DisplayFlashMessages($this->flashMessages); ?>
+    </p>
+    <h1>About Us</h1>
+    <p>We've always felt that making friends (both online and offline) is a tricky task. In real life, it's hard to find people you genuinely connect with. You'd have to make a real effort to socialize and go out in order to even get a shot at these connections. 
+    </p><br/>
+    <p>With the internet, it's relatively easier to find people who share your interests. But what happens after you find someone? You communicate through IM a couple of times and maybe meet up after a few months if you're lucky. Online meetings come with so many barriers: people are wary of strangers, you'll have conflicting schedules, and you're often restricted by your locations.
+        </p><br/>
+        <p>
+We believe that by streamlining the whole process, from finding someone to meeting up with them, we can make it easier for you to create new friendships.  With PlumeType, it only takes 3 steps:
+        </p><br/>
+        <ol><li>1) List your interests</li>
+            <li>2) Find events around you based on your interests</li>
+            <li>3) Go to these events and meet cool people</li>
+        </ol><br/>
+<p>Interest-based tags help narrow down your search criteria, while meetups centered around group events create a more comfortable atmosphere for people to make friends and have fun. These are the two core features that make PlumeType work.</p>
+    </div>
 </div>

@@ -33,9 +33,9 @@ class RegistrationController extends Zend_Controller_Action
 																	 'activationCode'=>$activationCode));
 				//$this->view->htmlBody = $htmlBody;
 				$mail->setBodyHtml($htmlBody);
-				$mail->setFrom('admin@plumetype.com', 'Andy');
+				$mail->setFrom('activation@plumetype.com', 'Plumetype Activation');
 				$mail->addTo($_POST['email']);
-				$mail->setSubject('Confirm your registration with plumetype');
+				$mail->setSubject('Activate Your Plumetype Account');
 				$mail->send();
 				// redirect to some page and fire off email and return
 				return;			
