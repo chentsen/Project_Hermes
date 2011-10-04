@@ -115,7 +115,7 @@ input[type=text]:first,input[type=password]:first {
 #header_area .page {
         border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-        background: #f7edb7;
+        background: #eee;
         
 }
 /**logo**/
