@@ -1,7 +1,7 @@
 body { 
-	font-family: Helvetica, Arial, sans-serif;
+	font-family: arial,sans-serif;
 	font-size: 12px;
-
+     
         background: #cccccc url('../images/bgsprite.png');
 }
 
@@ -115,7 +115,7 @@ input[type=text]:first,input[type=password]:first {
 #header_area .page {
         border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
-        background: #ddd;
+        background: #f7edb7;
         
 }
 /**logo**/
