@@ -53,6 +53,17 @@ function getErrorHtml(formErrors, id)
 
 
 $(document).ready(function(){
+    
+    /***** click menu top *****/
+   $('.icon_bar ul .settings-button').click(function(){
+        $(this).parent().find('ul.sub-settings').slideToggle('fast');
+         
+        $(this).toggleClass('icon_bar_bg');
+    });
+  
+    
+    
+   /*
      $('.loginonce').click(function(){
             $(this).hide(2000, function(){
             $(this).remove();
@@ -66,7 +77,7 @@ $(document).ready(function(){
          $('.loginonce').hide();
      }
      
-     
+     */
    
         
        
