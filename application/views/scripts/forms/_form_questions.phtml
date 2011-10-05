@@ -2,7 +2,7 @@
 <h1>Quick Start</h1>
 
 <div class="ajaxContent">
-
+ 
 </div>
 <div class ="hiddenContent" style="display:none">
 	<form class="questions_1 form">
@@ -11,27 +11,27 @@
 		    <li class=""><dt class=""><label for="artists" class="required">My favorite artists/bands are</label></dt><dd class="form_element"><?= $this->element->artists; ?></dd></li>
 		    <li class=""><dt class=""><label for="filmgenre" class="required">My favorite film genre(s)</label></dt><dd class="form_element"><?= $this->element->filmgenre; ?></dd></li>
 		    <li class=""><dt class=""><label for="films" class="required">My favorite films are</label></dt><dd class="form_element"><?= $this->element->films; ?></dd></li>
-		    <li class=""><dt class=""><label for="hangout" class="required">Where do you like to hang out on a typical weekday?</label></dt><dd class="form_element"><?= $this->element->hangout; ?></dd></li>
-		</ul>
+		    <li class=""><dt class=""><label for="books" class="required">My favorite type of books are</label></dt><dd class="form_element"><?= $this->element->books; ?></dd></li>
+		    <li class=""><dt class=""><label for="bookswriters" class="required">My favorite books and/or writers are</label></dt><dd class="form_element"><?= $this->element->bookswriters; ?></dd></li>		</ul>
 		<input name="q_state" class="q_state" type="hidden" value="1" />
 		<div class="questions_1 submit" onclick="Questions.submitQuestions();">Next (1 of 4)</div>
 	</form>
 	<form class="questions_2 form">
 	<ul class ="questions_2">
 	    <li class=""><dt class=""><label for="hobbies" class="required">My hobbies are</label></dt><dd class="form_element"><?= $this->element->hobbies; ?></dd></li>
-	    <li class=""><dt class=""><label for="friday" class="required">It's Friday night. Where are you hanging out?</label></dt><dd class="form_element"><?= $this->element->friday; ?></dd></li> 
-	    <li class=""><dt class=""><label for="boardgames" class="required">Play any tabletop games?</label></dt><dd class="form_element"><?= $this->element->boardgames; ?></dd></li>
-	    <li class=""><dt class=""><label for="books" class="required">My favorite type of books are</label></dt><dd class="form_element"><?= $this->element->books; ?></dd></li>
-	    <li class=""><dt class=""><label for="bookswriters" class="required">My favorite books and/or writers are</label></dt><dd class="form_element"><?= $this->element->bookswriters; ?></dd></li>
+	    <li class=""><dt class=""><label for="hangout" class="required">Where do you like to hang out on a typical weekday?</label></dt><dd class="form_element"><?= $this->element->hangout; ?></dd></li>	    
+	    <li class=""><dt class=""><label for="friday" class="required">It's Friday night. Where are you hanging out?</label></dt><dd class="form_element"><?= $this->element->friday; ?></dd></li>
+	    <li class=""><dt class=""><label for="cuisine" class="required">What type of cuisine do you like?</label></dt><dd class="form_element"><?= $this->element->cuisine; ?></dd></li>	
 	</ul>
 	<div class="questions_2 submit" onclick="Questions.submitQuestions();">Next (2 of 4)</div>
 		<input name="q_state" class="q_state" type="hidden" value="2" />
 	</form>
 	<form class="questions_3 form" >
 	<ul class ="questions_3" >
-	    <li class=""><dt class=""><label for="news" class="required">What kind of news do you like to follow?</label></dt><dd class="form_element"><?= $this->element->news; ?></dd></li>
-	    <li class=""><dt class=""><label for="cuisine" class="required">What type of cuisine do you like?</label></dt><dd class="form_element"><?= $this->element->cuisine; ?></dd></li>
+	    
 	    <li class=""><dt class=""><label for="inorout" class="required">Indoors or Outdoors</label></dt><dd class="form_element"><?= $this->element->inorout; ?></dd></li>
+	    <li class=""><dt class=""><label for="videogames" class="required">Play any video games?</label></dt><dd class="form_element"><?= $this->element->videogames; ?></dd></li>	    
+	    <li class=""><dt class=""><label for="boardgames" class="required">Play any tabletop games?</label></dt><dd class="form_element"><?= $this->element->boardgames; ?></dd></li>	    
 	    <li class=""><dt class=""><label for="sports" class="required">What kind of sports do you like doing?</label></dt><dd class="form_element"><?= $this->element->sports; ?></dd></li>
 	    <li class=""><dt class=""><label for="teams" class="required">Favorite sports teams?</label></dt><dd class="form_element"><?= $this->element->teams; ?></dd></li>
 	</ul>
@@ -40,7 +40,7 @@
 	</form>
 	<form class="questions_4 form" >
 	<ul class ="questions_4">
-	    <li class=""><dt class=""><label for="videogames" class="required">Play any video games?</label></dt><dd class="form_element"><?= $this->element->videogames; ?></dd></li>
+	    <li class=""><dt class=""><label for="news" class="required">What kind of news do you like to follow?</label></dt><dd class="form_element"><?= $this->element->news; ?></dd></li>	    
 	    <li class=""><dt class=""><label for="brands" class="required">Favorite Brands</label></dt><dd class="form_element"><?= $this->element->brands; ?></dd></li>
 	    <li class=""><dt class=""><label for="websites" class="required">Most Used Sites</label></dt><dd class="form_element"><?= $this->element->websites; ?></dd></li>
 	</ul>   
