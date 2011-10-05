@@ -1,5 +1,9 @@
 /** css reset style sheet **/
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, .search_box p
+* {
+    margin: 0;
+    padding: 0;
+}
+/*html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, .search_box p
 {
         
 	margin:0;
@@ -10,8 +14,9 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 	font-size:100%;
 	font-family:inherit;
 	vertical-align:baseline;
-}
-.buttonhover:hover { background: url("../images/buy-now-2.png") top center no-repeat;}
+}*/
+
+/*.buttonhover:hover { background: url("../images/buy-now-2.png") top center no-repeat;}
 .buttonhover {margin-bottom:0px;padding-top:16px; padding-bottom:5px; height:111px; margin:-16px;}
 body 
 {
@@ -29,20 +34,20 @@ a img
 {
 	border:none;
 }
-/** yahoo yui reset**/
+
 
 h1 {
-	/*18px via YUI Fonts CSS foundation*/
-	font-size: 28px;
+	
+	font-size: 24px;
 }
 h2 {
-	/*16px via YUI Fonts CSS foundation*/
+	
 	font-size:123.1%; 
 }
 h3 {
-	/*14px via YUI Fonts CSS foundation*/
+	
 	font-size:108%;  
-}
+} */
 
 
 h1,h2,h3,h4,h5,h6,strong {
@@ -53,4 +58,14 @@ h1,h2,h3,h4,h5,h6,strong {
 ul li {
     list-style: none;
 }
-       
+a {
+    text-decoration: none;
+    color: white;
+    
+}
+.last-child {
+    border-right: none !important;
+}
+ol {
+    margin-left: 20px;
+}

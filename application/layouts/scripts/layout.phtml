@@ -11,10 +11,32 @@
  		<div class="page">     
                    
                     <?php echo $this->layout()->content ?>
+                    <div class="right-block">
+                        <div class="create_button">
+                            <a href="eventCreation"><h1>Create Event</h1></a>
+                        </div>
+                        <div class="block-item upcoming_events">
+                            <div class="block-header">
+                                <h3>Upcoming Events</h3>
+                            </div>
+                        </div>
+                        <div class="block-item friends_list">
+                           <div class="block-header">
+                            <h3>Friends</h3>
+                           </div>
+                          </div>
+                        
+                        <div class="block-item quick_profile">
+                            <div class="block-header">
+                            <h3>Edit Bio</h3>
+                            </div>
+
+                        </div>
+                    </div>
 		</div>
 	</div>	
-</div>
+
        <?php echo $this->render('footer.phtml') ?>
-    
+    </div>
 </body>
 </html>

@@ -3,9 +3,10 @@
         $form = new Application_Form_Search($options);
         $this->form = $form;
 ?>
+<div id="header_block">
 <div id="header_area">
 	<div class="page">
-                <div id="logo"><h1><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>"><img src= "<?= $this->baseUrl('images/plumetype-logo.png') ?>" /></a></h1></div>
+                <div id="logo"><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>"><h1>PlumeType</h1></a></div>
                <!-- <div id="topmenu">
                     <ul>
                         <li><a href="<?= $this->url(array('controller'=>'profile','action'=>'index'));?>">My Page</a></li>
@@ -13,13 +14,14 @@
                         <li><a href="<?= $this->url(array('controller'=>'eventCreation','action'=>'index'));?>">Events</a></li>
                         <li><a href="">Another link</a></li>
                     </ul>
-                </div>-->			
-			<ul id="reg_links">
+                </div>-->	
+              <?php $auth = Zend_Auth::getInstance();
+        if($auth->hasIdentity()){ echo $this->form; }?>
+			<!--<ul id="reg_links">
 				<?= $this->Logout(); ?>
-                        </ul>
+                        </ul>-->
 				
         </div>
     
         </div>
-<?php $auth = Zend_Auth::getInstance();
-        if($auth->hasIdentity()){ echo $this->form; }?>
+</div>

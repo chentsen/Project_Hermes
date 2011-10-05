@@ -1,6 +1,7 @@
-<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>
+<!--<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>-->
 <?//= $this->firstname; ?> <?//= $this->lastname; ?>
 <div id="view-content">	
+    <div class="view-wrapped">
     <div class="top_col">
         
         <?= $this->userDescription ?>
@@ -25,6 +26,7 @@
 		<h2>Upcoming Events</h2>
 			<?= $this->DisplayEventFeed($this->identity); ?>	
         </div>
+    </div>
 </div>
 
 <script type="text/javascript">
