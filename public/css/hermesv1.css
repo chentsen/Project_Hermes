@@ -1,7 +1,7 @@
 body { 
 	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 	font-size: 12px;
-        background: #2f2f2f;
+        background: #2f2f2f url('../images/bg-pencil2.png') repeat;
         color: #fff;
 }
 
@@ -28,7 +28,7 @@ textarea {
         background: #f0f0f0;
         outline: 0;
         padding:  10px;    
-        border: 1px solid #454545;
+        border: 1px solid orange;
 }
 input[type=text], input[type=password] {
 	width: 350px;
