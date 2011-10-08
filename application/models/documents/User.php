@@ -66,6 +66,13 @@ class User{
      * 
      */
     private $interest;
+    
+    /**
+     * 
+     * @ReferenceOne(targetDocument="Image")
+     * 
+     */
+    private $profilePic;
 	public function __construct()
     {
         
@@ -168,6 +175,12 @@ class User{
     }
     public function setUserflow(Userflow $userflow){
     	$this->userflow = $userflow;
+    }
+    public function getProfilePic(){
+    	return $this->profilePic;
+    }
+    public function setProfilePic(Image $image){
+    	$this->profilePic = $image;
     }
 				
 }
