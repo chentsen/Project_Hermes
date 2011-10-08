@@ -33,7 +33,9 @@ class AccountEditController extends Hermes_Controller_SessionController
         
         $options = array('firstName'=>$this->firstname,'lastName'=>$this->lastname, 'city'=>$this->city);
         $form = new Application_Form_EditAccount($options);
+        $profilePic_form = new Application_Form_ProfilePic();
         $this->view->form = $form;
+        $this->view->profilePic_form = $profilePic_form;
         
       
         
@@ -45,6 +47,22 @@ class AccountEditController extends Hermes_Controller_SessionController
     	$userInfo = $userSettings->updateinfo($this->_request->getPost());
         
     	$this->_redirect('/accountEdit');
+    }
+    public function uploadPicAction(){
+    	//ajaxify this shit in the future
+    	$form = new Application_Form_ProfilePic();
+    	 $this->_helper->viewRenderer->setNoRender();
+    	var_dump($_FILES);
+    	if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
+    		if($form->image->isUploaded()){
+	    		$imageModel = new Application_Model_ImageModel($this->curUser);
+	    		$imageModel->makeProfilePicture($_FILES['image']['tmp_name'],$_FILES['image']['type']);
+	    		echo 'image saved!';
+    		}
+    	}else{
+    		$this->_redirect('account-edit');
+    	}
+    	
     }
 
 }
