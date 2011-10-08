@@ -17,14 +17,16 @@ div { display: block; }
 .clear_form {clear: both; display: block; }
 /***** landing styles********/
 .out-logo h1 {
-    background: url('../images/plumetype-flat.png');
-    width: 320px;
-    height: 80px;
+    background: url('../images/plumetype-flat.png') no-repeat;
+    width: 321px;
+    height: 100px;
     text-indent: -9999px;
+    
 }
 .out-slogan { margin-top: 30px; margin-bottom: 0px;}
 .out-slogan h1 {
     font-size: 40px;
+    text-shadow: 0px 2px #555;
 }
 .out-preview ul {
     width: 850px;
@@ -43,6 +45,7 @@ div { display: block; }
 .out-preview ul li h1 {
     font-size: 100px;
     margin-top: 20px;
+    
 }
 .out-signup {
     margin-bottom: 60px;
