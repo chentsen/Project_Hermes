@@ -4,7 +4,7 @@
     <div class="view-wrapped">
     <div class="top_col">
         
-        <?= $this->userDescription ?>
+  
 		Existing tags: <br />
 		<?= $this->DisplayTags($this->user->getInterest()) ?>
 		<?= $this->tagForm; ?>
@@ -20,10 +20,7 @@
 	</div>
         <div class="right_col">
 		<?=$this->DisplayNewUserFlow($this->flowStatus)?>
-		<?= $this->userDescription ?>
-		Existing tags: <br />
-		<?= $this->DisplayTags($this->user->getInterest()) ?>
-		<?= $this->tagForm; ?>
+		
 		<h2>Upcoming Events</h2>
 			<?= $this->DisplayEventFeed($this->identity); ?>	
         </div>
