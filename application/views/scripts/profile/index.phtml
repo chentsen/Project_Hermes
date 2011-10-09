@@ -1,12 +1,10 @@
 <!--<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>-->
 <?//= $this->firstname; ?> <?//= $this->lastname; ?>
 
-   
+<script src="../js/tags.js"></script>
 <div id="view-content">	
     <div class="view-wrapped">
     <div class="top_col">
-        
-  
 		Existing tags: <br />
 		<?= $this->DisplayTags($this->user->getInterest()) ?>
 		<?= $this->tagForm; ?>
@@ -24,6 +22,9 @@
                         <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
                     </div>
                 </div>
+		REAL TAGS:
+		<input type="text" class ="tag_input"></input>
+		<!--  <img src="/img/profile-pic" height=100  width=100/>  USE THIS FOR PROFILE PICS-->
     </div>
              
 	<div class="left_col">
@@ -41,7 +42,9 @@
         </div>
     </div>
 </div>
+<div class = "ajax_content" style = "display:none">
 
+</div>
 <script type="text/javascript">
      var loadFeeds = function(identity){
 		$("#main_feed").html('<img src="/images/loading.gif" alt=""/>');
@@ -55,3 +58,4 @@
 		});
      }   
 </script>
+<?= $this->inlineScript()->appendScript("$(document).ready(Tags.init())");?>

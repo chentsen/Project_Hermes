@@ -1,0 +1,46 @@
+<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>
+<?//= $this->firstname; ?> <?//= $this->lastname; ?>
+<div id="view-content">	
+    <div class="top_col">
+        
+        <?= $this->userDescription ?>
+		Existing tags: <br />
+		<?= $this->DisplayTags($this->user->getInterest()) ?>
+		<?= $this->tagForm; ?>
+    </div>
+             
+	<div class="left_col">
+		<h2>Feed</h2>
+		<div id = "main_feed">
+			<?= $this->DisplayGeneralFeed($this->identity); ?>
+         </div>      
+		<a href = "#" onclick = "loadFeeds('<?= $this->identity ?>')">Refresh Feed</a>
+	</div>
+        <div class="right_col">
+<<<<<<< HEAD
+		<?=$this->DisplayNewUserFlow($this->flowStatus)?>
+		<?= $this->userDescription ?>
+		Existing tags: <br />
+		<?= $this->DisplayTags($this->user->getInterest()) ?>
+		<?= $this->tagForm; ?>
+=======
+		
+>>>>>>> 62c2b93234ce0ebb41479350705444b2ef689057
+		<h2>Upcoming Events</h2>
+			<?= $this->DisplayEventFeed($this->identity); ?>	
+        </div>
+</div>
+
+<script type="text/javascript">
+     var loadFeeds = function(identity){
+		$("#main_feed").html('<img src="/images/loading.gif" alt=""/>');
+ 		$.ajax({
+			url:"/ajax/load-feed/identity/"+identity,
+			context:document.body,
+			success:function(data){
+				$("#main_feed").html(data);
+			}
+
+		});
+     }   
+</script>
