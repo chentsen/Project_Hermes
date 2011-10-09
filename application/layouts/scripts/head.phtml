@@ -4,14 +4,14 @@
           ->appendStylesheet($this->baseUrl('css/hermesvy.css'))
           ->appendStylesheet($this->baseUrl('css/hermesv1.css')) 
           ->appendStylesheet($this->baseUrl('css/smoothness/jquery-ui-1.7.3.custom.css'))
-          ->appendStylesheet($this->baseUrl('autoSuggestv14/autoSuggest.css')); ?>
+          ->appendStylesheet($this->baseUrl('css/autoSuggest.css')); ?>
   <?php echo $this->headLink() ?>
   <?php echo $this->jQuery()->enable()->uiEnable(); ?>
   <?php $this->headScript()
           ->appendFile($this->baseUrl('js/jquery.cookie.js'))
           ->appendFile($this->baseUrl('js/ptv1.js'))
           ->appendFile($this->baseUrl('js/andy.js'))
-          ->appendFile($this->baseUrl('autoSuggestv14/jquery.autoSuggest.js')); 
+          ->appendFile($this->baseUrl('js/jquery.autoSuggest.js')); 
             //http://code.drewwilson.com/entry/autosuggest-jquery-plugin
     ?>
   

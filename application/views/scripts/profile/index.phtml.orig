@@ -1,19 +1,12 @@
-<!--<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>-->
+<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>
 <?//= $this->firstname; ?> <?//= $this->lastname; ?>
-
-<script src="../js/tags.js"></script>
-
 <div id="view-content">	
-    <div class="view-wrapped">
     <div class="top_col">
         
-  
+        <?= $this->userDescription ?>
 		Existing tags: <br />
 		<?= $this->DisplayTags($this->user->getInterest()) ?>
 		<?= $this->tagForm; ?>
-		REAL TAGS:
-		<input type="text" class ="tag_input"></input>
-		<!--  <img src="/img/profile-pic" height=100  width=100/>  USE THIS FOR PROFILE PICS-->
     </div>
              
 	<div class="left_col">
@@ -24,16 +17,20 @@
 		<a href = "#" onclick = "loadFeeds('<?= $this->identity ?>')">Refresh Feed</a>
 	</div>
         <div class="right_col">
+<<<<<<< HEAD
 		<?=$this->DisplayNewUserFlow($this->flowStatus)?>
+		<?= $this->userDescription ?>
+		Existing tags: <br />
+		<?= $this->DisplayTags($this->user->getInterest()) ?>
+		<?= $this->tagForm; ?>
+=======
 		
+>>>>>>> 62c2b93234ce0ebb41479350705444b2ef689057
 		<h2>Upcoming Events</h2>
 			<?= $this->DisplayEventFeed($this->identity); ?>	
         </div>
-    </div>
 </div>
-<div class = "ajax_content" style = "display:none">
 
-</div>
 <script type="text/javascript">
      var loadFeeds = function(identity){
 		$("#main_feed").html('<img src="/images/loading.gif" alt=""/>');
@@ -47,4 +44,3 @@
 		});
      }   
 </script>
-<?= $this->inlineScript()->appendScript("$(document).ready(Tags.init())");?>
