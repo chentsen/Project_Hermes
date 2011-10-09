@@ -18,7 +18,8 @@
                    
                     <?php echo $this->layout()->content ?>
                     <?php $auth = Zend_Auth::getInstance(); 
-                    if($auth->hasIdentity()){ ?>
+                    if($auth->hasIdentity()){ 
+                    	$this->identity = $auth->getIdentity()?>
                     <div class="right-block">
                         <div class="create_button">
                             <a href="eventCreation"><h1>Create Event</h1></a>
