@@ -6,8 +6,6 @@
 <div id="view-content">	
     <div class="view-wrapped">
     <div class="top_col">
-        
-  
 		Existing tags: <br />
 		<?= $this->DisplayTags($this->user->getInterest()) ?>
 		<?= $this->tagForm; ?>
@@ -51,4 +49,4 @@
 		});
      }   
 </script>
-<?= $this->inlineScript()->appendScript("$(document).ready(Tags.init())");?>
+<?= $this->inlineScript()->appendScript("$(document).ready(Tags.init());");?>

@@ -60,10 +60,13 @@ $(document).ready(function(){
          
         $(this).toggleClass('icon_bar_bg');
     });
+
+    
   
     
-    
-   /*
+  /*
+   
+   
      $('.loginonce').click(function(){
             $(this).hide(2000, function(){
             $(this).remove();
@@ -96,7 +99,7 @@ $(document).ready(function(){
                $(this).removeClass('change_border_color');
                $(rClass).removeClass('remove_top_border');
           });
-       }
+      }
         BdOrange('#login #email', '#login #password');
         BdOrange('#login #password', '#login #password');
         BdOrange('#registration #email', '#registration #firstName');
@@ -133,8 +136,9 @@ $(document).ready(function(){
         });
         
   //login page and registration remove bg
-        
-        function BgRemove(nClass) {
+
+     
+     /*   function BgRemove(nClass) {
            //email 
            
             if($(nClass).val().length === 0)
@@ -150,4 +154,9 @@ $(document).ready(function(){
           BgRemove('#firstName');
           BgRemove('#lastName');
           BgRemove('#city');
+          */
+       
+       
 });
+
+         
