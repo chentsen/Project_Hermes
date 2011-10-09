@@ -1,7 +1,7 @@
 body { 
 	font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 12px;
-        background: #454545;
+        background:  url('../images/bg-pencil.png') repeat #f0f0f0;
         color: #fff;
 }
 
@@ -378,7 +378,7 @@ input[type=text]:first,input[type=password]:first {
     background: #fff;
      border-radius: 5px;
      height: 100% !important;
-     color: #FC6C0C;
+     color: #555;
      margin: 5px;
      overflow: auto;
      
@@ -654,7 +654,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
    line-height: 48px;
    border: 1px solid #fc6c0c; 
    border-radius: 5px;
-    background: url("../images/button.png") repeat-x center ;
+    background: #EE8641;
     height: 48px;
      margin-left: 0px !important;
     color: #eee;
@@ -774,4 +774,50 @@ border-bottom-right-radius: 5px;
     margin-top: 0px;
     
     background: url("../images/your-text-form.png") no-repeat 10px 10px #f8f8f8;
+}
+/**** tags ******/
+.tags_area {
+    
+    min-height: 100px;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+  
+}
+.tags_base {
+    background-color: white;
+    border-radius: 5px;
+    min-height: 100px;
+      overflow: auto;
+      padding: 5px;
+}
+.tags {
+    background: #1dab19;
+    color: white;
+    border-radius: 5px;
+    
+    float: left;
+    padding: 5px 10px;
+    margin: 0px 0px 5px 5px;
+    overflow: auto;
+    cursor: pointer;
+}
+
+.tag_text {float: left;
+          margin-right: 5px;
+         
+}
+.close_tag {
+    
+    float:right;
+}
+.close_tag a {
+    padding: 5px;
+    background: url("../images/close-tag.png") no-repeat center center;
+}
+.tag_disable {
+    background: orange;
+}
+.tag_remove {
+    display: none;
 }
