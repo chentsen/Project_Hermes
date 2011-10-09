@@ -11,8 +11,12 @@
 		Existing tags: <br />
 		<?= $this->DisplayTags($this->user->getInterest()) ?>
 		<?= $this->tagForm; ?>
-		REAL TAGS:
-		<input type="text" class ="tag_input"></input>
+		<div class = tag_dropdown onclick = "Tags.toggleDropDown();">
+			Add a tag
+		</div>
+		<div class = tag_input_wrapper style="display:none;">
+			<input type="text" class ="tag_input"></input>
+		</div>
 		<!--  <img src="/img/profile-pic" height=100  width=100/>  USE THIS FOR PROFILE PICS-->
     </div>
              
