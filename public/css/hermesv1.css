@@ -29,18 +29,18 @@ div { display: block; }
     text-shadow: 0px 2px #555;
 }
 .out-preview ul {
-    width: 850px;
-    margin: 60px 0px 60px 80px;
+    margin-top: 20px;
     overflow: auto;
+    margin-bottom: 60px;
 }
 .out-preview ul li  {
-    margin: 0 20px;
+ 
     float: left;
 }
 .out-preview ul li h3 {
     font-weight: normal;
-    margin-top: 35px;
-    font-size: 16px;
+
+    font-size: 24px;
 }
 .out-preview ul li h1 {
     font-size: 100px;
