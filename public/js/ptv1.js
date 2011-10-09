@@ -156,19 +156,7 @@ $(document).ready(function(){
           BgRemove('#city');
           */
        
-         $('.tags').click(function(){
-            $(this).toggleClass('tag_disable');
-
-        });
-        $('.close_tag').click(function(){
-            $(this).removeClass('tag_disable');
-
-        });
-   
-    
-        $('.close_tags a').click(function(){
-            $(this).addClass('tag_remove');
-        });
+       
 });
 
          
