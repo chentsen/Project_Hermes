@@ -62,6 +62,22 @@ class Application_Model_TagModel{
 	}
 	/**
 	 * 
+	 * Convenience function to add a comma delimited list of tags to interest and tags
+	 * @param unknown_type $tagNames
+	 * @param unknown_type $flush
+	 */
+	public function addTagList($tagNames,$flush = true){
+		$tagNamesArray = explode(',',$tagNames);
+		foreach($tagNamesArray as $tagName){
+			$this->addTag($tagName,false,false);			
+		}
+		$this->dm->flush();
+		return true;
+	
+	}
+	
+	/**
+	 * 
 	 * Gets the number of times a tag has been added to profile pages (as shown in DB)
 	 * @param unknown_type $tag
 	 */

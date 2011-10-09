@@ -1,6 +1,9 @@
 <!--<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>-->
 <?//= $this->firstname; ?> <?//= $this->lastname; ?>
-
+<? 
+	$interestModel = new Application_Model_InterestModel($this->user->getInterest());
+	$tagArray = $interestModel->getTags();
+?>
 <script src="../js/tags.js"></script>
 
 <div id="view-content">	
@@ -10,18 +13,19 @@
 		<? //=$this->DisplayTags($this->user->getInterest()) ?>
 		<? //=$this->tagForm; ?>
 		  <div class="tags_area">
-                    <div class="tags_base">
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-           
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>       
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                    </div>
-            </div>
+		 	 <div class="tags_base">
+				<? if(count($tagArray) > 0){ 
+						foreach($tagArray as $tag){ ?>
+							<div class ="tags" id="tag_<?=$tag->getTagName()?>" onclick = 'Tags.toggleTag("tag_<?=$tag->getTagName()?>")'>
+								<div class="tag_text"><?=$tag->getTagName()?></div>
+								<div class="close_tag" onclick="Tags.removeTag('tag_<?=$tag->getTagName()?>')"></div>
+							</div>				
+				<?			
+						}
+				}				
+				?>		  
+		  	</div>
+		  </div>
 		<div class = tag_dropdown onclick = "Tags.toggleDropDown();">
 			Add a tag
 		</div>
@@ -46,9 +50,15 @@
         </div>
     </div>
 </div>
-<div class = "ajax_content" style = "display:none">
 
+<div class = "ajax_content" style = "display:none">
+	<div class = "tags_base ajax"></div>
+	<div class ="tags" id="tag_" onclick = 'Tags.toggleTag("")'>
+		<div class="tag_text"></div>
+		<div class="close_tag" onclick="Tags.removeTag('')"></div>
+	</div>		
 </div>
+
 <script type="text/javascript">
      var loadFeeds = function(identity){
 		$("#main_feed").html('<img src="/images/loading.gif" alt=""/>');
