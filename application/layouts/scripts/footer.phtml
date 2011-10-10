@@ -1,10 +1,10 @@
 <div id="footer_menu">
     <div class="page">
 			<ul class="left_footer">
-                            <li><a href="/about">About Us</a></li>
-                            <li><a href="/blog">Blog</a></li>
-				<li><a href="/contact">Contact Us</a></li>
-				<li><a href="/privacy">Privacy Policy</a></li>
+                            <li><a href="<?= $this->url(array('controller'=>'about','action'=>'index'));?>">About Us</a></li>
+                            <li><a href="http://plumetype.com/blog">Blog</a></li>
+				<li><a href="<?= $this->url(array('controller'=>'contact','action'=>'index'));?>">Contact Us</a></li>
+				<li><a href="<?= $this->url(array('controller'=>'privacy','action'=>'index'));?>">Privacy Policy</a></li>
                                 <li class="last-child">© 2011 PlumeType.com</li>
                                 
 				<!--<li>Sitemap</li>-->

@@ -66,7 +66,11 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 			echo "<p><div class = 'user_result'>";
 			$friendRelation = new Application_Model_FriendRelation($identity);
 			echo '<div class = "matchingTags">';
-			echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
+			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
+                        echo '<div class="common_value"><div class="common_number">';
+                        echo "{$user->getCount()}";
+                            
+                        echo '</div><div class="in_common"><h3>Tags in Common</h3></div></div>';
 			echo "You both like:";
 			if($user->match){
 				if(count($user->match > 1)){
