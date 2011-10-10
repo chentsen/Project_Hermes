@@ -878,13 +878,11 @@ ul.as-selections {
          
 }
 .close_tag {
-    
+    padding: 5px;
+    background: url("../images/close-tag.png") no-repeat center center; 
     float:right;
 }
-.close_tag a {
-    padding: 5px;
-    background: url("../images/close-tag.png") no-repeat center center;
-}
+
 .tag_disable {
     background: orange;
     border: 1px solid #FC6C0C;

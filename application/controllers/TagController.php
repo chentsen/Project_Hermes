@@ -12,6 +12,28 @@ class TagController extends Hermes_Controller_SessionController{
 		$tagModel = new Application_Model_TagModel($this->curUser);
 		$tagModel->addTag($tagName,false);
 	}
+	public function addTagAjaxAction(){
+		$this->_helper->viewRenderer->setNoRender();
+		 $this->_helper->layout()->disableLayout();
+		$tagNames = $this->_request->getParam('tags');
+		$tagModel = new Application_Model_TagModel($this->curUser);
+		if(!$tagModel)
+			break;
+		if($tagModel->addTagList($tagNames)){
+			$interestModel = $tagModel->interestModel;
+			$returnTags = $interestModel->getTags();
+			$jsonArray = array();
+			if($returnTags){
+				foreach($returnTags as $tag){
+					if($tag == '')
+						continue;
+					$jsonArray[]=$tag->getTagName();
+					
+				}	
+			}
+			echo json_encode($jsonArray);
+		}
+	}
 	public function getDisplayAction(){
 		 $this->_helper->viewRenderer->setNoRender();
 		 $this->_helper->layout()->disableLayout();
