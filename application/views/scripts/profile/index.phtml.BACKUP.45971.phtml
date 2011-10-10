@@ -1,0 +1,71 @@
+<!--<div class="loginonce"><?= $this->message; ?><div class="exitbutton"></div></div>-->
+<?//= $this->firstname; ?> <?//= $this->lastname; ?>
+
+<<<<<<< HEAD
+   
+=======
+<script src="../js/tags.js"></script>
+
+>>>>>>> 5317593573510a56a922bc7c3691a8f9bc03e6e8
+<div id="view-content">	
+    <div class="view-wrapped">
+    <div class="top_col">
+        
+  
+		Existing tags: <br />
+		<?= $this->DisplayTags($this->user->getInterest()) ?>
+		<?= $this->tagForm; ?>
+<<<<<<< HEAD
+		<img src="/img/profile-pic" height=100  width=100/>
+                <div class="tags_area">
+                    <div class="tags_base">
+                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+           
+                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>       
+                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                    </div>
+                </div>
+=======
+		REAL TAGS:
+		<input type="text" class ="tag_input"></input>
+		<!--  <img src="/img/profile-pic" height=100  width=100/>  USE THIS FOR PROFILE PICS-->
+>>>>>>> 5317593573510a56a922bc7c3691a8f9bc03e6e8
+    </div>
+             
+	<div class="left_col">
+		<h2>Feed</h2>
+		<div id = "main_feed">
+			<?= $this->DisplayGeneralFeed($this->identity); ?>
+         </div>      
+		<a href = "#" onclick = "loadFeeds('<?= $this->identity ?>')">Refresh Feed</a>
+	</div>
+        <div class="right_col">
+		<?=$this->DisplayNewUserFlow($this->flowStatus)?>
+		
+		<h2>Upcoming Events</h2>
+			<?= $this->DisplayEventFeed($this->identity); ?>	
+        </div>
+    </div>
+</div>
+<div class = "ajax_content" style = "display:none">
+
+</div>
+<script type="text/javascript">
+     var loadFeeds = function(identity){
+		$("#main_feed").html('<img src="/images/loading.gif" alt=""/>');
+ 		$.ajax({
+			url:"/ajax/load-feed/identity/"+identity,
+			context:document.body,
+			success:function(data){
+				$("#main_feed").html(data);
+			}
+
+		});
+     }   
+</script>
+<?= $this->inlineScript()->appendScript("$(document).ready(Tags.init())");?>
