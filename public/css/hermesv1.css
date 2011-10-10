@@ -29,7 +29,7 @@ div { display: block; }
 /***** site exterior **********/
   .outside #header_block {display: none;}
    .outside #content_area {margin-top:0px;}
-   .outside .page {border-bottom: none !important;}
+   .outside .page {}
 /***** landing styles********/
 .cms-text {
     font-size: 14px;
@@ -104,7 +104,7 @@ div { display: block; }
 }
 .out-signup a {
     background-color: #3a9ecd;
-    padding: 10px 50px;
+    padding: 15px 50px;
     border-radius: 5px;
 }
 /*** form styles*****/
@@ -407,6 +407,7 @@ input[type=text]:first,input[type=password]:first {
        
      
 }
+
 #content_area .page {
         border-bottom: 1px solid #aaa;
         overflow: auto;
@@ -684,7 +685,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 {
     /*background: url("../images/button-hover.png") repeat-x center;*/
     text-shadow: 0px 1px #454545;
-    background: #ee8641;
+    background: #f58120;
 }
 .inner_button { width:372px; margin: 0 auto;  }
 .inner_button .register_button {
