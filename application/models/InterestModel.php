@@ -10,7 +10,7 @@ class Application_Model_InterestModel{
 		$this->dm->persist($this->interest);
 		$this->dm->flush();
 	}
-	public function deleteUserTag($tag){
+	public function deleteUserTag($tagName){
 		$tags = $this->interest->getTags();
 		if($tags){
 				//super slow search -- refactor later
@@ -39,5 +39,33 @@ class Application_Model_InterestModel{
 	}
 	public function getTags(){
 		return $this->interest->getTags();
+	}
+	public function getActivatedTags(){
+		$tags = $this->interest->getTags();
+		$activatedTags = array();
+		$states = $this->interest->getState();
+		foreach($tags as $tag){
+			if($states[$tag->getTagName()])
+				$activatedTags[] = $tag;
+		}
+		return $activatedTags;
+	}
+	public function disableTag($tagName){
+		$this->interest->state[$tagName] = false;
+	}
+	public function enableTag($tagName){
+		$this->interest->state[$tagName] = true;
+	}
+	public function toggleTag($tagName){
+		 $state = $this->interest->getState();
+		 //var_dump($state);
+		if($state[$tagName]){
+			$state[$tagName] = false;
+		}else{
+			$state[$tagName] = true;
+		}
+		$this->interest->state = $state;
+		$this->dm->persist($this->interest);
+		$this->dm->flush();
 	}
 }

@@ -3,41 +3,16 @@
  */
 var Tags = {
 	showTagInput:false,
+	tagData:null,
 	init:function(){
 		var data;
 		$.get('/tag/get-display',
 			  function(results){
+				  
 				  var stats = null;
 				  eval('stats='+results);
-
-				  $(".tag_input").autoSuggest(stats);
-		});
-		$(document).ready(function(){
-                    //tags disabled
-		    $('.tags').click(function(){
-		                $(this).toggleClass('tag_disable');
-                                 $.cookie('tag_disable','permanent');
-                                });
-                               
-                             var tag_disable = $.cookie('tag_disable');
-                             
-                             if(tag_disable == 'permanent') {
-                                 $('.tags').toggleClass('');
-                             };
-                            
-		            $('.close_tag').click(function(){
-		             
-                               
-		            });
-
-
-		            $('.close_tags a').click(function(){
-		                $(this).addClass('tag_remove');
-		            });
-
-
-
-				  $(".tag_input").autoSuggest(stats,
+				  Tags.tagData = stats;
+				  $(".tag_input").autoSuggest(Tags.tagData,
 						  {startText:"Enter tag",emptyText:"",neverSubmit:true});
 
 		});
@@ -56,9 +31,17 @@ var Tags = {
 		}
 	},
 	toggleTag:function(tagID){
-		 $("#"+tagID).toggleClass('tag_disable');
-	},
+		$("#"+tagID).toggleClass('tag_disable');
+		$.get('/tag/toggle-tag',
+				{tag:$("#"+tagID+" .tag_text").text()}
+		);
+		
+	},	
 	removeTag:function(tagID){
+		jQuery.get('/tag/delete-tag',
+				{tag:$("#"+tagID+" .tag_text").text()}
+		)
+		$("#"+tagID).remove();
 		
 	},
 	refreshTags:function(results){
@@ -68,19 +51,31 @@ var Tags = {
 			 //alert(stats);
 			 var tag_base = $('.tags_base.ajax').clone();
 			 for(var i in stats){
-				 var tag = stats[i];
+				 var tag = stats[i].tagName;
+				 var tagReplaced = tag.replace(/ /gi,"_");
 				//alert(tag);			 
-				var tag_id = "tag_"+tag;
-				var tag_html = jQuery(".ajax_content .tags").clone();
-				$(tag_html).attr('id',"tag_"+tag);
-				$(tag_html).attr('onclick',"Tags.toggleTag('"+tag_id+"')");
-				$(tag_html).find(".close_tag").attr('onclick',"Tags.removeTag('"+tag_id+"')");
+				var tag_id = "tag_"+tagReplaced;
+				//alert(tag_id);
+				var tag_html = jQuery(".ajax_tags_wrap").clone();
+				$(tag_html).find(".tags").attr('id',tag_id);
+				if(!stats[i].enabled)
+					$(tag_html).find(".tags").toggleClass('tag_disable');
 				$(tag_html).find(".tag_text").text(tag);
+				tag_html = $(tag_html).children();
 				$(tag_base).append(tag_html);
 			 }
 			 $(tag_base).attr('class','tags_base');
+			 
 			 $(".tags_area").empty();
 			 $(".tags_area").append(tag_base);
+			 for(var i in stats){
+				 var tag = stats[i].tagName.replace(/ /gi,"_");
+				//alert(tag);			 
+			    $(".tags_base .tags#tag_" + tag).data('tag_id', tag).click(function(){Tags.toggleTag("tag_"+$(this).data('tag_id'));});
+				 $(".tags_base .tags#tag_"+tag).find(".close_tag").data('tag_id', tag).click(function(){Tags.removeTag("tag_"+$(this).data('tag_id'))});
+			 } 
+			 
+			 Tags.toggleDropDown();
 		}
 		//refreshes tags using results;
 	}

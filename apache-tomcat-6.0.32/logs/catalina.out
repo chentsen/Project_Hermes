@@ -28065,3 +28065,568 @@ Oct 9, 2011 4:37:37 PM org.apache.solr.update.processor.LogUpdateProcessor finis
 INFO: {commit=} 0 56
 Oct 9, 2011 4:37:37 PM org.apache.solr.core.SolrCore execute
 INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=56 
+Oct 9, 2011 8:04:59 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_d8,version=1307824257608,generation=476,filenames=[_ea.nrm, _e4.nrm, _e9.frq, _e9.fnm, _e4.frq, _ea.fnm, _e4.fdt, segments_d8, _e4.prx, _ea.frq, _e2.prx, _e4.fdx, _e1.tii, _e2.fnm, _e9.prx, _e1.tis, _e9.nrm, _ea.fdt, _e1.fdx, _ea.fdx, _e1.fdt, _e9.tis, _e2.frq, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _e1.nrm, _e4.fnm, _e2.nrm, _e3.tis, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _e4.tis, _ea.tii, _e1.frq, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+Oct 9, 2011 8:04:59 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257608
+Oct 9, 2011 8:04:59 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[17441145194e9260da0aad7]} 0 460
+Oct 9, 2011 8:04:59 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=460 
+Oct 9, 2011 8:04:59 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 9, 2011 8:05:00 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_d8,version=1307824257608,generation=476,filenames=[_ea.nrm, _e4.nrm, _e9.frq, _e9.fnm, _e4.frq, _ea.fnm, _e4.fdt, segments_d8, _e4.prx, _ea.frq, _e2.prx, _e4.fdx, _e1.tii, _e2.fnm, _e9.prx, _e1.tis, _e9.nrm, _ea.fdt, _e1.fdx, _ea.fdx, _e1.fdt, _e9.tis, _e2.frq, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _e1.nrm, _e4.fnm, _e2.nrm, _e3.tis, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _e4.tis, _ea.tii, _e1.frq, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_d9,version=1307824257610,generation=477,filenames=[_ea.nrm, _eb.tii, _e4.nrm, _e9.frq, _eb.tis, _e9.fnm, _e4.frq, _ea.fnm, segments_d9, _e4.fdt, _e4.prx, _ea.frq, _e2.prx, _eb.nrm, _e4.fdx, _eb.fnm, _e1.tii, _e2.fnm, _e9.prx, _e1.tis, _e9.nrm, _ea.fdt, _e1.fdx, _ea.fdx, _e1.fdt, _e9.tis, _eb.frq, _e2.frq, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _e1.nrm, _e4.fnm, _e2.nrm, _e3.tis, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _eb.fdx, _e4.tis, _ea.tii, _eb.fdt, _e1.frq, _eb.prx, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+Oct 9, 2011 8:05:00 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257610
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@7573a94f main
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@7573a94f main from Searcher@71fb2e0 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@7573a94f main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@7573a94f main from Searcher@71fb2e0 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@7573a94f main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@7573a94f main from Searcher@71fb2e0 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@7573a94f main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@7573a94f main from Searcher@71fb2e0 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@7573a94f main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 8:05:00 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@7573a94f main
+Oct 9, 2011 8:05:00 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 9, 2011 8:05:00 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 9, 2011 8:05:00 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@7573a94f main
+Oct 9, 2011 8:05:00 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@71fb2e0 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 8:05:00 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 339
+Oct 9, 2011 8:05:00 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=339 
+Oct 9, 2011 8:10:10 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_d9,version=1307824257610,generation=477,filenames=[_ea.nrm, _eb.tii, _e4.nrm, _e9.frq, _eb.tis, _e9.fnm, _e4.frq, _ea.fnm, segments_d9, _e4.fdt, _e4.prx, _ea.frq, _e2.prx, _eb.nrm, _e4.fdx, _eb.fnm, _e1.tii, _e2.fnm, _e9.prx, _e1.tis, _e9.nrm, _ea.fdt, _e1.fdx, _ea.fdx, _e1.fdt, _e9.tis, _eb.frq, _e2.frq, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _e1.nrm, _e4.fnm, _e2.nrm, _e3.tis, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _eb.fdx, _e4.tis, _ea.tii, _eb.fdt, _e1.frq, _eb.prx, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+Oct 9, 2011 8:10:10 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257610
+Oct 9, 2011 8:10:10 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[18947840534e92620ebb83a]} 0 162
+Oct 9, 2011 8:10:10 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=162 
+Oct 9, 2011 8:10:10 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 9, 2011 8:10:10 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_d9,version=1307824257610,generation=477,filenames=[_ea.nrm, _eb.tii, _e4.nrm, _e9.frq, _eb.tis, _e9.fnm, _e4.frq, _ea.fnm, segments_d9, _e4.fdt, _e4.prx, _ea.frq, _e2.prx, _eb.nrm, _e4.fdx, _eb.fnm, _e1.tii, _e2.fnm, _e9.prx, _e1.tis, _e9.nrm, _ea.fdt, _e1.fdx, _ea.fdx, _e1.fdt, _e9.tis, _eb.frq, _e2.frq, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _e1.nrm, _e4.fnm, _e2.nrm, _e3.tis, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _eb.fdx, _e4.tis, _ea.tii, _eb.fdt, _e1.frq, _eb.prx, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_da,version=1307824257612,generation=478,filenames=[_ea.nrm, _eb.tii, _e4.nrm, _e9.frq, _eb.tis, _e9.fnm, _e4.frq, _ea.fnm, _e4.fdt, _ec.fnm, _e4.prx, _ea.frq, _e2.prx, _eb.nrm, _e4.fdx, _ec.frq, _eb.fnm, _e1.tii, _e2.fnm, _e9.prx, _ec.tis, _e1.tis, _e9.nrm, _ec.tii, _ea.fdt, _e1.fdx, _ec.fdt, _ea.fdx, _e1.fdt, _ec.fdx, _e9.tis, _eb.frq, _e2.frq, segments_da, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _ec.prx, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _ec.nrm, _e1.nrm, _e4.fnm, _e2.nrm, _e3.tis, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _eb.fdx, _e4.tis, _ea.tii, _eb.fdt, _e1.frq, _eb.prx, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+Oct 9, 2011 8:10:10 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257612
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@10747b4 main
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@10747b4 main from Searcher@7573a94f main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@10747b4 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:10:10 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@10747b4 main from Searcher@7573a94f main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@10747b4 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@10747b4 main from Searcher@7573a94f main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@10747b4 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@10747b4 main from Searcher@7573a94f main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@10747b4 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 8:10:10 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@10747b4 main
+Oct 9, 2011 8:10:10 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 9, 2011 8:10:10 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@10747b4 main
+Oct 9, 2011 8:10:10 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@7573a94f main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 8:10:10 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 155
+Oct 9, 2011 8:10:10 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=155 
+Oct 9, 2011 8:22:40 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_da,version=1307824257612,generation=478,filenames=[_ea.nrm, _eb.tii, _e4.nrm, _e9.frq, _eb.tis, _e9.fnm, _e4.frq, _ea.fnm, _e4.fdt, _ec.fnm, _e4.prx, _ea.frq, _e2.prx, _eb.nrm, _e4.fdx, _ec.frq, _eb.fnm, _e1.tii, _e2.fnm, _e9.prx, _ec.tis, _e1.tis, _e9.nrm, _ec.tii, _ea.fdt, _e1.fdx, _ec.fdt, _ea.fdx, _e1.fdt, _ec.fdx, _e9.tis, _eb.frq, _e2.frq, segments_da, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _ec.prx, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _ec.nrm, _e1.nrm, _e4.fnm, _e2.nrm, _e3.tis, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _eb.fdx, _e4.tis, _ea.tii, _eb.fdt, _e1.frq, _eb.prx, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+Oct 9, 2011 8:22:40 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257612
+Oct 9, 2011 8:22:40 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[6290586974e9264f957244]} 0 160
+Oct 9, 2011 8:22:40 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=160 
+Oct 9, 2011 8:22:40 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 9, 2011 8:22:40 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_da,version=1307824257612,generation=478,filenames=[_ea.nrm, _eb.tii, _e4.nrm, _e9.frq, _eb.tis, _e9.fnm, _e4.frq, _ea.fnm, _e4.fdt, _ec.fnm, _e4.prx, _ea.frq, _e2.prx, _eb.nrm, _e4.fdx, _ec.frq, _eb.fnm, _e1.tii, _e2.fnm, _e9.prx, _ec.tis, _e1.tis, _e9.nrm, _ec.tii, _ea.fdt, _e1.fdx, _ec.fdt, _ea.fdx, _e1.fdt, _ec.fdx, _e9.tis, _eb.frq, _e2.frq, segments_da, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _ec.prx, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _ec.nrm, _e1.nrm, _e4.fnm, _e2.nrm, _e3.tis, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _eb.fdx, _e4.tis, _ea.tii, _eb.fdt, _e1.frq, _eb.prx, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_db,version=1307824257614,generation=479,filenames=[_ea.nrm, _ed.nrm, _eb.tii, _e4.nrm, _e9.frq, _eb.tis, _e9.fnm, _e4.frq, _ea.fnm, _e4.fdt, _ec.fnm, _e4.prx, _ea.frq, _e2.prx, _eb.nrm, _e4.fdx, _ec.frq, _eb.fnm, _e1.tii, _e2.fnm, _e9.prx, _ec.tis, _e1.tis, _e9.nrm, _ec.tii, _ea.fdt, _ed.frq, _ed.tis, _e1.fdx, _ec.fdt, _ea.fdx, _e1.fdt, _ec.fdx, _e9.tis, _eb.frq, _e2.frq, segments_db, _ed.tii, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _ec.prx, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _ec.nrm, _e1.nrm, _ed.fnm, _e4.fnm, _e2.nrm, _e3.tis, _ed.prx, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _ed.fdt, _eb.fdx, _e4.tis, _ea.tii, _ed.fdx, _eb.fdt, _e1.frq, _eb.prx, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+Oct 9, 2011 8:22:40 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257614
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@2d6a346a main
+Oct 9, 2011 8:22:40 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2d6a346a main from Searcher@10747b4 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2d6a346a main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2d6a346a main from Searcher@10747b4 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2d6a346a main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2d6a346a main from Searcher@10747b4 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2d6a346a main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2d6a346a main from Searcher@10747b4 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2d6a346a main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 8:22:40 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@2d6a346a main
+Oct 9, 2011 8:22:40 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 9, 2011 8:22:40 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@2d6a346a main
+Oct 9, 2011 8:22:40 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@10747b4 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 8:22:40 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 89
+Oct 9, 2011 8:22:40 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=89 
+Oct 9, 2011 9:14:31 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_db,version=1307824257614,generation=479,filenames=[_ea.nrm, _ed.nrm, _eb.tii, _e4.nrm, _e9.frq, _eb.tis, _e9.fnm, _e4.frq, _ea.fnm, _e4.fdt, _ec.fnm, _e4.prx, _ea.frq, _e2.prx, _eb.nrm, _e4.fdx, _ec.frq, _eb.fnm, _e1.tii, _e2.fnm, _e9.prx, _ec.tis, _e1.tis, _e9.nrm, _ec.tii, _ea.fdt, _ed.frq, _ed.tis, _e1.fdx, _ec.fdt, _ea.fdx, _e1.fdt, _ec.fdx, _e9.tis, _eb.frq, _e2.frq, segments_db, _ed.tii, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _ec.prx, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _ec.nrm, _e1.nrm, _ed.fnm, _e4.fnm, _e2.nrm, _e3.tis, _ed.prx, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _ed.fdt, _eb.fdx, _e4.tis, _ea.tii, _ed.fdx, _eb.fdt, _e1.frq, _eb.prx, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+Oct 9, 2011 9:14:31 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257614
+Oct 9, 2011 9:14:31 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[6343014474e92711e747b2]} 0 206
+Oct 9, 2011 9:14:31 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=206 
+Oct 9, 2011 9:14:31 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 9, 2011 9:14:31 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_db,version=1307824257614,generation=479,filenames=[_ea.nrm, _ed.nrm, _eb.tii, _e4.nrm, _e9.frq, _eb.tis, _e9.fnm, _e4.frq, _ea.fnm, _e4.fdt, _ec.fnm, _e4.prx, _ea.frq, _e2.prx, _eb.nrm, _e4.fdx, _ec.frq, _eb.fnm, _e1.tii, _e2.fnm, _e9.prx, _ec.tis, _e1.tis, _e9.nrm, _ec.tii, _ea.fdt, _ed.frq, _ed.tis, _e1.fdx, _ec.fdt, _ea.fdx, _e1.fdt, _ec.fdx, _e9.tis, _eb.frq, _e2.frq, segments_db, _ed.tii, _ea.prx, _e1.prx, _e3.fdx, _e9.tii, _ec.prx, _e3.fdt, _e9.fdt, _e3.nrm, _e3.prx, _e9.fdx, _ec.nrm, _e1.nrm, _ed.fnm, _e4.fnm, _e2.nrm, _e3.tis, _ed.prx, _e3.tii, _e1.fnm, _e2.fdt, _e2.tis, _e3.fnm, _ed.fdt, _eb.fdx, _e4.tis, _ea.tii, _ed.fdx, _eb.fdt, _e1.frq, _eb.prx, _e3.frq, _e4.tii, _ea.tis, _e2.fdx, _e2.tii]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dc,version=1307824257618,generation=480,filenames=[_ef.tis, _ef.fdx, _ef.frq, _ef.tii, _ef.fdt, _ef.prx, segments_dc, _ef.nrm, _ef.fnm]
+Oct 9, 2011 9:14:31 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257618
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@2ca7563d main
+Oct 9, 2011 9:14:31 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2ca7563d main from Searcher@2d6a346a main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2ca7563d main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2ca7563d main from Searcher@2d6a346a main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2ca7563d main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2ca7563d main from Searcher@2d6a346a main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2ca7563d main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@2ca7563d main from Searcher@2d6a346a main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@2ca7563d main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 9:14:31 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@2ca7563d main
+Oct 9, 2011 9:14:31 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 9, 2011 9:14:31 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@2ca7563d main
+Oct 9, 2011 9:14:31 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@2d6a346a main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=117,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=33,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 9:14:31 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 472
+Oct 9, 2011 9:14:31 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=472 
+Oct 9, 2011 10:05:47 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=cool+stuff&wt=xml&rows=50&version=2.2} hits=0 status=0 QTime=21 
+Oct 9, 2011 10:06:42 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dc,version=1307824257618,generation=480,filenames=[_ef.tis, _ef.fdx, _ef.frq, _ef.tii, _ef.fdt, _ef.prx, segments_dc, _ef.nrm, _ef.fnm]
+Oct 9, 2011 10:06:42 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257618
+Oct 9, 2011 10:06:42 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[10546004254e927d59bf624]} 0 72
+Oct 9, 2011 10:06:42 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=72 
+Oct 9, 2011 10:06:42 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 9, 2011 10:06:42 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dc,version=1307824257618,generation=480,filenames=[_ef.tis, _ef.fdx, _ef.frq, _ef.tii, _ef.fdt, _ef.prx, segments_dc, _ef.nrm, _ef.fnm]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dd,version=1307824257620,generation=481,filenames=[_ef.tis, _eg.frq, _ef.frq, _eg.nrm, _eg.tii, _ef.prx, _eg.fdt, _eg.prx, _ef.nrm, _eg.fnm, _eg.fdx, _eg.tis, _ef.fdx, _ef.tii, _ef.fdt, segments_dd, _ef.fnm]
+Oct 9, 2011 10:06:42 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257620
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@56735a55 main
+Oct 9, 2011 10:06:42 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@56735a55 main from Searcher@2ca7563d main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@56735a55 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@56735a55 main from Searcher@2ca7563d main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@56735a55 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@56735a55 main from Searcher@2ca7563d main
+	queryResultCache{lookups=1,hits=0,hitratio=0.00,inserts=1,evictions=0,size=1,warmupTime=0,cumulative_lookups=118,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=34,cumulative_evictions=0}
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@56735a55 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=118,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=34,cumulative_evictions=0}
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@56735a55 main from Searcher@2ca7563d main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@56735a55 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 10:06:42 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@56735a55 main
+Oct 9, 2011 10:06:42 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 9, 2011 10:06:42 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@56735a55 main
+Oct 9, 2011 10:06:42 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@2ca7563d main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=1,hits=0,hitratio=0.00,inserts=1,evictions=0,size=1,warmupTime=0,cumulative_lookups=118,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=34,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 10:06:42 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 36
+Oct 9, 2011 10:06:42 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=36 
+Oct 9, 2011 10:09:02 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dd,version=1307824257620,generation=481,filenames=[_ef.tis, _eg.frq, _ef.frq, _eg.nrm, _eg.tii, _ef.prx, _eg.fdt, _eg.prx, _ef.nrm, _eg.fnm, _eg.fdx, _eg.tis, _ef.fdx, _ef.tii, _ef.fdt, segments_dd, _ef.fnm]
+Oct 9, 2011 10:09:02 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257620
+Oct 9, 2011 10:09:02 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[17039077394e927de7b6dc7]} 0 75
+Oct 9, 2011 10:09:02 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=75 
+Oct 9, 2011 10:09:02 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 9, 2011 10:09:02 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dd,version=1307824257620,generation=481,filenames=[_ef.tis, _eg.frq, _ef.frq, _eg.nrm, _eg.tii, _ef.prx, _eg.fdt, _eg.prx, _ef.nrm, _eg.fnm, _eg.fdx, _eg.tis, _ef.fdx, _ef.tii, _ef.fdt, segments_dd, _ef.fnm]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_de,version=1307824257622,generation=482,filenames=[_ef.tis, _eh.nrm, _eg.frq, _eg.tii, segments_de, _eg.fdt, _ef.nrm, _eg.fdx, _eg.fnm, _eg.tis, _eh.fnm, _ef.tii, _eh.prx, _eg.nrm, _ef.frq, _ef.prx, _eg.prx, _eh.tis, _eh.frq, _eh.fdt, _ef.fdx, _eh.tii, _eh.fdx, _ef.fdt, _ef.fnm]
+Oct 9, 2011 10:09:02 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257622
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@3474c1f main
+Oct 9, 2011 10:09:02 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@3474c1f main from Searcher@56735a55 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@3474c1f main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@3474c1f main from Searcher@56735a55 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@3474c1f main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@3474c1f main from Searcher@56735a55 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=118,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=34,cumulative_evictions=0}
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@3474c1f main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=118,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=34,cumulative_evictions=0}
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@3474c1f main from Searcher@56735a55 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@3474c1f main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 10:09:02 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@3474c1f main
+Oct 9, 2011 10:09:02 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 9, 2011 10:09:02 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@3474c1f main
+Oct 9, 2011 10:09:02 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@56735a55 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=118,cumulative_hits=84,cumulative_hitratio=0.71,cumulative_inserts=34,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=9272,cumulative_hits=8634,cumulative_hitratio=0.93,cumulative_inserts=638,cumulative_evictions=0}
+Oct 9, 2011 10:09:02 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 13
+Oct 9, 2011 10:09:02 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=13 
+Oct 9, 2011 10:09:19 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=40 
+Oct 9, 2011 10:10:26 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:10:43 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:11:44 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:13:30 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:13:36 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:13:38 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:14:28 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:14:48 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:15:09 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:15:16 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:15:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:17:25 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:17:37 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:21:44 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:22:41 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:23:07 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:23:30 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:24:11 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:24:38 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:25:16 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:27:05 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:27:50 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:30:24 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:30:39 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:32:46 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=CHEN&wt=xml&rows=50&version=2.2} hits=0 status=0 QTime=1 
+Oct 9, 2011 10:33:17 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=CHEN&wt=xml&rows=50&version=2.2} hits=0 status=0 QTime=0 
+Oct 9, 2011 10:33:22 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen&wt=xml&rows=50&version=2.2} hits=18 status=0 QTime=24 
+Oct 9, 2011 10:33:26 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=CHEN&wt=xml&rows=50&version=2.2} hits=0 status=0 QTime=0 
+Oct 9, 2011 10:33:29 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=9 
+Oct 9, 2011 10:35:40 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:37:02 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:37:28 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:37:52 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_de,version=1307824257622,generation=482,filenames=[_ef.tis, _eh.nrm, _eg.frq, _eg.tii, segments_de, _eg.fdt, _ef.nrm, _eg.fdx, _eg.fnm, _eg.tis, _eh.fnm, _ef.tii, _eh.prx, _eg.nrm, _ef.frq, _ef.prx, _eg.prx, _eh.tis, _eh.frq, _eh.fdt, _ef.fdx, _eh.tii, _eh.fdx, _ef.fdt, _ef.fnm]
+Oct 9, 2011 10:37:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257622
+Oct 9, 2011 10:37:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[3965170374e9284acf0436]} 0 72
+Oct 9, 2011 10:37:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=72 
+Oct 9, 2011 10:37:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 9, 2011 10:37:52 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_de,version=1307824257622,generation=482,filenames=[_ef.tis, _eh.nrm, _eg.frq, _eg.tii, segments_de, _eg.fdt, _ef.nrm, _eg.fdx, _eg.fnm, _eg.tis, _eh.fnm, _ef.tii, _eh.prx, _eg.nrm, _ef.frq, _ef.prx, _eg.prx, _eh.tis, _eh.frq, _eh.fdt, _ef.fdx, _eh.tii, _eh.fdx, _ef.fdt, _ef.fnm]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_df,version=1307824257624,generation=483,filenames=[_ef.tis, _eh.nrm, _eg.frq, _eg.tii, segments_df, _eg.fdt, _ef.nrm, _eg.fdx, _eg.fnm, _eg.tis, _eh.fnm, _ef.tii, _ei.fdx, _ei.nrm, _ei.prx, _ei.fdt, _eh.prx, _eg.nrm, _ef.frq, _ef.prx, _ei.tis, _eg.prx, _eh.tis, _eh.frq, _ei.tii, _eh.fdt, _ef.fdx, _eh.tii, _ei.frq, _eh.fdx, _ef.fdt, _ef.fnm, _ei.fnm]
+Oct 9, 2011 10:37:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257624
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@34945d2d main
+Oct 9, 2011 10:37:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@34945d2d main from Searcher@3474c1f main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@34945d2d main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@34945d2d main from Searcher@3474c1f main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@34945d2d main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@34945d2d main from Searcher@3474c1f main
+	queryResultCache{lookups=33,hits=29,hitratio=0.87,inserts=4,evictions=0,size=4,warmupTime=0,cumulative_lookups=151,cumulative_hits=113,cumulative_hitratio=0.74,cumulative_inserts=38,cumulative_evictions=0}
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@34945d2d main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=151,cumulative_hits=113,cumulative_hitratio=0.74,cumulative_inserts=38,cumulative_evictions=0}
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@34945d2d main from Searcher@3474c1f main
+	documentCache{lookups=934,hits=900,hitratio=0.96,inserts=34,evictions=0,size=34,warmupTime=0,cumulative_lookups=10206,cumulative_hits=9534,cumulative_hitratio=0.93,cumulative_inserts=672,cumulative_evictions=0}
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@34945d2d main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10206,cumulative_hits=9534,cumulative_hitratio=0.93,cumulative_inserts=672,cumulative_evictions=0}
+Oct 9, 2011 10:37:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@34945d2d main
+Oct 9, 2011 10:37:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 9, 2011 10:37:52 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@34945d2d main
+Oct 9, 2011 10:37:52 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@3474c1f main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=33,hits=29,hitratio=0.87,inserts=4,evictions=0,size=4,warmupTime=0,cumulative_lookups=151,cumulative_hits=113,cumulative_hitratio=0.74,cumulative_inserts=38,cumulative_evictions=0}
+	documentCache{lookups=934,hits=900,hitratio=0.96,inserts=34,evictions=0,size=34,warmupTime=0,cumulative_lookups=10206,cumulative_hits=9534,cumulative_hitratio=0.93,cumulative_inserts=672,cumulative_evictions=0}
+Oct 9, 2011 10:37:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 24
+Oct 9, 2011 10:37:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=24 
+Oct 9, 2011 10:37:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=tagmatching&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=1 
+Oct 9, 2011 10:38:30 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=tagmatching&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=1 
+Oct 9, 2011 10:38:42 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=tagmatching&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=0 
+Oct 9, 2011 10:39:05 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=tagmatching&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=0 
+Oct 9, 2011 10:51:24 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=26 
+Oct 9, 2011 10:51:36 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:51:44 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:51:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:51:59 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:53:26 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:53:33 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:53:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:54:14 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:54:31 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:54:35 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:55:24 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:55:32 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:56:49 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 9, 2011 10:57:30 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 10:58:22 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=19 
+Oct 9, 2011 10:58:41 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=0 
+Oct 9, 2011 10:58:51 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=0 
+Oct 9, 2011 10:59:13 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=1 
+Oct 9, 2011 10:59:23 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=1 
+Oct 9, 2011 10:59:30 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=1 
+Oct 9, 2011 11:00:56 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=1 
+Oct 9, 2011 11:01:11 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=1 
+Oct 9, 2011 11:01:29 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=0 
+Oct 9, 2011 11:11:00 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 11:11:07 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 11:11:13 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 10, 2011 12:11:05 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 10, 2011 12:11:17 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 10, 2011 12:15:58 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 10, 2011 12:16:31 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
