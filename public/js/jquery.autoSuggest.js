@@ -212,15 +212,17 @@
 									var lis = $("li", selections_holder).length;
 									add_selected_item(n_data, "00"+(lis+1));
 									input.val("");
+									$.post("/tag/add-tag-ajax",
+											{tags:$(".as-values").val()},
+											function(results){
+												Tags.refreshTags(results);
+												$(".as-values").val('');
+												$(".as-selection-item").remove();
+											}	
+										);
 								}
 							}else{
-								
-								$.post("/tag/add-tag-ajax",
-									{tags:$(".as-values").val()},
-									function(results){
-										Tags.refreshTags(results);
-									}	
-								);
+	
 								//submit
 							}
 							

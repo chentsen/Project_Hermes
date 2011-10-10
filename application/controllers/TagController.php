@@ -20,19 +20,45 @@ class TagController extends Hermes_Controller_SessionController{
 		if(!$tagModel)
 			break;
 		if($tagModel->addTagList($tagNames)){
-			$interestModel = $tagModel->interestModel;
+			echo $this->refreshTag($tagModel);
+		}
+	}
+	private function refreshTag($tagModel){
+		$interestModel = $tagModel->interestModel;
 			$returnTags = $interestModel->getTags();
 			$jsonArray = array();
 			if($returnTags){
+				$states = $interestModel->interest->getState();	
 				foreach($returnTags as $tag){
 					if($tag == '')
 						continue;
-					$jsonArray[]=$tag->getTagName();
+					
+					$subArray['tagName'] = $tag->getTagName();
+					$subArray['enabled'] = $states[$tag->getTagName()];	
+					$jsonArray[]=$subArray;
 					
 				}	
 			}
-			echo json_encode($jsonArray);
-		}
+			return json_encode($jsonArray);
+	}
+	public function deleteTagAction(){
+		$this->_helper->viewRenderer->setNoRender();
+		 $this->_helper->layout()->disableLayout();
+		 $tagName = $this->_request->getParam('tag');
+		$tagModel = new Application_Model_TagModel($this->curUser);
+		if(!$tagModel)
+			break;
+		$tagModel->deleteTag($tagName);
+		
+		 
+	}
+	public function toggleTagAction(){
+		$this->_helper->viewRenderer->setNoRender();
+		 $this->_helper->layout()->disableLayout();
+		 $tagName = $this->_request->getParam('tag');
+		 $interestModel = new Application_Model_InterestModel($this->curUser->getInterest());
+		 $interestModel->toggleTag($tagName);	
+	
 	}
 	public function getDisplayAction(){
 		 $this->_helper->viewRenderer->setNoRender();

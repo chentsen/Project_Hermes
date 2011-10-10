@@ -69,6 +69,7 @@ class Application_Model_TagModel{
 	public function addTagList($tagNames,$flush = true){
 		$tagNamesArray = explode(',',$tagNames);
 		foreach($tagNamesArray as $tagName){
+			if($tagName == '') continue;
 			$this->addTag($tagName,false,false);			
 		}
 		$this->dm->flush();
@@ -113,20 +114,20 @@ class Application_Model_TagModel{
 	 * Deletes the tag from the user
 	 * @param unknown_type $tag
 	 */
-	private function deleteTag($tagName){
-		$this->interestModel->deleteTag($tagName);
-		if($this->tagExists($tagName)){	
+	public function deleteTag($tagName){
+		$this->interestModel->deleteUserTag($tagName);
+		if($tagKey = $this->tagExists($tagName)){	
 			if($tagKey == 'zero')
 				$tagKey = 0;
 			$tag = $this->tagArray[$tagKey];
 			$tag->decrementCount();
-			if($tag->getCount == 0){
+			if($tag->getCount() == 0){
 				$this->dm->remove($tag);
 			}else{
 				$this->dm->persist($tag);
 			}
 		}	
-		$this->dm->persist();
+		$this->dm->flush();
 		
 	}
 	/**

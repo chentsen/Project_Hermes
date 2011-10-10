@@ -16,7 +16,6 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				//print_r($results['userResults']);
 				//var_dump($results['userResults']);
 				foreach($results['userResults'] as $object){
-					echo 'second loop';
 					$this->printUserResult($object,$identity);
 				}
 			}	
@@ -28,11 +27,19 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 		echo '<div class = "matchingTags">';
 			echo "You and {$event->result->getCreator()->getFirstName()} (The event creator) have {$event->getCount()} tags in common! <br />";
 			echo "You both like:";
-			foreach($event->match as $match){
-				echo "<div class='matchedTag'>";
-					echo $match->getTagName();
-				echo "</div>";
-			}
+			if($event->match){
+				if(count($event->match) > 1){
+					foreach($event->match as $match){
+						echo "<div class='matchedTag'>";
+							echo $match->getTagName();
+						echo "</div>";
+					}
+				}else{
+					echo "<div class='matchedTag'>";
+						echo $event->match[0]->getTagName();
+					echo "</div>";
+				}
+			}	
 		echo '</div>';
 		
 		//are you creator or member? omit interested in
@@ -62,11 +69,18 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 			echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
 			echo "You both like:";
 			if($user->match){
-				foreach($user->match as $match){
-					echo "<div class='matchedTag'>";
-						echo $match->getTagName();
-					echo "</div>";
-				}
+				if(count($user->match > 1)){
+					foreach($user->match as $match){
+						echo "<div class='matchedTag'>";
+							echo $match[0]->getTagName();
+						echo "</div>";
+					}
+				}else if(count($user->match == 1)){
+						echo "<div class='matchedTag'>";
+						echo $match[0]->getTagName();
+						echo "</div>";
+					
+					}	
 			}
 			echo '</div>';
 			if(!$friendRelation->isFriend($user->result->getEmail())){

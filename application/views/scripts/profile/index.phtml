@@ -15,13 +15,20 @@
 		  <div class="tags_area">
 		 	 <div class="tags_base">
 				<? if(count($tagArray) > 0){ 
-						foreach($tagArray as $tag){ ?>
-							<div class ="tags" id="tag_<?=$tag->getTagName()?>" onclick = 'Tags.toggleTag("tag_<?=$tag->getTagName()?>")'>
+						foreach($tagArray as $tag){ 		
+							if(!$interestModel->interest->state[$tag->getTagName()])
+								$toggle = 'tag_disable';
+							else 
+								$toggle = '';
+						?>
+							<div class ="tags <?=$toggle ?>" id="tag_<?=str_replace(' ','_',$tag->getTagName());?>" onclick = 'Tags.toggleTag("tag_<?=$tag->getTagName()?>")'>
 								<div class="tag_text"><?=$tag->getTagName()?></div>
-								<div class="close_tag" onclick="Tags.removeTag('tag_<?=$tag->getTagName()?>')"></div>
+								<div class="close_tag" onclick="Tags.removeTag('tag_<?=str_replace(' ','_',$tag->getTagName());?>')"></div>
 							</div>				
-				<?			
-						}
+					
+							
+				<? 			
+						}		
 				}				
 				?>		  
 		  	</div>
@@ -53,10 +60,12 @@
 
 <div class = "ajax_content" style = "display:none">
 	<div class = "tags_base ajax"></div>
-	<div class ="tags" id="tag_" onclick = 'Tags.toggleTag("")'>
-		<div class="tag_text"></div>
-		<div class="close_tag" onclick="Tags.removeTag('')"></div>
-	</div>		
+	<div class = "ajax_tags_wrap">
+		<div class ="tags" id="tag_" onclick = ''>
+			<div class="tag_text"></div>
+			<div class="close_tag" onclick=""></div>
+		</div>		
+	</div>	
 </div>
 
 <script type="text/javascript">
