@@ -28616,3 +28616,17 @@ Oct 9, 2011 11:01:11 PM org.apache.solr.core.SolrCore execute
 INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=1 
 Oct 9, 2011 11:01:29 PM org.apache.solr.core.SolrCore execute
 INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=chentsen4&wt=xml&rows=50&version=2.2} hits=1 status=0 QTime=0 
+Oct 9, 2011 11:11:00 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 11:11:07 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 9, 2011 11:11:13 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 
+Oct 10, 2011 12:11:05 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 10, 2011 12:11:17 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 10, 2011 12:15:58 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=0 
+Oct 10, 2011 12:16:31 AM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/select/ params={indent=on&start=0&q=clubbing&wt=xml&rows=50&version=2.2} hits=16 status=0 QTime=1 

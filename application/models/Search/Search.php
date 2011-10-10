@@ -66,7 +66,7 @@ class Application_Model_Search_Search{
 					}
 				}else if(count($userTags) == 1){
 					echo 'LESS THAN 1 TAG';
-					if($interest->hasTag($userTags->getTagName()))
+					if($interest->hasTag($userTags[0]->getTagName()))
 					//echo $userTags->getTagName();	
 					$result->match[]=$userTags;	
 				}
