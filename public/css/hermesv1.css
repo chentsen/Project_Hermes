@@ -15,6 +15,23 @@ div { display: block; }
 }
 .default_form {color:#eee;}
 .clear_form {clear: both; display: block; }
+/*** search page ****/
+.common_number {
+    font-size: 35px;
+    background: #bbb;
+    color: #454545;
+    padding: 10px 15px;
+    border-radius: 5px;
+    
+}
+.in_common {
+    font-weight: bold;
+    
+}
+.common_value {
+    float: left;
+    
+}
 /**** cms pages *****/
 .cms-title {font-size: 40px; margin-bottom: 20px; margin-left: 10px;}
 .cms-page {
