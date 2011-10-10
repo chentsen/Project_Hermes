@@ -911,8 +911,8 @@ ul.as-selections {
       
 }
 .tags {
-    border: 1px solid black;
-    background: #454545;
+    border: 1px solid #FC6C0C;
+    background: orange;
     color: white;
     border-radius: 5px;
     
@@ -934,8 +934,8 @@ ul.as-selections {
 }
 
 .tag_disable {
-    background: orange;
-    border: 1px solid #FC6C0C;
+    background: #454545;
+    border: 1px solid black;
 }
 .tag_remove {
     display: none;
