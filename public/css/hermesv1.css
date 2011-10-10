@@ -940,3 +940,5 @@ ul.as-selections {
 .tag_remove {
     display: none;
 }
+/**Dialogs*/
+.modalWindow { position:absolute;background:#FFF; width:500px;margin-left:30%;margin-right:30%; z-index:50;}
