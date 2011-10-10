@@ -3,6 +3,8 @@
 <div class="page">
 <div class="out-logo"><h1 class="thelogo">PlumeType</h1></div>
 </div>
+<?php } else { ?>
+<h1 class="cms-title">Contact Us</h1>
 <?php } ?>
     <?= $this->Errors($this->errors); ?>
     <p>
@@ -17,3 +19,6 @@
     $('.out-logo').prepend('<h1 class="prepend-logo">Contact</h1>');
    
 </script>
+<style type="text/css">
+    .right-block {display: none;}
+</style>

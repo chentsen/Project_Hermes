@@ -3,6 +3,8 @@
 <div class="page">
 <div class="out-logo"><h1 class="thelogo">PlumeType</h1></div>
 </div>
+<?php } else { ?>
+<h1 class="cms-title">About Us</h1>
 <?php } ?>
 
     <?= $this->Errors($this->errors); ?>
@@ -38,3 +40,6 @@ We believe that by streamlining the whole process, from finding someone to meeti
     $('.out-logo').prepend('<h1 class="prepend-logo">What is</h1>');
     $('.out-logo').append('<h1 class="questionmark">?</h1>');
 </script>
+<style type="text/css">
+    .right-block {display: none;}
+</style>
