@@ -2,18 +2,28 @@
     $options = array('formName'=>'profileSearch','fieldName' => 'profileSearch_field','viewScriptName'=>'_form_profileSearch.phtml','formAction'=>'/Search/index');
         $form = new Application_Form_Search($options);
         $this->form = $form;
+        $event = new Application_Form_CreateEvent();
 ?>
 <?php $auth = Zend_Auth::getInstance();
         if($auth->hasIdentity()){ ?>
 <div id="header_block">
-<div id="header_area">
-	<div class="page">
+	<div id="header_area">
+		<div class="page">
                 <div id="logo"><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>"><h1>PlumeType</h1></a></div>
                	
             <?php  echo $this->form; ?>
 			
         </div>
     
-        </div>
+   </div>
+</div>
+<div class = 'dialogs' style="display:none">
+</div>
+<div class = "header_ajax" style="display:none">
+	<div id="event_ajax_form">
+		<?=$event?>
+	</div>
+	<div class ="modalWindow">
+	</div>	
 </div>
 <?php } ?>
