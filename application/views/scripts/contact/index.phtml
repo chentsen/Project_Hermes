@@ -1,14 +1,19 @@
-<div id="view-content">
-    <div id="content-page">
+<?php $auth = Zend_Auth::getInstance();
+        if(!$auth->hasIdentity()){ ?>
+<div class="page">
+<div class="out-logo"><h1 class="thelogo">PlumeType</h1></div>
+</div>
+<?php } ?>
     <?= $this->Errors($this->errors); ?>
     <p>
         <?=$this->DisplayFlashMessages($this->flashMessages); ?>
     </p>
-    <h1>Contact Us</h1>
-        <div class="content-text">
+    <div class="cms-page">
+        <div class="cms-text">
         <p>Site not working? Have any questions? Want to learn more about PlumeType? Fill in the contact form below and we'll get back to you ASAP. We're also open to chat about pretty much anything, so feel free to just drop in and say hi!</p>
          <?= $this->form ?>
-        </div>
-    </div>
+        </div></div>
+<script type="text/javascript">
+    $('.out-logo').prepend('<h1 class="prepend-logo">Contact</h1>');
    
-</div>
+</script>

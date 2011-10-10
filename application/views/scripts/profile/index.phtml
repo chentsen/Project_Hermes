@@ -5,21 +5,21 @@
 
 <div id="view-content">	
     <div class="view-wrapped">
-    <div class="top_col">
+  <div class="top_col">
 		
 		<? //=$this->DisplayTags($this->user->getInterest()) ?>
 		<? //=$this->tagForm; ?>
 		  <div class="tags_area">
                     <div class="tags_base">
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_checkbox"></div><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_checkbox"></div><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_checkbox"></div><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_checkbox"></div><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
            
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>       
-                        <div class="tags"><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_checkbox"></div><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_checkbox"></div><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
+                        <div class="tags"><div class="tag_checkbox"></div><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>       
+                        <div class="tags"><div class="tag_checkbox"></div><div class="tag_text">Tag 1</div><div class="close_tag"><a href="#"></a></div></div>
                     </div>
             </div>
 		<div class = tag_dropdown onclick = "Tags.toggleDropDown();">
@@ -29,9 +29,9 @@
 			<input type="text" class ="tag_input"></input>
 		</div>
 		<!--  <img src="/img/profile-pic" height=100  width=100/>  USE THIS FOR PROFILE PICS-->
-    </div>
+  </div>
              
-	<div class="left_col">
+	<!--<div class="left_col">
 		<h2>Feed</h2>
 		<div id = "main_feed">
 			<?= $this->DisplayGeneralFeed($this->identity); ?>
@@ -43,7 +43,7 @@
 		
 		<h2>Upcoming Events</h2>
 			<?= $this->DisplayEventFeed($this->identity); ?>	
-        </div>
+        </div>-->
     </div>
 </div>
 <div class = "ajax_content" style = "display:none">

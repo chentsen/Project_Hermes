@@ -12,13 +12,21 @@ var Tags = {
 				  $(".tag_input").autoSuggest(stats);
 		});
 		$(document).ready(function(){
+                    //tags disabled
 		    $('.tags').click(function(){
 		                $(this).toggleClass('tag_disable');
-
-		            });
+                                 $.cookie('tag_disable','permanent');
+                                });
+                               
+                             var tag_disable = $.cookie('tag_disable');
+                             
+                             if(tag_disable == 'permanent') {
+                                 $('.tags').toggleClass('');
+                             };
+                            
 		            $('.close_tag').click(function(){
-		                $(this).removeClass('tag_disable');
-
+		             
+                               
 		            });
 
 
@@ -26,7 +34,25 @@ var Tags = {
 		                $(this).addClass('tag_remove');
 		            });
 
-		     
+
+                           
+                            /*
+   
+   
+     $('.loginonce').click(function(){
+            $(this).hide(2000, function(){
+            $(this).remove();
+            });
+            $.cookie('loginOnce','removed');
+     });
+     
+     var loginOnce = $.cookie('loginOnce')
+     
+     if(loginOnce == 'removed') {
+         $('.loginonce').hide();
+     }
+     
+     */
 		});
 	},
 	fetchTagData:function(){
