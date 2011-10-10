@@ -9,36 +9,33 @@
     
 </p>
 </div>-->
-<style type="text/css">
-   #header_block {display: none;}
-   #content_area {margin-top: 30px;}
-    
-    
-</style>
-<script type="text/javascript">
-  
-</script>
+<?php $auth = Zend_Auth::getInstance();
+        if(!$auth->hasIdentity()){ ?>
+
+<div class="out-logo"><h1 class="thelogo">PlumeType</h1></div>
+
+<?php } ?>
 <div id="home">
-    <div class="out-logo"><h1>PlumeType</h1></div>
+    
     <div class="out-slogan"><h1>Make friends with awesome people 
 who share your interests.</h1></div>
     <div class="out-preview">
         <ul>
-            <li><img src="images/list-interests.png" /><h3>List your interests.</h3></li>
+            <li class="out-one"><img width="250" src="<?php echo $this->baseURL();?>/images/list-interests.png"/><h3>List your interests.</h3></li>
             
-            <li><img src="images/find-events.png" /><h3>Find events near you.</h3></li>
+            <li class="out-two"><img width="250" src="<?php echo $this->baseURL();?>/images/find-events.png" /><h3>Find events near you.</h3></li>
            
-            <li><img src="images/meet-people.png" /><h3>Go out and meet cool people.</h3></li>
+            <li class="out-three"><img width="250" src="<?php echo $this->baseURL();?>/images/meet-people.png" /><h3>Go out and meet cool people.</h3></li>
         </ul>
     </div>
-    <div class="out-signup"><h1><a href="">Get Started</a></h1></div>
+    <div class="out-signup"><h1><a href="<?php echo $this->baseURL();?>/registration">Get Started</a></h1>
+        <h1 class="alternative">Or</h1></div>
+    
+    <?= $this->form ?>
 </div>
 
-<div class="form-popup">
-    
-    
-    <div class="login-popup">
-    <?= $this->form ?>
-    </div>
-</div>
-<div id="background-popup"></div>
+
+
+<style type="text/css">
+    .right-block {display: none;}
+</style>

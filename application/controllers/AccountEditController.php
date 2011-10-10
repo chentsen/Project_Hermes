@@ -46,7 +46,7 @@ class AccountEditController extends Hermes_Controller_SessionController
     	$userSettings = new Application_Model_UserSettings($this->mongoContainer,$this->curUser);
     	$userInfo = $userSettings->updateinfo($this->_request->getPost());
         
-    	$this->_redirect('/accountEdit');
+    	$this->_redirect('/account-edit');
     }
     public function uploadPicAction(){
     	//ajaxify this shit in the future

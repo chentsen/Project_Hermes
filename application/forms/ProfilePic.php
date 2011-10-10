@@ -9,10 +9,10 @@ class Application_Form_ProfilePic extends Zend_Form{
 		$this->setAction('/account-edit/upload-pic');
 		$this->setMethod('POST');
 		$image = new Zend_Form_Element_File('image');
-		$image->setLabel('Upload an image:')
+		$image->removeDecorator('label')
 		      ->setRequired(true)
-		      ->setMaxFileSize(10240000) // limits the filesize on the client side
-		      ->setDescription('Click Browse and click on the image file you would like to upload');
+		      ->setMaxFileSize(10240000); // limits the filesize on the client side
+		      //->setDescription('Click Browse and click on the image file you would like to upload');
 		$image->addValidator('Count', false, 1);                // ensure only 1 file
 		$image->addValidator('Size', false, 10240000);            // limit to 10 meg
 		$image->addValidator('Extension', false, 'jpg,jpeg,png,gif');// only JPEG, PNG, and GIFs

@@ -8,11 +8,12 @@
 
 <div id="view-content">	
     <div class="view-wrapped">
-    <div class="top_col">
+  <div class="top_col">
 		
 		<? //=$this->DisplayTags($this->user->getInterest()) ?>
 		<? //=$this->tagForm; ?>
 		  <div class="tags_area">
+
 		 	 <div class="tags_base">
 				<? if(count($tagArray) > 0){ 
 						foreach($tagArray as $tag){ 		
@@ -40,9 +41,9 @@
 			<input type="text" class ="tag_input"></input>
 		</div>
 		<!--  <img src="/img/profile-pic" height=100  width=100/>  USE THIS FOR PROFILE PICS-->
-    </div>
+  </div>
              
-	<div class="left_col">
+	<!--<div class="left_col">
 		<h2>Feed</h2>
 		<div id = "main_feed">
 			<?= $this->DisplayGeneralFeed($this->identity); ?>
@@ -54,7 +55,7 @@
 		
 		<h2>Upcoming Events</h2>
 			<?= $this->DisplayEventFeed($this->identity); ?>	
-        </div>
+        </div>-->
     </div>
 </div>
 
