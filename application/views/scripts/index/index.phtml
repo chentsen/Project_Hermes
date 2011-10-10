@@ -28,17 +28,14 @@ who share your interests.</h1></div>
             <li class="out-three"><img width="250" src="<?php echo $this->baseURL();?>/images/meet-people.png" /><h3>Go out and meet cool people.</h3></li>
         </ul>
     </div>
-    <div class="out-signup"><h1><a href="<?php echo $this->baseURL();?>/registration">Get Started</a></h1></div>
+    <div class="out-signup"><h1><a href="<?php echo $this->baseURL();?>/registration">Get Started</a></h1>
+        <h1 class="alternative">Or</h1></div>
+    
+    <?= $this->form ?>
 </div>
 
-<div class="form-popup">
-    
-    
-    <div class="login-popup">
-    <?= $this->form ?>
-    </div>
-</div>
-<div id="background-popup"></div>
+
+
 <style type="text/css">
     .right-block {display: none;}
 </style>

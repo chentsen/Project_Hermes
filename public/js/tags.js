@@ -48,11 +48,11 @@ var Tags = {
 	toggleDropDown:function(){
 		if(!Tags.showTagInput){
 			Tags.showTagInput = true;
-			jQuery(".tag_input_wrapper").slideDown('slow');
+			jQuery(".tag_input_wrapper").slideDown('fast');
 		}
 		else if(Tags.showTagInput){
 			Tags.showTagInput = false;
-			jQuery(".tag_input_wrapper").slideUp('slow');
+			jQuery(".tag_input_wrapper").slideUp('fast');
 		}
 	},
 	toggleTag:function(tagID){

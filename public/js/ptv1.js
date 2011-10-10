@@ -63,6 +63,23 @@ $(document).ready(function(){
 
     
   
+    $('.eventFeedObject:last-child').css({
+        'border-bottom-right-radius':'5px',
+        'border-bottom-left-radius':'5px',
+        'border-bottom' : 'none'
+    
+    });
+   
+   
+ 
+   function ToggleIt(toggler, toggled){
+  
+    $(toggler).click(function(){
+        $(toggled).slideToggle('fast');
+       });
+      
+    }
+    ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body');
     
   /*
    
@@ -138,7 +155,7 @@ $(document).ready(function(){
   //login page and registration remove bg
 
      
-     /*   function BgRemove(nClass) {
+     /*  function BgRemove(nClass) {
            //email 
            
             if($(nClass).val().length === 0)

@@ -16,7 +16,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				//print_r($results['userResults']);
 				//var_dump($results['userResults']);
 				foreach($results['userResults'] as $object){
-					echo 'second loop';
+					//echo 'second loop';
 					$this->printUserResult($object,$identity);
 				}
 			}	

@@ -17,7 +17,10 @@ class RegistrationController extends Zend_Controller_Action
 
     public function indexAction()
     {
-		
+	$auth = Zend_Auth::getInstance();
+	if($auth->hasIdentity()){
+                    $this->_redirect('/profile');
+                }	
     	$document = new SolrInputDocument();
     	$form = new Application_Form_Registration();
 		$form->addIdentical($_POST['password']);

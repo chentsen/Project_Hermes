@@ -1,13 +1,20 @@
-<div id="view-content">
-<p>
-<!-- errors formatted with the div id "errors" -->
-<!-- for Model testing  -->
+<?php $auth = Zend_Auth::getInstance();
+        if(!$auth->hasIdentity()){ ?>
+
+<div class="out-logo"><h1 class="thelogo">PlumeType</h1></div>
+
+<?php } else { ?>
+<h1 class="cms-title">Register</h1>
+<?php } ?>
 
 <?= $this->Errors($this->errors); ?>
+  <div class="cms-page">
+        <div class="cms-text">
 <?= $this->form; ?>	
 <br /> 
 <?= $this->successMessage; ?>
-</p>
-
-
-</div>
+        </div>
+  </div>
+<style type="text/css">
+    .right-block {display: none;}
+</style>
