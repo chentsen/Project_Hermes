@@ -40,22 +40,21 @@
 		<div class = tag_input_wrapper style="display:none;">
 			<input type="text" class ="tag_input"></input>
 		</div>
-	
+		<?$this->DisplayPendingRequests($this->identity); ?>
 		<!--  <img src="/img/profile-pic" height=100  width=100/>  USE THIS FOR PROFILE PICS-->
   </div>
              
 	<!--<div class="left_col">
 		<h2>Feed</h2>
 		<div id = "main_feed">
-			<?= $this->DisplayGeneralFeed($this->identity); ?>
-         </div>      
+		         </div>      
 		<a href = "#" onclick = "loadFeeds('<?= $this->identity ?>')">Refresh Feed</a>
 	</div>
         <div class="right_col">
 	
 		
 		<h2>Upcoming Events</h2>
-			<?= $this->DisplayEventFeed($this->identity); ?>	
+
         </div>-->
     </div>
 </div>

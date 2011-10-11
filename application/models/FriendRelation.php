@@ -62,7 +62,7 @@ class Application_Model_FriendRelation{
 		$requestList = $this->dm->getRepository('Documents\FriendRequest')->findBy(array('requestee.$id'=>$query));
 		
  		
-		echo $query;
+		//echo $query;
 		//print_r($requestList);
 		//echo $this->currentUser->getUid();
 		//echo $requestList->count();
