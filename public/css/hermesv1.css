@@ -16,16 +16,72 @@ div { display: block; }
 .default_form {color:#eee;}
 .clear_form {clear: both; display: block; }
 /*** search page ****/
+.user_info {
+    float: right;
+    overflow: auto;
+    border-bottom: 1px solid #454545;
+    width: 540px;
+}
+.user_info h2 { float: left;}
+.user_addFriend, .user_viewProfile {
+    float: right;
+    margin-left: 10px;
+    line-height: 22px;
+    
+}
+.search-wrapped {
+    
+    min-height: 500px;
+    background: #F0F0F0;
+    border-radius: 5px;
+    height: 100% !important;
+    color: #555;
+    margin: 5px;
+    overflow: auto;
+    padding: 0px;
+}
+.noMatch {
+     border: 1px solid #FC6C0C;
+    background: orange;
+    color: white;
+    border-radius: 5px;
+    
+    float: left;
+    padding: 5px 10px;
+    margin: 5px 5px 0px 0px;
+    overflow: auto;
+    cursor: pointer;    
+    
+    float: left;
+    }
+.user_result {overflow: auto; padding: 10px;}
+.user_like {
+    width: 30px;
+    font-size: 12px;
+    float: left;
+    padding: 10px 10px 0 10px;
+    margin-left: 10px;
+}
+.user_addFriend a, .user_viewProfile a{
+    font-size: 16px;
+    color: orange;
+    
+}
 .common_number {
     font-size: 35px;
     background: #bbb;
     color: #454545;
-    padding: 10px 15px;
+    padding: 10px 0px;
     border-radius: 5px;
+    text-align: center;
+    width: 90px;
+    font-weight: bold;
     
 }
 .in_common {
     font-weight: bold;
+    font-size: 9px;
+    margin-top: 5px;
     
 }
 .common_value {
@@ -370,6 +426,9 @@ input[type=text]:first,input[type=password]:first {
     
      border-radius: 5px;
     background: url('../images/plus-button.png') no-repeat right center rgba(55, 55, 55, .9);
+}
+.block-close {
+    background: url('../images/minus-button.png') no-repeat right center rgba(55, 55, 55, .9);
 }
 /**footer area and footer menu**/
 .twitter_follow{
@@ -928,7 +987,8 @@ ul.as-selections {
          
 }
 .close_tag {
-    padding: 5px;
+    margin-top: 2px;
+    padding:  5px;
     background: url("../images/close-tag.png") no-repeat center center; 
     float:right;
 }

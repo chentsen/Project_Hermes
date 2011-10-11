@@ -63,15 +63,33 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 	}
 	private function printUserResult(Documents\Search\UserResult $user,$identity){
 		if($user->result->getEmail()!=$identity){
-			echo "<p><div class = 'user_result'>";
+			echo "<div class = 'user_result'>";
 			$friendRelation = new Application_Model_FriendRelation($identity);
-			echo '<div class = "matchingTags">';
+			
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
                         echo '<div class="common_value"><div class="common_number">';
                         echo "{$user->getCount()}";
                             
                         echo '</div><div class="in_common"><h3>Tags in Common</h3></div></div>';
-			echo "You both like:";
+			echo "<div class='user_info'><h2>{$user->result->getFirstName()}</h2>";
+                        
+			if(!$friendRelation->isFriend($user->result->getEmail())){
+				echo "<div class = 'user_addFriend'>";
+				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
+				echo "<a href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
+				echo "</div>";
+			}
+			echo "<div class = 'user_viewProfile'>";
+				
+				$email = $user->result->getEmail();
+				echo "<a href = '/profile/public/email/{$email}'>view profile</a>";
+			echo "</div></div>";
+			//check if currently friends- are we? omit add as friend
+			//view profile
+			
+		
+                        echo "<div class='user_like'>You both like</div>";
+                        
 			if($user->match){
 				if(count($user->match > 1)){
 					foreach($user->match as $match){
@@ -84,25 +102,18 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 						echo $match[0]->getTagName();
 						echo "</div>";
 					
-					}	
+                        	}
+                                 
 			}
+                        else {
+                           
+                                    echo '<div class="noMatch">No Matching Tags</div>';
+                             
+                        }
 			echo '</div>';
-			if(!$friendRelation->isFriend($user->result->getEmail())){
-				echo "<div class = 'user_addFriend'>";
-				echo "Add {$user->result->getFirstName()} as a friend! <br />";
-				echo "<a href = /friend/friendRequest/requestee/{$user->result->getEmail()}> Add </a>";
-				echo "</div>";
-			}
-			echo "<div class = 'user_viewProfile'>";
-				echo "{$user->result->getFirstName()}";
-				echo "<br />";
-				$email = $user->result->getEmail();
-				echo "<a href = '/profile/public/email/{$email}'> profile </a>";
-			echo "</div>";
-			//check if currently friends- are we? omit add as friend
-			//view profile
-			echo "</p></div>";
-		}
+                }   
+                
+                            
 	//	return returnString		
 	}
 }?>

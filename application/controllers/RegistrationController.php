@@ -28,8 +28,10 @@ class RegistrationController extends Zend_Controller_Action
 			$activationCode = $this->userSettings->register($this->_request->getPost());
 			//returns either false for unsuccessful serialization, or the activationCode
 			if($activationCode){
-				$this->view->successMessage = '<h1>Please confirm your email address</h1>';
-				$mail = new Zend_Mail();
+				 $this->successMessage = '<h1>Please confirm your email address</h1>';
+				
+                               
+                                $mail = new Zend_Mail();
 				$htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_confirm_registration.phtml',
 																	  array('name'=>$_POST['firstName'],
 																	 'activationUrl'=>$this->url,
@@ -41,7 +43,9 @@ class RegistrationController extends Zend_Controller_Action
 				$mail->setSubject('Activate Your Plumetype Account');
 				$mail->send();
 				// redirect to some page and fire off email and return
-				return;			
+                               
+				return;	
+                                
 			}
 			else{
 				$this->view->errors = array("emailExists"=>array("This email is already registered with a user account. Forgot your password? No worries, click here"));

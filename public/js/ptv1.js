@@ -72,15 +72,17 @@ $(document).ready(function(){
    
    
  
-   function ToggleIt(toggler, toggled){
+   function ToggleIt(toggler, toggled, bgchange){
   
     $(toggler).click(function(){
+       
         $(toggled).slideToggle('fast');
+        $(bgchange).toggleClass('block-close');
        });
       
     }
-    ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body');
-    
+    ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body', '.upcoming_events .block-header');
+     
   /*
    
    
@@ -155,25 +157,43 @@ $(document).ready(function(){
   //login page and registration remove bg
 
      
-     /*  function BgRemove(nClass) {
            //email 
-           
-            if($(nClass).val().length === 0)
-            {
-                    $(nClass).removeClass('removebg');
-            }
-           else {
-               $(nClass).addClass('removebg');
+           function BgRemove(nClass) {
+                if($(nClass).val() == '')
+                {
+                        $(nClass).removeClass('removebg');
+                }
+               else {
+                   $(nClass).addClass('removebg');
+               }
            }
           
-          }
           BgRemove('#email');
           BgRemove('#firstName');
           BgRemove('#lastName');
           BgRemove('#city');
-          */
+          
+      
+      /** disable highlights ***/
+      $('.block-header h3').addClass('noSelect');
+      $('.tags').addClass('noSelect');
        
-       
+       /** disable text highlight ***/
+	$.extend($.fn.disableTextSelect = function() {
+        return this.each(function(){
+            if($.browser.mozilla){//Firefox
+                $(this).css('MozUserSelect','none');
+            }else if($.browser.msie){//IE
+                $(this).bind('selectstart',function(){return false;});
+            }else{//Opera, etc.
+                $(this).mousedown(function(){return false;});
+            }
+        });
+    });
+    $('.noSelect').disableTextSelect();
+    //*** end disable function
+    
+    
 });
 
          
