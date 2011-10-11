@@ -14,4 +14,7 @@ class Betakey {
 	public function __construct(){
 		$this->key = uniqid(rand(),false);
 	}
+	public function getKey(){
+		return $this->key;
+	}
 }
