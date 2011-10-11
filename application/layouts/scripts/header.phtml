@@ -2,7 +2,7 @@
     $options = array('formName'=>'profileSearch','fieldName' => 'profileSearch_field','viewScriptName'=>'_form_profileSearch.phtml','formAction'=>'/Search/index');
         $form = new Application_Form_Search($options);
         $this->form = $form;
-        $event = new Application_Form_CreateEvent();
+
 ?>
 <?php $auth = Zend_Auth::getInstance();
         if($auth->hasIdentity()){ ?>

@@ -2,13 +2,18 @@
  * Dialog framework for loading of dialogs.
  */
 var Dialog = {
-		
 	showDialog:function(options){
 		//either the action or the existing div
 		var dialogModal = $(".footer_ajax .modalWindow").clone();
 		if(options.elementSelector){
 			var content = jQuery(options.elementSelector).clone();
 			jQuery(dialogModal).append(content);
+		}
+		else if(options.renderAction){
+			$.post(options.renderAction,function(results){
+				var content = results;
+				jQuery(dialogModal).append(content);
+			});
 		}
 		$(".modalBackground").show();
 		$(".modalBackground").block({message:''});

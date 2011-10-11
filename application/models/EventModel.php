@@ -41,7 +41,7 @@ class Application_Model_EventModel{
 		
 		
 		$this->event = new Event($options);
-		echo 'ID is '. $this->event->getEid();
+		//echo 'ID is '. $this->event->getEid();
 		if($this->event){
 			//print_r($options);	
 			$this->dm->persist($this->event);	
@@ -137,7 +137,7 @@ class Application_Model_EventModel{
   	return $eventFeedObject;
   }
   private function addToGeneralFeed(Documents\User $creator,$eventFeedObject){
-  	echo 'BEING CALLED2';
+  	//echo 'BEING CALLED2';
   	$friends = $creator->getFriends();
   	//echo ''
   	//iterate through friends and add the feed, may want to do observer pattern

@@ -3,15 +3,15 @@
 <? 
 	$interestModel = new Application_Model_InterestModel($this->user->getInterest());
 	$tagArray = $interestModel->getTags();
+	$this->headScript()->appendFile($this->baseUrl('js/questions.js'))
 ?>
 <script src="../js/tags.js"></script>
 
 <div id="view-content">	
     <div class="view-wrapped">
   <div class="top_col">
-		
-		<? //=$this->DisplayTags($this->user->getInterest()) ?>
-		<? //=$this->tagForm; ?>
+			<center><?=$this->DisplayFlashMessages($this->flashMessages); ?></center>
+			<center><?=$this->DisplayNewUserflow($this->flowStatus); ?></center>
 		  <div class="tags_area">
 
 		 	 <div class="tags_base">
@@ -40,6 +40,7 @@
 		<div class = tag_input_wrapper style="display:none;">
 			<input type="text" class ="tag_input"></input>
 		</div>
+	
 		<!--  <img src="/img/profile-pic" height=100  width=100/>  USE THIS FOR PROFILE PICS-->
   </div>
              
@@ -51,7 +52,7 @@
 		<a href = "#" onclick = "loadFeeds('<?= $this->identity ?>')">Refresh Feed</a>
 	</div>
         <div class="right_col">
-		<?=$this->DisplayNewUserFlow($this->flowStatus)?>
+	
 		
 		<h2>Upcoming Events</h2>
 			<?= $this->DisplayEventFeed($this->identity); ?>	
@@ -69,7 +70,8 @@
 	</div>	
 </div>
 
-<script type="text/javascript">
+<script type="text/javascript" >
+	
      var loadFeeds = function(identity){
 		$("#main_feed").html('<img src="/images/loading.gif" alt=""/>');
  		$.ajax({
@@ -81,5 +83,5 @@
 
 		});
      }   
-</script>
+
 <?= $this->inlineScript()->appendScript("$(document).ready(Tags.init());");?>
