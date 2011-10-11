@@ -29,6 +29,8 @@ class Application_Form_Registration extends Zend_Form
           			'isEmpty' => 'An email address is required.'
     			 )
   				));
+  		$betakey = new Zend_Form_Element_Text('betakey');
+	
              
 			  
 		$firstName = new Zend_Form_Element_Text('firstName');
@@ -104,7 +106,7 @@ class Application_Form_Registration extends Zend_Form
 		$register->removeDecorator('DtDdWrapper')
                         ->setLabel('Register');
 		
-		$this->addElements(array($firstName,$lastName,$email,$city,$password,$password2,$register,$gender));
+		$this->addElements(array($firstName,$lastName,$email,$city,$password,$password2,$register,$gender,$betakey));
 		
 		$this->setDecorators(array(
 									array('ViewScript', 

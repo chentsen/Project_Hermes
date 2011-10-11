@@ -1,16 +1,18 @@
 <?php 
     $userDescription = new Application_Form_PersonalDescription();
     		$this->userDescription = $userDescription;
-          
+              $event = new Application_Form_CreateEvent();    
             
  
 ?>
 <?php echo $this->doctype(); ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <?php echo $this->render('head.phtml') ?>
 </head>
 <body>
+
 <div class="custom<?php $auth = Zend_Auth::getInstance();
         if(!$auth->hasIdentity()){ echo ' outside'; }?>">
     <?php echo $this->render('header.phtml') ?>
@@ -24,7 +26,7 @@
                     	$this->identity = $auth->getIdentity()?>
                     <div class="right-block">
                         <div class="create_button">
-                            <a href="#" onclick="Dialog.showDialog({elementSelector:'#event_ajax_form'})"><h1>Create Event</h1></a>
+                            <a href="#" onclick="Dialog.showDialog({elementSelector:'#event_ajax_form',func:Dialog.loadEventDatePicker})"><h1>Create Event</h1></a>
                         </div>
                         <div class="block-item upcoming_events">
                             <div class="block-header">
@@ -56,11 +58,23 @@
 
                         </div>
                     </div>
+                     <!-- Dialog Stuff -->
+					<div class = "footer_ajax" style="display:none">
+						<div id="event_ajax_form">	
+							<?=$event?>
+						</div>
+						<div class ="modalWindow">
+						</div>	
+					</div>
+					<div class = "modalBackground" style="display:none;"></div>
+					<div class = 'dialogs' style="display:none">
+					</div>
                    <?php } ?>
 		</div>
 	</div>	
 
        <?php echo $this->render('footer.phtml') ?>
     </div>
+
 </body>
 </html>

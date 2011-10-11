@@ -1,2 +1,4 @@
 apache-tomcat-6.0.32/logs/
 /nbproject/private/
+apache-tomcat-6.0.32/logs/catalina.out
+

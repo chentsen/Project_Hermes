@@ -3,6 +3,7 @@ body {
 	font-size: 12px;
        background: url('../images/bg-pencil3.png') repeat #bbb ;
         color: #fff;
+     height:100%;   
 }
 
 #login { }
@@ -846,7 +847,7 @@ border-bottom-right-radius: 5px;
     border-bottom: none;
     z-index: 100;
 }
-#createEvent #createEvent_date {
+#createEvent #createEvent_date_active {
     width: 245px;
     float: right;
     margin-left: 5px;
@@ -864,7 +865,7 @@ border-bottom-right-radius: 5px;
     border-radius: 5px;
     
 }
-#createEvent .centerform {height: 310px;}
+#createEvent .centerform {height: 310px;padding-top:50px}
 #createEvent .centerform li {height: 51px; line-height: 51px;}
 #createEvent .centerform li .createEvent_text { font-size: 24px; width: 100px; }
 #createEvent .centerform .form_date {overflow: hidden;}
@@ -1001,4 +1002,5 @@ ul.as-selections {
     display: none;
 }
 /**Dialogs*/
-.modalWindow { position:absolute;background:#FFF; width:500px;margin-left:30%;margin-right:30%; z-index:50;}
+.modalWindow { position:absolute;background:#F0F0F0;margin-left:30%;margin-right:30%;z-index:3;top:50%;  margin-top:-250px; }
+.modalBackground {position:absolute;width:100%;height:150%;z-index:2;top:7%;}

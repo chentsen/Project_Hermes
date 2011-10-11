@@ -1,10 +1,8 @@
 <?php
 class Zend_View_Helper_DisplayPendingRequests extends Zend_View_Helper_Abstract{
 	//eventually incorporate pagination
-	private $friendRelation;
+	
 	public function DisplayPendingRequests($identity){
-		
-    	
 		//can possibly pass this object from calling controller, view..
 		$this->friendRelation = new Application_Model_FriendRelation($identity);
 		$friendRequests = $this->friendRelation->getRequestList();

@@ -13,6 +13,9 @@ class ProfileController extends Hermes_Controller_SessionController
                 /* Initialize action controller here */
         $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
+    	if($this->_helper->FlashMessenger->hasMessages()){
+    		$this->view->flashMessages = $this->_helper->FlashMessenger->getMessages();
+		}
     }
 
     public function indexAction()
@@ -57,12 +60,15 @@ class ProfileController extends Hermes_Controller_SessionController
     	$this->_redirect('/profile');
     }
     public function questionsAction(){
+    	$this->_helper->layout()->disableLayout();
+    	$this->_helper->viewRenderer->setNoRender();
     	$questions = new Application_Form_Questions();
-        $this->view->form = $questions;     
+        echo $questions;     
     	$userflowModel = new Application_Model_UserflowModel($this->curUser);
     	//echo "STATUS IS".$userflowModel->getNewUserFlowStatus();
     	if($userflowModel->getNewUserFlowStatus() < 4){
-    		$this->view->questionStatus = ($userflowModel->getNewUserFlowStatus()+1); //+1 gets rid of 0 offset
+    		$userStatus = $userflowModel->getNewUserFlowStatus() + 1;
+    		echo "<script>$(document).ready(Questions.loadQuestions({$userStatus}))</script>"; //+1 gets rid of 0 offset
     	}else{
     		$this->_redirect('/profile');
     	}
