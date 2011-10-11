@@ -29658,3 +29658,1092 @@ INFO: Closing Searcher@4d898115 main
 	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
 Oct 10, 2011 12:24:39 AM org.apache.coyote.http11.Http11Protocol destroy
 INFO: Stopping Coyote HTTP/1.1 on http-8080
+Oct 10, 2011 7:02:51 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: .:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+Oct 10, 2011 7:02:51 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_do,version=1307824257653,generation=492,filenames=[_er.frq, _er.fdx, _eq.fdx, segments_do, _er.tii, _eq.fdt, _es.tis, _ep.fdt, _es.tii, _eq.fnm, _er.fnm, _ep.fdx, _er.fdt, _er.tis, _es.frq, _ep.prx, _ep_3.del, _eq.nrm, _es.fnm, _eq.tis, _ep.tii, _er.nrm, _ep.nrm, _ep.tis, _eq.tii, _es.fdt, _es.prx, _es.fdx, _es.nrm, _ep.fnm, _eq.frq, _eq.prx, _ep.frq, _er.prx]
+Oct 10, 2011 7:02:51 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257653
+Oct 10, 2011 7:02:51 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[19441294054e8d313959225]} 0 883
+Oct 10, 2011 7:02:51 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=883 
+Oct 10, 2011 7:02:51 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_do,version=1307824257653,generation=492,filenames=[_er.frq, _er.fdx, _eq.fdx, segments_do, _er.tii, _eq.fdt, _es.tis, _ep.fdt, _es.tii, _eq.fnm, _er.fnm, _ep.fdx, _er.fdt, _er.tis, _es.frq, _ep.prx, _ep_3.del, _eq.nrm, _es.fnm, _eq.tis, _ep.tii, _er.nrm, _ep.nrm, _ep.tis, _eq.tii, _es.fdt, _es.prx, _es.fdx, _es.nrm, _ep.fnm, _eq.frq, _eq.prx, _ep.frq, _er.prx]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dp,version=1307824257656,generation=493,filenames=[_er.frq, _er.fdx, _eq.fdx, segments_dp, _er.tii, _et.nrm, _eq.fdt, _es.tis, _ep.fdt, _es.tii, _eq.fnm, _er.fnm, _ep.fdx, _er.fdt, _er.tis, _es.frq, _et.fdx, _ep.prx, _eq.nrm, _et.frq, _es.fnm, _eq.tis, _ep.tii, _er.nrm, _et.fnm, _ep.nrm, _ep_4.del, _ep.tis, _et.fdt, _eq.tii, _et.prx, _es.fdt, _es.prx, _es.fdx, _et.tii, _es.nrm, _ep.fnm, _eq.frq, _eq.prx, _et.tis, _ep.frq, _er.prx]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257656
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@684c8167 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@684c8167 main from Searcher@2e15df3f main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@684c8167 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@684c8167 main from Searcher@2e15df3f main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@684c8167 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@684c8167 main from Searcher@2e15df3f main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@684c8167 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@684c8167 main from Searcher@2e15df3f main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@684c8167 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@684c8167 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@684c8167 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@2e15df3f main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 1039
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=1039 
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dp,version=1307824257656,generation=493,filenames=[_er.frq, _er.fdx, _eq.fdx, segments_dp, _er.tii, _et.nrm, _eq.fdt, _es.tis, _ep.fdt, _es.tii, _eq.fnm, _er.fnm, _ep.fdx, _er.fdt, _er.tis, _es.frq, _et.fdx, _ep.prx, _eq.nrm, _et.frq, _es.fnm, _eq.tis, _ep.tii, _er.nrm, _et.fnm, _ep.nrm, _ep_4.del, _ep.tis, _et.fdt, _eq.tii, _et.prx, _es.fdt, _es.prx, _es.fdx, _et.tii, _es.nrm, _ep.fnm, _eq.frq, _eq.prx, _et.tis, _ep.frq, _er.prx]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257656
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[19601873594e923040c0430]} 0 6
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=6 
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dp,version=1307824257656,generation=493,filenames=[_er.frq, _er.fdx, _eq.fdx, segments_dp, _er.tii, _et.nrm, _eq.fdt, _es.tis, _ep.fdt, _es.tii, _eq.fnm, _er.fnm, _ep.fdx, _er.fdt, _er.tis, _es.frq, _et.fdx, _ep.prx, _eq.nrm, _et.frq, _es.fnm, _eq.tis, _ep.tii, _er.nrm, _et.fnm, _ep.nrm, _ep_4.del, _ep.tis, _et.fdt, _eq.tii, _et.prx, _es.fdt, _es.prx, _es.fdx, _et.tii, _es.nrm, _ep.fnm, _eq.frq, _eq.prx, _et.tis, _ep.frq, _er.prx]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dq,version=1307824257659,generation=494,filenames=[_er.frq, _es.tis, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ep.fdx, _es.frq, _ep.prx, _es.fnm, _eu.prx, _ep.nrm, _eu.frq, _es.fdt, _es.prx, _es.fdx, _eu.nrm, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _eu.fdx, _et.tis, _er.prx, _ep_5.del, _er.fdx, _eq.fdx, _er.tii, segments_dq, _eq.fdt, _et.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _et.fnm, _ep.tis, _et.fdt, _eq.tii, _et.prx, _ep.fnm, _ep.frq, _eu.fnm]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257659
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@27743073 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@27743073 main from Searcher@684c8167 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@27743073 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@27743073 main from Searcher@684c8167 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@27743073 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@27743073 main from Searcher@684c8167 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@27743073 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@27743073 main from Searcher@684c8167 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@27743073 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@27743073 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@27743073 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@684c8167 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 156
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=156 
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dq,version=1307824257659,generation=494,filenames=[_er.frq, _es.tis, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ep.fdx, _es.frq, _ep.prx, _es.fnm, _eu.prx, _ep.nrm, _eu.frq, _es.fdt, _es.prx, _es.fdx, _eu.nrm, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _eu.fdx, _et.tis, _er.prx, _ep_5.del, _er.fdx, _eq.fdx, _er.tii, segments_dq, _eq.fdt, _et.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _et.fnm, _ep.tis, _et.fdt, _eq.tii, _et.prx, _ep.fnm, _ep.frq, _eu.fnm]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257659
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[17441145194e9260da0aad7]} 0 7
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=7 
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dq,version=1307824257659,generation=494,filenames=[_er.frq, _es.tis, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ep.fdx, _es.frq, _ep.prx, _es.fnm, _eu.prx, _ep.nrm, _eu.frq, _es.fdt, _es.prx, _es.fdx, _eu.nrm, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _eu.fdx, _et.tis, _er.prx, _ep_5.del, _er.fdx, _eq.fdx, _er.tii, segments_dq, _eq.fdt, _et.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _et.fnm, _ep.tis, _et.fdt, _eq.tii, _et.prx, _ep.fnm, _ep.frq, _eu.fnm]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dr,version=1307824257662,generation=495,filenames=[_er.frq, _es.tis, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ep.fdx, _es.frq, _ep.prx, _es.fnm, _eu.prx, _ep.nrm, _ev.tii, _eu.frq, _ev.prx, _ev.frq, _es.fdt, _es.prx, _es.fdx, _eu.nrm, _ev.fnm, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _eu.fdx, _et.tis, _er.prx, _er.fdx, _eq.fdx, _er.tii, segments_dr, _eq.fdt, _et.nrm, _ev.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _ev.fdt, _et.fnm, _ep.tis, _et.fdt, _ev.fdx, _eq.tii, _et.prx, _ep.fnm, _ev.tis, _ep.frq, _eu.fnm, _ep_6.del]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257662
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@40147864 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@40147864 main from Searcher@27743073 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@40147864 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@40147864 main from Searcher@27743073 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@40147864 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@40147864 main from Searcher@27743073 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@40147864 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@40147864 main from Searcher@27743073 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@40147864 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@40147864 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@40147864 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@27743073 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 225
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=225 
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dr,version=1307824257662,generation=495,filenames=[_er.frq, _es.tis, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ep.fdx, _es.frq, _ep.prx, _es.fnm, _eu.prx, _ep.nrm, _ev.tii, _eu.frq, _ev.prx, _ev.frq, _es.fdt, _es.prx, _es.fdx, _eu.nrm, _ev.fnm, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _eu.fdx, _et.tis, _er.prx, _er.fdx, _eq.fdx, _er.tii, segments_dr, _eq.fdt, _et.nrm, _ev.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _ev.fdt, _et.fnm, _ep.tis, _et.fdt, _ev.fdx, _eq.tii, _et.prx, _ep.fnm, _ev.tis, _ep.frq, _eu.fnm, _ep_6.del]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257662
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[18947840534e92620ebb83a]} 0 28
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=28 
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dr,version=1307824257662,generation=495,filenames=[_er.frq, _es.tis, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ep.fdx, _es.frq, _ep.prx, _es.fnm, _eu.prx, _ep.nrm, _ev.tii, _eu.frq, _ev.prx, _ev.frq, _es.fdt, _es.prx, _es.fdx, _eu.nrm, _ev.fnm, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _eu.fdx, _et.tis, _er.prx, _er.fdx, _eq.fdx, _er.tii, segments_dr, _eq.fdt, _et.nrm, _ev.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _ev.fdt, _et.fnm, _ep.tis, _et.fdt, _ev.fdx, _eq.tii, _et.prx, _ep.fnm, _ev.tis, _ep.frq, _eu.fnm, _ep_6.del]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_ds,version=1307824257665,generation=496,filenames=[_ew.nrm, _er.frq, _es.tis, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ep.fdx, _es.frq, _ew.fdt, _ep.prx, _ew.tis, _es.fnm, _ew.fdx, _eu.prx, _ep.nrm, _ev.tii, _eu.frq, _ew.prx, _ev.prx, _ev.frq, _es.fdt, _es.prx, _es.fdx, _eu.nrm, _ev.fnm, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _eu.fdx, _et.tis, _er.prx, _er.fdx, _eq.fdx, _er.tii, _eq.fdt, _et.nrm, segments_ds, _ev.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _ev.fdt, _et.fnm, _ep.tis, _et.fdt, _ev.fdx, _eq.tii, _et.prx, _ew.frq, _ew.tii, _ep.fnm, _ev.tis, _ew.fnm, _ep.frq, _eu.fnm, _ep_7.del]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257665
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@42db3da main
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@42db3da main from Searcher@40147864 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@42db3da main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@42db3da main from Searcher@40147864 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@42db3da main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@42db3da main from Searcher@40147864 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@42db3da main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@42db3da main from Searcher@40147864 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@42db3da main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@42db3da main
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@42db3da main
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@40147864 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 93
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=93 
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_ds,version=1307824257665,generation=496,filenames=[_ew.nrm, _er.frq, _es.tis, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ep.fdx, _es.frq, _ew.fdt, _ep.prx, _ew.tis, _es.fnm, _ew.fdx, _eu.prx, _ep.nrm, _ev.tii, _eu.frq, _ew.prx, _ev.prx, _ev.frq, _es.fdt, _es.prx, _es.fdx, _eu.nrm, _ev.fnm, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _eu.fdx, _et.tis, _er.prx, _er.fdx, _eq.fdx, _er.tii, _eq.fdt, _et.nrm, segments_ds, _ev.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _ev.fdt, _et.fnm, _ep.tis, _et.fdt, _ev.fdx, _eq.tii, _et.prx, _ew.frq, _ew.tii, _ep.fnm, _ev.tis, _ew.fnm, _ep.frq, _eu.fnm, _ep_7.del]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257665
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[6290586974e9264f957244]} 0 10
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=10 
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_ds,version=1307824257665,generation=496,filenames=[_ew.nrm, _er.frq, _es.tis, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ep.fdx, _es.frq, _ew.fdt, _ep.prx, _ew.tis, _es.fnm, _ew.fdx, _eu.prx, _ep.nrm, _ev.tii, _eu.frq, _ew.prx, _ev.prx, _ev.frq, _es.fdt, _es.prx, _es.fdx, _eu.nrm, _ev.fnm, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _eu.fdx, _et.tis, _er.prx, _er.fdx, _eq.fdx, _er.tii, _eq.fdt, _et.nrm, segments_ds, _ev.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _ev.fdt, _et.fnm, _ep.tis, _et.fdt, _ev.fdx, _eq.tii, _et.prx, _ew.frq, _ew.tii, _ep.fnm, _ev.tis, _ew.fnm, _ep.frq, _eu.fnm, _ep_7.del]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dt,version=1307824257668,generation=497,filenames=[_ew.nrm, _er.frq, _ex.nrm, _es.tis, _ex.fdx, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ex.fdt, _ep.fdx, _es.frq, _ew.fdt, _ep.prx, _ew.tis, _es.fnm, _ew.fdx, _eu.prx, _ep.nrm, _ev.tii, _eu.frq, _ew.prx, _ev.prx, _ev.frq, _es.fdt, _es.prx, _ep_8.del, _es.fdx, _eu.nrm, _ev.fnm, _ex.prx, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _ex.tis, _eu.fdx, _et.tis, _er.prx, _er.fdx, _eq.fdx, _er.tii, _eq.fdt, segments_dt, _et.nrm, _ev.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _ev.fdt, _et.fnm, _ep.tis, _et.fdt, _ev.fdx, _eq.tii, _et.prx, _ew.frq, _ew.tii, _ep.fnm, _ex.fnm, _ev.tis, _ew.fnm, _ep.frq, _eu.fnm, _ex.tii, _ex.frq]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257668
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@a563d79 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@a563d79 main from Searcher@42db3da main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@a563d79 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@a563d79 main from Searcher@42db3da main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@a563d79 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@a563d79 main from Searcher@42db3da main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@a563d79 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@a563d79 main from Searcher@42db3da main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@a563d79 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@a563d79 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@a563d79 main
+Oct 10, 2011 7:02:52 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@42db3da main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 74
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=74 
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dt,version=1307824257668,generation=497,filenames=[_ew.nrm, _er.frq, _ex.nrm, _es.tis, _ex.fdx, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ex.fdt, _ep.fdx, _es.frq, _ew.fdt, _ep.prx, _ew.tis, _es.fnm, _ew.fdx, _eu.prx, _ep.nrm, _ev.tii, _eu.frq, _ew.prx, _ev.prx, _ev.frq, _es.fdt, _es.prx, _ep_8.del, _es.fdx, _eu.nrm, _ev.fnm, _ex.prx, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _ex.tis, _eu.fdx, _et.tis, _er.prx, _er.fdx, _eq.fdx, _er.tii, _eq.fdt, segments_dt, _et.nrm, _ev.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _ev.fdt, _et.fnm, _ep.tis, _et.fdt, _ev.fdx, _eq.tii, _et.prx, _ew.frq, _ew.tii, _ep.fnm, _ex.fnm, _ev.tis, _ew.fnm, _ep.frq, _eu.fnm, _ex.tii, _ex.frq]
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257668
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[6343014474e92711e747b2]} 0 7
+Oct 10, 2011 7:02:52 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=7 
+Oct 10, 2011 7:02:52 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 7:02:53 PM org.apache.coyote.http11.Http11Protocol init
+SEVERE: Error initializing endpoint
+java.net.BindException: Address already in use <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:549)
+	at org.apache.coyote.http11.Http11Protocol.init(Http11Protocol.java:176)
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1022)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:703)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:838)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:538)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Caused by: java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:383)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:50)
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:538)
+	... 12 more
+Oct 10, 2011 7:02:53 PM org.apache.catalina.core.StandardService initialize
+SEVERE: Failed to initialize connector [Connector[HTTP/1.1-8080]]
+LifecycleException:  Protocol handler initialization failed: java.net.BindException: Address already in use <null>:8080
+	at org.apache.catalina.connector.Connector.initialize(Connector.java:1024)
+	at org.apache.catalina.core.StandardService.initialize(StandardService.java:703)
+	at org.apache.catalina.core.StandardServer.initialize(StandardServer.java:838)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:538)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+Oct 10, 2011 7:02:53 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 5936 ms
+Oct 10, 2011 7:02:53 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Oct 10, 2011 7:02:53 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.32
+Oct 10, 2011 7:02:53 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Oct 10, 2011 7:02:53 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Oct 10, 2011 7:02:53 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dt,version=1307824257668,generation=497,filenames=[_ew.nrm, _er.frq, _ex.nrm, _es.tis, _ex.fdx, _ep.fdt, _er.fnm, _eq.fnm, _es.tii, _ex.fdt, _ep.fdx, _es.frq, _ew.fdt, _ep.prx, _ew.tis, _es.fnm, _ew.fdx, _eu.prx, _ep.nrm, _ev.tii, _eu.frq, _ew.prx, _ev.prx, _ev.frq, _es.fdt, _es.prx, _ep_8.del, _es.fdx, _eu.nrm, _ev.fnm, _ex.prx, _es.nrm, _et.tii, _eu.tis, _eu.fdt, _eq.frq, _eq.prx, _eu.tii, _ex.tis, _eu.fdx, _et.tis, _er.prx, _er.fdx, _eq.fdx, _er.tii, _eq.fdt, segments_dt, _et.nrm, _ev.nrm, _er.tis, _er.fdt, _et.fdx, _eq.nrm, _eq.tis, _et.frq, _ep.tii, _er.nrm, _ev.fdt, _et.fnm, _ep.tis, _et.fdt, _ev.fdx, _eq.tii, _et.prx, _ew.frq, _ew.tii, _ep.fnm, _ex.fnm, _ev.tis, _ew.fnm, _ep.frq, _eu.fnm, _ex.tii, _ex.frq]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_du,version=1307824257673,generation=498,filenames=[_ez.tis, _ez.nrm, _ez.fnm, _ez.tii, _ez.fdt, segments_du, _ez.fdx, _ez.frq, _ez.prx]
+Oct 10, 2011 7:02:53 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257673
+Oct 10, 2011 7:02:53 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive solr.war
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@46c04fc1 main
+Oct 10, 2011 7:02:53 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@46c04fc1 main from Searcher@a563d79 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@46c04fc1 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@46c04fc1 main from Searcher@a563d79 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@46c04fc1 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@46c04fc1 main from Searcher@a563d79 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@46c04fc1 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@46c04fc1 main from Searcher@a563d79 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@46c04fc1 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:53 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@46c04fc1 main
+Oct 10, 2011 7:02:53 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:02:53 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@46c04fc1 main
+Oct 10, 2011 7:02:53 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@a563d79 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 1375
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=1375 
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_du,version=1307824257673,generation=498,filenames=[_ez.tis, _ez.nrm, _ez.fnm, _ez.tii, _ez.fdt, segments_du, _ez.fdx, _ez.frq, _ez.prx]
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257673
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[10546004254e927d59bf624]} 0 39
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=39 
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_du,version=1307824257673,generation=498,filenames=[_ez.tis, _ez.nrm, _ez.fnm, _ez.tii, _ez.fdt, segments_du, _ez.fdx, _ez.frq, _ez.prx]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dv,version=1307824257676,generation=499,filenames=[_ez.nrm, _ez.fnm, _f0.fdx, _f0.fnm, _f0.prx, _f0.tii, _f0.fdt, _f0.nrm, _ez.fdx, _ez.frq, _f0.frq, _ez_1.del, _ez.prx, _f0.tis, _ez.tis, _ez.tii, _ez.fdt, segments_dv]
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257676
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@5b33a7af main
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@5b33a7af main from Searcher@46c04fc1 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@5b33a7af main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@5b33a7af main from Searcher@46c04fc1 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@5b33a7af main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@5b33a7af main from Searcher@46c04fc1 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@5b33a7af main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@5b33a7af main from Searcher@46c04fc1 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@5b33a7af main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@5b33a7af main
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@5b33a7af main
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@46c04fc1 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 181
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=181 
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dv,version=1307824257676,generation=499,filenames=[_ez.nrm, _ez.fnm, _f0.fdx, _f0.fnm, _f0.prx, _f0.tii, _f0.fdt, _f0.nrm, _ez.fdx, _ez.frq, _f0.frq, _ez_1.del, _ez.prx, _f0.tis, _ez.tis, _ez.tii, _ez.fdt, segments_dv]
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257676
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[17039077394e927de7b6dc7]} 0 56
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=56 
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dv,version=1307824257676,generation=499,filenames=[_ez.nrm, _ez.fnm, _f0.fdx, _f0.fnm, _f0.prx, _f0.tii, _f0.fdt, _f0.nrm, _ez.fdx, _ez.frq, _f0.frq, _ez_1.del, _ez.prx, _f0.tis, _ez.tis, _ez.tii, _ez.fdt, segments_dv]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dw,version=1307824257679,generation=500,filenames=[_ez.fnm, _f1.frq, _f0.fnm, _f0.prx, _f0.tii, _f1.prx, _ez.fdx, _ez.frq, _f0.frq, _ez.prx, _f0.tis, _ez.tis, segments_dw, _ez.nrm, _f1.tii, _f0.fdx, _f1.nrm, _f0.fdt, _f1.tis, _f0.nrm, _ez_2.del, _ez.tii, _ez.fdt, _f1.fdx, _f1.fnm, _f1.fdt]
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257679
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@239cf00a main
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@239cf00a main from Searcher@5b33a7af main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@239cf00a main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@239cf00a main from Searcher@5b33a7af main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@239cf00a main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@239cf00a main from Searcher@5b33a7af main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@239cf00a main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@239cf00a main from Searcher@5b33a7af main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@239cf00a main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@239cf00a main
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@239cf00a main
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@5b33a7af main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 138
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=138 
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dw,version=1307824257679,generation=500,filenames=[_ez.fnm, _f1.frq, _f0.fnm, _f0.prx, _f0.tii, _f1.prx, _ez.fdx, _ez.frq, _f0.frq, _ez.prx, _f0.tis, _ez.tis, segments_dw, _ez.nrm, _f1.tii, _f0.fdx, _f1.nrm, _f0.fdt, _f1.tis, _f0.nrm, _ez_2.del, _ez.tii, _ez.fdt, _f1.fdx, _f1.fnm, _f1.fdt]
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257679
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[3965170374e9284acf0436]} 0 5
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=5 
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dw,version=1307824257679,generation=500,filenames=[_ez.fnm, _f1.frq, _f0.fnm, _f0.prx, _f0.tii, _f1.prx, _ez.fdx, _ez.frq, _f0.frq, _ez.prx, _f0.tis, _ez.tis, segments_dw, _ez.nrm, _f1.tii, _f0.fdx, _f1.nrm, _f0.fdt, _f1.tis, _f0.nrm, _ez_2.del, _ez.tii, _ez.fdt, _f1.fdx, _f1.fnm, _f1.fdt]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dx,version=1307824257682,generation=501,filenames=[_f2.nrm, _ez.fnm, _f1.frq, _f0.fnm, _f0.prx, _f0.tii, _f1.prx, _ez.fdx, _ez.frq, _f0.frq, _ez.prx, _f2.prx, _f0.tis, _ez.tis, _ez_3.del, segments_dx, _ez.nrm, _f1.tii, _f0.fdx, _f2.tii, _f1.nrm, _f0.fdt, _f1.tis, _f0.nrm, _f2.tis, _f2.fnm, _f2.fdx, _ez.tii, _ez.fdt, _f2.fdt, _f2.frq, _f1.fdx, _f1.fnm, _f1.fdt]
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257682
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@31a5fdb9 main
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@31a5fdb9 main from Searcher@239cf00a main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@31a5fdb9 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@31a5fdb9 main from Searcher@239cf00a main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@31a5fdb9 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@31a5fdb9 main from Searcher@239cf00a main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@31a5fdb9 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@31a5fdb9 main from Searcher@239cf00a main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@31a5fdb9 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@31a5fdb9 main
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@31a5fdb9 main
+Oct 10, 2011 7:02:54 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@239cf00a main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 7:02:54 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 105
+Oct 10, 2011 7:02:54 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=105 
+Oct 10, 2011 7:02:56 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: Using JNDI solr.home: /apache-tomcat-6.0.32/webapps/solr_site/
+Oct 10, 2011 7:02:56 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: Solr home set to '/apache-tomcat-6.0.32/webapps/solr_site/'
+Oct 10, 2011 7:02:56 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: SolrDispatchFilter.init()
+Oct 10, 2011 7:02:56 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: Using JNDI solr.home: /apache-tomcat-6.0.32/webapps/solr_site/
+Oct 10, 2011 7:02:56 PM org.apache.solr.core.CoreContainer$Initializer initialize
+INFO: looking for solr.xml: /apache-tomcat-6.0.32/webapps/solr_site/solr.xml
+Oct 10, 2011 7:02:56 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: Using JNDI solr.home: /apache-tomcat-6.0.32/webapps/solr_site/
+Oct 10, 2011 7:02:56 PM org.apache.solr.core.CoreContainer <init>
+INFO: New CoreContainer: solrHome=/apache-tomcat-6.0.32/webapps/solr_site/ instance=2114678520
+Oct 10, 2011 7:02:56 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: Solr home set to '/apache-tomcat-6.0.32/webapps/solr_site/'
+Oct 10, 2011 7:02:56 PM org.apache.solr.core.SolrResourceLoader <init>
+INFO: Solr home set to '/apache-tomcat-6.0.32/webapps/solr_site/./'
+Oct 10, 2011 7:02:57 PM org.apache.solr.core.SolrConfig initLibs
+INFO: Adding specified lib dirs to ClassLoader
+Oct 10, 2011 7:02:57 PM org.apache.solr.core.SolrConfig <init>
+INFO: Using Lucene MatchVersion: LUCENE_32
+Oct 10, 2011 7:02:57 PM org.apache.solr.core.SolrConfig <init>
+INFO: Loaded SolrConfig: solrconfig.xml
+Oct 10, 2011 7:02:57 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Reading Solr Schema
+Oct 10, 2011 7:02:58 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: Schema name=example
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created string: org.apache.solr.schema.StrField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created boolean: org.apache.solr.schema.BoolField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created binary: org.apache.solr.schema.BinaryField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created int: org.apache.solr.schema.TrieIntField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created float: org.apache.solr.schema.TrieFloatField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created long: org.apache.solr.schema.TrieLongField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created double: org.apache.solr.schema.TrieDoubleField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created tint: org.apache.solr.schema.TrieIntField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created tfloat: org.apache.solr.schema.TrieFloatField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created tlong: org.apache.solr.schema.TrieLongField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created tdouble: org.apache.solr.schema.TrieDoubleField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created date: org.apache.solr.schema.TrieDateField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created tdate: org.apache.solr.schema.TrieDateField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created pint: org.apache.solr.schema.IntField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created plong: org.apache.solr.schema.LongField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created pfloat: org.apache.solr.schema.FloatField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created pdouble: org.apache.solr.schema.DoubleField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created pdate: org.apache.solr.schema.DateField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created sint: org.apache.solr.schema.SortableIntField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created slong: org.apache.solr.schema.SortableLongField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created sfloat: org.apache.solr.schema.SortableFloatField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created sdouble: org.apache.solr.schema.SortableDoubleField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created random: org.apache.solr.schema.RandomSortField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WhitespaceTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created text_ws: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WhitespaceTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.SynonymFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.StopFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WordDelimiterFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.KeywordMarkerFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.PorterStemFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WhitespaceTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.StopFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WordDelimiterFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.KeywordMarkerFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.PorterStemFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created text: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WhitespaceTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.SynonymFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.StopFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WordDelimiterFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.KeywordMarkerFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.EnglishMinimalStemFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.RemoveDuplicatesTokenFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created textTight: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WhitespaceTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.SynonymFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.StopFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WordDelimiterFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WhitespaceTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.StopFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WordDelimiterFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created textgen: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WhitespaceTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.SynonymFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.StopFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WordDelimiterFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WhitespaceTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.StopFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WordDelimiterFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.ReversedWildcardFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created text_rev: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.KeywordTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.TrimFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.PatternReplaceFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created alphaOnlySort: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.StandardTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.DoubleMetaphoneFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created phonetic: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.WhitespaceTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.DelimitedPayloadTokenFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created payloads: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.KeywordTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.LowerCaseFilterFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created lowercase: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created : org.apache.solr.analysis.PathHierarchyTokenizerFactory
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created text_path: org.apache.solr.schema.TextField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created ignored: org.apache.solr.schema.StrField
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created point: org.apache.solr.schema.PointType
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created location: org.apache.solr.schema.LatLonType
+Oct 10, 2011 7:02:58 PM org.apache.solr.util.plugin.AbstractPluginLoader load
+INFO: created geohash: org.apache.solr.schema.GeoHashField
+Oct 10, 2011 7:02:58 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: default search field is text
+Oct 10, 2011 7:02:58 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: query parser default operator is OR
+Oct 10, 2011 7:02:58 PM org.apache.solr.schema.IndexSchema readSchema
+INFO: unique key field: id
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.SolrCore <init>
+INFO: [] Opening new SolrCore at /apache-tomcat-6.0.32/webapps/solr_site/./, dataDir=/apache-tomcat-6.0.32/webapps/solr_site/data/
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.JmxMonitoredMap <init>
+INFO: JMX monitoring is enabled. Adding Solr mbeans to JMX Server: com.sun.jmx.mbeanserver.JmxMBeanServer@6686fe26
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.SolrCore initListeners
+INFO: [] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.SolrCore initListeners
+INFO: [] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+Oct 10, 2011 7:02:58 PM org.apache.solr.response.XSLTResponseWriter init
+INFO: xsltCacheLifetimeSeconds=5
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created search: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /browse: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update: solr.XmlUpdateRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/javabin: solr.BinaryUpdateRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.CSVRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/csv: solr.CSVRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.JsonUpdateRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/json: solr.JsonUpdateRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /update/extract: solr.extraction.ExtractingRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/field: solr.FieldAnalysisRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /analysis/document: solr.DocumentAnalysisRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/: solr.admin.AdminHandlers
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /admin/ping: solr.PingRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /debug/dump: solr.DumpRequestHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /spell: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created tvrh: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /terms: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: adding lazy requestHandler: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.core.RequestHandlers initHandlersFromConfig
+INFO: created /elevate: solr.SearchHandler
+Oct 10, 2011 7:02:58 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@6dc220eb main
+Oct 10, 2011 7:02:58 PM org.apache.solr.update.DirectUpdateHandler2$CommitTracker <init>
+INFO: AutoCommit: disabled
+Oct 10, 2011 7:02:58 PM org.apache.solr.handler.component.SpellCheckComponent inform
+INFO: Initializing spell checkers
+Oct 10, 2011 7:02:59 PM org.apache.solr.spelling.AbstractLuceneSpellChecker init
+INFO: Using WhitespaceAnalzyer for dictionary: default
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SpellCheckComponent inform
+WARNING: No queryConverter defined, using default converter
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.QueryElevationComponent inform
+INFO: Loading QueryElevation from: /apache-tomcat-6.0.32/webapps/solr_site/./conf/elevate.xml
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@268be9ef
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@2bab5dae
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@7f9360e7
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@24bf1f20
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@7f9480b8
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@6e8ef177
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.QueryComponent@268be9ef
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.FacetComponent@2bab5dae
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.MoreLikeThisComponent@7f9360e7
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.HighlightComponent@24bf1f20
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.StatsComponent@7f9480b8
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  component:org.apache.solr.handler.component.SpellCheckComponent@6a8ef455
+Oct 10, 2011 7:02:59 PM org.apache.solr.handler.component.SearchHandler inform
+INFO: Adding  debug component:org.apache.solr.handler.component.DebugComponent@6e8ef177
+Oct 10, 2011 7:02:59 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@6dc220eb main
+Oct 10, 2011 7:02:59 PM org.apache.solr.core.CoreContainer register
+INFO: registering core: 
+Oct 10, 2011 7:02:59 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: user.dir=/Users/chentsen/Documents/workspace/project_hermes/indexer
+Oct 10, 2011 7:02:59 PM org.apache.solr.servlet.SolrDispatchFilter init
+INFO: SolrDispatchFilter.init() done
+Oct 10, 2011 7:02:59 PM org.apache.solr.servlet.SolrServlet init
+INFO: SolrServlet.init()
+Oct 10, 2011 7:02:59 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: Using JNDI solr.home: /apache-tomcat-6.0.32/webapps/solr_site/
+Oct 10, 2011 7:02:59 PM org.apache.solr.servlet.SolrServlet init
+INFO: SolrServlet.init() done
+Oct 10, 2011 7:02:59 PM org.apache.solr.core.SolrResourceLoader locateSolrHome
+INFO: Using JNDI solr.home: /apache-tomcat-6.0.32/webapps/solr_site/
+Oct 10, 2011 7:02:59 PM org.apache.solr.servlet.SolrUpdateServlet init
+INFO: SolrUpdateServlet.init() done
+Oct 10, 2011 7:02:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Oct 10, 2011 7:02:59 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Oct 10, 2011 7:03:00 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml} hits=0 status=0 QTime=536 
+Oct 10, 2011 7:03:00 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 7:03:00 PM org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener newSearcher
+INFO: Loading spell index for spellchecker: default
+Oct 10, 2011 7:03:00 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@6dc220eb main
+Oct 10, 2011 7:03:01 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Oct 10, 2011 7:03:01 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory solr_site
+Oct 10, 2011 7:03:01 PM org.apache.coyote.http11.Http11Protocol start
+SEVERE: Error starting endpoint
+java.net.BindException: Address already in use <null>:8080
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:549)
+	at org.apache.tomcat.util.net.JIoEndpoint.start(JIoEndpoint.java:565)
+	at org.apache.coyote.http11.Http11Protocol.start(Http11Protocol.java:203)
+	at org.apache.catalina.connector.Connector.start(Connector.java:1095)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:540)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:383)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at java.net.ServerSocket.<init>(ServerSocket.java:150)
+	at org.apache.tomcat.util.net.DefaultServerSocketFactory.createSocket(DefaultServerSocketFactory.java:50)
+	at org.apache.tomcat.util.net.JIoEndpoint.init(JIoEndpoint.java:538)
+	... 12 more
+Oct 10, 2011 7:03:01 PM org.apache.catalina.core.StandardService start
+SEVERE: Failed to start connector [Connector[HTTP/1.1-8080]]
+LifecycleException:  service.getName(): "Catalina";  Protocol handler start failed: java.net.BindException: Address already in use <null>:8080
+	at org.apache.catalina.connector.Connector.start(Connector.java:1102)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:540)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Oct 10, 2011 7:03:01 PM org.apache.jk.common.ChannelSocket init
+INFO: Port busy 8009 java.net.BindException: Address already in use
+Oct 10, 2011 7:03:01 PM org.apache.jk.common.ChannelSocket init
+SEVERE: Can't find free port 8009 8009
+Oct 10, 2011 7:03:01 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/63  config=null
+Oct 10, 2011 7:03:01 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 8779 ms
+Oct 10, 2011 7:03:02 PM org.apache.catalina.core.StandardServer await
+SEVERE: StandardServer.await: create[8005]: 
+java.net.BindException: Address already in use
+	at java.net.PlainSocketImpl.socketBind(Native Method)
+	at java.net.PlainSocketImpl.bind(PlainSocketImpl.java:383)
+	at java.net.ServerSocket.bind(ServerSocket.java:328)
+	at java.net.ServerSocket.<init>(ServerSocket.java:194)
+	at org.apache.catalina.core.StandardServer.await(StandardServer.java:406)
+	at org.apache.catalina.startup.Catalina.await(Catalina.java:676)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:628)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Oct 10, 2011 7:03:02 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+Oct 10, 2011 7:03:03 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+Oct 10, 2011 7:03:03 PM org.apache.solr.core.SolrCore close
+INFO: []  CLOSING SolrCore org.apache.solr.core.SolrCore@4b7361e2
+Oct 10, 2011 7:03:03 PM org.apache.solr.update.DirectUpdateHandler2 close
+INFO: closing DirectUpdateHandler2{commits=0,autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+Oct 10, 2011 7:03:03 PM org.apache.solr.update.DirectUpdateHandler2 close
+INFO: closed DirectUpdateHandler2{commits=0,autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+Oct 10, 2011 7:03:03 PM org.apache.solr.core.SolrCore closeSearcher
+INFO: [] Closing main searcher on request.
+Oct 10, 2011 7:03:03 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@6dc220eb main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=1,evictions=0,size=1,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 7:03:03 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+Oct 10, 2011 9:38:06 PM org.apache.solr.core.SolrDeletionPolicy onInit
+INFO: SolrDeletionPolicy.onInit: commits:num=1
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dx,version=1307824257682,generation=501,filenames=[_f2.nrm, _ez.fnm, _f1.frq, _f0.fnm, _f0.prx, _f0.tii, _f1.prx, _ez.fdx, _ez.frq, _f0.frq, _ez.prx, _f2.prx, _f0.tis, _ez.tis, _ez_3.del, segments_dx, _ez.nrm, _f1.tii, _f0.fdx, _f2.tii, _f1.nrm, _f0.fdt, _f1.tis, _f0.nrm, _f2.tis, _f2.fnm, _f2.fdx, _ez.tii, _ez.fdt, _f2.fdt, _f2.frq, _f1.fdx, _f1.fnm, _f1.fdt]
+Oct 10, 2011 9:38:06 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257682
+Oct 10, 2011 9:38:06 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {add=[19464950994e93c82c77d66]} 0 161
+Oct 10, 2011 9:38:06 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=161 
+Oct 10, 2011 9:38:06 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: start commit(optimize=false,waitFlush=true,waitSearcher=true,expungeDeletes=false)
+Oct 10, 2011 9:38:06 PM org.apache.solr.core.SolrDeletionPolicy onCommit
+INFO: SolrDeletionPolicy.onCommit: commits:num=2
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dx,version=1307824257682,generation=501,filenames=[_f2.nrm, _ez.fnm, _f1.frq, _f0.fnm, _f0.prx, _f0.tii, _f1.prx, _ez.fdx, _ez.frq, _f0.frq, _ez.prx, _f2.prx, _f0.tis, _ez.tis, _ez_3.del, segments_dx, _ez.nrm, _f1.tii, _f0.fdx, _f2.tii, _f1.nrm, _f0.fdt, _f1.tis, _f0.nrm, _f2.tis, _f2.fnm, _f2.fdx, _ez.tii, _ez.fdt, _f2.fdt, _f2.frq, _f1.fdx, _f1.fnm, _f1.fdt]
+	commit{dir=/apache-tomcat-6.0.32/webapps/solr_site/data/index,segFN=segments_dy,version=1307824257684,generation=502,filenames=[_f2.nrm, _ez.fnm, _f1.frq, _f0.fnm, _f0.prx, _f0.tii, _f1.prx, _ez.fdx, _ez.frq, _f0.frq, _ez.prx, _f2.prx, _f0.tis, _ez.tis, _ez_3.del, segments_dy, _f3.prx, _ez.nrm, _f1.tii, _f0.fdx, _f2.tii, _f3.nrm, _f1.nrm, _f0.fdt, _f1.tis, _f3.fnm, _f0.nrm, _f2.tis, _f3.frq, _f2.fnm, _f3.tis, _f2.fdx, _ez.tii, _ez.fdt, _f3.fdt, _f2.fdt, _f2.frq, _f3.fdx, _f1.fdx, _f1.fnm, _f3.tii, _f1.fdt]
+Oct 10, 2011 9:38:06 PM org.apache.solr.core.SolrDeletionPolicy updateCommits
+INFO: newest commit = 1307824257684
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher <init>
+INFO: Opening Searcher@1e1c66a main
+Oct 10, 2011 9:38:06 PM org.apache.solr.update.DirectUpdateHandler2 commit
+INFO: end_commit_flush
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@1e1c66a main from Searcher@31a5fdb9 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@1e1c66a main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@1e1c66a main from Searcher@31a5fdb9 main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@1e1c66a main
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@1e1c66a main from Searcher@31a5fdb9 main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@1e1c66a main
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming Searcher@1e1c66a main from Searcher@31a5fdb9 main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher warm
+INFO: autowarming result for Searcher@1e1c66a main
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 9:38:06 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener sending requests to Searcher@1e1c66a main
+Oct 10, 2011 9:38:06 PM org.apache.solr.core.QuerySenderListener newSearcher
+INFO: QuerySenderListener done.
+Oct 10, 2011 9:38:06 PM org.apache.solr.core.SolrCore registerSearcher
+INFO: [] Registered new searcher Searcher@1e1c66a main
+Oct 10, 2011 9:38:06 PM org.apache.solr.search.SolrIndexSearcher close
+INFO: Closing Searcher@31a5fdb9 main
+	fieldValueCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	filterCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=0,cumulative_hits=0,cumulative_hitratio=0.00,cumulative_inserts=0,cumulative_evictions=0}
+	queryResultCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=186,cumulative_hits=145,cumulative_hitratio=0.77,cumulative_inserts=41,cumulative_evictions=0}
+	documentCache{lookups=0,hits=0,hitratio=0.00,inserts=0,evictions=0,size=0,warmupTime=0,cumulative_lookups=10936,cumulative_hits=10246,cumulative_hitratio=0.93,cumulative_inserts=690,cumulative_evictions=0}
+Oct 10, 2011 9:38:06 PM org.apache.solr.update.processor.LogUpdateProcessor finish
+INFO: {commit=} 0 169
+Oct 10, 2011 9:38:06 PM org.apache.solr.core.SolrCore execute
+INFO: [] webapp=/solr path=/update/ params={indent=on&wt=xml&version=2.2} status=0 QTime=169 

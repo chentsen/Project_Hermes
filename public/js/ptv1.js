@@ -142,15 +142,9 @@ $(document).ready(function(){
           
           
             /****** events page *******/
-     $( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});
-     
-     $('#createEvent_shortDescription').val('eat pizza'); 
-     $('#createEvent_location').val("Tony's Pizzeria");
-     $('#createEvent_longDescription').val('At 7pm\n155 Main St.\nSan Francisco, CA 94333');
-    
-     $('#createEvent_longDescription, #createEvent_location, #createEvent_shortDescription').css({'color': '#bbb'}).focus(function(){
-         $(this).css({'color': '#000'}).val('');//.unbind(event);
-        });
+     //$( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});
+      
+   
         
   //login page and registration remove bg
 
