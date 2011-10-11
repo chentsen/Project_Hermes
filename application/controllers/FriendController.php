@@ -34,10 +34,12 @@ class FriendController extends Hermes_Controller_SessionController
 		$request = $this->friendRelation->createFriendRequest($param);
 		
 		if($request){
-			$this->view->requestStatus = 'Request Created!';
+			$this->_helper->flashMessenger->addMessage("Friend request created!");
+				$this->_redirect('/profile');
 		}
 		else{
-			$this->view->requestStatus = 'Request NOT Created!';
+			$this->_helper->flashMessenger->addMessage("Friend request created!");
+				$this->_redirect('/profile');
 		}
 	}
 	public function respondfriendrequestAction(){
@@ -47,12 +49,14 @@ class FriendController extends Hermes_Controller_SessionController
 		if($response == "yes"){
 			$friendRequest = $this->mongoContainer->getDocumentManager('default')->getRepository('Documents\FriendRequest')->findOneBy(array("_id"=>$id));
 			if($friendRequest){
-				echo 'Friend request accepted';
+				$this->_helper->flashMessenger->addMessage("Friend request accepted!");
 				$this->friendRelation->acceptFriendRequest($friendRequest);
+				$this->_redirect('/profile');
 			}
 			else{
-				echo 'Friend request ignored';
+				$this->_helper->flashMessenger->addMessage("Friend request ignored");
 				$this->friendRelation->rejectFriendRequest($friendRequest);
+				$this->_redirect('/profile');
 			}
 		}
 		else{
