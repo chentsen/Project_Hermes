@@ -82,7 +82,7 @@ $(document).ready(function(){
       
     }
     ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body', '.upcoming_events .block-header');
-     
+    ToggleIt('.friends_block .block-header', '.friends_block .block-body', '.friends_block .block-header'); 
   /*
    
    

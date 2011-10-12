@@ -1,13 +1,17 @@
-<h1><?= $this->firstName ?>'s Profile</h1>
-<div class = "description">
-A little bit about me:
-<?= $this->description ?>
-</div>
-<div class = "friendStatus">
-<br />
-<? if($this->isFriend){?>
-		You are friends with <?= $this->firstName ?>.
-<? }else{?>
-		You are not friends with <?= $this->firstName ?>. <a href ="#">Add as a friend</a>
-<? } ?>
+<div id="view-content">
+        <div class="view-wrapped">
+            <h1><?= $this->firstName ?>'s Profile</h1>
+            <div class = "description">
+            A little bit about me:
+            <?= $this->description ?>
+            </div>
+            <div class = "friendStatus">
+            <br />
+            <? if($this->isFriend){?>
+                            You are friends with <?= $this->firstName ?>.
+            <? }else{?>
+                            You are not friends with <?= $this->firstName ?>. <a href ="#">Add as a friend</a>
+            <? } ?>
+            </div>
+        </div>
 </div>

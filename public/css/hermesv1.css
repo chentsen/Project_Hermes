@@ -16,6 +16,17 @@ div { display: block; }
 }
 .default_form {color:#eee;}
 .clear_form {clear: both; display: block; }
+/*** friend picture ****/
+.friends_block .block-body{background: #eee; overflow: auto;
+           border-bottom-right-radius: 5px;
+           border-bottom-left-radius:5px;
+           color: #454545;
+           padding-bottom: 5px;
+}
+.friend_list {float: left; padding: 5px 5px 0 5px;}
+.friend_pic { }
+
+
 /*** search page ****/
 .user_info {
     float: right;
