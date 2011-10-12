@@ -203,6 +203,14 @@
 							if(active.length > 0){
 								active.click();
 								results_holder.hide();
+								$.post("/tag/add-tag-ajax",
+										{tags:$(".as-values").val()},
+										function(results){
+											Tags.refreshTags(results);
+											$(".as-values").val('');
+											$(".as-selection-item").remove();
+										}	
+									);
 							}else if(input.val().length > 0){
 								if(i_input != "" && values_input.val().search(","+i_input+",") < 0 && i_input.length >= opts.minChars){	
 									e.preventDefault();

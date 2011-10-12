@@ -101,10 +101,13 @@ class Application_Model_UserSettings{
 			if($this->user->getConfirmation() == "confirmed"){
 				Zend_Session::rememberMe(1209600);
 				return true;
+			}else{
+				$auth->clearIdentity();
 			}	
 		}
 		else{
-			echo 'RESULT WASNT VALID';
+			
+			//echo 'RESULT WASNT VALID';
 			return false;
 		}
 	}
