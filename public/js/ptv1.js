@@ -121,7 +121,9 @@ $(document).ready(function(){
       }
         BdOrange('#login #email', '#login #password');
         BdOrange('#login #password', '#login #password');
-        BdOrange('#registration #email', '#registration #firstName');
+        
+        BdOrange('#registration #email', '#registration #betakey');
+        BdOrange('#registration #betakey', '#registration #firstName')
         BdOrange('#registration #firstName', '#registration #lastName');
         BdOrange('#registration #lastName', '#registration #city');
         BdOrange('#registration #city', '');

@@ -23,8 +23,8 @@ div { display: block; }
            color: #454545;
            padding-bottom: 5px;
 }
-.friend_list {float: left; padding: 5px 5px 0 5px;}
-.friend_pic { }
+.friend_list {float: left; padding: 5px 3px 0 5px;}
+.friend_pic img{ border-radius: 10px; }
 
 
 /*** search page ****/
@@ -822,6 +822,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /** app style registration **/
 #registration .first_name input{ 
     background: url("../images/first-name-form.png") no-repeat 10px center #f8f8f8;
+    border-bottom: none;
+}
+#registration #betakey {
     border-bottom: none;
 }
 #registration .last_name input{
