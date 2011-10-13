@@ -1,5 +1,5 @@
 <?php
-
+//JULIAN LOVES SALAMI :))
 class RegistrationController extends Zend_Controller_Action
 {
 
