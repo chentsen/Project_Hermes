@@ -11,7 +11,7 @@ class AdminController extends Zend_Controller_Action{
 	public function generateKeysAction(){
 		$this->_helper->viewRenderer->setNoRender();
 	
-		if($this->curUser->getEmail() == "chentsen3@gmail.com"){
+		if($this->curUser->getEmail() == "chentsen@gmail.com"||$this->curUser->getEmail() == "me@juliantai.com"||$this->curUser->getEmail() == "y.miyake@gmail.com"){
 			for($i=0;$i<1000;$i++){
 				$betakey = new Documents\Betakey();
 				$this->dm->persist($betakey);
