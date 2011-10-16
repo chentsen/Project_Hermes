@@ -2,16 +2,17 @@
     
    <?= $this->Errors($this->errors); ?>
 <p>
-<?=$this->DisplayFlashMessages($this->flashMessages); ?>
+
 </p>
 <p>
   <?= $this->form ?>
     
 </p>
 </div>-->
+
 <?php $auth = Zend_Auth::getInstance();
         if(!$auth->hasIdentity()){ ?>
-
+<?=$this->DisplayFlashMessages($this->flashMessages); ?>
 <div class="out-logo"><h1 class="thelogo">PlumeType</h1></div>
 
 <?php } ?>
