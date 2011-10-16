@@ -11,15 +11,29 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				foreach($results['eventResults'] as $object){
 					$this->printEventResult($object,$identity);
 				}
-			}
+			} 
 			if(count($results['userResults'])>0){
 				//print_r($results['userResults']);
 				//var_dump($results['userResults']);
 				foreach($results['userResults'] as $object){
 					$this->printUserResult($object,$identity);
 				}
-			}	
-		}else return;	
+			}
+                        if(count($results['userResults'])==0 && count($results['eventResults'])==0) {
+                            echo '<div class="none-singleFound"><h1>No users or events found :(<br/>';
+                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">Create</a> an event to meet some!</h1></div>';
+                        } else if (count($results['userResults'])==0) {
+                            echo '<div class="none-singleFound"><h1>No users found :(<br/>Why don\'t';
+                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">Create</a> an event to meet some!</h1></div>';
+                        } else if (count($results['eventResults'])==0) {
+                            
+                            echo '<div class="none-singleFound"><h1>No events found :(<br/>Why don\'t you create one';
+                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">here</a>?</h1></div>';
+                        }
+                           
+                    }else {
+                    
+                    return;	}
 	}
 	private function printEventResult(Documents\Search\EventResult $event,$identity){
 		$returnString = ' ';
@@ -62,7 +76,9 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 		//return $returnString;
 	}
 	private function printUserResult(Documents\Search\UserResult $user,$identity){
-		if($user->result->getEmail()!=$identity){
+	
+                 
+            if($user->result->getEmail()!=$identity){
 			echo "<div class = 'user_result'>";
 			$friendRelation = new Application_Model_FriendRelation($identity);
 			
@@ -111,7 +127,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                              
                         }
 			echo '</div>';
-                }   
+                } 
                 
                             
 	//	return returnString		
