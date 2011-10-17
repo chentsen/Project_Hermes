@@ -10,13 +10,148 @@ body {
 
 div { display: block; }
 
-
+.orange {
+    color: #FC6C0C;
+}
 #content_area h1 {
     
 }
 .default_form {color:#eee;}
 .clear_form {clear: both; display: block; }
+/**** registration success page ****/
+.regsuccess {
+    font-size: 20px !important;
+    margin-bottom: 15px;
+    text-shadow: none;
+}
+/**** edit account ****/
+#profilePic {
+    float: left;
+    width: 250px;
+    padding-right: 22px;
+    border-right: 1px solid #bbb;
+    margin-right: 0px !important;
+}
+#profilePic li {
+    list-style: none;
+    margin-left: 40px;
+}
+#profilePic #profilePic_submit {
+    margin-right: 23px;
+}
+#profilePic h1 {
+    margin-left: 40px;
+}
+#editAccount {
+    float: right;
+    width: 280px;
+}
+#editAccount #submit{
+    margin-right: 10px;
+    margin-top: 30px;
+}
+#editAccount li{
+    width: 275px;
+    list-style: none;
+}
+#editAccount #firstName,
+#editAccount #lastName,
+#editAccount #city{
+    width: 250px;
+}
+
+/*** profile page ****/
+.big_name {font-size: 36px; text-transform: capitalize; float: left;}
+.user_details {
+    margin-bottom: 10px;
+}
+
+.profile_leftCol {
+    width: 200px;
+    float: left;
+}
+.profile_image {
+    background: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.profile_eventList {
+   
+    background: #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    height: 190px;
+}
+.profile_image img{
+    width: 180px;
+    height: 180px;
+}
+.profile_rightCol {
+    float: right;
+    width: 430px;
+}
+.profileDesc {
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    background: #ccc;
+    min-height: 48px;
+    margin-bottom: 10px;
+    
+}
+.profile_tags {
+    min-height: 318px;
+    
+    padding: 10px;
+    background: #ccc;
+    border-radius: 5px;
+    
+    
+}
+/*** friend picture ****/
+.friendsList { overflow: auto;}
+.friends_block .block-body{background: #eee; overflow: auto;
+           border-bottom-right-radius: 5px;
+           border-bottom-left-radius:5px;
+           color: #454545;
+          
+}
+.profile_header {
+    overflow: auto;
+}
+.friendStatus a{
+    color: orange; 
+    font-size: 36px;
+    font-weight: bold;
+}
+.friendStatus {
+    float: right;
+}
+.friend_list {float: left; padding: 5px 3px 0 5px;}
+.friend_pic img{ border-radius: 10px; }
+
+
 /*** search page ****/
+.none-singleFound {
+    margin-left: 150px;
+    margin-top: 200px;
+}
+.none-singleFound a {
+    color: orange;
+}
+.matchedTag {
+    border: 1px solid #FC6C0C;
+    background: orange;
+    color: white;
+    border-radius: 5px;
+    float: left;
+    padding: 5px 10px;
+    margin: 5px 5px 0px 0px;
+    overflow: auto;
+    cursor: pointer;
+}
 .user_info {
     float: right;
     overflow: auto;
@@ -472,11 +607,11 @@ input[type=text]:first,input[type=password]:first {
 	display: inline;
 	padding: 0px 6px 0px 4px;
         border-right: 1px solid #eee;
-        color: #eee;
+        color: #676767;
 	
 }
 #footer_menu .left_footer li a {
-    color: #eee;
+    color: #676767;
     text-decoration: none;
     
 }
@@ -813,6 +948,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
     background: url("../images/first-name-form.png") no-repeat 10px center #f8f8f8;
     border-bottom: none;
 }
+#registration #betakey {
+    border-bottom: none;
+    background: #f8f8f8;
+}
 #registration .last_name input{
    background: url("../images/last-name-form.png") no-repeat 10px center #f8f8f8;
    border-bottom: none;
@@ -865,7 +1004,7 @@ border-bottom-right-radius: 5px;
     border-radius: 5px;
     
 }
-#createEvent .centerform {height: 310px;padding-top:50px}
+#createEvent .centerform {height: 310px;}
 #createEvent .centerform li {height: 51px; line-height: 51px;}
 #createEvent .centerform li .createEvent_text { font-size: 24px; width: 100px; }
 #createEvent .centerform .form_date {overflow: hidden;}
@@ -924,6 +1063,7 @@ border-bottom-right-radius: 5px;
     position: relative;
 }
 /**** tags ******/
+
 .tag_input_wrapper {
     border: 1px solid orange;
     border-bottom-right-radius: 5px;
@@ -1002,5 +1142,51 @@ ul.as-selections {
     display: none;
 }
 /**Dialogs*/
-.modalWindow { position:absolute;background:#F0F0F0;margin-left:30%;margin-right:30%;z-index:3;top:50%;  margin-top:-250px; }
-.modalBackground {position:absolute;width:100%;height:150%;z-index:2;top:7%;}
+.modalWindow { 
+    position:absolute;
+    background:#F0F0F0;
+    margin-left:30%;
+    margin-right:30%;
+    z-index:3;
+    top:50%;  
+    margin-top:-250px; 
+    border-radius: 5px;
+    box-shadow: 0 0 0px 10px rgba(66, 66, 66, .4);;
+}
+.modalBackground {
+    position:absolute;
+    width:100%;
+    overflow: hidden;
+    height:150%;
+    z-index:2;
+    top:60px;;
+}
+.modalWindow #createEvent {
+    color: #454545;
+}
+.closeBox {
+    overflow: auto;
+    
+}
+.closeBox .exitBox {
+    float: right;
+    margin-bottom: 10px;
+    background: url('../images/exit-button.png') no-repeat center center orange;
+    border: 1px solid #FC6C0C;
+    padding: 15px;
+    border-radius: 5px;
+}
+/****  dialog ****/
+.modalWindow .view-wrapped {
+    width: 430px;
+    overflow: hidden;
+    
+}
+.modalWindow #view-content {
+    width: 100%;
+    
+}
+/**** dialog questions ***/
+.questions-window h1{
+    float: left;
+}

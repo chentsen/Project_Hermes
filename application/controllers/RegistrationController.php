@@ -42,7 +42,7 @@ class RegistrationController extends Zend_Controller_Action
 			if($activationCode){
 
 				
-				$this->view->successMessage = '<h1>Registration Successful! Please complete registration by clicking on the link sent to your email.</h1>';
+				$this->view->successMessage = '<h1 class="regsuccess">Registration Successful! Please complete registration by clicking on the link sent to your email.</h1>';
 				$mail = new Zend_Mail();
 
 				$htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_confirm_registration.phtml',

@@ -1,7 +1,14 @@
 <!--  Julian you need to modify this so that the day gets updated when the month gets updated. Right now there is just a placeholder -->
-<form id = "<?=$this->element->getName(); ?>" action = "/event-creation/create-event/" 
+<div id="view-content">
+<div class="view-wrapped">
+<form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
 	method = "<?=$this->element->getMethod() ?>">
-	
+<div class="closeBox" onclick ="Dialog.hideDialog()">
+            <div class="exitBox">
+              
+            </div>
+         </div> 
+
 <ul class="centerform">
     <li class=""><div class="float_left createEvent_text">I want to</div><?= $this->element->createEvent_shortDescription ?></li>
         
@@ -16,13 +23,7 @@
                 <?= $this->element->createEvent_submit; ?>
             </div>
         </div>
-         <div class="button" onclick ="Dialog.hideDialog()">
-            <div class="inner_button">
-                Cancel
-            </div>
-         </div>    
+            
 
 </form>
-<script>
-
-</script>
+</div></div>

@@ -1,15 +1,12 @@
 <form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
 	method = "<?=$this->element->getMethod() ?>" enctype="multipart/form-data">
 
-<ul class="centerform">
+
     <h1>Upload Picture</h1>
 	<li class="pic"><?= $this->element->image; ?></li>
-</ul>
-        <div class="button">
-            <div class="inner_button">
-            <?= $this->element->profilePic_submit; ?>
-            </div>
-        </div>
 
+       
+            <?= $this->element->profilePic_submit; ?>
+           
 </form>
 

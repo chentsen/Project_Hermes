@@ -1,13 +1,38 @@
-<h1><?= $this->firstName ?>'s Profile</h1>
-<div class = "description">
-A little bit about me:
-<?= $this->description ?>
-</div>
-<div class = "friendStatus">
-<br />
-<? if($this->isFriend){?>
-		You are friends with <?= $this->firstName ?>.
-<? }else{?>
-		You are not friends with <?= $this->firstName ?>. <a href ="#">Add as a friend</a>
-<? } ?>
-</div>
+<div id="view-content">
+        <div class="view-wrapped">
+            <div class="profile_header">
+                <h1 class="big_name"><?= $this->name; ?>.</h1>
+                <? if ($this->isFriend){?>
+                             <div class = "friendStatus">
+                                <a href ="/friend/friendRequest/requestee/<?= $this->email; ?>">
+                                    Add
+                                </a>
+                            </div>
+                  <? }?>
+            </div>
+            <div class ="user_details">
+                <h2>Gender, City, 25 Years Old</h2>
+            </div>
+            <div class="profile_leftCol">
+            <div class="profile_image">
+                <img src="" />
+            </div>
+                <div class="profile_eventList">
+                    
+            </div>
+            </div>
+            <div class="profile_rightCol">
+                <div class="profileDesc">
+                    Lorem Ipsum Blah Blah blah Lorem Ipsum Blah Blah blah Lorem Ipsum Blah Blah blahLorem Ipsum Blah Blah blahLorem Ipsum Blah Blah blah
+                    <?= $this->description ?>
+            </div>
+                <div class="profile_tags">
+                    <h2>Tags</h2>
+                </div>
+                
+            </div>
+            
+            
+            
+            </div>
+        </div>

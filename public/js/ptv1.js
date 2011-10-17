@@ -82,7 +82,7 @@ $(document).ready(function(){
       
     }
     ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body', '.upcoming_events .block-header');
-     
+    ToggleIt('.friends_block .block-header', '.friends_block .block-body', '.friends_block .block-header'); 
   /*
    
    
@@ -121,7 +121,9 @@ $(document).ready(function(){
       }
         BdOrange('#login #email', '#login #password');
         BdOrange('#login #password', '#login #password');
-        BdOrange('#registration #email', '#registration #firstName');
+        
+        BdOrange('#registration #email', '#registration #betakey');
+        BdOrange('#registration #betakey', '#registration #firstName')
         BdOrange('#registration #firstName', '#registration #lastName');
         BdOrange('#registration #lastName', '#registration #city');
         BdOrange('#registration #city', '');
