@@ -7,14 +7,25 @@ class ImgController extends Hermes_Controller_SessionController{
 		 $this->_helper->layout->disableLayout();
 		$this->_helper->viewRenderer->setNoRender();
 		//echo "hello!";
-		$type = 'Content-type: '. $this->curUser->getProfilePic()->getType().';';
-		//echo $type;
-		//header($type);
-		$this->_response->setHeader('Content-Type', $this->curUser->getProfilePic()->getType(), true);
-		$this->_response->setHeader('Content-Length', $this->curUser->getProfilePic()->getPic()->getSize(), true);
-		$this->_response->setBody($this->curUser->getProfilePic()->getPic()->getBytes());
-		$this->_response->sendResponse();
-		die();
+		$uid = $this->_request->getParam('uid');
+		if($uid){
+			$dm = Zend_Registry::get('Wildkat\DoctrineContainer')->getDocumentManager('default');
+			$user = $dm->getRepository('Documents\User')->findOneBy(array('email'=>$uid));
+			//invalid user..do nothing
+			if(!$user){
+				die();
+			}else{
+				$picModel = new Application_Model_ImageModel($user);
+				if($response = $picModel->getProfilePicture($user,$this->_response)){
+					$this->_response = $response;
+					$this->_response->sendResponse();
+				}
+				else{
+					$this->_redirect('/images/placeholder.png');
+				}	
+			}
+		}
+		
 		//echo $this->curUser->getProfilePic()->getPic()->getSize();
 		//echo ;
 	}

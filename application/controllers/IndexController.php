@@ -63,6 +63,7 @@ class IndexController extends Zend_Controller_Action
         {
                  $auth = Zend_Auth::getInstance();
                  $auth->clearIdentity();
+                 Zend_Session::forgetMe();
                  $this->_redirect('/index');
                  
         }

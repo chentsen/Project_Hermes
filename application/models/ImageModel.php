@@ -16,12 +16,19 @@ class Application_Model_ImageModel extends Application_Model_BaseModel{
 	public function deleteProfilePicture(){
 		$this->user->setProfilePic(null);
 	}
-	public function getProfilePicture(){
-		if($this->user->getProfilePic == null){
-			//return some generic photo
-		}else{
-			return $this->user->getProfilePic();
-		}
+	public function getProfilePicture($user,$response){
+			if($this->user->getProfilePic() == null){
+				return null;
+			}else{
+				$type = 'Content-type: '. $user->getProfilePic()->getType().';';
+				//echo $type;
+				//header($type);
+				$response->setHeader('Content-Type', $user->getProfilePic()->getType(), true);
+				$response->setHeader('Content-Length', $user->getProfilePic()->getPic()->getSize(), true);
+				$response->setBody($user->getProfilePic()->getPic()->getBytes());
+				$response->sendResponse();
+				die();
+			}
 	}
 	
 

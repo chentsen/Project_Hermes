@@ -45,3 +45,9 @@
         <div class="form_submit"><?= $this->element->hidden_formName; ?> </div>
         
 </form>
+<script type = 'text/javascript'>
+		$('#profileSearch #search').click(function(event){
+			if($('#profileSearch #profileSearch_field').val().length == 0)
+				event.preventDefault();
+		 });
+</script>

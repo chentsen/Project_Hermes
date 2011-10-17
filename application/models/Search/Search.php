@@ -68,7 +68,7 @@ class Application_Model_Search_Search{
 					echo 'LESS THAN 1 TAG';
 					if($interest->hasTag($userTags[0]->getTagName()))
 					//echo $userTags->getTagName();	
-					$result->match[]=$userTags;	
+					$result->match[]=$userTag[0];	
 				}
 			}
 			$this->sortResults($results);
@@ -93,7 +93,7 @@ class Application_Model_Search_Search{
 				}else if(count($userTags) == 1){
 					if($interest->hasTag($userTags[0]->getTagName()))
 					//echo $userTags->getTagName();	
-						$result->match[]=$userTags;	
+						$result->match[]=$userTags[0];	
 				}
 			}
 			//var_dump($results);
