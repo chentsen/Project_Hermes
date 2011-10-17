@@ -11,7 +11,7 @@ class Application_Form_ProfilePic extends Zend_Form{
 		$image = new Zend_Form_Element_File('image');
 		$image->removeDecorator('label')
 		      ->setRequired(true)
-		      ->setMaxFileSize(10240000); // limits the filesize on the client side
+		      ->setMaxFileSize(2097152); // limits the filesize on the client side
 		      //->setDescription('Click Browse and click on the image file you would like to upload');
 		$image->addValidator('Count', false, 1);                // ensure only 1 file
 		$image->addValidator('Size', false, 2097152);            // limit to 10 meg
