@@ -3,11 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1">
         <file>
             <url>application/views/scripts/event-creation/index.phtml</url>
-            <line>1</line>
-        </file>
-        <file>
-            <url>application/controllers/RegistrationController.php</url>
-            <line>51</line>
+            <line>2</line>
         </file>
         <file>
             <url>application/controllers/AccountController.php</url>
@@ -16,6 +12,10 @@
         <file>
             <url>public/js/ptv1.js</url>
             <line>0</line>
+        </file>
+        <file>
+            <url>application/controllers/RegistrationController.php</url>
+            <line>53</line>
         </file>
     </editor-bookmarks>
 </project-private>

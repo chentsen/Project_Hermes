@@ -255,13 +255,20 @@ div { display: block; }
     margin-bottom: 30px;
     overflow: auto;
 }
+.out-logo a {
+    
+     width: inherit;
+    height: inherit;
+    display: block;
+    background: url('../images/plumetype-flat.png') no-repeat;
+}
 .out-logo .thelogo {
     float: left;
-    background: url('../images/plumetype-flat.png') no-repeat;
     width: 321px;
     height: 100px;
-    text-indent: -9999px;
     margin-top: 8px;
+    text-indent: -9999px;
+    
     
 }
 
@@ -576,7 +583,7 @@ input[type=text]:first,input[type=password]:first {
     width: 100px;
 }
 #footer_menu {
-     overflow: auto;
+   
 }
 #footer_menu .page {
     border-top: 1px solid #e5e5e5;
@@ -622,7 +629,7 @@ input[type=text]:first,input[type=password]:first {
 
 /** content area **/
 #content_area {
-        overflow: auto;
+       
 	margin-top: 80px;
         
 	/** test **/
@@ -915,7 +922,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 {
     /*background: url("../images/button-hover.png") repeat-x center;*/
     text-shadow: 0px 1px #454545;
-    background: #f58120;
+    background: #f9780d;
 }
 .inner_button { width:372px; margin: 0 auto;  }
 .inner_button .register_button {
@@ -949,8 +956,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border-bottom: none;
 }
 #registration #betakey {
+    background: url("../images/beta-key-form.png") no-repeat 10px 15px #f8f8f8;
     border-bottom: none;
-    background: #f8f8f8;
+    
 }
 #registration .last_name input{
    background: url("../images/last-name-form.png") no-repeat 10px center #f8f8f8;
