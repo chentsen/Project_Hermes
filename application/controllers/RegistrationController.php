@@ -1,5 +1,4 @@
 <?php
-
 class RegistrationController extends Zend_Controller_Action
 {
 

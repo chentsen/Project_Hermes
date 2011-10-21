@@ -6,7 +6,7 @@ class Application_Form_CreateEvent extends Zend_Form{
 	public function __construct($options = null){
 		parent::__construct($options);
 		$this->setName('createEvent');
-		$this->setAction('eventCreation/create-event');
+		$this->setAction('event-creation/create-event');
 		$this->setMethod('POST');
 		
 		$shortDescription = new Zend_Form_Element_Text('createEvent_shortDescription');

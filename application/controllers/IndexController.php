@@ -6,7 +6,7 @@ class IndexController extends Zend_Controller_Action
     public function init()
     {
 		if($this->_helper->FlashMessenger->hasMessages()){
-    		$this->view->flashMessages = $this->_helper->FlashMessenger->getMessages();
+			$this->view->flashMessages = $this->_helper->FlashMessenger->getMessages();
 		}
     	$bootstrap = $this->getInvokeArg('bootstrap');
     	$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
@@ -63,6 +63,7 @@ class IndexController extends Zend_Controller_Action
         {
                  $auth = Zend_Auth::getInstance();
                  $auth->clearIdentity();
+                 Zend_Session::forgetMe();
                  $this->_redirect('/index');
                  
         }

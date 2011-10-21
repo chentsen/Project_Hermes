@@ -58,17 +58,17 @@ class Application_Model_Search_Search{
 			foreach($results as &$result){
 				$interest = new Application_Model_InterestModel($result->result->getCreator()->getInterest());	
 				if(count($userTags)>1){
-					echo 'MORE THAN 1 TAG';
+					//echo 'MORE THAN 1 TAG';
 					foreach($userTags as $userTag){
 						if($interest->hasTag($userTag->getTagName())){
 							$result->match[]=$userTag;	
 						}	
 					}
 				}else if(count($userTags) == 1){
-					echo 'LESS THAN 1 TAG';
+					//echo 'LESS THAN 1 TAG';
 					if($interest->hasTag($userTags[0]->getTagName()))
 					//echo $userTags->getTagName();	
-					$result->match[]=$userTags;	
+					$result->match[]=$userTags[0];	
 				}
 			}
 			$this->sortResults($results);
@@ -93,7 +93,7 @@ class Application_Model_Search_Search{
 				}else if(count($userTags) == 1){
 					if($interest->hasTag($userTags[0]->getTagName()))
 					//echo $userTags->getTagName();	
-						$result->match[]=$userTags;	
+						$result->match[]=$userTags[0];	
 				}
 			}
 			//var_dump($results);
