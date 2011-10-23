@@ -2,66 +2,24 @@
 * {
     margin: 0;
     padding: 0;
+    border:0;
+    font-weight:inherit;
+    font-style:inherit;
+    font-family:inherit;
+    vertical-align:baseline;
+    line-height: 100%;
 }
-/*html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, .search_box p
-{
-        
-	margin:0;
-	padding:0;
-	border:0;
-	font-weight:inherit;
-	font-style:inherit;
-	font-size:100%;
-	font-family:inherit;
-	vertical-align:baseline;
-}*/
-
-/*.buttonhover:hover { background: url("../images/buy-now-2.png") top center no-repeat;}
-.buttonhover {margin-bottom:0px;padding-top:16px; padding-bottom:5px; height:111px; margin:-16px;}
-body 
-{
-	line-height:1.5;
-}
-blockquote:before, blockquote:after, q:before, q:after 
-{
-	content:"";
-}
-blockquote, q 
-{
-	quotes:"" "";
-}
-a img 
-{
-	border:none;
-}
-
-
-h1 {
-	
-	font-size: 24px;
-}
-h2 {
-	
-	font-size:123.1%; 
-}
-h3 {
-	
-	font-size:108%;  
-} */
-
-
 h1,h2,h3,h4,h5,h6,strong {
 	/*bringing boldness back to headers and the strong element*/
-	font-weight:bold; 
+	font-weight:600; 
 }
 
-ul li {
-    list-style: none;
-}
 a {
     text-decoration: none;
-    color: white;
-    
+    color: white;    
+}
+li {
+    list-style: none;
 }
 .last-child {
     border-right: none !important;

@@ -37,25 +37,15 @@
 		<div class = tag_dropdown onclick = "Tags.toggleDropDown();">
 			Add a tag
 		</div>
-		<div class = tag_input_wrapper style="display:none;">
+		    <div class = tag_input_wrapper style="display:none;">
 			<input type="text" class ="tag_input"></input>
-		</div>
-		<?$this->DisplayPendingRequests($this->identity); ?>
-		 <!--   <img src="/img/profile-pic/uid/<?=$this->identity ?>" height=100  width=100/>  -->
-  </div>
-             
-	<!--<div class="left_col">
-		<h2>Feed</h2>
-		<div id = "main_feed">
-		         </div>      
-		<a href = "#" onclick = "loadFeeds('<?= $this->identity ?>')">Refresh Feed</a>
-	</div>
-        <div class="right_col">
-	
 		
-		<h2>Upcoming Events</h2>
-
-        </div>-->
+		
+  </div>
+		</div>
+    
+             <?$this->DisplayPendingRequests($this->identity); ?>
+	
     </div>
 </div>
 

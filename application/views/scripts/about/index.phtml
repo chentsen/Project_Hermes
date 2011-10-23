@@ -1,7 +1,7 @@
 <?php $auth = Zend_Auth::getInstance();
         if(!$auth->hasIdentity()){ ?>
 
-<div class="out-logo"><h1 class="thelogo">PlumeType</h1></div>
+<div class="out-logo"><h1 class="thelogo"><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
 
 <?php } else { ?>
 <h1 class="cms-title">About Us</h1>
