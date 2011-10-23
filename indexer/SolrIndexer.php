@@ -53,8 +53,8 @@ define("EVENT_COLLECTION",$tokenized[1]);
 	}
 	
 		
-		
-	function runIndex(){
+	/** Updates and refills index with everything that is currently in the oplog	*/
+	function runBackupIndex(){
 		$this->cursor = $this->collection->find()->tailable(true);
 		while(true){				
 				if($this->cursor->hasNext()){
@@ -79,7 +79,43 @@ define("EVENT_COLLECTION",$tokenized[1]);
 				}
 			}
 	}
-	
+	/**
+	 *
+	 **/
+	function runIndex(){
+	      $this->cursor = $this->collection->find()->tailable(true);
+	      //$lastValue = $this->collection->find()->
+	      $newLoop = true;
+	      //$this->cursor = $this->collection->find(array('increasing'=>array('$gte'=>$lastValue)))->tailable(true);	
+		while(true){				
+				
+				if($this->cursor->hasNext()){
+				   if($newLoop)
+					  $this->cursor->getNext();
+				   else{
+	      				  while($this->cursor->hasNext()){
+						   $document = $this->cursor->getNext();					
+						   //print_r($document);
+						   //echo 'found updated object..';
+						   $updatedDocument = $this->processObject($document);
+						   //print_r($updatedDocument);
+						   if($updatedDocument){
+							   print_r($this->client->addDocument($updatedDocument));
+							   echo 'Updated something!';
+						   }
+					  }
+				     $this->client->commit();
+					  //delay this for several cycles once it's necessary				
+										  //maybe want to abstract this into an object later.
+				   }	  //also want to redo this code so that it upserts the data into the given object id instead of finding the collection each time
+			        }
+				else{
+					$newLoop = false;
+					echo 'Sleeping';
+					sleep(10);
+				}
+			}
+	}
 	private function processObject($document){
 		//echo 'document namespace is '.$document['ns'];
 		//echo 'Users is '.USERS; 
@@ -92,6 +128,7 @@ define("EVENT_COLLECTION",$tokenized[1]);
 				return null; 
 		}
 	}
+	//need to refactor later to not find one all the time-- should pull all updated objects
 	private function processUser($document){
 		//echo 'ENTERING USERS';
 		$db = $this->mongo->selectDB(USERS_DB);
@@ -138,9 +175,8 @@ define("EVENT_COLLECTION",$tokenized[1]);
 			$doc->addField('event_date', $dateString);
 			
 			return $doc;
-		}else{
-			echo 'FAILED WTF';
 		}
+		
 		
 	}
  }
