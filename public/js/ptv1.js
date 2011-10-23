@@ -168,6 +168,7 @@ $(document).ready(function(){
           BgRemove('#firstName');
           BgRemove('#lastName');
           BgRemove('#city');
+          BgRemove('#betakey');
           
       
       /** disable highlights ***/
