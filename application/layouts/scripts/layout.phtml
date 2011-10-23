@@ -11,7 +11,7 @@
 <head>
     <?php echo $this->render('head.phtml') ?>
 </head>
-<body>
+<body class="<?= $this->LayoutClass() ?>">
 
 <div class="custom<?php $auth = Zend_Auth::getInstance();
         if(!$auth->hasIdentity()){ echo ' outside'; }?>">
@@ -46,15 +46,7 @@
                             </div>
                            
                           </div>
-                        
-                      <!--  <div class="block-item quick_profile">
-                            <div class="block-header">
-                            <h3>Edit Bio</h3>
-                            </div>
-                            <div class="block-body" style="overflow: hidden;">
-                            <?= $this->userDescription ?>
-                            </div>-->
-                            
+                     
 
                         </div>
                     </div>

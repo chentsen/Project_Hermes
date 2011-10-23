@@ -109,40 +109,19 @@ $(document).ready(function(){
           $(nClass).focus(function(){
           $(this).addClass('change_border_color')
           $(this).addClass('removebg');
-          $(rClass).addClass('remove_top_border');
+          
           });
           $(nClass).blur(function(){
               if ($.trim(this.value) == '') { 
                   $(this).removeClass('removebg');
              }
                $(this).removeClass('change_border_color');
-               $(rClass).removeClass('remove_top_border');
+               
           });
       }
-        BdOrange('#login #email', '#login #password');
-        BdOrange('#login #password', '#login #password');
+        BdOrange('input[type=text], input[type=password]', 'input[type=text], input[type=password]');
+        BdOrange('textarea', 'textarea');
         
-        BdOrange('#registration #email', '#registration #betakey');
-        BdOrange('#registration #betakey', '#registration #firstName')
-        BdOrange('#registration #firstName', '#registration #lastName');
-        BdOrange('#registration #lastName', '#registration #city');
-        BdOrange('#registration #city', '');
-        BdOrange('#registration #password', '#registration #password2');
-        BdOrange('#registration #password2', '');
-        BdOrange('#profileSearch_field', '');
-       
-        BdOrange('#createEvent_shortDescription', '#createEvent_date');
-        BdOrange('#createEvent_date', '#createEvent_location');
-        BdOrange('#createEvent_location', '');
-        BdOrange('#createEvent_longDescription', '');
-        BdOrange('#editAccount #firstName','#editAccount #lastName');
-        BdOrange('#editAccount #lastName','#editAccount #city');
-        BdOrange('#editAccount #city','');
-        /*contact page*/
-        BdOrange('#contact #email','#contact #name');
-        BdOrange('#contact #name','#contact #subject');
-        BdOrange('#contact #subject','#contact #text');
-        BdOrange('#contact #text','');
           
           
             /****** events page *******/
@@ -190,7 +169,12 @@ $(document).ready(function(){
     $('.noSelect').disableTextSelect();
     //*** end disable function
     
-    
+
 });
 
-         
+var Display = {
+        hideDisplay:function(parent){
+                $(parent).hide();
+
+        }
+    };      

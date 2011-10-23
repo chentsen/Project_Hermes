@@ -2,9 +2,12 @@
     <div class="view-wrapped">
 
 <div class="content-text">
+    <div class="upload-image float_left">
+<h1>Upload Picture</h1>
+<img src="/img/profile-pic/uid/<?=$this->identity ?>" height=150  width=150/>
 
-<?= $this->profilePic_form; ?>
-
+        <?= $this->profilePic_form; ?>
+    </div>
 
 <?= $this->form; ?>
 
