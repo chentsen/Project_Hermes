@@ -55,62 +55,29 @@ define("EVENT_COLLECTION",$tokenized[1]);
 		
 	/** Updates and refills index with everything that is currently in the oplog	*/
 	function runBackupIndex(){
-		$this->cursor = $this->collection->find()->tailable(true);
-		while(true){				
-				if($this->cursor->hasNext()){
-					$document = $this->cursor->getNext();					
-					//print_r($document);
-					//echo 'found updated object..';
-					$updatedDocument = $this->processObject($document);
-					//print_r($updatedDocument);
-					if($updatedDocument){
-						print_r($this->client->addDocument($updatedDocument));
-						
-						$this->client->commit();
-						echo 'Updated something!';
-					}
-					//delay this for several cycles once it's necessary				
-										//maybe want to abstract this into an object later.
-					//also want to redo this code so that it upserts the data into the given object id instead of finding the collection each time
-				}
-				else{
-					echo 'Sleeping';
-					sleep(10);
-				}
-			}
-	}
-	/**
-	 *
-	 **/
-	function runIndex(){
-	      $this->cursor = $this->collection->find()->tailable(true);
+              $this->cursor = $this->collection->find()->tailable(true);
 	      //$lastValue = $this->collection->find()->
-	      $newLoop = true;
 	      //$this->cursor = $this->collection->find(array('increasing'=>array('$gte'=>$lastValue)))->tailable(true);	
+		$count = 0;
 		while(true){				
-				
 				if($this->cursor->hasNext()){
-				   if($newLoop)
-					  $this->cursor->getNext();
-				   else{
 	      				  while($this->cursor->hasNext()){
 						   $document = $this->cursor->getNext();					
-						   //print_r($document);
-						   //echo 'found updated object..';
 						   $updatedDocument = $this->processObject($document);
 						   //print_r($updatedDocument);
 						   if($updatedDocument){
-							  // print_r($this->client->addDocument($updatedDocument));
-							   //echo 'Updated something!';
+							   //print_r($this->client->addDocument($updatedDocument));
+							//   echo 'Updated something!';
+							   $count++;
 						   }
 					  }
-				     $this->client->commit();
+                                          $this->client->commit();
+					  echo $count.' elements restored!';
 					  //delay this for several cycles once it's necessary				
 										  //maybe want to abstract this into an object later.
 				   }	  //also want to redo this code so that it upserts the data into the given object id instead of finding the collection each time
-			        }
+			        
 				else{
-					$newLoop = false;
 					echo 'Sleeping';
 					sleep(10);
 				}
@@ -182,6 +149,6 @@ define("EVENT_COLLECTION",$tokenized[1]);
  }
 
  $indexer = new SolrIndexer();
- $indexer->runIndex();
+ $indexer->runBackupIndex();
 	
 ?>
