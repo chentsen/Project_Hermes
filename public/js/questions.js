@@ -4,7 +4,7 @@
 var Questions = {
 		_newFlowState:null,
 		loadQuestions: function(state){
-			alert(state);
+//			/alert(state);
 			Questions._newFlowState = state;
 			$(".ajaxContent").hide('slide',{direction:'left'},500);
 			$(".ajaxContent").empty();
