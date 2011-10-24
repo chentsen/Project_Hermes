@@ -102,14 +102,16 @@ class Application_Model_Search_Search{
 			return $results;
 		}else return;
 	}
+	
 	private function sortResults(&$results){
 		
-		usort($results, 'cmpResults');
+		usort($results, 'Search_cmpResults');
 	}
-	function cmpResults( $a, $b )
+	
+	
+}
+function Search_cmpResults( $a, $b )
 		{ 
 		  if(  $a->getCount() ==  $b->getCount() ){ return 0 ; } 
 		  return ($a->getCount() > $b->getCount()) ? -1 : 1;
 		} 
-	
-}

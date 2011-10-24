@@ -13,6 +13,17 @@ div { display: block; }
 select {
     margin: 12px;
 }
+#editAccount textarea {
+        margin: 10px 0;
+        width: 250px;
+	font-size: 24px; 
+        background: #ffffff;
+        outline: 0;
+        padding: 10px;    
+        border: 1px solid orange;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+}
 textarea {
         margin: 10px 0;
         width: 350px;

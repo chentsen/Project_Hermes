@@ -65,10 +65,11 @@ class Application_Form_EditAccount extends Zend_Form
 				->removeDecorator('htmlTag')
 				->removeDecorator('DtDdWrapper')
                                 ->setLabel('Submit');
-		
+		$description= new Zend_Form_Element_Textarea('description',array("rows"=>3));
+		$description->setRequired(true)->addValidator('StringLength',array('max'=>200,'allowWhiteSpace'=>true))->setValue($options['description']);
 		$this->setDecorators(array(array('ViewScript',array('viewScript'=>'_form_accountEdit.phtml'))));
 		
-		$this->addElements(array($submit, $firstName, $city, $lastName));
+		$this->addElements(array($submit, $firstName, $city, $lastName,$description));
 		$this->setElementDecorators(array('ViewHelper'),null,false);
                 
                 
