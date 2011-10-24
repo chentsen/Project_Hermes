@@ -1,19 +1,35 @@
-<br /><br />
 <div id="view-content">
-<b>Event Creator Page</b>	 
-<?= $this->event->getCreator->getFirstName." Wants to ".$this->event->getShortDescription() ?>
-<br />
-<p>
-	<div class='longDescription'>
-		<?= $this->event->getLongDescription() ?>
-</div>	
-<p>
+    <div class="view-wrapped">	 
+        <div class="event_header">
+        <h1 class="event_title"><?= "I want to ".$this->event->getShortDescription() ?></h1>
+        <h2 class="event_self">Your Event</h2>
+        </div>
+        <div class="event_main">
+            <div class="event_img">
+                <img height="200" width="200 "src="/images/placeholder.png" />
+            </div>
+            <div class="event_right">
+            <div class='event_date'>
+                <h2>October 25, 2011</h2>
+            </div>	
+             <div class='event_place'>
+                <h2>Pizza Parlor</h2>
+                
+            </div>
+                <div class="event_location">
+                    <h2>123 Pizza Way<br/>El Cerrito, CA 94530</h2>
+                </div>
+            </div>
+        </div>
+	
+<!--<?= $this->event->getLongDescription() ?>-->
 	<div class='interested_list'>
 		<?= $this->DisplayInterestedList($this->event) ?>
 	</div>
- <div class = 'wall'>
- 	Wall <br />
+ <div class ="event_wall">
+     <h2 class="wall_title">Wall</h2> 
 		<?= $this->DisplayEventWall($this->event,$this->identity) ?>
  </div>	
 	
+</div>
 </div>

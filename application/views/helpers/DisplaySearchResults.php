@@ -37,10 +37,29 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 	}
 	private function printEventResult(Documents\Search\EventResult $event,$identity){
 		$returnString = ' ';
-		echo "<p><div class = 'event_result'>";
+		echo "<div class = 'event_result'>";
 		echo '<div class = "matchingTags">';
-			echo "You and {$event->result->getCreator()->getFirstName()} (The event creator) have {$event->getCount()} tags in common! <br />";
-			echo "You both like:";
+                echo '<div class="common_value"><div class="common_number">';
+			echo "{$event->getCount()} ";
+                         echo '</div><div class="in_common"><h3>Tags in Common</h3></div></div>';
+                         echo "<div class='user_info'><h2>{$event->result->getCreator()->getFirstName()} wants to ".$event->result->getShortDescription()."</h2>";
+                        
+                        
+			
+                         //echo $identity;
+                        if(!($identity==$event->result->getCreator()->getEmail())){
+                                $eventModel = new Application_Model_EventModel($event->result);
+                                if(!$eventModel->isMember($identity,$event->result->getMembers())&&
+                                        (!$eventModel->isMember($identity,$event->result->getWaitingList()))){
+                                        
+                                        echo "<a class='join_event' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a>";
+                                    
+                                }
+                        }	
+
+                          echo "<a class='view_event' href = '/event/index/eid/{$event->result->getEid()}'>view event details</a></div>";
+                         
+                         echo "<div class='user_like'>You both like</div>";
 			if($event->match){
 				if(count($event->match) > 1){
 					foreach($event->match as $match){
@@ -57,22 +76,13 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 		echo '</div>';
 		
 		//are you creator or member? omit interested in
-		echo "{$event->result->getCreator()->getFirstName()} wants to : ".$event->result->getShortDescription();
-		echo "<br /> <a href = '/event/index/eid/{$event->result->getEid()}'> Go to Event Page </a>";
-		//echo $identity;
-		if(!($identity==$event->result->getCreator()->getEmail())){
-			$eventModel = new Application_Model_EventModel($event->result);
-			if(!$eventModel->isMember($identity,$event->result->getMembers())&&
-	  			(!$eventModel->isMember($identity,$event->result->getWaitingList()))){
-				echo "<div class = 'event_interested'>";
-				echo "<a href = '/event/request/eid/{$event->result->getEid()}'>I'm down'</a>";
-				echo "</div>";
-			}
-		}	
+		
+		
+		
 		
 		//view event page
 		
-		echo "</p></div>";
+		echo "</div>";
 		//return $returnString;
 	}
 	private function printUserResult(Documents\Search\UserResult $user,$identity){

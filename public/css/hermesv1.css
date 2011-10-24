@@ -311,7 +311,7 @@ input[type=text]:first,input[type=password]:first {
     
     float: left;
     }
-.user_result {overflow: auto; padding: 10px;}
+.user_result, .event_result {overflow: auto; padding: 10px;}
 .user_like {
     width: 30px;
     font-size: 12px;
@@ -319,11 +319,14 @@ input[type=text]:first,input[type=password]:first {
     padding: 10px 10px 0 10px;
     margin-left: 10px;
 }
-.user_addFriend a, .user_viewProfile a{
+.user_addFriend a, .user_viewProfile a
+{
     font-size: 16px;
     color: orange;
+    float: right;
     
 }
+.view_event, .join_event { margin-left: 10px; font-size: 16px; color: orange; float: right;}
 .common_number {
     font-size: 35px;
     background: #bbb;
@@ -551,6 +554,11 @@ input[type=text]:first,input[type=password]:first {
     
     background: rgba(66, 66, 66, .2);
     border-radius: 5px;
+}
+.right-block a {
+    color: #454545;
+    width: 100%;
+    display: block;
 }
 .block-item h3 {
     text-transform: uppercase;
@@ -874,7 +882,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit_tag, 
 #submit,
 #contact_submit,
-#profilePic_submit
+#profilePic_submit,
+#wall_addPost
 { float: right;
   height: 50px;
   border: 1px solid #fc6c0c; 
@@ -895,6 +904,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit:hover,
 #contact_submit:hover,
 #profilePic_submit:hover
+#wall_addPost:hover
 {
     /*background: url("../images/button-hover.png") repeat-x center;*/
     text-shadow: 0px 1px #454545;
@@ -1025,7 +1035,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .tag_input_wrapper {
     border: 1px solid orange;
     position: absolute;
-    right: 0px;
+    right: 70px;
 }
 ul.as-selections {
    
@@ -1045,7 +1055,7 @@ ul.as-selections {
 .tag_dropdown {
     position: absolute;
     right: 5px;
-    bottom: 5px;
+    bottom: -15px;
     font-size: 14px;
     font-weight: bold;
     
@@ -1177,4 +1187,137 @@ ul.as-selections {
     background: orange;
     border: 1px solid #FC6C0C;
     
+}
+/***** event page ******/
+.event .event_header {
+    overflow: auto;
+    margin: 10px 0;
+}
+.event .event_header .event_title {
+    float: left;
+    font-size: 36px;
+    
+}
+.event .event_header .event_self {
+    color: orange;
+    float: right;
+    height: 36px;
+    line-height: 36px;
+}
+.event .event_main {
+    margin-top: 15px;
+    overflow: auto;
+}
+.event .event_main .event_img {
+    float: left;
+    padding: 10px;
+    border-radius: 5px;
+     background: #ccc;
+}
+.event .event_main .event_img img{
+    
+   
+}
+.event .event_main .event_description {
+    float: right;
+}
+.event .event_main .event_right {
+    width: 405px;
+    float: right;
+}
+.event .event_main h2 {
+    font-size: 28px;
+    border-bottom: 1px solid #ccc;
+    padding: 15px 0;
+    
+}
+.event .event_main .event_date {
+  
+}
+.event .event_main .event_place h2{
+    
+}
+.event .interested_list {
+    padding: 15px 0;
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+}
+.event .interested_list .waitingList img,
+.event .event_wall .wall_image img
+{
+    padding: 10px;
+    border-radius: 5px;
+    background: #ccc;
+}
+.event .interested_list .waitingList a {
+    color: orange;
+}
+.event .interested_list .waitingList{
+    float: left;
+    text-align: center;
+}
+.event .interested_list .waitingList .event_allow {
+    color: orange;
+}
+.event .interested_list .waitingList .waitingImg {
+    position: relative;
+}
+.event .interested_list .waitingList .waitingImg span,
+.event .event_wall .wall_image span
+{
+    position: absolute;
+    right: 0px;
+    bottom: 3px;
+    color: white;
+    padding:5px;
+    background: green;
+    border-radius: 5px;
+}
+.event .event_wall .wall_title {
+    font-size: 28px;
+    padding: 15px 0;
+}
+.event .event_wall .wall_image {
+    position: relative;
+    float: left;
+}
+.event .event_wall .wall_name {
+    font-size: 18px;
+    float: left;
+    margin: 25px;
+    
+}
+.event .event_wall .posts {
+    overflow: hidden;
+}
+.event .event_wall .wallpost {
+    float: left;
+    position: relative;
+    width: 640px;
+}
+.event .event_wall .wall_text {
+    float: left;
+    border-radius: 5px;
+    background: #bbb;
+    margin: 15px 0 0 0;
+    font-size: 16px;
+    padding: 10px;
+    width: 420px;
+    
+}
+.event .event_wall .wallpost a{
+    margin-left: 7px;
+    color: transparent;
+    font-size: 14px;
+}
+.event .event_wall .wallpost a:hover {
+    color: orange;
+    text-decoration: underline;
+}
+.event .event_wall #wall_comment {
+    float: left;
+    margin-top: 15px;
+}
+.event .event_wall #Wall {
+    margin: 0;
 }

@@ -1,10 +1,20 @@
-<br /><br />
 <div id="view-content">
-	<b>Event Public Page</b>
-	<?= $this->event->getCreator->getFirstName." Wants to ".$this->event->getShortDescription() ?>
-<br />
-<p>
-	<div class='longDescription'>
-		<?= $this->event->getLongDescription() ?>
-</div>	
+    <div class="view-wrapped">	 
+        <div class="event_header">
+        <h1 class="event_title"><?= $this->event->getCreator->getFirstName." Wants to ".$this->event->getShortDescription() ?></h1>
+        <h2 class="event_self">Event Public Page</h2>
+        </div>
+        <div class="event_main">
+            <div class="event_img">
+                <img height="200" width="200 "src="/images/placeholder.png" />
+            </div>
+            <div class="event_right">
+            <div class='event_date'>
+                <h2>October 25, 2011</h2>
+            </div>	
+           
+            </div>
+        </div>
+	
+</div>
 </div>

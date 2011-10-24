@@ -127,7 +127,8 @@ class Application_Model_EventModel{
   					'eid'=>$this->event->getEid(),
   					'shortDescription'=>$this->event->getShortDescription(),
   					'date'=>$this->event->getDate(),
-  					'creator'=>$this->event->getCreator()
+  					'creator'=>$this->event->getCreator(),
+                                        'event'=>$this->event
   					);
   	$eventFeedObject = $eventFeedModel->createEventFeedObject($inputs);
   	$eventFeedModel->push($eventFeedObject);

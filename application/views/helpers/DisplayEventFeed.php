@@ -1,4 +1,5 @@
 <?php
+
 use Documents\Feed\FeedObject\FeedObject;
 use Documents\Feed\FeedObject\EventFeedObject;
 use Documents\Feed\FeedObject\FriendAcceptFeedObject;
@@ -18,9 +19,11 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 			 	echo "<div class = 'eventFeedObject'>";
 				if(!$feedObject->getHidden()){
 					echo '<p>';
+                                        
 					//print_r($feedObject);
 					$this->constructFeedMessage($feedObject);	
-					echo '</p>';
+					
+                                        echo '</p>';
 				}
 			 	echo "</div>";
 			 }		
@@ -29,9 +32,21 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 	}
 	//subclassed so we can construct our own custom feed message for events..
 	public function getEventFeedMessage(FeedObject $feedObject){
-		
-                echo '@ '.$feedObject->getShortDescription();
+            $eventModel = new Application_Model_EventModel($event->result);
+           
+           /* if ($feedObject->getCreator()->getEmail())
+            {
                 
-		echo '<br />'.$feedObject->getDate()->format('m/d');;
+                echo "<a href = '/event/index/eid/". $feedObject->getEid()."'>";
+                echo 'Event Creator</a>';
+               
+            }*/
+            echo "<a href = '/event/index/eid/". $feedObject->getEid()."'>";
+            if($feedObject->getEvent())
+                
+                    echo $feedObject->getEvent()->getLocation();                
+		echo '<br />On '.$feedObject->getDate()->format('m/d');
+                echo '<br/>@ '.$feedObject->getShortDescription();
+                echo '</a>';
 	}
 }
