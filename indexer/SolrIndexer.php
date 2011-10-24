@@ -1,4 +1,5 @@
 <?php
+//test
 //Define the collections which each comes from, tokenize for Mongo Processing
 define("USERS","doctrine.users");
 $tokenized = preg_split('/[.]/',USERS);
