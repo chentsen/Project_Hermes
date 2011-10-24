@@ -9,8 +9,7 @@ abstract class Application_Model_Feed_FeedModel{
 			    //echo 'hi';
 			    //print_r($a);
 			    $value = $a->getDate()->getTimestamp();
-			    $value2 = $b->getDate()->getTimestamp();
-			    
+			    $value2 = $b->getDate()->getTimestamp();			    
 			    return strcmp($value2, $value);
 			}
 	public function __construct($feed = null){

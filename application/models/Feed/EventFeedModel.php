@@ -18,7 +18,8 @@ class Application_Model_Feed_EventFeedModel extends Application_Model_Feed_FeedM
 		$eid = $inputs['eid'];
 		$date = $inputs['date'];
 		$creator = $inputs['creator'];
-		$eventFeedObject = new Documents\Feed\FeedObject\EventFeedObject( $shortDescription, $eid, $date,$creator);
+		$event = $this->dm->getRepository('Documents\Event')->findOneBy(array('eid'=>$eid));
+		$eventFeedObject = new Documents\Feed\FeedObject\EventFeedObject( $shortDescription, $eid, $date,$creator,$event);
 		return $eventFeedObject;
 	}
 	
