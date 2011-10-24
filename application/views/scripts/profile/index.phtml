@@ -11,7 +11,7 @@
     <div class="view-wrapped">
   <div class="top_col">
 			<center><?=$this->DisplayFlashMessages($this->flashMessages); ?></center>
-			<center><?=$this->DisplayNewUserflow($this->flowStatus); ?></center>
+			<center><?= $this->DisplayNewUserflow($this->flowStatus) ?></center>
 		  <div class="tags_area">
 
 		 	 <div class="tags_base">
@@ -34,6 +34,8 @@
 				?>		  
 		  	</div>
 		  </div>
+               
+               
 		<div class = tag_dropdown onclick = "Tags.toggleDropDown();">
 			Add a tag
 		</div>
@@ -44,7 +46,7 @@
   </div>
 		</div>
     
-             <?$this->DisplayPendingRequests($this->identity); ?>
+             
 	
     </div>
 </div>
