@@ -1,3 +1,8 @@
+<?php
+$interestModel = new Application_Model_InterestModel($this->user->getInterest());
+$tagArray = $interestModel->getTags();
+$gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
+?>
 <div id="view-content">
         <div class="view-wrapped">
             <div class="profile_header">
@@ -11,28 +16,28 @@
                   <? }?>
             </div>
             <div class ="user_details">
-                <h2>Gender, City, 25 Years Old</h2>
+                <h2><?=$gender?> <?=$this->user->getCity()?></h2>
             </div>
             <div class="profile_leftCol">
             <div class="profile_image">
-                <img src="" />
+                <img src="/img/profile-pic/uid/<?=$this->user->getEmail();?>" height="100" width="100" />
             </div>
-                <div class="profile_eventList">
-                    
+            <div class="profile_eventList">
+                <?= $this->DisplayEventFeed($this->user->getEmail()); ?>        
             </div>
             </div>
             <div class="profile_rightCol">
                 <div class="profileDesc">
-                    Lorem Ipsum Blah Blah blah Lorem Ipsum Blah Blah blah Lorem Ipsum Blah Blah blahLorem Ipsum Blah Blah blahLorem Ipsum Blah Blah blah
                     <?= $this->description ?>
             </div>
                 <div class="profile_tags">
                     <h2>Tags</h2>
+     			<?= $this->partial('tags.phtml',array('tagArray'=>$tagArray,'interestModel'=>$interestModel)) ?>
+		</div>
+		  </div>
                 </div>
                 
             </div>
             
             
-            
-            </div>
-        </div>
+     

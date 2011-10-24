@@ -12,35 +12,12 @@
   <div class="top_col">
 			<center><?=$this->DisplayFlashMessages($this->flashMessages); ?></center>
 			<center><?=$this->DisplayNewUserflow($this->flowStatus); ?></center>
-		  <div class="tags_area">
-
-		 	 <div class="tags_base">
-				<? if(count($tagArray) > 0){ 
-						foreach($tagArray as $tag){ 		
-							if(!$interestModel->interest->state[$tag->getTagName()])
-								$toggle = 'tag_disable';
-							else 
-								$toggle = '';
-						?>
-							<div class ="tags <?=$toggle ?>" id="tag_<?=str_replace(' ','_',$tag->getTagName());?>" onclick = 'Tags.toggleTag("tag_<?=str_replace(' ','_',$tag->getTagName());?>")'>
-								<div class="tag_text"><?=$tag->getTagName()?></div>
-								<div class="close_tag" onclick="Tags.removeTag('tag_<?=str_replace(' ','_',$tag->getTagName());?>')"></div>
-							</div>				
-					
-							
-				<? 			
-						}		
-				}				
-				?>		  
-		  	</div>
-		  </div>
+			<?= $this->partial('tags.phtml',array('tagArray'=>$tagArray,'interestModel'=>$interestModel,'isOwn'=>true)) ?>
 		<div class = tag_dropdown onclick = "Tags.toggleDropDown();">
 			Add a tag
 		</div>
 		    <div class = tag_input_wrapper style="display:none;">
 			<input type="text" class ="tag_input"></input>
-		
-		
   </div>
 		</div>
     
