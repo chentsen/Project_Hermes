@@ -66,8 +66,8 @@ define("EVENT_COLLECTION",$tokenized[1]);
 						   $updatedDocument = $this->processObject($document);
 						   //print_r($updatedDocument);
 						   if($updatedDocument){
-							   //print_r($this->client->addDocument($updatedDocument));
-							//   echo 'Updated something!';
+							  // print_r($this->client->addDocument($updatedDocument));
+							//  echo 'Updated something!';
 							   $count++;
 						   }
 					  }

@@ -19,7 +19,7 @@ class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
 		$creatorEmail = $feedObject->getCreator()->getEmail();
 		echo "Your friend <a href='/profile/public/email/{$creatorEmail}'> ".addslashes($feedObject->getCreator()->getFirstName())." ".addslashes($feedObject->getCreator()->getLastName())."</a> wants to";
 		echo '<br />'.$feedObject->getShortDescription();
-		echo '<br /> at '.$feedObject->getDate()->format('Y-m-d H:i:s');;
+		echo '<br /> at '.$feedObject->getDate()->format('Y-m-d H:i:s');
 	}
 	
 	public function getFriendAcceptFeedMessage(FeedObject $feedObject){

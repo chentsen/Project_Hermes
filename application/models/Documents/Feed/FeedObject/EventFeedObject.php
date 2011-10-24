@@ -9,6 +9,9 @@ class EventFeedObject extends FeedObject{
 	/** @ReferenceOne(targetDocument="Documents\User") */
 	private $creator;
 	
+        public function getEid(){
+            return $this->eid;
+        }
 	public function __construct($shortDescription,$eid,$date,$creator){
 		
 		$this->shortDescription = $shortDescription;

@@ -187,8 +187,8 @@ input[type=text]:first,input[type=password]:first {
     font-size: 14px;
     color: white;
     border-radius: 5px;
-    background: orange;
-    border: 1px solid #FC6C0C;
+    background: #24A3DF;
+    border: 1px solid #148ac2;
     
 }
 .profile .questions_flow a {
@@ -256,8 +256,8 @@ input[type=text]:first,input[type=password]:first {
 .friend_pic img{ border-radius: 10px; }
 /*** search page ****/
 .none-singleFound {
-    margin-left: 150px;
-    margin-top: 200px;
+    margin-left: 15%;
+    margin-top: 20%;
 }
 .none-singleFound a {
     color: orange;
@@ -648,7 +648,7 @@ input[type=text]:first,input[type=password]:first {
 }
 .view-wrapped {
     width: 640px;
-    min-height: 600px;
+    min-height: 500px;
     background: #f0f0f0;
      border-radius: 5px;
      height: 100% !important;
@@ -838,10 +838,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .remove_top_border {
     border-top: none !important;
 }
-.profile .change_border_color  {
+.profile .top_col .change_border_color  {
     border: none !important;
 }
-.profile #content_area input[type="text"] {
+.profile #content_area .tag_input {
     margin: 0px;
     padding: 0px;
 }
@@ -954,6 +954,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
     background: url("../images/password-again-form.png") no-repeat 10px center #f8f8f8;
 }
 /** app style event creation page **/
+.create_date {
+    position: relative;
+}
 #createEvent #createEvent_shortDescription {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -964,9 +967,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 #createEvent #createEvent_date_active {
     width: 245px;
-    float: right;
+    right: 0;
+    top: 0;
     margin-left: 5px;
-
+    position: absolute;
     z-index: 200;
 }
 #createEvent #createEvent_location {
@@ -1075,7 +1079,7 @@ ul.as-selections {
     
     float: left;
     padding: 5px 10px;
-    margin: 0px 0px 5px 5px;
+    margin: 0px 5px 5px 0px;
     overflow: auto;
     cursor: pointer;
 }
