@@ -7,6 +7,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     $this->bootstrap('view');
         $view = $this->getResource('view');
         $view->doctype('XHTML1_STRICT');
+        $view->headLink( array( 'rel' => 'favicon',
+        'href' => $view->baseUrl( 'favicon.ico' ),
+        'type' => 'image/x-icon' ));
     }
 	 public function _initDoctrineMongoContainer()
     {

@@ -29,8 +29,9 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 	}
 	//subclassed so we can construct our own custom feed message for events..
 	public function getEventFeedMessage(FeedObject $feedObject){
-		echo 'You are attending:';
-		echo '<br />'.$feedObject->getShortDescription();
-		echo '<br /> at '.$feedObject->getDate()->format('Y-m-d H:i:s');;
+		
+                echo '@ '.$feedObject->getShortDescription();
+                
+		echo '<br />'.$feedObject->getDate()->format('m/d');;
 	}
 }
