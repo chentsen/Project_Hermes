@@ -182,5 +182,7 @@ class User{
     public function setProfilePic(Image $image){
     	$this->profilePic = $image;
     }
-				
+    public function getGender(){
+	return $this->gender;
+    }
 }

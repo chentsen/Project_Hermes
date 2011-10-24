@@ -92,6 +92,7 @@ class ProfileController extends Hermes_Controller_SessionController
     	$email = $this->_request->getParam("email");
     	$profileModel = new Application_Model_ProfileModel($this->mongoContainer, $email);
     	$friendRelation = new Application_Model_FriendRelation($this->identity);
+	$this->view->user = $profileModel->getUser();
     	$this->view->description = $profileModel->displayDescription();
     	$this->view->name = $profileModel->getUser()->getFirstName() . " " . substr($profileModel->getUser()->getLastName(), 0,1);
        
