@@ -3,12 +3,12 @@ class Zend_View_Helper_DisplayNewUserflow extends Zend_View_Helper_Abstract{
 	public function DisplayNewUserflow($status){
 		if($status == 0){
 
-			echo 'Take some time to answer some questions about yourself so you can start meeting people now!';
-			echo '<a href ="#" onclick = "Questions.showQuestions()"> Answer Now! </a>';
+			echo '<div class="questions_flow">Want to increase your chance of finding cool people? Fill in some common tagss';
+			echo ' <a href ="#" onclick = "Questions.showQuestions()">here</a>.</div>';
 		}
 		else if($status < 4 && $status > 0){
-			echo 'complete the questions to increase the chances of meeting someone you share interests with!';
-			echo '<a href ="#" onclick="Questions.showQuestions()"> Answer Now! </a>';
+			echo '<div class="questions_flow">Want to increase your chance of finding cool people? Fill in some common tags';
+			echo ' <a href ="#" onclick="Questions.showQuestions()">here</a>.</div>';
 		}
 	}
 }

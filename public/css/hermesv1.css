@@ -179,10 +179,24 @@ input[type=text]:first,input[type=password]:first {
     width: 250px;
 }
 /*** profile page ****/
+.profile .questions_flow { 
+    position: relative;
+    text-align: center;
+    padding:5px;
+    margin: 5px 0px;
+    font-size: 14px;
+    color: white;
+    border-radius: 5px;
+    background: orange;
+    border: 1px solid #FC6C0C;
+    
+}
+.profile .questions_flow a {
+    color: white;
+}
 .big_name {font-size: 36px; text-transform: capitalize; float: left;}
 .user_details { margin-bottom: 10px;}
-.profile_leftCol {
-    width: 200px;
+.profile .profile_leftCol {
     float: left;
 }
 .profile_image {
@@ -238,6 +252,7 @@ input[type=text]:first,input[type=password]:first {
     float: right;
 }
 .friend_list {float: left; padding: 5px 3px 0 5px;}
+
 .friend_pic img{ border-radius: 10px; }
 /*** search page ****/
 .none-singleFound {
@@ -324,7 +339,7 @@ input[type=text]:first,input[type=password]:first {
     font-weight: bold;
     font-size: 9px;
     margin-top: 5px;
-    
+    text-align: center;
 }
 .common_value {
     float: left;
@@ -633,7 +648,7 @@ input[type=text]:first,input[type=password]:first {
 }
 .view-wrapped {
     width: 640px;
-    min-height: 500px;
+    min-height: 600px;
     background: #f0f0f0;
      border-radius: 5px;
      height: 100% !important;
@@ -822,6 +837,19 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 .remove_top_border {
     border-top: none !important;
+}
+.profile .change_border_color  {
+    border: none !important;
+}
+.profile #content_area input[type="text"] {
+    margin: 0px;
+    padding: 0px;
+}
+.profile li.as-result-item, li.as-message {
+    display: none;
+}
+.profile ul.as-selections li.as-original input {
+    padding-top: 0px;
 }
 .change_border_color {
     border: 1px solid #FC6C0C !important;
@@ -1013,7 +1041,7 @@ ul.as-selections {
 .tag_dropdown {
     position: absolute;
     right: 5px;
-    bottom: 15px;
+    bottom: 5px;
     font-size: 14px;
     font-weight: bold;
     

@@ -75,7 +75,9 @@ var Tags = {
 				 $(".tags_base .tags#tag_"+tag).find(".close_tag").data('tag_id', tag).click(function(){Tags.removeTag("tag_"+$(this).data('tag_id'))});
 			 } 
 			 
-			 Tags.toggleDropDown();
+			 //Tags.toggleDropDown();
+                         //let people continuously add by pressing enter
+                         
 		}
 		//refreshes tags using results;
 	}
