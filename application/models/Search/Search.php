@@ -25,10 +25,16 @@ class Application_Model_Search_Search{
 		if($response['response']['docs']!=''){
 			foreach($documents as $document){		
 				$object = $this->process->process($document);
-				if($object instanceof Documents\Event)
-					$this->eventResults[] = new Documents\Search\EventResult($object);	
-				else if($object instanceof Documents\User)			
-					$this->userResults[] =  new Documents\Search\UserResult($object);	
+				if($object instanceof Documents\Event){
+					$result = new Documents\Search\EventResult($object);
+					if($result)
+						$this->eventResults[] = new Documents\Search\EventResult($object);	
+				}
+				else if($object instanceof Documents\User){			
+					$result =  new Documents\Search\UserResult($object);	
+					if($result)
+						$this->userResults[] =  new Documents\Search\UserResult($object);	
+				}
 			}
 			if($rankByTags){
 				$this->eventResults = $this->doRankEventByTags($this->eventResults);

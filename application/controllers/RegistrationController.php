@@ -44,13 +44,13 @@ class RegistrationController extends Zend_Controller_Action
 				
 				$this->view->successMessage = '<h1 class="regsuccess">Registration Successful! Please complete registration by clicking on the link sent to your email.</h1>';
 				$mail = new Zend_Mail();
-
+				$transport = Zend_Registry::get('SmtpTransport');
 				$htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_confirm_registration.phtml',
 																	  array('name'=>$_POST['firstName'],
 																	 'activationUrl'=>$this->url,
-																	 'activationCode'=>$activationCode));
+    																	 'activationCode'=>$activationCode));
 				//$this->view->htmlBody = $htmlBody;
-				$mail->setReplyTo('andy@plumetype.com', 'Plumetype');
+				$mail->setReplyTo('activation@plumetype.com', 'Plumetype');
 				$mail->addHeader('MIME-Version', '1.0');
 				$mail->addHeader('Content-Transfer-Encoding', '8bit');
 				$mail->addHeader('X-Mailer:', 'PHP/'.phpversion());
@@ -58,9 +58,8 @@ class RegistrationController extends Zend_Controller_Action
 				$mail->setFrom('activation@plumetype.com', 'Plumetype Activation');
 				$mail->addTo($_POST['email']);
 				$mail->setSubject('Activate Your Plumetype Account');
-				$mail->send();
+				$mail->send($transport);
 				// redirect to some page and fire off email and return
-                               
 				return;	
                                 
 			}

@@ -15,7 +15,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     {
         $container = new DoctrineContainer($this->getOption('doctrine'));
         Zend_Registry::set('Wildkat\DoctrineContainer', $container);
-        //once login use zend_registry 
+	//once login use zend_registry 
         return $container;
     }
         protected function _initViewHelpers()
@@ -24,7 +24,13 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $this->view->addHelperPath("ZendX/JQuery/View/Helper", "ZendX_JQuery_View_Helper");
 
         }
-    
+    protected function _initSmtp(){
+	$options = $this->getOptions();
+	$config = $options['email'];
+	$transport = new Zend_Mail_Transport_Smtp($options['mailClient'],config);
+	Zend_Registry::set('SmtpTransport',$transport);
+	return $transport;		   
+    }
     protected function _initDefaultModuleAutoloader(){	
     	
     	
