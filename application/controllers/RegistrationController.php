@@ -50,6 +50,10 @@ class RegistrationController extends Zend_Controller_Action
 																	 'activationUrl'=>$this->url,
 																	 'activationCode'=>$activationCode));
 				//$this->view->htmlBody = $htmlBody;
+				$mail->setReplyTo('andy@plumetype.com', 'Plumetype');
+				$mail->addHeader('MIME-Version', '1.0');
+				$mail->addHeader('Content-Transfer-Encoding', '8bit');
+				$mail->addHeader('X-Mailer:', 'PHP/'.phpversion());
 				$mail->setBodyHtml($htmlBody);
 				$mail->setFrom('activation@plumetype.com', 'Plumetype Activation');
 				$mail->addTo($_POST['email']);
