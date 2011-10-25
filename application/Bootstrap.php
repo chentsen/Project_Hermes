@@ -27,7 +27,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     protected function _initSmtp(){
 	$options = $this->getOptions();
 	$config = $options['email'];
-	$transport = new Zend_Mail_Transport_Smtp($options['mailClient'],config);
+	$transport = new Zend_Mail_Transport_Smtp($options['mailClient'],$config);
 	Zend_Registry::set('SmtpTransport',$transport);
 	return $transport;		   
     }
