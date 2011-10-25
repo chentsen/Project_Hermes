@@ -33,7 +33,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	$transport = new Zend_Mail_Transport_Smtp($options['mailClient'],$config);
 	//Zend_Mail::setDefaultTransport($transport);
 	Zend_Registry::set('SmtpTransport',$transport);
-	var_dump($config);
+	//var_dump($config);
 	return $transport;		   
     }
     protected function _initDefaultModuleAutoloader(){	
