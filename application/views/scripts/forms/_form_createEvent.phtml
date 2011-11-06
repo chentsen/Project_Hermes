@@ -1,8 +1,8 @@
 <!--  Julian you need to modify this so that the day gets updated when the month gets updated. Right now there is just a placeholder -->
-<div id="view-content">
-<div class="view-wrapped">
+<div id="modal-content">
+<div class="modal-wrapped">
 <form id = "<?=$this->element->getName(); ?>" action = "/event-creation/create-event" 
-	method = "<?=$this->element->getMethod() ?>">
+	method = "<?=$this->element->getMethod() ?>" enctype="multipart/form-data">
 <div class="closeBox" onclick ="Dialog.hideDialog()">
             <div class="exitBox">
               
@@ -15,8 +15,12 @@
         <li class="create_date"><div class="float_left createEvent_text">On</div><div class="form_date"><?= $this->element->createEvent_date; ?></div></li>
         <li class=""><div class="float_left createEvent_text">@</div><?= $this->element->createEvent_location ?></li>
 	<li class=""><div class="float_left createEvent_text">And it</div><?= $this->element->createEvent_private ?>be private.</li>
-       
+        <li class=""><?= $this->element->image; ?></li>
         <li class=""><?= $this->element->createEvent_longDescription; ?></li>
+       
+       
+       
+
 </ul>
         <div class="button">
             <div class="inner_button">

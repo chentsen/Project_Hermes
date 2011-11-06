@@ -9,20 +9,21 @@
 
 <div id="view-content">	
     <div class="view-wrapped">
+      
   <div class="top_col">
 			<center><?=$this->DisplayFlashMessages($this->flashMessages); ?></center>
 			<center><?=$this->DisplayNewUserflow($this->flowStatus); ?></center>
 			<?= $this->partial('tags.phtml',array('tagArray'=>$tagArray,'interestModel'=>$interestModel,'isOwn'=>true)) ?>
-		<div class = tag_dropdown onclick = "Tags.toggleDropDown();">
+		<!--<div class = tag_dropdown onclick = "Tags.toggleDropDown();">
 			Add a tag
 		</div>
-		    <div class = tag_input_wrapper style="display:none;">
+		    <div class = tag_input_wrapper style="">
 			<input type="text" class ="tag_input"></input>
-  </div>
+  </div>-->
 		</div>
-    
+        <a href="#" onclick="cats.getCurrentCat()" >hifdsjaklfds;la</a>
              
-	
+	  <?= $this->catTag; ?>
     </div>
 </div>
 

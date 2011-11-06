@@ -1,6 +1,16 @@
 /**
  * 
  */
+var cats = {getCurrentCat:function(){
+        $("#tag_category").change(function(){
+        var addText = $("#tag_category").val();
+        //alert(addText);
+        $(".tag_input").val(addText+":");
+        return addText;
+        });
+    }
+}
+     
 var Tags = {
 	showTagInput:false,
 	tagData:null,
