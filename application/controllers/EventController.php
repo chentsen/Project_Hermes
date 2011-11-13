@@ -23,7 +23,7 @@ class EventController extends Hermes_Controller_Wall_WallController
        
     	$this->view->event = $event;
         //1. if I am creator
-        /*if($this->identity == $event->getCreator()->getEmail()){
+        if($this->identity == $event->getCreator()->getEmail()){
     		$this->_helper->ViewRenderer('index_creator');
     	}
     	else if($eventModel->isMember($this->identity,$event->getMembers())){
@@ -35,7 +35,7 @@ class EventController extends Hermes_Controller_Wall_WallController
     	}
     	else{
     		echo 'This is a private event. Sorry!';
-    	}*/
+    	}
     	// action body
     }
 	
