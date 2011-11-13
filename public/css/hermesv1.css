@@ -265,7 +265,7 @@ input[type=text]:first,input[type=password]:first {
 #friendsList ul {
 	overflow: hidden;
 	width: 260px;
-	margin: 5px auto;
+	margin: 0 auto;
 	
 
 }
@@ -600,7 +600,7 @@ input[type=text]:first,input[type=password]:first {
 /*** right block area ***/
 .block-body{
     background: #eee; 
-    overflow: hidden;
+ 
     border-bottom-right-radius: 3px;
     border-bottom-left-radius:3px;
     color: #454545;
