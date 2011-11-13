@@ -23,7 +23,7 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
                 <img src="/img/profile-pic/uid/<?=$this->user->getEmail();?>" height="100" width="100" />
             </div>
             <div class="profile_eventList">
-                <?= $this->DisplayEventFeed($this->user->getEmail()); ?>        
+                <?= $this->DisplayEventFeed($this->user->getEmail(), 3); ?>        
             </div>
             </div>
             <div class="profile_rightCol">
