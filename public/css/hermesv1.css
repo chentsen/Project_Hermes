@@ -14,9 +14,12 @@ select {
     margin: 10px;
     font-size: 14px;
 }
+#editAccount{
+	
+}
 #editAccount textarea {
         margin: 10px 0;
-        width: 250px;
+        width: 235px;
 	font-size: 24px; 
         background: #ffffff;
         outline: 0;
@@ -150,8 +153,11 @@ input[type=text]:first,input[type=password]:first {
     text-shadow: none;
 }
 /**** edit account ****/
+.account-edit #image {
+	margin-top: 20px;
+	margin-left: 20px;
+}
 .account-edit .upload-image {
-    margin-top: 20px;
     border-right: 1px solid #bbb;
     width: 285px;
 }
@@ -173,16 +179,17 @@ input[type=text]:first,input[type=password]:first {
 }
 #profilePic #profilePic_submit {
     margin-top: 10px;
-    margin-right: 40px;
+    margin-left: 50px;
 }
 
-#editAccount {
+.account-edit #editAccount {
     float: right;
     width: 280px;
+    margin-right: 20px;
 }
 #editAccount #submit{
-    margin-right: 10px;
-    margin-top: 30px;
+    margin-left: 40px;
+    margin-top: 10px;
 }
 #editAccount li{
     width: 275px;
@@ -254,7 +261,13 @@ input[type=text]:first,input[type=password]:first {
     
 }
 /*** friend picture ****/
-.friendsList { overflow: auto;}
+#friendsList ul {
+	overflow: hidden;
+	width: 260px;
+	margin: 5px auto;
+	
+
+}
 .profile_header {
     overflow: auto;
 }
@@ -266,9 +279,20 @@ input[type=text]:first,input[type=password]:first {
 .friendStatus {
     float: right;
 }
-.friend_list {float: left; padding: 5px 3px 0 5px;}
+.friend_list {float: left; padding: 5px 4px 0 4px;}
+.friends_block .view-friends,
+.upcoming_events .view-events
+{
+	text-align: center;
+	padding: 5px;
+	background: #bbb;
+}
 
-.friend_pic img{ border-radius: 10px; }
+.friend_pic img{
+	border-radius: 3px;
+	border: 1px solid #454545;
+
+}
 /*** search page ****/
 .none-singleFound {
     margin-left: 15%;
@@ -575,7 +599,7 @@ input[type=text]:first,input[type=password]:first {
 /*** right block area ***/
 .block-body{
     background: #eee; 
-    overflow: auto;
+    overflow: hidden;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius:3px;
     color: #454545;
@@ -703,14 +727,14 @@ input[type=text]:first,input[type=password]:first {
 }
 .view-wrapped {
     width: 640px;
-    min-height: 500px;
+    
     background: #f0f0f0;
      border-radius: 5px;
      height: 100% !important;
      color: #555;
      margin: 5px;
      overflow: auto;
-     padding: 5px 10px;
+     padding: 20px 10px;
      
 }
 #content-page {
@@ -840,10 +864,13 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 /**** friend stuff*****/
 .friend_name {
+	
+	text-align: center;		
     list-style: none;
     padding: 3px 0 0 3px;
     font-weight: bold;
     font-size: 12px;
+	
 }
 /*** profile area ***/
 .left_col {

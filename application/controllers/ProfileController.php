@@ -45,8 +45,7 @@ class ProfileController extends Hermes_Controller_SessionController
     	$tagForm = new Application_Form_CreateTag();
     	$this->view->tagForm = $tagForm;
         
-        $catTag = new Application_Form_AddTagFilter();
-        $this->view->catTag = $catTag;
+        
         //if logged in
     	if($this->identity){
 			$this->view->message = 'You are logged in.';

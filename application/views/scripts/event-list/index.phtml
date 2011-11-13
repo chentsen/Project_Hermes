@@ -1,0 +1,9 @@
+<div id="view-content">
+        <div class="view-wrapped">
+		<?php $auth = Zend_Auth::getInstance(); 
+                    if($auth->hasIdentity()){ 
+                    	$this->identity = $auth->getIdentity()?>
+		 <?= $this->DisplayEventFeedPage($this->identity); ?>
+		  <?php } ?>
+	</div>
+</div>
