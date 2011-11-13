@@ -241,6 +241,7 @@ input[type=text]:first,input[type=password]:first {
 .profile_rightCol {
     float: right;
     width: 430px;
+    overflow: hidden;
 }
 .profileDesc {
     border-radius: 5px;
@@ -733,8 +734,8 @@ input[type=text]:first,input[type=password]:first {
      height: 100% !important;
      color: #555;
      margin: 5px;
-     overflow: auto;
-     padding: 20px 10px;
+     overflow: hidden;
+     padding: 10px;
      
 }
 #content-page {
@@ -1164,7 +1165,7 @@ ul.as-selections {
     border-bottom: 1px solid #bbb;
     
     min-height: 100px;
-      overflow: auto;
+      overflow: hidden;
       
       
 }

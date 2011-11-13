@@ -4,7 +4,7 @@ use Documents\Feed\FeedObject\FeedObject;
 use Documents\Feed\FeedObject\EventFeedObject;
 use Documents\Feed\FeedObject\FriendAcceptFeedObject;
 class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayFeed{
-	public function DisplayEventFeed($identity){
+	public function DisplayEventFeed($identity, $length){
 		$user = Zend_Registry::get("Wildkat\DoctrineContainer")->getDocumentManager('default')->getRepository('Documents\User')->findOneBy(array("email"=>$identity));
 		$feed = $user->getEventFeed();
 		
@@ -26,10 +26,10 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
                                         echo '</p>';
 				}
 			 	echo "</div>";
-				if (++$i == 5) break;
+				if (++$i == $length) break;
 			 }		
 		}
-		if ($i >= 5) {
+		if ($i >= $length) {
 						echo '<a class="view-events" href="event-list">View Events</a>';
 						
 			}
