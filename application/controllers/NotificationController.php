@@ -1,6 +1,6 @@
 <?php
 
-class AboutController extends Zend_Controller_Action
+class NotificationController extends Zend_Controller_Action
 {
 
     public function init()
@@ -12,6 +12,7 @@ class AboutController extends Zend_Controller_Action
     {
         // action body
     }
+
 
 }
 

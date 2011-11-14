@@ -120,9 +120,16 @@ $(document).ready(function(){
           });
       }
         BdOrange('input[type=text], input[type=password]', 'input[type=text], input[type=password]');
+        
         BdOrange('textarea', 'textarea');
         
-          
+        var BdRemove = function(noClass) {
+            $(noClass).focus(function(){
+                $(this).removeClass("change_border_color");
+            });
+            
+        } 
+        BdRemove('.profile #content_area .tag_input');
           
             /****** events page *******/
      //$( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});

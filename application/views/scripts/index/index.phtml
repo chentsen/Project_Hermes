@@ -14,11 +14,13 @@
         if(!$auth->hasIdentity()){ ?>
 
 <?=$this->DisplayFlashMessages($this->flashMessages); ?>
-<div class="out-logo"><h1 class="thelogo"><a href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
+<div class="out-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1>
+ <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form'})">Join</a>
+</div>
 
 <?php } ?>
 <div id="home">
-    
+   
     <div class="out-slogan"><h1>Make friends with awesome people 
 who share your interests.</h1></div>
     <div class="out-preview">
@@ -30,13 +32,12 @@ who share your interests.</h1></div>
             <li class="out-three"><img width="250" src="<?php echo $this->baseUrl();?>/images/meet-people.png" /><h3>Go out and meet cool people.</h3></li>
         </ul>
     </div>
-    <div class="out-signup"><h1><a href="<?php echo $this->baseUrl();?>/registration">Get Started</a></h1>
-        <h1 class="alternative">or</h1></div>
-    
+    <div class="out-signup">
+        <div class="signup-or">or</div>
     <?= $this->form ?>
+        <a href="#">Facebook Login
+        </a>
 </div>
-
-
 
 <style type="text/css">
     .right-block {display: none;}
