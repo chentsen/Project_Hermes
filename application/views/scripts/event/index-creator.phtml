@@ -1,3 +1,7 @@
+<?php
+$this->headScript()->appendFile($this->baseUrl('js/wall.js'));
+$eid = $this->event->getEid();
+?>
 <div id="view-content">
     <div class="view-wrapped">	 
         <div class="event_header">
@@ -27,9 +31,15 @@
 		<?= $this->DisplayInterestedList($this->event) ?>
 	</div>
  <div class ="event_wall">
-     <h2 class="wall_title">Wall</h2> 
+    <h2 class="wall_title">Wall</h2>
+    <div id="posts">
+    </div>
 		<?= $this->DisplayEventWall($this->event,$this->identity) ?>
- </div>	
+ </div>
+ <div class="ajax_template" style="display:none">
+     <?= $this->partial('wall_post.phtml') ?>
+ </div>
 	
 </div>
 </div>
+<?= $this->inlineScript()->appendScript("$(document).ready(Wall.refreshWall({eid:'{$eid}'}));");?>

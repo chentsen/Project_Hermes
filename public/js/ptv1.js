@@ -54,6 +54,14 @@ function getErrorHtml(formErrors, id)
 
 $(document).ready(function(){
     
+    /** drop down menu settings ***/
+    
+    $('html .icon_bar ul li .sub-settings li a:last').css({
+	'border-bottom-right-radius' : '5px',
+	'border-bottom-left-radius' : '5px'
+	 
+      }  
+    );
     /***** click menu top *****/
    $('.icon_bar ul .settings-button').click(function(){
         $(this).parent().find('ul.sub-settings').slideToggle('fast');
