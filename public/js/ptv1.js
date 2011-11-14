@@ -56,8 +56,9 @@ $(document).ready(function(){
     
     /** drop down menu settings ***/
     
-    $('html .icon_bar ul li .sub-settings li a:first').css({
-	
+    $('html .icon_bar ul li .sub-settings li a:last').css({
+	'border-bottom-right-radius' : '5px',
+	'border-bottom-left-radius' : '5px'
 	 
       }  
     );

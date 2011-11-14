@@ -1,9 +1,8 @@
-<form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
-	method = "<?=$this->element->getMethod() ?>">
+<div id = "<?=$this->element->getName(); ?>">
 
 <div class = "wall_add">
 	<?= $this->element->wall_comment ?>
 <br />
-	<?= $this->element->wall_addPost ?>
+<input type="submit" name="wall_addPost" id="wall_addPost" value="comment" onclick = "<?= $this->element->getAction(); ?>" >
 </div>
-</form>
+</div>
