@@ -633,8 +633,6 @@ input[type=text]:first,input[type=password]:first {
     display: block;
 }
 .block-item h3 {
-    text-transform: uppercase;
-    
     font-family: 'century gothic',verdana , tahoma, helvetica, sans-serif;
 }
 .block-item {
@@ -1291,6 +1289,7 @@ ul.as-selections {
     border-radius: 5px;
     background: orange;
     border: 1px solid #FC6C0C;
+    color: #ffffff;
     
 }
 /***** event page ******/
