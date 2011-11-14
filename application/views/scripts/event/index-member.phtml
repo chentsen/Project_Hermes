@@ -27,7 +27,10 @@
  <div class ="event_wall">
      <h2 class="wall_title">Wall</h2> 
 		<?= $this->DisplayEventWall($this->event,$this->identity) ?>
- </div>	
+ </div>
+ <div class="ajax_template" style="display:none">
+     <?= $this->partial('wall_post.phtml') ?>
+ </div>
 	
 </div>
 </div>
