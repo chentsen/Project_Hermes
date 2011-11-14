@@ -27,6 +27,8 @@ class Zend_View_Helper_DisplayGeneralFeed extends Application_View_Helper_Displa
 				}
 			 	echo "</div>";
 			 }		
+		} else {
+				echo "<h1>No activy found</h1>";
 		}
 		echo "</div>";
 	}
