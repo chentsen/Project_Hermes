@@ -54,6 +54,13 @@ function getErrorHtml(formErrors, id)
 
 $(document).ready(function(){
     
+    /** drop down menu settings ***/
+    
+    $('html .icon_bar ul li .sub-settings li a:first').css({
+	
+	 
+      }  
+    );
     /***** click menu top *****/
    $('.icon_bar ul .settings-button').click(function(){
         $(this).parent().find('ul.sub-settings').slideToggle('fast');

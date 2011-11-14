@@ -825,7 +825,7 @@ input[type=text]:first,input[type=password]:first {
     position: absolute;
     left: -80px;
     top: 53px;
-    background: #454545;
+    background: rgba(111, 111, 111, .2);
     margin:0;
     padding: 0;
     display: none;
@@ -833,7 +833,7 @@ input[type=text]:first,input[type=password]:first {
     width: 140px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: 1px solid #000;
+   
     
     height: 80px;
 }
@@ -852,6 +852,7 @@ html .icon_bar ul li .sub-settings li a{
     padding: 10px;
     font-weight: 600;
     margin: 5px;
+    background: #f0f0f0;
 }
 html .icon_bar ul li .sub-settings li a:hover {
     background: #767676;
@@ -1241,7 +1242,6 @@ ul.as-selections {
     color: #454545;
 }
 .closeBox {
-    overflow: auto;
     
 }
 .exitBox {
