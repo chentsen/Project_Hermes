@@ -288,6 +288,12 @@ input[type=text]:first,input[type=password]:first {
 	padding: 5px 0;
 	background: #bbb;
 }
+.so-ronery {
+		font-size: 14px;
+		font-weight: 600;
+		text-align: center;
+		padding: 20px 0;
+}
 
 .friend_pic img{
 	border-radius: 3px;
@@ -1416,6 +1422,7 @@ ul.as-selections {
     width: 640px;
 }
 .event .event_wall .wall_text {
+	word-wrap: break-word;	
     float: left;
     border-radius: 5px;
     background: #bbb;
@@ -1427,12 +1434,13 @@ ul.as-selections {
 }
 .event .event_wall .wallpost a{
     margin-left: 7px;
-    color: transparent;
+    color: #454545;
     font-size: 14px;
+    text-decoration: underline;
 }
 .event .event_wall .wallpost a:hover {
-    color: orange;
-    text-decoration: underline;
+    
+    
 }
 .event .event_wall #wall_comment {
     float: left;
@@ -1442,4 +1450,9 @@ ul.as-selections {
 }
 .event .event_wall #Wall {
     margin: 0;
+}
+/*** event list page ***/
+.event-list .none-singleFound {
+		margin-top: 0;
+		margin-left: 0;
 }

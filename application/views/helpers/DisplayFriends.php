@@ -23,11 +23,14 @@ class Zend_View_Helper_DisplayFriends extends Zend_View_Helper_Abstract{
 					
 					if (++$i == 9) break;
 				}				
-			}else 'You have no friends yet, add some!';
+			} else 'You have no friends yet.';
 			echo '</ul>';
 			if ($i >= 9) {
 						echo '<a class="view-friends" href="friend">View All Friends</a>';
 						
+			}
+			if ($i == 0) {
+				echo '<a href="#" class="so-ronery">You have no friends yet.</a>';
 			}
 			echo '</div>';
 		}
