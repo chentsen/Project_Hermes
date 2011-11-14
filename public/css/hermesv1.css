@@ -285,7 +285,7 @@ input[type=text]:first,input[type=password]:first {
 .upcoming_events .view-events
 {
 	text-align: center;
-	padding: 5px;
+	padding: 5px 0;
 	background: #bbb;
 }
 
@@ -715,7 +715,7 @@ input[type=text]:first,input[type=password]:first {
 
 #content_area .page {
         border-bottom: 1px solid #aaa;
-        overflow: auto;
+        overflow: hidden;
         padding-bottom: 20px;
 }
 #view-content {
@@ -1054,25 +1054,25 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .create_date {
     position: relative;
 }
+
 #createEvent #createEvent_shortDescription {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    width: 245px;
+  
+    width: 170px;
     float: right;
 
     z-index: 100;
 }
 #createEvent #createEvent_date_active {
-    width: 245px;
+    width: 170px;
     right: 0;
-    top: 0;
+    top: 0px;
     margin-left: 5px;
     position: absolute;
     z-index: 200;
 }
 #createEvent #createEvent_location {
 
-    width: 245px;
+    width: 170px;
     float: right;
     z-index: 300;
 }
@@ -1081,7 +1081,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     
 }
 #createEvent .centerform {margin: 10px 0px;}
-#createEvent .centerform li {margin: 10px 0px;}
+#createEvent .centerform li {margin: 10px 0px; overflow: hidden;}
 #createEvent .centerform li .createEvent_text { font-size: 24px; width: 100px; margin: 10px 0px; }
 #createEvent .centerform .form_date {overflow: hidden;}
 
