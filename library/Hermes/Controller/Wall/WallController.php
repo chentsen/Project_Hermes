@@ -31,16 +31,17 @@ abstract class Hermes_Controller_Wall_WallController extends Hermes_Controller_S
 		$eid = $this->_request->getParam("eid");
 		$wall = $this->dm->getRepository('Documents\Wall')->findOneBy(array('event.$id'=>$eid));
 		$this->_helper->layout()->disableLayout();
-		$poster = $wallPost->getUser();
 		$wallPosts = array();
 		foreach($wall->getWallPosts() as $wallPost){
-			$wallPosts[]['firstName'] = $poster->getFirstName();
-			$wallPosts[]['message'] = $wallPost->getMessage();
-			$wallPosts[]['postID'] = $wallPost->getPostID();
+			$poster = $wallPost->getUser(); 
+			$wallPostA['firstName'] = $poster->getFirstName();
+			$wallPostA['message'] = $wallPost->getMessage();
+			$wallPostA['postID'] = $wallPost->getPostID();
 			if($poster->getEmail() == $this->curUser->getEmail())
-				$wallPosts[]['isPoster'] = true;
+				$wallPostA['isPoster'] = true;
 			else
-				$wallPosts[]['isPoster'] = false;
+				$wallPostA['isPoster'] = false;
+			$wallPosts[] = $wallPostA;
 		}
 		echo json_encode($wallPosts);
 	}

@@ -3,7 +3,7 @@ class Application_Form_Wall extends Zend_Form{
 	public function __construct($options = null){
 		parent::__construct($options);
 		$this->setName('Wall');
-		$this->setAction("/event/add/eid/{$options['eid']}");
+		$this->setAction("Wall.postComment({eid:'{$options['eid']}'});");
 		$this->setMethod('post');
 		$comment = new Zend_Form_Element_Text('wall_comment');
 		$comment->setRequired(true)

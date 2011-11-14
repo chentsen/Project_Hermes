@@ -104,6 +104,7 @@ input[type=text]:first,input[type=password]:first {
 .page {
         width: 960px;
         margin: 0 auto;
+	overflow:hidden;
 }
 /**header**/
 #header_block {
