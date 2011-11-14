@@ -1,11 +1,14 @@
 <?php
 
-class NotificationController extends Zend_Controller_Action
+class NotificationController extends Hermes_Controller_SessionController
 {
 
     public function init()
     {
-        /* Initialize action controller here */
+        parent::init();
+		$this->view->identity = $this->identity;
+                $this->firstname = $this->curUser->getFirstName();
+                $this->lastname = $this->curUser->getLastName();
     }
 
     public function indexAction()
