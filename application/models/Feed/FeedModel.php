@@ -2,7 +2,7 @@
 use Documents\Feed\FeedObject\FeedObject;
 abstract class Application_Model_Feed_FeedModel{
 	protected $feed;
-	protected $feedLimit = 200;
+	protected $feedLimit = 1000;
 	protected $dm;
  	static function cmp($a, $b){
 			 //   global $array;
