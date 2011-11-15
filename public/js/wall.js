@@ -4,8 +4,7 @@ var Wall = {
             return false;
 	var message = $('#wall_comment').val();
 	if(!message)
-	    return false;
-    
+	    return false;   
         $.ajax({
             url:"/event/add/",
             data:{eid:options.eid,wall_comment:message},
@@ -62,7 +61,5 @@ var Wall = {
             }
         })
     }
-    
-
 }
 

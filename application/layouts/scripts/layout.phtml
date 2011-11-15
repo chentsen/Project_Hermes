@@ -56,18 +56,20 @@
 							<?=$event?>
 						</div>
 						<div class ="modalWindow">
-                                                    
-						</div>	
+						</div>
+				    
 					</div>
 					<div class = "modalBackground" style="display:none;"></div>
-					<div class = 'dialogs' style="display:none">
-					</div>
+					<div class ="dialogs"></div>	
                                         
-                   <?php } ?>
-		</div>
-	</div>	
+                 
 
-<div class = "footer_ajax" style="display:none">
+	<? } ?>
+			</div>
+	</div>
+       <?php
+	if(!$auth->hasIdentity()){ ?>
+	<div class = "footer_ajax" style="display:none">
 						<div id="reg_ajax_form">	
 							<?= $reg ?>
 						</div>
@@ -78,8 +80,10 @@
 					<div class = "modalBackground" style="display:none;"></div>
 					<div class = 'dialogs' style="display:none">
 					</div>
-</div>
-       <?php echo $this->render('footer.phtml') ?>
+	</div>		
+    <?}
+     echo $this->render('footer.phtml');?>     
+
    
 
 </body>

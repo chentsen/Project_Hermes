@@ -837,7 +837,6 @@ input[type=text]:first,input[type=password]:first {
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     border: 1px solid #000;
-    
     height: 80px;
 }
 
