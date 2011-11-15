@@ -33,6 +33,9 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 						echo '<a class="view-events" href="event-list">View Events</a>';
 						
 			}
+		if($i == 0) {
+				echo '<a class="so-ronery">You have no events right now.</a>';
+		}
 		echo "</div>";
 	}
 	//subclassed so we can construct our own custom feed message for events..

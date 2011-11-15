@@ -28,7 +28,10 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 			 	echo "</div>";
 				
 			 }		
-		}
+		} else {
+            echo '<div class="none-singleFound"><h1>No events yet<br/>Why don\'t you create one';
+                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">here</a>?</h1></div>';
+        }
 		
 		echo "</div>";
 	}
