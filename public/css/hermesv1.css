@@ -412,9 +412,10 @@ input[type=text]:first,input[type=password]:first {
 .index .button input#login { margin-left: 60px;}
 .index form#login { 
     float: left; 
-    margin-left: 150px; 
+    /**margin-left: 150px; **/
+	margin-left: 360px;
     padding: 40px 40px 40px 0px; 
-    background: url(../images/or-background.png) no-repeat right center;
+    /**background: url(../images/or-background.png) no-repeat right center;**/
     
 }
 .index #registration{float: left; }
