@@ -152,6 +152,19 @@ input[type=text]:first,input[type=password]:first {
     text-shadow: none;
 }
 /**** edit account ****/
+.account-edit .re-answer a {
+		color: orange;
+		float:right;
+		text-decoration: underline;
+		margin-right: 35px;
+}
+.account-edit .re-answer {
+		overflow: hidden;
+		margin-top: 15px;
+}
+.account-edit .top-block {
+		overflow: hidden;
+}
 .account-edit #image {
 	margin-top: 20px;
 	margin-left: 20px;
@@ -1086,7 +1099,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #createEvent #createEvent_date_active {
     width: 170px;
     right: 0;
-    top: 0px;
+    top: -5px;
     margin-left: 5px;
     position: absolute;
     z-index: 200;
@@ -1222,6 +1235,7 @@ ul.as-selections {
     display: none;
 }
 /**Dialogs*/
+
 #modal-content {
     float: left;
     
@@ -1262,11 +1276,13 @@ ul.as-selections {
     color: #454545;
 }
 .closeBox {
-    
+    position: relative
 }
 
 .exitBox {
-    float: right;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 .closeBox .exitBox {
     
@@ -1296,7 +1312,7 @@ ul.as-selections {
 }
 /**** dialog questions ***/
 .questions-window h1{
-    float: left;
+   
 }
 /*** flash messages***/
 #flashMessages {
