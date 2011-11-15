@@ -60,7 +60,7 @@ input[type=text], input[type=password] {
 input[type="submit"] {
     
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     border: none;
     
 }
@@ -214,6 +214,7 @@ input[type=text]:first,input[type=password]:first {
 }
 .profile .questions_flow a {
     color: white;
+    font-weight: bold;
 }
 .big_name {font-size: 36px; text-transform: capitalize; float: left;}
 .user_details { margin-bottom: 10px;}
@@ -639,9 +640,8 @@ input[type=text]:first,input[type=password]:first {
     display: block;
 }
 .block-item h3 {
+    font-family: "Myriad Pro" ,verdana , tahoma, helvetica, sans-serif;
     text-transform: uppercase;
-    
-    font-family: 'century gothic',verdana , tahoma, helvetica, sans-serif;
 }
 .block-item {
     
@@ -839,7 +839,7 @@ input[type=text]:first,input[type=password]:first {
     width: 140px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    height: 76px;
+    height: 72px;
 }
 
 .icon_bar ul li .sub-settings li {
@@ -854,13 +854,14 @@ html .icon_bar ul li .sub-settings li a{
     text-align: right;
     width: 110px;
     padding: 10px;
+    font-size: 12px;
     font-weight: 600;
     margin: 3px 5px 0px 5px;
-    background: #f0f0f0;
-    color: #454545;
+    background: #454545;
+    color: black;
 }
 html .icon_bar ul li .sub-settings li a:hover {
-    background: #767676;
+    background: #e0e0e0;
     
 }
 html .icon_bar ul li .sub-settings .first-setting a{
@@ -969,17 +970,31 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #wall_addPost,
 #register
 { 
-  height: 50px;
+  height: 35px;
   border: 1px solid #fc6c0c; 
   border-radius: 5px;
-  line-height: 50px;
   display: block;
   background: #ff8600;
   text-shadow: 0px 1px #454545;
-  color: #eee;
-  font-weight: bold;
+  color: white;
+  font-weight: 600;
   padding: 0 50px;
 }
+
+#wall_addPost
+{ 
+  height: 35px;
+  border: 1px solid #fc6c0c; 
+  border-radius: 5px;
+  display: block;
+  background: #ff8600;
+  text-shadow: 0px 1px #454545;
+  color: white;
+  font-weight: 600;
+  padding: 0 50px;
+  margin-top: 30px;
+}
+
 .index #register {
     margin-left: 40px;
 }
@@ -1297,6 +1312,7 @@ ul.as-selections {
     border-radius: 5px;
     background: orange;
     border: 1px solid #FC6C0C;
+    color: #ffffff;
     
 }
 /***** event page ******/
@@ -1429,7 +1445,9 @@ ul.as-selections {
 }
 .event .event_wall #wall_comment {
     float: left;
-    margin-top: 15px;
+    margin-top: 14px;
+    height: 28px;
+    margin-right: 165px;
 }
 .event .event_wall #Wall {
     margin: 0;
