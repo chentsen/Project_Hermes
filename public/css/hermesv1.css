@@ -1,4 +1,3 @@
-
 body { 
 	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 14px;
@@ -9,13 +8,17 @@ body {
 }
 div { display: block; }
 /*** form styles*****/
-#content_area form {margin: 20px; }
+#content_area form { }
 select {
-    margin: 12px;
+    margin: 10px;
+    font-size: 14px;
+}
+#editAccount{
+	
 }
 #editAccount textarea {
         margin: 10px 0;
-        width: 250px;
+        width: 235px;
 	font-size: 24px; 
         background: #ffffff;
         outline: 0;
@@ -26,7 +29,7 @@ select {
 }
 textarea {
         margin: 10px 0;
-        width: 350px;
+        width: 250px;
 	font-size: 24px; 
         background: #ffffff;
         outline: 0;
@@ -37,24 +40,27 @@ textarea {
 }
 #content_area input[type=text],
 #content_area input[type=password]{
-    margin: 10px 0px;
+    margin: 5px 0;
+    padding: 5px 0px 0px 5px;
 }
 input[type=text], input[type=password] {
-	width: 350px;
-	height: 50px;
+	
+	height: 35px;
 	font-size: 24px; 
+        line-height: 24px;
 	border: none;
         outline: 0;
         border: 1px solid orange;
         -moz-border-radius: 5px;
         border-radius: 5px;
         padding: 0 10px;
+        
     
 }     
 input[type="submit"] {
     
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     border: none;
     
 }
@@ -146,8 +152,11 @@ input[type=text]:first,input[type=password]:first {
     text-shadow: none;
 }
 /**** edit account ****/
+.account-edit #image {
+	margin-top: 20px;
+	margin-left: 20px;
+}
 .account-edit .upload-image {
-    margin-top: 20px;
     border-right: 1px solid #bbb;
     width: 285px;
 }
@@ -169,16 +178,17 @@ input[type=text]:first,input[type=password]:first {
 }
 #profilePic #profilePic_submit {
     margin-top: 10px;
-    margin-right: 40px;
+    margin-left: 50px;
 }
 
-#editAccount {
+.account-edit #editAccount {
     float: right;
     width: 280px;
+    margin-right: 20px;
 }
 #editAccount #submit{
-    margin-right: 10px;
-    margin-top: 30px;
+    margin-left: 40px;
+    margin-top: 10px;
 }
 #editAccount li{
     width: 275px;
@@ -204,6 +214,7 @@ input[type=text]:first,input[type=password]:first {
 }
 .profile .questions_flow a {
     color: white;
+    font-weight: bold;
 }
 .big_name {font-size: 36px; text-transform: capitalize; float: left;}
 .user_details { margin-bottom: 10px;}
@@ -230,6 +241,7 @@ input[type=text]:first,input[type=password]:first {
 .profile_rightCol {
     float: right;
     width: 430px;
+    overflow: hidden;
 }
 .profileDesc {
     border-radius: 5px;
@@ -250,7 +262,13 @@ input[type=text]:first,input[type=password]:first {
     
 }
 /*** friend picture ****/
-.friendsList { overflow: auto;}
+#friendsList ul {
+	overflow: hidden;
+	width: 260px;
+	margin: 0 auto;
+	
+
+}
 .profile_header {
     overflow: auto;
 }
@@ -262,9 +280,26 @@ input[type=text]:first,input[type=password]:first {
 .friendStatus {
     float: right;
 }
-.friend_list {float: left; padding: 5px 3px 0 5px;}
+.friend_list {float: left; padding: 5px 4px 0 4px;}
+.friends_block .view-friends,
+.upcoming_events .view-events
+{
+	text-align: center;
+	padding: 5px 0;
+	background: #bbb;
+}
+.so-ronery {
+		font-size: 14px;
+		font-weight: 600;
+		text-align: center;
+		padding: 20px 0;
+}
 
-.friend_pic img{ border-radius: 10px; }
+.friend_pic img{
+	border-radius: 3px;
+	border: 1px solid #454545;
+
+}
 /*** search page ****/
 .none-singleFound {
     margin-left: 15%;
@@ -375,7 +410,18 @@ input[type=text]:first,input[type=password]:first {
    .outside #content_area {margin-top:0px;}
    .outside .page {}
 /***** landing styles********/
-#login {margin-bottom: 30px;}
+.index .button input#login { margin-left: 60px;}
+.index form#login { 
+    float: left; 
+    /**margin-left: 150px; **/
+	margin-left: 360px;
+    padding: 40px 40px 40px 0px; 
+    /**background: url(../images/or-background.png) no-repeat right center;**/
+    
+}
+.index #registration{float: left; }
+.index #city { width: 120px; }
+.index h1 { color : orange; }
 .cms-text {
     font-size: 16px;
     overflow: auto;
@@ -390,7 +436,7 @@ input[type=text]:first,input[type=password]:first {
     margin-bottom: 30px;
     overflow: auto;
 }
-.out-logo a {
+.out-logo .logo {
     
      width: inherit;
     height: inherit;
@@ -409,18 +455,19 @@ input[type=text]:first,input[type=password]:first {
 
 .out-slogan {  margin-bottom: 0px;}
 .out-slogan h1 {
+    color: white;
     font-size: 40px;
     text-shadow: 0px 1px #bbb;
 }
 
 .out-preview {
-    margin-top: 50px;
+    margin-top: 10px;
     overflow: hidden;
 }
 .out-preview ul {
     
     overflow: auto;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     margin-left: 100px;
     
 }
@@ -448,26 +495,47 @@ input[type=text]:first,input[type=password]:first {
     margin: 20px auto;
     
 }
-.out-signup {
-    
+
+.index .out-signup {
+    margin-top: 20px;
+    overflow: hidden;
+    position: relative;
 }
-.out-signup h1 {
-    font-weight: normal;
-    font-size: 20px;
-    width: 206px;
-    height: 52px;
-    line-height: 52px;
-    margin: 0 auto;
+.index .out-logo {
+    position: relative;
+}
+.index .out-logo .signup-button {
+    float: right;
+    font-size: 40px;
+    margin: 40px 80px 0 0;
+    font-weight: bold;
+    color: #ff8600;
+}
+.index .out-signup h1 {
+    
+    font-size: 26px;
+
 
 }
+.index .signup-or {
+    position: absolute;
+    top: 100px;
+    right: 460px;
+    color: white;
+    font-size: 24px;
+}
 .out-signup a {
-    background-color: #3a9ecd;
-    padding: 15px 50px;
-    border-radius: 5px;
-    border: 1px solid #228cbe;
+    width: 261px;
+    height:70px;
+    text-indent: -9999px;
+    background: url('../images/facebook-login-button.png') no-repeat center center;
+    display: block;
+    float: right;
+    margin-top: 80px;
+    margin-right: 150px;
 }
 .out-signup a:hover {
-    background-color: #24a3df;
+    
 }
 
 /**top menu**/
@@ -539,7 +607,7 @@ input[type=text]:first,input[type=password]:first {
 /*** right block area ***/
 .block-body{
     background: #eee; 
-    overflow: auto;
+ 
     border-bottom-right-radius: 3px;
     border-bottom-left-radius:3px;
     color: #454545;
@@ -572,9 +640,8 @@ input[type=text]:first,input[type=password]:first {
     display: block;
 }
 .block-item h3 {
+    font-family: "Myriad Pro" ,verdana , tahoma, helvetica, sans-serif;
     text-transform: uppercase;
-    
-    font-family: 'century gothic',verdana , tahoma, helvetica, sans-serif;
 }
 .block-item {
     
@@ -654,7 +721,7 @@ input[type=text]:first,input[type=password]:first {
 
 #content_area .page {
         border-bottom: 1px solid #aaa;
-        overflow: auto;
+        overflow: hidden;
         padding-bottom: 20px;
 }
 #view-content {
@@ -667,14 +734,14 @@ input[type=text]:first,input[type=password]:first {
 }
 .view-wrapped {
     width: 640px;
-    min-height: 500px;
+    
     background: #f0f0f0;
      border-radius: 5px;
      height: 100% !important;
      color: #555;
      margin: 5px;
-     overflow: auto;
-     padding: 5px 10px;
+     overflow: hidden;
+     padding: 10px;
      
 }
 #content-page {
@@ -764,7 +831,7 @@ input[type=text]:first,input[type=password]:first {
     position: absolute;
     left: -80px;
     top: 53px;
-    background: #454545;
+    background: rgba(111, 111, 111, .2);
     margin:0;
     padding: 0;
     display: none;
@@ -772,9 +839,7 @@ input[type=text]:first,input[type=password]:first {
     width: 140px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    border: 1px solid #000;
-    
-    height: 80px;
+    height: 72px;
 }
 
 .icon_bar ul li .sub-settings li {
@@ -789,11 +854,14 @@ html .icon_bar ul li .sub-settings li a{
     text-align: right;
     width: 110px;
     padding: 10px;
+    font-size: 12px;
     font-weight: 600;
-    margin: 5px;
+    margin: 3px 5px 0px 5px;
+    background: #454545;
+    color: black;
 }
 html .icon_bar ul li .sub-settings li a:hover {
-    background: #767676;
+    background: #e0e0e0;
     
 }
 html .icon_bar ul li .sub-settings .first-setting a{
@@ -804,10 +872,13 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 /**** friend stuff*****/
 .friend_name {
+	
+	text-align: center;		
     list-style: none;
     padding: 3px 0 0 3px;
     font-weight: bold;
     font-size: 12px;
+	
 }
 /*** profile area ***/
 .left_col {
@@ -863,6 +934,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .profile #content_area .tag_input {
     margin: 0px;
     padding: 0px;
+    width: 280px;
+    
 }
 .profile li.as-result-item, li.as-message {
     display: none;
@@ -874,18 +947,18 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border: 1px solid #FC6C0C !important;
 }
 .centerform {
-    margin: 0 auto; 
-    width: 372px;
+    
+    width: 300px;
 }
 
-.button { margin-top: 30px; overflow: auto;}
+.button { margin-top: 10px; overflow: auto;}
 .inner_button {overflow: inherit;}
 /****** Buttons *********************
 *************************************
 *****Separate with a comma***********
 *************************************
 *****************************/
-.inner_button #login {margin-right: 100px;}
+.inner_button #login {}
 .inner_button #login, 
 .inner_button #register, 
 .inner_button #createEvent_submit,
@@ -894,18 +967,42 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit,
 #contact_submit,
 #profilePic_submit,
-#wall_addPost
-{ float: right;
-  height: 50px;
+#wall_addPost,
+#register
+{ 
+  height: 35px;
   border: 1px solid #fc6c0c; 
   border-radius: 5px;
-  line-height: 50px;
-
-  background: #ee8641;
+  display: block;
+  background: #ff8600;
   text-shadow: 0px 1px #454545;
-  color: #eee;
-  font-weight: bold;
+  color: white;
+  font-weight: 600;
   padding: 0 50px;
+}
+
+#wall_addPost
+{ 
+  height: 35px;
+  border: 1px solid #fc6c0c; 
+  border-radius: 5px;
+  display: block;
+  background: #ff8600;
+  text-shadow: 0px 1px #454545;
+  color: white;
+  font-weight: 600;
+  padding: 0 50px;
+  margin-top: 30px;
+}
+
+.index #register {
+    margin-left: 40px;
+}
+#password {
+    margin-bottom: 0px !important;
+}
+#password2 {
+    margin-top: 0px !important;
 }
 .inner_button #login:hover, 
 .inner_button #register:hover, 
@@ -921,7 +1018,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     text-shadow: 0px 1px #454545;
     background: #f9780d;
 }
-.inner_button { width:372px; margin: 0 auto;  }
+.inner_button {  }
 .inner_button .register_button {
     float:right;
    }
@@ -953,7 +1050,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 
 }
 #registration #betakey {
-    background: url("../images/beta-key-form.png") no-repeat 10px 15px #f8f8f8;
+    background: url("../images/beta-key-form.png") no-repeat 10px center #f8f8f8;
 
     
 }
@@ -961,7 +1058,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
    background: url("../images/last-name-form.png") no-repeat 10px center #f8f8f8;
 
 }
-#registration .city input{
+#registration #city{
     background: url("../images/city-form.png") no-repeat 10px center #f8f8f8;
 
 }
@@ -978,25 +1075,25 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .create_date {
     position: relative;
 }
+
 #createEvent #createEvent_shortDescription {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    width: 245px;
+  
+    width: 170px;
     float: right;
 
     z-index: 100;
 }
 #createEvent #createEvent_date_active {
-    width: 245px;
+    width: 170px;
     right: 0;
-    top: 0;
+    top: 0px;
     margin-left: 5px;
     position: absolute;
     z-index: 200;
 }
 #createEvent #createEvent_location {
 
-    width: 245px;
+    width: 170px;
     float: right;
     z-index: 300;
 }
@@ -1004,8 +1101,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border-radius: 5px;
     
 }
-#createEvent .centerform {height: 430px; margin: 10px 0px;}
-#createEvent .centerform li {height: 71px; line-height: 51px; margin: 10px 0px;}
+#createEvent .centerform {margin: 10px 0px;}
+#createEvent .centerform li {margin: 10px 0px; overflow: hidden;}
 #createEvent .centerform li .createEvent_text { font-size: 24px; width: 100px; margin: 10px 0px; }
 #createEvent .centerform .form_date {overflow: hidden;}
 
@@ -1042,11 +1139,12 @@ html .icon_bar ul li .sub-settings .last-setting a{
     position: relative;
 }
 /**** tags ******/
-
+#tag_category { width: 200px;}
 .tag_input_wrapper {
+    width: 300px;
     border: 1px solid orange;
-    position: absolute;
-    right: 70px;
+    /*position: absolute;
+    right: 70px;*/
 }
 ul.as-selections {
    
@@ -1088,7 +1186,7 @@ ul.as-selections {
     border-bottom: 1px solid #bbb;
     
     min-height: 100px;
-      overflow: auto;
+      overflow: hidden;
       
       
 }
@@ -1124,11 +1222,28 @@ ul.as-selections {
     display: none;
 }
 /**Dialogs*/
+#modal-content {
+    float: left;
+    
+    background: rgba(111,111,111,.2);
+    
+    border-radius: 5px;
+}
+.modal-wrapped {
+    overflow: hidden !important;
+    background: #f0f0f0;
+     border-radius: 5px;
+     height: 100% !important;
+     color: #555;
+     margin: 5px;
+     overflow: auto;
+     padding: 5px 10px;
+}
 .modalWindow { 
     position:absolute;
     background:#F0F0F0;
-    margin-left:30%;
-    margin-right:30%;
+    margin-left:35%;
+    margin-right:auto;
     z-index:3;
     top:50%;  
     margin-top:-250px; 
@@ -1141,15 +1256,15 @@ ul.as-selections {
     overflow: hidden;
     height:150%;
     z-index:2;
-    top:60px;;
+    top:0px;
 }
 .modalWindow #createEvent {
     color: #454545;
 }
 .closeBox {
-    overflow: auto;
     
 }
+
 .exitBox {
     float: right;
 }
@@ -1197,6 +1312,7 @@ ul.as-selections {
     border-radius: 5px;
     background: orange;
     border: 1px solid #FC6C0C;
+    color: #ffffff;
     
 }
 /***** event page ******/
@@ -1307,6 +1423,7 @@ ul.as-selections {
     width: 640px;
 }
 .event .event_wall .wall_text {
+	word-wrap: break-word;	
     float: left;
     border-radius: 5px;
     background: #bbb;
@@ -1318,17 +1435,25 @@ ul.as-selections {
 }
 .event .event_wall .wallpost a{
     margin-left: 7px;
-    color: transparent;
+    color: #454545;
     font-size: 14px;
+    text-decoration: underline;
 }
 .event .event_wall .wallpost a:hover {
-    color: orange;
-    text-decoration: underline;
+    
+    
 }
 .event .event_wall #wall_comment {
     float: left;
-    margin-top: 15px;
+    margin-top: 14px;
+    height: 28px;
+    margin-right: 165px;
 }
 .event .event_wall #Wall {
     margin: 0;
+}
+/*** event list page ***/
+.event-list .none-singleFound {
+		margin-top: 0;
+		margin-left: 0;
 }

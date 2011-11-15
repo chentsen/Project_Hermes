@@ -26,9 +26,13 @@ class ProfileController extends Hermes_Controller_SessionController
         $this->view->user = $this->curUser;
         $userflowModel = new Application_Model_UserflowModel($this->curUser);
         $options = array('formName'=>'profileSearch','fieldName' => 'profileSearch_field','viewScriptName'=>'_form_profileSearch.phtml','formAction'=>'/Search/index');
+        
+        
         $form = new Application_Form_Search($options);
         $this->view->form = $form;
-    	$userSettings = new Application_Model_UserSettings($this->mongoContainer,$this->curUser);
+    	
+        
+        $userSettings = new Application_Model_UserSettings($this->mongoContainer,$this->curUser);
     	if(!$userSettings->hasDescription($this->curUser)){
     		$userDescription = new Application_Form_PersonalDescription();
     		$this->view->userDescription = $userDescription;
@@ -40,6 +44,8 @@ class ProfileController extends Hermes_Controller_SessionController
 
     	$tagForm = new Application_Form_CreateTag();
     	$this->view->tagForm = $tagForm;
+        
+        
         //if logged in
     	if($this->identity){
 			$this->view->message = 'You are logged in.';

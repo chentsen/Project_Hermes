@@ -6,7 +6,7 @@
         </div>
         <div class="event_main">
             <div class="event_img">
-                <img height="200" width="200 "src="/images/placeholder.png" />
+                 <img src="/img/profile-pic/uid/<?=$this->identity ?>" height=200  width=200/>
             </div>
             <div class="event_right">
             <div class='event_date'>
@@ -24,10 +24,15 @@
 	
 <!--<?= $this->event->getLongDescription() ?>-->
 	
- <div class ="event_wall">
-     <h2 class="wall_title">Wall</h2> 
+<div class ="event_wall">
+    <h2 class="wall_title">Wall</h2>
+    <div id="posts">
+    </div>
 		<?= $this->DisplayEventWall($this->event,$this->identity) ?>
- </div>	
+ </div>
+ <div class="ajax_template" style="display:none">
+     <?= $this->partial('wall_post.phtml') ?>
+ </div>
 	
 </div>
 </div>

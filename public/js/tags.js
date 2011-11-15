@@ -1,6 +1,6 @@
 /**
  * 
- */
+ */     
 var Tags = {
 	showTagInput:false,
 	tagData:null,

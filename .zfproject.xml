@@ -40,6 +40,18 @@
         <controllerFile controllerName="Wall">
           <actionMethod actionName="index"/>
         </controllerFile>
+        <controllerFile controllerName="Async">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Asynctest">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="EventList">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Notification">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Login"/>
@@ -84,6 +96,18 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Wall">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Async">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Asynctest">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="EventList">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Notification">
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>

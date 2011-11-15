@@ -7,7 +7,7 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
         <div class="view-wrapped">
             <div class="profile_header">
                 <h1 class="big_name"><?= $this->name; ?>.</h1>
-                <? if ($this->isFriend){?>
+                <? if (!$this->isFriend){?>
                              <div class = "friendStatus">
                                 <a href ="/friend/friendRequest/requestee/<?= $this->email; ?>">
                                     Add
@@ -23,7 +23,7 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
                 <img src="/img/profile-pic/uid/<?=$this->user->getEmail();?>" height="100" width="100" />
             </div>
             <div class="profile_eventList">
-                <?= $this->DisplayEventFeed($this->user->getEmail()); ?>        
+                <?= $this->DisplayEventFeed($this->user->getEmail(), 3); ?>        
             </div>
             </div>
             <div class="profile_rightCol">

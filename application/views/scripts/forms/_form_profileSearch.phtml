@@ -9,14 +9,18 @@
         </div>
       <div class="icon_bar">
             <ul>
-                <!--<li class="friends-button">
-                  <a href="<?= $this->url(array('controller'=>'friend','action'=>'index')) ?>">
+                <li class="friends-button">
+                  <a href="<?= $this->url(array('controller'=>'event-list','action'=>'index')) ?>">
                       <img height="50" src="<?= $this->baseUrl('images/settings.png') ?>" /></a>
-                </li>-->
+                </li>
+                <li class="friends-button">
+                  <a href="<?= $this->url(array('controller'=>'notification','action'=>'index')) ?>">
+                      <img height="50" src="<?= $this->baseUrl('images/settings.png') ?>" /></a>
+                </li>
                  <li class="settings-button">
                   
                      <img height="50" src="<?= $this->baseUrl('images/settings.png') ?>" />
-                     
+                   
                      <ul class="sub-settings">
                          <li class="first-setting"><a href="<?= $this->url(array('controller'=>'account-edit','action'=>'index')) ?>">Edit Account Info</a></li>
                          <li class="last-setting"><a href="<?= $this->url(array('controller'=>'index','action'=>'logout')) ?>">Logout</a></li>

@@ -54,10 +54,17 @@ function getErrorHtml(formErrors, id)
 
 $(document).ready(function(){
     
+    /** drop down menu settings ***/
+    
+    $('html .icon_bar ul li .sub-settings li a:last').css({
+	'border-bottom-right-radius' : '5px',
+	'border-bottom-left-radius' : '5px'
+	 
+      }  
+    );
     /***** click menu top *****/
    $('.icon_bar ul .settings-button').click(function(){
         $(this).parent().find('ul.sub-settings').slideToggle('fast');
-         
         $(this).toggleClass('icon_bar_bg');
     });
 
@@ -120,9 +127,16 @@ $(document).ready(function(){
           });
       }
         BdOrange('input[type=text], input[type=password]', 'input[type=text], input[type=password]');
+        
         BdOrange('textarea', 'textarea');
         
-          
+        var BdRemove = function(noClass) {
+            $(noClass).focus(function(){
+                $(this).removeClass("change_border_color");
+            });
+            
+        } 
+        BdRemove('.profile #content_area .tag_input');
           
             /****** events page *******/
      //$( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});

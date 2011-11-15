@@ -33,6 +33,6 @@ class WallPost{
 		return $this->timestamp;
 	}
 	public function getPostId(){
-		return $this->postId;
+		return $this->postID;
 	}
 }
