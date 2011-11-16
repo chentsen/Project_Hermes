@@ -30,6 +30,7 @@ class Application_Form_EditAccount extends Zend_Form
     					 )
   				  ));
 		
+				
 		$lastName = new Zend_Form_Element_Text('lastName');
 		$lastName->setRequired(true)
                         ->setValue($options['lastName'])
@@ -45,6 +46,11 @@ class Application_Form_EditAccount extends Zend_Form
           				'isEmpty' => 'A lastname is required.'
     					 )
   				  ));
+		$gender = new Zend_Form_Element_Select('gender');
+		$gender->addMultiOptions(array('n'=>'Rather Not Say','m'=>'Male','f'=>'Female'))
+				->setValue($options['gender']);
+				
+				
                 $city = new Zend_Form_Element_Text('city');
 		$city->setRequired(true)
                                 ->setValue($options['city'])
@@ -69,7 +75,7 @@ class Application_Form_EditAccount extends Zend_Form
 		$description->setRequired(true)->addValidator('StringLength',array('max'=>200,'allowWhiteSpace'=>true))->setValue($options['description']);
 		$this->setDecorators(array(array('ViewScript',array('viewScript'=>'_form_accountEdit.phtml'))));
 		
-		$this->addElements(array($submit, $firstName, $city, $lastName,$description));
+		$this->addElements(array($submit, $gender, $firstName, $city, $lastName,$description));
 		$this->setElementDecorators(array('ViewHelper'),null,false);
                 
                 
