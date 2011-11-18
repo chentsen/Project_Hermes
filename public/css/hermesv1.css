@@ -227,7 +227,7 @@ input[type=text]:first,input[type=password]:first {
 }
 .profile .questions_flow a {
     color: white;
-    font-weight: bold;
+    font-weight: 600;
 }
 .big_name {font-size: 36px; text-transform: capitalize; float: left;}
 .user_details { margin-bottom: 10px;}
@@ -655,6 +655,7 @@ input[type=text]:first,input[type=password]:first {
 .block-item h3 {
     font-family: "Myriad Pro" ,verdana , tahoma, helvetica, sans-serif;
     text-transform: uppercase;
+	margin-top: 3px;
 }
 .block-item {
     
@@ -1467,6 +1468,22 @@ ul.as-selections {
 }
 .event .event_wall #Wall {
     margin: 0;
+}
+.event .event_wall .wall_text {
+	position: relative;
+}
+.event .event_wall .delete_post {
+	position: absolute;
+    right: 7px;
+    top: 0px;
+    padding: 5px;
+	text-indent: -9999px;
+	
+}
+.event .event_wall .delete_post:hover {
+	
+    background-size: 20px;
+    background: url('../images/exit-button.png') no-repeat center center;
 }
 /*** event list page ***/
 .event-list .none-singleFound {

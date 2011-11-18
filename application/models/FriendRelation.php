@@ -53,6 +53,7 @@ class Application_Model_FriendRelation{
 		$this->dm->flush();
 	}
 	public function rejectFriendRequest(FriendRequest $friendRequest){
+		
 		$this->dm->remove($friendRequest);
 		$this->dm->flush();
 		//remove friend request and do nothing

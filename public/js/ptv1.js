@@ -64,11 +64,13 @@ $(document).ready(function(){
     );
     /***** click menu top *****/
    $('.icon_bar ul .settings-button').click(function(){
-        $(this).parent().find('ul.sub-settings').slideToggle('fast');
+        $(this).parent().find('ul.sub-settings').show('fast');
         $(this).toggleClass('icon_bar_bg');
     });
 
-    
+    $(document).click(function(){  
+		 $('ul.sub-settings').hide(); //hide the button
+	  });
   
     $('.eventFeedObject:last-child').css({
         'border-bottom-right-radius':'5px',

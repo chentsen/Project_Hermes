@@ -107,7 +107,9 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 			if(!$friendRelation->isFriend($user->result->getEmail())){
 				echo "<div class = 'user_addFriend'>";
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
+				
 				echo "<a href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
+				
 				echo "</div>";
 			}
 			echo "<div class = 'user_viewProfile'>";
