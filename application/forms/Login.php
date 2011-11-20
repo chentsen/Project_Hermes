@@ -48,7 +48,7 @@ class Application_Form_Login extends Zend_Form
 		$this->setDecorators(array(array('ViewScript',array('viewScript'=>'_form_login.phtml'))));
 		
 		$this->addElements(array($email,$password,$login));
-		$this->setElementDecorators(array('ViewHelper'),null,false);
+		$this->setElementDecorators(array('ViewHelper','Errors'),null,false);
     	/* Form Elements & Other Definitions Here ... */
     }
 
