@@ -41,13 +41,13 @@ textarea {
 #content_area input[type=text],
 #content_area input[type=password]{
     margin: 5px 0;
-    padding: 5px 0px 0px 5px;
+    padding: 5px 0px 5px 5px;
 }
 input[type=text], input[type=password] {
 	
-	height: 35px;
-	font-size: 24px; 
-        line-height: 24px;
+	height: 23px;
+	font-size: 18px; 
+        line-height: 18px;
 	border: none;
         outline: 0;
         border: 1px solid orange;
@@ -1006,7 +1006,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   color: white;
   font-weight: 600;
   padding: 0 50px;
-  margin-top: 30px;
+  margin: 0px;
 }
 
 .index #register {
@@ -1113,13 +1113,20 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 #createEvent #createEvent_longDescription {
     border-radius: 5px;
+    font-size: 18px;
+    margin: 0px;
+    width: 278px;
     
 }
-#createEvent .centerform {margin: 10px 0px;}
-#createEvent .centerform li {margin: 10px 0px; overflow: hidden;}
-#createEvent .centerform li .createEvent_text { font-size: 24px; width: 100px; margin: 10px 0px; }
-#createEvent .centerform .form_date {overflow: hidden;}
+#createEvent_submit {
+	padding: 0 85px !important;
+}
 
+#createEvent .centerform {margin: 10px 0px 0px 0px;}
+#createEvent .centerform li {margin: 0px 0px; overflow: hidden;}
+#createEvent .centerform li .createEvent_text { font-size: 18px; width: 100px; margin: 13px 0px; }
+#createEvent .centerform .form_date {overflow: hidden;}
+#createEvent_private { font-size: 18px;}
 /*** app style profile page ***/
 #personalDescription_description, #tag_input {
      border-radius: 5px;
@@ -1334,7 +1341,7 @@ ul.as-selections {
 }
 /***** event page ******/
 .event .event_header {
-    overflow: auto;
+    overflow: hidden;
     margin: 10px 0;
 }
 .event .event_header .event_title {
@@ -1355,8 +1362,6 @@ ul.as-selections {
 .event .event_main .event_img {
     float: left;
     padding: 10px;
-    border-radius: 5px;
-     background: #ccc;
 }
 .event .event_main .event_img img{
     
@@ -1388,10 +1393,8 @@ ul.as-selections {
 }
 .event .interested_list .waitingList img,
 .event .event_wall .wall_image img
-{
-    padding: 10px;
-    border-radius: 5px;
-    background: #ccc;
+{   margin: 0px 10px 10px 1px;
+    /*padding: 10px;*/
 }
 .event .interested_list .waitingList a {
     color: orange;
@@ -1428,7 +1431,7 @@ ul.as-selections {
 .event .event_wall .wall_name {
     font-size: 18px;
     float: left;
-    margin: 25px;
+    margin: 20px 10px 10px 10px;
     
 }
 .event .event_wall .posts {
@@ -1438,16 +1441,17 @@ ul.as-selections {
     float: left;
     position: relative;
     width: 640px;
+    margin-bottom: 10px;
 }
 .event .event_wall .wall_text {
 	word-wrap: break-word;	
     float: left;
     border-radius: 5px;
     background: #bbb;
-    margin: 15px 0 0 0;
+    margin: 5px 0px 0px 10px;
     font-size: 16px;
     padding: 10px;
-    width: 420px;
+    width: 425px;
     
 }
 .event .event_wall .wallpost a{
@@ -1462,9 +1466,11 @@ ul.as-selections {
 }
 .event .event_wall #wall_comment {
     float: left;
-    margin-top: 14px;
-    height: 28px;
-    margin-right: 165px;
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 430px !important;
 }
 .event .event_wall #Wall {
     margin: 0;
@@ -1485,6 +1491,8 @@ ul.as-selections {
     background-size: 20px;
     background: url('../images/exit-button.png') no-repeat center center;
 }
+
+
 /*** event list page ***/
 .event-list .none-singleFound {
 		margin-top: 0;
