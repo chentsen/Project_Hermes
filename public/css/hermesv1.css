@@ -874,7 +874,7 @@ html .icon_bar ul li .sub-settings li a{
     font-size: 12px;
     font-weight: 600;
     margin: 3px 5px 0px 5px;
-    background: #454545;
+    background: #292929;
     color: black;
 }
 html .icon_bar ul li .sub-settings li a:hover {
@@ -914,6 +914,18 @@ html .icon_bar ul li .sub-settings .last-setting a{
     color: #454545;
     border-top:1px solid #fff;
     border-bottom: 1px solid #ccc;
+	height: 42px;
+	overflow: hidden;
+}
+.mini-feed {
+		float: left;
+		margin: 5px 0 0 0;
+}
+.mini-feed h4 {
+		margin: 1px 0 2px 0;
+}
+.eventFeedObject p {
+		float: left;
 }
 .right_col {
     overflow: auto;
