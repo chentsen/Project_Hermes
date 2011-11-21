@@ -1,12 +1,12 @@
 <?php
-class Zend_View_Helper_DisplayFriends extends Zend_View_Helper_Abstract{
+class Zend_View_Helper_DisplayFriendsPage extends Zend_View_Helper_Abstract{
 	//eventually incorporate pagination
 	private $friendRelation;
-	public function DisplayFriends($identity){
+	public function DisplayFriendsPage($identity){
 		$this->friendRelation = new Application_Model_FriendRelation($identity);
 		if($this->friendRelation){
 			$list = $this->friendRelation->getFriendList();
-			echo '<div id = "friendsList">';
+			echo '<div id = "">';
 			echo '<ul>';
 			$i = 0;
 			if($list){
@@ -16,8 +16,10 @@ class Zend_View_Helper_DisplayFriends extends Zend_View_Helper_Abstract{
                                         echo '<li class="friend_list"><div class="friend_pic">';
                                         echo "<a href='/profile/public/email/{$friend->getEmail()}'>";
                                         echo "<img src='/img/profile-pic/uid/{$friend->getEmail()}' height=75  width=75/></a></div><div class='friend_name'>";
+										
                                        
 					echo "{$friend->getFirstName()} {$friend->getLastName()}";
+					echo "<div class='friend-city'>{$friend->getCity()}</div>";
 					echo '</div></li>';
 					
 					

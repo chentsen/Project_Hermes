@@ -47,12 +47,13 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
                 echo 'Event Creator</a>';
                
             }*/
-            echo "<a href = '/event/index/eid/". $feedObject->getEid()."'>";
+            //echo "<a href = '/event/index/eid/". $feedObject->getEid()."'>";
             if($feedObject->getEvent())
-                
-                    echo $feedObject->getEvent()->getLocation();                
-		echo '<br />On '.$feedObject->getDate()->format('m/d');
-                echo '<br/>@ '.$feedObject->getShortDescription();
-                echo '</a>';
+               {
+				echo '<img style="float: left;" src="/images/meet-people.png" width="50" /><div class="mini-feed">';
+                echo '<h4>'.$feedObject->getShortDescription().' @ '.$feedObject->getEvent()->getLocation().'</h4>';                
+				echo 'on '.$feedObject->getDate()->format('m/d');
+                echo '</div>';
+			   }
 	}
 }
