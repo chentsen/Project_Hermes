@@ -36,8 +36,8 @@ class Application_Form_CreateEvent extends Zend_Form{
 		$year = new Zend_Form_Element_Select('createEvent_year');
 		$year->addMultiOption(2011,'2011');*/
 		
-		$private = new Zend_Form_Element_Select('createEvent_private');
-		$private->setMultiOptions(array("y"=>"yes","n"=>"no"));		
+		//$private = new Zend_Form_Element_Select('createEvent_private');
+		//$private->setMultiOptions(array("y"=>"yes","n"=>"no"));		
 		
 		$private = new Zend_Form_Element_Select('createEvent_private');
 		$private->setMultiOptions(array("n"=>"shouldn't","y"=>"should"));	
