@@ -1323,8 +1323,12 @@ ul.as-selections {
 }
 /**** dialog questions ***/
 .questions-window h1{
-   
 }
+
+.required {
+	font-size: 16px;
+}
+
 /*** flash messages***/
 #flashMessages {
     
