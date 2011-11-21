@@ -24,8 +24,9 @@ class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
 	
 	public function getFriendAcceptFeedMessage(FeedObject $feedObject){
 		$creatorEmail = $feedObject->getEmail();
-		echo "You and <a href='/profile/public/email/{$creatorEmail}'> ".addslashes($feedObject->getFirstName())." ".addslashes($feedObject->getLastName())."</a> Became friends!";
-		echo '<br /> at '.$feedObject->getDate()->format('Y-m-d H:i:s');
+		
+		echo "You and <a href='/profile/public/email/{$creatorEmail}'> ".addslashes($feedObject->getFirstName())." ".addslashes($feedObject->getLastName())."</a> became friends.";
+		echo '<br /> <span>'.$feedObject->getDate()->format('F jS, Y h:i A').'</span>';
 	}
 
 }

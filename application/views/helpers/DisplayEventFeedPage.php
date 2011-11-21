@@ -16,16 +16,16 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 			 $feedObjects = $feed->getFeedObjects();
 			 foreach($feedObjects as $feedObject){
 			 	
-			 	echo "<div class = 'eventFeedObject'>";
+			 	echo "<ul class= 'event-object'>";
 				if(!$feedObject->getHidden()){
-					echo '<p>';
+					echo '<li>';
                                         
 					//print_r($feedObject);
 					$this->constructFeedMessage($feedObject);	
 					
-                                        echo '</p>';
+                                        echo '</li>';
 				}
-			 	echo "</div>";
+			 	echo "</ul>";
 				
 			 }		
 		} else {
@@ -46,12 +46,12 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
                 echo 'Event Creator</a>';
                
             }*/
-            echo "<a href = '/event/index/eid/". $feedObject->getEid()."'>";
+            echo "Place: <a href = '/event/index/eid/". $feedObject->getEid()."'>";
             if($feedObject->getEvent())
                 
-                    echo $feedObject->getEvent()->getLocation();                
-		echo '<br />On '.$feedObject->getDate()->format('m/d');
-                echo '<br/>@ '.$feedObject->getShortDescription();
-                echo '</a>';
+                echo $feedObject->getEvent()->getLocation().'</a>';                
+				echo '<br />Date: '.$feedObject->getDate()->format('M d, Y');
+                echo '<br/>Activity: '.$feedObject->getShortDescription();
+                //echo '<br />More Info: '. $feedObject->getLongDescription();
 	}
 }
