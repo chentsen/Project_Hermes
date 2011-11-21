@@ -895,7 +895,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     padding: 3px 0 0 3px;
     font-weight: bold;
     font-size: 12px;
-	
+	word-wrap: break-word;
 }
 /*** profile area ***/
 .left_col {
@@ -1103,7 +1103,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #createEvent #createEvent_date_active {
     width: 170px;
     right: 0;
-    top: -5px;
+    top: 0px;
     margin-left: 5px;
     position: absolute;
     z-index: 200;
@@ -1506,11 +1506,26 @@ ul.as-selections {
 .event-list h1{
 		margin-bottom: 5px;
 }
+.notification .notification-object {
+		overflow: hidden;
+}
 .notification .notification-object,
 .event-list ul.event-object {
+		
 		margin: 10px 0px 10px 10px;
 }
 .notification .notification-object span {
+		color: #bbb;
+		font-size: 10px;
+}
+
+.individual-object {
+		margin-top: 3px;
+		float: left;
+}
+/*** friend page ****/
+.friend-city {
+		font-weight: normal;
 		color: #bbb;
 		font-size: 10px;
 }
