@@ -424,12 +424,14 @@ input[type=text]:first,input[type=password]:first {
    .outside #content_area {margin-top:0px;}
    .outside .page {}
 /***** landing styles********/
-.index .button input#login { margin-left: 60px;}
+.index .button input#login {
+	width: 210px;
+	}
 .index form#login { 
     float: left; 
     /**margin-left: 150px; **/
 	margin-left: 360px;
-    padding: 40px 40px 40px 0px; 
+    padding: 10px 40px 40px 0px; 
     /**background: url(../images/or-background.png) no-repeat right center;**/
     
 }
