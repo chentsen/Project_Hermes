@@ -64,12 +64,19 @@ $(document).ready(function(){
     );
     /***** click menu top *****/
    $('.icon_bar ul .settings-button').click(function(){
-        $(this).parent().find('ul.sub-settings').show('fast');
+        $(this).find('ul.sub-settings').show('fast');
+        $(this).toggleClass('icon_bar_bg');
+    });
+   $('.icon_bar ul .friends-button').click(function(){
+        $(this).find('ul.sub-setting2').show('fast');
         $(this).toggleClass('icon_bar_bg');
     });
 
     $(document).click(function(){  
 		 $('ul.sub-settings').hide(); //hide the button
+	  });
+	$(document).click(function(){  
+		 $('ul.sub-setting2').hide(); //hide the button
 	  });
   
     $('.eventFeedObject:last-child').css({

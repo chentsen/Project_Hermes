@@ -241,7 +241,8 @@ input[type=text]:first,input[type=password]:first {
     margin-bottom: 10px;
 }
 .profile_eventList {
-   
+		width: 180px;
+		overflow: hidden;
     background: #ccc;
     padding: 10px;
     border-radius: 5px;
@@ -278,7 +279,7 @@ input[type=text]:first,input[type=password]:first {
 #friendsList ul {
 	overflow: hidden;
 	width: 260px;
-	margin: 0 auto;
+	margin: 0 auto 5px auto;
 	
 
 }
@@ -623,7 +624,7 @@ input[type=text]:first,input[type=password]:first {
 /*** right block area ***/
 .block-body{
     background: #eee; 
- 
+    overflow: hidden;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius:3px;
     color: #454545;
@@ -825,12 +826,14 @@ input[type=text]:first,input[type=password]:first {
     float: right;
     height: 60px;
 }
-.icon_bar ul {
+.icon_bar .top-bar {
     height: 50px;
     margin-top: 7px;
     
 }
-.icon_bar ul li {
+.icon_bar .top-bar .settings-button,
+.icon_bar .top-bar .notifications-button,
+.icon_bar .top-bar .friends-button{
     list-style: none;
     float: left;
     position: relative; 
@@ -842,7 +845,8 @@ input[type=text]:first,input[type=password]:first {
 .icon_bar_bg {
     background: rgba(47, 47, 47, .2);
 }
-.icon_bar ul li:hover {
+.icon_bar .sub-settings li:hover,
+.icon_bar .sub-settings2 li:hover{
     background: rgba(47, 47, 47, .2);
 }
 
@@ -860,7 +864,36 @@ input[type=text]:first,input[type=password]:first {
     border-bottom-right-radius: 5px;
     height: 72px;
 }
+.icon_bar ul li .sub-setting2 {
+		position: absolute;
+    left: -140px;
+    top: 53px;
+    background: rgba(111, 111, 111, .2);
+    margin:0;
+    padding: 0;
+    display: none;
+    float: left;
+    width: 200px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
+}
+.icon_bar #friendRequests {
+		background: #454545;
+		margin: 5px;
+		padding: 5px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		min-height: 100%;
+}
+.icon_bar ul.sub-setting2 li.friend-requests
+{
+		width: 200px;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    background: none;
+}
 .icon_bar ul li .sub-settings li {
     width: 140px;
     margin: 0;
@@ -868,7 +901,8 @@ input[type=text]:first,input[type=password]:first {
     clear: both;
     background: none;
 }
-html .icon_bar ul li .sub-settings li a{
+html .icon_bar ul li .sub-settings li a,
+html .icon_bar ul li .sub-setting2 li a{
     float: right;
     text-align: right;
     width: 110px;
@@ -876,7 +910,7 @@ html .icon_bar ul li .sub-settings li a{
     font-size: 12px;
     font-weight: 600;
     margin: 3px 5px 0px 5px;
-    background: #292929;
+    background: #454545;
     color: black;
 }
 html .icon_bar ul li .sub-settings li a:hover {
