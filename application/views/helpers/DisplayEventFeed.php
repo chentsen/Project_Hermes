@@ -29,7 +29,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 			 }		
 		}
 		if($i >= $length)
-			$html = '<a class="view-events" href="/event-list">View Events</a>';
+			$html = '<a class="view-events" href="/event-list">View all events</a>';
 		if($i == 0)
 			$html = '<a class="so-ronery">You have no events right now.</a>';
 		

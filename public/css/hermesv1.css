@@ -226,7 +226,7 @@ input[type=text]:first,input[type=password]:first {
     
 }
 .profile .questions_flow a {
-    color: white;
+    color: white !important;
     font-weight: 600;
 }
 .big_name {font-size: 36px; text-transform: capitalize; float: left;}
@@ -735,7 +735,7 @@ input[type=text]:first,input[type=password]:first {
 	margin-top: 80px;
 }
 #content_area a {
-		color: #ff8600;
+		color: #454545;
 }
 
 #content_area .page {
@@ -1181,6 +1181,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .tag_input_wrapper {
     width: 300px;
     border: 1px solid orange;
+    margin: 10px 0px;
+    border-radius: 5px;
     /*position: absolute;
     right: 70px;*/
 }
@@ -1202,7 +1204,6 @@ ul.as-selections {
 .tag_dropdown {
     position: absolute;
     right: 5px;
-    bottom: -15px;
     font-size: 14px;
     font-weight: bold;
     
@@ -1210,7 +1211,7 @@ ul.as-selections {
 .tags_area {
     z-index: -1;
     min-height: 100px;
-   
+    margin-bottom: 10px;
     padding: 5px 0px 0px 0px;
     border-bottom: 1px solid white;
   
