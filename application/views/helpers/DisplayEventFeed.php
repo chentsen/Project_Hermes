@@ -51,7 +51,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
             if($feedObject->getEvent())
                {
 				echo '<img style="float: left;" src="/images/meet-people.png" width="50" /><div class="mini-feed">';
-                echo '<h4>'.$feedObject->getShortDescription().' @ '.$feedObject->getEvent()->getLocation().'</h4>';                
+                echo '<h4><a href = \'/event/index/eid/'. $feedObject->getEid().'\'>'.$feedObject->getShortDescription().' @ '.$feedObject->getEvent()->getLocation().'</a></h4>';                
 				echo 'on '.$feedObject->getDate()->format('m/d');
                 echo '</div>';
 			   }

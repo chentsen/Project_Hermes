@@ -425,17 +425,17 @@ input[type=text]:first,input[type=password]:first {
    .outside #content_area {margin-top:0px;}
    .outside .page {}
 /***** landing styles********/
-.index .button input#login { margin-left: 60px;}
+.index .button input#login { width: 203px;}
 .index form#login { 
     float: left; 
     /**margin-left: 150px; **/
-	margin-left: 360px;
+	margin-left: 390px;
     padding: 40px 40px 40px 0px; 
     /**background: url(../images/or-background.png) no-repeat right center;**/
     
 }
 .index #registration{float: left; }
-.index #city { width: 120px; }
+.index #city { /*width: 120px; */}
 .index h1 { color : orange; }
 .cms-text {
     font-size: 16px;
@@ -510,9 +510,15 @@ input[type=text]:first,input[type=password]:first {
     margin: 20px auto;
     
 }
-
+.index .centerform {
+		width: 210px;
+		
+}
+.index .centerform h1 {
+		margin-bottom: 5px;
+}
 .index .out-signup {
-    margin-top: 20px;
+
     overflow: hidden;
     position: relative;
 }
@@ -948,10 +954,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
     color: #454545;
     border-top:1px solid #fff;
     border-bottom: 1px solid #ccc;
-	height: 42px;
+	
 	overflow: hidden;
 }
 .mini-feed {
+		width: 200px;
 		float: left;
 		margin: 5px 0 0 0;
 }
@@ -1059,7 +1066,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .index #register {
-    margin-left: 40px;
+   width: 205px;
 }
 #password {
     margin-bottom: 0px !important;
@@ -1211,10 +1218,17 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /**** tags ******/
 #tag_category { width: 200px;}
 .tag_input_wrapper {
+		margin: 0 auto;
+	
     width: 300px;
     border: 1px solid orange;
     /*position: absolute;
     right: 70px;*/
+}
+.tag-wrapper {
+		background: #ddd;
+		padding: 5px;
+		border: 1px solid white;
 }
 ul.as-selections {
    
@@ -1244,7 +1258,7 @@ ul.as-selections {
     min-height: 100px;
    
     padding: 5px 0px 0px 0px;
-    border-bottom: 1px solid white;
+    
   
   
 }
@@ -1252,9 +1266,7 @@ ul.as-selections {
     text-align: right;
 }
 .tags_base {
-    z-index: -1;
-    border-bottom: 1px solid #bbb;
-    
+    z-index: -1;    
     min-height: 100px;
       overflow: hidden;
       
@@ -1309,6 +1321,9 @@ ul.as-selections {
      margin: 5px;
      overflow: auto;
      padding: 5px 10px;
+}
+.index .modalWindow {
+		margin-left: 40%;
 }
 .modalWindow { 
     position:absolute;
