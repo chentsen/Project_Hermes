@@ -1234,6 +1234,7 @@ ul.as-selections li.as-original {
 }
 ul.as-selections {
     border: none !important;
+    border-radius: 5px;
 }
 .tag_dropdown {
     position: absolute;
@@ -1567,6 +1568,18 @@ ul.as-selections {
 		
 		margin: 10px 0px 10px 10px;
 }
+
+.event-object {
+    border-top:1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    height: 42px;
+    margin: 0 !important;
+    padding: 10px;
+
+}
+
+.event-object first
+
 .notification .notification-object span {
 		color: #bbb;
 		font-size: 10px;
