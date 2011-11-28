@@ -88,12 +88,14 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 		//return $returnString;
 	}
 	private function printUserResult(Documents\Search\UserResult $user,$identity){
-	
-
+				
+				
+				
             if($user->result->getEmail()!=$identity){
 				
 			echo "<div class = 'user_result'>";
 			$friendRelation = new Application_Model_FriendRelation($identity);
+			
 				$email = $user->result->getEmail();			
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
                         echo '<div class="common_value">';
@@ -104,7 +106,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                         echo '</div></a><div class="in_common"><h3>Tags in Common</h3></div></div>';
 			echo "<div class='user_info'><h2>{$user->result->getFirstName()}</h2>";
                         
-			if(!$friendRelation->isFriend($user->result->getEmail())){
+			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->createFriendRequest($user->result->getEmail())){
 				echo "<div class = 'user_addFriend'>";
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
 				

@@ -26,7 +26,7 @@ class Application_Model_FriendRelation{
 		$friendUser = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$friendIdentity));
 	//	echo $friendUser->getEmail();
 		//echo $friendUser;
-                echo $friendIdentity;
+                //echo $friendIdentity;
 		$friendRequest = $this->dm->getRepository('Documents\FriendRequest')->findOneBy(array('requester.$id'=>$friendUser->getUid(),'requestee.$id'=>$this->currentUser->getUid()));
 	
 		$friendRequest2 = $this->dm->getRepository('Documents\FriendRequest')->findOneBy(array('requester.$id'=>$this->currentUser->getUid(),'requestee.$id'=>$friendUser->getUid()));
@@ -41,8 +41,10 @@ class Application_Model_FriendRelation{
 					$this->dm->flush();
 					return true;
 				}else return false;	
-		}
-		
+			return true;
+		} 
+		else
+			return false;
 		//tomorrow 1 test isFriend is working 2create an accept friend request page 3 and a reject friend page 4 create addFriendRejectFriend implementation
 	}
 	public function acceptFriendRequest(FriendRequest $friendRequest){
@@ -57,6 +59,10 @@ class Application_Model_FriendRelation{
 		$this->dm->remove($friendRequest);
 		$this->dm->flush();
 		//remove friend request and do nothing
+	}
+	public function requestMade() {
+		$friendRequest = $this->dm->getRepository('Documents\FriendRequest')->findOneBy(array('requester.$id'=>$friendUser->getUid(),'requestee.$id'=>$this->currentUser->getUid()));
+		return $friendRequest;
 	}
 	public function getRequestList(){
 		$query = $this->currentUser->getUid();

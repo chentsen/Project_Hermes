@@ -243,10 +243,9 @@ input[type=text]:first,input[type=password]:first {
 .profile_eventList {
 		width: 180px;
 		overflow: hidden;
-    background: #ccc;
-    padding: 10px;
+		margin: 0 10px;
     border-radius: 5px;
-    height: 190px;
+		
 }
 .profile_image img{
     width: 180px;
@@ -956,6 +955,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border-bottom: 1px solid #ccc;
 	
 	overflow: hidden;
+}
+.profile .mini-feed {
+		width: 120px;
 }
 .mini-feed {
 		width: 200px;
