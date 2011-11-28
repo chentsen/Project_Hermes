@@ -426,18 +426,22 @@ input[type=text]:first,input[type=password]:first {
    .outside .page {}
 /***** landing styles********/
 .index .button input#login {
-	width: 210px;
+	width: 209px;
 	}
 .index form#login { 
     float: left; 
-    /**margin-left: 150px; **/
-	margin-left: 360px;
-    padding: 10px 40px 40px 0px; 
+    margin-left: 360px;
+    padding: 10px 40px 40px 0px;
+}
+.index form#login { 
+    float: left; 
+	margin-left: 358px;
+    padding: 40px 40px 40px 0px; 
     /**background: url(../images/or-background.png) no-repeat right center;**/
     
 }
 .index #registration{float: left; }
-.index #city { width: 120px; }
+.index #city { /*width: 120px; */}
 .index h1 { color : orange; }
 .cms-text {
     font-size: 16px;
@@ -483,7 +487,7 @@ input[type=text]:first,input[type=password]:first {
 }
 .out-preview ul {
     
-    overflow: auto;
+    overflow: hidden;
     margin-bottom: 20px;
     margin-left: 100px;
     
@@ -494,13 +498,13 @@ input[type=text]:first,input[type=password]:first {
 }
 .out-preview ul li h3 {
     font-weight: normal;
-   width: 245px;
     font-size: 16px;
 }
-.out-one {margin-right:40px;}
-.out-one h3 {margin-left: 12px;}
-.out-two h3{ margin-left: 8px;}
-.out-three h3{margin-left: 20px;}
+.out-one h3 {margin-left: 30px;}
+.out-one img {margin-right: 22px;}
+.out-two h3{ margin-left: 14px;}
+.out-three h3{margin-left: 7px;}
+.out-three {margin-right: 10px;}
 .out-preview ul li h1 {
     font-size: 100px;
     margin-top: 20px;
@@ -512,9 +516,15 @@ input[type=text]:first,input[type=password]:first {
     margin: 20px auto;
     
 }
-
+.index .centerform {
+		width: 210px;
+		
+}
+.index .centerform h1 {
+		margin-bottom: 5px;
+}
 .index .out-signup {
-    margin-top: 20px;
+
     overflow: hidden;
     position: relative;
 }
@@ -950,10 +960,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
     color: #454545;
     border-top:1px solid #fff;
     border-bottom: 1px solid #ccc;
-	height: 42px;
+	
 	overflow: hidden;
 }
 .mini-feed {
+		width: 200px;
 		float: left;
 		margin: 5px 0 0 0;
 }
@@ -1061,7 +1072,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .index #register {
-    margin-left: 40px;
+   width: 205px;
 }
 #password {
     margin-bottom: 0px !important;
@@ -1213,12 +1224,19 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /**** tags ******/
 #tag_category { width: 200px;}
 .tag_input_wrapper {
+		margin: 0 auto;
+	
     width: 300px;
     border: 1px solid orange;
     margin: 10px 0px;
     border-radius: 5px;
     /*position: absolute;
     right: 70px;*/
+}
+.tag-wrapper {
+		background: #ddd;
+		padding: 5px;
+		border: 1px solid white;
 }
 ul.as-selections {
    
@@ -1248,7 +1266,7 @@ ul.as-selections {
     min-height: 100px;
     margin-bottom: 10px;
     padding: 5px 0px 0px 0px;
-    border-bottom: 1px solid white;
+    
   
   
 }
@@ -1256,9 +1274,7 @@ ul.as-selections {
     text-align: right;
 }
 .tags_base {
-    z-index: -1;
-    border-bottom: 1px solid #bbb;
-    
+    z-index: -1;    
     min-height: 100px;
       overflow: hidden;
       
@@ -1313,6 +1329,9 @@ ul.as-selections {
      margin: 5px;
      overflow: auto;
      padding: 5px 10px;
+}
+.index .modalWindow {
+		margin-left: 40%;
 }
 .modalWindow { 
     position:absolute;

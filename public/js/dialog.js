@@ -44,5 +44,27 @@ var Dialog = {
 		$('.dialogs #createEvent_longDescription, #createEvent_location, #createEvent_shortDescription').css({'color': '#bbb'}).focus(function(){
 		    $(this).css({'color': '#000'}).val('');//.unbind(event);
 		   });
+	},
+	loadLoginData:function(){
+		function BgRemove(nClass) {
+                if($(nClass).val() == '')
+                {
+                        $(nClass).focus(function(){
+								$(nClass).addClass('removebg');
+                });
+						$(nClass).blur(function(){
+						 $(nClass).removeClass('removebg');
+						});
+				}
+               
+           }
+          
+          BgRemove('.dialogs #email');
+          BgRemove('.dialogs #firstName');
+          BgRemove('.dialogs #lastName');
+          BgRemove('.dialogs #city');
+		  BgRemove('.dialogs #password');
+		  BgRemove('.dialogs #password2');
+          BgRemove('.dialogs #betakey');
 	}
 };

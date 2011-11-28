@@ -156,21 +156,7 @@ $(document).ready(function(){
 
      
            //email 
-           function BgRemove(nClass) {
-                if($(nClass).val() == '')
-                {
-                        $(nClass).removeClass('removebg');
-                }
-               else {
-                   $(nClass).addClass('removebg');
-               }
-           }
-          
-          BgRemove('#email');
-          BgRemove('#firstName');
-          BgRemove('#lastName');
-          BgRemove('#city');
-          BgRemove('#betakey');
+           
           
       
       /** disable highlights ***/
