@@ -69,10 +69,7 @@ class Application_Model_EventModel{
   }	
   
   public function attendRequest($identity){
-  	//if we arent in the member list and we arent in the interested list
-  	//echo 'IN HERE';
-  	echo $this->event->getCreator()->getEmail();
-  	echo $identity;
+  	
   	if(!($identity==$this->event->getCreator()->getEmail())){
 	  //	echo $this->isMember($identity, $this->event->getMembers());
   		if((!$this->isMember($identity, $this->event->getMembers()))&&
@@ -143,10 +140,10 @@ class Application_Model_EventModel{
   	//echo ''
   	//iterate through friends and add the feed, may want to do observer pattern
   	foreach($friends as $friend){
-	  	echo 'FRIEND IS'. $friend->getFirstName();
+	  	
   		$generalFeed = $friend->getGeneralFeed();
 	  	if(!$generalFeed){
-	  		echo 'FEEDS NEW';
+	  	
 	  		$generalFeed = new GeneralFeed($friend);
 	  		$friend->setGeneralFeed($generalFeed);
 	  	}

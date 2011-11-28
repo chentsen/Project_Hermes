@@ -36,7 +36,7 @@
   
     <env-entry>
        <env-entry-name>solr/home</env-entry-name>
-       <env-entry-value>/apache-tomcat/webapps/solr_site</env-entry-value>
+       <env-entry-value>/Users/chentsen/Documents/workspace/project_hermes/apache-tomcat-6.0.32/webapps/solr_site</env-entry-value>
        <env-entry-type>java.lang.String</env-entry-type>
     </env-entry>
    

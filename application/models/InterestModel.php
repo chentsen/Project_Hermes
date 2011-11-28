@@ -32,8 +32,12 @@ class Application_Model_InterestModel{
 	public function hasTag($tagName){
 		$tags = $this->interest->getTags();
 		foreach($tags as $tag){
-			if($tag->getTagName()==$tagName)
-				return true;	
+			try{
+				if($tag->getTagName()==$tagName)
+					return true;	
+			}catch(Exception $ex){
+				error_log("Exception thrown in hasTag: "+$ex->getMessage());
+			}
 		}
 		return false;
 	}
