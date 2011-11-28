@@ -1,0 +1,23 @@
+<div id="view-content">
+    <div class="view-wrapped">	 
+        <div class="event_header">
+        <h1 class="event_title"><?= $this->event->getCreator()->getFirstName()." Wants to ".$this->event->getShortDescription() ?></h1>
+        <h2 class="event_self">Event Member Page</h2>
+        </div>
+        <div class="event_main">
+            <div class="event_img">
+                 <img src="/img/profile-pic/uid/<?=$this->identity ?>" height=200  width=200/>
+            </div>
+            <div class="event_right">
+            <div class='event_date'>
+                <h2><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h2>
+            </div>	
+             <div class='event_place'>
+                <h2><?= $this->event->getLocation() ?> </h2>
+                
+            </div>
+                <div class="event_location">
+                    <h2><?= $this->event->getLongDescription() ?></h2>
+                </div>
+            </div>
+        </div>
