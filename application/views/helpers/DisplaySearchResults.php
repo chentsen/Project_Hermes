@@ -129,7 +129,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				if(count($user->match > 1)){
 					foreach($user->match as $match){
 						echo "<div class='matchedTag'>";
-							echo $match[0]->getTagName();
+							echo $match->getTagName();
 						echo "</div>";
 					}
 				}else if(count($user->match == 1)){

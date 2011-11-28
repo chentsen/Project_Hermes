@@ -1,26 +1,9 @@
-<div id="view-content">
-    <div class="view-wrapped">	 
-        <div class="event_header">
-        <h1 class="event_title"><?= $this->event->getCreator->getFirstName." Wants to ".$this->event->getShortDescription() ?></h1>
-        <h2 class="event_self">Event Member Page</h2>
-        </div>
-        <div class="event_main">
-            <div class="event_img">
-                 <img src="/img/profile-pic/uid/<?=$this->identity ?>" height=200  width=200/>
-            </div>
-            <div class="event_right">
-            <div class='event_date'>
-                <h2>October 25, 2011</h2>
-            </div>	
-             <div class='event_place'>
-                <h2>Pizza Parlor</h2>
-                
-            </div>
-                <div class="event_location">
-                    <h2>123 Pizza Way<br/>El Cerrito, CA 94530</h2>
-                </div>
-            </div>
-        </div>
+<?php
+$this->headScript()->appendFile($this->baseUrl('js/wall.js'));
+$eid = $this->event->getEid();
+?>
+
+<?= $this->partial('eventInfo.phtml',array('event'=>$this->event,'identity'=>$this->identity)); ?>
 	
 <!--<?= $this->event->getLongDescription() ?>-->
 	

@@ -200,20 +200,20 @@ class Application_Form_Questions extends Zend_Form
                 $videogames->setRequired(false)
                       ->removeDecorator('label')
                       ->removeDecorator('htmlTag')
-                      ->addMultiOptions(array(  'a'=>'Action/adventure',
-                                                'f'=>'FPS',
-                                                'r'=>'RPG',
-                                                'm'=>'MMORPG',
-                                                's'=>'Simulation',
-                                                'st'=>'Strategy',
-                                                'c'=>'Casual games',
-                                                'p'=>'Puzzle',
-                                                'sh'=>'Shoot em up',
-                                                'r'=>'Racing',
-                                                'sp'=>'Sports',
-                                                'mu'=>'Music games',
-                                                'fi'=>'Fighting',
-                                                'v'=>'Virtual novels'
+                      ->addMultiOptions(array(  'Actions/adventure'=>'Action/adventure',
+                                                'FPS'=>'FPS',
+                                                'RPG'=>'RPG',
+                                                'MMORPG'=>'MMORPG',
+                                                'Simulation'=>'Simulation',
+                                                'Strategy'=>'Strategy',
+                                                'Casual Games'=>'Casual games',
+                                                'Puzzle'=>'Puzzle',
+                                                'Shoot em up'=>'Shoot em up',
+                                                'Racing'=>'Racing',
+                                                'Sports'=>'Sports',
+                                                'Music'=>'Music games',
+                                                'Fighting'=>'Fighting',
+                                                'Virtual novels'=>'Virtual novels'
                                                   ));
            	   
                
