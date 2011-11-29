@@ -18,11 +18,11 @@ select {
 }
 #editAccount textarea {
         margin: 10px 0;
-        width: 235px;
-	font-size: 24px; 
+        width: 250px;
+	font-size: 18px; 
         background: #ffffff;
         outline: 0;
-        padding: 10px;    
+        padding: 5px;    
         border: 1px solid orange;
         border-radius: 5px;
         -moz-border-radius: 5px;
@@ -42,6 +42,7 @@ textarea {
 #content_area input[type=password]{
     margin: 5px 0;
     padding: 5px 0px 5px 5px;
+	width: 200px;
 }
 input[type=text], input[type=password] {
 	
@@ -177,10 +178,12 @@ input[type=text]:first,input[type=password]:first {
     text-align: center;
 }
 .account-edit .upload-image img {
-    margin: 10px 0 0 55px;
-    border: 10px solid #ccc;
-    border-radius: 3px;
+    margin: 20px 0 0 65px;
 }
+.account-edit #editAccount h1 {
+	margin-bottom: 15px;
+}
+
 #profilePic {   
     width: 250px;
     padding-right: 22px;
@@ -243,10 +246,9 @@ input[type=text]:first,input[type=password]:first {
 .profile_eventList {
 		width: 180px;
 		overflow: hidden;
-    background: #ccc;
-    padding: 10px;
+		margin: 0 10px;
     border-radius: 5px;
-    height: 190px;
+		
 }
 .profile_image img{
     width: 180px;
@@ -432,6 +434,12 @@ input[type=text]:first,input[type=password]:first {
     float: left; 
     margin-left: 360px;
     padding: 10px 40px 40px 0px;
+}
+.index input[type="text"],
+.index input[type="password"] {
+		padding-top: 10px !important;
+		font-size: 24px;
+
 }
 .index form#login { 
     float: left; 
@@ -965,6 +973,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	
 	overflow: hidden;
 }
+.profile .mini-feed {
+		width: 120px;
+}
 .mini-feed {
 		width: 200px;
 		float: left;
@@ -1424,7 +1435,8 @@ ul.as-selections {
 /***** event page ******/
 .event .event_header {
     overflow: hidden;
-    margin: 10px 0;
+    margin: 0px 0px 10px 0;
+    height: 40px;
 }
 .event .event_header .event_title {
     float: left;
@@ -1432,18 +1444,23 @@ ul.as-selections {
     
 }
 .event .event_header .event_self {
-    color: orange;
+    color: white;
     float: right;
-    height: 36px;
-    line-height: 36px;
+    height: 38px;
+    line-height: 40px;
+    font-size: 16px;
+    display: block;
+    background-color: orange;
+    padding: 0 10px;
+    border-radius: 5px;
 }
 .event .event_main {
     margin-top: 15px;
-    overflow: auto;
+    overflow: hidden;
 }
 .event .event_main .event_img {
     float: left;
-    padding: 10px;
+    padding: 5px 15px 0px 10px;
 }
 .event .event_main .event_img img{
     
@@ -1453,13 +1470,12 @@ ul.as-selections {
     float: right;
 }
 .event .event_main .event_right {
-    width: 405px;
-    float: right;
+    width: 410px;
+    float: left;
 }
 .event .event_main h2 {
-    font-size: 28px;
-    border-bottom: 1px solid #ccc;
-    padding: 15px 0;
+    font-size: 20px;
+    padding: 5px 0;
     
 }
 .event .event_main .event_date {
@@ -1468,6 +1484,11 @@ ul.as-selections {
 .event .event_main .event_place h2{
     
 }
+
+.event_location {
+	border-bottom: 1px solid #ccc;
+}
+
 .event .interested_list {
     padding: 15px 0;
     overflow: hidden;
@@ -1594,13 +1615,25 @@ ul.as-selections {
 		margin: 10px 0px 10px 10px;
 }
 
-.event-object {
+.single-event {
     border-top:1px solid #fff;
     border-bottom: 1px solid #ccc;
-    height: 42px;
     margin: 0 !important;
     padding: 10px;
 
+}
+
+.single-event:last-child {
+	border-bottom: none;
+}
+
+.single-event:first-child {
+	border-top: none;
+	border-bottom: 1px solid #CCC;
+}
+
+.single-event a {
+	margin: 10px 0px;
 }
 
 .notification .notification-object span {
@@ -1611,6 +1644,10 @@ ul.as-selections {
 .individual-object {
 		margin-top: 3px;
 		float: left;
+}
+
+.event-describer {
+	margin: 5px 0px;
 }
 /*** friend page ****/
 .friend-city {

@@ -15,7 +15,7 @@
 
 <?=$this->DisplayFlashMessages($this->flashMessages); ?>
 <div class="out-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1>
- <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form',func:Dialog.loadLoginData})">Join</a>
+ <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form'});Dialog.doValidate();Dialog.loadLoginData()">Join</a>
 </div>
 
 <?php } ?>

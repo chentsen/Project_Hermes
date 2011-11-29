@@ -1,40 +1,53 @@
-/*$(function()
+$(function()
 		{
 		$("input").blur(function()
 			{
-			var formElementId = $(this).parent().prev().find('label').attr('for');
-                             
+			  
+			var formElementId = $(this).attr('id');
+               //alert(formElementId);              
                         doValidation(formElementId);   
                   
 		});
+
 	});
-function doValidation(id)
+function doValidation(id, formname)
 {
     if (window.location.pathname=='/index')
         {
-            var url = window.location+'/ajaxform'
+            var url = '/ajax/ajaxform';
         }
-    else if (window.location.pathname=='/registration')
+    else if (window.location.pathname=='/registration/index' || window.location.pathname=='/registration/')
        {
-           var url = window.location+'/ajaxform'
+		 
+           var url = '/ajax/ajaxform';
        }
     else if (window.location.pathname=='/')
            {
-        var url = window.location+'/index/ajaxform'
+        var url = '/ajax/ajaxform';
            }
     else
         {
-    var url = window.location+'/ajaxform'
+    var url = 'ajax/ajaxform';
         }
     var data = {};
     $("input").each(function() {
-           data[$(this).attr('name')] = $(this).val();
+           data[$(this).attr('id')] = $(this).val();
      });
      $.post(url,data,function(resp)
      {
-        $("#"+id).parent().parent().find('.errors').remove();
-        $("#"+id).parent().parent().append(getErrorHtml(resp[id], id));
-     },'json');
+	  
+			if(formname == 'registration') {
+			
+			$("#registration #"+id).parent().find('.errors').remove();
+			 $("#registration #"+id).parent().append(getErrorHtml(resp[id], id));
+			} else {
+			   $("#"+id).parent().find('.errors').remove();			
+			$("#"+id).parent().append(getErrorHtml(resp[id], id));
+			
+			}
+		
+	  },'json');
+	
 }
 function getErrorHtml(formErrors, id)
 {
@@ -45,15 +58,32 @@ function getErrorHtml(formErrors, id)
                
         }
     output += '</ul>';
+	
     return output;
     
-}*/
+}
+function getAlert(formErrors) {
+   var output = "";
+   for(errorKey in formErrors) {
+	  output += formErrors[errorKey];
+   }
+   return output;
+   }
 
 //close status
 
 
 $(document).ready(function(){
-    
+   /*** Onclick hide add button ***/
+   $('.remove-anchor').click(function(){
+	  $(this).hide('slow');
+	  });
+    /*** remove background image on any form input that has been submitted incorrectly **/
+			if($('input[type="text"]').val())
+                {
+					 
+					 $('input[type="text"]').addClass('removebg');	  
+				}
     /** drop down menu settings ***/
     
     $('html .icon_bar ul li .sub-settings li a:last').css({
@@ -156,9 +186,28 @@ $(document).ready(function(){
 
      
            //email 
-           
+           function BgRemove(nClass) {
+                if($(nClass).val())
+                {
+                        $(nClass).focus(function(){
+								$(nClass).addClass('removebg');
+                });
+						$(nClass).blur(function(){
+						 $(nClass).removeClass('removebg');
+						});
+				}
+               
+           }
+		   BgRemove('#email');
+          BgRemove('#firstName');
+          BgRemove('#lastName');
+          BgRemove('#city');
+		  BgRemove('#password');
+		  BgRemove('#password2');
+          BgRemove('#betakey');
           
-      
+
+		 
       /** disable highlights ***/
       $('.block-header h3').addClass('noSelect');
       $('.tags').addClass('noSelect');

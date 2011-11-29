@@ -9,7 +9,7 @@ class ProfileController extends Hermes_Controller_SessionController
 		$this->view->identity = $this->identity;
                 $this->firstname = $this->curUser->getFirstName();
                 $this->lastname = $this->curUser->getLastName();
-               
+				$this->email = $this->curUser->getEmail();
                 /* Initialize action controller here */
         $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
@@ -104,7 +104,9 @@ class ProfileController extends Hermes_Controller_SessionController
        
         $this->view->email = $profileModel->getUser()->getEmail();
     	$this->view->isFriend = $friendRelation->isFriend($profileModel->getUser()->getEmail());
-    	
+    	$this->view->createdFriendRequest = $friendRelation->isRequested($profileModel->getUser()->getEmail());
+		
+		
     }
 
 

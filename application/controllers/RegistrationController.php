@@ -44,19 +44,22 @@ class RegistrationController extends Zend_Controller_Action
 				
 				$this->view->successMessage = '<h1 class="regsuccess">Registration Successful! Please complete registration by clicking on the link sent to your email.</h1>';
 				$mail = new Zend_Mail();
-
+				//$transport = Zend_Registry::get('SmtpTransport');
 				$htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_confirm_registration.phtml',
 																	  array('name'=>$_POST['firstName'],
 																	 'activationUrl'=>$this->url,
-																	 'activationCode'=>$activationCode));
+    																	 'activationCode'=>$activationCode));
 				//$this->view->htmlBody = $htmlBody;
+				$mail->setReplyTo('activation@plumetype.com', 'Plumetype');
+				$mail->addHeader('MIME-Version', '1.0');
+				$mail->addHeader('Content-Transfer-Encoding', '8bit');
+				$mail->addHeader('X-Mailer:', 'PHP/'.phpversion());
 				$mail->setBodyHtml($htmlBody);
 				$mail->setFrom('activation@plumetype.com', 'Plumetype Activation');
 				$mail->addTo($_POST['email']);
 				$mail->setSubject('Activate Your Plumetype Account');
 				$mail->send();
 				// redirect to some page and fire off email and return
-                               
 				return;	
                                 
 			}
@@ -80,18 +83,7 @@ class RegistrationController extends Zend_Controller_Action
     {
         // action body
     }
-	public function ajaxformAction()
-	{
-		$this->_helper->viewRenderer->setNoRender();
-                $this->_helper->getHelper('layout')->disableLayout();
-                
-                //pull content json
-                $form = new Application_Form_Registration();
-                $form->isValid($this->_getAllParams());
-		$json = $form->getMessages();
-		header('Content-type: application/json');
-		echo Zend_Json::encode($json);
-	}
+
 
 }
 

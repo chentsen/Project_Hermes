@@ -2,7 +2,10 @@
     <div class="view-wrapped">	 
         <div class="event_header">
         <h1 class="event_title"><?= $this->event->getCreator->getFirstName." Wants to ".$this->event->getShortDescription() ?></h1>
-        <h2 class="event_self">Event Public Page - <a class='' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a></h2>
+        <h2 class="event_self">Event Public Page
+			
+		<a class='remove-anchor' href = '/event/request/eid/<?= $this->eid; ?>'>- I'm down</a>
+		</h2>
 		
         </div>
         <div class="event_main">
@@ -11,7 +14,7 @@
             </div>
             <div class="event_right">
             <div class='event_date'>
-                <h2>October 25, 2011</h2>
+                <h2><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h2>
             </div>	
            
             </div>

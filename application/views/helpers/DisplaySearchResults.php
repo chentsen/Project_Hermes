@@ -54,7 +54,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                                 if(!$eventModel->isMember($identity,$event->result->getMembers())&&
                                         (!$eventModel->isMember($identity,$event->result->getWaitingList()))){
                                         
-                                        echo "<a class='join_event' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a>";
+                                        echo "<a class='join_event remove-anchor' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a>";
                                     
                                 }
                         }	
@@ -88,12 +88,14 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 		//return $returnString;
 	}
 	private function printUserResult(Documents\Search\UserResult $user,$identity){
-	
-
+				
+				
+				
             if($user->result->getEmail()!=$identity){
 				
 			echo "<div class = 'user_result'>";
 			$friendRelation = new Application_Model_FriendRelation($identity);
+			
 				$email = $user->result->getEmail();			
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
                         echo '<div class="common_value">';
@@ -103,12 +105,12 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                             
                         echo '</div></a><div class="in_common"><h3>Tags in Common</h3></div></div>';
 			echo "<div class='user_info'><h2>{$user->result->getFirstName()}</h2>";
-                        
-			if(!$friendRelation->isFriend($user->result->getEmail())){
+                      
+			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
 				echo "<div class = 'user_addFriend'>";
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
 				
-				echo "<a href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
+				echo "<a class='remove-anchor' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
 				
 				echo "</div>";
 			}
@@ -127,7 +129,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				if(count($user->match > 1)){
 					foreach($user->match as $match){
 						echo "<div class='matchedTag'>";
-							echo $match[0]->getTagName();
+							echo $match->getTagName();
 						echo "</div>";
 					}
 				}else if(count($user->match == 1)){

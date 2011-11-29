@@ -2,14 +2,16 @@
 $interestModel = new Application_Model_InterestModel($this->user->getInterest());
 $tagArray = $interestModel->getTags();
 $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
+
 ?>
 <div id="view-content">
         <div class="view-wrapped">
             <div class="profile_header">
                 <h1 class="big_name"><?= $this->name; ?>.</h1>
-                <? if (!$this->isFriend){?>
+						
+                <? if (!$this->isFriend && $this->createdFriendRequest){?>
                              <div class = "friendStatus">
-                                <a href ="/friend/friendRequest/requestee/<?= $this->email; ?>">
+                                <a class="remove-anchor" href ="/friend/friendRequest/requestee/<?= $this->email; ?>">
                                     Add
                                 </a>
                             </div>
@@ -28,7 +30,10 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
             </div>
             <div class="profile_rightCol">
                 <div class="profileDesc">
-                    <?= $this->description ?>
+                    <? if($this->description)
+								echo $this->description;
+						else
+								echo "No description available";?>
             </div>
                 <div class="profile_tags">
                     <h2>Tags</h2>
