@@ -35,7 +35,7 @@ class EventController extends Hermes_Controller_Wall_WallController
     	//I'm not a member, and I'm not a creator
     	else if(!$event->isPrivate()){
     		$this->_helper->ViewRenderer('index_public');
-		echo var_dump($eventModel->hasRequestedMembership($this->identity));
+		
 		
     	}
     	else{
@@ -51,9 +51,6 @@ class EventController extends Hermes_Controller_Wall_WallController
     	if($event){
     		$eventModel = new Application_Model_EventModel($event);
     		$result = $eventModel->attendRequest($this->identity);
-			
-			
-			
     		if($result){
 				$this->_helper->flashMessenger->addMessage("You have successfully indicated your interest in this event. Thanks!");
 				$this->_redirect('/profile');
