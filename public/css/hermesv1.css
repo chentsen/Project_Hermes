@@ -440,7 +440,7 @@ input[type=text]:first,input[type=password]:first {
    .outside .page {}
 /***** landing styles********/
 .index .button input#login {
-	width: 209px;
+	width: 207px;
 	}
 .index form#login { 
     float: left; 
@@ -1075,7 +1075,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
   border-radius: 5px;
   display: block;
   background: #ff8600;
-  text-shadow: 0px 1px #454545;
   color: white;
   font-weight: 600;
   padding: 0 50px;
@@ -1088,7 +1087,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
   border-radius: 5px;
   display: block;
   background: #ff8600;
-  text-shadow: 0px 1px #454545;
   color: white;
   font-weight: 600;
   padding: 0 50px;
@@ -1115,7 +1113,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #wall_addPost:hover
 {
     /*background: url("../images/button-hover.png") repeat-x center;*/
-    text-shadow: 0px 1px #454545;
+
     background: #f9780d;
 }
 .inner_button {  }
@@ -1139,7 +1137,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
      margin-left: 0px !important;
     color: #eee;
     text-align: center;
-   text-shadow: 0px 1px #454545;
    font-weight:bold;
    font-size: 24px;
    margin-right: 10px;
