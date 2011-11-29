@@ -8,9 +8,10 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
         <div class="view-wrapped">
             <div class="profile_header">
                 <h1 class="big_name"><?= $this->name; ?>.</h1>
-                <? if (!$this->isFriend && $this->friendRequest){?>
+						
+                <? if (!$this->isFriend && $this->createdFriendRequest){?>
                              <div class = "friendStatus">
-                                <a href ="/friend/friendRequest/requestee/<?= $this->email; ?>">
+                                <a class="remove-anchor" href ="/friend/friendRequest/requestee/<?= $this->email; ?>">
                                     Add
                                 </a>
                             </div>

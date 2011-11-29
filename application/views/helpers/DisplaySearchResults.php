@@ -54,7 +54,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                                 if(!$eventModel->isMember($identity,$event->result->getMembers())&&
                                         (!$eventModel->isMember($identity,$event->result->getWaitingList()))){
                                         
-                                        echo "<a class='join_event' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a>";
+                                        echo "<a class='join_event remove-anchor' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a>";
                                     
                                 }
                         }	
@@ -105,12 +105,12 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                             
                         echo '</div></a><div class="in_common"><h3>Tags in Common</h3></div></div>';
 			echo "<div class='user_info'><h2>{$user->result->getFirstName()}</h2>";
-                        
-			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->createFriendRequest($user->result->getEmail())){
+                      
+			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
 				echo "<div class = 'user_addFriend'>";
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
 				
-				echo "<a href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
+				echo "<a class='remove-anchor' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
 				
 				echo "</div>";
 			}

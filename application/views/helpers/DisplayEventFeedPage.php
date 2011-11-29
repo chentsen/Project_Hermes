@@ -9,14 +9,14 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 		$feed = $user->getEventFeed();
 		
 		$eventFeedModel = new Application_Model_Feed_EventFeedModel($feed);
-		echo "<div class = 'eventFeed'>";
+		echo "<ul class = 'eventFeed'>";
 		
 		if( $eventFeedModel->getFeed()){
 			 $feed = $eventFeedModel->getFeed();
 			 $feedObjects = $feed->getFeedObjects();
 			 foreach($feedObjects as $feedObject){
 			 	
-			 	echo "<ul class= 'event-object'>";
+			 	//echo "<ul class= 'event-object'>";
 				if(!$feedObject->getHidden()){
 					echo '<li>';
                                         
@@ -33,7 +33,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
                             echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">here</a>?</h1></div>';
         }
 		
-		echo "</div>";
+		//echo "</ul>";
 	}
 	//subclassed so we can construct our own custom feed message for events..
 	public function getEventFeedMessage(FeedObject $feedObject){

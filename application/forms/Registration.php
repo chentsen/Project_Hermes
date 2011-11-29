@@ -30,7 +30,12 @@ class Application_Form_Registration extends Zend_Form
     			 )
   				));
   		$betakey = new Zend_Form_Element_Text('betakey');
-	
+		$betakey->setRequired(true)
+				->addValidator('NotEmpty', true, array(
+     					'messages' => array(
+          				'isEmpty' => 'Please enter a beta key'
+    					 )
+  				  ));
              
 			  
 		$firstName = new Zend_Form_Element_Text('firstName');

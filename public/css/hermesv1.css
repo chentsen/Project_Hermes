@@ -42,6 +42,7 @@ textarea {
 #content_area input[type=password]{
     margin: 5px 0;
     padding: 5px 0px 5px 5px;
+	width: 200px;
 }
 input[type=text], input[type=password] {
 	
@@ -425,6 +426,11 @@ input[type=text]:first,input[type=password]:first {
    .outside .page {}
 /***** landing styles********/
 .index .button input#login { width: 203px;}
+.index input[type="text"],
+.index input[type="password"] {
+		padding-top: 10px !important;
+		font-size: 24px;
+}
 .index form#login { 
     float: left; 
     /**margin-left: 150px; **/

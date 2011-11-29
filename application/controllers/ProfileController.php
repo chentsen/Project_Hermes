@@ -104,9 +104,9 @@ class ProfileController extends Hermes_Controller_SessionController
        
         $this->view->email = $profileModel->getUser()->getEmail();
     	$this->view->isFriend = $friendRelation->isFriend($profileModel->getUser()->getEmail());
-    	$this->view->friendRequest = $friendRelation->createFriendRequest($profileModel->getUser()->getEmail());
+    	$this->view->createdFriendRequest = $friendRelation->isRequested($profileModel->getUser()->getEmail());
 		
-		//echo $this->email;
+		
     }
 
 

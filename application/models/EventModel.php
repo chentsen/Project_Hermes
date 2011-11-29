@@ -85,6 +85,18 @@ class Application_Model_EventModel{
 	  	}
   	}else return false;
   }
+  
+public function isRequested($identity){
+  	
+  	if(!($identity==$this->event->getCreator()->getEmail())){
+	  //	echo $this->isMember($identity, $this->event->getMembers());
+  		if((!$this->isMember($identity, $this->event->getMembers()))&&
+	  		(!$this->isMember($identity,$this->event->getWaitingList())))
+	  	{return true;
+	  	}
+  	}else return false;
+  }
+		  	
   public function acceptRequest(Documents\User $user){
 	if(!$this->isMember($user->getEmail(),$this->event->getMembers())&&
 		$this->isMember($user->getEmail(),$this->event->getWaitingList())){

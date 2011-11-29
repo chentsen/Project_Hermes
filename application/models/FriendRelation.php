@@ -40,11 +40,32 @@ class Application_Model_FriendRelation{
 					//add this event to both peoples feeds
 					$this->dm->flush();
 					return true;
-				}else return false;	
-			return true;
+				}else {
+					return false;
+				}	
+			
 		} 
-		else
-			return false;
+		else {
+		return false;
+		}
+		//tomorrow 1 test isFriend is working 2create an accept friend request page 3 and a reject friend page 4 create addFriendRejectFriend implementation
+	}
+	public function isRequested($friendIdentity){
+		
+		$friendUser = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$friendIdentity));
+
+		$friendRequest = $this->dm->getRepository('Documents\FriendRequest')->findOneBy(array('requester.$id'=>$friendUser->getUid(),'requestee.$id'=>$this->currentUser->getUid()));
+	
+		$friendRequest2 = $this->dm->getRepository('Documents\FriendRequest')->findOneBy(array('requester.$id'=>$this->currentUser->getUid(),'requestee.$id'=>$friendUser->getUid()));
+		
+	
+		//if this request doesn't already exist between these two people..figure out how to do more efficiently later
+		if($friendUser && !$friendRequest && !$friendRequest2 && ($friendIdentity != $this->currentUser->getEmail()) ){
+					return true;
+		} 
+		else {
+		return false;
+		}
 		//tomorrow 1 test isFriend is working 2create an accept friend request page 3 and a reject friend page 4 create addFriendRejectFriend implementation
 	}
 	public function acceptFriendRequest(FriendRequest $friendRequest){
