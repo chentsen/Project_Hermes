@@ -9,7 +9,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 		$feed = $user->getEventFeed();
 		
 		$eventFeedModel = new Application_Model_Feed_EventFeedModel($feed);
-		echo "<div class = 'eventFeed'>";
+		echo "<ul class = 'eventFeed'>";
 		
 		if( $eventFeedModel->getFeed()){
 			 $feed = $eventFeedModel->getFeed();
@@ -18,14 +18,14 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 			 $display_length = min(count($feedObjects),$length);
 			 for($i = 0; $i < $display_length ; $i++){
 				$feedObject = $feedObjects[$i];
-			 	echo "<div class = 'eventFeedObject'>";
+			 	echo "<li class = 'eventFeedObject'>";
 				if(!$feedObject->getHidden()){
 					echo '<p>';
 					//print_r($feedObject);
 					$this->constructFeedMessage($feedObject);						
                                         echo '</p>';
 				}
-			 	echo "</div>";
+			 	echo "</li>";
 			 }		
 		}
 		if($i >= $length && $length > 3)
@@ -35,7 +35,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 		else if ($i == 0 && $length <3)
 		   $html = 'Not attending any events yet';
 		echo $html;
-		echo "</div>";
+		echo "</ul>";
 	}
 	//subclassed so we can construct our own custom feed message for events..
 	public function getEventFeedMessage(FeedObject $feedObject){
