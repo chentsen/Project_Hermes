@@ -239,11 +239,16 @@ input[type=text]:first,input[type=password]:first {
 }
 .profile_image {
     margin-bottom: 10px;
+    height: 180px;
 }
 .profile_eventList {
 		width: 180px;
 		overflow: hidden;
 }
+.eventFeedObject:first-child {
+	border-top: none;
+}
+
 .profile_eventList .eventFeedObject {
 	background-color: #DDD;
 	border-bottom-left-radius: 0px 0px !important;
@@ -279,7 +284,7 @@ input[type=text]:first,input[type=password]:first {
     
 }
 .profile_tags {
-    min-height: 318px;
+    min-height: 306px;
     padding: 10px;
     background: #ddd;
 }
