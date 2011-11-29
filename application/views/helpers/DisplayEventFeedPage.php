@@ -9,23 +9,23 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 		$feed = $user->getEventFeed();
 		
 		$eventFeedModel = new Application_Model_Feed_EventFeedModel($feed);
-		echo "<div class = 'eventFeed'>";
+		echo "<ul class = 'eventFeed'>";
 		
 		if( $eventFeedModel->getFeed()){
 			 $feed = $eventFeedModel->getFeed();
 			 $feedObjects = $feed->getFeedObjects();
 			 foreach($feedObjects as $feedObject){
 			 	
-			 	echo "<div class = 'eventFeedObject'>";
+			 	//echo "<ul class= 'event-object'>";
 				if(!$feedObject->getHidden()){
-					echo '<p>';
+					echo '<li class = "single-event">';
                                         
 					//print_r($feedObject);
 					$this->constructFeedMessage($feedObject);	
 					
-                                        echo '</p>';
+                                        echo '</li>';
 				}
-			 	echo "</div>";
+			 	echo "</ul>";
 				
 			 }		
 		} else {
@@ -33,7 +33,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
                             echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">here</a>?</h1></div>';
         }
 		
-		echo "</div>";
+		//echo "</ul>";
 	}
 	//subclassed so we can construct our own custom feed message for events..
 	public function getEventFeedMessage(FeedObject $feedObject){
@@ -46,12 +46,12 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
                 echo 'Event Creator</a>';
                
             }*/
-            echo "<a href = '/event/index/eid/". $feedObject->getEid()."'>";
+            echo "<div class='event-describer'><strong>Place:</strong> <a href = '/event/index/eid/". $feedObject->getEid()."'>";
             if($feedObject->getEvent())
                 
-                    echo $feedObject->getEvent()->getLocation();                
-		echo '<br />On '.$feedObject->getDate()->format('m/d');
-                echo '<br/>@ '.$feedObject->getShortDescription();
-                echo '</a>';
+                echo $feedObject->getEvent()->getLocation().'</a></div>';                
+				echo '<div class="event-describer"><strong>Date:</strong> '.$feedObject->getDate()->format('M d, Y').'</div>';
+                echo '<div class="event-describer"><strong>Activity:</strong> '.$feedObject->getShortDescription().'</div>';
+                //echo '<br />More Info: '. $feedObject->getLongDescription();
 	}
 }

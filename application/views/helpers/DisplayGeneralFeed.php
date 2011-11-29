@@ -11,24 +11,26 @@ class Zend_View_Helper_DisplayGeneralFeed extends Application_View_Helper_Displa
 		$feed = $user->getGeneralFeed();
 		
 		$generalFeedModel = new Application_Model_Feed_GeneralFeedModel($feed);
-		echo "<div class = 'generalFeed'>";
 		
+				echo '<div class="notifications">';
 		if( $generalFeedModel->getFeed()){
+				echo "<ul class = 'notification-list'>";
 			 $feed = $generalFeedModel->getFeed();
 			 $feedObjects = $feed->getFeedObjects();
 			 foreach($feedObjects as $feedObject){
 			 	
-			 	echo "<div class = 'generalFeedObject'>";
+			 	echo "<li class = 'notification-object'>";
 				if(!$feedObject->getHidden()){
-					echo '<p>';
+					
 					//print_r($feedObject);
 					$this->constructFeedMessage($feedObject);	
-					echo '</p>';
+					
 				}
-			 	echo "</div>";
-			 }		
+			 	echo "</li>";
+			 }
+			 echo '</ul>';
 		} else {
-				echo "<h1>No activy found</h1>";
+				echo "<h3>No activity found</h3>";
 		}
 		echo "</div>";
 	}

@@ -33,11 +33,12 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 			 	echo "</div>";
 			 }		
 		}
-		if($i >= $length)
-			$html = '<a class="view-events" href="/event-list">View Events</a>';
-		if($i == 0)
+		if($i >= $length && $length > 3)
+			$html = '<a class="view-events" href="/event-list">View all events</a>';
+		if($i == 0 && $length > 3)
 			$html = '<a class="so-ronery">You have no events right now.</a>';
-		
+		else if ($i == 0 && $length <3)
+		   $html = 'Not attending any events yet';
 		echo $html;
 		echo "</div>";
 	}
@@ -52,12 +53,13 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
                 echo 'Event Creator</a>';
                
             }*/
-            echo "<a href = '/event/index/eid/". $feedObject->getEid()."'>";
+            //echo "<a href = '/event/index/eid/". $feedObject->getEid()."'>";
             if($feedObject->getEvent())
-                
-                    echo $feedObject->getEvent()->getLocation();                
-		echo '<br />On '.$feedObject->getDate()->format('m/d');
-                echo '<br/>@ '.$feedObject->getShortDescription();
-                echo '</a>';
+               {
+				echo '<img style="float: left;" src="/images/meet-people.png" width="50" /><div class="mini-feed">';
+                echo '<h4><a href = \'/event/index/eid/'. $feedObject->getEid().'\'>'.$feedObject->getShortDescription().' @ '.$feedObject->getEvent()->getLocation().'</a></h4>';                
+				echo 'on '.$feedObject->getDate()->format('m/d');
+                echo '</div>';
+			   }
 	}
 }

@@ -18,11 +18,11 @@ select {
 }
 #editAccount textarea {
         margin: 10px 0;
-        width: 235px;
-	font-size: 24px; 
+        width: 250px;
+	font-size: 18px; 
         background: #ffffff;
         outline: 0;
-        padding: 10px;    
+        padding: 5px;    
         border: 1px solid orange;
         border-radius: 5px;
         -moz-border-radius: 5px;
@@ -41,13 +41,14 @@ textarea {
 #content_area input[type=text],
 #content_area input[type=password]{
     margin: 5px 0;
-    padding: 5px 0px 0px 5px;
+    padding: 5px 0px 5px 5px;
+	width: 200px;
 }
 input[type=text], input[type=password] {
 	
-	height: 35px;
-	font-size: 24px; 
-        line-height: 24px;
+	height: 23px;
+	font-size: 18px; 
+        line-height: 18px;
 	border: none;
         outline: 0;
         border: 1px solid orange;
@@ -152,6 +153,19 @@ input[type=text]:first,input[type=password]:first {
     text-shadow: none;
 }
 /**** edit account ****/
+.account-edit .re-answer a {
+		color: orange;
+		float:right;
+		text-decoration: underline;
+		margin-right: 35px;
+}
+.account-edit .re-answer {
+		overflow: hidden;
+		margin-top: 15px;
+}
+.account-edit .top-block {
+		overflow: hidden;
+}
 .account-edit #image {
 	margin-top: 20px;
 	margin-left: 20px;
@@ -164,10 +178,12 @@ input[type=text]:first,input[type=password]:first {
     text-align: center;
 }
 .account-edit .upload-image img {
-    margin: 10px 0 0 55px;
-    border: 10px solid #ccc;
-    border-radius: 3px;
+    margin: 20px 0 0 65px;
 }
+.account-edit #editAccount h1 {
+	margin-bottom: 15px;
+}
+
 #profilePic {   
     width: 250px;
     padding-right: 22px;
@@ -213,8 +229,8 @@ input[type=text]:first,input[type=password]:first {
     
 }
 .profile .questions_flow a {
-    color: white;
-    font-weight: bold;
+    color: white !important;
+    font-weight: 600;
 }
 .big_name {font-size: 36px; text-transform: capitalize; float: left;}
 .user_details { margin-bottom: 10px;}
@@ -228,11 +244,11 @@ input[type=text]:first,input[type=password]:first {
     margin-bottom: 10px;
 }
 .profile_eventList {
-   
-    background: #ccc;
-    padding: 10px;
+		width: 180px;
+		overflow: hidden;
+		margin: 0 10px;
     border-radius: 5px;
-    height: 190px;
+		
 }
 .profile_image img{
     width: 180px;
@@ -265,7 +281,7 @@ input[type=text]:first,input[type=password]:first {
 #friendsList ul {
 	overflow: hidden;
 	width: 260px;
-	margin: 0 auto;
+	margin: 0 auto 5px auto;
 	
 
 }
@@ -293,6 +309,7 @@ input[type=text]:first,input[type=password]:first {
 		font-weight: 600;
 		text-align: center;
 		padding: 20px 0;
+		color: #555555;
 }
 
 .friend_pic img{
@@ -410,17 +427,29 @@ input[type=text]:first,input[type=password]:first {
    .outside #content_area {margin-top:0px;}
    .outside .page {}
 /***** landing styles********/
-.index .button input#login { margin-left: 60px;}
+.index .button input#login {
+	width: 209px;
+	}
 .index form#login { 
     float: left; 
-    /**margin-left: 150px; **/
-	margin-left: 360px;
+    margin-left: 360px;
+    padding: 10px 40px 40px 0px;
+}
+.index input[type="text"],
+.index input[type="password"] {
+		padding-top: 10px !important;
+		font-size: 24px;
+
+}
+.index form#login { 
+    float: left; 
+	margin-left: 358px;
     padding: 40px 40px 40px 0px; 
     /**background: url(../images/or-background.png) no-repeat right center;**/
     
 }
 .index #registration{float: left; }
-.index #city { width: 120px; }
+.index #city { /*width: 120px; */}
 .index h1 { color : orange; }
 .cms-text {
     font-size: 16px;
@@ -466,7 +495,7 @@ input[type=text]:first,input[type=password]:first {
 }
 .out-preview ul {
     
-    overflow: auto;
+    overflow: hidden;
     margin-bottom: 20px;
     margin-left: 100px;
     
@@ -477,13 +506,13 @@ input[type=text]:first,input[type=password]:first {
 }
 .out-preview ul li h3 {
     font-weight: normal;
-   width: 245px;
     font-size: 16px;
 }
-.out-one {margin-right:40px;}
-.out-one h3 {margin-left: 12px;}
-.out-two h3{ margin-left: 8px;}
-.out-three h3{margin-left: 20px;}
+.out-one h3 {margin-left: 30px;}
+.out-one img {margin-right: 22px;}
+.out-two h3{ margin-left: 14px;}
+.out-three h3{margin-left: 7px;}
+.out-three {margin-right: 10px;}
 .out-preview ul li h1 {
     font-size: 100px;
     margin-top: 20px;
@@ -495,9 +524,15 @@ input[type=text]:first,input[type=password]:first {
     margin: 20px auto;
     
 }
-
+.index .centerform {
+		width: 210px;
+		
+}
+.index .centerform h1 {
+		margin-bottom: 5px;
+}
 .index .out-signup {
-    margin-top: 20px;
+
     overflow: hidden;
     position: relative;
 }
@@ -607,7 +642,7 @@ input[type=text]:first,input[type=password]:first {
 /*** right block area ***/
 .block-body{
     background: #eee; 
- 
+    overflow: hidden;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius:3px;
     color: #454545;
@@ -642,7 +677,7 @@ input[type=text]:first,input[type=password]:first {
 .block-item h3 {
     font-family: "Myriad Pro" ,verdana , tahoma, helvetica, sans-serif;
     text-transform: uppercase;
-}
+    }
 .block-item {
     
     background: #555;
@@ -717,6 +752,9 @@ input[type=text]:first,input[type=password]:first {
 /** content area **/
 #content_area {
 	margin-top: 80px;
+}
+#content_area a {
+		color: #454545;
 }
 
 #content_area .page {
@@ -806,12 +844,14 @@ input[type=text]:first,input[type=password]:first {
     float: right;
     height: 60px;
 }
-.icon_bar ul {
+.icon_bar .top-bar {
     height: 50px;
     margin-top: 7px;
     
 }
-.icon_bar ul li {
+.icon_bar .top-bar .settings-button,
+.icon_bar .top-bar .notifications-button,
+.icon_bar .top-bar .friends-button{
     list-style: none;
     float: left;
     position: relative; 
@@ -823,7 +863,8 @@ input[type=text]:first,input[type=password]:first {
 .icon_bar_bg {
     background: rgba(47, 47, 47, .2);
 }
-.icon_bar ul li:hover {
+.icon_bar .sub-settings li:hover,
+.icon_bar .sub-settings2 li:hover{
     background: rgba(47, 47, 47, .2);
 }
 
@@ -841,7 +882,38 @@ input[type=text]:first,input[type=password]:first {
     border-bottom-right-radius: 5px;
     height: 72px;
 }
+.icon_bar ul li .sub-setting2 {
+		position: absolute;
+    left: -140px;
+    top: 53px;
+    background: rgba(111, 111, 111, .2);
+    margin:0;
+    padding: 0;
+    display: none;
+    float: left;
+    width: 200px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 
+}
+.icon_bar #friendRequests {
+		background: #454545;
+		margin: 1px 5px 5px 5px;
+		padding: 10px 5px;
+		border-bottom-left-radius: 5px;
+		border-bottom-right-radius: 5px;
+		min-height: 100%;
+		font-weight: 600;
+		font-size: 13px;
+}
+.icon_bar ul.sub-setting2 li.friend-requests
+{
+		width: 200px;
+    margin: 0;
+    padding: 0;
+    clear: both;
+    background: none;
+}
 .icon_bar ul li .sub-settings li {
     width: 140px;
     margin: 0;
@@ -849,16 +921,17 @@ input[type=text]:first,input[type=password]:first {
     clear: both;
     background: none;
 }
-html .icon_bar ul li .sub-settings li a{
+html .icon_bar ul li .sub-settings li a,
+html .icon_bar ul li .sub-setting2 li a{
     float: right;
     text-align: right;
     width: 110px;
     padding: 10px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 600;
-    margin: 3px 5px 0px 5px;
+    margin: 1px 5px 0px 5px;
     background: #454545;
-    color: black;
+    color: white;
 }
 html .icon_bar ul li .sub-settings li a:hover {
     background: #e0e0e0;
@@ -878,7 +951,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     padding: 3px 0 0 3px;
     font-weight: bold;
     font-size: 12px;
-	
+	word-wrap: break-word;
 }
 /*** profile area ***/
 .left_col {
@@ -897,6 +970,22 @@ html .icon_bar ul li .sub-settings .last-setting a{
     color: #454545;
     border-top:1px solid #fff;
     border-bottom: 1px solid #ccc;
+	
+	overflow: hidden;
+}
+.profile .mini-feed {
+		width: 120px;
+}
+.mini-feed {
+		width: 200px;
+		float: left;
+		margin: 5px 0 0 0;
+}
+.mini-feed h4 {
+		margin: 1px 0 2px 0;
+}
+.eventFeedObject p {
+		float: left;
 }
 .right_col {
     overflow: auto;
@@ -992,18 +1081,18 @@ html .icon_bar ul li .sub-settings .last-setting a{
   color: white;
   font-weight: 600;
   padding: 0 50px;
-  margin-top: 30px;
+  margin: 0px;
 }
 
 .index #register {
-    margin-left: 40px;
+   width: 209px;
 }
-#password {
+/**#password {
     margin-bottom: 0px !important;
 }
 #password2 {
     margin-top: 0px !important;
-}
+}**/
 .inner_button #login:hover, 
 .inner_button #register:hover, 
 .inner_button #createEvent_submit:hover,
@@ -1071,6 +1160,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 
     background: url("../images/password-again-form.png") no-repeat 10px center #f8f8f8;
 }
+
+.inner_button #register {
+	margin-top: 0px !important;
+}
 /** app style event creation page **/
 .create_date {
     position: relative;
@@ -1099,13 +1192,20 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 #createEvent #createEvent_longDescription {
     border-radius: 5px;
+    font-size: 18px;
+    margin: 0px;
+    width: 278px;
     
 }
-#createEvent .centerform {margin: 10px 0px;}
-#createEvent .centerform li {margin: 10px 0px; overflow: hidden;}
-#createEvent .centerform li .createEvent_text { font-size: 24px; width: 100px; margin: 10px 0px; }
-#createEvent .centerform .form_date {overflow: hidden;}
+#createEvent_submit {
+	padding: 0 85px !important;
+}
 
+#createEvent .centerform {margin: 10px 0px 0px 0px;}
+#createEvent .centerform li {margin: 0px 0px; overflow: hidden;}
+#createEvent .centerform li .createEvent_text { font-size: 18px; width: 100px; margin: 13px 0px; }
+#createEvent .centerform .form_date {overflow: hidden;}
+#createEvent_private { font-size: 18px;}
 /*** app style profile page ***/
 #personalDescription_description, #tag_input {
      border-radius: 5px;
@@ -1141,10 +1241,18 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /**** tags ******/
 #tag_category { width: 200px;}
 .tag_input_wrapper {
+		margin: 0 auto !important;
     width: 300px;
     border: 1px solid orange;
+    margin: 10px 0px;
+    border-radius: 5px;
     /*position: absolute;
     right: 70px;*/
+}
+.tag-wrapper {
+		background: #ddd;
+		padding: 5px;
+		border: 1px solid white;
 }
 ul.as-selections {
    
@@ -1160,11 +1268,11 @@ ul.as-selections li.as-original {
 }
 ul.as-selections {
     border: none !important;
+    border-radius: 5px;
 }
 .tag_dropdown {
     position: absolute;
     right: 5px;
-    bottom: -15px;
     font-size: 14px;
     font-weight: bold;
     
@@ -1172,9 +1280,9 @@ ul.as-selections {
 .tags_area {
     z-index: -1;
     min-height: 100px;
-   
+    margin-bottom: 10px;
     padding: 5px 0px 0px 0px;
-    border-bottom: 1px solid white;
+    
   
   
 }
@@ -1182,9 +1290,7 @@ ul.as-selections {
     text-align: right;
 }
 .tags_base {
-    z-index: -1;
-    border-bottom: 1px solid #bbb;
-    
+    z-index: -1;    
     min-height: 100px;
       overflow: hidden;
       
@@ -1222,6 +1328,7 @@ ul.as-selections {
     display: none;
 }
 /**Dialogs*/
+
 #modal-content {
     float: left;
     
@@ -1238,6 +1345,9 @@ ul.as-selections {
      margin: 5px;
      overflow: auto;
      padding: 5px 10px;
+}
+.index .modalWindow {
+		margin-left: 40%;
 }
 .modalWindow { 
     position:absolute;
@@ -1262,11 +1372,13 @@ ul.as-selections {
     color: #454545;
 }
 .closeBox {
-    
+    position: relative
 }
 
 .exitBox {
-    float: right;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 .closeBox .exitBox {
     
@@ -1296,8 +1408,12 @@ ul.as-selections {
 }
 /**** dialog questions ***/
 .questions-window h1{
-    float: left;
 }
+
+.required {
+	font-size: 16px;
+}
+
 /*** flash messages***/
 #flashMessages {
     
@@ -1317,8 +1433,9 @@ ul.as-selections {
 }
 /***** event page ******/
 .event .event_header {
-    overflow: auto;
-    margin: 10px 0;
+    overflow: hidden;
+    margin: 0px 0px 10px 0;
+    height: 40px;
 }
 .event .event_header .event_title {
     float: left;
@@ -1326,20 +1443,23 @@ ul.as-selections {
     
 }
 .event .event_header .event_self {
-    color: orange;
+    color: white;
     float: right;
-    height: 36px;
-    line-height: 36px;
+    height: 38px;
+    line-height: 40px;
+    font-size: 16px;
+    display: block;
+    background-color: orange;
+    padding: 0 10px;
+    border-radius: 5px;
 }
 .event .event_main {
     margin-top: 15px;
-    overflow: auto;
+    overflow: hidden;
 }
 .event .event_main .event_img {
     float: left;
-    padding: 10px;
-    border-radius: 5px;
-     background: #ccc;
+    padding: 5px 15px 0px 10px;
 }
 .event .event_main .event_img img{
     
@@ -1349,13 +1469,12 @@ ul.as-selections {
     float: right;
 }
 .event .event_main .event_right {
-    width: 405px;
-    float: right;
+    width: 410px;
+    float: left;
 }
 .event .event_main h2 {
-    font-size: 28px;
-    border-bottom: 1px solid #ccc;
-    padding: 15px 0;
+    font-size: 20px;
+    padding: 5px 0;
     
 }
 .event .event_main .event_date {
@@ -1364,6 +1483,11 @@ ul.as-selections {
 .event .event_main .event_place h2{
     
 }
+
+.event_location {
+	border-bottom: 1px solid #ccc;
+}
+
 .event .interested_list {
     padding: 15px 0;
     overflow: hidden;
@@ -1371,10 +1495,8 @@ ul.as-selections {
 }
 .event .interested_list .waitingList img,
 .event .event_wall .wall_image img
-{
-    padding: 10px;
-    border-radius: 5px;
-    background: #ccc;
+{   margin: 0px 10px 10px 1px;
+    /*padding: 10px;*/
 }
 .event .interested_list .waitingList a {
     color: orange;
@@ -1411,7 +1533,7 @@ ul.as-selections {
 .event .event_wall .wall_name {
     font-size: 18px;
     float: left;
-    margin: 25px;
+    margin: 20px 10px 10px 10px;
     
 }
 .event .event_wall .posts {
@@ -1421,16 +1543,17 @@ ul.as-selections {
     float: left;
     position: relative;
     width: 640px;
+    margin-bottom: 10px;
 }
 .event .event_wall .wall_text {
 	word-wrap: break-word;	
     float: left;
     border-radius: 5px;
     background: #bbb;
-    margin: 15px 0 0 0;
+    margin: 5px 0px 0px 10px;
     font-size: 16px;
     padding: 10px;
-    width: 420px;
+    width: 425px;
     
 }
 .event .event_wall .wallpost a{
@@ -1445,15 +1568,89 @@ ul.as-selections {
 }
 .event .event_wall #wall_comment {
     float: left;
-    margin-top: 14px;
-    height: 28px;
-    margin-right: 165px;
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 430px !important;
 }
 .event .event_wall #Wall {
     margin: 0;
 }
+.event .event_wall .wall_text {
+	position: relative;
+}
+.event .event_wall .delete_post {
+	position: absolute;
+    right: 7px;
+    top: 0px;
+    padding: 5px;
+	text-indent: -9999px;
+	
+}
+.event .event_wall .delete_post:hover {
+	
+    background-size: 20px;
+    background: url('../images/exit-button.png') no-repeat center center;
+}
+
+
 /*** event list page ***/
 .event-list .none-singleFound {
 		margin-top: 0;
 		margin-left: 0;
+}
+/*** notification/event page ***/
+.notification h1,
+.event-list h1{
+		margin-bottom: 5px;
+}
+.notification .notification-object {
+		overflow: hidden;
+}
+.notification .notification-object,
+.event-list ul.event-object {
+		
+		margin: 10px 0px 10px 10px;
+}
+
+.single-event {
+    border-top:1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    margin: 0 !important;
+    padding: 10px;
+
+}
+
+.single-event:last-child {
+	border-bottom: none;
+}
+
+.single-event:first-child {
+	border-top: none;
+	border-bottom: 1px solid #CCC;
+}
+
+.single-event a {
+	margin: 10px 0px;
+}
+
+.notification .notification-object span {
+		color: #bbb;
+		font-size: 10px;
+}
+
+.individual-object {
+		margin-top: 3px;
+		float: left;
+}
+
+.event-describer {
+	margin: 5px 0px;
+}
+/*** friend page ****/
+.friend-city {
+		font-weight: normal;
+		color: #bbb;
+		font-size: 10px;
 }

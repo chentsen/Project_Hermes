@@ -14,6 +14,7 @@ class AccountEditController extends Hermes_Controller_SessionController
                 $this->lastname = $this->curUser->getLastName(); 
                 $this->city = $this->curUser->getCity();
                 $this->description = $this->curUser->getDescription();
+                $this->gender = $this->curUser->getGender();
                 /* Initialize action controller here */
                 $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
@@ -29,9 +30,10 @@ class AccountEditController extends Hermes_Controller_SessionController
         $this->view->firstname = $this->firstname;
         $this->view->lastname = $this->lastname;
         $this->view->city = $this->city;
+        $this->view->gender = $this->gender;
         
         
-        $options = array('firstName'=>$this->firstname,'lastName'=>$this->lastname, 'city'=>$this->city,'description'=>$this->description);
+        $options = array('firstName'=>$this->firstname, 'lastName'=>$this->lastname, 'gender'=>$this->gender,'city'=>$this->city,'description'=>$this->description);
         $form = new Application_Form_EditAccount($options);
         $profilePic_form = new Application_Form_ProfilePic();
         $this->view->form = $form;

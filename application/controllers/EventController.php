@@ -15,6 +15,7 @@ class EventController extends Hermes_Controller_Wall_WallController
     {
         $this->view->identity = $this->identity;
     	$eid = $this->_request->getParam("eid");
+		$this->view->eid = $this->_request->getParam("eid");
     	//page that is shown depends on the user's status for now, use if statement to determine
         //potential pages 1.Member 2.Creator 3.Public we might want to push display logic further down, at the view
         //helper level (consult with Julian)
@@ -23,6 +24,7 @@ class EventController extends Hermes_Controller_Wall_WallController
        
     	$this->view->event = $event;
         //1. if I am creator
+		
         if($this->identity == $event->getCreator()->getEmail()){
     		$this->_helper->ViewRenderer('index_creator');
     	}
@@ -46,8 +48,13 @@ class EventController extends Hermes_Controller_Wall_WallController
     	if($event){
     		$eventModel = new Application_Model_EventModel($event);
     		$result = $eventModel->attendRequest($this->identity);
+			
+			
+			
     		if($result){
-    			echo "You have successfully indicated your interest in this event. Thanks!";
+				$this->_helper->flashMessenger->addMessage("You have successfully indicated your interest in this event. Thanks!");
+				$this->_redirect('/profile');
+				
     		}else{
     			echo "Something went wrong";
     		}

@@ -36,7 +36,7 @@ var Dialog = {
 	loadEventDatePicker:function(){
 		//throw away function-- need to bring this into datePicker proper
 		$(".dialogs #createEvent_date").attr("id","createEvent_date_active")
-		$(".dialogs #createEvent_date_active" ).datepicker({dateFormat: 'dd/mm/yy'});
+		$(".dialogs #createEvent_date_active" ).datepicker({dateFormat: 'dd/mm/yy', minDate: +0});
 		$("#ui-datepicker-div").css("z-index", "9999");
 		$('.dialogs #createEvent_shortDescription').val('eat pizza'); 
 		$('.dialogs #createEvent_location').val("Tony's Pizzeria");
@@ -44,5 +44,41 @@ var Dialog = {
 		$('.dialogs #createEvent_longDescription, #createEvent_location, #createEvent_shortDescription').css({'color': '#bbb'}).focus(function(){
 		    $(this).css({'color': '#000'}).val('');//.unbind(event);
 		   });
-	}
+	},
+	loadLoginData:function(){
+		
+		function BgRemover(nClass) {
+				$(nClass).focus(function(){
+						$(nClass).addClass('removebg');
+				});
+				
+						$(nClass).blur(function(){
+						if ($.trim(this.value) == '')
+								{
+								$(nClass).removeClass('removebg');	
+								} 
+								});
+				}         
+				BgRemover('.dialogs #email');
+          BgRemover('.dialogs #firstName');
+          BgRemover('.dialogs #lastName');
+          BgRemover('.dialogs #city');
+		  BgRemover('.dialogs #password');
+		  BgRemover('.dialogs #password2');
+          BgRemover('.dialogs #betakey');
+	},
+		doValidate:function() {
+				
+						$("input").blur(function()
+							{
+							 formid = $(this).get(0).form.id;
+							 
+							var formElementId = $(this).attr('id');
+							doValidation(formElementId, formid);   
+								  
+						});
+				
+					
+				
+		}
 };

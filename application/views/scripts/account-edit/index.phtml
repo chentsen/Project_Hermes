@@ -1,6 +1,9 @@
+<?php
+$this->headScript()->appendFile($this->baseUrl('js/questions.js'));
+?>
 <div id="view-content">
     <div class="view-wrapped">
-
+<div class="top-block">
     <div class="upload-image float_left">
 <h1>Upload Picture</h1>
 <img src="/img/profile-pic/uid/<?=$this->identity ?>" height=150  width=150/>
@@ -9,7 +12,7 @@
     </div>
 
 <?= $this->form; ?>
-
+</div>
 
 </div>
 </div>

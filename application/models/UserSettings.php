@@ -54,6 +54,7 @@ class Application_Model_UserSettings{
                 $this->user->setFirstName($userInfo['firstName']);
                 $this->user->setLastName($userInfo['lastName']);
                 $this->user->setCity($userInfo['city']);
+				$this->user->setGender($userInfo['gender']);
 		$this->user->setDescription($userInfo['description']);
 		$this->dm->persist($this->user);
 		$this->dm->flush();

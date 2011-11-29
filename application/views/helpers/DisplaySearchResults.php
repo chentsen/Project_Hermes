@@ -39,9 +39,11 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 		$returnString = ' ';
 		echo "<div class = 'event_result'>";
 		echo '<div class = "matchingTags">';
-                echo '<div class="common_value"><div class="common_number">';
+                echo '<div class="common_value">';
+				echo "<a href = '/event/index/eid/{$event->result->getEid()}'>";
+				echo '<div class="common_number">';
 			echo "{$event->getCount()} ";
-                         echo '</div><div class="in_common"><h3>Tags in Common</h3></div></div>';
+                         echo '</div></a><div class="in_common"><h3>Tags in Common</h3></div></div>';
                          echo "<div class='user_info'><h2>{$event->result->getCreator()->getFirstName()} wants to ".$event->result->getShortDescription()."</h2>";
                         
                         
@@ -52,7 +54,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                                 if(!$eventModel->isMember($identity,$event->result->getMembers())&&
                                         (!$eventModel->isMember($identity,$event->result->getWaitingList()))){
                                         
-                                        echo "<a class='join_event' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a>";
+                                        echo "<a class='join_event remove-anchor' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a>";
                                     
                                 }
                         }	
@@ -86,28 +88,35 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 		//return $returnString;
 	}
 	private function printUserResult(Documents\Search\UserResult $user,$identity){
-	
-                 
+				
+				
+				
             if($user->result->getEmail()!=$identity){
+				
 			echo "<div class = 'user_result'>";
 			$friendRelation = new Application_Model_FriendRelation($identity);
 			
+				$email = $user->result->getEmail();			
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
-                        echo '<div class="common_value"><div class="common_number">';
+                        echo '<div class="common_value">';
+						echo "<a href = '/profile/public/email/{$email}'>";
+						echo '<div class="common_number">';
                         echo "{$user->getCount()}";
                             
-                        echo '</div><div class="in_common"><h3>Tags in Common</h3></div></div>';
+                        echo '</div></a><div class="in_common"><h3>Tags in Common</h3></div></div>';
 			echo "<div class='user_info'><h2>{$user->result->getFirstName()}</h2>";
-                        
-			if(!$friendRelation->isFriend($user->result->getEmail())){
+                      
+			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
 				echo "<div class = 'user_addFriend'>";
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
-				echo "<a href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
+				
+				echo "<a class='remove-anchor' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
+				
 				echo "</div>";
 			}
 			echo "<div class = 'user_viewProfile'>";
 				
-				$email = $user->result->getEmail();
+				
 				echo "<a href = '/profile/public/email/{$email}'>view profile</a>";
 			echo "</div></div>";
 			//check if currently friends- are we? omit add as friend

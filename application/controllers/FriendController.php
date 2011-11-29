@@ -53,14 +53,15 @@ class FriendController extends Hermes_Controller_SessionController
 				$this->friendRelation->acceptFriendRequest($friendRequest);
 				$this->_redirect('/profile');
 			}
-			else{
+			
+		}
+		else if ($response == "no") {
+			$friendRequest = $this->mongoContainer->getDocumentManager('default')->getRepository('Documents\FriendRequest')->findOneBy(array("_id"=>$id));
+			if($friendRequest){
 				$this->_helper->flashMessenger->addMessage("Friend request ignored");
 				$this->friendRelation->rejectFriendRequest($friendRequest);
 				$this->_redirect('/profile');
 			}
-		}
-		else{
-			
 		}
 	}
 	//display data.
