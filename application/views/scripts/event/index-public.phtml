@@ -3,10 +3,9 @@
         <div class="event_header">
         <h1 class="event_title"><?= $this->event->getCreator->getFirstName." Wants to ".$this->event->getShortDescription() ?></h1>
         <h2 class="event_self">Event Public Page
-		<?= $this->hasRequested ?>
-			<?php //if(!hasRequested()) { ?>
-		<a class='remove-anchor' href = '/event/request/eid/<?= $this->eid; ?>'>- I'm down</a>
-		<?php //} ?>
+		<? if(!$this->didRequest) {?>
+		    <a class='remove-anchor' href = '/event/request/eid/<?= $this->eid; ?>'>- I'm down</a>
+		<? } ?>
 		</h2>
 		
         </div>
