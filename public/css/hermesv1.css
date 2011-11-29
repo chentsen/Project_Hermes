@@ -542,6 +542,8 @@ input[type=text]:first,input[type=password]:first {
 }
 .index .centerform h1 {
 		margin-bottom: 5px;
+		margin-top: 6px;
+		font-size: 28px;
 }
 .index .out-signup {
 
@@ -1391,6 +1393,7 @@ ul.as-selections {
 .closeBox .exitBox {
     
     margin-bottom: 10px;
+    margin-right: 3px;
     background: url('../images/exit-button.png') no-repeat center center orange;
     border: 1px solid #FC6C0C;
     padding: 15px;
@@ -1448,21 +1451,21 @@ ul.as-selections {
 .event .event_header .event_title {
     float: left;
     font-size: 36px;
+    line-height: 36px;
     
 }
 .event .event_header .event_self {
     color: white;
     float: right;
-    height: 38px;
-    line-height: 40px;
+    height: 35px;
+    line-height: 35px;
     font-size: 16px;
     display: block;
-    background-color: orange;
-    padding: 0 10px;
+    background-color: #24A3DF;
+    padding: 0px 10px;
     border-radius: 5px;
 }
 .event .event_main {
-    margin-top: 15px;
     overflow: hidden;
 }
 .event .event_main .event_img {
