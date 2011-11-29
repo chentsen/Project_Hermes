@@ -238,33 +238,42 @@ input[type=text]:first,input[type=password]:first {
     float: left;
 }
 .profile_image {
-    background: #ccc;
-    padding: 10px;
-    border-radius: 5px;
     margin-bottom: 10px;
 }
 .profile_eventList {
 		width: 180px;
 		overflow: hidden;
-		margin: 0 10px;
-    border-radius: 5px;
-		
 }
+.profile_eventList .eventFeedObject {
+	background-color: #DDD;
+	border-bottom-left-radius: 0px 0px !important;
+	border-bottom-right-radius: 0px 0px !important;
+
+}
+.profile_eventList .eventFeedObject a {
+	color: #454545;
+}
+
+.profile_eventList .mini-feed {
+	color: #454545;
+	font-size: 13px;
+}
+
+
 .profile_image img{
     width: 180px;
     height: 180px;
 }
 .profile_rightCol {
     float: right;
-    width: 430px;
+    width: 450px;
     overflow: hidden;
 }
 .profileDesc {
-    border-radius: 5px;
     font-size: 16px;
     font-weight: bold;
     padding: 10px;
-    background: #ccc;
+    background: #ddd;
     min-height: 48px;
     margin-bottom: 10px;
     
@@ -272,10 +281,7 @@ input[type=text]:first,input[type=password]:first {
 .profile_tags {
     min-height: 318px;
     padding: 10px;
-    background: #ccc;
-    border-radius: 5px;
-    
-    
+    background: #ddd;
 }
 /*** friend picture ****/
 #friendsList ul {
@@ -286,7 +292,8 @@ input[type=text]:first,input[type=password]:first {
 
 }
 .profile_header {
-    overflow: auto;
+    overflow: hidden;
+    height: 40px;
 }
 .friendStatus a{
     color: orange; 
@@ -338,11 +345,11 @@ input[type=text]:first,input[type=password]:first {
 }
 .user_info {
     float: right;
-    overflow: auto;
+    overflow: hidden;
     border-bottom: 1px solid #454545;
     width: 540px;
 }
-.user_info h2 { float: left;}
+.user_info h2 { float: left; margin-bottom: 2px;}
 .user_addFriend, .user_viewProfile {
     float: right;
     margin-left: 10px;
@@ -379,7 +386,7 @@ input[type=text]:first,input[type=password]:first {
     width: 30px;
     font-size: 12px;
     float: left;
-    padding: 10px 10px 0 10px;
+    padding: 5px 5px 0px 10px;
     margin-left: 10px;
 }
 .user_addFriend a, .user_viewProfile a
@@ -754,7 +761,7 @@ input[type=text]:first,input[type=password]:first {
 	margin-top: 80px;
 }
 #content_area a {
-		color: #454545;
+/**		color: #454545;**/
 }
 
 #content_area .page {
@@ -979,7 +986,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .mini-feed {
 		width: 200px;
 		float: left;
-		margin: 5px 0 0 0;
 }
 .mini-feed h4 {
 		margin: 1px 0 2px 0;
@@ -1282,7 +1288,7 @@ ul.as-selections {
     z-index: -1;
     min-height: 100px;
     margin-bottom: 10px;
-    padding: 5px 0px 0px 0px;
+    padding: 10px 0px 0px 0px;
     
   
   
@@ -1486,7 +1492,7 @@ ul.as-selections {
 }
 
 .event_location {
-	border-bottom: 1px solid #ccc;
+/**	border-bottom: 1px solid #ccc;**/
 }
 
 .event .interested_list {
@@ -1534,7 +1540,7 @@ ul.as-selections {
 .event .event_wall .wall_name {
     font-size: 18px;
     float: left;
-    margin: 20px 10px 10px 10px;
+    margin: 15px 10px 10px 10px;
     
 }
 .event .event_wall .posts {
@@ -1550,7 +1556,7 @@ ul.as-selections {
 	word-wrap: break-word;	
     float: left;
     border-radius: 5px;
-    background: #bbb;
+    background: #dddddd;
     margin: 5px 0px 0px 10px;
     font-size: 16px;
     padding: 10px;

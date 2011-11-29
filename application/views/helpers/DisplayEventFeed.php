@@ -28,11 +28,11 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 			 	echo "</div>";
 			 }		
 		}
-		if($i >= $length && $length > 3)
+		if($i >= $length && $length > 4)
 			$html = '<a class="view-events" href="/event-list">View all events</a>';
-		if($i == 0 && $length > 3)
+		if($i == 0 && $length > 4)
 			$html = '<a class="so-ronery">You have no events right now.</a>';
-		else if ($i == 0 && $length <3)
+		else if ($i == 0 && $length <4)
 		   $html = 'Not attending any events yet';
 		echo $html;
 		echo "</div>";
