@@ -75,7 +75,7 @@ class Application_Model_EventModel{
   		if((!$this->isMember($identity, $this->event->getMembers()))&&
 	  		(!$this->isMember($identity,$this->event->getWaitingList())))
 	  	{
-		  	
+		
 	  		$user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$identity));
 		  	
 		  	$this->dm->persist($this->event);
@@ -86,14 +86,14 @@ class Application_Model_EventModel{
   	}else return false;
   }
   
-public function isRequested($identity){
+public function hasRequestedMembership($identity){
   	
   	if(!($identity==$this->event->getCreator()->getEmail())){
-	  //	echo $this->isMember($identity, $this->event->getMembers());
   		if((!$this->isMember($identity, $this->event->getMembers()))&&
-	  		(!$this->isMember($identity,$this->event->getWaitingList())))
-	  	{return true;
-	  	}
+	  		(!$this->isMember($identity,$this->event->getWaitingList()))){  	
+			return false;
+	  	}else
+			return true;
   	}else return false;
   }
 		  	

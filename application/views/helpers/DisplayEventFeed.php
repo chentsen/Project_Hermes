@@ -4,7 +4,7 @@ use Documents\Feed\FeedObject\FeedObject;
 use Documents\Feed\FeedObject\EventFeedObject;
 use Documents\Feed\FeedObject\FriendAcceptFeedObject;
 class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayFeed{
-	public function DisplayEventFeed($identity, $length = null){
+	public function DisplayEventFeed($identity, $length = null,$showExpired = false){
 		$user = Zend_Registry::get("Wildkat\DoctrineContainer")->getDocumentManager('default')->getRepository('Documents\User')->findOneBy(array("email"=>$identity));
 		$feed = $user->getEventFeed();
 		
@@ -16,9 +16,16 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 			 $feedObjects = $feed->getFeedObjects();
 			 $length = ($length) ? $length : count($feedObjects);
 			 $display_length = min(count($feedObjects),$length);
+			 
 			 for($i = 0; $i < $display_length ; $i++){
 				$feedObject = $feedObjects[$i];
+
+				$date = new DateTime();
+				$hasExpired = ($feedObject->getDate()->getTimestamp() <= $date->getTimestamp()) ? true : false;
+				if($hasExpired && !$showExpired)
+					continue;
 			 	echo "<li class = 'eventFeedObject'>";
+
 				if(!$feedObject->getHidden()){
 					echo '<p>';
 					//print_r($feedObject);
