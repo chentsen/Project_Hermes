@@ -21,8 +21,9 @@ class EventController extends Hermes_Controller_Wall_WallController
         //helper level (consult with Julian)
         $event = $this->dm->getRepository('Documents\Event')->findOneBy(array('eid'=>$eid));
         $eventModel = new Application_Model_EventModel($event);
-       
+	
     	$this->view->event = $event;
+	$this->view->didRequest = $eventModel->hasRequestedMembership($this->identity);
         //1. if I am creator
 		
         if($this->identity == $event->getCreator()->getEmail()){
@@ -34,6 +35,8 @@ class EventController extends Hermes_Controller_Wall_WallController
     	//I'm not a member, and I'm not a creator
     	else if(!$event->isPrivate()){
     		$this->_helper->ViewRenderer('index_public');
+		echo var_dump($eventModel->hasRequestedMembership($this->identity));
+		
     	}
     	else{
     		echo 'This is a private event. Sorry!';
