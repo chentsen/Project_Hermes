@@ -229,8 +229,7 @@ input[type=text]:first,input[type=password]:first {
     
 }
 .profile .questions_flow a {
-    color: white !important;
-    font-weight: 600;
+    color: white;
 }
 .big_name {font-size: 36px; text-transform: capitalize; float: left;}
 .user_details { margin-bottom: 10px;}
@@ -332,7 +331,7 @@ input[type=text]:first,input[type=password]:first {
 /*** search page ****/
 .none-singleFound {
     margin-left: 15%;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 .none-singleFound a {
     color: orange;
@@ -662,6 +661,11 @@ input[type=text]:first,input[type=password]:first {
     color: #454545;
           
 }
+
+.block-body .mini-feed a{
+	width: 208px;
+}
+
 .create_button {
    margin: 5px;
 }
