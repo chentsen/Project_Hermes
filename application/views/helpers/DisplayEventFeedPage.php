@@ -21,7 +21,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					echo '<li class = "single-event">';
                                         
 					//print_r($feedObject);
-					$this->constructFeedMessage($feedObject);	
+					$this->constructFeedMessage($feedObject, $identity);	
 					
                                         echo '</li>';
 				}
@@ -46,12 +46,32 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
                 echo 'Event Creator</a>';
                
             }*/
+		    $date = new DateTime();
+		
+			
             echo "<div class='event-describer'><strong>Place:</strong> <a href = '/event/index/eid/". $feedObject->getEid()."'>";
             if($feedObject->getEvent())
-                
+                {
                 echo $feedObject->getEvent()->getLocation().'</a></div>';                
 				echo '<div class="event-describer"><strong>Date:</strong> '.$feedObject->getDate()->format('M d, Y').'</div>';
                 echo '<div class="event-describer"><strong>Activity:</strong> '.$feedObject->getShortDescription().'</div>';
                 //echo '<br />More Info: '. $feedObject->getLongDescription();
+					echo '<div class="event-date">';
+					if( $feedObject->getDate()->format('M d, Y') == $date->format('M d, Y'))
+					{ echo "Event is today";}
+					else if ($date->getTimeStamp() < $feedObject->getDate()->getTimestamp())
+					{ echo "Event has not begun";}
+					else 
+					{ echo "Event has has ended";}
+					echo '</div>';
+					//Display Creator
+					if ($eventModel->isEventCreator($identity, $creator))
+					{ echo "<div class='own-event'>Your Event</div>";}
+				
+					
+				
+				
+				
+				}
 	}
 }

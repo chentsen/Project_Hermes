@@ -4,7 +4,7 @@ use Documents\Feed\FeedObject\FeedObject;
 use Documents\Feed\FeedObject\EventFeedObject;
 use Documents\Feed\FeedObject\FriendAcceptFeedObject;
 class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayFeed{
-	public function DisplayEventFeed($identity, $length = null,$showExpired = false){
+	public function DisplayEventFeed($identity, $length = null, $showExpired = false){
 		$user = Zend_Registry::get("Wildkat\DoctrineContainer")->getDocumentManager('default')->getRepository('Documents\User')->findOneBy(array("email"=>$identity));
 		$feed = $user->getEventFeed();
 		
@@ -19,8 +19,10 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 			 
 			 for($i = 0; $i < $display_length ; $i++){
 				$feedObject = $feedObjects[$i];
-
-				$date = new DateTime();
+				
+				$date = new DateTime();				
+				$date->modify('-1 day');
+				
 				$hasExpired = ($feedObject->getDate()->getTimestamp() <= $date->getTimestamp()) ? true : false;
 				if($hasExpired && !$showExpired)
 					continue;
@@ -29,7 +31,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 				if(!$feedObject->getHidden()){
 					echo '<p>';
 					//print_r($feedObject);
-					$this->constructFeedMessage($feedObject);						
+					$this->constructFeedMessage($feedObject, $identity);						
                                         echo '</p>';
 				}
 			 	echo "</li>";
@@ -45,9 +47,11 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 		echo "</ul>";
 	}
 	//subclassed so we can construct our own custom feed message for events..
-	public function getEventFeedMessage(FeedObject $feedObject){
-            $eventModel = new Application_Model_EventModel($event->result);
-           
+	public function getEventFeedMessage(FeedObject $feedObject, $identity){
+				$eventModel = new Application_Model_EventModel($event->result);
+				$creator = $feedObject->getCreator()->getEmail();
+				
+				
            /* if ($feedObject->getCreator()->getEmail())
             {
                 
@@ -58,10 +62,16 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
             //echo "<a href = '/event/index/eid/". $feedObject->getEid()."'>";
             if($feedObject->getEvent())
                {
+				$user = Zend_Registry::get("Wildkat\DoctrineContainer")->getDocumentManager('default')->getRepository('Documents\User')->findOneBy(array("email"=>$identity));
+				//echo $user->getEmail();
+				//echo $user->getEmail();
 				echo '<img style="float: left;" src="/images/meet-people.png" width="50" /><div class="mini-feed">';
                 echo '<h4><a href = \'/event/index/eid/'. $feedObject->getEid().'\'>'.$feedObject->getShortDescription().' @ '.$feedObject->getEvent()->getLocation().'</a></h4>';                
 				echo 'on '.$feedObject->getDate()->format('m/d');
                 echo '</div>';
+				if ($eventModel->isEventCreator($identity, $creator))
+				{ echo "<div class='own-event'>Your Event</div>";}
+				
 			   }
 	}
 }

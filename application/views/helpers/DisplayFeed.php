@@ -4,9 +4,9 @@ use Documents\Feed\FeedObject\FeedObject;
 use Documents\Feed\FeedObject\EventFeedObject;
 use Documents\Feed\FeedObject\FriendAcceptFeedObject;
 class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
-	public function constructFeedMessage(FeedObject $feedObject){
+	public function constructFeedMessage(FeedObject $feedObject, $identity){
 			if($feedObject instanceof EventFeedObject){
-				$this->getEventFeedMessage($feedObject);
+				$this->getEventFeedMessage($feedObject, $identity);
 			}
 			else if($feedObject instanceof FriendAcceptFeedObject){
 				$this->getFriendAcceptFeedMessage($feedObject);
