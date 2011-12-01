@@ -85,7 +85,11 @@ class Application_Model_EventModel{
 	  	}
   	}else return false;
   }
-  
+public function isEventCreator($identity,$creator)
+{
+		if($identity==$creator)
+			return true;
+}
 public function hasRequestedMembership($identity){
   	
   	if(!($identity==$this->event->getCreator()->getEmail())){
