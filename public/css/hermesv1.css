@@ -10,7 +10,7 @@ div { display: block; }
 /*** form styles*****/
 #content_area form { }
 select {
-    margin: 10px;
+    margin: 10px 10px 10px 25px;
     font-size: 14px;
 }
 #editAccount{
@@ -193,8 +193,8 @@ input[type=text]:first,input[type=password]:first {
     margin-left: 40px;
 }
 #profilePic #profilePic_submit {
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 60px;
+    margin-left: 60px;
 }
 
 .account-edit #editAccount {
@@ -1212,7 +1212,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     
 }
 #createEvent_submit {
-	padding: 0 85px !important;
+	padding: 0 90px !important;
 }
 
 #createEvent .centerform {margin: 10px 0px 0px 0px;}
