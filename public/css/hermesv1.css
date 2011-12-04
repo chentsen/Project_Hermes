@@ -1102,7 +1102,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: #ff8600;
   color: white;
   font-weight: 600;
-  padding: 0 50px;
+  padding: 0 55px;
   margin: 0px;
 }
 
@@ -1455,7 +1455,6 @@ ul.as-selections {
 }
 /***** event page ******/
 .event .event_header {
-    overflow: hidden;
     margin: 0px 0px 5px 0;
     height: 40px;
 }
@@ -1594,7 +1593,7 @@ ul.as-selections {
     margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    width: 430px !important;
+    width: 425px !important;
 }
 .event .event_wall #Wall {
     margin: 0;
