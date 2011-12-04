@@ -1005,6 +1005,15 @@ html .icon_bar ul li .sub-settings .last-setting a{
     min-height: 400px;
 }
 /**** event creation ****/
+.show-advanced {text-align: right;}
+.show-advanced a {
+		
+		color: orange;
+		text-decoration: underline;
+}
+.invisible {
+		display: none;
+}
 .event_creation input[type=text]{
      margin: 5px;
 }
@@ -1367,7 +1376,7 @@ ul.as-selections {
     margin-right:auto;
     z-index:3;
     top:50%;  
-    margin-top:-250px; 
+    margin-top:-220px; 
     border-radius: 5px;
     /*box-shadow: 0 0 0px 10px rgba(66, 66, 66, .4);;*/
 }

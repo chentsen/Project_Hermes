@@ -7,18 +7,18 @@ class Zend_View_Helper_DisplayPendingRequests extends Zend_View_Helper_Abstract{
 		$this->friendRelation = new Application_Model_FriendRelation($identity);
 		$friendRequests = $this->friendRelation->getRequestList();
 		echo '<div id = "friendRequests">';
-		echo '<ul>';
+		
 		//echo 'found friernd';
 		if($friendRequests){
 			//print_r($friendRequests);
 			foreach($friendRequests as $friendRequest){
-				echo "<li>{$friendRequest->getRequester()->getEmail()} would like to be your friend";
-				echo "<a href = '/friend/respond_friend_request/accept/yes/rid/{$friendRequest->getRequestId()}'> accept </a>|
-					  <a href = '/friend/respond_friend_request/accept/no/rid/{$friendRequest->getRequestId()}'> ignore </a></li>";
+				echo "<div>{$friendRequest->getRequester()->getEmail()} would like to be your friend";
+				echo "<a style='margin: 0; padding: 0;width: 100%;float: left;' href = '/friend/respond_friend_request/accept/yes/rid/{$friendRequest->getRequestId()}'> accept </a>|
+					  <a style='margin: 0; padding: 0; width: 100%;float: left;' href = '/friend/respond_friend_request/accept/no/rid/{$friendRequest->getRequestId()}'> ignore </a></div>";
 			}
 		}
 		else echo 'You have no pending friend requests';
-		echo '</ul>';
+		
 		echo '</div>';
 	}
 }

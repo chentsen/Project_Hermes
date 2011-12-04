@@ -80,5 +80,19 @@ var Dialog = {
 				
 					
 				
+		},
+		showAdvanced:function(){
+			
+						$('.invisible').toggle();
+						
+						if ($('.show-advanced a').html() == 'Include more details') {
+								$(".show-advanced a").html('Include less details');
+						} else {
+								$(".show-advanced a").html('Include more details');
+						}
+						//} 				
+				//not done
+				
+				
 		}
 };
