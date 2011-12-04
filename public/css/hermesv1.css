@@ -518,6 +518,7 @@ input[type=text]:first,input[type=password]:first {
 .out-preview ul li h3 {
     font-weight: normal;
     font-size: 16px;
+    color: white;
 }
 .out-one h3 {margin-left: 30px;}
 .out-one img {margin-right: 22px;}
@@ -529,6 +530,8 @@ input[type=text]:first,input[type=password]:first {
     margin-top: 20px;
     
 }
+
+
 .out-signup .alternative {
     text-align: center;
     font-size: 40px;
