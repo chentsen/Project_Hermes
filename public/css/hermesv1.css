@@ -1480,7 +1480,7 @@ ul.as-selections {
 }
 .event .event_main .event_img {
     float: left;
-    padding: 5px 15px 0px 5px;
+    padding: 0px 15px 0px 5px;
 }
 .event .event_main .event_img img{
     
@@ -1498,8 +1498,8 @@ ul.as-selections {
     padding: 5px 0;
     
 }
-.event .event_main .event_date {
-  
+.event .event_main .event_date h2 {
+	margin-top: 10px;
 }
 .event .event_main .event_place h2{
     
