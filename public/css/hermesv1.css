@@ -1007,6 +1007,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .eventFeedObject p {
 		float: left;
 }
+
+.own-event {
+	font-weight: 600;
+}
 .right_col {
     overflow: auto;
     width: 49%;
