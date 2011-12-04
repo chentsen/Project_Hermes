@@ -1452,7 +1452,7 @@ ul.as-selections {
 /***** event page ******/
 .event .event_header {
     overflow: hidden;
-    margin: 0px 0px 10px 0;
+    margin: 0px 0px 5px 0;
     height: 40px;
 }
 .event .event_header .event_title {
@@ -1477,7 +1477,7 @@ ul.as-selections {
 }
 .event .event_main .event_img {
     float: left;
-    padding: 5px 15px 0px 10px;
+    padding: 5px 15px 0px 5px;
 }
 .event .event_main .event_img img{
     
