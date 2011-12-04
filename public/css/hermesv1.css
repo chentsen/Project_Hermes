@@ -1464,7 +1464,7 @@ ul.as-selections {
     line-height: 36px;
     
 }
-.event .event_right .event_self h2 {
+.event .event_right .event_self {
     color: white;
     float: right;
     height: 35px;
@@ -1476,7 +1476,7 @@ ul.as-selections {
     border-radius: 5px;
 }
 .event .event_main {
-    overflow: hidden;
+    overflow: auto;
 }
 .event .event_main .event_img {
     float: left;
