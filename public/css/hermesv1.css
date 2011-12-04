@@ -10,7 +10,7 @@ div { display: block; }
 /*** form styles*****/
 #content_area form { }
 select {
-    margin: 10px;
+    margin: 10px 10px 10px 25px;
     font-size: 14px;
 }
 #editAccount{
@@ -193,8 +193,8 @@ input[type=text]:first,input[type=password]:first {
     margin-left: 40px;
 }
 #profilePic #profilePic_submit {
-    margin-top: 10px;
-    margin-left: 50px;
+    margin-top: 60px;
+    margin-left: 60px;
 }
 
 .account-edit #editAccount {
@@ -229,8 +229,7 @@ input[type=text]:first,input[type=password]:first {
     
 }
 .profile .questions_flow a {
-    color: white !important;
-    font-weight: 600;
+    color: white;
 }
 .big_name {font-size: 36px; text-transform: capitalize; float: left;}
 .user_details { margin-bottom: 10px;}
@@ -332,7 +331,7 @@ input[type=text]:first,input[type=password]:first {
 /*** search page ****/
 .none-singleFound {
     margin-left: 15%;
-    margin-top: 20%;
+    margin-top: 10%;
 }
 .none-singleFound a {
     color: orange;
@@ -432,15 +431,15 @@ input[type=text]:first,input[type=password]:first {
     margin-bottom: 40px;
 }
 /*** about us ***/
-.prepend-logo,.questionmark { margin-top: 10px;letter-spacing: -4px; font-size: 75px; line-height: 100px; float: left;}
-.prepend-logo {margin-right: 15px;}
+.prepend-logo,.questionmark {letter-spacing: -4px; font-size: 75px; line-height: 100px; float: left;}
+.prepend-logo {margin-right: 20px;}
 /***** site exterior **********/
   .outside #header_block {display: none;}
    .outside #content_area {margin-top:0px;}
    .outside .page {}
 /***** landing styles********/
 .index .button input#login {
-	width: 209px;
+	width: 207px;
 	}
 .index form#login { 
     float: left; 
@@ -519,6 +518,7 @@ input[type=text]:first,input[type=password]:first {
 .out-preview ul li h3 {
     font-weight: normal;
     font-size: 16px;
+    color: white;
 }
 .out-one h3 {margin-left: 30px;}
 .out-one img {margin-right: 22px;}
@@ -530,6 +530,8 @@ input[type=text]:first,input[type=password]:first {
     margin-top: 20px;
     
 }
+
+
 .out-signup .alternative {
     text-align: center;
     font-size: 40px;
@@ -542,6 +544,8 @@ input[type=text]:first,input[type=password]:first {
 }
 .index .centerform h1 {
 		margin-bottom: 5px;
+		margin-top: 6px;
+		font-size: 28px;
 }
 .index .out-signup {
 
@@ -660,6 +664,11 @@ input[type=text]:first,input[type=password]:first {
     color: #454545;
           
 }
+
+.right-block .mini-feed a {
+	width: 208px;
+}
+
 .create_button {
    margin: 5px;
 }
@@ -998,6 +1007,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .eventFeedObject p {
 		float: left;
 }
+
+.own-event {
+	font-weight: 600;
+}
 .right_col {
     overflow: auto;
     width: 49%;
@@ -1084,7 +1097,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
   border-radius: 5px;
   display: block;
   background: #ff8600;
-  text-shadow: 0px 1px #454545;
   color: white;
   font-weight: 600;
   padding: 0 50px;
@@ -1097,7 +1109,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
   border-radius: 5px;
   display: block;
   background: #ff8600;
-  text-shadow: 0px 1px #454545;
   color: white;
   font-weight: 600;
   padding: 0 50px;
@@ -1124,7 +1135,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #wall_addPost:hover
 {
     /*background: url("../images/button-hover.png") repeat-x center;*/
-    text-shadow: 0px 1px #454545;
+
     background: #f9780d;
 }
 .inner_button {  }
@@ -1148,7 +1159,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
      margin-left: 0px !important;
     color: #eee;
     text-align: center;
-   text-shadow: 0px 1px #454545;
    font-weight:bold;
    font-size: 24px;
    margin-right: 10px;
@@ -1218,7 +1228,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     
 }
 #createEvent_submit {
-	padding: 0 85px !important;
+	padding: 0 90px !important;
 }
 
 #createEvent .centerform {margin: 10px 0px 0px 0px;}
@@ -1403,6 +1413,7 @@ ul.as-selections {
 .closeBox .exitBox {
     
     margin-bottom: 10px;
+    margin-right: 3px;
     background: url('../images/exit-button.png') no-repeat center center orange;
     border: 1px solid #FC6C0C;
     padding: 15px;
@@ -1454,32 +1465,32 @@ ul.as-selections {
 /***** event page ******/
 .event .event_header {
     overflow: hidden;
-    margin: 0px 0px 10px 0;
+    margin: 0px 0px 5px 0;
     height: 40px;
 }
 .event .event_header .event_title {
     float: left;
     font-size: 36px;
+    line-height: 36px;
     
 }
 .event .event_header .event_self {
     color: white;
     float: right;
-    height: 38px;
-    line-height: 40px;
+    height: 35px;
+    line-height: 35px;
     font-size: 16px;
     display: block;
-    background-color: orange;
-    padding: 0 10px;
+    background-color: #24A3DF;
+    padding: 0px 10px;
     border-radius: 5px;
 }
 .event .event_main {
-    margin-top: 15px;
     overflow: hidden;
 }
 .event .event_main .event_img {
     float: left;
-    padding: 5px 15px 0px 10px;
+    padding: 5px 15px 0px 5px;
 }
 .event .event_main .event_img img{
     
