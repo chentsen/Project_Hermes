@@ -325,7 +325,6 @@ input[type=text]:first,input[type=password]:first {
 
 .friend_pic img{
 	border-radius: 3px;
-	border: 1px solid #454545;
 
 }
 /*** search page ****/
@@ -695,6 +694,10 @@ input[type=text]:first,input[type=password]:first {
     width: 100%;
     display: block;
 }
+.right-block a:hover {
+	color: #ff8500;
+}
+
 .block-item h3 {
     font-family: "Myriad Pro" ,verdana , tahoma, helvetica, sans-serif;
     text-transform: uppercase;
