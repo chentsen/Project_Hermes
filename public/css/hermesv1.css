@@ -668,6 +668,10 @@ input[type=text]:first,input[type=password]:first {
 	width: 208px;
 }
 
+.eventFeedObject .mini-feed {
+	width: 300px;
+}
+
 .create_button {
    margin: 5px;
 }
@@ -1013,10 +1017,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
 
 .own-event {
 	font-weight: 600;
+	float: left;
 }
 
 .event-side-date {
-	font-weight: 600;
+
 }
 .right_col {
     overflow: auto;
