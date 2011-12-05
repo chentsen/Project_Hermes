@@ -68,10 +68,9 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 				echo '<img style="float: left;" src="/images/meet-people.png" width="50" /><div class="mini-feed">';
                 echo '<h4><a href = \'/event/index/eid/'. $feedObject->getEid().'\'>'.$feedObject->getShortDescription().' @ '.$feedObject->getEvent()->getLocation().'</a></h4>';                
 				echo '<span class="event-side-date">on '.$feedObject->getDate()->format('m/d').'</span>';
-                echo '</div>';
 				if ($eventModel->isEventCreator($identity, $creator))
 				{ echo "<span class='own-event'>Your Event</span>";}
-				
+				echo '</div>';
 			   }
 	}
 }
