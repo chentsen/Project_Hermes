@@ -1463,7 +1463,7 @@ ul.as-selections {
     float: left;
     font-size: 36px;
     line-height: 36px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     
 }
 .event .event_right .event_self {
@@ -1577,7 +1577,7 @@ ul.as-selections {
     margin: 5px 0px 0px 10px;
     font-size: 16px;
     padding: 10px;
-    width: 425px;
+    width: 457px;
     
 }
 .event .event_wall .wallpost a{
