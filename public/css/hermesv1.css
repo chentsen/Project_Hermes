@@ -1479,6 +1479,7 @@ ul.as-selections {
 }
 .event .event_main {
     overflow: hidden;
+    width: 640px;
 }
 .event .event_main .event_img {
     float: left;
