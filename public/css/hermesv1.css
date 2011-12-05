@@ -1021,14 +1021,21 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	display: block;
 	background-color: #24A3DF;
 	color: white;
-	font-size: 13px;
+	font-size: 12px;
 	line-height: 13px;
 	border-radius: 5px;
-	padding: 1px 7px 4px 7px;
+	padding: 3px 5px 3px 5px;
+	margin-bottom: 2px;
 }
 
-.event-side-date {
 
+.profile_eventList .own-event {
+	margin: 0px 0px 0px 2px !important;
+}
+.event-side-date {
+	float: left;
+	margin-top: 6px;
+	font-size: 13px;
 }
 .right_col {
     overflow: auto;
