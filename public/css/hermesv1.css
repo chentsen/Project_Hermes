@@ -669,7 +669,7 @@ input[type=text]:first,input[type=password]:first {
 }
 
 .block-body .mini-feed {
-	width: 300px;
+	width: 210px !important;
 }
 
 .create_button {
@@ -1016,9 +1016,15 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .own-event {
-	font-weight: 600;
 	float: right;
-	margin-right: 10px;
+	margin-right: 5px;
+	display: block;
+	background-color: #24A3DF;
+	color: white;
+	font-size: 13px;
+	line-height: 13px;
+	border-radius: 5px;
+	padding: 1px 7px 4px 7px;
 }
 
 .event-side-date {
