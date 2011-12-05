@@ -1659,8 +1659,21 @@ ul.as-selections {
 }
 
 .remove-anchor {
-	float:left;
+	float: left;
 	display: block;
+	background-color: #24A3DF;
+	font-size: 23px;
+	padding: 10px 32px;
+	font-weight: 600;
+}
+
+.remove-anchor a:hover {
+	float: left;
+	display: block;
+	background-color: #2396cd;
+	font-size: 23px;
+	padding: 10px 32px;
+	font-weight: 600;
 }
 
 /*** event list page ***/
