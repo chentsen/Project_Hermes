@@ -958,6 +958,20 @@ html .icon_bar ul li .sub-setting2 li a{
     background: #454545;
     color: white;
 }
+
+html #friendRequests ul li .sub-settings li a,
+html #friendRequests ul li .sub-setting2 li a{
+    float: right;
+    text-align: right;
+    width: 110px;
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 1px 5px 0px 5px;
+    background: #454545;
+    color: white;
+}
+
 html .icon_bar ul li .sub-settings li a:hover {
     background: #e0e0e0;
     
