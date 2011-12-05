@@ -668,7 +668,7 @@ input[type=text]:first,input[type=password]:first {
 	width: 208px;
 }
 
-.eventFeedObject .mini-feed {
+.block-body .mini-feed {
 	width: 300px;
 }
 
@@ -1017,7 +1017,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
 
 .own-event {
 	font-weight: 600;
-	float: left;
+	float: right;
+	margin-right: 10px;
 }
 
 .event-side-date {
