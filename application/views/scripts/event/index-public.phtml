@@ -12,7 +12,7 @@
 		<? if(!$this->didRequest) {?>
 		    <a class='remove-anchor' href = '/event/request/eid/<?= $this->eid; ?>'>- I'm down</a>
 		<? } ?>
-		</h2>
+		</h2><br /><br />
             <div class='event_date'>
                 <h2><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h2>
             </div>	
