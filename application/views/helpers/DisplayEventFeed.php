@@ -70,7 +70,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 				echo 'on '.$feedObject->getDate()->format('m/d');
                 echo '</div>';
 				if ($eventModel->isEventCreator($identity, $creator))
-				{ echo "<div class='own-event'>Your Event</div>";}
+				{ echo "<span class='own-event'>Your Event</span>";}
 				
 			   }
 	}
