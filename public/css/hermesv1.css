@@ -665,7 +665,7 @@ input[type=text]:first,input[type=password]:first {
 }
 
 .right-block .mini-feed a {
-	width: 208px;
+	width: 210px;
 }
 
 .block-body .mini-feed {
@@ -697,9 +697,6 @@ input[type=text]:first,input[type=password]:first {
     color: #454545;
     width: 100%;
     display: block;
-}
-.right-block a:hover {
-	color: #ff8500;
 }
 
 .block-item h3 {
@@ -1009,7 +1006,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
 		float: left;
 }
 .mini-feed h4 {
-		margin: 1px 0 2px 0;
+
+}
+
+.mini-feed a:hover {
+	color: #ff8500;
 }
 .eventFeedObject p {
 		float: left;
@@ -1017,20 +1018,19 @@ html .icon_bar ul li .sub-settings .last-setting a{
 
 .own-event {
 	float: right;
-	margin-right: 5px;
 	display: block;
 	background-color: #24A3DF;
 	color: white;
 	font-size: 12px;
 	line-height: 13px;
 	border-radius: 5px;
-	padding: 3px 5px 3px 5px;
-	margin-bottom: 2px;
+	padding: 2px 5px 3px 5px;
+	margin: 4px 5px 2px 0px;
 }
 
 
 .profile_eventList .own-event {
-	margin: 0px 0px 0px 2px !important;
+	margin: 4px 0px 0px 2px;
 }
 .event-side-date {
 	float: left;
