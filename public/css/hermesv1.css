@@ -1316,6 +1316,11 @@ ul.as-selections {
   
   
 }
+.profile ul.as-selections li.as-selection-item,
+.profile ul.as-selections li:hover.as-selection-item{
+		background-image: none;
+		background-color: orange;
+}
 .tag_dropdown {
     text-align: right;
 }
