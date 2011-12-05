@@ -1524,6 +1524,7 @@ ul.as-selections {
 .event .event_main .event_img {
     float: left;
     padding: 0px 15px 0px 5px;
+    width: 180px;
 }
 .event .event_main .event_img img{
     
@@ -1658,7 +1659,7 @@ ul.as-selections {
     background: url('../images/exit-button.png') no-repeat center center;
 }
 
-.remove-anchor {
+a.remove-anchor {
 	float: left;
 	display: block;
 	background-color: #24A3DF;
@@ -1667,7 +1668,7 @@ ul.as-selections {
 	font-weight: 600;
 }
 
-.remove-anchor a:hover {
+a.remove-anchor:hover {
 	float: left;
 	display: block;
 	background-color: #2396cd;
