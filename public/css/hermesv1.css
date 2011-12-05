@@ -1014,6 +1014,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .own-event {
 	font-weight: 600;
 }
+
+.event-side-date {
+	font-weight: 600;
+}
 .right_col {
     overflow: auto;
     width: 49%;
