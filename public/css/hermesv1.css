@@ -1104,6 +1104,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   font-weight: 600;
   padding: 0 55px;
   margin: 0px;
+  float:left;
 }
 
 .index #register {
@@ -1455,20 +1456,21 @@ ul.as-selections {
 }
 /***** event page ******/
 .event .event_header {
-    margin: 0px 0px 5px 0;
-    height: 40px;
+/*    margin: 0px 0px 5px 0;*/
+/*    height: 40px;*/
 }
 .event .event_header .event_title {
     float: left;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 5px;
     
 }
 .event .event_right .event_self {
     color: white;
     float: left;
-    height: 35px;
-    line-height: 35px;
+    height: 30px;
+    line-height: 30px;
     font-size: 16px;
     display: block;
     background-color: #24A3DF;
@@ -1476,7 +1478,7 @@ ul.as-selections {
     border-radius: 5px;
 }
 .event .event_main {
-    overflow: hidden !important;
+    overflow: hidden;
 }
 .event .event_main .event_img {
     float: left;
@@ -1499,7 +1501,7 @@ ul.as-selections {
     
 }
 .event .event_main .event_date h2 {
-	margin-top: 10px;
+	margin-top: 5px;
 }
 .event .event_main .event_place h2{
     
