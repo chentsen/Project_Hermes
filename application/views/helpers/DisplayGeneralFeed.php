@@ -23,7 +23,7 @@ class Zend_View_Helper_DisplayGeneralFeed extends Application_View_Helper_Displa
 				if(!$feedObject->getHidden()){
 					
 					//print_r($feedObject);
-					$this->constructFeedMessage($feedObject);	
+					$this->constructFeedMessage($feedObject, $identity);	
 					
 				}
 			 	echo "</li>";
