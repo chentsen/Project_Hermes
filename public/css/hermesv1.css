@@ -843,61 +843,15 @@ input[type=text]:first,input[type=password]:first {
     margin: 13px 30px 14px 40px;   
     float: left;
 }
-/*.search_friend_form input {
+.search_friend_form input {
     padding: 0px 30px 0px 10px;
     width: 230px;
     height: 30px;
     font-size: 16px;
     border-radius: 3px;
     -moz-border-radius: 3px;
-}*/
-/*===================*/
-.search_friend_form input {
-  background-color: #444;
-  background-color: rgba(255, 255, 255, 0.3);
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: normal;
-  font-weight: 13px;
-  line-height: 1;
-  padding: 4px 9px;
-  color: #ffffff;
-  color: rgba(255, 255, 255, 0.75);
-  border: 1px solid #111;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.25);
-  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 0px rgba(255, 255, 255, 0.25);
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none;
 }
-.search_friend_form input:-moz-placeholder {
-  color: #e6e6e6;
-}
-.search_friend_form input::-webkit-input-placeholder {
-  color: #e6e6e6;
-}
-.search_friend_form input:hover {
-  background-color: #bfbfbf;
-  background-color: rgba(255, 255, 255, 0.5);
-  color: #ffffff;
-}
-.search_friend_form input:focus, .topbar input.focused {
-  outline: 0;
-  background-color: #ffffff;
-  color: #404040;
-  text-shadow: 0 1px 0 #ffffff;
-  border: 0;
-  padding: 5px 10px;
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
-}
-====================
+
 .search_friend_submit 
 {   
     float: right;
