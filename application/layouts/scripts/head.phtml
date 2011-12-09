@@ -12,8 +12,9 @@
           ->appendStylesheet($this->baseUrl('css/autoSuggest.css')); ?>
   <?php echo $this->headLink() ?>
   <?php $this->headScript()
-          ->appendFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js')
           ->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+          ->appendFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js')
+         
           ->appendFile($this->baseUrl('js/jquery.cookie.js'))
           ->appendFile($this->baseUrl('js/ptv1.js'))
        
