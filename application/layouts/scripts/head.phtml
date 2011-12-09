@@ -11,7 +11,6 @@
           ->appendStylesheet($this->baseUrl('css/smoothness/jquery-ui-1.7.3.custom.css'))
           ->appendStylesheet($this->baseUrl('css/autoSuggest.css')); ?>
   <?php echo $this->headLink() ?>
-  <?php echo $this->jQuery()->enable()->uiEnable(); ?>
   <?php $this->headScript()
           ->appendFile($this->baseUrl('js/jquery.cookie.js'))
           ->appendFile($this->baseUrl('js/ptv1.js'))
@@ -19,7 +18,8 @@
           ->appendFile($this->baseUrl('js/jquery.autoSuggest.js'))
           ->appendFile($this->baseUrl('js/tags.js'))
           ->appendFile($this->baseUrl('js/jquery.blockUI.js'))
-          ->appendFile($this->baseUrl('js/dialog.js'));
+          ->appendFile($this->baseUrl('js/dialog.js'))
+          ->appendFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js');
             //http://code.drewwilson.com/entry/autosuggest-jquery-plugin
     ?>
   
