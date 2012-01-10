@@ -432,7 +432,7 @@ input[type=text]:first,input[type=password]:first {
 	}
 .index form#login { 
     float: left; 
-    margin-left: 360px;
+    margin-left: 200px;
     padding: 10px 40px 40px 0px;
 }
 .index input[type="text"],
@@ -443,10 +443,9 @@ input[type=text]:first,input[type=password]:first {
 }
 .index form#login { 
     float: left; 
-	margin-left: 358px;
+	margin-left: 200px;
     padding: 40px 40px 40px 0px; 
     /**background: url(../images/or-background.png) no-repeat right center;**/
-    
 }
 .index #registration{float: left; }
 .index #city { /*width: 120px; */}

@@ -1,11 +1,11 @@
 <?php 
     $options = array('formName'=>'profileSearch','fieldName' => 'profileSearch_field','viewScriptName'=>'_form_profileSearch.phtml','formAction'=>'/Search/index');
-        $form = new Application_Form_Search($options);
-        $this->form = $form;
-
+    $form = new Application_Form_Search($options);
+    $this->form = $form;
+    $identity = Application_Model_UserSettings::hasIdentity();    
 ?>
-<?php $auth = Zend_Auth::getInstance();
-        if($auth->hasIdentity()){ ?>
+
+<? if($identity){ ?>
 <div id="header_block">
 	<div id="header_area">
 		<div class="page">
@@ -17,6 +17,5 @@
     
    </div>
 </div>
+<? } ?>
 
-
-<?php } ?>

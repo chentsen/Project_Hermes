@@ -1,4 +1,5 @@
 <?php
+use Facebook\Facebook;
 class RegistrationController extends Zend_Controller_Action
 {
 
@@ -34,6 +35,7 @@ class RegistrationController extends Zend_Controller_Action
 				return;
 			}else{
 				$this->dm->remove($keyValid);
+				$this->dm->flush();
 			}	
 			
 			$activationCode = $this->userSettings->register($this->_request->getPost());
@@ -83,6 +85,72 @@ class RegistrationController extends Zend_Controller_Action
     {
         // action body
     }
+    public function fbLoginAction(){
+	$this->_helper->layout()->disableLayout();
+	$this->_helper->viewRenderer->setNoRender();
+	$data_obj = Application_Model_UserSettings::getFBData();
+	$user = $data_obj['user'];
+	$user_profile = $data_obj['user_profile'];
+	// Login or logout url will be needed depending on current user state.
+	if ($user) {
+	   $pt_user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$user_profile['email']));
+	    if(!$pt_user){
+		$result = $this->userSettings->fbRegister($user_profile);
+		if($result === true){
+		    $json['success'] = true;
+		    //registration was a success, send the user to profile page
+		    $this->_helper->json($json);
+		}else if($result === false){
+		    $json['form'] = 'An account associated with this Facebook account email already exists';
+		     $this->_helper->json($json);
+		}else{
+		    //render the form view and echo it.
+		    $fbRegistration = new Application_Form_FbRegistration($result);
+		    
+		    $json['form'] =  $fbRegistration->render();
+		    
+		    $this->_helper->json($json);
+		    
+		    //do something to tell about failed registration
+		}
+	    }
+	    //we should log the user into their FB linked account!
+	    else if($pt_user && $pt_user->getIsFBAccount()){
+		  $json['fb_account_exists'] = true;
+		    //registration was a success, send the user to profile page
+		    $this->_helper->json($json);
+	    }
+	    else if($pt_user && !$pt_user->getIsFBAccount()){
+		
+	    }
+	    //user is logged in so we can register
+	} 
+    }
+    public function fbRetryAction(){
+	$form = new Application_Form_FbRegistration();
+	$this->_helper->viewRenderer->setNoRender();
+	if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
+	    $keyValid = $this->dm->getRepository('Documents\Betakey')->findOneBy(array('key'=>$_POST['betakey']));
+	    if(!$keyValid){
+		    $this->view->errors = array("betaExists"=>array("Invalid betakey, please enter the key you received in your invite to try out Plumetype."));
+		    //remove the Betakey
+		    echo ' KEY IS INVALID ';
+		    echo $_POST['betakey'];
+		    return;
+	    }else{
+		    $success = $this->userSettings->fbRegister($this->_request->getPost(),true);
+		    $this->dm->remove($keyValid);
+		    $this->dm->flush();
+		    if($success === true){
+			echo 'Registration Successful!';
+		    }else{
+			var_dump($success);
+			echo 'FAIL! EMAIL EXISTS';
+		    }
+	    }
+	}
+    }
+    
 
 
 }

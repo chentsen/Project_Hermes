@@ -3,6 +3,8 @@
     		$this->userDescription = $userDescription;
               $event = new Application_Form_CreateEvent();    
             $reg = new Application_Form_Registration();
+	    
+    $identity = Application_Model_UserSettings::hasIdentity();
  
 ?>
 <?php echo $this->doctype(); ?>
@@ -12,18 +14,21 @@
     <?php echo $this->render('head.phtml') ?>
 </head>
 <body class="<?= $this->LayoutClass() ?>">
+<div id="fb-root"></div>
 
-<div class="custom<?php $auth = Zend_Auth::getInstance();
-        if(!$auth->hasIdentity()){ echo ' outside'; }?>">
+<div class="custom<?php 
+        if(!$identity){ echo ' outside'; }?>">
     <?php echo $this->render('header.phtml') ?>
     
  	<div id="content_area">
  		<div class="page">     
                    
-                    <?php echo $this->layout()->content ?>
-                    <?php $auth = Zend_Auth::getInstance(); 
-                    if($auth->hasIdentity()){ 
-                    	$this->identity = $auth->getIdentity()?>
+		    <div class="main_ajax_content">
+			<?php echo $this->layout()->content ?>
+		    </div>
+                    <?php 
+                    if($identity){ 
+                    	?>
                     <div class="right-block">
                         <div class="create_button">
                             <a href="#" onclick="Dialog.showDialog({elementSelector:'#event_ajax_form',func:Dialog.loadEventDatePicker})"><h1>Create Event</h1></a>
@@ -69,7 +74,7 @@
 			</div>
 	</div>
        <?php
-	if(!$auth->hasIdentity()){ ?>
+	if(!$identity){ ?>
 	<div class = "footer_ajax" style="display:none">
 						<div id="reg_ajax_form">	
 							<?= $reg ?>
