@@ -4,30 +4,34 @@ $(function()
 			{
 			  
 			var formElementId = $(this).attr('id');
-               //alert(formElementId);              
-                        doValidation(formElementId);   
+               //alert(formElementId);
+			   formid = $(this).get(0).form.id;
+                        doValidation(formElementId, formid);   
                   
 		});
 
 	});
 function doValidation(id, formname)
 {
-    if (window.location.pathname=='/index')
+    if (window.location.pathname=='/index' && formname == 'registration')
         {
             var url = '/ajax/ajaxform';
-        }
-    else if (window.location.pathname=='/registration/index' || window.location.pathname=='/registration/')
+        } else if (window.location.pathname=='/index' && formname == 'login')
+		{
+			var url = '/ajax/ajaxlogin';
+		}
+	  else if (window.location.pathname=='/registration/index' || window.location.pathname=='/registration/')
        {
 		 
            var url = '/ajax/ajaxform';
        }
-    else if (window.location.pathname=='/')
+    else if (window.location.pathname=='/' && formname == 'registration')
            {
         var url = '/ajax/ajaxform';
            }
-    else
+    else if (window.location.pathname=='/' && formname == 'login')
         {
-    var url = 'ajax/ajaxform';
+    var url = 'ajax/ajaxlogin';
         }
     var data = {};
     $("input").each(function() {

@@ -34,11 +34,11 @@ class FriendController extends Hermes_Controller_SessionController
 		$request = $this->friendRelation->createFriendRequest($param);
 		
 		if($request){
-			$this->_helper->flashMessenger->addMessage("Friend request created!");
+			$this->_helper->flashMessenger->addMessage("Friend request sent!");
 				$this->_redirect('/profile');
 		}
 		else{
-			$this->_helper->flashMessenger->addMessage("Friend request created!");
+			$this->_helper->flashMessenger->addMessage("Friend request sent!");
 				$this->_redirect('/profile');
 		}
 	}
