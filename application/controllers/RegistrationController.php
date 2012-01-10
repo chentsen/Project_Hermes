@@ -121,7 +121,9 @@ class RegistrationController extends Zend_Controller_Action
 		    $this->_helper->json($json);
 	    }
 	    else if($pt_user && !$pt_user->getIsFBAccount()){
-		
+		 $json['fb_account_exists'] = false;
+		    //registration was a success, send the user to profile page
+		    $this->_helper->json($json);
 	    }
 	    //user is logged in so we can register
 	} 
