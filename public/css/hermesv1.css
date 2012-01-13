@@ -929,8 +929,7 @@ input[type=text]:first,input[type=password]:first {
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
 		min-height: 100%;
-		font-weight: 600;
-		font-size: 13px;
+		font-size: 14px;
 }
 .icon_bar ul.sub-setting2 li.friend-requests
 {
@@ -953,8 +952,7 @@ html .icon_bar ul li .sub-setting2 li a{
     text-align: right;
     width: 110px;
     padding: 10px;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 14px;
     margin: 1px 5px 0px 5px;
     background: #454545;
     color: white;
