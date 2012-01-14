@@ -218,11 +218,13 @@ class Application_Model_UserSettings{
 		    try {
 			// Proceed knowing you have a logged in user who's authenticated.
 			$user_profile = $facebook->api('/me');
-			return array('user'=>$user,'user_profile'=>$user_profile);
-		    } catch (FacebookApiException $e) {
+			var_dump($user_profile);
+		    } catch (Exception $e) {
+			
 			error_log($e);
 			$user = null;
 		    }
+		    
 		}
 		return false;
 	}

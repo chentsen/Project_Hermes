@@ -13,7 +13,7 @@ class Application_Form_Login extends Zend_Form
     	$this->setName('login');
 		$this->setAction('/index/index');
 		$this->setMethod('post');
-		$email = new Zend_Form_Element_Text('email_login');
+		$email = new Zend_Form_Element_Text('email');
 		$email->setRequired(true)
 			  ->addValidator('EmailAddress',true, array(
      			'messages' => array(
@@ -25,7 +25,7 @@ class Application_Form_Login extends Zend_Form
     			 )
   				));
 			  
-		$password = new Zend_Form_Element_Password('password_login');
+		$password = new Zend_Form_Element_Password('password');
 		$password->addValidator('Regex',false,array('pattern' => '/^.*(?=.{6,20})(?=.*[\d])(?=.*[a-zA-Z])/',
 													'messages'=>array('regexNotMatch' => "Passwords must contain 6 to 20 characters and have at least one number")))
 				 ->addValidator('StringLength',false,array('max'=>20))
