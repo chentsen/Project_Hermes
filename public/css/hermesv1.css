@@ -561,8 +561,8 @@ input[type=text]:first,input[type=password]:first {
     color: #ff8600;
 }
 
-a.signup-button:hover {
-    color: #24A3DF;
+.signup-button:hover a {
+    color: #24A3DF !important;
 }
 
 .index .out-signup h1 {
