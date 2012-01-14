@@ -218,7 +218,7 @@ class Application_Model_UserSettings{
 		    try {
 			// Proceed knowing you have a logged in user who's authenticated.
 			$user_profile = $facebook->api('/me');
-			var_dump($user_profile);
+			//var_dump($user_profile);
 		    } catch (Exception $e) {
 			
 			error_log($e);
