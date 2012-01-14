@@ -126,7 +126,7 @@ class RegistrationController extends Zend_Controller_Action
 		    $this->_helper->json($json);
 	    }
 	    //user is logged in so we can register
-	} 
+	}
     }
     public function fbRetryAction(){
 	$form = new Application_Form_FbRegistration();
