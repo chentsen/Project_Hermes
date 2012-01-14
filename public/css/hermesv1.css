@@ -1684,3 +1684,7 @@ ul.as-selections {
 		color: #bbb;
 		font-size: 10px;
 }
+
+a.remove-anchor {
+	display: none !important;
+}
