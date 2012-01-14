@@ -325,7 +325,6 @@ input[type=text]:first,input[type=password]:first {
 
 .friend_pic img{
 	border-radius: 3px;
-	border: 1px solid #454545;
 
 }
 /*** search page ****/
@@ -665,7 +664,11 @@ input[type=text]:first,input[type=password]:first {
 }
 
 .right-block .mini-feed a {
-	width: 208px;
+	width: 210px;
+}
+
+.block-body .mini-feed {
+	width: 210px !important;
 }
 
 .create_button {
@@ -694,6 +697,7 @@ input[type=text]:first,input[type=password]:first {
     width: 100%;
     display: block;
 }
+
 .block-item h3 {
     font-family: "Myriad Pro" ,verdana , tahoma, helvetica, sans-serif;
     text-transform: uppercase;
@@ -846,6 +850,7 @@ input[type=text]:first,input[type=password]:first {
     border-radius: 3px;
     -moz-border-radius: 3px;
 }
+
 .search_friend_submit 
 {   
     float: right;
@@ -923,8 +928,7 @@ input[type=text]:first,input[type=password]:first {
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
 		min-height: 100%;
-		font-weight: 600;
-		font-size: 13px;
+		font-size: 14px;
 }
 .icon_bar ul.sub-setting2 li.friend-requests
 {
@@ -947,12 +951,25 @@ html .icon_bar ul li .sub-setting2 li a{
     text-align: right;
     width: 110px;
     padding: 10px;
+    font-size: 14px;
+    margin: 1px 5px 0px 5px;
+    background: #454545;
+    color: white;
+}
+
+html #friendRequests ul li .sub-settings li a,
+html #friendRequests ul li .sub-setting2 li a{
+    float: right;
+    text-align: right;
+    width: 110px;
+    padding: 10px;
     font-size: 13px;
     font-weight: 600;
     margin: 1px 5px 0px 5px;
     background: #454545;
     color: white;
 }
+
 html .icon_bar ul li .sub-settings li a:hover {
     background: #e0e0e0;
     
@@ -1001,14 +1018,36 @@ html .icon_bar ul li .sub-settings .last-setting a{
 		float: left;
 }
 .mini-feed h4 {
-		margin: 1px 0 2px 0;
+
+}
+
+.mini-feed a:hover {
+	color: #ff8500;
 }
 .eventFeedObject p {
 		float: left;
 }
 
 .own-event {
-	font-weight: 600;
+	float: right;
+	display: block;
+	background-color: #24A3DF;
+	color: white;
+	font-size: 12px;
+	line-height: 13px;
+	border-radius: 5px;
+	padding: 2px 5px 3px 5px;
+	margin: 4px 5px 2px 0px;
+}
+
+
+.profile_eventList .own-event {
+	margin: 4px 0px 0px 2px;
+}
+.event-side-date {
+	float: left;
+	margin-top: 6px;
+	font-size: 13px;
 }
 .right_col {
     overflow: auto;
@@ -1110,8 +1149,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: #ff8600;
   color: white;
   font-weight: 600;
-  padding: 0 50px;
+  padding: 0 55px;
   margin: 0px;
+  float:left;
 }
 
 .index #register {
@@ -1315,6 +1355,11 @@ ul.as-selections {
   
   
 }
+.profile ul.as-selections li.as-selection-item,
+.profile ul.as-selections li:hover.as-selection-item{
+		background-image: none;
+		background-color: orange;
+}
 .tag_dropdown {
     text-align: right;
 }
@@ -1463,21 +1508,21 @@ ul.as-selections {
 }
 /***** event page ******/
 .event .event_header {
-    overflow: hidden;
-    margin: 0px 0px 5px 0;
-    height: 40px;
+/*    margin: 0px 0px 5px 0;*/
+/*    height: 40px;*/
 }
 .event .event_header .event_title {
     float: left;
     font-size: 36px;
     line-height: 36px;
+    margin-bottom: 10px;
     
 }
-.event .event_header .event_self {
+.event .event_right .event_self {
     color: white;
-    float: right;
-    height: 35px;
-    line-height: 35px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
     font-size: 16px;
     display: block;
     background-color: #24A3DF;
@@ -1486,10 +1531,12 @@ ul.as-selections {
 }
 .event .event_main {
     overflow: hidden;
+    width: 640px;
 }
 .event .event_main .event_img {
     float: left;
-    padding: 5px 15px 0px 5px;
+    padding: 0px 15px 0px 5px;
+    width: 180px;
 }
 .event .event_main .event_img img{
     
@@ -1507,8 +1554,8 @@ ul.as-selections {
     padding: 5px 0;
     
 }
-.event .event_main .event_date {
-  
+.event .event_main .event_date h2 {
+	margin-top: 5px;
 }
 .event .event_main .event_place h2{
     
@@ -1583,7 +1630,7 @@ ul.as-selections {
     margin: 5px 0px 0px 10px;
     font-size: 16px;
     padding: 10px;
-    width: 425px;
+    width: 457px;
     
 }
 .event .event_wall .wallpost a{
@@ -1602,7 +1649,7 @@ ul.as-selections {
     margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
-    width: 430px !important;
+    width: 425px !important;
 }
 .event .event_wall #Wall {
     margin: 0;
@@ -1624,6 +1671,23 @@ ul.as-selections {
     background: url('../images/exit-button.png') no-repeat center center;
 }
 
+a.remove-anchor {
+	float: left;
+	display: block;
+	background-color: #24A3DF;
+	font-size: 23px;
+	padding: 10px 32px;
+	font-weight: 600;
+}
+
+a.remove-anchor:hover {
+	float: left;
+	display: block;
+	background-color: #2396cd;
+	font-size: 23px;
+	padding: 10px 32px;
+	font-weight: 600;
+}
 
 /*** event list page ***/
 .event-list .none-singleFound {
