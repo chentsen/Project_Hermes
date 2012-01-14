@@ -453,7 +453,7 @@ input[type=text]:first,input[type=password]:first {
 }
 .index form#login { 
     float: left; 
-	margin-left: 200px;
+    margin-left: 200px;
     padding: 40px 40px 40px 0px; 
     /**background: url(../images/or-background.png) no-repeat right center;**/
 }
@@ -560,6 +560,11 @@ input[type=text]:first,input[type=password]:first {
     font-weight: bold;
     color: #ff8600;
 }
+
+a.signup-button:hover {
+    color: #24A3DF;
+}
+
 .index .out-signup h1 {
     
     font-size: 26px;
@@ -569,7 +574,7 @@ input[type=text]:first,input[type=password]:first {
 .index .signup-or {
     position: absolute;
     top: 100px;
-    right: 460px;
+    right: 490px;
     color: white;
     font-size: 24px;
 }
@@ -581,7 +586,7 @@ input[type=text]:first,input[type=password]:first {
     display: block;
     float: right;
     margin-top: 80px;
-    margin-right: 150px;
+    margin-right: 190px;
 }
 .out-signup a:hover {
     
@@ -1499,7 +1504,6 @@ ul.as-selections {
     padding:5px;
     margin: 5px 0px;
     font-size: 14px;
-    font-weight: bold;
     border-radius: 5px;
     background: orange;
     border: 1px solid #FC6C0C;
