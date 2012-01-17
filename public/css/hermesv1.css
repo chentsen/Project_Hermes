@@ -1741,7 +1741,7 @@ a.remove-anchor:hover {
 		font-size: 12px;
 }
 
-.feed-username {
+.feed-username a {
 	color: orange;
 }
 
