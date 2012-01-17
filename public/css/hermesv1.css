@@ -561,8 +561,9 @@ input[type=text]:first,input[type=password]:first {
     color: #ff8600;
 }
 
-.signup-button:hover a {
-    color: #24A3DF !important;
+a.signup-button:hover {
+    color: #24A3DF;
+    display: block;
 }
 
 .index .out-signup h1 {
@@ -706,7 +707,9 @@ input[type=text]:first,input[type=password]:first {
 .block-item h3 {
     font-family: "Myriad Pro" ,verdana , tahoma, helvetica, sans-serif;
     text-transform: uppercase;
+    margin-left: 4px;
     }
+    
 .block-item {
     
     background: #555;
@@ -929,7 +932,7 @@ input[type=text]:first,input[type=password]:first {
 .icon_bar #friendRequests {
 		background: #454545;
 		margin: 1px 5px 5px 5px;
-		padding: 10px 5px;
+		padding: 5px 5px 10px 10px;
 		border-bottom-left-radius: 5px;
 		border-bottom-right-radius: 5px;
 		min-height: 100%;
@@ -990,10 +993,14 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	
 	text-align: center;		
     list-style: none;
-    padding: 3px 0 0 3px;
+    /*padding: 3px 0 0 3px;*/
     font-weight: bold;
     font-size: 12px;
 	word-wrap: break-word;
+}
+
+.friend_pic {
+	margin-top: 2px;
 }
 /*** profile area ***/
 .left_col {
@@ -1731,12 +1738,17 @@ a.remove-anchor:hover {
 
 .notification .notification-object span {
 		color: #bbb;
-		font-size: 10px;
+		font-size: 12px;
+}
+
+.feed-username {
+	color: orange;
 }
 
 .individual-object {
-		margin-top: 3px;
+		margin-bottom: 3px;
 		float: left;
+		font-size: 16px;
 }
 
 .event-describer {
