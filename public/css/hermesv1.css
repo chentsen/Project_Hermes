@@ -323,10 +323,6 @@ input[type=text]:first,input[type=password]:first {
 		color: #555555;
 }
 
-.friend_pic img{
-	border-radius: 3px;
-
-}
 /*** search page ****/
 .none-singleFound {
     margin-left: 15%;
