@@ -307,7 +307,7 @@ input[type=text]:first,input[type=password]:first {
 .friendStatus {
     float: right;
 }
-.friend_list {float: left; margin: 15px 14px 2px 14px;}
+.friend_list {float: left; margin: 12px 14px 2px 14px;}
 .friends_block .view-friends,
 .upcoming_events .view-events
 {
