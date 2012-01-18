@@ -995,6 +995,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /**** friend stuff*****/
 #friends-header {
 	margin-left: 11px;
+	font-size: 30px;
 }
 
 .friend_name {
@@ -1540,8 +1541,8 @@ ul.as-selections {
 }
 .event .event_header .event_title {
     float: left;
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 30px;
+    line-height: 30px;
     margin-bottom: 10px;
     
 }
@@ -1726,13 +1727,17 @@ a.remove-anchor:hover {
 .event-list h1{
 		margin-bottom: 5px;
 }
+
+.notification h1 {
+	font-size: 30px;
+}
 .notification .notification-object {
 		overflow: hidden;
 }
 .notification .notification-object,
 .event-list ul.event-object {
 		
-		margin: 10px 0px 10px 10px;
+		margin: 10px 0px 10px 4px;
 }
 
 .single-event {
