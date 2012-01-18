@@ -994,6 +994,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
     margin-top: 0px;
 }
 /**** friend stuff*****/
+#friends-header {
+	margin-left: 11px;
+}
+
 .friend_name {
 	text-align: center;		
     list-style: none;
