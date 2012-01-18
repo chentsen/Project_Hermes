@@ -307,7 +307,7 @@ input[type=text]:first,input[type=password]:first {
 .friendStatus {
     float: right;
 }
-.friend_list {float: left; padding: 5px 4px 0 4px;}
+.friend_list {float: left; margin: 5px 14px;}
 .friends_block .view-friends,
 .upcoming_events .view-events
 {
@@ -665,6 +665,15 @@ a.signup-button:hover {
           
 }
 
+.block-body .friend_list {
+	margin: 0px;
+}
+
+.block-body .friend_name {
+	text-size: 10px;
+	font-weight: bold;
+}
+
 .right-block .mini-feed a {
 	width: 210px;
 }
@@ -991,13 +1000,22 @@ html .icon_bar ul li .sub-settings .last-setting a{
     list-style: none;
     /*padding: 3px 0 0 3px;*/
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
 	word-wrap: break-word;
+	margin: 5px 0px 0px 5px;
 }
 
 .friend_pic {
-	margin-top: 2px;
+	
 }
+
+.friend-city {
+		font-weight: normal;
+		color: #AAA;
+		font-size: 12px;
+		margin-top: 2px;
+}
+
 /*** profile area ***/
 .left_col {
     overflow: auto;
@@ -1749,10 +1767,4 @@ a.remove-anchor:hover {
 
 .event-describer {
 	margin: 5px 0px;
-}
-/*** friend page ****/
-.friend-city {
-		font-weight: normal;
-		color: #bbb;
-		font-size: 10px;
 }
