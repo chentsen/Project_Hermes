@@ -1741,14 +1741,14 @@ a.remove-anchor:hover {
 		font-size: 12px;
 }
 
-.feed-username a {
-	color: orange;
-}
-
 .individual-object {
 		margin-bottom: 3px;
 		float: left;
 		font-size: 16px;
+}
+
+.individual-object a {
+	color: orange;
 }
 
 .event-describer {
