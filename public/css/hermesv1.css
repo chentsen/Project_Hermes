@@ -307,7 +307,7 @@ input[type=text]:first,input[type=password]:first {
 .friendStatus {
     float: right;
 }
-.friend_list {float: left; margin: 5px 14px;}
+.friend_list {float: left; margin: 15px 14px 2px 14px;}
 .friends_block .view-friends,
 .upcoming_events .view-events
 {
@@ -666,7 +666,7 @@ a.signup-button:hover {
 }
 
 .block-body .friend_list {
-	margin: 0px;
+	margin: 11px 5px 50px 6px;
 }
 
 .block-body .friend_name {
@@ -995,14 +995,13 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 /**** friend stuff*****/
 .friend_name {
-	
 	text-align: center;		
     list-style: none;
     /*padding: 3px 0 0 3px;*/
     font-weight: bold;
     font-size: 13px;
 	word-wrap: break-word;
-	margin: 5px 0px 0px 5px;
+	margin: 2px 0px 0px 0px;
 }
 
 .friend_pic {
