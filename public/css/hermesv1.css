@@ -670,7 +670,7 @@ a.signup-button:hover {
 }
 
 .block-body .friend_name {
-	text-size: 10px;
+	font-size: 10px;
 	font-weight: bold;
 }
 
