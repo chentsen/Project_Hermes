@@ -1062,10 +1062,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	display: block;
 	background-color: #24A3DF;
 	color: white;
-	font-size: 12px;
-	line-height: 13px;
+	font-size: 11px;
+	line-height: 12px;
 	border-radius: 5px;
-	padding: 2px 5px 3px 5px;
+	padding: 2px 3px 3px 3px;
 	margin: 4px 5px 2px 0px;
 }
 
@@ -1075,7 +1075,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 .event-side-date {
 	float: left;
-	margin-top: 6px;
+	margin-top: 5px;
 	font-size: 13px;
 }
 .right_col {
@@ -1711,6 +1711,10 @@ a.remove-anchor:hover {
 	display: block;
 	font-size: 16px;
 	color: #24A3DF;
+}
+
+.attend-button {
+	
 }
 
 /*** event list page ***/
