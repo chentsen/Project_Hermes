@@ -670,7 +670,6 @@ a.signup-button:hover {
 
 .block-body .friend_name {
 	font-size: 10px;
-	font-weight: bold;
 }
 
 .right-block .mini-feed a {
@@ -805,9 +804,8 @@ a.signup-button:hover {
 }
 .view-wrapped {
     width: 640px;
-    
     background: #f0f0f0;
-     border-radius: 5px;
+/*     border-radius: 5px;*/
      height: 100% !important;
      color: #555;
      margin: 5px;
@@ -991,7 +989,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 /**** friend stuff*****/
 #friends-header {
-	margin-left: 11px;
 	font-size: 30px;
 }
 
