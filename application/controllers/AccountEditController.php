@@ -41,7 +41,27 @@ class AccountEditController extends Hermes_Controller_SessionController
         $this->view->form = $form;
         $this->view->profilePic_form = $profilePic_form;
         
-      
+        $this->sendNotifications();
+        
+    }
+    public function sendNotifications()
+    {
+        if ($this->hasEmailPerm)
+        {
+            $mail = new Zend_Mail();
+            $htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_send_notifications.phtml',
+																	  array('name'=>$this->firstname));
+				$mail->setReplyTo('no-reply@plumetype.com', 'Plumetype');
+				$mail->addHeader('MIME-Version', '1.0');
+				$mail->addHeader('Content-Transfer-Encoding', '8bit');
+				$mail->addHeader('X-Mailer:', 'PHP/'.phpversion());
+				$mail->setBodyHtml($htmlBody);
+				$mail->setFrom('no-reply@plumetype.com', 'Plumetype Friend Feed');
+				$mail->addTo($this->identity);
+				$mail->setSubject('View your Plumetype Friends');
+				$mail->send();   
+				
+        }
         
     }
     public function updateaccountAction() 
