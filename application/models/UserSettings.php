@@ -49,6 +49,9 @@ class Application_Model_UserSettings{
 			$user->setLastName($userInfo['lastName']);
 			$user->setGender($userInfo['gender']);
 			$user->setCity($userInfo['city']);
+			
+			//default email permissions to true
+			$user->setEmailPerm(true);
 			$user->setIsFBAccount(false);
 			
 			//hash the password for security
@@ -84,6 +87,7 @@ class Application_Model_UserSettings{
 				$firstName = $user_profile['first_name'];
 				$lastName = $user_profile['last_name'];
 				$gender_raw = $user_profile['gender'];
+				//$setEmailPerm = $user_profile['setEmailPerm'];
 				if(!empty($gender_raw)){
 					if($gender_raw == 'male'){
 						$gender = 'm';
@@ -100,6 +104,8 @@ class Application_Model_UserSettings{
 				$params['lastName'] = $lastName;
 				$params['gender'] = $gender;
 				$params['betakey'] = $betakey;
+				//$params['setEmailPerm'] = $setEmailPerm;
+				
 				//check to make sure all inputs are valid;
 			}else{
 				//otherwise, we have tried to validate before and should use what's in the session
@@ -116,6 +122,7 @@ class Application_Model_UserSettings{
 			$user->setLastName($params['lastName']);
 			$user->setCity($params['city']);
 			$user->setGender($params['gender']);
+			$user->setEmailPerm(true);
 			$randomHash = md5(uniqid(rand(),true));
 			$user->setConfirmation($randomHash);
 			//Don't need to confirm for FB logged in users
@@ -143,6 +150,7 @@ class Application_Model_UserSettings{
                 $this->user->setCity($userInfo['city']);
 		$this->user->setGender($userInfo['gender']);
 		$this->user->setDescription($userInfo['description']);
+		$this->user->setEmailPerm($userInfo['hasEmailPerm']);
 		$this->dm->persist($this->user);
 		$this->dm->flush();
             

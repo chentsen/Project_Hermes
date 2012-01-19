@@ -8,12 +8,11 @@ var Tags = {
 		var data;
 		$.get('/tag/get-display',
 			  function(results){
-				  
-				  var stats = null;
-				  eval('stats='+results);
-				  Tags.tagData = stats;
-				  $(".tag_input").autoSuggest(Tags.tagData,
-						  {startText:"Enter tag",emptyText:"",neverSubmit:true});
+				var stats = null;
+				eval('stats='+results);
+				Tags.tagData = stats;
+				$(".tag_input").autoSuggest(Tags.tagData,
+											{startText:"Enter tag",emptyText:"",neverSubmit:true});
 
 		});
 	},

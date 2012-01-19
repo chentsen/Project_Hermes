@@ -22,7 +22,6 @@ class Application_Model_TagModel{
 	 */
 	public function setRankedTags($countNumberLimit)
 	{
-		
 		foreach($this->tagArray as $tag){
 			if($tag->getCount() >= $countNumberLimit)
 				$this->rankedTagArray[] = $tag;	
