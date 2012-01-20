@@ -15,7 +15,7 @@ class AccountEditController extends Hermes_Controller_SessionController
                 $this->description = $this->curUser->getDescription();
                 $this->gender = $this->curUser->getGender();
                 $this->hasEmailPerm = $this->curUser->hasEmailPerm();
-		
+                
                 /* Initialize action controller here */
                 $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
@@ -46,6 +46,16 @@ class AccountEditController extends Hermes_Controller_SessionController
     }
     public function sendNotifications()
     {
+        $this->friendRelation = new Application_Model_FriendRelation($this->identity,$this->mongoContainer);
+        if ($this->friendRelation->isFriend)
+        {
+            echo "fuckkk";    
+        }
+        if($this->friendRelation->getFriendList)
+        {
+            
+        }
+        //if()
         if ($this->hasEmailPerm)
         {
             $mail = new Zend_Mail();
