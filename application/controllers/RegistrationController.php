@@ -144,7 +144,8 @@ class RegistrationController extends Zend_Controller_Action
 		    $this->dm->remove($keyValid);
 		    $this->dm->flush();
 		    if($success === true){
-			echo 'Registration Successful!';
+			$this->_redirect('/profile/');
+			exit();	
 		    }else{
 			var_dump($success);
 			echo 'FAIL! EMAIL EXISTS';
