@@ -101,11 +101,11 @@ define("EVENT_COLLECTION",$tokenized[1]);
 						   $updatedDocument = $this->processObject($document);
 						   //print_r($updatedDocument);
 						   if($updatedDocument){
-							  // print_r($this->client->addDocument($updatedDocument));
+							  $this->client->addDocument($updatedDocument);
 							   //echo 'Updated something!';
 						   }
 					  }
-				     $this->client->commit();
+					  $this->client->commit();
 					  //delay this for several cycles once it's necessary				
 										  //maybe want to abstract this into an object later.
 				   }	  //also want to redo this code so that it upserts the data into the given object id instead of finding the collection each time

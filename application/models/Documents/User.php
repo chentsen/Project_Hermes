@@ -14,6 +14,9 @@ class User{
 	/** @Field(type="string")*/
 	private $firstName;
 	
+	/** @Field(type="boolean")*/
+	private $isFBAccount;
+	
 	/** @Field(type="string")*/
 	private $lastName;
 	
@@ -184,5 +187,11 @@ class User{
     }
     public function getGender(){
 	return $this->gender;
+    }
+    public function setIsFBAccount($bool){
+	$this->isFBAccount = $bool;
+    }
+    public function getIsFBAccount(){
+	return $this->isFBAccount;
     }
 }

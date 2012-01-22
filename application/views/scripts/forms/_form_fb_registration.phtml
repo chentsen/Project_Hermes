@@ -1,0 +1,31 @@
+<div id="modal-content">
+<div class="modal-wrapped">
+<form id = "<?=$this->element->getName(); ?>" action = "<?= $this->element->getAction(); ?>" 
+	method = "<?=$this->element->getMethod() ?>">
+<div class="closeBox" onclick ="Dialog.hideDialog()">
+            <div class="exitBox">
+              
+            </div>
+         </div> 
+
+    <ul class="centerform">
+        <h1>We need some additional info!</h1>
+        <li class="email"><?= $this->element->email; ?></li>
+        
+            <li class="first_name"><?= $this->element->firstName; ?></li>
+            <li class="last_name"><?= $this->element->lastName; ?></li>
+            <li><?= $this->element->city; ?></li>
+			<li><?= $this->element->gender; ?></li>
+            <li class="password"><?= $this->element->password; ?></li>
+            <li class="password_again"><?= $this->element->password2; ?></li>
+            <li class="beta-key"><?= $this->element->betakey; ?></li>
+        <div class="button">
+            <div class="inner_button">
+                <?= $this->element->register; ?> 
+                </div>
+            </div>    
+        </ul>
+            
+    
+</form>
+</div></div>

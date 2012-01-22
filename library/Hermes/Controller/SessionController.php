@@ -19,10 +19,21 @@ abstract class Hermes_Controller_SessionController extends Zend_Controller_Actio
                 //echo $this->identity;
                 
         //if i'm not logged in then redirect to login page no matter what.
-		if(!$this->identity){
-    		$this->_helper->redirector('index','index');
-                
-                
+	if(!$this->identity){
+	    //check if i'm logged in via FB
+	    $user_data = Application_Model_UserSettings::getFBData();
+	    if($user_data['user'] && $user_data['user_profile']){
+		$user_profile = $user_data['user_profile'];
+		$this->dm = Zend_Registry::get('Wildkat\DoctrineContainer')->getDocumentManager('default');
+		$pt_user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$user_profile['email']));
+		if($pt_user->getIsFBAccount()){
+		    $this->identity = $pt_user->getEmail();
+		    $this->curUser = $pt_user;
+		    return true;
+		}
+	    }
+	    $this->_helper->redirector('index','index');
+	           
         }
 		//echo $this->identity;
     	/* Initialize action controller here */

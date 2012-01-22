@@ -46,7 +46,7 @@ class Application_Model_FriendRelation{
 			
 		} 
 		else {
-		return false;
+			return false;
 		}
 		//tomorrow 1 test isFriend is working 2create an accept friend request page 3 and a reject friend page 4 create addFriendRejectFriend implementation
 	}

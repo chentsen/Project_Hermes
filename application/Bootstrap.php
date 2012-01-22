@@ -55,9 +55,12 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		//$document = new SolrInputDocument();
 		$autoloader = Zend_Loader_Autoloader::getInstance();
 		require_once 'Doctrine/Common/ClassLoader.php';
+		//require_once 'Facebook/Facebook.php'; 
 		 $documentAutoloader = array(new \Doctrine\Common\ClassLoader('Documents', APPLICATION_PATH . '/models'), 'loadClass');
-   		 $autoloader->pushAutoloader($documentAutoloader, 'Documents\\');
-	    
+   		 $fbAutoloader = array(new \Doctrine\Common\ClassLoader('Facebook', 'Doctrine/Facebook'), 'loadClass');
+		 $autoloader->pushAutoloader($documentAutoloader, 'Documents\\');
+		  $fbAutoloader = array(new \Doctrine\Common\ClassLoader('Facebook'), 'loadClass');
+		 $autoloader->pushAutoloader($fbAutoloader, 'Facebook');
    		// $documentAutoloader = new \Doctrine\Common\ClassLoader('Documents', APPLICATION_PATH . '/models');
 	    //$autoloader->pushAutoloader(array($documentAutoloader, 'loadClass'), 'Documents');
 	
