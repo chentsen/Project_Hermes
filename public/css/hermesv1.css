@@ -715,7 +715,7 @@ a.signup-button:hover {
     
 .block-item {
     
-    background: #555;
+    background: #1f1e1e;
     margin:5px;
 /*    border-radius: 5px;*/
    
@@ -1171,7 +1171,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   display: block;
   background: #ff8600;
   color: white;
-  font-weight: 600;
+  font-weight: 500;
   padding: 0 54px;
   margin: 0px;
 }
