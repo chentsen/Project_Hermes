@@ -711,8 +711,6 @@ a.signup-button:hover {
 .right-block { 
     float: right;
     width: 280px;
-    background: rgba(66, 66, 66, .2);
-/*    border-radius: 5px;*/
 }
 .right-block a {
     color: #454545;
