@@ -732,6 +732,11 @@ a.signup-button:hover {
     padding: 5px;
     background: url('../images/plus-button.png') no-repeat left center;
 }
+
+.block-header h4 {
+	margin-left: 10px;
+}
+
 .block-close {
     background: url('../images/minus-button.png') no-repeat left center;
 }
