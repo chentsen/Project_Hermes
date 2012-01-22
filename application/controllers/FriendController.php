@@ -38,7 +38,7 @@ class FriendController extends Hermes_Controller_SessionController
 				$this->_redirect('/profile');
 		}
 		else{
-			$this->_helper->flashMessenger->addMessage("Friend request sent!");
+			$this->_helper->flashMessenger->addMessage("Sorry, an error occurred with this request. Please try again later.");
 				$this->_redirect('/profile');
 		}
 	}
