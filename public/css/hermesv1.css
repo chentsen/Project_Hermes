@@ -1153,7 +1153,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
 { 
   height: 35px;
   border: 1px solid #fc6c0c; 
-  border-radius: 5px;
   display: block;
   background: #ff8600;
   color: white;
@@ -1164,8 +1163,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #wall_addPost
 { 
   height: 35px;
-  border: 1px solid #fc6c0c; 
-  border-radius: 5px;
+  border: 1px solid #343333; 
   display: block;
   background: #343333;
   color: white;
@@ -1621,7 +1619,7 @@ ul.as-selections {
 }
 .event .event_wall .wall_title {
     font-size: 28px;
-    padding: 15px 0;
+    padding: 15px 0 10px 0px;
     font-weight: 500;
 }
 .event .event_wall .wall_image {
@@ -1666,11 +1664,9 @@ ul.as-selections {
 }
 .event .event_wall #wall_comment {
     float: left;
-    margin-right: 10px;
-    margin-left: 0px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    width: 425px !important;
+    margin: 0px;
+    width: 475px !important;
+    border-right: none !important;
 }
 .event .event_wall #Wall {
     margin: 0;
