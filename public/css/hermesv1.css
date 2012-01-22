@@ -817,13 +817,16 @@ a.signup-button:hover {
 }*/
 .view-wrapped {
     width: 640px;
-    background: #f0f0f0;
-     height: 100% !important;
-     color: #555;
-     margin: 5px;
-     overflow: hidden;
-     padding: 10px;
-     float: left;
+    background-image: url('../images/double-line.png');
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    background-position: 200px 100px; 
+    height: 100% !important;
+    color: #555;
+    margin: 5px;
+    overflow: hidden;
+    padding: 10px;
+    float: left;
      
 }
 #content-page {
