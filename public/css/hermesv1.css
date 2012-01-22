@@ -233,6 +233,7 @@ input[type=text]:first,input[type=password]:first {
 .user_details { margin-bottom: 10px;}
 .profile .profile_leftCol {
     float: left;
+    margin-right: 9px;
 }
 .profile_image {
     margin-bottom: 10px;
@@ -243,6 +244,7 @@ input[type=text]:first,input[type=password]:first {
 	background: white;
 	border: 1px solid #B4BBCD;
 	padding: 3px;
+	margin-bottom: 10px;
 }
 .profile_eventList {
 		width: 180px;
@@ -254,9 +256,7 @@ input[type=text]:first,input[type=password]:first {
 }
 
 .profile_eventList .eventFeedObject {
-	background-color: #DDD;
-	border-bottom-left-radius: 0px 0px !important;
-	border-bottom-right-radius: 0px 0px !important;
+	background-color: #F0F0F0;
 
 }
 .profile_eventList .eventFeedObject a {
@@ -275,7 +275,7 @@ input[type=text]:first,input[type=password]:first {
 }
 .profile_rightCol {
     float: right;
-    width: 450px;
+    width: 443px;
     overflow: hidden;
 }
 .profileDesc {
