@@ -695,7 +695,7 @@ a.signup-button:hover {
 }
 
 .create_button {
-   margin: 5px;
+
 }
 .create_button h1{
     height: 70px;
@@ -726,20 +726,14 @@ a.signup-button:hover {
     }
     
 .block-item {
-    
-    background: #454545;
-    margin:5px;
-/*    border-radius: 5px;*/
-   
-    
+    background: #454545; 
 }
 .block-header {
     padding: 5px;
-    /*border-radius: 5px;*/
-    background: url('../images/plus-button.png') no-repeat right center rgba(55, 55, 55, .9);
+    background: url('../images/plus-button.png') no-repeat left center;
 }
 .block-close {
-    background: url('../images/minus-button.png') no-repeat right center rgba(55, 55, 55, .9);
+    background: url('../images/minus-button.png') no-repeat left center;
 }
 /**footer area and footer menu**/
 .twitter_follow{
@@ -817,13 +811,8 @@ a.signup-button:hover {
 }*/
 .view-wrapped {
     width: 640px;
-    background-image: url('../images/double-line.png');
-    background-repeat: repeat-x;
-    background-attachment: fixed;
-    background-position: 200px 100px; 
     height: 100% !important;
     color: #555;
-    margin: 5px;
     overflow: hidden;
     padding: 10px;
     float: left;
