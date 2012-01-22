@@ -238,9 +238,16 @@ input[type=text]:first,input[type=password]:first {
     margin-bottom: 10px;
     height: 180px;
 }
+
+.profile_imageWrapper {
+	background: white;
+	border: 1px solid #B4BBCD;
+	padding: 3px;
+}
 .profile_eventList {
 		width: 180px;
 		overflow: hidden;
+		background: #F0F0F0;
 }
 .eventFeedObject:first-child {
 	border-top: none;
