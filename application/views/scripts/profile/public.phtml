@@ -29,12 +29,14 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
             </div>
             </div>
             <div class="profile_rightCol">
+		<div class="profileWrapper">
                 <div class="profileDesc">
                     <? if($this->description)
 								echo $this->description;
 						else
 								echo "No description available";?>
             </div>
+		</div>
                 <div class="profile_tags">
                     <h2>Tags</h2>
      			<?= $this->partial('tags.phtml',array('tagArray'=>$tagArray,'interestModel'=>$interestModel)) ?>

@@ -280,6 +280,12 @@ input[type=text]:first,input[type=password]:first {
     margin-bottom: 10px;
     
 }
+
+.profileWrapper {
+	background: white;
+	padding: 2px;
+	border: 1px solid #B4BBCD;
+}
 .profile_tags {
     min-height: 306px;
     padding: 10px;
@@ -713,7 +719,7 @@ a.signup-button:hover {
     
 .block-item {
     
-    background: #1f1e1e;
+    background: #454545;
     margin:5px;
 /*    border-radius: 5px;*/
    
@@ -1163,9 +1169,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #wall_addPost
 { 
   height: 35px;
-  border: 1px solid #343333; 
+  border: 1px solid #454545; 
   display: block;
-  background: #343333;
+  background: #454545;
   color: white;
   font-weight: 500;
   padding: 0px 36px 0px 36px;
