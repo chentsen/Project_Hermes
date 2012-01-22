@@ -2,9 +2,7 @@ body {
 	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 14px;
         font-weight: 100;
-        background: url('../images/bg-pencil3.png') repeat #bbb ;
         color: #fff;
-         
 }
 div { display: block; }
 /*** form styles*****/
@@ -236,7 +234,6 @@ input[type=text]:first,input[type=password]:first {
     margin-right: 9px;
 }
 .profile_image {
-    margin-bottom: 10px;
     height: 180px;
 }
 
@@ -813,22 +810,22 @@ a.signup-button:hover {
         overflow: hidden;
         padding-bottom: 20px;
 }
-#view-content {
+/*#view-content {
     float: left;
     width: 670px;
     background: rgba(111,111,111,.2);
 /*    border-radius: 5px;*/
 
-}
+}*/
 .view-wrapped {
     width: 640px;
     background: #f0f0f0;
-/*     border-radius: 5px;*/
      height: 100% !important;
      color: #555;
      margin: 5px;
      overflow: hidden;
      padding: 10px;
+     float: left;
      
 }
 #content-page {
