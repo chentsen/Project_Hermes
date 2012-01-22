@@ -277,8 +277,6 @@ input[type=text]:first,input[type=password]:first {
     padding: 10px;
     background: #F0F0F0;
     min-height: 48px;
-    margin-bottom: 10px;
-    
 }
 
 .profileWrapper {
@@ -286,10 +284,18 @@ input[type=text]:first,input[type=password]:first {
 	padding: 3px;
 	border: 1px solid #B4BBCD;
 }
+
 .profile_tags {
     min-height: 306px;
     padding: 10px;
     background: #F0F0F0;
+}
+
+.profileTagWrapper {
+	background: white;
+	padding: 3px;
+	border: 1px solid #B4BBCD;
+	margin-top: 10px;
 }
 /*** friend picture ****/
 #friendsList ul {
