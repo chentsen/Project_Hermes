@@ -37,9 +37,11 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
 								echo "No description available";?>
             </div>
 		</div>
+		<div class="profileWrapper">
                 <div class="profile_tags">
                     <h2>Tags</h2>
      			<?= $this->partial('tags.phtml',array('tagArray'=>$tagArray,'interestModel'=>$interestModel)) ?>
+		</div>
 		</div>
 		  </div>
                 </div>
