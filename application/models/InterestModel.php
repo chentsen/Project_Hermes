@@ -42,7 +42,31 @@ class Application_Model_InterestModel{
 		return false;
 	}
 	public function getTags(){
-		return $this->interest->getTags();
+		$lazy_tags = $this->interest->getTags();
+		$realTags = array();
+		
+		for($i = 0;$i<count($lazy_tags);$i++){
+			try{
+				//Make sure the tag is valid!
+				$lazy_tags[$i]->getTagName();
+				//if that went through then this tag is real
+				$realTags[] = $lazy_tags[$i];
+			}
+			catch(Exception $ex){
+				$hasFlush = true;
+				$lazy_tags[$i] = null;
+				//not sure if this actually indexes it
+				array_values($lazy_tags);
+				$this->interest->setTags($lazy_tags);
+				$this->dm->persist($this->interest);
+				
+			}
+			
+		}
+		if($hasFlush){
+			$this->dm->flush();
+		}
+		return $realTags;
 	}
 	public function getActivatedTags(){
 		$tags = $this->interest->getTags();
