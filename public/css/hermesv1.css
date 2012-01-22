@@ -218,11 +218,7 @@ input[type=text]:first,input[type=password]:first {
     padding:5px;
     margin: 5px 0px;
     font-size: 14px;
-    color: white;
-    border-radius: 5px;
     background: #24A3DF;
-    border: 1px solid #148ac2;
-    
 }
 .profile .questions_flow a {
     color: white;
@@ -670,10 +666,7 @@ a.signup-button:hover {
 }
 /*** right block area ***/
 .block-body{
-    background: #eee; 
     overflow: hidden;
-/*    border-bottom-right-radius: 3px;
-    border-bottom-left-radius:3px;*/
     color: #454545;
           
 }
@@ -726,7 +719,7 @@ a.signup-button:hover {
     }
     
 .block-item {
-    background: #454545; 
+
 }
 .block-header {
     padding: 5px;
@@ -734,7 +727,8 @@ a.signup-button:hover {
 }
 
 .block-header h4 {
-	margin-left: 10px;
+	margin-left: 17px;
+	color: #454545;
 }
 
 .block-close {
@@ -1034,13 +1028,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
     
 }
 .eventFeedObject, .generalFeedObject {
-    background: #f0f0f0;
     padding: 5px;
     color: #454545;
-    border-top:1px solid #fff;
+    border-top: 1px solid #fff;
     border-bottom: 1px solid #ccc;
-	
-	overflow: hidden;
+    overflow: hidden;
 }
 .profile .mini-feed {
 		width: 120px;
