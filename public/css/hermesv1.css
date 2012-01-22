@@ -710,6 +710,7 @@ a.signup-button:hover {
     font-family: "Myriad Pro" ,verdana , tahoma, helvetica, sans-serif;
     text-transform: uppercase;
     margin-left: 4px;
+    font-weight: 500;
     }
     
 .block-item {
@@ -907,7 +908,6 @@ a.signup-button:hover {
     background: rgba(111, 111, 111, .2);
     margin:0;
     padding: 0;
-    display: none;
     float: left;
     width: 140px;
     border-bottom-left-radius: 5px;
@@ -1172,9 +1172,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: #ff8600;
   color: white;
   font-weight: 600;
-  padding: 0 55px;
+  padding: 0 54px;
   margin: 0px;
-  float:left;
 }
 
 .index #register {
@@ -1574,10 +1573,11 @@ ul.as-selections {
 .event .event_main h2 {
     font-size: 20px;
     padding: 5px 0;
-    
+    font-weight: 500;
 }
 .event .event_main .event_date h2 {
 	margin-top: 5px;
+	font-weight: 500;
 }
 .event .event_main .event_place h2{
     
