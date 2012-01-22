@@ -52,8 +52,6 @@ input[type=text], input[type=password] {
 	border: none;
         outline: 0;
         border: 1px solid orange;
-        -moz-border-radius: 5px;
-        border-radius: 5px;
         padding: 0 10px;
         
     
@@ -1127,7 +1125,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     padding-top: 0px;
 }
 .change_border_color {
-    border: 1px solid #FC6C0C !important;
+    border: 1px solid #B4BBCD !important;
 }
 .centerform {
     
@@ -1169,10 +1167,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
   border: 1px solid #fc6c0c; 
   border-radius: 5px;
   display: block;
-  background: #ff8600;
+  background: #343333;
   color: white;
   font-weight: 500;
-  padding: 0 54px;
+  padding: 0px 36px 0px 36px;
   margin: 0px;
 }
 
@@ -1624,6 +1622,7 @@ ul.as-selections {
 .event .event_wall .wall_title {
     font-size: 28px;
     padding: 15px 0;
+    font-weight: 500;
 }
 .event .event_wall .wall_image {
     position: relative;
