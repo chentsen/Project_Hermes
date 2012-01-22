@@ -22,10 +22,12 @@ class Application_Model_TagModel{
 	 */
 	public function setRankedTags($countNumberLimit)
 	{
-		foreach($this->tagArray as $tag){
-			if($tag->getCount() >= $countNumberLimit)
-				$this->rankedTagArray[] = $tag;	
-		}		
+		if($this->tagArray){
+			foreach($this->tagArray as $tag){
+				if($tag->getCount() >= $countNumberLimit)
+					$this->rankedTagArray[] = $tag;	
+			}
+		}
 	}
 	public function getRankedTags(){
 		return $this->rankedTagArray;

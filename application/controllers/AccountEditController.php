@@ -14,13 +14,13 @@ class AccountEditController extends Hermes_Controller_SessionController
                 $this->city = $this->curUser->getCity();
                 $this->description = $this->curUser->getDescription();
                 $this->gender = $this->curUser->getGender();
-                $this->hasEmailPerm = $this->curUser->hasEmailPerm();
                 
                 /* Initialize action controller here */
                 $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
         /* Initialize action controller here */
         $this->view->pageTitle = "Edit Your Account";
+        
         
 
     }
@@ -41,39 +41,11 @@ class AccountEditController extends Hermes_Controller_SessionController
         $this->view->form = $form;
         $this->view->profilePic_form = $profilePic_form;
         
-        $this->sendNotifications();
+        
+        
         
     }
-    public function sendNotifications()
-    {
-        $this->friendRelation = new Application_Model_FriendRelation($this->identity,$this->mongoContainer);
-        if ($this->friendRelation->isFriend)
-        {
-            echo "fuckkk";    
-        }
-        if($this->friendRelation->getFriendList)
-        {
-            
-        }
-        //if()
-        if ($this->hasEmailPerm)
-        {
-            $mail = new Zend_Mail();
-            $htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_send_notifications.phtml',
-																	  array('name'=>$this->firstname));
-				$mail->setReplyTo('no-reply@plumetype.com', 'Plumetype');
-				$mail->addHeader('MIME-Version', '1.0');
-				$mail->addHeader('Content-Transfer-Encoding', '8bit');
-				$mail->addHeader('X-Mailer:', 'PHP/'.phpversion());
-				$mail->setBodyHtml($htmlBody);
-				$mail->setFrom('no-reply@plumetype.com', 'Plumetype Friend Feed');
-				$mail->addTo($this->identity);
-				$mail->setSubject('View your Plumetype Friends');
-				$mail->send();   
-				
-        }
-        
-    }
+    
     public function updateaccountAction() 
     {
         $this->_helper->viewRenderer->setNoRender();
