@@ -83,7 +83,13 @@ class EventController extends Hermes_Controller_Wall_WallController
     	//if yes, run method with the guys email as the id and eid as the other id and generate new user and new event
     	//
     }
-   
+   public function emailAction() {
+		$this->_helper->ViewRenderer->setNoRender(true);
+    	$eid = $this->_request->getParam("eid");
+		$email = new Application_Model_EmailModel($eid, $this->curUser);
+        $email->sendNotificationEmails();
+	
+   }
 
 }
 
