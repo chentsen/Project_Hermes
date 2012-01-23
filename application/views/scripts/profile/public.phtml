@@ -7,16 +7,12 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
 <div id="view-content">
         <div class="view-wrapped">
             <div class="profile_leftCol">
-	    <div class="profile_imageWrapper">	
             <div class="profile_image">
                 <img src="/img/profile-pic/uid/<?=$this->user->getEmail();?>" height="100" width="100" />
             </div>
-	    </div>
-	    <div class="profileWrapper">
-            <div class="profile_eventList">
+            <div class="profile_eventList"><h4>Events</h4>
                 <?= $this->DisplayEventFeed($this->user->getEmail(), 4); ?>        
             </div>
-	    </div>
             </div>
             <div class="profile_rightCol">
 		<div class="profile_header">
@@ -30,11 +26,11 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
                             </div>
                   <? }?>
 		<div class ="user_details">
-                <h2><?=$gender?> <?=$this->user->getCity()?></h2>
+                <h3><?=$gender?> <?=$this->user->getCity()?></h3>
             </div>
             </div>
 		<div class="profileWrapper">
-                <div class="profileDesc">
+                <div class="profileDesc"><h4>About Me</h4>
                     <? if($this->description)
 								echo $this->description;
 						else

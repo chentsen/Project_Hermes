@@ -223,8 +223,15 @@ input[type=text]:first,input[type=password]:first {
 .profile .questions_flow a {
     color: white;
 }
-.big_name {font-size: 36px; text-transform: capitalize; float: left;}
-.user_details { margin-bottom: 10px;}
+.big_name {
+text-transform:capitalize;
+float: left;
+width: 443px;
+}
+.user_details {
+	margin-bottom: 10px;
+	text-transform: capitalize;
+}
 .profile .profile_leftCol {
     float: left;
     margin-right: 9px;
@@ -233,12 +240,6 @@ input[type=text]:first,input[type=password]:first {
     height: 180px;
 }
 
-.profile_imageWrapper {
-	background: white;
-	border: 1px solid #B4BBCD;
-	padding: 3px;
-	margin-bottom: 10px;
-}
 .profile_eventList {
 		width: 180px;
 		overflow: hidden;
@@ -272,18 +273,9 @@ input[type=text]:first,input[type=password]:first {
 }
 .profileDesc {
     font-size: 16px;
-    font-weight: bold;
     padding: 10px;
-    background: #F0F0F0;
     min-height: 48px;
 }
-
-.profileWrapper {
-	background: white;
-	padding: 3px;
-	border: 1px solid #B4BBCD;
-}
-
 .profile_tags {
     min-height: 306px;
     padding: 10px;
@@ -301,12 +293,9 @@ input[type=text]:first,input[type=password]:first {
 	overflow: hidden;
 	width: 260px;
 	margin: 0 auto 5px auto;
-	
-
 }
 .profile_header {
     overflow: hidden;
-    height: 40px;
 }
 .friendStatus a{
     color: orange; 
