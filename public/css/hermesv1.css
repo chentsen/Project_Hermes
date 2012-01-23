@@ -216,7 +216,7 @@ input[type=text]:first,input[type=password]:first {
     position: relative;
     text-align: center;
     padding:5px;
-    margin: 5px 0px;
+    margin: 15px 0px 0px 0px;
     font-size: 14px;
     background: #24A3DF;
 }
@@ -319,11 +319,9 @@ input[type=text]:first,input[type=password]:first {
 }
 .friend_list {float: left; margin: 12px 14px 2px 14px;}
 .friends_block .view-friends,
-.upcoming_events .view-events
-{
+.upcoming_events .view-events {
 	text-align: center;
 	padding: 5px 0;
-	background: #bbb;
 }
 .so-ronery {
 		font-size: 14px;
@@ -1030,10 +1028,18 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .eventFeedObject, .generalFeedObject {
     padding: 5px;
     color: #454545;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #b4bbcd;
     overflow: hidden;
 }
+
+.eventFeedObject:last-child li {
+	border-bottom: none;
+}
+
+.generalFeedObject:last-child li {
+	border-bottom: none;
+}
+
 .profile .mini-feed {
 		width: 120px;
 }
@@ -1392,11 +1398,8 @@ ul.as-selections {
       
 }
 .tags {
-    border: 1px solid #FC6C0C;
     background: orange;
     color: white;
-    border-radius: 5px;
-    
     float: left;
     padding: 5px 10px;
     margin: 0px 5px 5px 0px;
@@ -1520,11 +1523,8 @@ ul.as-selections {
     padding:5px;
     margin: 5px 0px;
     font-size: 14px;
-    border-radius: 5px;
     background: orange;
-    border: 1px solid #FC6C0C;
     color: #ffffff;
-    
 }
 /***** event page ******/
 .event .event_header {
