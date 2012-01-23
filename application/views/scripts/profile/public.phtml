@@ -32,11 +32,12 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
             </div>
 		<div class="profileWrapper">
                 <div class="profileDesc"><h4>About Me</h4>
-                    <? if($this->description)
+                    <div class="profile-about-me"><? if($this->description)
 								echo $this->description;
 						else
 								echo "No description available";?>
-            </div>
+		    </div>
+		    </div>
 		</div>
 		<div class="profileTagWrapper">
                 <div class="profile_tags">
