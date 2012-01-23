@@ -227,6 +227,7 @@ input[type=text]:first,input[type=password]:first {
 text-transform:capitalize;
 float: left;
 width: 443px;
+margin-bottom: 2px;
 }
 .user_details {
 	margin-bottom: 10px;
@@ -268,15 +269,17 @@ width: 443px;
 }
 .profile_rightCol {
     float: left;
-    width: 433px;
+    width: 445px;
     overflow: hidden;
     border-left: solid 1px #b4bbcd;
-    padding: 0px 12px 0px 12px;
+    padding: 0px 0px 0px 12px;
 }
 .profileDesc {
     font-size: 16px;
     min-height: 48px;
     margin-top: 10px;
+    position: relative;
+    background: url('../images/about-me-line.png')
 }
 
 .profile-about-me {
