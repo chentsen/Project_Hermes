@@ -6,20 +6,6 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
 ?>
 <div id="view-content">
         <div class="view-wrapped">
-            <div class="profile_header">
-                <h1 class="big_name"><?= $this->name; ?>.</h1>
-						
-                <? if (!$this->isFriend && $this->createdFriendRequest){?>
-                             <div class = "friendStatus">
-                                <a class="remove-anchor" href ="/friend/friendRequest/requestee/<?= $this->email; ?>">
-                                    Add
-                                </a>
-                            </div>
-                  <? }?>
-            </div>
-            <div class ="user_details">
-                <h2><?=$gender?> <?=$this->user->getCity()?></h2>
-            </div>
             <div class="profile_leftCol">
 	    <div class="profile_imageWrapper">	
             <div class="profile_image">
@@ -33,6 +19,20 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
 	    </div>
             </div>
             <div class="profile_rightCol">
+		<div class="profile_header">
+                <h1 class="big_name"><?= $this->name; ?>.</h1>
+						
+                <? if (!$this->isFriend && $this->createdFriendRequest){?>
+                             <div class = "friendStatus">
+                                <a class="remove-anchor" href ="/friend/friendRequest/requestee/<?= $this->email; ?>">
+                                    Add
+                                </a>
+                            </div>
+                  <? }?>
+		<div class ="user_details">
+                <h2><?=$gender?> <?=$this->user->getCity()?></h2>
+            </div>
+            </div>
 		<div class="profileWrapper">
                 <div class="profileDesc">
                     <? if($this->description)
