@@ -1,4 +1,4 @@
-		  <div class="tags_area"><h2>Your tags</h2>
+		  <div class="tags_area">
 
 		 	 <div class="tags_base">
 				<? if(count($this->tagArray) > 0){ 
@@ -8,7 +8,7 @@
 							else 
 								$toggle = '';
 						?>
-							<? if($this->isOwn) {?>
+							<? if($this->isOwn) {?><h2>Your Tags</h2>
 							       <div class ="tags <?=$toggle ?>" id="tag_<?=str_replace(' ','_',$tag->getTagName());?>" onclick = 'Tags.toggleTag("tag_<?=str_replace(' ','_',$tag->getTagName());?>")'>
 								       <div class="tag_text"><?=$tag->getTagName()?></div>
 									     <div class="close_tag" onclick="Tags.removeTag('tag_<?=str_replace(' ','_',$tag->getTagName());?>')"></div>
