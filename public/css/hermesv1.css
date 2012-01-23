@@ -249,7 +249,7 @@ input[type=text]:first,input[type=password]:first {
 }
 
 .eventFeedObject:last-child {
-	border-bottom: none;
+	border-bottom: none !important;
 }
 
 .profile_eventList .eventFeedObject {
