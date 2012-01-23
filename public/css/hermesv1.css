@@ -234,6 +234,7 @@ width: 443px;
 }
 .profile .profile_leftCol {
     float: left;
+    padding-right:12px;
 }
 .profile_image {
     height: 180px;
@@ -265,23 +266,21 @@ width: 443px;
 }
 .profile_rightCol {
     float: left;
-    width: 430px;
+    width: 433px;
     overflow: hidden;
-    border-right: solid 1px #b4bbcd;
     border-left: solid 1px #b4bbcd;
+    padding: 0px 12px 0px 12px;
 }
 .profileDesc {
     font-size: 16px;
-    padding: 10px;
     min-height: 48px;
+    margin-top: 10px;
 }
 .profile_tags {
     min-height: 306px;
-    padding: 10px;
 }
 
 .profileTagWrapper {
-	padding: 3px;
 	margin-top: 10px;
 }
 /*** friend picture ****/
@@ -682,8 +681,10 @@ a.signup-button:hover {
     background: url('../images/create-event-hover.png') no-repeat top center;
 }
 .right-block { 
-    float: right;
+    float: left;
     width: 270px;
+    border-left: solid 1px #B4BBCD;
+    padding: 0px 10px 0px 12px;
 }
 .right-block a {
     color: #454545;
@@ -791,11 +792,11 @@ a.signup-button:hover {
 
 }*/
 .view-wrapped {
-    width: 640px;
+    width: 650px;
     height: 100% !important;
     color: #555;
     overflow: hidden;
-    padding: 10px;
+    padding: 10px 0px 10px 10px;
     float: left;
      
 }

@@ -40,7 +40,7 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
 		</div>
 		<div class="profileTagWrapper">
                 <div class="profile_tags">
-                    <h2>Tags</h2>
+                    <h4>Tags</h4>
      			<?= $this->partial('tags.phtml',array('tagArray'=>$tagArray,'interestModel'=>$interestModel)) ?>
 		</div>
 		</div>
