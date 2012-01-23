@@ -1321,25 +1321,19 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /**** tags ******/
 #tag_category { width: 200px;}
 .tag_input_wrapper {
-		margin: 0 auto !important;
+    margin: 0 auto !important;
     width: 300px;
-    border: 1px solid orange;
+    border: 1px solid #b4bbcd;
     margin: 10px 0px;
-    border-radius: 5px;
     /*position: absolute;
     right: 70px;*/
 }
 .tag-wrapper {
-		background: #ddd;
 		padding: 5px;
 		border: 1px solid white;
 }
 ul.as-selections {
-   
     box-shadow: none !important;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
-   
 }
 
 ul.as-selections li.as-original {
@@ -1348,7 +1342,6 @@ ul.as-selections li.as-original {
 }
 ul.as-selections {
     border: none !important;
-    border-radius: 5px;
 }
 .tag_dropdown {
     position: absolute;
@@ -1366,6 +1359,7 @@ ul.as-selections {
 
 .tags_area h2 {
 	margin-bottom: 10px;
+	margin-top: 20px;
 }
 
 .profile ul.as-selections li.as-selection-item,
@@ -1387,22 +1381,22 @@ ul.as-selections {
     background: #ff8600;
     color: white;
     float: left;
-    padding: 5px 10px;
+    padding: 5px 10px 7px 10px;
     margin-bottom: 5px;
     cursor: pointer;
     position: relative;
+    margin-right: 20px;
 }
 
 .tags-arrow {
 	width: 0;
         height: 0;
-        border-top: 12px solid transparent;
-        border-bottom: 12px solid transparent;
-        border-left: 12px solid #ff8600;
+        border-top: 13px solid transparent;
+        border-bottom: 13px solid transparent;
+        border-left: 13px solid #ff8600;
 	position:absolute;
 	right:-12px;
 	top: 0px;
-	margin-right: 5px;
 }
 
 .tag_text {float: left;
@@ -1410,7 +1404,7 @@ ul.as-selections {
          
 }
 .close_tag {
-    margin-top: 2px;
+    margin-top: 4px;
     padding:  5px;
     background: url("../images/close-tag.png") no-repeat center center; 
     float:right;
