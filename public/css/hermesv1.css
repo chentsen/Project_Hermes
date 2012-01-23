@@ -1332,6 +1332,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 		padding: 5px;
 		border: 1px solid white;
 }
+
+.tag_input_wrapper h5 {
+	float:left;
+}
 ul.as-selections {
     box-shadow: none !important;
 }
