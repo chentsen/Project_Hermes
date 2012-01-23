@@ -1384,12 +1384,11 @@ ul.as-selections {
       
 }
 .tags {
-    background: orange;
+    background: #ff8600;
     color: white;
     float: left;
     padding: 5px 10px;
-    margin: 0px 5px 5px 0px;
-    overflow: auto;
+    margin-bottom: 5px;
     cursor: pointer;
     position: relative;
 }
@@ -1403,6 +1402,7 @@ ul.as-selections {
 	position:absolute;
 	right:-12px;
 	top: 0px;
+	margin-right: 5px;
 }
 
 .tag_text {float: left;
