@@ -664,11 +664,10 @@ a.signup-button:hover {
 .block-body{
     overflow: hidden;
     color: #454545;
-          
 }
 
 .block-body .friend_list {
-	margin: 11px 5px 5px 6px;
+	margin: 5px;
 }
 
 .block-body .friend_name {
@@ -714,12 +713,10 @@ a.signup-button:hover {
     font-weight: 500;
     }
     
-.block-item {
-
-}
 .block-header {
     padding: 5px;
     background: url('../images/plus-button.png') no-repeat left center;
+    margin-bottom: 20px;
 }
 
 .block-header h4 {
