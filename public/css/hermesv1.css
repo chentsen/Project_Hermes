@@ -247,11 +247,6 @@ input[type=text]:first,input[type=password]:first {
 .eventFeedObject:first-child {
 	border-top: none;
 }
-
-.eventFeedObject:last-child {
-	border-bottom: none !important;
-}
-
 .profile_eventList .eventFeedObject {
 	background-color: #F0F0F0;
 
@@ -325,7 +320,6 @@ input[type=text]:first,input[type=password]:first {
 .friends_block .view-friends,
 .upcoming_events .view-events {
 	text-align: center;
-	padding: 5px 0;
 }
 .so-ronery {
 		font-size: 14px;
@@ -705,7 +699,7 @@ a.signup-button:hover {
 }
 .right-block { 
     float: right;
-    width: 280px;
+    width: 270px;
 }
 .right-block a {
     color: #454545;
@@ -1026,13 +1020,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border-right: 1px solid #ccc;
     padding-right: 5px;
     min-height: 400px;
-    
-    
 }
 .eventFeedObject, .generalFeedObject {
     padding: 5px;
     color: #454545;
-    border-bottom: 1px solid #b4bbcd;
+    border-top: 1px solid #b4bbcd;
     overflow: hidden;
 }
 
@@ -1063,9 +1055,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	line-height: 12px;
 	border-radius: 3px;
 	padding: 2px 3px 3px 3px;
-	margin: 4px 5px 2px 0px;
+	margin: 4px 0px 2px 0px;
 }
-
 
 .profile_eventList .own-event {
 	margin: 4px 0px 0px 2px;
