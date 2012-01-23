@@ -22,8 +22,6 @@ select {
         outline: 0;
         padding: 5px;    
         border: 1px solid orange;
-        border-radius: 5px;
-        -moz-border-radius: 5px;
 }
 textarea {
         margin: 10px 0;
@@ -33,8 +31,6 @@ textarea {
         outline: 0;
         padding: 10px;    
         border: 1px solid orange;
-        border-radius: 5px;
-        -moz-border-radius: 5px;
 }
 #content_area input[type=text],
 #content_area input[type=password]{
@@ -88,8 +84,6 @@ input[type=text]:first,input[type=password]:first {
     font-size: 14px;
     background: #aaa;
     color: #fff;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
 }
 /** fullwidth and override**/
 
@@ -335,7 +329,6 @@ margin-bottom: 2px;
     border: 1px solid #FC6C0C;
     background: orange;
     color: white;
-    border-radius: 5px;
     float: left;
     padding: 5px 10px;
     margin: 5px 5px 0px 0px;
@@ -359,7 +352,6 @@ margin-bottom: 2px;
     
     min-height: 500px;
     background: #F0F0F0;
-    border-radius: 5px;
     height: 100% !important;
     color: #454545;
     margin: 5px;
@@ -370,14 +362,11 @@ margin-bottom: 2px;
      border: 1px solid #FC6C0C;
     background: orange;
     color: white;
-    border-radius: 5px;
-    
     float: left;
     padding: 5px 10px;
     margin: 5px 5px 0px 0px;
     overflow: auto;
     cursor: pointer;    
-    
     float: left;
     }
 .user_result, .event_result {overflow: auto; padding: 10px;}
@@ -401,7 +390,6 @@ margin-bottom: 2px;
     background: #bbb;
     color: #454545;
     padding: 10px 0px;
-    border-radius: 5px;
     text-align: center;
     width: 90px;
     font-weight: bold;
@@ -463,7 +451,6 @@ margin-bottom: 2px;
     text-shadow: 0px 1px #999; 
     background: #aeaeae; 
     padding: 20px;
-    border-radius: 5px;
 }
 .out-logo {
     margin-top: 15px;
@@ -611,7 +598,6 @@ a.signup-button:hover {
         padding: 51px 10px 11px 10px;
         text-align: center;
         background-color: transparent;
-        border-radius: 5px;
         width: 70px;
         margin-left: 5px;
         margin-right: 5px;
@@ -645,8 +631,6 @@ a.signup-button:hover {
         font-size: 14px;
         background: #aaa;
         color: #fff;
-         -moz-border-radius: 3px;
-	border-radius: 3px;
 }
 #reg_links li a:hover {
     background: #fc6c0c;
@@ -815,7 +799,6 @@ a.signup-button:hover {
     width: 640px;
     min-height: 500px;
     background: rgba(150,150,150,.4);
-     border-radius: 5px;
      height: 100% !important;
      color: #dddddd;
      margin: 5px;
@@ -852,8 +835,6 @@ a.signup-button:hover {
     width: 230px;
     height: 30px;
     font-size: 16px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
 }
 
 .search_friend_submit 
@@ -1200,7 +1181,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
     padding-right: 50px;
    line-height: 48px;
    border: 1px solid #fc6c0c; 
-   border-radius: 5px;
     background: #EE8641;
     height: 48px;
      margin-left: 0px !important;
@@ -1268,7 +1248,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
     z-index: 300;
 }
 #createEvent #createEvent_longDescription {
-    border-radius: 5px;
     font-size: 18px;
     margin: 0px;
     width: 278px;
@@ -1432,15 +1411,9 @@ ul.as-selections {
 
 #modal-content {
     float: left;
-    
-    background: rgba(111,111,111,.2);
-    
-    border-radius: 5px;
 }
 .modal-wrapped {
     overflow: hidden !important;
-    background: #f0f0f0;
-     border-radius: 5px;
      height: 100% !important;
      color: #454545;
      margin: 5px;
@@ -1452,13 +1425,12 @@ ul.as-selections {
 }
 .modalWindow { 
     position:absolute;
-    background:#F0F0F0;
+    background:white;
     margin-left:35%;
     margin-right:auto;
     z-index:3;
     top:50%;  
     margin-top:-220px; 
-    border-radius: 5px;
     /*box-shadow: 0 0 0px 10px rgba(66, 66, 66, .4);;*/
 }
 .modalBackground {
@@ -1482,13 +1454,11 @@ ul.as-selections {
 	top: 0;
 }
 .closeBox .exitBox {
-    
     margin-bottom: 10px;
     margin-right: 3px;
     background: url('../images/exit-button.png') no-repeat center center orange;
     border: 1px solid #FC6C0C;
     padding: 15px;
-    border-radius: 5px;
 }
 #flashMessages .exitBox {
     position: absolute;
