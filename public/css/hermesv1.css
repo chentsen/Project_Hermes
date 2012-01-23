@@ -1362,10 +1362,12 @@ ul.as-selections {
     min-height: 100px;
     margin-bottom: 10px;
     padding: 10px 0px 0px 0px;
-    
-  
-  
 }
+
+.tags_area h2 {
+	margin-bottom: 10px;
+}
+
 .profile ul.as-selections li.as-selection-item,
 .profile ul.as-selections li:hover.as-selection-item{
 		background-image: none;
@@ -1389,6 +1391,18 @@ ul.as-selections {
     margin: 0px 5px 5px 0px;
     overflow: auto;
     cursor: pointer;
+    position: relative;
+}
+
+.tags-arrow {
+	width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid #ff8600;
+	position:absolute;
+	right:-12px;
+	top: 0px;
 }
 
 .tag_text {float: left;

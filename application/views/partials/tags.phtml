@@ -12,11 +12,11 @@
 							       <div class ="tags <?=$toggle ?>" id="tag_<?=str_replace(' ','_',$tag->getTagName());?>" onclick = 'Tags.toggleTag("tag_<?=str_replace(' ','_',$tag->getTagName());?>")'>
 								       <div class="tag_text"><?=$tag->getTagName()?></div>
 									     <div class="close_tag" onclick="Tags.removeTag('tag_<?=str_replace(' ','_',$tag->getTagName());?>')"></div>
-							       </div>
+							       <div class="tags-arrow"></div></div>
 						 	<?}else{?>
 							       <div class ="tags " id="tag_<?=str_replace(' ','_',$tag->getTagName());?>">
 								       <div class="tag_text"><?=$tag->getTagName()?></div>
-							       </div>
+							       <div class="tags-arrow"></div></div>
 							<?}?>
 					
 							
