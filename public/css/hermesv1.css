@@ -234,7 +234,6 @@ width: 443px;
 }
 .profile .profile_leftCol {
     float: left;
-    margin-right: 9px;
 }
 .profile_image {
     height: 180px;
@@ -243,7 +242,6 @@ width: 443px;
 .profile_eventList {
 		width: 180px;
 		overflow: hidden;
-		background: #F0F0F0;
 }
 .eventFeedObject:first-child {
 	border-top: none;
@@ -261,15 +259,16 @@ width: 443px;
 	font-size: 13px;
 }
 
-
 .profile_image img{
     width: 180px;
     height: 180px;
 }
 .profile_rightCol {
-    float: right;
-    width: 443px;
+    float: left;
+    width: 430px;
     overflow: hidden;
+    border-right: solid 1px #b4bbcd;
+    border-left: solid 1px #b4bbcd;
 }
 .profileDesc {
     font-size: 16px;
@@ -279,13 +278,10 @@ width: 443px;
 .profile_tags {
     min-height: 306px;
     padding: 10px;
-    background: #F0F0F0;
 }
 
 .profileTagWrapper {
-	background: white;
 	padding: 3px;
-	border: 1px solid #B4BBCD;
 	margin-top: 10px;
 }
 /*** friend picture ****/
