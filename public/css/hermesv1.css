@@ -1331,6 +1331,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .tag-wrapper {
 		padding: 5px;
 		border: 1px solid white;
+		float: right;
+}
+
+.enter-tag {
+	font-size: 15px;
 }
 
 ul.as-selections {
