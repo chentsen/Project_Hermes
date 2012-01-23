@@ -13,7 +13,7 @@ var Tags = {
 				  eval('stats='+results);
 				  Tags.tagData = stats;
 				  $(".tag_input").autoSuggest(Tags.tagData,
-						  {startText:"Enter tag",emptyText:"",neverSubmit:true});
+						  {startText:"",emptyText:"",neverSubmit:true});
 
 		});
 	},

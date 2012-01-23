@@ -1332,10 +1332,14 @@ html .icon_bar ul li .sub-settings .last-setting a{
 		padding: 5px;
 		border: 1px solid white;
 		float: right;
+		margin-right: 150px;
 }
 
 .enter-tag {
 	font-size: 15px;
+	margin: 14px 0px 12px 110px;
+	font-weight: 600;
+	float: left;
 }
 
 ul.as-selections {
