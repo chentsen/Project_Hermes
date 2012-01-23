@@ -279,7 +279,9 @@ margin-bottom: 2px;
     min-height: 48px;
     margin-top: 10px;
     position: relative;
-    background: url('../images/about-me-line.png')
+    background: url('../images/about-me-line.png');
+    background-repeat: no-repeat;
+    background-position: 85px 8px;
 }
 
 .profile-about-me {
