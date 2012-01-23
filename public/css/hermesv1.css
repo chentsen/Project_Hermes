@@ -1032,11 +1032,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     overflow: hidden;
 }
 
-.eventFeedObject:last-child li {
-	border-bottom: none;
-}
-
-.generalFeedObject:last-child li {
+.eventFeed li:last-child  {
 	border-bottom: none;
 }
 
