@@ -248,6 +248,10 @@ input[type=text]:first,input[type=password]:first {
 	border-top: none;
 }
 
+.eventFeedObject:last-child {
+	border-bottom: none;
+}
+
 .profile_eventList .eventFeedObject {
 	background-color: #F0F0F0;
 
@@ -1030,10 +1034,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
     color: #454545;
     border-bottom: 1px solid #b4bbcd;
     overflow: hidden;
-}
-
-.eventFeed li:last-child  {
-	border-bottom: none;
 }
 
 .profile .mini-feed {
