@@ -323,14 +323,14 @@ margin-bottom: 2px;
 	position: relative;
 	background: url('../images/upcoming-events-line.png');
 	background-repeat: no-repeat;
-	background-position: 85px 9px;
+	background-position: 166px 14px;
 }
 
 .friends_block {
 	position: relative;
 	background: url('../images/friends-line.png');
 	background-repeat: no-repeat;
-	background-position: 105px 9px;
+	background-position: 87px 14px;
 }
 .so-ronery {
 	font-size: 14px;
@@ -701,7 +701,7 @@ a.signup-button:hover {
     float: left;
     width: 270px;
     border-left: solid 1px #B4BBCD;
-    padding: 0px 0px 0px 12px;
+    padding: 7px 0px 0px 12px;
 }
 .right-block a {
     color: #454545;
@@ -1403,8 +1403,8 @@ ul.as-selections {
 .tags-arrow {
 	width: 0;
         height: 0;
-        border-top: 13px solid transparent;
-        border-bottom: 13px solid transparent;
+        border-top: 13px solid #FFFFFF;
+        border-bottom: 13px solid #FFFFFF;
         border-left: 13px solid #ff8600;
 	position:absolute;
 	right:-12px;
