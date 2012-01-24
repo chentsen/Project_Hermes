@@ -1143,14 +1143,12 @@ html .icon_bar ul li .sub-settings .last-setting a{
   display: block;
   background: #ff8600;
   color: white;
-  font-weight: 600;
   padding: 0 50px;
 }
 
 #wall_addPost
 { 
   height: 35px;
-  border: 1px solid #454545; 
   display: block;
   background: #454545;
   color: white;
@@ -1266,7 +1264,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: 278px;
 }
 #createEvent_submit {
-	padding: 0 91px !important;
+	padding: 0 93px !important;
 }
 
 #createEvent .centerform {margin: 10px 0px 0px 0px;}
