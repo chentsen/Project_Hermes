@@ -1513,7 +1513,7 @@ ul.as-selections {
 }
 .event .event_right .event_self {
     color: white;
-    float: left;
+    float: right;
     height: 30px;
     line-height: 30px;
     font-size: 16px;
