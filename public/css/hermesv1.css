@@ -15,12 +15,11 @@ select {
 }
 #editAccount textarea {
         margin: 10px 0;
-        width: 250px;
+        width: 245px;
 	font-size: 18px; 
         background: #ffffff;
         outline: 0;
         padding: 5px;    
-        border: 1px solid orange;
 }
 textarea {
         margin: 10px 0;
@@ -157,7 +156,7 @@ input[type=text]:first,input[type=password]:first {
 	margin-left: 20px;
 }
 .account-edit .upload-image {
-    border-right: 1px solid #bbb;
+    border-right: 1px solid #B4BBCD;
     width: 285px;
 }
 .account-edit .upload-image h1{
@@ -189,7 +188,7 @@ input[type=text]:first,input[type=password]:first {
     margin-right: 20px;
 }
 #editAccount #submit{
-    margin-left: 40px;
+    margin-left: 50px;
     margin-top: 10px;
 }
 #editAccount li{
@@ -695,7 +694,6 @@ a.signup-button:hover {
 .right-block { 
     float: left;
     width: 270px;
-    border-left: solid 1px #B4BBCD;
     padding: 0px 0px 0px 12px;
 }
 .right-block a {
@@ -809,6 +807,8 @@ a.signup-button:hover {
     overflow: hidden;
     padding: 0px 12px 0px 0px;
     float: left;
+    border-right: solid 1px #B4BBCD;
+    min-height: 480px;
      
 }
 #content-page {
