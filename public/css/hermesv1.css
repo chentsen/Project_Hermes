@@ -35,10 +35,9 @@ textarea {
 #content_area input[type=password]{
     margin: 5px 0;
     padding: 5px 0px 5px 5px;
-	width: 200px;
+    width: 200px;
 }
 input[type=text], input[type=password] {
-	
 	height: 23px;
 	font-size: 18px; 
         line-height: 18px;
@@ -46,19 +45,15 @@ input[type=text], input[type=password] {
         outline: 0;
         border: 1px solid #B4BBCD;
         padding: 0 10px;
-        
-    
 }
 
 input:focus {
-	border: solid 1px black;
+	border: solid 1px #7a7f8a;
 }
 input[type="submit"] {
-    
     color: white;
     font-size: 20px;
     border: none;
-    
 }
 input[type=text]:first,input[type=password]:first {
     border-top: none;
@@ -78,7 +73,6 @@ input[type=text]:first,input[type=password]:first {
         margin: 5px 0px;
         font-weight: bold;
         width: 120px;
-        
 }
 .form_submitter input[type=submit]
 {   padding: 10px;
@@ -119,7 +113,6 @@ input[type=text]:first,input[type=password]:first {
 #header_area .page {
         height: 60px;
        z-index: inherit;
-        
 }
 /**logo**/
 #logo {
@@ -1074,12 +1067,12 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /**** event creation ****/
 .show-advanced {text-align: right;}
 .show-advanced a {
-		
-		color: orange;
-		text-decoration: underline;
+	color: #454545;
+	text-decoration: underline;
 }
 .invisible {
-		display: none;
+	display: none;
+	font-size: 18px;
 }
 .event_creation input[type=text]{
      margin: 5px;
@@ -1147,7 +1140,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #register
 { 
   height: 35px;
-  border: 1px solid #fc6c0c; 
   display: block;
   background: #ff8600;
   color: white;
