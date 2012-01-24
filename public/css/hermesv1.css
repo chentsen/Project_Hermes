@@ -238,7 +238,7 @@ margin-bottom: 2px;
 	margin-top: 10px;
 	background: url('../images/events-line.png');
         background-repeat: no-repeat;
-        background-position: 105px 8px;
+        background-position: 61px 9px;
 	position: relative;
 }
 
@@ -279,7 +279,7 @@ margin-bottom: 2px;
     position: relative;
     background: url('../images/about-me-line.png');
     background-repeat: no-repeat;
-    background-position: 85px 8px;
+    background-position: 85px 9px;
 }
 
 .profile-about-me {
@@ -290,7 +290,7 @@ margin-bottom: 2px;
     position: relative;
     background: url('../images/tags-line.png');
     background-repeat: no-repeat;
-    background-position: 99px 8px;
+    background-position: 52px 9px;
 }
 
 .profileTagWrapper {
