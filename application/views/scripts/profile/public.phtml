@@ -6,7 +6,17 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
 ?>
 <div id="view-content">
         <div class="view-wrapped">
-            <div class="profile_header">
+            <div class="profile_leftCol">
+            <div class="profile_image">
+                <img src="/img/profile-pic/uid/<?=$this->user->getEmail();?>" height="100" width="100" />
+            </div>
+	    <div class="profile-events-header"><h4>Events</h4></div>
+            <div class="profile_eventList">
+                <?= $this->DisplayEventFeed($this->user->getEmail(), 4); ?>        
+            </div>
+            </div>
+            <div class="profile_rightCol">
+		<div class="profile_header">
                 <h1 class="big_name"><?= $this->name; ?>.</h1>
 						
                 <? if (!$this->isFriend && $this->createdFriendRequest){?>
@@ -16,28 +26,24 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
                                 </a>
                             </div>
                   <? }?>
-            </div>
-            <div class ="user_details">
-                <h2><?=$gender?> <?=$this->user->getCity()?></h2>
-            </div>
-            <div class="profile_leftCol">
-            <div class="profile_image">
-                <img src="/img/profile-pic/uid/<?=$this->user->getEmail();?>" height="100" width="100" />
-            </div>
-            <div class="profile_eventList">
-                <?= $this->DisplayEventFeed($this->user->getEmail(), 4); ?>        
+		<div class ="user_details">
+                <h3><?=$gender?> <?=$this->user->getCity()?></h3>
             </div>
             </div>
-            <div class="profile_rightCol">
-                <div class="profileDesc">
-                    <? if($this->description)
+		<div class="profileWrapper">
+                <div class="profileDesc"><h4>About Me</h4>
+                    <div class="profile-about-me"><? if($this->description)
 								echo $this->description;
 						else
 								echo "No description available";?>
-            </div>
+		    </div>
+		    </div>
+		</div>
+		<div class="profileTagWrapper">
                 <div class="profile_tags">
-                    <h2>Tags</h2>
+                    <h4>Tags</h4>
      			<?= $this->partial('tags.phtml',array('tagArray'=>$tagArray,'interestModel'=>$interestModel)) ?>
+		</div>
 		</div>
 		  </div>
                 </div>

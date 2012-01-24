@@ -62,11 +62,11 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					else if ($date->getTimeStamp() < $feedObject->getDate()->getTimestamp())
 					{ echo "Event has not begun";}
 					else 
-					{ echo "Event has has ended";}
+					{ echo "Event has ended";}
 					echo '</div>';
 					//Display Creator
 					if ($eventModel->isEventCreator($identity, $creator))
-					{ echo "<div class='own-event'>Your Event</div>";}
+					{ echo "<span class='own-event'>Event Owner</span>";}
 				
 					
 				

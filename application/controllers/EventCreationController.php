@@ -41,6 +41,7 @@ class EventCreationController extends Hermes_Controller_SessionController{
 							$email .= ",";	
 						}
 					$dateArray = explode('/',$raw['createEvent_date']);
+					$dateArray = $dateArray[1] . "/" . $dateArray[0] . "/" . $dateArray[2];
 					$private = (($raw['createEvent_private'] == 'y') ? "Yes" : "No");
                     $fullName = $this->curUser->getFirstName() . " " . $this->curUser->getLastName();
 				    $htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_send_notifications.phtml',
@@ -60,7 +61,7 @@ class EventCreationController extends Hermes_Controller_SessionController{
 	    			echo 'Failure';
 	    			$this->view->errors = array("emailExists"=>array("Something went wrong!"));
 	    		}
-	    		//$this->_helper->redirector('index','profile');
+	    		$this->_helper->redirector('index','profile');
 	    	}	
 	}
 
