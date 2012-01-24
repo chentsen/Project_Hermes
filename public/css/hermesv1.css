@@ -8,8 +8,7 @@ div { display: block; }
 /*** form styles*****/
 #content_area form { }
 select {
-    margin: 10px 10px 10px 25px;
-    font-size: 14px;
+    margin: 10px 10px 10px 15px;
 }
 #editAccount{
 	
@@ -30,7 +29,7 @@ textarea {
         background: #ffffff;
         outline: 0;
         padding: 10px;    
-        border: 1px solid orange;
+        border: 1px solid #B4BBCD;
 }
 #content_area input[type=text],
 #content_area input[type=password]{
@@ -49,7 +48,11 @@ input[type=text], input[type=password] {
         padding: 0 10px;
         
     
-}     
+}
+
+input:focus {
+	border: solid 1px black;
+}
 input[type="submit"] {
     
     color: white;
@@ -684,7 +687,7 @@ a.signup-button:hover {
 }
 
 .create_button {
-
+	margin-bottom: 7px;
 }
 .create_button h1{
     height: 70px;
@@ -747,7 +750,7 @@ a.signup-button:hover {
    font-size:12px;
 }
 #footer_menu .page {
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #b4bbcd;
     overflow: auto;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -797,9 +800,8 @@ a.signup-button:hover {
 }
 
 #content_area .page {
-        border-bottom: 1px solid #aaa;
         overflow: hidden;
-        padding-bottom: 20px;
+        padding-bottom: 24px;
 }
 /*#view-content {
     float: left;
@@ -1249,14 +1251,12 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 #createEvent #createEvent_shortDescription {
-  
-    width: 170px;
+    width: 175px;
     float: right;
-
     z-index: 100;
 }
 #createEvent #createEvent_date_active {
-    width: 170px;
+    width: 175px;
     right: 0;
     top: 0px;
     margin-left: 5px;
@@ -1264,8 +1264,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     z-index: 200;
 }
 #createEvent #createEvent_location {
-
-    width: 170px;
+    width: 175px;
     float: right;
     z-index: 300;
 }
@@ -1273,10 +1272,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
     font-size: 18px;
     margin: 0px;
     width: 278px;
-    
 }
 #createEvent_submit {
-	padding: 0 90px !important;
+	padding: 0 91px !important;
 }
 
 #createEvent .centerform {margin: 10px 0px 0px 0px;}
@@ -1287,6 +1285,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /*** app style profile page ***/
 #personalDescription_description, #tag_input {
      border-radius: 5px;
+     font-size: 18px;
 }
 /** app style content **/
 #content-page h1 {
@@ -1424,7 +1423,6 @@ ul.as-selections {
 
 .tag_disable {
     background: #454545;
-    border: 1px solid black;
 }
 .tag_remove {
     display: none;
