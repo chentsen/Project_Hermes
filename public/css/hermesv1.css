@@ -236,6 +236,10 @@ margin-bottom: 2px;
 }
 .profile-events-header {
 	margin-top: 10px;
+	background: url('../images/events-line.png');
+        background-repeat: no-repeat;
+        background-position: 105px 8px;
+	position: relative;
 }
 
 .profile_eventList {
@@ -283,6 +287,10 @@ margin-bottom: 2px;
 }
 .profile_tags {
     min-height: 306px;
+    position: relative;
+    background: url('../images/tags-line.png');
+    background-repeat: no-repeat;
+    background-position: 99px 8px;
 }
 
 .profileTagWrapper {
