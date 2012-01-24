@@ -1519,7 +1519,8 @@ ul.as-selections {
     font-size: 16px;
     display: block;
     background-color: #24A3DF;
-    padding: 0px 10px;
+    padding: 0px 30px;
+    margin-right: 2px;
 }
 .event .event_main {
     overflow: hidden;
@@ -1617,7 +1618,7 @@ ul.as-selections {
 .event .event_wall .wall_name {
     font-size: 18px;
     float: left;
-    margin: 15px 10px 10px 10px;
+    margin: 15px 10px 10px 20px;
 }
 .event .event_wall .posts {
     overflow: hidden;
@@ -1631,11 +1632,8 @@ ul.as-selections {
 .event .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    border-radius: 5px;
-    background: #dddddd;
-    margin: 5px 0px 0px 10px;
-    font-size: 16px;
-    padding: 10px;
+    margin: 15px 0px 0px 30px;
+    font-size: 18px;
     width: 457px;
 }
 .event .event_wall .wallpost a{
@@ -1653,6 +1651,10 @@ ul.as-selections {
     margin: 0px;
     width: 475px !important;
     border-right: none !important;
+}
+
+#wall_comment:focus {
+	border: solid 1px #454545;
 }
 .event .event_wall #Wall {
     margin: 0;
