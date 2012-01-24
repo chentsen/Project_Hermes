@@ -9,15 +9,15 @@
             </div>
             <div class="event_right">
                 <h2 class="event_self">Event Member</h2> <br /><br />
-            <span class='event_date'>
+            <div class='event_date'>
                 <h2><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h2>
-            </span>
-             <span class='event_place'>
+            </div>
+             <div class='event_place'>
                 <h2><?= $this->event->getLocation() ?> </h2>
                 
-            </span>
-                <span class="event_location">
+            </div>
+                <div class="event_location">
                     <h2><?= $this->event->getLongDescription() ?></h2>
-                </span>
+                </div>
             </div>
         </div>
