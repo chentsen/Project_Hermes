@@ -1554,19 +1554,19 @@ ul.as-selections {
 
 .event_date {
 	position: relative;
-	background: url(.../images/event-asterisk.png);
+	background: url('../images/event-asterisk.png');
 	background-repeat: no-repeat;
 	background-position: 130px 130px
 }
 .event_place {
 	position: relative;
-	background: url(.../images/event-asterisk.png);
+	background: url('../images/event-asterisk.png');
 	background-repeat: no-repeat;
 	background-position: 100px 100px
 }
 .event_location {
 	position: relative;
-	background: url(.../images/event-asterisk.png);
+	background: url('../images/event-asterisk.png');
 	background-repeat: no-repeat;
 	background-position: 120px 120px
 
