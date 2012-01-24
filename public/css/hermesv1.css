@@ -696,7 +696,7 @@ a.signup-button:hover {
     float: left;
     width: 270px;
     border-left: solid 1px #B4BBCD;
-    padding: 7px 0px 0px 12px;
+    padding: 0px 0px 0px 12px;
 }
 .right-block a {
     color: #454545;
@@ -1545,32 +1545,34 @@ ul.as-selections {
     font-weight: 500;
 }
 .event .event_main .event_date h2 {
-    margin-left: 40px;
+    margin-left: 35px;
 }
 .event .event_main .event_place h2{
-    margin-left: 40px;
+    margin-left: 35px;
 }
 .event .event_main .event_location h2{
-    margin-left: 40px;    
+    margin-left: 35px;    
 }
 .event_date {
 	position: relative;
 	background: url('../images/event-asterisk.png');
 	background-repeat: no-repeat;
-	background-position: 130px 130px
+	background-position: 5px 8px;
+	margin-top: 10px;
 }
 .event_place {
 	position: relative;
 	background: url('../images/event-asterisk.png');
 	background-repeat: no-repeat;
-	background-position: 100px 100px
+	background-position: 5px 8px;
+	margin-top: 5px;
 }
 .event_location {
 	position: relative;
 	background: url('../images/event-asterisk.png');
 	background-repeat: no-repeat;
-	background-position: 120px 120px
-
+	background-position: 5px 8px;
+	margin-top: 5px;
 }
 
 .event .interested_list {
