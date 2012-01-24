@@ -1608,8 +1608,11 @@ ul.as-selections {
 }
 .event .event_wall .wall_title {
     font-size: 28px;
-    padding: 15px 0 10px 0px;
-    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+    background: url('../images/event-wall-line.png');
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
 }
 .event .event_wall .wall_image {
     position: relative;
