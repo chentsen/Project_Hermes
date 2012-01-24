@@ -290,7 +290,7 @@ margin-bottom: 2px;
     position: relative;
     background: url('../images/tags-line.png');
     background-repeat: no-repeat;
-    background-position: 52px 9px;
+    background-position: 46px 9px;
 }
 
 .profileTagWrapper {
@@ -318,11 +318,25 @@ margin-bottom: 2px;
 .upcoming_events .view-events {
 	text-align: center;
 }
+
+.upcoming_events {
+	position: relative;
+	background: url('../images/upcoming-events-line.png');
+	background-repeat: no-repeat;
+	background-position: 85px 9px;
+}
+
+.friends-block {
+	position: relative;
+	background: url('../images/friends-line.png');
+	background-repeat: no-repeat;
+	background-position: 105px 9px;
+}
 .so-ronery {
-		font-size: 14px;
-		text-align: center;
-		padding: 20px 0;
-		color: #555555;
+	font-size: 14px;
+	text-align: center;
+	padding: 20px 0;
+	color: #454545;
 }
 
 /*** search page ****/
