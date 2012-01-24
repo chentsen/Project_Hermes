@@ -1043,9 +1043,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	background-color: #24A3DF;
 	color: white;
 	font-size: 11px;
-	line-height: 12px;
-	border-radius: 3px;
-	padding: 2px 3px 3px 3px;
+	line-height: 10px;
+	padding: 3px 3px 3px 3px;
 	margin: 4px 0px 2px 0px;
 }
 
