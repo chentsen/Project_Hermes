@@ -1545,13 +1545,14 @@ ul.as-selections {
     font-weight: 500;
 }
 .event .event_main .event_date h2 {
-	margin-top: 5px;
-	font-weight: 500;
+    margin-left: 40px;
 }
 .event .event_main .event_place h2{
-    
+    margin-left: 40px;
 }
-
+.event .event_main .event_location h2{
+    margin-left: 40px;    
+}
 .event_date {
 	position: relative;
 	background: url('../images/event-asterisk.png');
