@@ -1635,7 +1635,7 @@ ul.as-selections {
 .event .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    margin: 15px 0px 0px 30px;
+    margin: 15px 0px 0px 20px;
     font-size: 18px;
     width: 457px;
 }

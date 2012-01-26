@@ -5,7 +5,7 @@ $eid = $this->event->getEid();
 <?= $this->partial('eventInfo.phtml',array('event'=>$this->event,'identity'=>$this->identity)); ?>
 	
 <!--<?= $this->event->getLongDescription() ?>-->
-	<div class='interested_list'>
+	<div class='interested_list'><h2>Interested in attending</h2>
 		<?= $this->DisplayInterestedList($this->event) ?>
 	</div>
  <div class ="event_wall">

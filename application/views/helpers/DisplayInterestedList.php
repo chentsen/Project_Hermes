@@ -11,10 +11,10 @@ class Zend_View_Helper_DisplayInterestedList extends Zend_View_Helper_Abstract{
 		$waitingList = $event->getWaitingList();
 		echo '<div class = "waitingList">';
 		foreach($waitingList as $user){
-                        echo '<div class="waitingImg"><img height="100" width="100 "src="/images/placeholder.png" /><span>10</span></div>';
+                        echo '<div class="waitingImg"><img height="100" width="100 "src="/images/placeholder.png" /></div>';
 			echo "<div class = 'waitingList_item'>";
 			echo "{$user->getFirstName()} wants to come.<br/>";
-			echo "<div class='event_allow'><a href = '/event/response/response/y/eid/{$event->getEid()}/email/{$user->getEmail()}'>accept</a> | <a href = '/event/response/reponse/y/eid/{$event->getEid()}/email/{$user->getEmail()}'>ignore</a></div>";
+			echo "<div class='event_allow'><a href = '/event/response/response/y/eid/{$event->getEid()}/email/{$user->getEmail()}'>Accept</a> | <a href = '/event/response/reponse/y/eid/{$event->getEid()}/email/{$user->getEmail()}'>Ignore</a></div>";
 			echo "</div>";
 		}
 		echo '</div>';
