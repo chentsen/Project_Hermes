@@ -101,7 +101,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                         echo '<div class="common_value">';
 						echo "<a href = '/profile/public/email/{$email}'>";
 						echo '<div class="common_number">';
-			echo "<img src='/img/profile-pic/uid/{$friend->getEmail()}' heisght=75  width=75/>"
+			echo "<img src='/img/profile-pic/uid/{$friend->getEmail()}' heisght=75  width=75/>";
                         echo "{$user->getCount()}";
                             
                         echo '</div></a><div class="in_common"><h5>tags in common</h5></div></div>';
