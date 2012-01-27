@@ -205,7 +205,7 @@ input[type=text]:first,input[type=password]:first {
     position: relative;
     text-align: center;
     padding:5px;
-    margin: 15px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
     font-size: 14px;
     background: #24A3DF;
 }
@@ -809,7 +809,10 @@ a.signup-button:hover {
     float: left;
     border-right: solid 1px #B4BBCD;
     min-height: 480px;
-     
+}
+
+.dashboard-title {
+	margin-bottom: 10px;
 }
 #content-page {
     width: 640px;
