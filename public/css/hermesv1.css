@@ -1698,6 +1698,9 @@ a.remove-anchor:hover {
 
 .attend-button {
 	display: block;
+}
+
+.attend-button .remove-anchor a {
 	font-size: 24px;
 }
 
