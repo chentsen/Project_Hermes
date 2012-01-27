@@ -99,7 +99,6 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				$email = $user->result->getEmail();			
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
                         echo '<div class="common_value">';
-						echo "<a href = '/profile/public/email/{$email}'>";
 						echo '<div class="common_number">';
                         echo "{$user->getCount()}";
                             
