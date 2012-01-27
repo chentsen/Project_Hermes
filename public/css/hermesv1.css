@@ -358,7 +358,10 @@ margin-bottom: 2px;
     border-bottom: 1px solid #454545;
     width: 540px;
 }
-.user_info h2 { float: left; margin-bottom: 2px;}
+.user_info h2 {
+    float: left;
+    text-transform: capitalize;
+    }
 .user_addFriend, .user_viewProfile {
     float: right;
     margin-left: 10px;
@@ -370,10 +373,10 @@ margin-bottom: 2px;
     background: #FFFFFF;
     height: 100% !important;
     color: #454545;
-    margin: 5px;
     overflow: hidden;
     padding: 0px;
     width: 650px;
+    float: left;
 }
 .noMatch {
     background: #FF8600;
