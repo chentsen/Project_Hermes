@@ -411,12 +411,11 @@ margin-bottom: 2px;
 .common_number {
     color: #454545;
     float: left;
+    font-size: 16px;
+    margin-right: 5px;
 }
 .in_common {
-    font-weight: bold;
-    font-size: 9px;
-    margin-top: 5px;
-    text-align: center;
+    float: left;
 }
 .common_value {
     float: left;

@@ -43,7 +43,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				echo "<a href = '/event/index/eid/{$event->result->getEid()}'>";
 				echo '<div class="common_number">';
 			echo "{$event->getCount()} ";
-                         echo '</div></a><div class="in_common"><h5>tags in common</h5></div></div>';
+                         echo '</div></a><div class="in_common"><h4>tags in common</h4></div></div>';
                          echo "<div class='user_info'><h2>{$event->result->getCreator()->getFirstName()} wants to ".$event->result->getShortDescription()."</h2>";
                         
                         
@@ -102,7 +102,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 						echo '<div class="common_number">';
                         echo "{$user->getCount()}";
                             
-                        echo '</div></a><div class="in_common"><h5>tags in common</h5></div></div>';
+                        echo '</div></a><div class="in_common"><h4>tags in common</h4></div></div>';
 			echo "<div class='user_info'><h2>{$user->result->getFirstName()}</h2>";
                       
 			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
