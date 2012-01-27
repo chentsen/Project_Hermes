@@ -1531,7 +1531,7 @@ ul.as-selections {
 }
 .event .event_main .event_img {
     float: left;
-    padding: 0px 15px 0px 0px;
+    padding: 0px 15px 0px 5px;
 }
 .event .event_main .event_img img{ 
 }
@@ -1539,7 +1539,7 @@ ul.as-selections {
     float: right;
 }
 .event .event_main .event_right {
-    width: 445px;
+    width: 440px;
     float: left;
 }
 .event .event_main h2 {
@@ -1696,12 +1696,9 @@ a.remove-anchor:hover {
 	color: #24A3DF;
 }
 
-.attend-button {
+a.attend-button {
 	display: block;
-}
-
-.attend-button .remove-anchor a {
-	font-size: 24px;
+	font-size: 36px;
 }
 
 /*** event list page ***/
