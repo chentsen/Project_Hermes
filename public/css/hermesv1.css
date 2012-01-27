@@ -330,7 +330,7 @@ margin-bottom: 2px;
 .so-ronery {
 	font-size: 14px;
 	text-align: center;
-	padding: 20px 0;
+	padding: 15px 0;
 	color: #454545;
 }
 
@@ -366,18 +366,17 @@ margin-bottom: 2px;
     
 }
 .search-wrapped {
-    
     min-height: 500px;
-    background: #F0F0F0;
+    background: #FFFFFF;
     height: 100% !important;
     color: #454545;
     margin: 5px;
-    overflow: auto;
+    overflow: hidden;
     padding: 0px;
+    width: 650px;
 }
 .noMatch {
-     border: 1px solid #FC6C0C;
-    background: orange;
+    background: #FF8600;
     color: white;
     float: left;
     padding: 5px 10px;
@@ -1321,7 +1320,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 
 .enter-tag {
 	font-size: 15px;
-	margin: 8px 0px 12px 110px;
+	margin: 7px 0px 12px 110px;
 	font-weight: 600;
 	float: left;
 }
