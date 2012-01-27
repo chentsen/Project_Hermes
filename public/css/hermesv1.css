@@ -1315,15 +1315,13 @@ html .icon_bar ul li .sub-settings .last-setting a{
     right: 70px;*/
 }
 .tag-wrapper {
-		padding: 5px;
-		border: 1px solid white;
 		float: right;
 		margin-right: 150px;
 }
 
 .enter-tag {
 	font-size: 15px;
-	margin: 14px 0px 12px 110px;
+	margin: 8px 0px 12px 110px;
 	font-weight: 600;
 	float: left;
 }
@@ -1468,10 +1466,9 @@ ul.as-selections {
 }
 #flashMessages .exitBox {
     position: absolute;
-    right: 5px;
-    top: 3px;
+    right: 3px;
+    top: 2px;
     padding: 10px;
-    background-size: 20px;
     background: url('../images/close-tag.png') no-repeat center center;
 }
 /****  dialog ****/
@@ -1502,7 +1499,7 @@ ul.as-selections {
     padding:5px;
     margin: 5px 0px;
     font-size: 14px;
-    background: orange;
+    background: #24A3DF;
     color: #ffffff;
 }
 /***** event page ******/
