@@ -401,18 +401,16 @@ margin-bottom: 2px;
     font-size: 16px;
     color: orange;
     float: right;
-    
 }
-.view_event, .join_event { margin-left: 10px; font-size: 16px; color: orange; float: right;}
+.view_event, .join_event {
+	margin-left: 10px;
+	font-size: 16px;
+	color: orange;
+	float: right;
+}
 .common_number {
-    font-size: 35px;
-    background: #bbb;
     color: #454545;
-    padding: 10px 0px;
-    text-align: center;
-    width: 90px;
-    font-weight: bold;
-    
+    float: left;
 }
 .in_common {
     font-weight: bold;
@@ -422,6 +420,7 @@ margin-bottom: 2px;
 }
 .common_value {
     float: left;
+    width: 140px;
     
 }
 /**** cms pages *****/
