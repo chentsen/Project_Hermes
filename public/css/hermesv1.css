@@ -126,7 +126,7 @@ input[type=text]:first,input[type=password]:first {
         height: 60px;
 }
 /**** colors and clears *****/
-.orange { color: orange; }
+.orange { color: #FF8600; }
 .orange2 { color: #EE8641; }
 .orange3 { color: #FC6C0C; }
 .float_left { float: left; }
@@ -1469,7 +1469,7 @@ ul.as-selections {
     top: 3px;
     padding: 10px;
     background-size: 20px;
-    background: url('../images/exit-button.png') no-repeat center center;
+    background: url('../images/close-tag.png') no-repeat center center;
 }
 /****  dialog ****/
 .modalWindow .view-wrapped {
@@ -1575,7 +1575,7 @@ ul.as-selections {
 }
 
 .event .interested_list {
-    padding: 5px 0;
+    margin-top: 10px;
     overflow: hidden;
 }
 .event .interested_list .waitingList img,
@@ -1588,9 +1588,11 @@ ul.as-selections {
 .event .interested_list .waitingList{
     float: left;
     text-align: center;
+    margin: 10px 0px;
 }
 .event .interested_list .waitingList .event_allow {
-    color: orange;
+    color: #FF8600;
+    height: 16px;
 }
 .event .interested_list .waitingList .waitingImg {
     position: relative;
@@ -1681,7 +1683,7 @@ a.remove-anchor {
 	float: left;
 	display: block;
 	font-size: 16px;
-	color: orange;
+	color: #FF8600;
 }
 
 a.remove-anchor:hover {
@@ -1750,7 +1752,7 @@ a.remove-anchor:hover {
 }
 
 .individual-object a {
-	color: orange;
+	color: #FF8600;
 }
 
 .event-describer {
