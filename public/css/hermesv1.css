@@ -1598,7 +1598,10 @@ ul.as-selections {
     position: relative;
 }
 .waiting-details {
-	font-size: 24px;
+}
+
+.waiting-item {
+	float: left;
 }
 .event .interested_list .waitingList .waitingImg span,
 .event .event_wall .wall_image span

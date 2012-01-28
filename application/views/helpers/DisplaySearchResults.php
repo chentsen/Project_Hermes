@@ -20,15 +20,15 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				}
 			}
                         if(count($results['userResults'])==0 && count($results['eventResults'])==0) {
-                            echo '<div class="none-singleFound"><h2>No users or events found :(<br/>';
-                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">Create</a> an event to meet some!</h2></div>';
+                            echo '<div class="none-singleFound"><h1>No users or events found :(<br/>';
+                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">Create</a> an event to meet some!</h1></div>';
                         } else if (count($results['userResults'])==0) {
-                            echo '<div class="none-singleFound"><h2>No users found :(<br/>Why don\'t';
-                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">Create</a> an event to meet some!</h2></div>';
+                            echo '<div class="none-singleFound"><h1>No users found :(<br/>Why don\'t';
+                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">Create</a> an event to meet some!</h1></div>';
                         } else if (count($results['eventResults'])==0) {
                             
-                            echo '<div class="none-singleFound"><h2>No events found :(<br/>Why don\'t you create one';
-                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">here</a>?</h2></div>';
+                            echo '<div class="none-singleFound"><h1>No events found :(<br/>Why don\'t you create one';
+                            echo ' <a href="#" onclick="Dialog.showDialog({elementSelector:\'#event_ajax_form\',func:Dialog.loadEventDatePicker})">here</a>?</h1></div>';
                         }
                            
                     }else {
@@ -43,7 +43,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				echo "<a href = '/event/index/eid/{$event->result->getEid()}'>";
 				echo '<div class="common_number">';
 			echo "{$event->getCount()} ";
-                         echo '</div></a><div class="in_common"><h4>tags in common</h4></div></div>';
+                         echo '</div></a><div class="in_common"><h3>Tags in Common</h3></div></div>';
                          echo "<div class='user_info'><h2>{$event->result->getCreator()->getFirstName()} wants to ".$event->result->getShortDescription()."</h2>";
                         
                         
@@ -98,26 +98,22 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 			
 				$email = $user->result->getEmail();			
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
-                        echo '<div class="common_value">';
-						echo '<div class="common_number">';
-                        echo "{$user->getCount()}";
-                            
-                        echo '</div></a><div class="in_common"><h4>tags in common</h4></div></div>';
-			echo "<div class='user_info'><h2>{$user->result->getFirstName()}</h2>";
-                      
+                        echo '<div class="indiv-result">';
+						echo "<a href = '/profile/public/email/{$email}'>";
+						echo '<img src="/img/profile-pic/uid/'.$email.'" height=75  width=75/ style="float:left;"></a>';
+						echo "<div class='user_info'><h2><a href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a></h2>
+								<span>{$user->result->getCity()}</span>
+								<span>Tags in Common : {$user->getCount()}</span></div>";
+		                                            
 			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
-				echo "<div class = 'user_addFriend'>";
+				echo "<div style='float: right'><div class = 'user_addFriend' >";
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
 				
 				echo "<a class='remove-anchor' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
 				
 				echo "</div>";
 			}
-			echo "<div class = 'user_viewProfile'>";
-				
-				
-				echo "<a href = '/profile/public/email/{$email}'>view profile</a>";
-			echo "</div></div>";
+			echo "</div>";
 			//check if currently friends- are we? omit add as friend
 			//view profile
 			
@@ -144,7 +140,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                                     echo '<div class="noMatch">No Matching Tags</div>';
                              
                         }
-			echo '</div>';
+			echo '</div></div></div>';
                 } 
                 
                             
