@@ -142,7 +142,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                                     echo '<div class="noMatch">No Matching Tags</div>';
                              
                         }
-			echo '</div></div>';
+			echo '</div></div></div>';
                 } 
                 
                             
