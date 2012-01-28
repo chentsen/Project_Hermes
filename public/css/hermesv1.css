@@ -411,8 +411,8 @@ margin-bottom: 2px;
 .common_number {
     color: #454545;
     float: left;
-    font-size: 16px;
-    margin-right: 5px;
+    font-size: 18px;
+    margin-right: 4px;
 }
 .in_common {
     float: left;
@@ -1580,7 +1580,7 @@ ul.as-selections {
 }
 .event .interested_list .waitingList img,
 .event .event_wall .wall_image img{
-	margin: 0px 10px 10px 1px;
+	margin: 0px 10px 10px 0px;
 }
 .event .interested_list .waitingList a {
     color: orange;
