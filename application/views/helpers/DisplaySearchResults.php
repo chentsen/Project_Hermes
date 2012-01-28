@@ -104,17 +104,17 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 						echo "<div class='user-info' style='float:right; width: 550px; border-bottom: 1px solid black;'>
 								<div style='float: left;><span><a href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a></span>
 								<span>{$user->result->getCity()}</span>
-								<span>Tags in Common : {$user->getCount()}</span>";
+								<span>Tags in Common : {$user->getCount()}</span></div>";
 		                                            
 			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
-				echo "<div style='float: right'><div class = 'user_addFriend' >";
+				echo "<div class = 'user_addFriend' style='float: right'>";
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
 				
 				echo "<a class='remove-anchor' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
 				
 				echo "</div>";
 			}
-			echo "</div></div>";
+			echo "</div>";
 
 			//check if currently friends- are we? omit add as friend
 			//view profile
@@ -142,7 +142,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                                     echo '<div class="noMatch">No Matching Tags</div>';
                              
                         }
-			echo '</div></div></div>';
+			echo '</div>';
                 } 
                 
                             
