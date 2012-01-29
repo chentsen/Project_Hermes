@@ -23,7 +23,7 @@ class IndexController extends Zend_Controller_Action
         
         $this->_helper->layout->setLayout('layout_outside');                
        $auth = Zend_Auth::getInstance();
-	if($auth->hasIdentity()){
+		if($auth->hasIdentity()){
                     $this->_redirect('/profile');
                 }
 		

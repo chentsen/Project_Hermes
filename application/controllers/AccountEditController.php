@@ -8,18 +8,19 @@ class AccountEditController extends Hermes_Controller_SessionController
         
         parent::init();
      
-
-		$this->view->identity = $this->identity;
+        $this->view->identity = $this->identity;
                 $this->firstname = $this->curUser->getFirstName();
                 $this->lastname = $this->curUser->getLastName(); 
                 $this->city = $this->curUser->getCity();
                 $this->description = $this->curUser->getDescription();
                 $this->gender = $this->curUser->getGender();
+                
                 /* Initialize action controller here */
                 $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
         /* Initialize action controller here */
         $this->view->pageTitle = "Edit Your Account";
+        
         
 
     }
@@ -31,17 +32,20 @@ class AccountEditController extends Hermes_Controller_SessionController
         $this->view->lastname = $this->lastname;
         $this->view->city = $this->city;
         $this->view->gender = $this->gender;
+        $this->view->hasEmailPerm = $this->hasEmailPerm;
         
+        $options = array('firstName'=>$this->firstname, 'lastName'=>$this->lastname, 'gender'=>$this->gender,'city'=>$this->city,'description'=>$this->description, 'hasEmailPerm'=>$this->hasEmailPerm);
         
-        $options = array('firstName'=>$this->firstname, 'lastName'=>$this->lastname, 'gender'=>$this->gender,'city'=>$this->city,'description'=>$this->description);
         $form = new Application_Form_EditAccount($options);
         $profilePic_form = new Application_Form_ProfilePic();
         $this->view->form = $form;
         $this->view->profilePic_form = $profilePic_form;
         
-      
+        
+        
         
     }
+    
     public function updateaccountAction() 
     {
         $this->_helper->viewRenderer->setNoRender();
