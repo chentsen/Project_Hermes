@@ -56,9 +56,13 @@ define("EVENT_COLLECTION",$tokenized[1]);
 		
 	/** Updates and refills index with everything that is currently in the oplog	*/
 	function runBackupIndex(){
+	      
+	        
 		$this->cursor = $this->collection->find()->tailable(true);
 		while(true){				
+				
 				if($this->cursor->hasNext()){
+					
 					$document = $this->cursor->getNext();					
 					//print_r($document);
 					//echo 'found updated object..';
@@ -68,7 +72,7 @@ define("EVENT_COLLECTION",$tokenized[1]);
 						$this->client->addDocument($updatedDocument);
 						
 						$this->client->commit();
-						echo 'Updated something!';
+						//echo 'Updated something!';
 					}
 					//delay this for several cycles once it's necessary				
 										//maybe want to abstract this into an object later.
@@ -84,25 +88,31 @@ define("EVENT_COLLECTION",$tokenized[1]);
 	 *
 	 **/
 	function runIndex(){
-	      $this->cursor = $this->collection->find()->tailable(true);
+	       $curTime = time();
+	      $query = array('ts'=>array('$gte'=>new MongoTimestamp(time(),1)));
+	      $this->cursor = $this->collection->find($query)->tailable(true);
 	      //$lastValue = $this->collection->find()->
 	      $newLoop = true;
+	     
 	      //$this->cursor = $this->collection->find(array('increasing'=>array('$gte'=>$lastValue)))->tailable(true);	
 		while(true){				
 				
 				if($this->cursor->hasNext()){
-				   if($newLoop)
-					  $this->cursor->getNext();
+				  // echo 'found something after'.$curTime;
+				   if($newLoop){
+					  $this->cursor->getNext();					
+						 //  print_r($document);
+				   }
 				   else{
 	      				  while($this->cursor->hasNext()){
 						   $document = $this->cursor->getNext();					
-						   //print_r($document);
+						  // print_r($document);
 						   //echo 'found updated object..';
 						   $updatedDocument = $this->processObject($document);
-						   //print_r($updatedDocument);
+						   ////print_r($updatedDocument);
 						   if($updatedDocument){
 							  $this->client->addDocument($updatedDocument);
-							   //echo 'Updated something!';
+							  // echo 'Updated something!';
 						   }
 					  }
 					  $this->client->commit();
