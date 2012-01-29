@@ -40,6 +40,7 @@ class EventCreationController extends Hermes_Controller_SessionController{
 				
 					$subject= "Your friend has created an event";
 					/*$htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_send_notifications.phtml',
+
 																	  array('yourName'=>$this->curUser->getFirstName(),
 																			'name'=>$fullName,
 																			'location'=>$raw['createEvent_location'],
@@ -68,7 +69,7 @@ class EventCreationController extends Hermes_Controller_SessionController{
 	    			echo 'Failure';
 	    			$this->view->errors = array("emailExists"=>array("Something went wrong!"));
 	    		}
-	    		//$this->_helper->redirector('index','profile');
+	    		$this->_helper->redirector('index','profile');
 	    	}	
 	}
 

@@ -2,16 +2,16 @@
     <div class="view-wrapped">	 
         <div class="event_header">
         <h1 class="event_title"><?= $this->event->getCreator()->getFirstName()." wants to ".$this->event->getShortDescription() ?></h1>
-        <h2 class="event_self">Event Member</h2>
         </div>
         <div class="event_main">
             <div class="event_img">
                  <img src="/img/profile-pic/uid/<?=$this->identity ?>" height=180  width=180/>
             </div>
             <div class="event_right">
+                <h2 class="event_self">Event Member</h2>
             <div class='event_date'>
                 <h2><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h2>
-            </div>	
+            </div>
              <div class='event_place'>
                 <h2><?= $this->event->getLocation() ?> </h2>
                 

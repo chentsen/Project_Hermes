@@ -15,10 +15,10 @@ class Zend_View_Helper_DisplayFriendsPage extends Zend_View_Helper_Abstract{
 					
                                         echo '<li class="friend_list"><div class="friend_pic">';
                                         echo "<a href='/profile/public/email/{$friend->getEmail()}'>";
-                                        echo "<img src='/img/profile-pic/uid/{$friend->getEmail()}' height=75  width=75/></a></div><div class='friend_name'>";
+                                        echo "<img src='/img/profile-pic/uid/{$friend->getEmail()}' height=100  width=100/></a></div><div class='friend_name'>";
 										
                                        
-					echo "{$friend->getFirstName()} {$friend->getLastName()}";
+					echo "{$friend->getFirstName()} " . substr($friend->getLastName(),0,1);
 					echo "<div class='friend-city'>{$friend->getCity()}</div>";
 					echo '</div></li>';
 					

@@ -3,7 +3,9 @@ var Wall = {
         if(!options.eid)
             return false;
 	var message = $('#wall_comment').val();
+	$('#wall_comment').val("");
 	if(!message)
+		
 	    return false;   
         $.ajax({
             url:"/event/add/",
