@@ -126,7 +126,7 @@ input[type=text]:first,input[type=password]:first {
         height: 60px;
 }
 /**** colors and clears *****/
-.orange { color: orange; }
+.orange { color: #FF8600; }
 .orange2 { color: #EE8641; }
 .orange3 { color: #FC6C0C; }
 .float_left { float: left; }
@@ -205,7 +205,7 @@ input[type=text]:first,input[type=password]:first {
     position: relative;
     text-align: center;
     padding:5px;
-    margin: 15px 0px 0px 0px;
+    margin: 5px 0px 0px 0px;
     font-size: 14px;
     background: #24A3DF;
 }
@@ -330,7 +330,7 @@ margin-bottom: 2px;
 .so-ronery {
 	font-size: 14px;
 	text-align: center;
-	padding: 20px 0;
+	padding: 15px 0;
 	color: #454545;
 }
 
@@ -358,7 +358,10 @@ margin-bottom: 2px;
     border-bottom: 1px solid #454545;
     width: 540px;
 }
-.user_info h2 { float: left; margin-bottom: 2px;}
+.user_info h2 {
+    float: left;
+    text-transform: capitalize;
+    }
 .user_addFriend, .user_viewProfile {
     float: right;
     margin-left: 10px;
@@ -366,18 +369,17 @@ margin-bottom: 2px;
     
 }
 .search-wrapped {
-    
     min-height: 500px;
-    background: #F0F0F0;
+    background: #FFFFFF;
     height: 100% !important;
     color: #454545;
-    margin: 5px;
-    overflow: auto;
+    overflow: hidden;
     padding: 0px;
+    width: 650px;
+    float: left;
 }
 .noMatch {
-     border: 1px solid #FC6C0C;
-    background: orange;
+    background: #FF8600;
     color: white;
     float: left;
     padding: 5px 10px;
@@ -399,28 +401,29 @@ margin-bottom: 2px;
     font-size: 16px;
     color: orange;
     float: right;
-    
 }
-.view_event, .join_event { margin-left: 10px; font-size: 16px; color: orange; float: right;}
+.view_event, .join_event {
+	margin-left: 10px;
+	font-size: 16px;
+	color: orange;
+	float: right;
+}
 .common_number {
-    font-size: 35px;
-    background: #bbb;
     color: #454545;
-    padding: 10px 0px;
-    text-align: center;
-    width: 90px;
-    font-weight: bold;
-    
+    float: left;
+    font-size: 18px;
+    margin-right: 4px;
 }
 .in_common {
-    font-weight: bold;
-    font-size: 9px;
-    margin-top: 5px;
-    text-align: center;
+    float: left;
 }
 .common_value {
     float: left;
-    
+    width: 140px;
+}
+
+.user_result img {
+	float: left;
 }
 /**** cms pages *****/
 .cms-title {font-size: 40px; margin-bottom: 15px; margin-left: 10px;}
@@ -809,7 +812,10 @@ a.signup-button:hover {
     float: left;
     border-right: solid 1px #B4BBCD;
     min-height: 480px;
-     
+}
+
+.dashboard-title {
+	margin-bottom: 10px;
 }
 #content-page {
     width: 640px;
@@ -1043,9 +1049,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	background-color: #24A3DF;
 	color: white;
 	font-size: 11px;
-	line-height: 12px;
-	border-radius: 3px;
-	padding: 2px 3px 3px 3px;
+	line-height: 10px;
+	padding: 3px 3px 3px 3px;
 	margin: 4px 0px 2px 0px;
 }
 
@@ -1313,15 +1318,13 @@ html .icon_bar ul li .sub-settings .last-setting a{
     right: 70px;*/
 }
 .tag-wrapper {
-		padding: 5px;
-		border: 1px solid white;
 		float: right;
 		margin-right: 150px;
 }
 
 .enter-tag {
 	font-size: 15px;
-	margin: 14px 0px 12px 110px;
+	margin: 7px 0px 12px 110px;
 	font-weight: 600;
 	float: left;
 }
@@ -1469,11 +1472,10 @@ ul.as-selections {
 }
 #flashMessages .exitBox {
     position: absolute;
-    right: 5px;
-    top: 3px;
+    right: 3px;
+    top: 2px;
     padding: 10px;
-    background-size: 20px;
-    background: url('../images/exit-button.png') no-repeat center center;
+    background: url('../images/close-tag.png') no-repeat center center;
 }
 /****  dialog ****/
 .modalWindow .view-wrapped {
@@ -1503,7 +1505,7 @@ ul.as-selections {
     padding:5px;
     margin: 5px 0px;
     font-size: 14px;
-    background: orange;
+    background: #24A3DF;
     color: #ffffff;
 }
 /***** event page ******/
@@ -1517,13 +1519,14 @@ ul.as-selections {
 }
 .event .event_right .event_self {
     color: white;
-    float: left;
+    float: right;
     height: 30px;
     line-height: 30px;
     font-size: 16px;
     display: block;
     background-color: #24A3DF;
-    padding: 0px 10px;
+    padding: 0px 30px;
+    margin-right: 2px;
 }
 .event .event_main {
     overflow: hidden;
@@ -1531,7 +1534,7 @@ ul.as-selections {
 }
 .event .event_main .event_img {
     float: left;
-    padding: 0px 15px 0px 0px;
+    padding: 0px 15px 0px 5px;
 }
 .event .event_main .event_img img{ 
 }
@@ -1539,7 +1542,7 @@ ul.as-selections {
     float: right;
 }
 .event .event_main .event_right {
-    width: 445px;
+    width: 440px;
     float: left;
 }
 .event .event_main h2 {
@@ -1578,12 +1581,12 @@ ul.as-selections {
 }
 
 .event .interested_list {
-    padding: 5px 0;
+    margin-top: 10px;
     overflow: hidden;
 }
 .event .interested_list .waitingList img,
 .event .event_wall .wall_image img{
-	margin: 0px 10px 10px 1px;
+	margin: 0px 10px 10px 0px;
 }
 .event .interested_list .waitingList a {
     color: orange;
@@ -1591,12 +1594,20 @@ ul.as-selections {
 .event .interested_list .waitingList{
     float: left;
     text-align: center;
+    margin: 10px 0px;
 }
 .event .interested_list .waitingList .event_allow {
-    color: orange;
+    color: #FF8600;
+    height: 16px;
 }
 .event .interested_list .waitingList .waitingImg {
     position: relative;
+}
+.waiting-details {
+}
+
+.waiting-item {
+	float: left;
 }
 .event .interested_list .waitingList .waitingImg span,
 .event .event_wall .wall_image span
@@ -1611,8 +1622,11 @@ ul.as-selections {
 }
 .event .event_wall .wall_title {
     font-size: 28px;
-    padding: 15px 0 10px 0px;
-    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+    background: url('../images/event-wall-line.png');
+    background-repeat: no-repeat;
+    background-position: 63px 13px;
 }
 .event .event_wall .wall_image {
     position: relative;
@@ -1621,7 +1635,7 @@ ul.as-selections {
 .event .event_wall .wall_name {
     font-size: 18px;
     float: left;
-    margin: 15px 10px 10px 10px;
+    margin: 15px 10px 10px 20px;
 }
 .event .event_wall .posts {
     overflow: hidden;
@@ -1635,11 +1649,8 @@ ul.as-selections {
 .event .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    border-radius: 5px;
-    background: #dddddd;
-    margin: 5px 0px 0px 10px;
-    font-size: 16px;
-    padding: 10px;
+    margin: 15px 0px 0px 20px;
+    font-size: 18px;
     width: 457px;
 }
 .event .event_wall .wallpost a{
@@ -1657,6 +1668,10 @@ ul.as-selections {
     margin: 0px;
     width: 475px !important;
     border-right: none !important;
+}
+
+#wall_comment:focus {
+	border: solid 1px #454545;
 }
 .event .event_wall #Wall {
     margin: 0;
@@ -1680,7 +1695,7 @@ a.remove-anchor {
 	float: left;
 	display: block;
 	font-size: 16px;
-	color: orange;
+	color: #FF8600;
 }
 
 a.remove-anchor:hover {
@@ -1690,9 +1705,9 @@ a.remove-anchor:hover {
 	color: #24A3DF;
 }
 
-.attend-button {
+a.attend-button {
 	display: block;
-	font-size: 24px;
+	font-size: 36px;
 }
 
 /*** event list page ***/
@@ -1749,7 +1764,7 @@ a.remove-anchor:hover {
 }
 
 .individual-object a {
-	color: orange;
+	color: #FF8600;
 }
 
 .event-describer {

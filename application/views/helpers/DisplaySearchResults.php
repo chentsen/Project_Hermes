@@ -98,8 +98,10 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 			
 				$email = $user->result->getEmail();			
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
-                        echo '<div class="indiv-result" style="">';
-						echo "<a style='float:left;' href = '/profile/public/email/{$email}'>";
+
+                        //echo '<div class="indiv-result" style="">';
+						echo "<a href='/profile/public/email/{$email}'>";
+
 						echo '<img src="/img/profile-pic/uid/'.$email.'" height=75  width=75/ </a>';
 						echo "<div class='user-info' style='float:right; width: 550px; border-bottom: 1px solid black;'>
 								<div style='float: left;><span><a href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a></span>
