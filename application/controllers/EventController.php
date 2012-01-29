@@ -25,16 +25,18 @@ class EventController extends Hermes_Controller_Wall_WallController
     	$this->view->event = $event;
 	$this->view->didRequest = $eventModel->hasRequestedMembership($this->identity);
         //1. if I am creator
-		
+		$this->view->creatorName = $event->getCreator()->getFirstName(). " " .$event->getCreator()->getLastName();
         if($this->identity == $event->getCreator()->getEmail()){
     		$this->_helper->ViewRenderer('index_creator');
 			$this->view->pageTitle = $this->curUser->getFirstName() . " " . $this->curUser->getLastName() . " wants to" .
 				$event->getShortDescription();
+			
     	}
     	else if($eventModel->isMember($this->identity,$event->getMembers())){
     		$this->_helper->ViewRenderer('index_member');
 			$this->view->pageTitle = "You want to" .
 				$event->getShortDescription();
+		
     	}
     	//I'm not a member, and I'm not a creator
     	else if(!$event->isPrivate()){
