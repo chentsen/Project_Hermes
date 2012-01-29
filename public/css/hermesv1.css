@@ -1180,7 +1180,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #profilePic_submit:hover
 #wall_addPost:hover
 {
-    background: black;
+    background: #333333;
 }
 .inner_button {  }
 .inner_button .register_button {
