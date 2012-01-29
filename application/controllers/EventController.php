@@ -28,7 +28,7 @@ class EventController extends Hermes_Controller_Wall_WallController
 		$this->view->creatorName = $event->getCreator()->getFirstName(). " " .substr($event->getCreator()->getLastName(),0,1). ".";
         if($this->identity == $event->getCreator()->getEmail()){
     		$this->_helper->ViewRenderer('index_creator');
-			$this->view->pageTitle = $this->curUser->getFirstName() . " " .substr($this->curUser->getLastName(),0,1) . "." " wants to " .
+			$this->view->pageTitle = $this->curUser->getFirstName() . " " .substr($this->curUser->getLastName(),0,1) . ". wants to " .
 				$event->getShortDescription();
 			
     	}
@@ -41,7 +41,7 @@ class EventController extends Hermes_Controller_Wall_WallController
     	//I'm not a member, and I'm not a creator
     	else if(!$event->isPrivate()){
     		$this->_helper->ViewRenderer('index_public');
-			$this->view->pageTitle = "Join " . $event->getCreator()->getFirstName() . " " .substr($event->getCreator()->getLastName(),0,1) . "." " and " .
+			$this->view->pageTitle = "Join " . $event->getCreator()->getFirstName() . " " .substr($event->getCreator()->getLastName(),0,1) .  ". and " .
 				$event->getShortDescription();
 		
     	}
