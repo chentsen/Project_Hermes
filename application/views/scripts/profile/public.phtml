@@ -17,7 +17,7 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
             </div>
             <div class="profile_rightCol">
 		<div class="profile_header">
-                <h1 class="big_name"><?= $this->name; ?>.</h1>
+                <h1 class="big_name"><?= $this->name; ?></h1>
 						
                 <? if (!$this->isFriend && $this->createdFriendRequest){?>
                              <div class = "friendStatus">

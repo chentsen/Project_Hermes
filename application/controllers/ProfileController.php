@@ -100,7 +100,8 @@ class ProfileController extends Hermes_Controller_SessionController
     	$friendRelation = new Application_Model_FriendRelation($this->identity);
 	$this->view->user = $profileModel->getUser();
     	$this->view->description = $profileModel->displayDescription();
-    	$this->view->name = $profileModel->getUser()->getFirstName() . " " . substr($profileModel->getUser()->getLastName(), 0,1);
+    	$this->view->name = $profileModel->getUser()->getFirstName() . " " . $profileModel->getUser()->getLastName();
+		//substr($profileModel->getUser()->getLastName(), 0,1);
        
         $this->view->email = $profileModel->getUser()->getEmail();
     	$this->view->isFriend = $friendRelation->isFriend($profileModel->getUser()->getEmail());
