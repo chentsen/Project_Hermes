@@ -41,7 +41,7 @@ class EventController extends Hermes_Controller_Wall_WallController
     	//I'm not a member, and I'm not a creator
     	else if(!$event->isPrivate()){
     		$this->_helper->ViewRenderer('index_public');
-			$this->view->pageTitle = "Join " . $event->getCreator()->getFirstName() . " " . .substr($event->getCreator()->getLastName(),0,1) . " and " .
+			$this->view->pageTitle = "Join " . $event->getCreator()->getFirstName() . " " .substr($event->getCreator()->getLastName(),0,1) . " and " .
 				$event->getShortDescription();
 		
     	}
