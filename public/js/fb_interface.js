@@ -25,14 +25,16 @@ var FBI = {
                     url:'/registration/fb-login',
                     data:{access_token:response.authResponse.accessToken,uid:response.authResponse.userID},
                     success:function(data){
-                        if(data)
-                            data =  eval('(' + data + ')');
+                        //if(data){
+                          //  data =  eval('(' + data + ')');
+                        //}
                         if(!data.fb_account_exists){
                             if(data.success){
                                 console.log('Registration was successful!');
                             }else if(data.form){
                                 console.log('Registration failed! Showing remaining info dialog!');
-                                $('.main_ajax_content').html(data.form);
+                                Dialog.showDialog({returnedHTML:data.form});
+ //                               $('.main_ajax_content').html(data.form);
                                 
                                 //redirect to page that uses session variable to show the remaining stuff still needed.
                             }else{
