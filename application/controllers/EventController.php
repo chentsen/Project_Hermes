@@ -28,14 +28,19 @@ class EventController extends Hermes_Controller_Wall_WallController
 		
         if($this->identity == $event->getCreator()->getEmail()){
     		$this->_helper->ViewRenderer('index_creator');
+			$this->view->pageTitle = $this->curUser->getFirstName() . " " . $this->curUser->getLastName() . " wants to" .
+				$event->getShortDescription();
     	}
     	else if($eventModel->isMember($this->identity,$event->getMembers())){
     		$this->_helper->ViewRenderer('index_member');
+			$this->view->pageTitle = "You want to" .
+				$event->getShortDescription();
     	}
     	//I'm not a member, and I'm not a creator
     	else if(!$event->isPrivate()){
     		$this->_helper->ViewRenderer('index_public');
-		
+			$this->view->pageTitle = "Join " . $this->curUser->getFirstName() . " " . $this->curUser->getLastName() . " and" .
+				$event->getShortDescription();
 		
     	}
     	else{

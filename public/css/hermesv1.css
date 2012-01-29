@@ -1411,6 +1411,9 @@ ul.as-selections {
 .tag_disable {
     background: #454545;
 }
+.tag-arrow-color {
+		border-left: 13px solid #454545;
+}
 .tag_remove {
     display: none;
 }
