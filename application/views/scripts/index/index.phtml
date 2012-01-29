@@ -35,7 +35,7 @@ who share your interests.</h1></div>
     <div class="out-signup">
        <?= $this->form ?>
       <div class="signup-or">or</div>
-        <a href="#" onclick="FBI.authenticate();">Facebook Login</a>
+        <a href="#" onclick="FBI.authenticate(); Dialog.showDialog({elementSelector:'#fb_ajax_form'})">Facebook Login</a>
 </div>
 
 <style type="text/css">

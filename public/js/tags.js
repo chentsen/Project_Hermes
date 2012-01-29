@@ -14,7 +14,6 @@ var Tags = {
 				  Tags.tagData = stats;
 				  $(".tag_input").autoSuggest(Tags.tagData,
 						  {startText:"",emptyText:"",neverSubmit:true});
-
 		});
 	},
 	fetchTagData:function(){

@@ -17,6 +17,9 @@ class User{
 	/** @Field(type="boolean")*/
 	private $isFBAccount;
 	
+	/** @Field(type="boolean")*/
+	private $hasEmailPerm;
+	
 	/** @Field(type="string")*/
 	private $lastName;
 	
@@ -194,4 +197,13 @@ class User{
     public function getIsFBAccount(){
 	return $this->isFBAccount;
     }
+	public function hasEmailPerm(){
+		if($this->hasEmailPerm === null){
+			$this->hasEmailPerm = true;
+		}
+		return $this->hasEmailPerm;
+	}
+	public function setEmailPerm($perm){
+		$this->hasEmailPerm = $perm;
+	}
 }
