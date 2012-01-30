@@ -406,11 +406,21 @@ a.attend-button {
 	color: #FFFFFF;
 	background-color: #94ca15;
 	display: block;
+	padding: 0px 30px;
+	font-size: 16px;
+	height: 30px;
+	line-height: 30px;
+	width: 140px;
 }
 a.attend-button:hover {
-	color: black;
+	color: #FFFFFF;
 	background-color: #94ca15;
 	display: block;
+	padding: 0px 30px;
+	font-size: 16px;
+	height: 30px;
+	line-height: 30px;
+	width: 140px;
 }
 .view_event, .join_event {
 	margin-left: 10px;
