@@ -49,7 +49,9 @@ input[type=text], input[type=password] {
         padding: 0 10px;
 	outline: 0;
 }
-
+#content_area input:focus {
+	border: solid 1px #7a7f8a;
+}
 input:focus {
 	border: solid 1px #7a7f8a;
 }
@@ -471,7 +473,7 @@ a.attend-button:hover {
    .outside .page {}
 /***** landing styles********/
 .index .button input#login {
-	width: 207px;
+	width: 201px;
 	}
 .index form#login { 
     float: left; 
