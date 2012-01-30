@@ -904,23 +904,25 @@ a.signup-button:hover {
 	float: left;
 }
 .icon_bar ul li .sub-settings {
-	position: absolute;
-	left: -80px;
-	top: 53px;
-	background: black;
-	margin:0;
-	padding: 0;
-	float: left;
+    position: absolute;
+    left: -80px;
+    top: 53px;
+    background: black;
+    margin:0;
+    padding: 0;
+    float: left;
+    display: none;
+
 }
 .icon_bar ul li .sub-setting2 {
-	position: absolute;
-	left: -140px;
-	top: 53px;
-	background: rgba(111, 111, 111, .2);
-	margin:0;
-	padding: 0;
-	display: none;
-	float: left;
+    position: absolute;
+    left: -140px;
+    top: 53px;
+    background: rgba(111, 111, 111, .2);
+    margin:0;
+    padding: 0;
+    display: none;
+    float: left;
 }
 .icon_bar #friendRequests {
 	background: black;
