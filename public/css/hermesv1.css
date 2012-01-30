@@ -383,18 +383,23 @@ margin-bottom: 2px;
     }
     
 .user-info{
-	
+	float: right;
+	width: 560px;
+	border-bottom: solid 1px #b4bbcd;
 }
-.search-name {
+.search-name a {
 	color: #454545;
 	text-transform: capitalize;
+	float: left;
 }
 .search-city {
 	color: #b4bbcd;
 	text-transform: capitalize;
+	float: left;
 }
 .search-common-tags {
 	color: #b4bbcd;
+	float: left;
 }
 .user_result, .event_result {overflow: auto; padding: 10px;}
 .user_like {
