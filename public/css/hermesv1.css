@@ -919,6 +919,7 @@ a.signup-button:hover {
     margin:0;
     padding: 0;
     float: left;
+	display: none;
 
 }
 .icon_bar ul li .sub-setting2 {
@@ -930,7 +931,6 @@ a.signup-button:hover {
     padding: 0;
     display: none;
     float: left;
-    
     
 }
 .icon_bar #friendRequests {
