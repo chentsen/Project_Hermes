@@ -104,12 +104,12 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 
 						echo '<img src="/img/profile-pic/uid/'.$email.'" height=75  width=75/ </a>';
 						echo "<div class='user-info' style='float:right; width: 550px; border-bottom: 1px solid black;'>
-								<div style='float: left;><span><a href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a></span>
-								<span>{$user->result->getCity()}</span>
-								<span>Tags in Common : {$user->getCount()}</span></div>";
+								<div class='search-name'><a href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a></div>
+								<div class='search-city'>{$user->result->getCity()}</div>
+								<div class='search-common-tags'>{$user->getCount()} tags in common</div>";
 		                                            
 			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
-				echo "<div class = 'user_addFriend' style='float: right'>";
+				echo "<div class ='add-friend'>";
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
 				
 				echo "<a class='remove-anchor' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";

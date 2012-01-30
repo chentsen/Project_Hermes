@@ -223,7 +223,6 @@ margin-bottom: 2px;
 }
 .user_details {
 	margin-bottom: 10px;
-	text-transform: capitalize;
 }
 .profile .profile_leftCol {
     float: left;
@@ -382,6 +381,21 @@ margin-bottom: 2px;
     cursor: pointer;    
     float: left;
     }
+    
+.user-info{
+	
+}
+.search-name {
+	color: #454545;
+	text-transform: capitalize;
+}
+.search-city {
+	color: #b4bbcd;
+	text-transform: capitalize;
+}
+.search-common-tags {
+	color: #b4bbcd;
+}
 .user_result, .event_result {overflow: auto; padding: 10px;}
 .user_like {
     width: 30px;
@@ -818,7 +832,7 @@ a.signup-button:hover {
 }
 
 .dashboard-title {
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .my-tags {
@@ -1587,7 +1601,7 @@ ul.as-selections {
 .event .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    margin: 15px 0px 0px 20px;
+    margin: 15px 0px 0px 10px;
     font-size: 18px;
     width: 457px;
 }
