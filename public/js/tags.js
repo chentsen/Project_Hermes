@@ -10,6 +10,7 @@ var Tags = {
 			  function(results){
 				  var stats = null;
 				  eval('stats='+results);
+				  console.log(stats);
 				  Tags.tagData = stats;
 				  $(".tag_input").autoSuggest(Tags.tagData,
 						  {startText:"",emptyText:"",neverSubmit:true});
@@ -29,7 +30,6 @@ var Tags = {
 		}
 	},
 	toggleTag:function(tagID){
-		alert(tagID);
 		$("#"+tagID).toggleClass('tag_disable');
 		 $("#"+tagID +" .tags-arrow").toggleClass('tag-arrow-color');
 		$.get('/tag/toggle-tag',
