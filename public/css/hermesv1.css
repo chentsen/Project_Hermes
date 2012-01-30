@@ -834,6 +834,14 @@ a.signup-button:hover {
 .dashboard-title {
 	margin-bottom: 10px;
 }
+
+.my-tags {
+	margin-top: 10px;
+}
+.no-tags-available {
+	
+}
+
 #content-page {
     width: 640px;
     min-height: 500px;

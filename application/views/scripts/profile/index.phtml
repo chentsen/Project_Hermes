@@ -14,7 +14,7 @@
   <div class="top_col">
 			<center><?=$this->DisplayFlashMessages($this->flashMessages); ?></center>
 			<center><?=$this->DisplayNewUserflow($this->flowStatus); ?></center>
-			<h2>My Tags</h2>
+			<div class="my-tags"><h2>My Tags</h2></div>
 			<?= $this->partial('tags.phtml',array('tagArray'=>$tagArray,'interestModel'=>$interestModel,'isOwn'=>true)) ?>
 		<!--<div class = tag_dropdown onclick = "Tags.toggleDropDown();">
 			Add a tag
