@@ -396,7 +396,7 @@ margin-bottom: 2px;
 }
 a.add-friend {
 	color: #FFFFFF;
-	background-color: #94ca15;
+	background-color: #9ED716;
 	display: block;
 }
 a.add-friend:hover {
@@ -404,7 +404,7 @@ a.add-friend:hover {
 }
 a.attend-button {
 	color: #FFFFFF;
-	background-color: #94ca15;
+	background-color: #9ED716;
 	display: block;
 	font-size: 16px;
 	height: 30px;
@@ -415,7 +415,7 @@ a.attend-button {
 }
 a.attend-button:hover {
 	color: #FFFFFF;
-	background-color: #9ED716;
+	background-color: #94ca15;
 	display: block;
 	font-size: 16px;
 	height: 30px;
@@ -689,11 +689,6 @@ a.signup-button:hover {
 .block-body .friend_list {
 	margin: 5px;
 }
-
-.block-body .friend_name {
-	font-size: 10px;
-}
-
 .right-block .mini-feed a {
 	width: 210px;
 }
@@ -1013,9 +1008,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .friend_name {
 	text-align: center;		
     list-style: none;
-    /*padding: 3px 0 0 3px;*/
-    font-weight: bold;
-    font-size: 13px;
+    font-size: 12px;
 	word-wrap: break-word;
 	margin: 2px 0px 0px 0px;
 }
@@ -1555,7 +1548,7 @@ ul.as-selections {
 }
 .event .event_main .event_img {
     float: left;
-    padding: 0px 15px 0px 5px;
+    padding: 0px 20px 0px 0px;
 }
 .event .event_main .event_img img{ 
 }
@@ -1607,7 +1600,7 @@ ul.as-selections {
 }
 .event .interested_list .waitingList img,
 .event .event_wall .wall_image img{
-	margin: 0px 10px 10px 0px;
+
 }
 .event .interested_list .waitingList a {
     color: orange;
@@ -1619,16 +1612,25 @@ ul.as-selections {
 }
 .event .interested_list .waitingList .event_allow {
     color: #FF8600;
-    height: 16px;
+    font-size: 12px;
+    margin-top: 2px;
 }
 .event .interested_list .waitingList .waitingImg {
     position: relative;
 }
 .waiting-details {
+	text-align: center;
+	font-size: 13px;
+	height: 25px;
+	line-height: 13px;
+	width: 100px;
+	height: 25px;
+	margin-top: 2px;
 }
 
 .waiting-item {
 	float: left;
+	margin: 0px 15px;
 }
 .event .interested_list .waitingList .waitingImg span,
 .event .event_wall .wall_image span
