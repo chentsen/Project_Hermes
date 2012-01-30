@@ -394,11 +394,15 @@ margin-bottom: 2px;
     color: orange;
     float: right;
 }
-.add-friend {
+a.add-friend {
 	color: #FFFFFF;
 	background-color: #94ca15;
 	display: block;
 }
+a.add-friend:hover {
+	background-color: black;
+}
+
 .view_event, .join_event {
 	margin-left: 10px;
 	font-size: 16px;
@@ -1688,19 +1692,6 @@ ul.as-selections {
     background: url('../images/exit-button.png') no-repeat center center;
 }
 
-a.remove-anchor {
-	float: left;
-	display: block;
-	font-size: 16px;
-	color: #FF8600;
-}
-
-a.remove-anchor:hover {
-	float: left;
-	display: block;
-	font-size: 16px;
-	color: #24A3DF;
-}
 
 a.attend-button {
 	display: block;
