@@ -10,12 +10,12 @@
             
             <div class="event_right">
 		        <h2 class="event_self">Public Event</h2>
-			<? if(!$this->didRequest) {?>
-		    <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'>I wanna go!</a>
-		<? } ?>
             <div class='event_date'>
                 <h2><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h2>
-            </div>	
+            </div>
+	    <? if(!$this->didRequest) {?>
+		    <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'>I wanna go!</a>
+		<? } ?>
             </div>
 
 	
