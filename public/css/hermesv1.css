@@ -1172,7 +1172,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: #454545;
   color: white;
   font-weight: 500;
-  padding: 0px 36px 0px 36px;
+  padding: 0px 42px;
   margin: 0px;
 }
 
@@ -1544,7 +1544,7 @@ ul.as-selections {
 }
 .event .event_main {
     overflow: hidden;
-    width: 640px;
+    width: 650px;
 }
 .event .event_main .event_img {
     float: left;
@@ -1556,7 +1556,7 @@ ul.as-selections {
     float: right;
 }
 .event .event_main .event_right {
-    width: 440px;
+    width: 450px;
     float: left;
 }
 .event .event_main h2 {
@@ -1607,13 +1607,13 @@ ul.as-selections {
 }
 .event .interested_list .waitingList{
     float: left;
-    text-align: center;
-    margin: 10px 0px;
+    padding: 10px 0px;
 }
 .event .interested_list .waitingList .event_allow {
     color: #FF8600;
     font-size: 12px;
-    margin-top: 2px;
+    margin-top: 4px;
+    text-align: center;
 }
 .event .interested_list .waitingList .waitingImg {
     position: relative;
