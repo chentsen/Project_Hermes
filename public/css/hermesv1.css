@@ -402,7 +402,16 @@ a.add-friend {
 a.add-friend:hover {
 	background-color: black;
 }
-
+a.attend-button {
+	color: #FFFFFF;
+	background-color: #94ca15;
+	display: block;
+}
+a.attend-button:hover {
+	color: black;
+	background-color: #94ca15;
+	display: block;
+}
 .view_event, .join_event {
 	margin-left: 10px;
 	font-size: 16px;
@@ -1691,13 +1700,6 @@ ul.as-selections {
 .event .event_wall .delete_post:hover {
     background: url('../images/exit-button.png') no-repeat center center;
 }
-
-
-a.attend-button {
-	display: block;
-	font-size: 36px;
-}
-
 /*** event list page ***/
 .event-list .none-singleFound {
 	margin-top: 0;

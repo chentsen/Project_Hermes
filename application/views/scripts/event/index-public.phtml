@@ -7,9 +7,9 @@
             <div class="event_img">
                 <img src="/img/profile-pic/uid/<?=$this->identity ?>" height=180  width=180/>
 				<? if(!$this->didRequest) {?>
-		    <div class="attend-button"><a class='remove-anchor' href = '/event/request/eid/<?= $this->eid; ?>'>I wanna go!</a></div>
+		    <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'>I wanna go!</a>
 		<? } ?>
-            </div>
+            
             <div class="event_right">
 		        <h2 class="event_self">Public Event</h2>
             <div class='event_date'>
