@@ -300,14 +300,6 @@ margin-bottom: 2px;
 .profile_header {
     overflow: hidden;
 }
-.friendStatus a{
-    color: orange; 
-    font-size: 36px;
-    font-weight: bold;
-}
-.friendStatus {
-    float: right;
-}
 .friend_list {float: left; margin: 12px 14px 2px 14px;}
 .friends_block .view-friends,
 .upcoming_events .view-events {
@@ -401,6 +393,11 @@ margin-bottom: 2px;
     font-size: 16px;
     color: orange;
     float: right;
+}
+.add-friend {
+	color: #FFFFFF;
+	background-color: #94ca15;
+	display: block;
 }
 .view_event, .join_event {
 	margin-left: 10px;
