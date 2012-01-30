@@ -39,6 +39,14 @@ class Application_Model_UserSettings{
 		}
 		return false;
 	}
+	public static function fbNotComplete() {
+		$auth = Zend_Auth::getInstance();
+		$user_data = self::getFBData();
+		if($user_data['user']) {
+			
+		}
+		
+	}
 	//returns boolean if fails, otherwise returns the activation code
 	public function register($userInfo){
 		//if email doesnt exist then serialize and return true

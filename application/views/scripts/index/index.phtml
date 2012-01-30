@@ -15,7 +15,9 @@
 
 <?=$this->DisplayFlashMessages($this->flashMessages); ?>
 <div class="out-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1>
- <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form'});Dialog.doValidate();Dialog.loadLoginData()">Join</a>
+
+ <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form'});Dialog.doValidate();Dialog.loadLoginData()">Sign up!</a>
+
 </div>
 
 <?php } ?>
@@ -35,7 +37,8 @@ who share your interests.</h1></div>
     <div class="out-signup">
        <?= $this->form ?>
       <div class="signup-or">or</div>
-        <a href="#" onclick="FBI.authenticate();">Facebook Login</a>
+        <a href="#" onclick="FBI.authenticate(); ">Facebook Login</a>
+        <!--Dialog.showDialog({elementSelector:'#fb_ajax_form'})-->
 </div>
 
 <style type="text/css">

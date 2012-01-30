@@ -25,17 +25,24 @@ class EventController extends Hermes_Controller_Wall_WallController
     	$this->view->event = $event;
 	$this->view->didRequest = $eventModel->hasRequestedMembership($this->identity);
         //1. if I am creator
-		
+		$this->view->creatorName = $event->getCreator()->getFirstName(). " " .$event->getCreator()->getLastName();
         if($this->identity == $event->getCreator()->getEmail()){
     		$this->_helper->ViewRenderer('index_creator');
+			$this->view->pageTitle = $this->curUser->getFirstName() . " " . $this->curUser->getLastName() . " wants to" .
+				$event->getShortDescription();
+			
     	}
     	else if($eventModel->isMember($this->identity,$event->getMembers())){
     		$this->_helper->ViewRenderer('index_member');
+			$this->view->pageTitle = "You want to" .
+				$event->getShortDescription();
+		
     	}
     	//I'm not a member, and I'm not a creator
     	else if(!$event->isPrivate()){
     		$this->_helper->ViewRenderer('index_public');
-		
+			$this->view->pageTitle = "Join " . $this->curUser->getFirstName() . " " . $this->curUser->getLastName() . " and" .
+				$event->getShortDescription();
 		
     	}
     	else{
@@ -83,13 +90,14 @@ class EventController extends Hermes_Controller_Wall_WallController
     	//if yes, run method with the guys email as the id and eid as the other id and generate new user and new event
     	//
     }
-   public function emailAction() {
+  //remove
+   /*public function emailAction() {
 		$this->_helper->ViewRenderer->setNoRender(true);
     	$eid = $this->_request->getParam("eid");
 		$email = new Application_Model_EmailModel($eid, $this->curUser);
         $email->sendNotificationEmails();
 	
-   }
+   }*/
 
 }
 

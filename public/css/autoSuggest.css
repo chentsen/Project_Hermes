@@ -2,17 +2,17 @@
 
 ul.as-selections {
 	list-style-type: none;
-	border-top: 1px solid #888;
+	/*border-top: 1px solid #888;
 	border-bottom: 1px solid #b6b6b6;
 	border-left: 1px solid #aaa;
-	border-right: 1px solid #aaa;
+	border-right: 1px solid #aaa;*/
 	padding: 4px 0 4px 4px;
 	margin: 0;
 	overflow: auto;
 	background-color: #fff;
-	box-shadow:inset 0 1px 2px #888;
+	/*box-shadow:inset 0 1px 2px #888;
 	-webkit-box-shadow:inset 0 1px 2px #888;
-	-moz-box-shadow:inset 0 1px 2px #888;
+	-moz-box-shadow:inset 0 1px 2px #888;*/
 }
 
 ul.as-selections.loading {
@@ -21,7 +21,6 @@ ul.as-selections.loading {
 
 ul.as-selections li {
 	float: left;
-	margin: 1px 4px 1px 0;
 }
 
 ul.as-selections li.as-selection-item {
@@ -105,7 +104,7 @@ ul.as-selections li.as-original {
 ul.as-selections li.as-original input {
 	border: none;
 	outline: none;
-	font-size: 13px;
+	font-size: 15px;
 	width: 120px;
 	height: 18px;
 	padding-top: 3px;

@@ -14,7 +14,7 @@ class AccountEditController extends Hermes_Controller_SessionController
                 $this->city = $this->curUser->getCity();
                 $this->description = $this->curUser->getDescription();
                 $this->gender = $this->curUser->getGender();
-                
+                $this->hasEmailPerm = $this->curUser->hasEmailPerm();
                 /* Initialize action controller here */
                 $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');

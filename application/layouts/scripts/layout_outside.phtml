@@ -3,9 +3,9 @@
     		$this->userDescription = $userDescription;
               $event = new Application_Form_CreateEvent();    
             $reg = new Application_Form_Registration();
-	    
+			
     $identity = Application_Model_UserSettings::hasIdentity();
- 
+
 ?>
 <?php echo $this->doctype(); ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -28,7 +28,7 @@
                 
 		</div>
 	</div>
-       
+	
 	<div class = "footer_ajax" style="display:none">
 						<div id="reg_ajax_form">	
 							<?= $reg ?>
