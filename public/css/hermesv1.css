@@ -406,21 +406,23 @@ a.attend-button {
 	color: #FFFFFF;
 	background-color: #94ca15;
 	display: block;
-	padding: 0px 30px;
 	font-size: 16px;
 	height: 30px;
 	line-height: 30px;
-	width: 140px;
+	width: 143px;
+	float: right;
+	text-align: center;
 }
 a.attend-button:hover {
 	color: #FFFFFF;
-	background-color: #94ca15;
+	background-color: #81B012;
 	display: block;
-	padding: 0px 30px;
 	font-size: 16px;
 	height: 30px;
 	line-height: 30px;
-	width: 140px;
+	width: 143px;
+	float: right;
+	text-align: center;
 }
 .view_event, .join_event {
 	margin-left: 10px;
@@ -1546,7 +1548,6 @@ ul.as-selections {
     display: block;
     background-color: #24A3DF;
     padding: 0px 30px;
-    margin-right: 2px;
 }
 .event .event_main {
     overflow: hidden;
