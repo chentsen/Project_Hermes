@@ -19,14 +19,14 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
 		<div class="profile_header">
                 <h1 class="big_name"><?= $this->name; ?></h1>
                 <? if (!$this->isFriend && $this->createdFriendRequest){?>
-                                <a class="add-friend" href ="/friend/friendRequest/requestee/<?= $this->email; ?>">Add</a>
+                                <a class="add-friend" href ="/friend/friendRequest/requestee/<?= $this->email; ?>">Add friend</a>
                   <? }?>
 		<div class ="user_details">
                 <h3><?=$gender?> <?=$this->user->getCity()?></h3>
             </div>
             </div>
 		<div class="profileWrapper">
-                <div class="profileDesc"><h4>About Me</h4>
+                <div class="profileDesc"><h4>About me</h4>
                     <div class="profile-about-me"><? if($this->description)
 								echo $this->description;
 						else
