@@ -37,6 +37,7 @@ class Tag{
 	
 	public function getTagName(){
 		return $this->tagName;
+		
 	}
 	public function setTagName($tagName){
 		return $this->tagName;

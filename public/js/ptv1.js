@@ -88,30 +88,18 @@ $(document).ready(function(){
 					 
 					 $('input[type="text"]').addClass('removebg');	  
 				}
-    /** drop down menu settings ***/
     
-    $('html .icon_bar ul li .sub-settings li a:last').css({
-	'border-bottom-right-radius' : '5px',
-	'border-bottom-left-radius' : '5px'
-	 
-      }  
-    );
     /***** click menu top *****/
    $('.icon_bar ul .settings-button').click(function(){
-        $(this).find('ul.sub-settings').show('fast');
-        $(this).toggleClass('icon_bar_bg');
+        $(this).find('ul.sub-settings').toggle('fast');
+       
     });
    $('.icon_bar ul .friends-button').click(function(){
         $(this).find('ul.sub-setting2').show('fast');
         $(this).toggleClass('icon_bar_bg');
     });
 
-    $(document).click(function(){  
-		 $('ul.sub-settings').hide(); //hide the button
-	  });
-	$(document).click(function(){  
-		 $('ul.sub-setting2').hide(); //hide the button
-	  });
+    
   
     $('.eventFeedObject:last-child').css({
         'border-bottom-right-radius':'5px',

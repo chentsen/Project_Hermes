@@ -910,29 +910,19 @@ a.signup-button:hover {
 .icon_bar ul li a {
     float: left;
 }
-.icon_bar_bg {
-    background: rgba(47, 47, 47, .2);
-}
-.icon_bar .sub-settings li:hover,
-.icon_bar .sub-settings2 li:hover{
-    background: rgba(47, 47, 47, .2);
-}
 
 .icon_bar ul li .sub-settings {
     position: absolute;
     left: -80px;
     top: 53px;
-    background: rgba(111, 111, 111, .2);
+    background: black;
     margin:0;
     padding: 0;
     float: left;
-    width: 140px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 72px;
+
 }
 .icon_bar ul li .sub-setting2 {
-		position: absolute;
+	position: absolute;
     left: -140px;
     top: 53px;
     background: rgba(111, 111, 111, .2);
@@ -940,46 +930,40 @@ a.signup-button:hover {
     padding: 0;
     display: none;
     float: left;
-    width: 200px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-
+    
+    
 }
 .icon_bar #friendRequests {
-		background: #454545;
-		margin: 1px 5px 5px 5px;
+		background: black;
 		padding: 5px 5px 10px 10px;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
 		min-height: 100%;
 		font-size: 14px;
 }
 .icon_bar ul.sub-setting2 li.friend-requests
 {
-		width: 200px;
-    margin: 0;
-    padding: 0;
+	width: 200px;
     clear: both;
-    background: none;
 }
 .icon_bar ul li .sub-settings li {
-    width: 140px;
+    
     margin: 0;
     padding: 0;
-    clear: both;
-    background: none;
 }
 html .icon_bar ul li .sub-settings li a,
 html .icon_bar ul li .sub-setting2 li a{
-    float: right;
     text-align: right;
-    width: 110px;
+ 
     padding: 10px;
     font-size: 14px;
-    margin: 1px 5px 0px 5px;
-    background: #454545;
     color: white;
 }
+html .icon_bar ul li .sub-settings li a {
+		width: 110px;
+}
+html .icon_bar ul li .sub-settings2 li a {
+		
+}
+
 
 html #friendRequests ul li .sub-settings li a,
 html #friendRequests ul li .sub-setting2 li a{
@@ -989,7 +973,7 @@ html #friendRequests ul li .sub-setting2 li a{
     padding: 10px;
     font-size: 13px;
     font-weight: 600;
-    margin: 1px 5px 0px 5px;
+  
     background: #454545;
     color: white;
 }

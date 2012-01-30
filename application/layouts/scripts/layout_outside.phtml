@@ -3,9 +3,9 @@
     		$this->userDescription = $userDescription;
               $event = new Application_Form_CreateEvent();    
             $reg = new Application_Form_Registration();
-			$fb = new Application_Form_FbRegistration();
+			
     $identity = Application_Model_UserSettings::hasIdentity();
-	$fbData = Application_Model_UserSettings::getFBData();
+
 ?>
 <?php echo $this->doctype(); ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -29,20 +29,6 @@
 		</div>
 	</div>
 	
-    <div class = "footer_ajax" style="display:none">
-						<div id="fb_ajax_form">	
-							<?= $fb ?>
-						</div>
-						<div class ="modalWindow">
-                                                    
-						</div>	
-					</div>
-					<div class = "modalBackground" style="display:none;"></div>
-					<div class = 'dialogs' style="display:none">
-					</div>
-	</div>
-	   <?php
-	if(!$fbData){ ?>
 	<div class = "footer_ajax" style="display:none">
 						<div id="reg_ajax_form">	
 							<?= $reg ?>
@@ -55,7 +41,6 @@
 					<div class = 'dialogs' style="display:none">
 					</div>
 	</div>		
-    <?php  } ?>
     <?= $this->render('footer.phtml');?>     
 
    
