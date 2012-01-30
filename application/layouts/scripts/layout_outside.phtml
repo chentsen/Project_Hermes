@@ -28,7 +28,7 @@
                 
 		</div>
 	</div>
-	
+	<?php if ($fbData) { ?>
     <div class = "footer_ajax" style="display:none">
 						<div id="fb_ajax_form">	
 							<?= $fb ?>
@@ -42,7 +42,7 @@
 					</div>
 	</div>
 	   <?php
-	if(!$fbData){ ?>
+	 }else{ ?>
 	<div class = "footer_ajax" style="display:none">
 						<div id="reg_ajax_form">	
 							<?= $reg ?>
