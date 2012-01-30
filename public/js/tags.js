@@ -8,11 +8,13 @@ var Tags = {
 		var data;
 		$.get('/tag/get-display',
 			  function(results){
+				
 				var stats = null;
+				console.log(stats)
 				eval('stats='+results);
 				Tags.tagData = stats;
-				$(".tag_input").autoSuggest(Tags.tagData,
-											{startText:"Enter tag",emptyText:"",neverSubmit:true});
+				console.log(Tags.tagData);
+				$(".tag_input").autoSuggest(Tags.tagData,{startText:"Enter tag",emptyText:"",neverSubmit:true});
 
 		});
 	},
@@ -30,15 +32,16 @@ var Tags = {
 		}
 	},
 	toggleTag:function(tagID){
+		alert(tagID);
 		$("#"+tagID).toggleClass('tag_disable');
-		$.get('/tag/toggle-tag',
-				{tag:$("#"+tagID+" .tag_text").text()}
-		);
+		/*$.get('/tag/toggle-tag',
+				{tag:escape($("#"+tagID+" .tag_text").text())}
+		);*/
 		
 	},	
 	removeTag:function(tagID){
 		jQuery.get('/tag/delete-tag',
-				{tag:$("#"+tagID+" .tag_text").text()}
+				{tag:escape($("#"+tagID+" .tag_text").text())}
 		)
 		$("#"+tagID).remove();
 		
@@ -53,12 +56,13 @@ var Tags = {
 				 var tag = stats[i].tagName;
 				 var tagReplaced = tag.replace(/ /gi,"_");
 				//alert(tag);			 
-				var tag_id = "tag_"+tagReplaced;
+				var tag_id = escape("tag_"+tagReplaced);
 				//alert(tag_id);
 				var tag_html = jQuery(".ajax_tags_wrap").clone();
 				$(tag_html).find(".tags").attr('id',tag_id);
 				if(!stats[i].enabled)
 					$(tag_html).find(".tags").toggleClass('tag_disable');
+			
 				$(tag_html).find(".tag_text").text(tag);
 				tag_html = $(tag_html).children();
 				$(tag_base).append(tag_html);
@@ -70,7 +74,7 @@ var Tags = {
 			 for(var i in stats){
 				 var tag = stats[i].tagName.replace(/ /gi,"_");
 				//alert(tag);			 
-			    $(".tags_base .tags#tag_" + tag).data('tag_id', tag).click(function(){Tags.toggleTag("tag_"+$(this).data('tag_id'));});
+			    $(".tags_base .tags#tag_" + tag).data('tag_id', tag).click(function(){Tags.toggleTag(escape("tag_"+$(this).data('tag_id')));});
 				 $(".tags_base .tags#tag_"+tag).find(".close_tag").data('tag_id', tag).click(function(){Tags.removeTag("tag_"+$(this).data('tag_id'))});
 			 } 
 			 

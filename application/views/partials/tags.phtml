@@ -3,7 +3,7 @@
 		 	 <div class="tags_base">
 				<? if(count($this->tagArray) > 0){ 
 						foreach($this->tagArray as $tag){
-							
+							       $tagName = addslashes($tag->getTagName());
 							       if(!$this->interestModel->interest->state[$tag->getTagName()])
 								       $toggle = 'tag_disable';
 							       else 
@@ -11,13 +11,13 @@
 							
 						?>
 							<? if($this->isOwn) {?>
-							       <div class ="tags <?=$toggle ?>" id="tag_<?=str_replace(' ','_',$tag->getTagName());?>" onclick = 'Tags.toggleTag("tag_<?=str_replace(' ','_',$tag->getTagName());?>")'>
+							       <div class ="tags <?=$toggle ?>" id="tag_<?=(str_replace(' ','_',$tagName));?>" onclick = 'Tags.toggleTag("tag_<?=(str_replace(' ','_',$tagName));?>")'>
 								       <div class="tag_text"><?=$tag->getTagName()?></div>
-									     <div class="close_tag" onclick="Tags.removeTag('tag_<?=str_replace(' ','_',$tag->getTagName());?>')"></div>
+									     <div class="close_tag" onclick="Tags.removeTag('tag_<?=str_replace(' ','_',$tagName);?>')"></div>
 							       </div>
 						 	<?}else{?>
-							       <div class ="tags " id="tag_<?=str_replace(' ','_',$tag->getTagName());?>">
-								       <div class="tag_text"><?=$tag->getTagName()?></div>
+							       <div class ="tags " id="tag_<?=str_replace(' ','_',$tagName);?>">
+								       <div class="tag_text"><?=$tag->getTagName();?></div>
 							       </div>
 							<?}?>
 					

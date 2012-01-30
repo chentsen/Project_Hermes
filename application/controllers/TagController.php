@@ -10,7 +10,8 @@ class TagController extends Hermes_Controller_SessionController{
 		//$this->_helper->viewRenderer->setNoRender();
 		$tagName = $this->_request->getParam('tag_input');
 		$tagModel = new Application_Model_TagModel($this->curUser);
-		$tagModel->addTag($tagName,false);
+		if(!strpos($tagName,'"') || !strpos($tagName,'\'') || !empty($tagName))
+			$tagModel->addTag($tagName,false);
 	}
 	public function addTagAjaxAction(){
 		$this->_helper->viewRenderer->setNoRender();
@@ -33,8 +34,8 @@ class TagController extends Hermes_Controller_SessionController{
 					if($tag == '')
 						continue;
 					
-					$subArray['tagName'] = $tag->getTagName();
-					$subArray['enabled'] = $states[$tag->getTagName()];	
+					$subArray['tagName'] = ($tag->getTagName());
+					$subArray['enabled'] = ($states[$tag->getTagName()]);	
 					$jsonArray[]=$subArray;
 					
 				}	

@@ -56,14 +56,20 @@ class Application_Model_InterestModel{
 				$hasFlush = true;
 				$lazy_tags[$i] = null;
 				//not sure if this actually indexes it
-				array_values($lazy_tags);
-				$this->interest->setTags($lazy_tags);
-				$this->dm->persist($this->interest);
+				
+				
+				
 				
 			}
 			
 		}
 		if($hasFlush){
+			array_values($lazy_tags);
+			if(empty($lazy_tags)){
+				$lazy_tags = null;
+			}
+			$this->interest->setTags($lazy_tags);
+			$this->dm->persist($this->interest);
 			$this->dm->flush();
 		}
 		return $realTags;
