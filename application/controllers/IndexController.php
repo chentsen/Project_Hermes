@@ -22,8 +22,8 @@ class IndexController extends Zend_Controller_Action
     {	
         
         $this->_helper->layout->setLayout('layout_outside');                
-       $auth = Zend_Auth::getInstance();
-		if($auth->hasIdentity()){
+    
+		if(Application_Model_UserSettings::hasIdentity()){
                     $this->_redirect('/profile');
                 }
 		
@@ -125,7 +125,9 @@ class IndexController extends Zend_Controller_Action
                  $auth = Zend_Auth::getInstance();
                  $auth->clearIdentity();
                  Zend_Session::forgetMe();
-                 $this->_redirect('/index');
+                 
+		 $json['redirect'] =  '/index';
+		 $this->_helper->json($json);
                  
         }
 

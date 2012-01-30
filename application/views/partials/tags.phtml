@@ -11,6 +11,7 @@
 								$toggle = '';
 								$toggleArrow = '';
 							}
+
 						?>
 							<? if($this->isOwn) {?>
 							       <div class ="tags <?=$toggle ?>" id="tag_<?=str_replace(' ','_',$tag->getTagName());?>" onclick = 'Tags.toggleTag("tag_<?=str_replace(' ','_',$tag->getTagName());?>")'>

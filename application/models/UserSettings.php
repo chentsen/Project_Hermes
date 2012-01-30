@@ -30,6 +30,7 @@ class Application_Model_UserSettings{
 				$pt_user = $dm->getRepository('Documents\User')->findOneBy(array('email'=>$user_profile['email']));
 				if($pt_user){
 					if($pt_user->getIsFBAccount()){
+					   //var_dump($pt_user->getEmail());
 					   return $pt_user->getEmail();
 					}				
 				}
