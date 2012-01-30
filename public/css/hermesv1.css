@@ -10,6 +10,13 @@ div { display: block; }
 select {
     margin: 10px 10px 10px 15px;
 }
+
+select #gender {
+	margin: 10px 0px 0px 5px;
+	float: left;
+	font-size: 16px;
+	width: 136px;
+}
 #editAccount{
 }
 #editAccount textarea {
@@ -541,11 +548,16 @@ a.attend-button:hover {
     margin-top: 20px;
 }
 
-#errors-email, #errors-password {
+#errors-email, #errors-password,
+#errors-password2, #errors-betakey,
+#errors-lastName, #errors-firstName
+{
 	color: #FF8600;
 }
 #registration-gender {
-	color: green;
+	float: left;
+	margin-top: 10px;
+	font-size: 18px;
 }
 
 .out-signup .alternative {
