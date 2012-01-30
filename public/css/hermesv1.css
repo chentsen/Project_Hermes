@@ -47,7 +47,6 @@ input[type=text], input[type=password] {
         line-height: 18px;
         border: 1px solid #B4BBCD;
         padding: 0 10px;
-	outline: 0;
 }
 #content_area input:focus {
 	border: solid 1px #7a7f8a;
