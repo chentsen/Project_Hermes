@@ -163,7 +163,7 @@ input[type=text]:first,input[type=password]:first {
     text-align: center;
 }
 .account-edit .upload-image img {
-    margin: 20px 0 0 65px;
+    margin: 20px 0 0 55px;
 }
 .account-edit #editAccount h1 {
 	margin-bottom: 15px;
@@ -396,11 +396,17 @@ margin-bottom: 2px;
 }
 a.add-friend {
 	color: #FFFFFF;
-	background-color: #9ED716;
+	background-color: #94CA15;
 	display: block;
+	padding: 5px 20px;
+	float: right;
 }
 a.add-friend:hover {
-	background-color: black;
+	color: #FFFFFF;
+	background-color: #81B012;
+	display: block;
+	padding: 5px 20px;
+	float: right;
 }
 a.attend-button {
 	color: #FFFFFF;
@@ -832,14 +838,15 @@ a.signup-button:hover {
 }
 
 .dashboard-title {
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .my-tags {
-	margin-top: 10px;
+	margin-top: 15px;
 }
 .no-tags-available {
-	
+	margin: 30px 120px 0px 120px;
+	color: #FF8600;
 }
 
 #content-page {
