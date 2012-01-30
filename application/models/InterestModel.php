@@ -70,7 +70,11 @@ class Application_Model_InterestModel{
 			}
 			$this->interest->setTags($lazy_tags);
 			$this->dm->persist($this->interest);
-			$this->dm->flush();
+			try{
+				$this->dm->flush();
+			}catch(Exception $ex){
+				
+			}
 		}
 		return $realTags;
 	}

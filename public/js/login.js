@@ -6,9 +6,9 @@ var Login = {
             success:function(data){
                 //just try logging out twice for now, change to once later
                 FB.logout(function(){
-                    window.location=data.redirect;
+                    
                 })
-                
+                window.location=data.redirect;
             }
         });
         
