@@ -11,7 +11,6 @@ select {
     margin: 10px 10px 10px 15px;
 }
 #editAccount{
-	
 }
 #editAccount textarea {
         margin: 10px 0;
@@ -32,18 +31,16 @@ textarea {
 }
 #content_area input[type=text],
 #content_area input[type=password]{
-    margin: 5px 0;
+    margin: 10px 0 0 0;
     padding: 5px 0px 5px 5px;
-    width: 200px;
 }
 input[type=text], input[type=password] {
 	height: 23px;
 	font-size: 18px; 
         line-height: 18px;
-	border: none;
-        outline: 0;
         border: 1px solid #B4BBCD;
         padding: 0 10px;
+	outline: 0;
 }
 
 input:focus {
@@ -172,7 +169,6 @@ input[type=text]:first,input[type=password]:first {
 #profilePic {   
     width: 250px;
     padding-right: 22px;
-    
 }
 #profilePic li {
     margin-left: 40px;
@@ -193,7 +189,6 @@ input[type=text]:first,input[type=password]:first {
 }
 #editAccount li{
     width: 275px;
-    
 }
 #editAccount #firstName,
 #editAccount #lastName,
@@ -245,7 +240,6 @@ margin-bottom: 2px;
 	border-top: none;
 }
 .profile_eventList .eventFeedObject {
-
 }
 .profile_eventList .eventFeedObject a {
 	color: #454545;
@@ -477,12 +471,7 @@ a.attend-button:hover {
     margin-left: 200px;
     padding: 10px 40px 40px 0px;
 }
-.index input[type="text"],
-.index input[type="password"] {
-		padding-top: 10px !important;
-		font-size: 24px;
 
-}
 .index form#login { 
     float: left; 
     margin-left: 200px;
@@ -490,8 +479,6 @@ a.attend-button:hover {
     /**background: url(../images/or-background.png) no-repeat right center;**/
 }
 .index #registration{float: left; }
-.index #city { /*width: 120px; */}
-.index h1 { color : orange; }
 .cms-text {
     font-size: 16px;
     overflow: auto;
@@ -506,8 +493,7 @@ a.attend-button:hover {
     overflow: auto;
 }
 .out-logo .logo {
-    
-     width: inherit;
+    width: inherit;
     height: inherit;
     display: block;
     background: url('../images/plumetype-flat.png') no-repeat;
@@ -531,14 +517,13 @@ a.attend-button:hover {
     overflow: hidden;
 }
 .out-preview ul {
-    
+
     overflow: hidden;
     margin-bottom: 20px;
     margin-left: 100px;
     
 }
 .out-preview ul li  {
-
     float: left;
 }
 .out-preview ul li h3 {
@@ -557,7 +542,10 @@ a.attend-button:hover {
 }
 
 #errors-email, #errors-password {
-	color: #454545;
+	color: #FF8600;
+}
+#registration-gender {
+	color: green;
 }
 
 .out-signup .alternative {
@@ -567,16 +555,14 @@ a.attend-button:hover {
     
 }
 .index .centerform {
-		width: 210px;
+	width: 201px;
 		
 }
 .index .centerform h1 {
-		margin-bottom: 5px;
-		margin-top: 6px;
-		font-size: 28px;
+	margin-bottom: 5px;
+	font-size: 30px;
 }
 .index .out-signup {
-
     overflow: hidden;
     position: relative;
 }
@@ -597,10 +583,7 @@ a.signup-button:hover {
 }
 
 .index .out-signup h1 {
-    
     font-size: 26px;
-
-
 }
 .index .signup-or {
     position: absolute;
@@ -620,12 +603,10 @@ a.signup-button:hover {
     margin-right: 190px;
 }
 .out-signup a:hover {
-    
 }
 
 /**top menu**/
 #topmenu {
-	
 	float: left;
 }
 #topmenu ul{
@@ -665,7 +646,6 @@ a.signup-button:hover {
     margin-right: 15px;
     float: right;
     width: 250px;
-  
     text-align: right;
 }
 #reg_links li {
@@ -737,7 +717,7 @@ a.signup-button:hover {
     text-transform: uppercase;
     margin-left: 4px;
     font-weight: 500;
-    }
+}
     
 .block-header {
     padding: 5px;
@@ -755,11 +735,9 @@ a.signup-button:hover {
 }
 /**footer area and footer menu**/
 .twitter_follow{
-  
     width: 135px;
 }
 .fb_like{
-   
     width: 100px;
 }
 #footer_menu {
@@ -785,25 +763,20 @@ a.signup-button:hover {
         font-weight: 600;
         float: left;
 	text-align: left;
-       
         padding: 10px;
 }
 #footer_menu .left_footer li{
-    
 	list-style: none;
 	display: inline;
 	padding: 0px 6px 0px 4px;
         border-right: 1px solid #eee;
         color: #676767;
-	
 }
 #footer_menu .left_footer li a {
     color: #676767;
     text-decoration: none;
-    
 }
-#footer_menu .left_footer li a:hover 
-{
+#footer_menu .left_footer li a:hover {
     text-decoration: underline;
 }
 
@@ -819,13 +792,6 @@ a.signup-button:hover {
         overflow: hidden;
         padding-bottom: 24px;
 }
-/*#view-content {
-    float: left;
-    width: 670px;
-    background: rgba(111,111,111,.2);
-    border-radius: 5px;
-
-}*/
 .view-wrapped {
     width: 650px;
     height: 100% !important;
@@ -906,68 +872,59 @@ a.signup-button:hover {
 }
 /***icon bar ****/
 .icon_bar {
-    float: right;
-    height: 60px;
+	float: right;
+	height: 60px;
 }
 .icon_bar .top-bar {
-    height: 50px;
-    margin-top: 7px;
-    
+	height: 50px;
+	margin-top: 7px;
 }
 .icon_bar .top-bar .settings-button,
 .icon_bar .top-bar .notifications-button,
 .icon_bar .top-bar .friends-button{
-    list-style: none;
-    float: left;
-    position: relative; 
-   
+	list-style: none;
+	float: left;
+	position: relative; 
 }
 .icon_bar ul li a {
-    float: left;
+	float: left;
 }
-
 .icon_bar ul li .sub-settings {
-    position: absolute;
-    left: -80px;
-    top: 53px;
-    background: black;
-    margin:0;
-    padding: 0;
-    float: left;
-
+	position: absolute;
+	left: -80px;
+	top: 53px;
+	background: black;
+	margin:0;
+	padding: 0;
+	float: left;
 }
 .icon_bar ul li .sub-setting2 {
 	position: absolute;
-    left: -140px;
-    top: 53px;
-    background: rgba(111, 111, 111, .2);
-    margin:0;
-    padding: 0;
-    display: none;
-    float: left;
-    
-    
+	left: -140px;
+	top: 53px;
+	background: rgba(111, 111, 111, .2);
+	margin:0;
+	padding: 0;
+	display: none;
+	float: left;
 }
 .icon_bar #friendRequests {
-		background: black;
-		padding: 5px 5px 10px 10px;
-		min-height: 100%;
-		font-size: 14px;
+	background: black;
+	padding: 5px 5px 10px 10px;
+	min-height: 100%;
+	font-size: 14px;
 }
-.icon_bar ul.sub-setting2 li.friend-requests
-{
+.icon_bar ul.sub-setting2 li.friend-requests {
 	width: 200px;
-    clear: both;
+	clear: both;
 }
 .icon_bar ul li .sub-settings li {
-    
     margin: 0;
     padding: 0;
 }
 html .icon_bar ul li .sub-settings li a,
 html .icon_bar ul li .sub-setting2 li a{
     text-align: right;
- 
     padding: 10px;
     font-size: 14px;
     color: white;
@@ -975,10 +932,8 @@ html .icon_bar ul li .sub-setting2 li a{
 html .icon_bar ul li .sub-settings li a {
 		width: 110px;
 }
-html .icon_bar ul li .sub-settings2 li a {
-		
+html .icon_bar ul li .sub-settings2 li a {	
 }
-
 
 html #friendRequests ul li .sub-settings li a,
 html #friendRequests ul li .sub-setting2 li a{
@@ -988,14 +943,11 @@ html #friendRequests ul li .sub-setting2 li a{
     padding: 10px;
     font-size: 13px;
     font-weight: 600;
-  
     background: #454545;
     color: white;
 }
-
 html .icon_bar ul li .sub-settings li a:hover {
     background: #e0e0e0;
-    
 }
 html .icon_bar ul li .sub-settings .first-setting a{
     margin-bottom: 0px;
@@ -1013,7 +965,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .friend_pic {
-	
 }
 
 .friend-city {
@@ -1047,7 +998,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
 		float: left;
 }
 .mini-feed h4 {
-
 }
 
 .mini-feed a:hover {
@@ -1122,7 +1072,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
     margin: 0px;
     padding: 0px;
     width: 280px;
-    
 }
 .profile li.as-result-item, li.as-message {
     display: none;
@@ -1134,7 +1083,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border: 1px solid #B4BBCD !important;
 }
 .centerform {
-    
     width: 300px;
 }
 
@@ -1164,8 +1112,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   padding: 0 50px;
 }
 
-#wall_addPost
-{ 
+#wall_addPost { 
   height: 35px;
   display: block;
   background: #454545;
@@ -1174,16 +1121,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
   padding: 0px 42px;
   margin: 0px;
 }
-
 .index #register {
-   width: 209px;
+   width: 201px;
 }
-/**#password {
-    margin-bottom: 0px !important;
-}
-#password2 {
-    margin-top: 0px !important;
-}**/
 .inner_button #login:hover, 
 .inner_button #register:hover, 
 .inner_button #createEvent_submit:hover,
@@ -1192,19 +1132,16 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit:hover,
 #contact_submit:hover,
 #profilePic_submit:hover
-#wall_addPost:hover
-{
+#wall_addPost:hover {
     background: #333333;
 }
-.inner_button {  }
+.inner_button {overflow: hidden;}
 .inner_button .register_button {
     float:right;
    }
 .inner_button .register_button a{
     width: inherit;
     text-decoration: none;
-    
-    
 }
 .inner_button .register_button a h1 {
     padding-left: 50px;
@@ -1223,39 +1160,29 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /** app style registration **/
 #registration .first_name input{ 
     background: url("../images/first-name-form.png") no-repeat 10px center #f8f8f8;
-
 }
 #registration #betakey {
     background: url("../images/beta-key-form.png") no-repeat 10px center #f8f8f8;
-
-    
 }
 #registration .last_name input{
    background: url("../images/last-name-form.png") no-repeat 10px center #f8f8f8;
-
 }
 #registration #city{
     background: url("../images/city-form.png") no-repeat 10px center #f8f8f8;
-
 }
 #registration .gender input{
     }
 #registration .password input {
-
    }
 #registration .password_again input{
-
     background: url("../images/password-again-form.png") no-repeat 10px center #f8f8f8;
 }
-
 .inner_button #register {
-	margin-top: 0px !important;
 }
 /** app style event creation page **/
 .create_date {
     position: relative;
 }
-
 #createEvent #createEvent_shortDescription {
     width: 175px;
     float: right;
@@ -1282,7 +1209,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #createEvent_submit {
 	padding: 0 93px !important;
 }
-
 #createEvent .centerform {margin: 10px 0px 0px 0px;}
 #createEvent .centerform li {margin: 0px 0px; overflow: hidden;}
 #createEvent .centerform li .createEvent_text { font-size: 18px; width: 100px; margin: 13px 0px; }
@@ -1303,18 +1229,13 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border-top: 1px solid #363636;
 }
 /** app style contact **/
-
 #contact #name {
-   
     background: url("../images/name-form.png") no-repeat 10px center #f8f8f8;
 }
 #contact #subject {
-    
     background: url("../images/subject-form.png") no-repeat 10px center #f8f8f8;
 }
 #contact #text {
-
-    
     background: url("../images/your-text-form.png") no-repeat 10px 10px #f8f8f8;
 }
 /**** top column profile page ****/
@@ -1328,25 +1249,20 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: 300px;
     border: 1px solid #b4bbcd;
     margin: 10px 0px;
-    /*position: absolute;
-    right: 70px;*/
 }
 .tag-wrapper {
 		float: right;
 		margin-right: 150px;
 }
-
 .enter-tag {
 	font-size: 15px;
 	margin: 7px 0px 12px 110px;
 	font-weight: 600;
 	float: left;
 }
-
 ul.as-selections {
     box-shadow: none !important;
 }
-
 ul.as-selections li.as-original {
     text-align: right !important;
     float: right;
@@ -1359,7 +1275,6 @@ ul.as-selections {
     right: 5px;
     font-size: 14px;
     font-weight: bold;
-    
 }
 .tags_area {
     z-index: -1;
@@ -1402,7 +1317,6 @@ ul.as-selections {
     position: relative;
     margin-right: 20px;
 }
-
 .tags-arrow {
 	width: 0;
         height: 0;
@@ -1413,10 +1327,8 @@ ul.as-selections {
 	right:-12px;
 	top: 0px;
 }
-
 .tag_text {float: left;
-          margin-right: 5px;
-         
+        margin-right: 5px;
 }
 .close_tag {
     margin-top: 4px;
@@ -1429,13 +1341,12 @@ ul.as-selections {
     background: #454545;
 }
 .tag-arrow-color {
-		border-left: 13px solid #454545;
+	border-left: 13px solid #454545;
 }
 .tag_remove {
     display: none;
 }
 /**Dialogs*/
-
 #modal-content {
     float: left;
 }
@@ -1458,7 +1369,6 @@ ul.as-selections {
     z-index:3;
     top:50%;  
     margin-top:-220px; 
-    /*box-shadow: 0 0 0px 10px rgba(66, 66, 66, .4);;*/
 }
 .modalBackground {
     position:absolute;
@@ -1474,7 +1384,6 @@ ul.as-selections {
 .closeBox {
     position: relative
 }
-
 .exitBox {
 	position: absolute;
 	right: 0;
@@ -1495,23 +1404,19 @@ ul.as-selections {
 .modalWindow .view-wrapped {
     width: 430px;
     overflow: hidden;
-    
 }
 .modalWindow #view-content {
-    width: 100%;
-    
+    width: 100%; 
 }
 /**** dialog questions ***/
 .questions-window h1{
 }
-
 .required {
 	font-size: 16px;
 }
 
 /*** flash messages***/
 #flashMessages {
-    
 }
 #flashMessages ul li {
     position: relative;
@@ -1523,10 +1428,6 @@ ul.as-selections {
     color: #ffffff;
 }
 /***** event page ******/
-.event .event_header {
-/*    margin: 0px 0px 5px 0;*/
-/*    height: 40px;*/
-}
 .event .event_header .event_title {
     float: left;
     margin-bottom: 10px;
@@ -1626,7 +1527,6 @@ ul.as-selections {
 	height: 25px;
 	margin-top: 2px;
 }
-
 .waiting-item {
 	float: left;
 	margin: 0px 15px;
@@ -1682,8 +1582,6 @@ ul.as-selections {
     text-decoration: underline;
 }
 .event .event_wall .wallpost a:hover {
-    
-    
 }
 .event .event_wall #wall_comment {
     float: left;
@@ -1707,7 +1605,6 @@ ul.as-selections {
     top: 0px;
     padding: 5px;
     text-indent: -9999px;
-	
 }
 .event .event_wall .delete_post:hover {
     background: url('../images/exit-button.png') no-repeat center center;
@@ -1722,7 +1619,6 @@ ul.as-selections {
 .event-list h1{
 	margin-bottom: 5px;
 }
-
 .notification h1 {
 	font-size: 30px;
 }
@@ -1733,42 +1629,34 @@ ul.as-selections {
 .event-list ul.event-object {	
 	margin: 10px 0px 10px 4px;
 }
-
 .single-event {
     border-top:1px solid #fff;
     border-bottom: 1px solid #ccc;
     margin: 0 !important;
     padding: 10px;
 }
-
 .single-event:last-child {
 	border-bottom: none;
 }
-
 .single-event:first-child {
 	border-top: none;
 	border-bottom: 1px solid #CCC;
 }
-
 .single-event a {
 	margin: 10px 0px;
 }
-
 .notification .notification-object span {
 	color: #bbb;
 	font-size: 12px;
 }
-
 .individual-object {
 	margin-bottom: 3px;
 	float: left;
 	font-size: 16px;
 }
-
 .individual-object a {
 	color: #FF8600;
 }
-
 .event-describer {
 	margin: 5px 0px;
 }
