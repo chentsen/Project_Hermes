@@ -86,7 +86,7 @@ class RegistrationController extends Zend_Controller_Action
         // action body
     }
     public function fbLoginAction(){
-	//$this->_helper->layout()->disableLayout();
+	$this->_helper->layout()->disableLayout();
 	$this->_helper->viewRenderer->setNoRender();
 	$data_obj = Application_Model_UserSettings::getFBData();
 	$user = $data_obj['user'];
@@ -105,9 +105,8 @@ class RegistrationController extends Zend_Controller_Action
 		     $this->_helper->json($json);
 		}else{
 		    //render the form view and echo it.
-			
 		    $fbRegistration = new Application_Form_FbRegistration($result);
-					    
+		    
 		    $json['form'] =  $fbRegistration->render();
 		    
 		    $this->_helper->json($json);
