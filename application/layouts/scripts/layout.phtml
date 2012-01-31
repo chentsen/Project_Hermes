@@ -5,6 +5,7 @@
             $reg = new Application_Form_Registration();
 	    
     $identity = Application_Model_UserSettings::hasIdentity();
+    $appId = Zend_Registry::get('config')->siteInformation->appId;
  
 ?>
 <?php echo $this->doctype(); ?>
@@ -14,6 +15,9 @@
 </head>
 <body class="<?= $this->LayoutClass() ?>">
 <div id="fb-root"></div>
+
+
+
 
 <div class="custom<?php 
         if(!$identity){ echo ' outside'; }?>">
