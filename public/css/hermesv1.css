@@ -716,6 +716,7 @@ a.signup-button:hover {
 .right-block .mini-feed a {
 	width: 210px;
 	float: right;
+	min-height: 30px;
 }
 
 .block-body .mini-feed {
@@ -1030,8 +1031,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
     overflow: hidden;
 }
 
-.profile .mini-feed {
-		width: 260px;
+.profile_eventList .mini-feed {
+		width: 170px;
 }
 .mini-feed {
 		width: 260px;
@@ -1234,8 +1235,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: 175px;
     right: 0;
     top: 0px;
-    margin-left: 5px;
-    position: absolute;
+    margin-left: 18px;
     z-index: 200;
 }
 #createEvent #createEvent_location {
