@@ -65,7 +65,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 				$user = Zend_Registry::get("Wildkat\DoctrineContainer")->getDocumentManager('default')->getRepository('Documents\User')->findOneBy(array("email"=>$identity));
 				//echo $user->getEmail();
 				//echo $user->getEmail();
-				echo '<img style="float: left;" src="/images/meet-people.png" width="50" /><div class="mini-feed">';
+				echo '<div class="mini-feed">';
                 echo '<h5><a href = \'/event/index/eid/'. $feedObject->getEid().'\'>'.$feedObject->getShortDescription().' @ '.$feedObject->getEvent()->getLocation().'</a></h5>';                
 				echo '<span class="event-side-date">on '.$feedObject->getDate()->format('m/d').'</span>';
 				if ($eventModel->isEventCreator($identity, $creator))
