@@ -109,10 +109,9 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 								<div class='search-common-tags'>{$user->getCount()} tags in common</div>";
 		                                            
 			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
-				echo "<div class ='add-friend'>";
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
 				
-				echo "<a class='remove-anchor' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
+				echo "<a class='add-friend' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
 				
 				echo "</div>";
 			}

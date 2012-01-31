@@ -374,40 +374,45 @@ margin-bottom: 2px;
 .noMatch {
     background: #FF8600;
     color: white;
-    float: left;
     padding: 5px 10px;
-    margin: 5px 5px 0px 0px;
+    margin: 7px 5px 0px 10px;
     overflow: auto;
     cursor: pointer;    
     float: left;
-    }
+}
     
-.user-info{
+.user-info {
 	float: right;
-	width: 560px;
+	width: 540px;
 	border-bottom: solid 1px #b4bbcd;
 }
 .search-name a {
 	color: #454545;
 	text-transform: capitalize;
 	float: left;
+	font-size: 24px;
 }
 .search-city {
 	color: #b4bbcd;
 	text-transform: capitalize;
 	float: left;
+	font-size: 18px;
+	margin: 3px 0px 0px 20px;
 }
 .search-common-tags {
 	color: #b4bbcd;
 	float: left;
+	font-size: 18px;
+	margin: 3px 0px 0px 20px;
 }
 .user_result, .event_result {overflow: auto; padding: 10px;}
 .user_like {
     width: 30px;
-    font-size: 12px;
+    font-size: 16px;
     float: left;
-    padding: 5px 5px 0px 10px;
+    padding: 4px 5px 0px 10px;
     margin-left: 10px;
+    color: #b4bbcd;
 }
 .user_addFriend a, .user_viewProfile a
 {
