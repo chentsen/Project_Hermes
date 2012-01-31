@@ -933,7 +933,7 @@ a.signup-button:hover {
 .icon_bar ul li .sub-settings {
     position: absolute;
     left: -80px;
-    top: 53px;
+    top: 55px;
     background: black;
     margin:0;
     padding: 0;
@@ -944,8 +944,8 @@ a.signup-button:hover {
 .icon_bar ul li .sub-setting2 {
     position: absolute;
     left: -140px;
-    top: 53px;
-    background: rgba(111, 111, 111, .2);
+    top: 55px;
+    background: #454545;
     margin:0;
     padding: 0;
     display: none;
