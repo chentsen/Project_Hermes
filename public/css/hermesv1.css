@@ -1293,11 +1293,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 .tag-wrapper {
 		float: left;
-		
 }
 .enter-tag {
 	font-size: 15px;
-	margin: 7px 0px 12px 110px;
+	margin: 7px 10px 12px 110px;
 	font-weight: 600;
 	float: left;
 }

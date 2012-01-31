@@ -30,7 +30,7 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
                     <div class="profile-about-me"><? if($this->description)
 								echo $this->description;
 						else
-								echo "No description available";?>
+								echo "<h4>No description available</h4>";?>
 		    </div>
 		    </div>
 		</div>
