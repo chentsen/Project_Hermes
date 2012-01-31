@@ -201,9 +201,12 @@
 									var lis = $("li", selections_holder).length;
 									add_selected_item(n_data, "00"+(lis+1));
 									input.val("");
+									$(".no-quotes").remove();
 								}else{
-									input.val("");
-									alert("Quotes are not allowed");
+									input.val();
+										//alert("Quotes are not allowed");
+										$(".no-quotes").remove();
+										$(".tag-wrapper").after('<div class="no-quotes" style="float:left">Quotes are not allowed</div>');
 									break;
 								}
 							}
@@ -238,6 +241,7 @@
 										var lis = $("li", selections_holder).length;
 										add_selected_item(n_data, "00"+(lis+1));
 										input.val("");
+										$(".no-quotes").remove();
 										$.post("/tag/add-tag-ajax",
 												{tags:$(".as-values").val()},
 												function(results){
@@ -247,8 +251,10 @@
 												}	
 											);
 									}else{
-										input.val("");
-										alert("Quotes are not allowed");
+										input.val();
+										//alert("Quotes are not allowed");
+										$(".no-quotes").remove();
+										$(".tag-wrapper").after('<div class="no-quotes" style="float:left">Quotes are not allowed</div>');
 										break;
 									}
 								}

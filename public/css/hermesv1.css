@@ -1303,8 +1303,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
     right: 70px;*/
 }
 .tag-wrapper {
-		float: right;
-		margin-right: 150px;
+		float: left;
+		
 }
 
 .enter-tag {
