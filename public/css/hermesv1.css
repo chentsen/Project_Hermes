@@ -1114,9 +1114,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: 280px;
 }
 .profile li.as-result-item, li.as-message {
-    display: none;
+    
 }
 .profile ul.as-selections li.as-original input {
+    z-index:999999;
     padding-top: 0px;
 }
 .change_border_color {
@@ -1291,8 +1292,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
     margin: 10px 0px;
 }
 .tag-wrapper {
-		float: right;
-		margin-right: 150px;
+		float: left;
+		
 }
 .enter-tag {
 	font-size: 15px;

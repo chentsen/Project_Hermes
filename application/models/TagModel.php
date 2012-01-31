@@ -70,7 +70,8 @@ class Application_Model_TagModel{
 	public function addTagList($tagNames,$flush = true){
 		$tagNamesArray = explode(',',$tagNames);
 		foreach($tagNamesArray as $tagName){
-			if($tagName == '') continue;
+			if(empty($tagName) || strpos($tagName,'"') || strpos($tagName,'\'') || empty($tagName))
+				continue;
 			$this->addTag($tagName,false,false);			
 		}
 		$this->dm->flush();

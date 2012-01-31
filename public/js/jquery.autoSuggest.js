@@ -21,7 +21,8 @@
 
 (function($){
 	$.fn.autoSuggest = function(data, options) {
-		var defaults = { 
+		var defaults = {
+			
 			asHtmlID: false,
 			startText: "Enter Name Here",
 			emptyText: "No Results Found",
@@ -48,7 +49,8 @@
 		  	beforeRetrieve: function(string){ return string; },
 		  	retrieveComplete: function(data){ return data; },
 		  	resultClick: function(data){},
-		  	resultsComplete: function(){}
+		  	resultsComplete: function(){},
+			disallowRegex: /['"]/g
 	  	};  
 	 	var opts = $.extend(defaults, options);	 	
 		
@@ -58,8 +60,14 @@
 			d_type = "string";
 			var req_string = data;
 		} else {
+			
 			var org_data = data;
-			for (k in data) if (data.hasOwnProperty(k)) d_count++;
+			for (k in data) if (data.hasOwnProperty(k)){
+				//alert('incremending data');
+				d_count++;
+				
+			}
+		
 		}
 		if((d_type == "object" && d_count > 0) || d_type == "string"){
 			return this.each(function(x){
@@ -185,13 +193,22 @@
 							tab_press = true;
 							var i_input = input.val().replace(/(,)/g, "");
 							if(i_input != "" && values_input.val().search(","+i_input+",") < 0 && i_input.length >= opts.minChars){	
-								e.preventDefault();
-								var n_data = {};
-								n_data[opts.selectedItemProp] = i_input;
-								n_data[opts.selectedValuesProp] = i_input;																				
-								var lis = $("li", selections_holder).length;
-								add_selected_item(n_data, "00"+(lis+1));
-								input.val("");
+								if(!opts.disallowRegex.test(i_input)){
+									e.preventDefault();
+									var n_data = {};
+									n_data[opts.selectedItemProp] = i_input;
+									n_data[opts.selectedValuesProp] = i_input;																				
+									var lis = $("li", selections_holder).length;
+									add_selected_item(n_data, "00"+(lis+1));
+									input.val("");
+									$(".no-quotes").remove();
+								}else{
+									input.val();
+										//alert("Quotes are not allowed");
+										$(".no-quotes").remove();
+										$(".tag-wrapper").after('<div class="no-quotes" style="float:left">Quotes are not allowed</div>');
+									break;
+								}
 							}
 						case 13: // return
 							tab_press = false;
@@ -206,31 +223,52 @@
 								$.post("/tag/add-tag-ajax",
 										{tags:$(".as-values").val()},
 										function(results){
+												
 											Tags.refreshTags(results);
+											//FIX HERE
 											$(".as-values").val('');
 											$(".as-selection-item").remove();
 										}	
 									);
 							}else if(input.val().length > 0){
 								if(i_input != "" && values_input.val().search(","+i_input+",") < 0 && i_input.length >= opts.minChars){	
-									e.preventDefault();
-									var n_data = {};
-									n_data[opts.selectedItemProp] = i_input;
-									n_data[opts.selectedValuesProp] = i_input;																				
-									var lis = $("li", selections_holder).length;
-									add_selected_item(n_data, "00"+(lis+1));
-									input.val("");
-									$.post("/tag/add-tag-ajax",
-											{tags:$(".as-values").val()},
-											function(results){
-												Tags.refreshTags(results);
-												$(".as-values").val('');
-												$(".as-selection-item").remove();
-											}	
-										);
+									if(!opts.disallowRegex.test(i_input)){	
+										//alert('TRUE');
+										e.preventDefault();
+										var n_data = {};
+										n_data[opts.selectedItemProp] = i_input;
+										n_data[opts.selectedValuesProp] = i_input;																				
+										var lis = $("li", selections_holder).length;
+										add_selected_item(n_data, "00"+(lis+1));
+										input.val("");
+										$(".no-quotes").remove();
+										$.post("/tag/add-tag-ajax",
+												{tags:$(".as-values").val()},
+												function(results){
+													Tags.refreshTags(results);
+													$(".as-values").val('');
+													$(".as-selection-item").remove();
+												}	
+											);
+									}else{
+										input.val();
+										//alert("Quotes are not allowed");
+										$(".no-quotes").remove();
+										$(".tag-wrapper").after('<div class="no-quotes" style="float:left">Quotes are not allowed</div>');
+										break;
+									}
 								}
 							}else{
-	
+									if($('.as-values').length != 0){
+										$.post("/tag/add-tag-ajax",
+													{tags:$(".as-values").val()},
+													function(results){
+														Tags.refreshTags(results);
+														$(".as-values").val('');
+														$(".as-selection-item").remove();
+													}	
+												);
+									}
 								//submit
 							}
 							
@@ -245,6 +283,7 @@
 									if (timeout){ clearTimeout(timeout); }
 									timeout = setTimeout(function(){ keyChange(); }, opts.keyDelay);
 								}
+								//AND HERE I THINK
 							}
 							break;
 					}
@@ -285,6 +324,7 @@
 				}
 				var num_count = 0;
 				function processData(data, query){
+					console.log(data);
 					if (!opts.matchCase){ query = query.toLowerCase(); }
 					var matchCount = 0;
 					results_holder.html(results_ul.html("")).hide();
@@ -343,6 +383,7 @@
 							results_ul.append(formatted);
 							delete this_data;
 							matchCount++;
+							console.log('There was a match!');
 							if(opts.retrieveLimit && opts.retrieveLimit == matchCount ){ break; }
 						}
 					}
@@ -352,6 +393,7 @@
 					}
 					results_ul.css("width", selections_holder.outerWidth());
 					results_holder.show();
+					console.log(results_holder);
 					opts.resultsComplete.call(this);
 				}
 				
