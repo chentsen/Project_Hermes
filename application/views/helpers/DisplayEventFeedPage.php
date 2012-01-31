@@ -66,7 +66,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					echo '</div>';
 					//Display Creator
 					if ($eventModel->isEventCreator($identity, $creator))
-					{ echo "<span class='own-event'>Event Owner</span>";}
+					{ echo "<span class='own-event'>Owner</span>";}
 				
 					
 				

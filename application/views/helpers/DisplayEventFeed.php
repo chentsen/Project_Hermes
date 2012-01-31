@@ -42,7 +42,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 		if($i == 0 && $length > 4)
 			$html = '<a class="so-ronery">You have no events right now.</a>';
 		else if ($i == 0 && $length <4)
-		   $html = 'Not attending any events yet';
+		   $html = 'Not attending any events yet.';
 		echo $html;
 		echo "</ul>";
 	}
@@ -67,9 +67,9 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 				//echo $user->getEmail();
 				echo '<div class="mini-feed">';
                 echo '<h5><a href = \'/event/index/eid/'. $feedObject->getEid().'\'>'.$feedObject->getShortDescription().' @ '.$feedObject->getEvent()->getLocation().'</a></h5>';                
-				echo '<span class="event-side-date">on '.$feedObject->getDate()->format('m/d').'</span>';
+				echo '<span class="event-side-date">'.$feedObject->getDate()->format('m/d').'</span>';
 				if ($eventModel->isEventCreator($identity, $creator))
-				{ echo "<span class='own-event'>Event Owner</span>";}
+				{ echo "<span class='own-event'>Owner</span>";}
 				echo '</div>';
 			   }
 	}

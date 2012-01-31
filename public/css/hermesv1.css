@@ -715,10 +715,10 @@ a.signup-button:hover {
 }
 .right-block .mini-feed a {
 	width: 210px;
+	float: right;
 }
 
 .block-body .mini-feed {
-	width: 210px !important;
 }
 
 .create_button {
@@ -1031,10 +1031,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .profile .mini-feed {
-		width: 120px;
+		width: 260px;
 }
 .mini-feed {
-		width: 200px;
+		width: 260px;
 		float: left;
 }
 .mini-feed h4 {
@@ -1048,14 +1048,13 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .own-event {
-	float: right;
+	float: left;
 	display: block;
-	background-color: #24A3DF;
+	background-color: #FF8600;
 	color: white;
 	font-size: 11px;
 	line-height: 10px;
 	padding: 3px 3px 3px 3px;
-	margin: 4px 0px 2px 0px;
 }
 
 .profile_eventList .own-event {
@@ -1064,7 +1063,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .event-side-date {
 	float: left;
 	margin-top: 5px;
-	font-size: 13px;
+	font-size: 15px;
+	color: #FF8600;
+	margin: 0px 0px 2px 0px;
 }
 .right_col {
     overflow: auto;
