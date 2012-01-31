@@ -1061,6 +1061,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .profile_eventList .own-event {
 	margin: 4px 0px 0px 2px;
 }
+.profile_eventList .event-side-date {
+	margin: 2px;
+}
 .event-side-date {
 	float: left;
 	margin-top: 5px;
