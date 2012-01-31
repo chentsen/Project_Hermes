@@ -852,7 +852,7 @@ a.signup-button:hover {
 	margin-top: 15px;
 }
 .no-tags-available {
-	margin: 30px 120px 0px 120px;
+	margin: 30px 150px 0px 190px;
 	color: #FF8600;
 }
 
@@ -1027,7 +1027,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     min-height: 400px;
 }
 .eventFeedObject, .generalFeedObject {
-    padding: 5px;
+    padding: 5px 0px 5px 5px;
     color: #454545;
     border-top: 1px solid #b4bbcd;
     overflow: hidden;
@@ -1037,7 +1037,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 		width: 170px;
 }
 .mini-feed {
-		width: 260px;
+		width: 265px;
 		float: left;
 }
 .mini-feed h4 {
