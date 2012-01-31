@@ -206,7 +206,9 @@
 								$.post("/tag/add-tag-ajax",
 										{tags:$(".as-values").val()},
 										function(results){
+												
 											Tags.refreshTags(results);
+											//FIX HERE
 											$(".as-values").val('');
 											$(".as-selection-item").remove();
 										}	
@@ -245,6 +247,7 @@
 									if (timeout){ clearTimeout(timeout); }
 									timeout = setTimeout(function(){ keyChange(); }, opts.keyDelay);
 								}
+								//AND HERE I THINK
 							}
 							break;
 					}
