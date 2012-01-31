@@ -203,7 +203,7 @@
 									input.val("");
 								}else{
 									input.val("");
-									//alert("Quotes are not allowed");
+									alert("Quotes are not allowed");
 									break;
 								}
 							}
@@ -246,7 +246,7 @@
 											);
 									}else{
 										input.val("");
-										//alert("Quotes are not allowed");
+										alert("Quotes are not allowed");
 										break;
 									}
 								}

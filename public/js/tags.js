@@ -10,7 +10,6 @@ var Tags = {
 			  function(results){
 				  var stats = null;
 				  eval('stats='+results);
-				  console.log(stats);
 				  Tags.tagData = stats;
 				  $(".tag_input").autoSuggest(Tags.tagData,
 						  {startText:"",emptyText:"",neverSubmit:true});
@@ -41,7 +40,7 @@ var Tags = {
 	},	
 	removeTag:function(tagID){
 		jQuery.get('/tag/delete-tag',
-				{tag:escape($("#"+tagID+" .tag_text").text())}
+				{tag:$("#"+tagID+" .tag_text").text()}
 		)
 		$("#"+tagID).remove();
 		
