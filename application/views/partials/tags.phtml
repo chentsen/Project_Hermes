@@ -33,7 +33,11 @@
 				}
 				else
 				{
-				  echo "<h3>No Tags Available</h3>";  
+			   if($this->isOwn)
+				  echo "<h3>You have no tags</h3>";  
+			   else 
+				  echo "<h3>No tags available</h3>";
+				
 				}
 				?>		  
 		  	</div>
