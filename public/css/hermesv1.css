@@ -742,6 +742,8 @@ a.signup-button:hover {
     float: left;
     width: 270px;
     padding: 0px 0px 0px 12px;
+    border-left: solid 1px #b4bbcd;
+    height: 100%;
 }
 .right-block a {
     color: #454545;
@@ -840,7 +842,6 @@ a.signup-button:hover {
     overflow: hidden;
     padding: 0px 12px 0px 0px;
     float: left;
-    border-right: solid 1px #B4BBCD;
     min-height: 480px;
 }
 
@@ -1027,9 +1028,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
     min-height: 400px;
 }
 .eventFeedObject, .generalFeedObject {
-    padding: 5px 0px 5px 5px;
+    padding: 6px 0px 6px 5px;
     color: #454545;
-    border-top: 1px solid #b4bbcd;
     overflow: hidden;
 }
 
