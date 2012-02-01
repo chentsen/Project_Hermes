@@ -1481,7 +1481,7 @@ ul.as-selections {
 /***** event page ******/
 .event .event_title {
     float: right;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     width: 455px;
     padding: 0px 0px 0px 15px;
 }
@@ -1506,6 +1506,8 @@ ul.as-selections {
 .event .event_main .event_img {
     float: left;
     padding: 0px 20px 0px 0px;
+    height: 180px;
+    width: 180px;
 }
 .event .event_main .event_img img{ 
 }
@@ -1513,14 +1515,14 @@ ul.as-selections {
     float: right;
 }
 .event .event_main .event_right {
-    width: 455px;
+    width: 450px;
     float: left;
-    padding: 0px 0px 0px 15px;
+    padding: 0px 0px 0px 20px;
 }
 .event .event_main h4 {
     font-size: 20px;
     padding: 5px 0px;
-    margin-left: 30px;
+    margin-left: 35px;
 }
 .event_date {
 	position: relative;
@@ -1667,9 +1669,8 @@ ul.as-selections {
 	margin-left: 0;
 }
 /*** notification/event page ***/
-.notification h1,
-.event-list h1{
-	margin-bottom: 5px;
+.notification h1 {
+	margin-bottom: 10px;
 }
 .notification h1 {
 	font-size: 30px;
