@@ -1502,6 +1502,9 @@ ul.as-selections {
     float: left;
     margin-bottom: 10px;
 }
+.event .event_header .event_title a {
+		color: red;
+}
 .event .event_right .event_self {
     color: white;
     float: right;
