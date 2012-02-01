@@ -1484,6 +1484,9 @@ ul.as-selections {
     margin-bottom: 10px;
     width: 370px;
 }
+.event .event-left {
+	float: left;
+}
 .event .event_right .event_self {
     color: white;
     float: right;
