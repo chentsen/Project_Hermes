@@ -1170,6 +1170,19 @@ html .icon_bar ul li .sub-settings .last-setting a{
   float: left;
   width: 179px;
 }
+
+#wall_addPost:focus {
+  height: 35px;
+  display: block;
+  background: black;
+  color: white;
+  font-weight: 500;
+  margin: 0px;
+  float: left;
+  width: 179px;
+}
+}
+
 .index #register {
    width: 201px;
 }
@@ -1498,6 +1511,7 @@ ul.as-selections {
     font-size: 18px;
     display: block;
     background-color: #24A3DF;
+    text-align: center;
 }
 .event .event_main {
     overflow: hidden;
@@ -1669,11 +1683,8 @@ ul.as-selections {
 	margin-left: 0;
 }
 /*** notification/event page ***/
-.notification h1 {
-	margin-bottom: 10px;
-}
-.notification h1 {
-	font-size: 30px;
+.notifications {
+	margin-top: 10px;
 }
 .notification .notification-object {
 	overflow: hidden;
