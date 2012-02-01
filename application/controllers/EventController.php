@@ -28,7 +28,7 @@ class EventController extends Hermes_Controller_Wall_WallController
 		$this->view->creatorName = $event->getCreator()->getFirstName(). " " .$event->getCreator()->getLastName();
         if($this->identity == $event->getCreator()->getEmail()){
     		$this->_helper->ViewRenderer('index_creator');
-			$this->view->pageTitle = $this->curUser->getFirstName() . " " . $this->curUser->getLastName() . " wants to" .
+			$this->view->pageTitle = $event->getCreator()->getFirstName(). " " .$event->getCreator()->getLastName() . " wants to" .
 				$event->getShortDescription();
 			
     	}
