@@ -1,3 +1,6 @@
+ <?
+ $appId = Zend_Registry::get('config')->siteInformation->appId;
+ ?>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>PlumeType - <?php if ($this->pageTitle) {
                 echo $this->pageTitle;
@@ -11,6 +14,7 @@
           ->appendStylesheet($this->baseUrl('css/hermesvy.css'))
           ->appendStylesheet($this->baseUrl('css/hermesv1.css')) ; ?>
   <?php echo $this->headLink() ?>
+
   <?php $this->headScript()
           ->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
           ->appendFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js')
@@ -23,7 +27,23 @@
           ->appendFile($this->baseUrl('js/jquery.blockUI.js'))
           ->appendFile($this->baseUrl('js/dialog.js'))
           ->appendFile($this->baseURL('js/fb_interface.js'))
-          ->appendFile($this->baseURL('js/login.js'));
+          ->appendFile($this->baseURL('js/login.js'))
+          ->appendScript("window.appID='{$appId}';window.fbAsyncInit = function() {
+                FB.init({
+                    appId      : window.appID,
+                    status     : true, 
+                    cookie     : true,
+                    xfbml      : true,
+                    oauth      : true
+                });
+            };
+            (function(d){
+                var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+                js = d.createElement('script'); js.id = id; js.async = true;
+                js.src = '//connect.facebook.net/en_US/all.js';
+                d.getElementsByTagName('head')[0].appendChild(js);
+            }(document));")
+         
             //http://code.drewwilson.com/entry/autosuggest-jquery-plugin
     ?>
   
