@@ -1479,9 +1479,10 @@ ul.as-selections {
     color: #ffffff;
 }
 /***** event page ******/
-.event .event_header .event_title {
+.event .event_title {
     float: left;
     margin-bottom: 10px;
+    width: 370px;
 }
 .event .event_right .event_self {
     color: white;
@@ -1512,16 +1513,8 @@ ul.as-selections {
 }
 .event .event_main h4 {
     font-size: 20px;
-    padding: 5px 0;
-}
-.event .event_main .event_date h2 {
-    margin-left: 35px;
-}
-.event .event_main .event_place h2{
-    margin-left: 35px;
-}
-.event .event_main .event_location h2{
-    margin-left: 35px;    
+    padding: 5px 0px;
+    margin-left: 30px;
 }
 .event_date {
 	position: relative;
