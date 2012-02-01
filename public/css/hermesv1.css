@@ -1171,10 +1171,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
   width: 179px;
 }
 
-#wall_addPost input:focus {
+#wall_addPost:hover {
   height: 35px;
   display: block;
-  background: black;
+  background: #333;
   color: white;
   font-weight: 500;
   margin: 0px;
