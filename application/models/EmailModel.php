@@ -28,15 +28,15 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 			for($i = 0; $i < count($areFriends); $i++) {
 				if($areFriends[$i]->hasEmailPerm())
                 {
-				$emailCollect .= $areFriends[$i]->getEmail() . ",";
+				$this->emailCollect[$i] = $areFriends[$i]->getEmail();
                 }  
             }
 		
-            return $emailCollect;
+            return $this->emailCollect;
         }
         
     }
-    public function sendEmail($subject, $email, $htmlBody, $identity)
+    public function sendEmail($subject, $emails, $htmlBody, $identity)
     {        
 			$mail = new Zend_Mail();
 			$mail->setReplyTo('no-reply@plumetype.com', 'Plumetype');
@@ -46,7 +46,9 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 			$mail->setBodyHtml($htmlBody);
 			$mail->setFrom('no-reply@plumetype.com', 'Plumetype Friend Feed');
 			$mail->addTo($identity);
+			foreach($emails as $email){
 			$mail->addBcc($email);
+			}
 			$mail->setSubject($subject);
 			$mail->send();  
     }
