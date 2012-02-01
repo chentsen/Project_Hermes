@@ -1510,10 +1510,9 @@ ul.as-selections {
     width: 450px;
     float: left;
 }
-.event .event_main h2 {
+.event .event_main h4 {
     font-size: 20px;
     padding: 5px 0;
-    font-weight: 500;
 }
 .event .event_main .event_date h2 {
     margin-left: 35px;
