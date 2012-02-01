@@ -34,7 +34,7 @@ textarea {
         background: #ffffff;
         outline: 0;
         padding: 10px;    
-        border: 1px solid #B4BBCD;
+        border: 1px solid #D9DBDF;
 }
 #content_area input[type=text],
 #content_area input[type=password]{
@@ -45,7 +45,7 @@ input[type=text], input[type=password] {
 	height: 23px;
 	font-size: 18px; 
         line-height: 18px;
-        border: 1px solid #B4BBCD;
+        border: 1px solid #D9DBDF;
         padding: 0 10px;
 }
 #content_area input:focus {
@@ -161,7 +161,7 @@ input[type=text]:first,input[type=password]:first {
 	margin-left: 20px;
 }
 .account-edit .upload-image {
-    border-right: 1px solid #B4BBCD;
+    border-right: 1px solid #D9DBDF;
     width: 285px;
 }
 .account-edit .upload-image h1{
@@ -267,7 +267,7 @@ margin-bottom: 2px;
     float: left;
     width: 445px;
     overflow: hidden;
-    border-left: solid 1px #b4bbcd;
+    border-left: solid 1px #D9DBDF;
     padding: 0px 0px 0px 12px;
 }
 .profileDesc {
@@ -386,7 +386,7 @@ margin-bottom: 2px;
 .user-info {
 	float: right;
 	width: 540px;
-	border-bottom: solid 1px #b4bbcd;
+	border-bottom: solid 1px #D9DBDF;
 }
 .search-name a {
 	color: #454545;
@@ -395,14 +395,14 @@ margin-bottom: 2px;
 	font-size: 24px;
 }
 .search-city {
-	color: #b4bbcd;
+	color: #D9DBDF;
 	text-transform: capitalize;
 	float: left;
 	font-size: 18px;
 	margin: 3px 0px 0px 20px;
 }
 .search-common-tags {
-	color: #b4bbcd;
+	color: #D9DBDF;
 	float: left;
 	font-size: 18px;
 	margin: 3px 0px 0px 20px;
@@ -414,7 +414,7 @@ margin-bottom: 2px;
     float: left;
     padding: 4px 5px 0px 10px;
     margin-left: 10px;
-    color: #b4bbcd;
+    color: #D9DBDF;
 }
 .user_addFriend a, .user_viewProfile a
 {
@@ -742,7 +742,7 @@ a.signup-button:hover {
     float: left;
     width: 270px;
     padding: 0px 0px 0px 12px;
-    border-left: solid 1px #b4bbcd;
+    border-left: solid 1px #D9DBDF;
     height: 100%;
 }
 .right-block a {
@@ -787,7 +787,7 @@ a.signup-button:hover {
    font-size:12px;
 }
 #footer_menu .page {
-    border-top: 1px solid #b4bbcd;
+    border-top: 1px solid #D9DBDF;
     overflow: auto;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -1128,7 +1128,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     padding-top: 0px;
 }
 .change_border_color {
-    border: 1px solid #B4BBCD !important;
+    border: 1px solid #D9DBDF !important;
 }
 .centerform {
     width: 300px;
@@ -1294,7 +1294,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .tag_input_wrapper {
     margin: 0 auto !important;
     width: 300px;
-    border: 1px solid #b4bbcd;
+    border: 1px solid #D9DBDF;
     margin: 10px 0px;
 }
 .tag-wrapper {
