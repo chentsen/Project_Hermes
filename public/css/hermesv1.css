@@ -1480,22 +1480,24 @@ ul.as-selections {
 }
 /***** event page ******/
 .event .event_title {
-    float: left;
+    float: right;
     margin-bottom: 10px;
-    width: 370px;
+    width: 455px;
+    padding: 0px 0px 0px 15px;
 }
 .event .event-left {
 	float: left;
+	width: 180px;
 }
 .event .event_right .event_self {
     color: white;
-    float: right;
+    float: left;
     height: 30px;
+    width: 180px;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 18px;
     display: block;
     background-color: #24A3DF;
-    padding: 0px 30px;
 }
 .event .event_main {
     overflow: hidden;
@@ -1511,8 +1513,9 @@ ul.as-selections {
     float: right;
 }
 .event .event_main .event_right {
-    width: 450px;
+    width: 455px;
     float: left;
+    padding: 0px 0px 0px 15px;
 }
 .event .event_main h4 {
     font-size: 20px;
@@ -1592,7 +1595,7 @@ ul.as-selections {
     border-radius: 5px;
 }
 .event .event_wall .wall_title {
-    font-size: 28px;
+    font-size: 26px;
     margin-bottom: 15px;
     position: relative;
     background: url('../images/event-wall-line.png');
