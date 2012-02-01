@@ -440,10 +440,10 @@ a.attend-button {
 	color: #FFFFFF;
 	background-color: #9ED716;
 	display: block;
-	font-size: 16px;
+	font-size: 18px;
 	height: 30px;
 	line-height: 30px;
-	width: 143px;
+	width: 180px;
 	float: right;
 	text-align: center;
 }
@@ -451,10 +451,10 @@ a.attend-button:hover {
 	color: #FFFFFF;
 	background-color: #94ca15;
 	display: block;
-	font-size: 16px;
+	font-size: 18px;
 	height: 30px;
 	line-height: 30px;
-	width: 143px;
+	width: 180px;
 	float: right;
 	text-align: center;
 }
@@ -935,7 +935,7 @@ a.signup-button:hover {
     position: absolute;
     left: -80px;
     top: 55px;
-    background: black;
+    background: #454545;
     margin:0;
     padding: 0;
     float: left;
@@ -953,7 +953,7 @@ a.signup-button:hover {
     float: left;
 }
 .icon_bar #friendRequests {
-	background: black;
+	background: #454545;
 	padding: 5px 5px 10px 10px;
 	min-height: 100%;
 	font-size: 14px;
@@ -991,7 +991,7 @@ html #friendRequests ul li .sub-setting2 li a{
     color: white;
 }
 html .icon_bar ul li .sub-settings li a:hover {
-    background: #e0e0e0;
+    background: #333;
 }
 html .icon_bar ul li .sub-settings .first-setting a{
     margin-bottom: 0px;
