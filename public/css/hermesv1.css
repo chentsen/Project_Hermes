@@ -216,13 +216,14 @@ input[type=text]:first,input[type=password]:first {
     color: white;
 }
 .big_name {
-text-transform:capitalize;
+text-transform: capitalize;
 float: left;
 width: 443px;
 margin-bottom: 2px;
 }
 .user_details {
 	margin-bottom: 10px;
+	text-transform: capitalize;
 }
 .profile .profile_leftCol {
     float: left;
@@ -279,9 +280,8 @@ margin-bottom: 2px;
     background-repeat: no-repeat;
     background-position: 85px 9px;
 }
-
 .profile-about-me {
-	padding: 10px;
+	padding: 20px 0px 10px 10px;
 }
 .profile_tags {
     min-height: 306px;
@@ -290,7 +290,6 @@ margin-bottom: 2px;
     background-repeat: no-repeat;
     background-position: 46px 9px;
 }
-
 .profileTagWrapper {
 	margin-top: 10px;
 }
@@ -308,14 +307,12 @@ margin-bottom: 2px;
 .upcoming_events .view-events {
 	text-align: center;
 }
-
 .upcoming_events {
 	position: relative;
 	background: url('../images/upcoming-events-line.png');
 	background-repeat: no-repeat;
 	background-position: 166px 14px;
 }
-
 .friends_block {
 	position: relative;
 	background: url('../images/friends-line.png');
@@ -356,12 +353,11 @@ margin-bottom: 2px;
 .user_info h2 {
     float: left;
     text-transform: capitalize;
-    }
+}
 .user_addFriend, .user_viewProfile {
     float: right;
     margin-left: 10px;
-    line-height: 22px;
-    
+    line-height: 22px;  
 }
 .search-wrapped {
     min-height: 500px;
@@ -382,7 +378,6 @@ margin-bottom: 2px;
     cursor: pointer;    
     float: left;
 }
-    
 .user-info {
 	float: right;
 	width: 540px;
@@ -416,8 +411,7 @@ margin-bottom: 2px;
     margin-left: 10px;
     color: #D9DBDF;
 }
-.user_addFriend a, .user_viewProfile a
-{
+.user_addFriend a, .user_viewProfile a {
     font-size: 16px;
     color: orange;
     float: right;
@@ -477,7 +471,6 @@ a.attend-button:hover {
     float: left;
     width: 140px;
 }
-
 .user_result img {
 	float: left;
 }
