@@ -1536,15 +1536,18 @@ ul.as-selections {
 	background-position: 5px 8px;
 	margin-top: 5px;
 }
-
+.event_self {
+	display: block;
+	background-color: #24a3df;
+	color: #FFFFFF;
+	font-size: 22px;
+	float: left;
+}
 .event .interested_list {
     margin-top: 10px;
     overflow: hidden;
 }
-.event .interested_list .waitingList img,
-.event .event_wall .wall_image img{
 
-}
 .event .interested_list .waitingList a {
     color: orange;
 }
