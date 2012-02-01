@@ -1171,7 +1171,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   width: 179px;
 }
 
-#wall_addPost:focus {
+#wall_addPost input:focus {
   height: 35px;
   display: block;
   background: black;
@@ -1180,7 +1180,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
   margin: 0px;
   float: left;
   width: 179px;
-}
 }
 
 .index #register {
