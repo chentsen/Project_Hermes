@@ -1166,8 +1166,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: #454545;
   color: white;
   font-weight: 500;
-  padding: 0px 42px;
   margin: 0px;
+  float: left;
+  width: 179px;
 }
 .index #register {
    width: 201px;
@@ -1336,6 +1337,10 @@ ul.as-selections {
 
 .profile_tags .tags_base {
 	padding: 10px 0px 0px 10px;
+}
+
+.profile_tags .tags_base h4 {
+	font-size: 16px;
 }
 
 .profile ul.as-selections li.as-selection-item,
@@ -1632,7 +1637,7 @@ ul.as-selections {
 .event .event_wall #wall_comment {
     float: left;
     margin: 0px;
-    width: 475px !important;
+    width: 465px !important;
     border-right: none !important;
 }
 
