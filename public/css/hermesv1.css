@@ -1489,7 +1489,7 @@ ul.as-selections {
 	float: left;
 	width: 180px;
 }
-.event .event_right .event_self {
+.event .event_self {
     color: white;
     float: left;
     height: 30px;
