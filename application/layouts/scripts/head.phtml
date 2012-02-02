@@ -11,8 +11,10 @@
           ->appendStylesheet($this->baseUrl('css/hermesvy.css'))
           ->appendStylesheet($this->baseUrl('css/hermesv1.css')) ; ?>
   <?php echo $this->headLink() ?>
-  <?php echo $this->jQuery()->enable()->uiEnable(); ?>
   <?php $this->headScript()
+          ->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+          ->appendFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js')
+         
           ->appendFile($this->baseUrl('js/jquery.cookie.js'))
           ->appendFile($this->baseUrl('js/ptv1.js'))
        
@@ -20,7 +22,8 @@
           ->appendFile($this->baseUrl('js/tags.js'))
           ->appendFile($this->baseUrl('js/jquery.blockUI.js'))
           ->appendFile($this->baseUrl('js/dialog.js'))
-          ->appendFile($this->baseURL('js/fb_interface.js'));
+          ->appendFile($this->baseURL('js/fb_interface.js'))
+          ->appendFile($this->baseURL('js/login.js'));
             //http://code.drewwilson.com/entry/autosuggest-jquery-plugin
     ?>
   

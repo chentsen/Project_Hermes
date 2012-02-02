@@ -11,7 +11,7 @@
             <ul class="top-bar">
                 <li class="friends-button">
                   
-                      <img height="50" src="<?= $this->baseUrl('images/placeholder.png') ?>" />
+                      <img height="50" src="<?= $this->baseUrl('images/friends-icon.png') ?>" />
 					  
 					  <ul class="sub-setting2">
 						<?php $auth = Zend_Auth::getInstance(); 
@@ -31,7 +31,7 @@
                    
                      <ul class="sub-settings">
                          <li class="first-setting"><a href="<?= $this->url(array('controller'=>'account-edit','action'=>'index')) ?>">Edit Account Info</a></li>
-                         <li class="last-setting"><a href="<?= $this->url(array('controller'=>'index','action'=>'logout')) ?>">Logout</a></li>
+                         <li class="last-setting"><a onclick = "Login.logout()"/>Logout</a></li>
                      </ul>
                  </li>
             </ul>

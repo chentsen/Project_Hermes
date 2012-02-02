@@ -11,6 +11,7 @@
 								$toggle = '';
 								$toggleArrow = '';
 							}
+
 						?>
 							<? if($this->isOwn) {?>
 							       <div class ="tags <?=$toggle ?>" id="tag_<?=str_replace(' ','_',$tag->getTagName());?>" onclick = 'Tags.toggleTag("tag_<?=str_replace(' ','_',$tag->getTagName());?>")'>
@@ -32,7 +33,10 @@
 				}
 				else
 				{
-				  echo "<h3>No Tags Available</h3>";  
+			   if($this->isOwn)
+				  echo "<div class='no-tags-available'><h4>You have no tags! Enter some below.</h4></div>";  
+			   else 
+				  echo "<h4>No tags available</h4>";
 				}
 				?>		  
 		  	</div>

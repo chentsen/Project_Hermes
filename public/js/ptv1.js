@@ -88,30 +88,23 @@ $(document).ready(function(){
 					 
 					 $('input[type="text"]').addClass('removebg');	  
 				}
-    /** drop down menu settings ***/
     
-    $('html .icon_bar ul li .sub-settings li a:last').css({
-	'border-bottom-right-radius' : '5px',
-	'border-bottom-left-radius' : '5px'
-	 
-      }  
-    );
     /***** click menu top *****/
+	$('.icon_bar ul .friends-button').click(function(){
+        $(this).find('ul.sub-setting2').toggle('fast');
+		$('ul.sub-settings').hide();
+        //$(this).toggleClass('icon_bar_bg');
+    });
+	
    $('.icon_bar ul .settings-button').click(function(){
-        $(this).find('ul.sub-settings').show('fast');
-        $(this).toggleClass('icon_bar_bg');
+        $(this).find('ul.sub-settings').toggle('fast');
+       $('ul.sub-setting2').hide();
     });
-   $('.icon_bar ul .friends-button').click(function(){
-        $(this).find('ul.sub-setting2').show('fast');
-        $(this).toggleClass('icon_bar_bg');
-    });
-
-    $(document).click(function(){  
-		 $('ul.sub-settings').hide(); //hide the button
-	  });
-	$(document).click(function(){  
-		 $('ul.sub-setting2').hide(); //hide the button
-	  });
+   
+   $('ul.sub-setting2').hide();
+   $('ul.sub-setting2').hide();
+   
+    //$('.icon_bar ul .settings-button ul.sub-settings').hide();
   
     $('.eventFeedObject:last-child').css({
         'border-bottom-right-radius':'5px',
@@ -154,7 +147,7 @@ $(document).ready(function(){
         
        
         //registration page
-      function BdOrange(nClass, rClass){
+     /* function BdOrange(nClass, rClass){
            
           $(nClass).focus(function(){
           $(this).addClass('change_border_color')
@@ -180,7 +173,7 @@ $(document).ready(function(){
             
         } 
         BdRemove('.profile #content_area .tag_input');
-          
+          */
             /****** events page *******/
      //$( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});
       

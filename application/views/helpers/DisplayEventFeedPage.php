@@ -67,8 +67,10 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					{ echo "Event has not begun";}
 					else 
 					{ echo "Event has ended";}
+
 					echo '</h2></div>';
 					echo '<div class="event_date"><h2>'.$feedObject->getDate()->format('M d, Y').'</h2></div>';
+
 					
 					echo "<div class='event_location'><h2>".$feedObject->getEvent()->getLocation()."</h2></div>
 							<div class='event_location'><h2>".$feedObject->getEvent()->getLongDescription()."</h2></div>
