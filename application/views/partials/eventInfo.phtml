@@ -21,13 +21,13 @@
             </div>
             <div class="event_right">
             <div class='event_date'>
-                <h2><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h2>
+                <h4><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h4>
             </div>
              <div class='event_place'>
-                <h2><?= $this->event->getLocation() ?> </h2> 
+                <h4><?= $this->event->getLocation() ?> </h4> 
             </div>
                 <div class="event_location">
-                    <h2><?= $this->event->getLongDescription() ?></h2>
+                    <h4><?= $this->event->getLongDescription() ?></h4>
                 </div>
             </div>
         </div>
