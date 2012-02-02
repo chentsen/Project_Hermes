@@ -1509,15 +1509,15 @@ ul.as-selections {
     color: #ffffff;
 }
 /***** event page ******/
-.event .event_header {
+.event_header {
 /*    margin: 0px 0px 5px 0;*/
 /*    height: 40px;*/
 }
-.event .event_header .event_title {
+.event_header .event_title {
     float: left;
     margin-bottom: 10px;
 }
-.event .event_right .event_self {
+.event_right .event_self {
     color: white;
     float: right;
     height: 30px;
@@ -1528,35 +1528,35 @@ ul.as-selections {
     padding: 0px 30px;
     margin-right: 2px;
 }
-.event .event_main {
+.event_main {
     overflow: hidden;
     width: 640px;
 }
-.event .event_main .event_img {
+.event_main .event_img {
     float: left;
     padding: 0px 15px 0px 5px;
 }
-.event .event_main .event_img img{ 
+.event_main .event_img img{ 
 }
-.event .event_main .event_description {
+.event_main .event_description {
     float: right;
 }
-.event .event_main .event_right {
+.event_main .event_right {
     width: 440px;
     float: left;
 }
-.event .event_main h2 {
+.event_main h2 {
     font-size: 20px;
     padding: 5px 0;
     font-weight: 500;
 }
-.event .event_main .event_date h2 {
+.event_main .event_date h2 {
     margin-left: 35px;
 }
-.event .event_main .event_place h2{
+.event_main .event_place h2{
     margin-left: 35px;
 }
-.event .event_main .event_location h2{
+.event_main .event_location h2{
     margin-left: 35px;    
 }
 .event_date {
@@ -1580,27 +1580,27 @@ ul.as-selections {
 	margin-top: 5px;
 }
 
-.event .interested_list {
+.interested_list {
     margin-top: 10px;
     overflow: hidden;
 }
-.event .interested_list .waitingList img,
-.event .event_wall .wall_image img{
+.interested_list .waitingList img,
+.event_wall .wall_image img{
 	margin: 0px 10px 10px 0px;
 }
-.event .interested_list .waitingList a {
+.interested_list .waitingList a {
     color: orange;
 }
-.event .interested_list .waitingList{
+.interested_list .waitingList{
     float: left;
     text-align: center;
     margin: 10px 0px;
 }
-.event .interested_list .waitingList .event_allow {
+.interested_list .waitingList .event_allow {
     color: #FF8600;
     height: 16px;
 }
-.event .interested_list .waitingList .waitingImg {
+.interested_list .waitingList .waitingImg {
     position: relative;
 }
 .waiting-details {
@@ -1609,8 +1609,8 @@ ul.as-selections {
 .waiting-item {
 	float: left;
 }
-.event .interested_list .waitingList .waitingImg span,
-.event .event_wall .wall_image span
+.interested_list .waitingList .waitingImg span,
+.event_wall .wall_image span
 {
     position: absolute;
     right: 0px;
@@ -1620,7 +1620,7 @@ ul.as-selections {
     background: green;
     border-radius: 5px;
 }
-.event .event_wall .wall_title {
+.event_wall .wall_title {
     font-size: 28px;
     margin-bottom: 15px;
     position: relative;
@@ -1628,42 +1628,42 @@ ul.as-selections {
     background-repeat: no-repeat;
     background-position: 63px 13px;
 }
-.event .event_wall .wall_image {
+.event_wall .wall_image {
     position: relative;
     float: left;
 }
-.event .event_wall .wall_name {
+.event_wall .wall_name {
     font-size: 18px;
     float: left;
     margin: 15px 10px 10px 20px;
 }
-.event .event_wall .posts {
+.event_wall .posts {
     overflow: hidden;
 }
-.event .event_wall .wallpost {
+.event_wall .wallpost {
     float: left;
     position: relative;
     width: 640px;
     margin-bottom: 10px;
 }
-.event .event_wall .wall_text {
+.event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
     margin: 15px 0px 0px 20px;
     font-size: 18px;
     width: 457px;
 }
-.event .event_wall .wallpost a{
+.event_wall .wallpost a{
     margin-left: 7px;
     color: #454545;
     font-size: 14px;
     text-decoration: underline;
 }
-.event .event_wall .wallpost a:hover {
+.event_wall .wallpost a:hover {
     
     
 }
-.event .event_wall #wall_comment {
+.event_wall #wall_comment {
     float: left;
     margin: 0px;
     width: 475px !important;
@@ -1673,13 +1673,13 @@ ul.as-selections {
 #wall_comment:focus {
 	border: solid 1px #454545;
 }
-.event .event_wall #Wall {
+.event_wall #Wall {
     margin: 0;
 }
-.event .event_wall .wall_text {
+.event_wall .wall_text {
 	position: relative;
 }
-.event .event_wall .delete_post {
+.event_wall .delete_post {
     position: absolute;
     right: 7px;
     top: 0px;
@@ -1687,7 +1687,7 @@ ul.as-selections {
     text-indent: -9999px;
 	
 }
-.event .event_wall .delete_post:hover {
+.event_wall .delete_post:hover {
     background: url('../images/exit-button.png') no-repeat center center;
 }
 
