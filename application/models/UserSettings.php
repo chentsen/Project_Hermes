@@ -239,7 +239,8 @@ class Application_Model_UserSettings{
 			return array('user_profile'=>$user_profile,'user'=>$user);
 			//var_dump($user_profile);
 		    } catch (Exception $e) {
-			error_log($e);
+			echo 'SOMETHING IS WRONG';
+			echo $e->getTraceAsString();
 			$user = null;
 		    }
 		    
