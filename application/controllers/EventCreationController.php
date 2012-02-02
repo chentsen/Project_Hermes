@@ -69,7 +69,7 @@ class EventCreationController extends Hermes_Controller_SessionController{
 	    			echo 'Failure';
 	    			$this->view->errors = array("emailExists"=>array("Something went wrong!"));
 	    		}
-	    		//$this->_helper->redirector('index','profile');
+	    		$this->_helper->redirector('index','profile');
 	    	}	
 	}
 

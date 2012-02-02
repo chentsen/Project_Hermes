@@ -51,6 +51,8 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 			}
 			$mail->setSubject($subject);
 			$mail->send();  
+			
+			
     }
 	public function sendEmailNotification ($raw, $user, $emailHelper, $identity, $subject, $email) {
 		$dateArray = explode('/',$raw['createEvent_date']);
@@ -65,6 +67,7 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 																			'private'=>$private
 																			));
 		$this->sendEmail($subject, $email, $htmlBody, $identity);
+	
 	}
     
 }
