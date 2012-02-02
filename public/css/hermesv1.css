@@ -373,7 +373,7 @@ margin-bottom: 2px;
     background: #FF8600;
     color: white;
     padding: 5px 10px;
-    margin: 7px 5px 0px 10px;
+    margin: 5px 5px 0px 10px;
     overflow: auto;
     cursor: pointer;    
     float: left;
@@ -381,10 +381,9 @@ margin-bottom: 2px;
 .user-info {
 	float: right;
 	width: 540px;
-	border-bottom: solid 1px #D9DBDF;
 	background-image: url('../images/search-user-line.png');
 	background-repeat: no-repeat;
-	background-position: 10px 10px;
+	background-position: 0px 26px;
 	height: 30px;
 }
 a.search-name {
@@ -411,7 +410,7 @@ a.search-name {
     width: 30px;
     font-size: 16px;
     float: left;
-    padding: 4px 5px 0px 10px;
+    padding: 3px 5px 0px 10px;
     margin-left: 10px;
     color: #B4BBCD;
 }
@@ -424,15 +423,23 @@ a.add-friend {
 	color: #FFFFFF;
 	background-color: #94CA15;
 	display: block;
-	padding: 5px 20px;
 	float: right;
+	height: 22px;
+	width: 50px;
+	line-height: 23px;
+	font-size: 15px;
+	text-align: center;
 }
 a.add-friend:hover {
 	color: #FFFFFF;
 	background-color: #81B012;
 	display: block;
-	padding: 5px 20px;
 	float: right;
+	height: 22px;
+	width: 50px;
+	line-height: 23px;
+	font-size: 15px;
+	text-align: center;
 }
 a.attend-button {
 	color: #FFFFFF;
@@ -477,6 +484,7 @@ a.attend-button:hover {
 }
 .user_result img {
 	float: left;
+	margin-top: 4px;
 }
 /**** cms pages *****/
 .cms-title {font-size: 40px; margin-bottom: 15px; margin-left: 10px;}
