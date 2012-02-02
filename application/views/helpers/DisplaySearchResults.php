@@ -102,9 +102,9 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                         //echo '<div class="indiv-result" style="">';
 						echo '<img src="/img/profile-pic/uid/'.$email.'" height=75  width=75/ </a>';
 						echo "<div class='user-info'>
-								<div style='float: left;'><a class='search-name' href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
+								<a class='search-name' href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
 								<span>{$user->result->getCity()}</span>
-								<div class='search-common-tags'>{$user->getCount()} tags in common</div></div>";
+								<div class='search-common-tags'>{$user->getCount()} tags in common</div>";
 
 			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
 				echo "<div class = 'user_addFriend' style='float: right'>";
