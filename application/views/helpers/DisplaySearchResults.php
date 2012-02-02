@@ -104,7 +104,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 
 						echo '<img src="/img/profile-pic/uid/'.$email.'" height=75  width=75/ </a>';
 						echo "<div class='user-info'>
-								<div style='float: left;'><a href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
+								<div style='float: left;'><a class='search-name' href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
 								<span>{$user->result->getCity()}</span>
 								<div class='search-common-tags'>{$user->getCount()} tags in common</div></div>";
 
