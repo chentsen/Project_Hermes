@@ -228,7 +228,8 @@ class Application_Model_UserSettings{
 		try{
 			$user = $facebook->getUser();
 		}catch (FacebookApiException $e){
-			error_log($e);
+			echo 'SOMETHING IS WRONG';
+			echo $e->getTraceAsString();
 			$user = null;
 		}
 		if ($user) {
