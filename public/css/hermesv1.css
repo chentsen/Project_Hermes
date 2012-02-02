@@ -1513,11 +1513,11 @@ ul.as-selections {
 /*    margin: 0px 0px 5px 0;*/
 /*    height: 40px;*/
 }
-.event .event_header .event_title {
+.event_header .event_title {
     float: left;
     margin-bottom: 10px;
 }
-.event .event_right .event_self {
+.event_right .event_self {
     color: white;
     float: right;
     height: 30px;
@@ -1528,35 +1528,35 @@ ul.as-selections {
     padding: 0px 30px;
     margin-right: 2px;
 }
-.event .event_main {
+.event_main {
     overflow: hidden;
     width: 640px;
 }
-.event .event_main .event_img {
+.event_main .event_img {
     float: left;
     padding: 0px 15px 0px 5px;
 }
-.event .event_main .event_img img{ 
+.event_main .event_img img{ 
 }
-.event .event_main .event_description {
+.event_main .event_description {
     float: right;
 }
-.event .event_main .event_right {
+.event_main .event_right {
     width: 440px;
     float: left;
 }
-.event .event_main h2 {
+.event_main h2 {
     font-size: 20px;
     padding: 5px 0;
     font-weight: 500;
 }
-.event .event_main .event_date h2 {
+.event_main .event_date h2 {
     margin-left: 35px;
 }
-.event .event_main .event_place h2{
+.event_main .event_place h2{
     margin-left: 35px;
 }
-.event .event_main .event_location h2{
+.event_main .event_location h2{
     margin-left: 35px;    
 }
 .event_date {
