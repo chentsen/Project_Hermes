@@ -1,23 +1,24 @@
 <div id="view-content">
     <div class="view-wrapped">	 
         <div class="event_main">
-            <h2 class="event_title"><?= $this->event->getCreator()->getFirstName()." wants to ".$this->event->getShortDescription() ?></h2>
+            <h1 class="event_title"><?= $this->event->getCreator()->getFirstName()." wants to ".$this->event->getShortDescription() ?></h1>
             <div class="event-left">
             <div class="event_img">
                  <img src="/img/profile-pic/uid/<?=$this->identity ?>" height=180  width=180/>
             </div>
-            <div class="event_self">Event Member</div>
             </div>
             <div class="event_right">
+                
+            <div class="event_self">Event Member</div>
             <div class='event_date'>
-                <h4><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h4>
+                <h2><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h2>
             </div>
              <div class='event_place'>
-                <h4><?= $this->event->getLocation() ?> </h4>
+                <h2><?= $this->event->getLocation() ?> </h2>
                 
             </div>
                 <div class="event_location">
-                    <h4><?= $this->event->getLongDescription() ?></h4>
+                    <h2><?= $this->event->getLongDescription() ?></h2>
                 </div>
             </div>
         </div>

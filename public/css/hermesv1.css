@@ -1706,6 +1706,8 @@ a.remove-anchor:hover {
 }
 
 a.attend-button {
+		float: right;
+		color: red;
 	display: block;
 	font-size: 36px;
 }
