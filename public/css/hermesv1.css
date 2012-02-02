@@ -382,6 +382,10 @@ margin-bottom: 2px;
 	float: right;
 	width: 540px;
 	border-bottom: solid 1px #D9DBDF;
+	background-image: url('../images/search-user-line.png');
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	height: 30px;
 }
 a.search-name {
 	color: #454545;
@@ -409,7 +413,7 @@ a.search-name {
     float: left;
     padding: 4px 5px 0px 10px;
     margin-left: 10px;
-    color: #D9DBDF;
+    color: #B4BBCD;
 }
 .user_addFriend a, .user_viewProfile a {
     font-size: 16px;
