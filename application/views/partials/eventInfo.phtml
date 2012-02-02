@@ -1,15 +1,25 @@
 <div id="view-content">
     <div class="view-wrapped">	 
         <div class="event_main">
-            <h1 class="event_title"><?= $this->event->getCreator()->getFirstName()." wants to ".$this->event->getShortDescription() ?></h1>
+            <h1 class="event_title"><?php if($this->event->getCreator()->getEmail() == $this->identity) {
+                echo "I want to " .$this->event->getShortDescription();
+                } else {    
+                echo $this->event->getCreator()->getFirstName()." wants to ".$this->event->getShortDescription();
+                }
+                ?></h1>
             <div class="event-left">
             <div class="event_img">
                  <img src="/img/profile-pic/uid/<?=$this->identity ?>" height=180  width=180/>
             </div>
             </div>
             <div class="event_right">
-                
-            <div class="event_self">Event Member</div>
+                <div class="event_self">
+            <?php if ($this->event->getCreator()->getEmail() == $this->identity) {
+                echo "Event Creator";
+            } else {
+                echo "Event Member";
+            } ?>
+            </div>
             <div class='event_date'>
                 <h2><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h2>
             </div>
