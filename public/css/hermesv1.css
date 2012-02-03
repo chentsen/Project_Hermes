@@ -1491,13 +1491,13 @@ ul.as-selections {
     color: #ffffff;
 }
 /***** event page ******/
-.event .event_title {
+.event_title {
     float: right;
     margin-bottom: 20px;
     width: 455px;
     padding: 0px 0px 0px 15px;
 }
-.event .event-left {
+.event-left {
 	float: left;
 	width: 180px;
 }
@@ -1556,13 +1556,6 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 5px 8px;
 	margin-top: 5px;
-}
-.event_self {
-	display: block;
-	background-color: #24a3df;
-	color: #FFFFFF;
-	font-size: 22px;
-	float: left;
 }
 .interested_list {
     margin-top: 10px;
