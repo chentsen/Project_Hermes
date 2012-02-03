@@ -10,15 +10,15 @@
          </div> 
 <h1>Create an Event</h1>
 <ul class="centerform">
-    <li class=""><div class="float_left createEvent_text">I want to</div><?= $this->element->createEvent_shortDescription ?></li>
+    <li class="create-text"><div class="float_left createEvent_text">I want to</div><?= $this->element->createEvent_shortDescription ?></li>
         
         <li class="create_date"><div class="float_left createEvent_text">On</div><div class="form_date"><?= $this->element->createEvent_date; ?></div></li>
-        <li class=""><div class="float_left createEvent_text">@</div><?= $this->element->createEvent_location ?></li>
-			 <li class=""><?= $this->element->image; ?></li>
+        <li class="create-text"><div class="float_left createEvent_text">@</div><?= $this->element->createEvent_location ?></li>
+			 <li class="create-text"><?= $this->element->image; ?></li>
 			 
 	<li class="invisible"><div class="float_left createEvent_text">And it</div><?= $this->element->createEvent_private ?>be private.</li>
        
-        <li class="invisible"><?= $this->element->createEvent_longDescription; ?></li>
+        <li class="invisible create-text"><?= $this->element->createEvent_longDescription; ?></li>
 
 </ul>
 			<div class="show-advanced"><a href="#" onclick="Dialog.showAdvanced();">Include more details</a></div>

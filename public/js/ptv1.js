@@ -223,9 +223,12 @@ $(document).ready(function(){
     });
     $('.noSelect').disableTextSelect();
     //*** end disable function
-    
-
+    //Non Modal Input fields
+   $('#email').defaultText({text: 'Email'});
+   $('#password').defaultText({text: 'Password'});
+   
 });
+
 
 var Display = {
         hideDisplay:function(parent){

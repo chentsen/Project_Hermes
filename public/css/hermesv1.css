@@ -14,7 +14,7 @@ select {
 	
 }
 #editAccount textarea {
-        margin: 10px 0;
+     
         width: 245px;
 	font-size: 18px; 
         background: #ffffff;
@@ -22,7 +22,6 @@ select {
         padding: 5px;    
 }
 textarea {
-        margin: 10px 0;
         width: 250px;
 	font-size: 24px; 
         background: #ffffff;
@@ -30,11 +29,13 @@ textarea {
         padding: 10px;    
         border: 1px solid #B4BBCD;
 }
+
 #content_area input[type=text],
 #content_area input[type=password]{
     margin: 5px 0;
     padding: 5px 0px 5px 5px;
     width: 200px;
+	
 }
 input[type=text], input[type=password] {
 	height: 23px;
@@ -44,6 +45,7 @@ input[type=text], input[type=password] {
         outline: 0;
         border: 1px solid #B4BBCD;
         padding: 0 10px;
+		
 }
 
 input:focus {
@@ -1073,15 +1075,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
     margin: 5px 10px 5px 5px;
 }
 /**app style login**/
-.email input{
-    background: url("../images/email-form.png") no-repeat 10px center #f8f8f8;
-}
-.password input {
-     background: url("../images/password-form.png") no-repeat 10px center #f8f8f8;
-}
-.removebg {
-    background-image: none !important;
-}
+
+
+
 .remove_top_border {
     border-top: none !important;
 }
@@ -1192,32 +1188,21 @@ html .icon_bar ul li .sub-settings .last-setting a{
    margin-right: 10px;
 }
 /** app style registration **/
-#registration .first_name input{ 
-    background: url("../images/first-name-form.png") no-repeat 10px center #f8f8f8;
+/** input fields **/
+.email,
+.password,
+.first_name,
+.beta-key,
+.last_name,
+.city,
+.password,
+.password_again,
+.reglist,
+.create-text
+{ position: relative;}
 
-}
-#registration #betakey {
-    background: url("../images/beta-key-form.png") no-repeat 10px center #f8f8f8;
 
-    
-}
-#registration .last_name input{
-   background: url("../images/last-name-form.png") no-repeat 10px center #f8f8f8;
 
-}
-#registration #city{
-    background: url("../images/city-form.png") no-repeat 10px center #f8f8f8;
-
-}
-#registration .gender input{
-    }
-#registration .password input {
-
-   }
-#registration .password_again input{
-
-    background: url("../images/password-again-form.png") no-repeat 10px center #f8f8f8;
-}
 
 .inner_button #register {
 	margin-top: 0px !important;

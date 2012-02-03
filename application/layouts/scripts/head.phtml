@@ -28,6 +28,7 @@
           ->appendFile($this->baseUrl('js/dialog.js'))
           ->appendFile($this->baseURL('js/fb_interface.js'))
           ->appendFile($this->baseURL('js/login.js'))
+          ->appendFile($this->baseURL('js/input-text.js'))
           ->appendScript("window.appID='{$appId}';window.fbAsyncInit = function() {
                 FB.init({
                     appId      : window.appID,
