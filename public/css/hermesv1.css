@@ -10,8 +10,14 @@ div { display: block; }
 select {
     margin: 10px 10px 10px 15px;
 }
+
+.centerform #gender {
+	margin: 10px 0px 0px 5px;
+	float: left;
+	font-size: 16px;
+	width: 136px;
+}
 #editAccount{
-	
 }
 #editAccount textarea {
         margin: 10px 0;
@@ -28,24 +34,23 @@ textarea {
         background: #ffffff;
         outline: 0;
         padding: 10px;    
-        border: 1px solid #B4BBCD;
+        border: 1px solid #D9DBDF;
 }
 #content_area input[type=text],
 #content_area input[type=password]{
-    margin: 5px 0;
+    margin: 10px 0 0 0;
     padding: 5px 0px 5px 5px;
-    width: 200px;
 }
 input[type=text], input[type=password] {
 	height: 23px;
 	font-size: 18px; 
         line-height: 18px;
-	border: none;
-        outline: 0;
-        border: 1px solid #B4BBCD;
+        border: 1px solid #D9DBDF;
         padding: 0 10px;
 }
-
+#content_area input:focus {
+	border: solid 1px #7a7f8a;
+}
 input:focus {
 	border: solid 1px #7a7f8a;
 }
@@ -156,14 +161,14 @@ input[type=text]:first,input[type=password]:first {
 	margin-left: 20px;
 }
 .account-edit .upload-image {
-    border-right: 1px solid #B4BBCD;
+    border-right: 1px solid #D9DBDF;
     width: 285px;
 }
 .account-edit .upload-image h1{
     text-align: center;
 }
 .account-edit .upload-image img {
-    margin: 20px 0 0 65px;
+    margin: 20px 0 0 55px;
 }
 .account-edit #editAccount h1 {
 	margin-bottom: 15px;
@@ -172,7 +177,6 @@ input[type=text]:first,input[type=password]:first {
 #profilePic {   
     width: 250px;
     padding-right: 22px;
-    
 }
 #profilePic li {
     margin-left: 40px;
@@ -193,7 +197,6 @@ input[type=text]:first,input[type=password]:first {
 }
 #editAccount li{
     width: 275px;
-    
 }
 #editAccount #firstName,
 #editAccount #lastName,
@@ -213,7 +216,7 @@ input[type=text]:first,input[type=password]:first {
     color: white;
 }
 .big_name {
-text-transform:capitalize;
+text-transform: capitalize;
 float: left;
 width: 443px;
 margin-bottom: 2px;
@@ -245,10 +248,11 @@ margin-bottom: 2px;
 	border-top: none;
 }
 .profile_eventList .eventFeedObject {
-
 }
 .profile_eventList .eventFeedObject a {
 	color: #454545;
+	float: right;
+	width: 120px;
 }
 
 .profile_eventList .mini-feed {
@@ -264,7 +268,7 @@ margin-bottom: 2px;
     float: left;
     width: 445px;
     overflow: hidden;
-    border-left: solid 1px #b4bbcd;
+    border-left: solid 1px #D9DBDF;
     padding: 0px 0px 0px 12px;
 }
 .profileDesc {
@@ -276,9 +280,8 @@ margin-bottom: 2px;
     background-repeat: no-repeat;
     background-position: 85px 9px;
 }
-
 .profile-about-me {
-	padding: 10px;
+	padding: 20px 0px 10px 10px;
 }
 .profile_tags {
     min-height: 306px;
@@ -287,7 +290,6 @@ margin-bottom: 2px;
     background-repeat: no-repeat;
     background-position: 46px 9px;
 }
-
 .profileTagWrapper {
 	margin-top: 10px;
 }
@@ -300,27 +302,17 @@ margin-bottom: 2px;
 .profile_header {
     overflow: hidden;
 }
-.friendStatus a{
-    color: orange; 
-    font-size: 36px;
-    font-weight: bold;
-}
-.friendStatus {
-    float: right;
-}
 .friend_list {float: left; margin: 12px 14px 2px 14px;}
 .friends_block .view-friends,
 .upcoming_events .view-events {
 	text-align: center;
 }
-
 .upcoming_events {
 	position: relative;
 	background: url('../images/upcoming-events-line.png');
 	background-repeat: no-repeat;
 	background-position: 166px 14px;
 }
-
 .friends_block {
 	position: relative;
 	background: url('../images/friends-line.png');
@@ -361,12 +353,11 @@ margin-bottom: 2px;
 .user_info h2 {
     float: left;
     text-transform: capitalize;
-    }
+}
 .user_addFriend, .user_viewProfile {
     float: right;
     margin-left: 10px;
-    line-height: 22px;
-    
+    line-height: 22px;  
 }
 .search-wrapped {
     min-height: 500px;
@@ -381,9 +372,8 @@ margin-bottom: 2px;
 .noMatch {
     background: #FF8600;
     color: white;
-    float: left;
     padding: 5px 10px;
-    margin: 5px 5px 0px 10px;
+    margin: 7px 5px 0px 10px;
     overflow: auto;
     cursor: pointer;    
     float: left;
@@ -391,9 +381,10 @@ margin-bottom: 2px;
 .user-info {
 	float: right;
 	width: 540px;
+	border-bottom: solid 1px #D9DBDF;
 	background-image: url('../images/search-user-line.png');
 	background-repeat: no-repeat;
-	background-position: 0px 26px;
+	background-position: 10px 10px;
 	height: 30px;
 }
 a.search-name {
@@ -418,13 +409,13 @@ a.search-name {
 .user_result, .event_result {overflow: auto; padding: 10px;}
 .user_like {
     width: 30px;
-    font-size: 12px;
+    font-size: 16px;
     float: left;
-    padding: 3px 5px 0px 10px;
+    padding: 4px 5px 0px 10px;
     margin-left: 10px;
+    color: #B4BBCD;
 }
-.user_addFriend a, .user_viewProfile a
-{
+.user_addFriend a, .user_viewProfile a {
     font-size: 16px;
     color: orange;
     float: right;
@@ -433,23 +424,15 @@ a.add-friend {
 	color: #FFFFFF;
 	background-color: #94CA15;
 	display: block;
+	padding: 5px 20px;
 	float: right;
-	height: 22px;
-	width: 50px;
-	line-height: 23px;
-	font-size: 15px;
-	text-align: center;
 }
 a.add-friend:hover {
 	color: #FFFFFF;
 	background-color: #81B012;
 	display: block;
+	padding: 5px 20px;
 	float: right;
-	height: 22px;
-	width: 50px;
-	line-height: 23px;
-	font-size: 15px;
-	text-align: center;
 }
 a.attend-button {
 	color: #FFFFFF;
@@ -492,10 +475,8 @@ a.attend-button:hover {
     float: left;
     width: 140px;
 }
-
 .user_result img {
 	float: left;
-	margin-top: 4px;
 }
 /**** cms pages *****/
 .cms-title {font-size: 40px; margin-bottom: 15px; margin-left: 10px;}
@@ -514,19 +495,14 @@ a.attend-button:hover {
    .outside .page {}
 /***** landing styles********/
 .index .button input#login {
-	width: 207px;
+	width: 201px;
 	}
 .index form#login { 
     float: left; 
     margin-left: 200px;
     padding: 10px 40px 40px 0px;
 }
-.index input[type="text"],
-.index input[type="password"] {
-		padding-top: 10px !important;
-		font-size: 24px;
 
-}
 .index form#login { 
     float: left; 
     margin-left: 200px;
@@ -534,8 +510,6 @@ a.attend-button:hover {
     /**background: url(../images/or-background.png) no-repeat right center;**/
 }
 .index #registration{float: left; }
-.index #city { /*width: 120px; */}
-.index h1 { color : orange; }
 .cms-text {
     font-size: 16px;
     overflow: auto;
@@ -550,8 +524,7 @@ a.attend-button:hover {
     overflow: auto;
 }
 .out-logo .logo {
-    
-     width: inherit;
+    width: inherit;
     height: inherit;
     display: block;
     background: url('../images/plumetype-flat.png') no-repeat;
@@ -575,14 +548,13 @@ a.attend-button:hover {
     overflow: hidden;
 }
 .out-preview ul {
-    
+
     overflow: hidden;
     margin-bottom: 20px;
     margin-left: 100px;
     
 }
 .out-preview ul li  {
-
     float: left;
 }
 .out-preview ul li h3 {
@@ -600,8 +572,17 @@ a.attend-button:hover {
     margin-top: 20px;
 }
 
-#errors-email, #errors-password {
-	color: #454545;
+#errors-email, #errors-password,
+#errors-password2, #errors-betakey,
+#errors-lastName, #errors-firstName,
+#errors-city
+{
+	color: #FF8600;
+}
+#registration-gender {
+	float: left;
+	margin-top: 10px;
+	font-size: 18px;
 }
 
 .out-signup .alternative {
@@ -611,16 +592,14 @@ a.attend-button:hover {
     
 }
 .index .centerform {
-		width: 210px;
+	width: 201px;
 		
 }
 .index .centerform h1 {
-		margin-bottom: 5px;
-		margin-top: 6px;
-		font-size: 28px;
+	margin-bottom: 5px;
+	font-size: 30px;
 }
 .index .out-signup {
-
     overflow: hidden;
     position: relative;
 }
@@ -641,10 +620,7 @@ a.signup-button:hover {
 }
 
 .index .out-signup h1 {
-    
     font-size: 26px;
-
-
 }
 .index .signup-or {
     position: absolute;
@@ -664,12 +640,10 @@ a.signup-button:hover {
     margin-right: 190px;
 }
 .out-signup a:hover {
-    
 }
 
 /**top menu**/
 #topmenu {
-	
 	float: left;
 }
 #topmenu ul{
@@ -709,7 +683,6 @@ a.signup-button:hover {
     margin-right: 15px;
     float: right;
     width: 250px;
-  
     text-align: right;
 }
 #reg_links li {
@@ -739,17 +712,13 @@ a.signup-button:hover {
 .block-body .friend_list {
 	margin: 5px;
 }
-
-.block-body .friend_name {
-	font-size: 10px;
-}
-
 .right-block .mini-feed a {
 	width: 210px;
+	float: right;
+	min-height: 30px;
 }
 
 .block-body .mini-feed {
-	width: 210px !important;
 }
 
 .create_button {
@@ -770,6 +739,8 @@ a.signup-button:hover {
     float: left;
     width: 270px;
     padding: 0px 0px 0px 12px;
+    border-left: solid 1px #D9DBDF;
+    height: 100%;
 }
 .right-block a {
     color: #454545;
@@ -786,7 +757,7 @@ a.signup-button:hover {
     text-transform: uppercase;
     margin-left: 4px;
     font-weight: 500;
-    }
+}
     
 .block-header {
     padding: 5px;
@@ -804,18 +775,16 @@ a.signup-button:hover {
 }
 /**footer area and footer menu**/
 .twitter_follow{
-  
     width: 135px;
 }
 .fb_like{
-   
     width: 100px;
 }
 #footer_menu {
    font-size:12px;
 }
 #footer_menu .page {
-    border-top: 1px solid #b4bbcd;
+    border-top: 1px solid #D9DBDF;
     overflow: auto;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -834,25 +803,20 @@ a.signup-button:hover {
         font-weight: 600;
         float: left;
 	text-align: left;
-       
         padding: 10px;
 }
 #footer_menu .left_footer li{
-    
 	list-style: none;
 	display: inline;
 	padding: 0px 6px 0px 4px;
         border-right: 1px solid #eee;
         color: #676767;
-	
 }
 #footer_menu .left_footer li a {
     color: #676767;
     text-decoration: none;
-    
 }
-#footer_menu .left_footer li a:hover 
-{
+#footer_menu .left_footer li a:hover {
     text-decoration: underline;
 }
 
@@ -868,13 +832,6 @@ a.signup-button:hover {
         overflow: hidden;
         padding-bottom: 24px;
 }
-/*#view-content {
-    float: left;
-    width: 670px;
-    background: rgba(111,111,111,.2);
-    border-radius: 5px;
-
-}*/
 .view-wrapped {
     width: 650px;
     height: 100% !important;
@@ -882,13 +839,21 @@ a.signup-button:hover {
     overflow: hidden;
     padding: 0px 12px 0px 0px;
     float: left;
-    border-right: solid 1px #B4BBCD;
     min-height: 480px;
 }
 
 .dashboard-title {
 	margin-bottom: 10px;
 }
+
+.my-tags {
+	margin-top: 15px;
+}
+.no-tags-available {
+	margin: 30px 150px 0px 190px;
+	color: #FF8600;
+}
+
 #content-page {
     width: 640px;
     min-height: 500px;
@@ -946,94 +911,69 @@ a.signup-button:hover {
 }
 /***icon bar ****/
 .icon_bar {
-    float: right;
-    height: 60px;
+	float: right;
+	height: 60px;
 }
 .icon_bar .top-bar {
-    height: 50px;
-    margin-top: 7px;
-    
+	height: 50px;
+	margin-top: 7px;
 }
 .icon_bar .top-bar .settings-button,
 .icon_bar .top-bar .notifications-button,
 .icon_bar .top-bar .friends-button{
-    list-style: none;
-    float: left;
-    position: relative; 
-   
+	list-style: none;
+	float: left;
+	position: relative; 
 }
 .icon_bar ul li a {
-    float: left;
+	float: left;
 }
-.icon_bar_bg {
-    background: rgba(47, 47, 47, .2);
-}
-.icon_bar .sub-settings li:hover,
-.icon_bar .sub-settings2 li:hover{
-    background: rgba(47, 47, 47, .2);
-}
-
 .icon_bar ul li .sub-settings {
     position: absolute;
     left: -80px;
-    top: 53px;
-    background: rgba(111, 111, 111, .2);
+    top: 55px;
+    background: #454545;
     margin:0;
     padding: 0;
     float: left;
-    width: 140px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    height: 72px;
+    display: none;
+
 }
 .icon_bar ul li .sub-setting2 {
-		position: absolute;
+    position: absolute;
     left: -140px;
-    top: 53px;
-    background: rgba(111, 111, 111, .2);
+    top: 55px;
+    background: #454545;
     margin:0;
     padding: 0;
     display: none;
     float: left;
-    width: 200px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-
 }
 .icon_bar #friendRequests {
-		background: #454545;
-		margin: 1px 5px 5px 5px;
-		padding: 5px 5px 10px 10px;
-		border-bottom-left-radius: 5px;
-		border-bottom-right-radius: 5px;
-		min-height: 100%;
-		font-size: 14px;
+	background: #454545;
+	padding: 5px 5px 10px 10px;
+	min-height: 100%;
+	font-size: 14px;
 }
-.icon_bar ul.sub-setting2 li.friend-requests
-{
-		width: 200px;
-    margin: 0;
-    padding: 0;
-    clear: both;
-    background: none;
+.icon_bar ul.sub-setting2 li.friend-requests {
+	width: 200px;
+	clear: both;
 }
 .icon_bar ul li .sub-settings li {
-    width: 140px;
     margin: 0;
     padding: 0;
-    clear: both;
-    background: none;
 }
 html .icon_bar ul li .sub-settings li a,
 html .icon_bar ul li .sub-setting2 li a{
-    float: right;
     text-align: right;
-    width: 110px;
     padding: 10px;
     font-size: 14px;
-    margin: 1px 5px 0px 5px;
-    background: #454545;
     color: white;
+}
+html .icon_bar ul li .sub-settings li a {
+		width: 110px;
+}
+html .icon_bar ul li .sub-settings2 li a {	
 }
 
 html #friendRequests ul li .sub-settings li a,
@@ -1044,14 +984,11 @@ html #friendRequests ul li .sub-setting2 li a{
     padding: 10px;
     font-size: 13px;
     font-weight: 600;
-    margin: 1px 5px 0px 5px;
     background: #454545;
     color: white;
 }
-
 html .icon_bar ul li .sub-settings li a:hover {
-    background: #e0e0e0;
-    
+    background: #333;
 }
 html .icon_bar ul li .sub-settings .first-setting a{
     margin-bottom: 0px;
@@ -1063,15 +1000,12 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .friend_name {
 	text-align: center;		
     list-style: none;
-    /*padding: 3px 0 0 3px;*/
-    font-weight: bold;
-    font-size: 13px;
+    font-size: 12px;
 	word-wrap: break-word;
 	margin: 2px 0px 0px 0px;
 }
 
 .friend_pic {
-	
 }
 
 .friend-city {
@@ -1091,21 +1025,19 @@ html .icon_bar ul li .sub-settings .last-setting a{
     min-height: 400px;
 }
 .eventFeedObject, .generalFeedObject {
-    padding: 5px;
+    padding: 6px 0px 6px 5px;
     color: #454545;
-    border-top: 1px solid #b4bbcd;
     overflow: hidden;
 }
 
-.profile .mini-feed {
-		width: 120px;
+.profile_eventList .mini-feed {
+		width: 170px;
 }
 .mini-feed {
-		width: 200px;
+		width: 265px;
 		float: left;
 }
 .mini-feed h4 {
-
 }
 
 .mini-feed a:hover {
@@ -1116,23 +1048,27 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .own-event {
-	float: right;
+	float: left;
 	display: block;
-	background-color: #24A3DF;
+	background-color: #FF8600;
 	color: white;
 	font-size: 11px;
 	line-height: 10px;
 	padding: 3px 3px 3px 3px;
-	margin: 4px 0px 2px 0px;
 }
 
 .profile_eventList .own-event {
 	margin: 4px 0px 0px 2px;
 }
+.profile_eventList .event-side-date {
+	margin: 2px;
+}
 .event-side-date {
 	float: left;
 	margin-top: 5px;
-	font-size: 13px;
+	font-size: 15px;
+	color: #FF8600;
+	margin: 0px 0px 2px 0px;
 }
 .right_col {
     overflow: auto;
@@ -1180,19 +1116,18 @@ html .icon_bar ul li .sub-settings .last-setting a{
     margin: 0px;
     padding: 0px;
     width: 280px;
-    
 }
 .profile li.as-result-item, li.as-message {
-    display: none;
+    
 }
 .profile ul.as-selections li.as-original input {
+    z-index:999999;
     padding-top: 0px;
 }
 .change_border_color {
-    border: 1px solid #B4BBCD !important;
+    border: 1px solid #D9DBDF !important;
 }
 .centerform {
-    
     width: 300px;
 }
 
@@ -1222,26 +1157,31 @@ html .icon_bar ul li .sub-settings .last-setting a{
   padding: 0 50px;
 }
 
-#wall_addPost
-{ 
+#wall_addPost { 
   height: 35px;
   display: block;
   background: #454545;
   color: white;
   font-weight: 500;
-  padding: 0px 36px 0px 36px;
   margin: 0px;
+  float: left;
+  width: 179px;
+}
+
+#wall_addPost:hover {
+  height: 35px;
+  display: block;
+  background: #333;
+  color: white;
+  font-weight: 500;
+  margin: 0px;
+  float: left;
+  width: 179px;
 }
 
 .index #register {
-   width: 209px;
+   width: 201px;
 }
-/**#password {
-    margin-bottom: 0px !important;
-}
-#password2 {
-    margin-top: 0px !important;
-}**/
 .inner_button #login:hover, 
 .inner_button #register:hover, 
 .inner_button #createEvent_submit:hover,
@@ -1250,19 +1190,16 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit:hover,
 #contact_submit:hover,
 #profilePic_submit:hover
-#wall_addPost:hover
-{
-    background: black;
+#wall_addPost:hover {
+    background: #333333;
 }
-.inner_button {  }
+.inner_button {overflow: hidden;}
 .inner_button .register_button {
     float:right;
    }
 .inner_button .register_button a{
     width: inherit;
     text-decoration: none;
-    
-    
 }
 .inner_button .register_button a h1 {
     padding-left: 50px;
@@ -1281,39 +1218,29 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /** app style registration **/
 #registration .first_name input{ 
     background: url("../images/first-name-form.png") no-repeat 10px center #f8f8f8;
-
 }
 #registration #betakey {
     background: url("../images/beta-key-form.png") no-repeat 10px center #f8f8f8;
-
-    
 }
 #registration .last_name input{
    background: url("../images/last-name-form.png") no-repeat 10px center #f8f8f8;
-
 }
 #registration #city{
     background: url("../images/city-form.png") no-repeat 10px center #f8f8f8;
-
 }
 #registration .gender input{
     }
 #registration .password input {
-
    }
 #registration .password_again input{
-
     background: url("../images/password-again-form.png") no-repeat 10px center #f8f8f8;
 }
-
 .inner_button #register {
-	margin-top: 0px !important;
 }
 /** app style event creation page **/
 .create_date {
     position: relative;
 }
-
 #createEvent #createEvent_shortDescription {
     width: 175px;
     float: right;
@@ -1323,8 +1250,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: 175px;
     right: 0;
     top: 0px;
-    margin-left: 5px;
-    position: absolute;
+    margin-left: 18px;
     z-index: 200;
 }
 #createEvent #createEvent_location {
@@ -1340,7 +1266,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #createEvent_submit {
 	padding: 0 93px !important;
 }
-
 #createEvent .centerform {margin: 10px 0px 0px 0px;}
 #createEvent .centerform li {margin: 0px 0px; overflow: hidden;}
 #createEvent .centerform li .createEvent_text { font-size: 18px; width: 100px; margin: 13px 0px; }
@@ -1361,18 +1286,13 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border-top: 1px solid #363636;
 }
 /** app style contact **/
-
 #contact #name {
-   
     background: url("../images/name-form.png") no-repeat 10px center #f8f8f8;
 }
 #contact #subject {
-    
     background: url("../images/subject-form.png") no-repeat 10px center #f8f8f8;
 }
 #contact #text {
-
-    
     background: url("../images/your-text-form.png") no-repeat 10px 10px #f8f8f8;
 }
 /**** top column profile page ****/
@@ -1384,27 +1304,21 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .tag_input_wrapper {
     margin: 0 auto !important;
     width: 300px;
-    border: 1px solid #b4bbcd;
+    border: 1px solid #D9DBDF;
     margin: 10px 0px;
-    /*position: absolute;
-    right: 70px;*/
 }
 .tag-wrapper {
-		float: right;
-		margin-right: 150px;
+		float: left;
 }
-
 .enter-tag {
 	font-size: 15px;
-	margin: 7px 0px 12px 110px;
+	margin: 7px 10px 12px 110px;
 	font-weight: 600;
 	float: left;
 }
-
 ul.as-selections {
     box-shadow: none !important;
 }
-
 ul.as-selections li.as-original {
     text-align: right !important;
     float: right;
@@ -1417,7 +1331,6 @@ ul.as-selections {
     right: 5px;
     font-size: 14px;
     font-weight: bold;
-    
 }
 .tags_area {
     z-index: -1;
@@ -1433,6 +1346,10 @@ ul.as-selections {
 
 .profile_tags .tags_base {
 	padding: 10px 0px 0px 10px;
+}
+
+.profile_tags .tags_base h4 {
+	font-size: 16px;
 }
 
 .profile ul.as-selections li.as-selection-item,
@@ -1460,7 +1377,6 @@ ul.as-selections {
     position: relative;
     margin-right: 20px;
 }
-
 .tags-arrow {
 	width: 0;
         height: 0;
@@ -1471,10 +1387,8 @@ ul.as-selections {
 	right:-12px;
 	top: 0px;
 }
-
 .tag_text {float: left;
-          margin-right: 5px;
-         
+        margin-right: 5px;
 }
 .close_tag {
     margin-top: 4px;
@@ -1487,13 +1401,12 @@ ul.as-selections {
     background: #454545;
 }
 .tag-arrow-color {
-		border-left: 13px solid #454545;
+	border-left: 13px solid #454545;
 }
 .tag_remove {
     display: none;
 }
 /**Dialogs*/
-
 #modal-content {
     float: left;
 }
@@ -1516,7 +1429,6 @@ ul.as-selections {
     z-index:3;
     top:50%;  
     margin-top:-220px; 
-    /*box-shadow: 0 0 0px 10px rgba(66, 66, 66, .4);;*/
 }
 .modalBackground {
     position:absolute;
@@ -1532,7 +1444,6 @@ ul.as-selections {
 .closeBox {
     position: relative
 }
-
 .exitBox {
 	position: absolute;
 	right: 0;
@@ -1553,23 +1464,19 @@ ul.as-selections {
 .modalWindow .view-wrapped {
     width: 430px;
     overflow: hidden;
-    
 }
 .modalWindow #view-content {
-    width: 100%;
-    
+    width: 100%; 
 }
 /**** dialog questions ***/
 .questions-window h1{
 }
-
 .required {
 	font-size: 16px;
 }
 
 /*** flash messages***/
 #flashMessages {
-    
 }
 #flashMessages ul li {
     position: relative;
@@ -1581,53 +1488,50 @@ ul.as-selections {
     color: #ffffff;
 }
 /***** event page ******/
-.event_title {
+.event .event_title {
     float: right;
     margin-bottom: 20px;
     width: 455px;
     padding: 0px 0px 0px 15px;
 }
-
 .event .event-left {
 	float: left;
 	width: 180px;
 }
-
-
 .event .event_self {
     color: white;
     float: left;
     height: 30px;
+    width: 180px;
     line-height: 30px;
     font-size: 18px;
     display: block;
     background-color: #24A3DF;
-    width: 180px;
     text-align: center;
 }
-.event_main {
+.event .event_main {
     overflow: hidden;
-    width: 640px;
+    width: 650px;
 }
-.event_main .event_img {
+.event .event_main .event_img {
     float: left;
     padding: 0px 20px 0px 0px;
     height: 180px;
     width: 180px;
 }
-.event_main .event_img img{ 
+.event .event_main .event_img img{ 
 }
-.event_main .event_description {
+.event .event_main .event_description {
     float: right;
 }
-.event_main .event_right {
+.event .event_main .event_right {
     width: 450px;
     float: left;
     padding: 0px 0px 0px 20px;
 }
-.event_main h4 {
+.event .event_main h4 {
     font-size: 20px;
-    padding: 5px 0;
+    padding: 5px 0px;
     margin-left: 35px;
 }
 .event_date {
@@ -1650,38 +1554,49 @@ ul.as-selections {
 	background-position: 5px 8px;
 	margin-top: 5px;
 }
-
-.interested_list {
+.event_self {
+	display: block;
+	background-color: #24a3df;
+	color: #FFFFFF;
+	font-size: 22px;
+	float: left;
+}
+.event .interested_list {
     margin-top: 10px;
     overflow: hidden;
 }
-.interested_list .waitingList img,
-.event_wall .wall_image img{
-	margin: 0px 10px 10px 0px;
-}
-.interested_list .waitingList a {
+
+.event .interested_list .waitingList a {
     color: orange;
 }
-.interested_list .waitingList{
+.event .interested_list .waitingList{
     float: left;
-    text-align: center;
-    margin: 10px 0px;
+    padding: 10px 0px;
 }
-.interested_list .waitingList .event_allow {
+.event .interested_list .waitingList .event_allow {
     color: #FF8600;
-    height: 16px;
+    font-size: 12px;
+    margin-top: 4px;
+    text-align: center;
 }
-.interested_list .waitingList .waitingImg {
+.event .interested_list .waitingList .waitingImg {
     position: relative;
 }
 .waiting-details {
+	text-align: center;
+	font-size: 13px;
+	height: 25px;
+	line-height: 13px;
+	width: 100px;
+	height: 25px;
+	margin-top: 2px;
 }
-
 .waiting-item {
 	float: left;
+	margin: 0px 15px;
 }
-.interested_list .waitingList .waitingImg span,
-.event_wall .wall_image span
+.event .interested_list .waitingList .waitingImg span,
+.event .event_wall .wall_image span
 {
     position: absolute;
     right: 0px;
@@ -1691,7 +1606,7 @@ ul.as-selections {
     background: green;
     border-radius: 5px;
 }
-.event_wall .wall_title {
+.event .event_wall .wall_title {
     font-size: 26px;
     margin-bottom: 15px;
     position: relative;
@@ -1699,103 +1614,73 @@ ul.as-selections {
     background-repeat: no-repeat;
     background-position: 63px 13px;
 }
-.event_wall .wall_image {
+.event .event_wall .wall_image {
     position: relative;
     float: left;
 }
-.event_wall .wall_name {
+.event .event_wall .wall_name {
     font-size: 18px;
     float: left;
     margin: 15px 10px 10px 20px;
 }
-.event_wall .posts {
+.event .event_wall .posts {
     overflow: hidden;
 }
-.event_wall .wallpost {
+.event .event_wall .wallpost {
     float: left;
     position: relative;
     width: 640px;
     margin-bottom: 10px;
 }
-.event_wall .wall_text {
+.event .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    margin: 15px 0px 0px 20px;
+    margin: 15px 0px 0px 10px;
     font-size: 18px;
     width: 457px;
 }
-.event_wall .wallpost a{
+.event .event_wall .wallpost a{
     margin-left: 7px;
     color: #454545;
     font-size: 14px;
     text-decoration: underline;
 }
-.event_wall .wallpost a:hover {
-    
-    
+.event .event_wall .wallpost a:hover {
 }
-.event_wall #wall_comment {
+.event .event_wall #wall_comment {
     float: left;
     margin: 0px;
-    width: 475px !important;
+    width: 465px !important;
     border-right: none !important;
 }
 
 #wall_comment:focus {
 	border: solid 1px #454545;
 }
-.event_wall #Wall {
+.event .event_wall #Wall {
     margin: 0;
 }
-.event_wall .wall_text {
+.event .event_wall .wall_text {
 	position: relative;
 }
-.event_wall .delete_post {
+.event .event_wall .delete_post {
     position: absolute;
     right: 7px;
     top: 0px;
     padding: 5px;
     text-indent: -9999px;
-	
 }
-.event_wall .delete_post:hover {
+.event .event_wall .delete_post:hover {
     background: url('../images/exit-button.png') no-repeat center center;
 }
-
-a.remove-anchor {
-	float: left;
-	display: block;
-	font-size: 16px;
-	color: #FF8600;
-}
-
-a.remove-anchor:hover {
-	float: left;
-	display: block;
-	font-size: 16px;
-	color: #24A3DF;
-}
-
-a.attend-button {
-		float: right;
-		color: red;
-	display: block;
-	font-size: 36px;
-}
-
 /*** event list page ***/
 .event-list .none-singleFound {
 	margin-top: 0;
 	margin-left: 0;
 }
 /*** notification/event page ***/
-.notification h1,
-.event-list h1{
-	margin-bottom: 5px;
-}
-
-.notification h1 {
-	font-size: 30px;
+.notifications {
+	margin-top: 10px;
 }
 .notification .notification-object {
 	overflow: hidden;
@@ -1804,42 +1689,34 @@ a.attend-button {
 .event-list ul.event-object {	
 	margin: 10px 0px 10px 4px;
 }
-
 .single-event {
     border-top:1px solid #fff;
     border-bottom: 1px solid #ccc;
     margin: 0 !important;
     padding: 10px;
 }
-
 .single-event:last-child {
 	border-bottom: none;
 }
-
 .single-event:first-child {
 	border-top: none;
 	border-bottom: 1px solid #CCC;
 }
-
 .single-event a {
 	margin: 10px 0px;
 }
-
 .notification .notification-object span {
 	color: #bbb;
 	font-size: 12px;
 }
-
 .individual-object {
 	margin-bottom: 3px;
 	float: left;
 	font-size: 16px;
 }
-
 .individual-object a {
 	color: #FF8600;
 }
-
 .event-describer {
 	margin: 5px 0px;
 }

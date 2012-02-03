@@ -48,35 +48,30 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
             }*/
 		    $date = new DateTime();
 		
-	
-            
+			
+            echo "<div class='event-describer'><strong>Place:</strong> <a href = '/event/index/eid/". $feedObject->getEid()."'>";
             if($feedObject->getEvent())
                 {
-					echo "<div class='event_header'><h1 class='event_title'>".$feedObject->getEvent()->getCreator()->getFirstName()." ".$feedObject->getEvent()->getCreator()->getLastName()." wants to ".$feedObject->getShortDescription()."</h1></div>";
-					echo "<div class='event_main'><div class='event_img'>";
-					echo "<img src='/img/profile-pic/uid/".$feedObject->getEvent()->getCreator()->getEmail()."' height='180' width='180' /></div>";
-					echo "<div class='event_right'><h2 class='event_self'>";
-					if ($eventModel->isEventCreator($identity, $creator))
-					{ echo "Event Creator";}
-					else {echo "Event Member";}
-					echo "</h2>";
-					echo '<div class="event_date"><h2>';
+                echo $feedObject->getEvent()->getLocation().'</a></div>';                
+				echo '<div class="event-describer"><strong>Date:</strong> '.$feedObject->getDate()->format('M d, Y').'</div>';
+                echo '<div class="event-describer"><strong>Activity:</strong> '.$feedObject->getShortDescription().'</div>';
+                //echo '<br />More Info: '. $feedObject->getLongDescription();
+					echo '<div class="event-date">';
 					if( $feedObject->getDate()->format('M d, Y') == $date->format('M d, Y'))
 					{ echo "Event is today";}
 					else if ($date->getTimeStamp() < $feedObject->getDate()->getTimestamp())
 					{ echo "Event has not begun";}
 					else 
 					{ echo "Event has ended";}
-
-					echo '</h2></div>';
-					echo '<div class="event_date"><h2>'.$feedObject->getDate()->format('M d, Y').'</h2></div>';
-
+					echo '</div>';
+					//Display Creator
+					if ($eventModel->isEventCreator($identity, $creator))
+					{ echo "<span class='own-event'>Owner</span>";}
+				
 					
-					echo "<div class='event_location'><h2>".$feedObject->getEvent()->getLocation()."</h2></div>
-							<div class='event_location'><h2>".$feedObject->getEvent()->getLongDescription()."</h2></div>
-					</div></div>";			
+				
+				
 				
 				}
-				
 	}
 }
