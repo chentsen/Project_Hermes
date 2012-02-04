@@ -1498,7 +1498,7 @@ ul.as-selections {
     padding: 0px 0px 0px 15px;
 }
 
-.eventFeed .event_title {
+.single-event .event_title {
     float: right;
     margin-bottom: 20px;
     width: 455px;
