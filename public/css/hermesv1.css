@@ -1215,7 +1215,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
    margin-right: 10px;
 }
 /** app style registration **/
-<<<<<<< HEAD
+
 /** input fields **/
 .email,
 .password,
@@ -1229,30 +1229,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .create-text
 { position: relative;}
 
-
-
-
-=======
-#registration .first_name input{ 
-    background: url("../images/first-name-form.png") no-repeat 10px center #f8f8f8;
-}
-#registration #betakey {
-    background: url("../images/beta-key-form.png") no-repeat 10px center #f8f8f8;
-}
-#registration .last_name input{
-   background: url("../images/last-name-form.png") no-repeat 10px center #f8f8f8;
-}
-#registration #city{
-    background: url("../images/city-form.png") no-repeat 10px center #f8f8f8;
-}
-#registration .gender input{
-    }
-#registration .password input {
-   }
-#registration .password_again input{
-    background: url("../images/password-again-form.png") no-repeat 10px center #f8f8f8;
-}
->>>>>>> dev_yoshi
 .inner_button #register {
 }
 /** app style event creation page **/
@@ -1516,14 +1492,13 @@ ul.as-selections {
 	float: left;
 	width: 180px;
 }
-<<<<<<< HEAD
+
 .event .event_header .event_title a {
 		color: red;
 }
-.event .event_right .event_self {
-=======
+
 .event .event_self {
->>>>>>> dev_yoshi
+
     color: white;
     float: left;
     height: 30px;
