@@ -17,7 +17,7 @@ class Zend_View_Helper_DisplayFriends extends Zend_View_Helper_Abstract{
                                         echo "<a href='/profile/public/email/{$friend->getEmail()}'>";
                                         echo "<img src='/img/profile-pic/uid/{$friend->getEmail()}' height=75  width=75/></a></div><div class='friend_name'>";
                                        
-					echo "{$friend->getFirstName()} " . substr($friend->getLastName(),0,1);
+					echo "{$friend->getFirstName()} " . substr($friend->getLastName(),0,1) . ".";
 					echo '</div></li>';
 					
 					

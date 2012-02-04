@@ -42,7 +42,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 		if($i == 0 && $length > 4)
 			$html = '<a class="so-ronery">You have no events right now.</a>';
 		else if ($i == 0 && $length <4)
-		   $html = 'Not attending any events yet';
+		   $html = 'Not attending any events yet.';
 		echo $html;
 		echo "</ul>";
 	}
@@ -65,11 +65,11 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 				$user = Zend_Registry::get("Wildkat\DoctrineContainer")->getDocumentManager('default')->getRepository('Documents\User')->findOneBy(array("email"=>$identity));
 				//echo $user->getEmail();
 				//echo $user->getEmail();
-				echo '<img style="float: left;" src="/images/meet-people.png" width="50" /><div class="mini-feed">';
+				echo '<div class="mini-feed">';
                 echo '<h5><a href = \'/event/index/eid/'. $feedObject->getEid().'\'>'.$feedObject->getShortDescription().' @ '.$feedObject->getEvent()->getLocation().'</a></h5>';                
-				echo '<span class="event-side-date">on '.$feedObject->getDate()->format('m/d').'</span>';
+				echo '<span class="event-side-date">'.$feedObject->getDate()->format('m/d').'</span>';
 				if ($eventModel->isEventCreator($identity, $creator))
-				{ echo "<span class='own-event'>Event Owner</span>";}
+				{ echo "<span class='own-event'>Owner</span>";}
 				echo '</div>';
 			   }
 	}

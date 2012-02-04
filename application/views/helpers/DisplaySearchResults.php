@@ -6,7 +6,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 		//For now these functions can reside in DisplaySearchResults..in the future, they should be abstracted out so that everything can use them.
 		if($results){
 			//echo 'COUNT IS = '.count($results);
-			
+
 			if(count($results['eventResults'])>0){
 				foreach($results['eventResults'] as $object){
 					$this->printEventResult($object,$identity);
@@ -47,7 +47,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                          echo "<div class='user_info'><h2>{$event->result->getCreator()->getFirstName()} wants to ".$event->result->getShortDescription()."</h2>";
                         
                         
-			
+
                          //echo $identity;
                         if(!($identity==$event->result->getCreator()->getEmail())){
                                 $eventModel = new Application_Model_EventModel($event->result);
@@ -76,52 +76,48 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 				}
 			}	
 		echo '</div>';
-		
+
 		//are you creator or member? omit interested in
-		
-		
-		
-		
+
+
+
+
 		//view event page
-		
+
 		echo "</div>";
 		//return $returnString;
 	}
 	private function printUserResult(Documents\Search\UserResult $user,$identity){
-				
-				
-				
+
+
+
             if($user->result->getEmail()!=$identity){
-				
+
 			echo "<div class = 'user_result'>";
 			$friendRelation = new Application_Model_FriendRelation($identity);
-			
+
 				$email = $user->result->getEmail();			
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
 
                         //echo '<div class="indiv-result" style="">';
-						echo "<a href='/profile/public/email/{$email}'>";
-
 						echo '<img src="/img/profile-pic/uid/'.$email.'" height=75  width=75/ </a>';
-						echo "<div class='user-info' style='float:right; width: 550px; border-bottom: 1px solid black;'>
-								<div style='float: left;><span><a href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a></span>
-								<span>{$user->result->getCity()}</span>
-								<span>Tags in Common : {$user->getCount()}</span></div>";
-		                                            
+						echo "<div class='user-info'>
+								<a class='search-name' href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
+								<div class='search-city'>{$user->result->getCity()}</div>
+								<div class='search-common-tags'>{$user->getCount()} tags in common</div>";
+
 			if(!$friendRelation->isFriend($user->result->getEmail()) && $friendRelation->isRequested($user->result->getEmail())){
-				echo "<div class = 'user_addFriend' style='float: right'>";
+	
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
-				
-				echo "<a class='remove-anchor' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>add</a>";
-				
-				echo "</div>";
+
+				echo "<a class='add-friend' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>Add</a>";
 			}
 			echo "</div>";
 
 			//check if currently friends- are we? omit add as friend
 			//view profile
-			
-		
+
+
                         echo "<div class='user_like'>You both like</div>";
                         
 			if($user->match){
@@ -135,7 +131,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 						echo "<div class='matchedTag'>";
 						echo $match[0]->getTagName();
 						echo "</div>";
-					
+
                         	}
                                  
 			}
