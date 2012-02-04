@@ -1491,7 +1491,7 @@ ul.as-selections {
     color: #ffffff;
 }
 /***** event page ******/
-.event_title {
+.event_title h1 {
     float: right;
     margin-bottom: 20px;
     width: 455px;

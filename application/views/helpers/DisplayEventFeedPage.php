@@ -59,7 +59,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					if ($eventModel->isEventCreator($identity, $creator))
 					{ echo "Event Creator";}
 					else {echo "Event Member";}
-					echo "</h2>";
+					echo "</div>";
 					echo '<div class="event_date"><h4>';
 					if( $feedObject->getDate()->format('M d, Y') == $date->format('M d, Y'))
 					{ echo "Event is today";}
