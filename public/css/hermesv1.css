@@ -297,7 +297,7 @@ margin-bottom: 2px;
 .friends-title {
 	background: url('../images/friends-all-line.png');
 	background-repeat: no-repeat;
-	background-position: 63px 13px;
+	background-position: 120px 20px;
 }
 
 .profile_header {
@@ -325,7 +325,7 @@ margin-bottom: 2px;
 .events-list-title {
 	background: url('../images/event-list-line.png');
 	background-repeat: no-repeat;
-	background-position: 63px 13px;
+	background-position: 320px 20px;
 }
 .friends_block {
 	position: relative;
@@ -860,7 +860,7 @@ a.signup-button:hover {
 	margin-bottom: 10px;
 	background: url('../images/dashboard-line.png');
 	background-repeat: no-repeat;
-	background-position: 63px 13px;
+	background-position: 175px 20px;
 }
 
 .my-tags {
