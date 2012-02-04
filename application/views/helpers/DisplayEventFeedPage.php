@@ -62,7 +62,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					echo "</div>";
 					echo "</div>";
 					echo "<div class='event_right'>"
-					echo '<div class="event_date"><h4>';
+					echo '<div class="event_date"><h4>'
 					if( $feedObject->getDate()->format('M d, Y') == $date->format('M d, Y'))
 					{ echo "Event is today";}
 					else if ($date->getTimeStamp() < $feedObject->getDate()->getTimestamp())
