@@ -1497,6 +1497,13 @@ ul.as-selections {
     width: 455px;
     padding: 0px 0px 0px 15px;
 }
+
+.eventFeed .event_title {
+    float: right;
+    margin-bottom: 20px;
+    width: 455px;
+    padding: 0px 0px 0px 15px;
+}
 .event-left {
 	float: left;
 	width: 180px;

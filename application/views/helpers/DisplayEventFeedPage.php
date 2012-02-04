@@ -53,13 +53,15 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
             if($feedObject->getEvent())
                 {
 					echo "<div class='event_header'><h1 class='event_title'>".$feedObject->getEvent()->getCreator()->getFirstName()." ".$feedObject->getEvent()->getCreator()->getLastName()." wants to ".$feedObject->getShortDescription()."</h1></div>";
-					echo "<div class='event_main'><div class='event_img'>";
+					echo "<div class='event_main'><div class='event-left'><div class='event_img'>";
 					echo "<img src='/img/profile-pic/uid/".$feedObject->getEvent()->getCreator()->getEmail()."' height='180' width='180' /></div>";
-					echo "<div class='event_right'><div class='event_self'>";
+					echo "<div class='event_self'>";
 					if ($eventModel->isEventCreator($identity, $creator))
 					{ echo "Event Creator";}
 					else {echo "Event Member";}
 					echo "</div>";
+					echo "</div>";
+					echo "<div class='event_right'>"
 					echo '<div class="event_date"><h4>';
 					if( $feedObject->getDate()->format('M d, Y') == $date->format('M d, Y'))
 					{ echo "Event is today";}
