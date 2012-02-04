@@ -1488,17 +1488,19 @@ ul.as-selections {
     width: 455px;
     padding: 0px 0px 0px 15px;
 }
+
+.single-event .event_title {
+    float: right;
+    margin-bottom: 20px;
+    width: 455px;
+    padding: 0px 0px 0px 15px;
+}
 .event-left {
 	float: left;
 	width: 180px;
 }
 
-.event .event_header .event_title a {
-		color: red;
-}
-
-.event .event_self {
-
+.event_self {
     color: white;
     float: left;
     height: 30px;
@@ -1545,14 +1547,12 @@ ul.as-selections {
 	background: url('../images/event-asterisk.png');
 	background-repeat: no-repeat;
 	background-position: 5px 8px;
-	margin-top: 5px;
 }
 .event_location {
 	position: relative;
 	background: url('../images/event-asterisk.png');
 	background-repeat: no-repeat;
 	background-position: 5px 8px;
-	margin-top: 5px;
 }
 .interested_list {
     margin-top: 10px;
@@ -1683,17 +1683,8 @@ ul.as-selections {
 	margin: 10px 0px 10px 4px;
 }
 .single-event {
-    border-top:1px solid #fff;
-    border-bottom: 1px solid #ccc;
     margin: 0 !important;
-    padding: 10px;
-}
-.single-event:last-child {
-	border-bottom: none;
-}
-.single-event:first-child {
-	border-top: none;
-	border-bottom: 1px solid #CCC;
+    padding: 20px 10px;
 }
 .single-event a {
 	margin: 10px 0px;
