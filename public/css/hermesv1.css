@@ -294,6 +294,12 @@ margin-bottom: 2px;
 	width: 260px;
 	margin: 0 auto 5px auto;
 }
+.friends-title {
+	background: url('../images/friends-all-line.png');
+	background-repeat: no-repeat;
+	background-position: 63px 13px;
+}
+
 .profile_header {
     overflow: hidden;
 }
@@ -315,6 +321,11 @@ margin-bottom: 2px;
 	background: url('../images/upcoming-events-line.png');
 	background-repeat: no-repeat;
 	background-position: 166px 14px;
+}
+.events-list-title {
+	background: url('../images/event-list-line.png');
+	background-repeat: no-repeat;
+	background-position: 63px 13px;
 }
 .friends_block {
 	position: relative;
@@ -847,6 +858,9 @@ a.signup-button:hover {
 
 .dashboard-title {
 	margin-bottom: 10px;
+	background: url('../images/dashboard-line.png');
+	background-repeat: no-repeat;
+	background-position: 63px 13px;
 }
 
 .my-tags {
@@ -1493,12 +1507,14 @@ ul.as-selections {
     float: right;
     margin-bottom: 10px;
     width: 450px;
+    font-size: 32px;
 }
 
 .single-event .event_title {
     float: right;
     margin-bottom: 10px;
     width: 450px;
+    font-size: 32px;
 }
 .event-left {
 	float: left;
