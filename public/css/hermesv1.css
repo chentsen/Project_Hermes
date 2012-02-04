@@ -1165,8 +1165,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   display: block;
   background: #454545;
   color: white;
-  font-weight: 500;
-  margin: 0px;
+  margin: 5px 0px;
   float: left;
   width: 179px;
 }
@@ -1176,8 +1175,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   display: block;
   background: #333;
   color: white;
-  font-weight: 500;
-  margin: 0px;
+  margin: 5px 0px;
   float: left;
   width: 179px;
 }
@@ -1493,16 +1491,14 @@ ul.as-selections {
 /***** event page ******/
 .event_title {
     float: right;
-    margin-bottom: 20px;
-    width: 455px;
-    padding: 0px 0px 0px 15px;
+    margin-bottom: 10px;
+    width: 450px;
 }
 
 .single-event .event_title {
     float: right;
-    margin-bottom: 20px;
-    width: 455px;
-    padding: 0px 0px 0px 15px;
+    margin-bottom: 10px;
+    width: 450px;
 }
 .event-left {
 	float: left;
