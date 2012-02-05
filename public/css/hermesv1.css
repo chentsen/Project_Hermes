@@ -10,17 +10,16 @@ div { display: block; }
 select {
     margin: 10px 10px 10px 15px;
 }
-#editAccount select{ font-size: 16px;}
-.edit-140char {
-	margin:10px 0px 5px 0px;
+#editAccount select{
 	font-size: 16px;
-	display: block;
-	width: 250px;	
+	margin-top: 5px;
 }
 .edit-gender {
 	display: block;
 	font-size: 16px;
 	margin-right: 10px;
+	margin-top: 2px;
+	float: left;
 }
 #editAccount textarea {
         width: 245px;
