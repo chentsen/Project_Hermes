@@ -6,7 +6,8 @@ class Application_Model_ImageModel extends Application_Model_BaseModel{
 		$this->user = $user;
 	}
 	public function makeProfilePicture($image,$type){
-		$imageNamge = $this->user->getUid()."_profile_pic";
+		
+		$imageName = $this->user->getUid()."_profile_pic";
 		$profilePic = new Documents\Image($image,$imageName,$type);
 		$this->user->setProfilePic($profilePic);
 		$this->dm->persist($profilePic);
