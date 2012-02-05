@@ -6,10 +6,11 @@
 	<li class="reglist"><?= $this->element->firstName; ?></li>
 	<li class="reglist"><?= $this->element->lastName; ?></li>
 	<li class="reglist"><?= $this->element->city; ?></li>
+    <span class="edit-gender">Gender</span>
     <li class="reglist"><?= $this->element->gender; ?></li>
-    <li class="reglist">Receive email notifications <?= $this->element->hasEmailPerm; ?></li>
-        <span class="edit-140char">Tell everyone about yourself in 140 characters</span>
+        <span class="edit-140char">Say something about yourself!</span>
         <li class="reglist"><?= $this->element->description;?></li>
+    <li class="reglist" style="font-size: 16px; ">Receive email notifications <?= $this->element->hasEmailPerm; ?></li>
                 <?= $this->element->submit; ?> 
                 
 </form>
