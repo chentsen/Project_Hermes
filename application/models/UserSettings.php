@@ -242,6 +242,7 @@ class Application_Model_UserSettings{
 		    } catch (Exception $e) {
 			echo 'SOMETHING IS WRONG';
 			echo $e->getTraceAsString();
+			echo $e->getMessage();
 			$user = null;
 		    }
 		    
