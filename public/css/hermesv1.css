@@ -12,7 +12,9 @@ select {
 }
 #editAccount{
 }
-
+.edit-140char {
+	margin:10px;
+}
 #editAccount textarea {
      
         width: 245px;
@@ -531,8 +533,7 @@ a.attend-button:hover {
     padding: 20px;
 }
 .out-logo {
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin: 10px 0px;
     overflow: auto;
 }
 .out-logo .logo {
