@@ -17,7 +17,7 @@ class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
 		}
 	public function getEventFeedMessage(FeedObject $feedObject){
 		$creatorEmail = $feedObject->getCreator()->getEmail();
-		echo "<img style='float: left; margin-right: 8px; margin-top: 1px;' src='/images/calendar.png' width='30' height='30'/>";
+		echo "<img style='float: left; margin-right: 8px; margin-top: 1px;' src='/img/profile-pic/uid/{$creatorEmail}' width='30' height='30'/>";
 		echo "<div class='individual-object'>Your friend <a href='/profile/public/email/{$creatorEmail}'> ".addslashes($feedObject->getCreator()->getFirstName())." ".addslashes($feedObject->getCreator()->getLastName())."</a> wants to";
 		echo " <a href = '/event/index/eid/". $feedObject->getEid()."'>".$feedObject->getShortDescription()."</a>.";
 		//echo '<br /> at '.$feedObject->getDate()->format('m/d');

@@ -40,34 +40,28 @@ var Dialog = {
 		$(".dialogs #createEvent_date").attr("id","createEvent_date_active")
 		$(".dialogs #createEvent_date_active" ).datepicker({dateFormat: 'dd/mm/yy', minDate: +0});
 		$("#ui-datepicker-div").css("z-index", "9999");
-		$('.dialogs #createEvent_shortDescription').val('eat pizza'); 
-		$('.dialogs #createEvent_location').val("Tony's Pizzeria");
-		$('.dialogs #createEvent_longDescription').val('At 7pm\n155 Main St.\nSan Francisco, CA 94333');
-		$('.dialogs #createEvent_longDescription, #createEvent_location, #createEvent_shortDescription').css({'color': '#bbb'}).focus(function(){
+		
+		
+		
+		/*$('.dialogs #createEvent_longDescription, #createEvent_location, #createEvent_shortDescription').css({'color': '#bbb'}).focus(function(){
 		    $(this).css({'color': '#000'}).val('');//.unbind(event);
-		   });
+		   });*/
+		
+		$('.dialogs #createEvent_shortDescription').defaultText({text: 'Eat Pizza', event: true});
+		$('.dialogs #createEvent_location').defaultText({text: 'Tony\'s Pizzeria', event: true});
+		$('.dialogs #createEvent_longDescription').defaultText({text: 'At 7pm\n155 Main St.\nSan Francisco, CA 94333', longdesc: true});
 	},
 	loadLoginData:function(){
 		
-		function BgRemover(nClass) {
-				$(nClass).focus(function(){
-						$(nClass).addClass('removebg');
-				});
+		
 				
-						$(nClass).blur(function(){
-						if ($.trim(this.value) == '')
-								{
-								$(nClass).removeClass('removebg');	
-								} 
-								});
-				}         
-				BgRemover('.dialogs #email');
-				BgRemover('.dialogs #firstName');
-				BgRemover('.dialogs #lastName');
-				BgRemover('.dialogs #city');
-				BgRemover('.dialogs #password');
-				BgRemover('.dialogs #password2');
-				BgRemover('.dialogs #betakey');
+		 $('.dialogs #email').defaultText({text: 'Email'});
+		 $('.dialogs #firstName').defaultText({text: 'First Name'});
+		 $('.dialogs #lastName').defaultText({text: 'Last Name'});
+		 $('.dialogs #city').defaultText({text: 'City'});
+		 $('.dialogs #password').defaultText({text: 'Password'});
+		 $('.dialogs #password2').defaultText({text: 'Password Again'});
+		 $('.dialogs #betakey').defaultText({text: 'Beta Key'});
 	},
 	doValidate:function() {
 			
