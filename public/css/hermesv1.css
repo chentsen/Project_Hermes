@@ -247,6 +247,17 @@ margin-bottom: 2px;
 		width: 180px;
 		overflow: hidden;
 }
+.profile_eventList h5 {
+	width: 100px;
+	float: right;
+}
+.profile_eventList .event-side-date {
+	float: left;
+}
+.profile_eventList .own-event {
+	float: left;
+}
+
 .eventFeedObject:first-child {
 	border-top: none;
 }
