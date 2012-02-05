@@ -13,10 +13,12 @@ select {
 #editAccount{
 }
 .edit-140char {
-	margin:10px;
+	margin:10px 0px 5px 0px;
+	font-size: 16px;
+	display: block;
+	width: 250px;	
 }
 #editAccount textarea {
-     
         width: 245px;
 	font-size: 18px; 
         background: #ffffff;
