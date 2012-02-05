@@ -1254,6 +1254,15 @@ html .icon_bar ul li .sub-settings .last-setting a{
     float: right;
     z-index: 100;
 }
+.createEvent_longDescription_default {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	cursor: text;
+	font-size: 18px;
+	padding: 0 10px 10px 0px;
+}
+
 #createEvent #createEvent_date_active {
     width: 175px;
     right: 0;
