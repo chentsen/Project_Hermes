@@ -34,12 +34,7 @@ textarea {
 #content_area input[type=password]{
     margin: 5px 0;
     padding: 5px 0px 5px 5px;
-<<<<<<< HEAD
     width: 195px;
-=======
-    width: 200px;
-	
->>>>>>> dev-2
 }
 input[type=text], input[type=password] {
 	height: 23px;
@@ -135,8 +130,6 @@ input[type=text]:first,input[type=password]:first {
 }
 /**** colors and clears *****/
 .orange { color: #FF8600; }
-.orange2 { color: #EE8641; }
-.orange3 { color: #FC6C0C; }
 .float_left { float: left; }
 .float_right { float: right; }
 /**** registration success page ****/
@@ -147,7 +140,7 @@ input[type=text]:first,input[type=password]:first {
 }
 /**** edit account ****/
 .account-edit .re-answer a {
-		color: orange;
+		color: #FF8600;
 		float:right;
 		text-decoration: underline;
 		margin-right: 35px;
@@ -310,7 +303,7 @@ margin-bottom: 2px;
     overflow: hidden;
 }
 .friendStatus a{
-    color: orange; 
+    color: #FF8600; 
     font-size: 36px;
     font-weight: bold;
 }
@@ -352,11 +345,11 @@ margin-bottom: 2px;
     margin-top: 10%;
 }
 .none-singleFound a {
-    color: orange;
+    color: #FF8600;
 }
 .matchedTag {
     border: 1px solid #FC6C0C;
-    background: orange;
+    background: #FF8600;
     color: white;
     float: left;
     padding: 5px 10px;
@@ -436,7 +429,7 @@ a.search-name {
 }
 .user_addFriend a, .user_viewProfile a {
     font-size: 16px;
-    color: orange;
+    color: #FF8600;
     float: right;
 }
 a.add-friend {
@@ -478,7 +471,7 @@ a.attend-button:hover {
 .view_event, .join_event {
 	margin-left: 10px;
 	font-size: 16px;
-	color: orange;
+	color: #FF8600;
 	float: right;
 }
 .common_number {
@@ -515,8 +508,8 @@ a.attend-button:hover {
    .outside .page {}
 /***** landing styles********/
 .index .button input#login {
-	width: 207px;
-	}
+	width: 201px;
+}
 .index form#login { 
     float: left; 
     margin-left: 200px;
@@ -527,7 +520,6 @@ a.attend-button:hover {
     float: left; 
     margin-left: 200px;
     padding: 40px 40px 40px 0px; 
-    /**background: url(../images/or-background.png) no-repeat right center;**/
 }
 .index #registration{float: left; }
 .cms-text {
@@ -1365,7 +1357,7 @@ ul.as-selections {
 .profile ul.as-selections li.as-selection-item,
 .profile ul.as-selections li:hover.as-selection-item{
 		background-image: none;
-		background-color: orange;
+		background-color: #FF8600;
 }
 .tag_dropdown {
     text-align: right;
@@ -1576,7 +1568,7 @@ ul.as-selections {
 }
 
 .interested_list .waitingList a {
-    color: orange;
+    color: #FF8600;
 }
 .interested_list .waitingList{
     float: left;
