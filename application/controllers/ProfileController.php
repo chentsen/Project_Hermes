@@ -95,8 +95,8 @@ class ProfileController extends Hermes_Controller_SessionController
      * Link for public profile
      */
     public function publicAction(){
-    	$email = $this->_request->getParam("email");
-    	$profileModel = new Application_Model_ProfileModel($this->mongoContainer, $email);
+    	$uid = $this->_request->getParam("uid");
+    	$profileModel = new Application_Model_ProfileModel($this->mongoContainer, $uid);
     	$friendRelation = new Application_Model_FriendRelation($this->identity);
 	$this->view->user = $profileModel->getUser();
     	$this->view->description = $profileModel->displayDescription();

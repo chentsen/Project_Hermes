@@ -76,7 +76,6 @@ $.fn.defaultText = function(options) {
     }
     // Also add the class to the input box:
     $input
- 
         .keyup(focus).blur(function() {
             if (!input.value.length) show();
         });
