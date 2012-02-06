@@ -10,11 +10,18 @@ div { display: block; }
 select {
     margin: 10px 10px 10px 15px;
 }
-#editAccount{
+#editAccount select{
+	font-size: 16px;
+	margin-top: 5px;
 }
-
+.edit-gender {
+	display: block;
+	font-size: 16px;
+	margin-right: 10px;
+	margin-top: 7px;
+	float: left;
+}
 #editAccount textarea {
-     
         width: 245px;
 	font-size: 18px; 
         background: #ffffff;
@@ -34,8 +41,7 @@ textarea {
 #content_area input[type=password]{
     margin: 5px 0;
     padding: 5px 0px 5px 5px;
-    width: 200px;
-	
+    width: 195px;
 }
 input[type=text], input[type=password] {
 	height: 23px;
@@ -131,8 +137,6 @@ input[type=text]:first,input[type=password]:first {
 }
 /**** colors and clears *****/
 .orange { color: #FF8600; }
-.orange2 { color: #EE8641; }
-.orange3 { color: #FC6C0C; }
 .float_left { float: left; }
 .float_right { float: right; }
 /**** registration success page ****/
@@ -143,7 +147,7 @@ input[type=text]:first,input[type=password]:first {
 }
 /**** edit account ****/
 .account-edit .re-answer a {
-		color: orange;
+		color: #FF8600;
 		float:right;
 		text-decoration: underline;
 		margin-right: 35px;
@@ -296,11 +300,17 @@ margin-bottom: 2px;
 	width: 260px;
 	margin: 0 auto 5px auto;
 }
+.friends-title {
+	background: url('../images/friends-all-line.png');
+	background-repeat: no-repeat;
+	background-position: 120px 20px;
+}
+
 .profile_header {
     overflow: hidden;
 }
 .friendStatus a{
-    color: orange; 
+    color: #FF8600; 
     font-size: 36px;
     font-weight: bold;
 }
@@ -317,6 +327,11 @@ margin-bottom: 2px;
 	background: url('../images/upcoming-events-line.png');
 	background-repeat: no-repeat;
 	background-position: 166px 14px;
+}
+.events-list-title {
+	background: url('../images/event-list-line.png');
+	background-repeat: no-repeat;
+	background-position: 320px 20px;
 }
 .friends_block {
 	position: relative;
@@ -337,11 +352,11 @@ margin-bottom: 2px;
     margin-top: 10%;
 }
 .none-singleFound a {
-    color: orange;
+    color: #FF8600;
 }
 .matchedTag {
     border: 1px solid #FC6C0C;
-    background: orange;
+    background: #FF8600;
     color: white;
     float: left;
     padding: 5px 10px;
@@ -386,10 +401,9 @@ margin-bottom: 2px;
 .user-info {
 	float: right;
 	width: 540px;
-	border-bottom: solid 1px #D9DBDF;
 	background-image: url('../images/search-user-line.png');
 	background-repeat: no-repeat;
-	background-position: 10px 10px;
+	background-position: 0px 28px;
 	height: 30px;
 }
 a.search-name {
@@ -422,7 +436,7 @@ a.search-name {
 }
 .user_addFriend a, .user_viewProfile a {
     font-size: 16px;
-    color: orange;
+    color: #FF8600;
     float: right;
 }
 a.add-friend {
@@ -464,7 +478,7 @@ a.attend-button:hover {
 .view_event, .join_event {
 	margin-left: 10px;
 	font-size: 16px;
-	color: orange;
+	color: #FF8600;
 	float: right;
 }
 .common_number {
@@ -482,6 +496,7 @@ a.attend-button:hover {
 }
 .user_result img {
 	float: left;
+	margin-top: 3px;
 }
 /**** cms pages *****/
 .cms-title {font-size: 40px; margin-bottom: 15px; margin-left: 10px;}
@@ -501,7 +516,7 @@ a.attend-button:hover {
 /***** landing styles********/
 .index .button input#login {
 	width: 201px;
-	}
+}
 .index form#login { 
     float: left; 
     margin-left: 200px;
@@ -512,7 +527,6 @@ a.attend-button:hover {
     float: left; 
     margin-left: 200px;
     padding: 40px 40px 40px 0px; 
-    /**background: url(../images/or-background.png) no-repeat right center;**/
 }
 .index #registration{float: left; }
 .cms-text {
@@ -524,8 +538,7 @@ a.attend-button:hover {
     padding: 20px;
 }
 .out-logo {
-    margin-top: 15px;
-    margin-bottom: 30px;
+    margin: 10px 0px;
     overflow: auto;
 }
 .out-logo .logo {
@@ -849,6 +862,9 @@ a.signup-button:hover {
 
 .dashboard-title {
 	margin-bottom: 10px;
+	background: url('../images/dashboard-line.png');
+	background-repeat: no-repeat;
+	background-position: 175px 20px;
 }
 
 .my-tags {
@@ -1161,8 +1177,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   display: block;
   background: #454545;
   color: white;
-  font-weight: 500;
-  margin: 0px;
+  margin: 5px 0px;
   float: left;
   width: 179px;
 }
@@ -1172,8 +1187,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   display: block;
   background: #333;
   color: white;
-  font-weight: 500;
-  margin: 0px;
+  margin: 5px 0px;
   float: left;
   width: 179px;
 }
@@ -1240,6 +1254,15 @@ html .icon_bar ul li .sub-settings .last-setting a{
     float: right;
     z-index: 100;
 }
+.createEvent_longDescription_default {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	cursor: text;
+	font-size: 18px;
+	padding: 0 10px 10px 0px;
+}
+
 #createEvent #createEvent_date_active {
     width: 175px;
     right: 0;
@@ -1349,7 +1372,7 @@ ul.as-selections {
 .profile ul.as-selections li.as-selection-item,
 .profile ul.as-selections li:hover.as-selection-item{
 		background-image: none;
-		background-color: orange;
+		background-color: #FF8600;
 }
 .tag_dropdown {
     text-align: right;
@@ -1422,7 +1445,7 @@ ul.as-selections {
     margin-right:auto;
     z-index:3;
     top:50%;  
-    margin-top:-220px; 
+    margin-top:-220px;
 }
 .modalBackground {
     position:absolute;
@@ -1484,16 +1507,16 @@ ul.as-selections {
 /***** event page ******/
 .event_title {
     float: right;
-    margin-bottom: 20px;
-    width: 455px;
-    padding: 0px 0px 0px 15px;
+    margin-bottom: 10px;
+    width: 450px;
+    font-size: 32px;
 }
 
 .single-event .event_title {
     float: right;
-    margin-bottom: 20px;
-    width: 455px;
-    padding: 0px 0px 0px 15px;
+    margin-bottom: 10px;
+    width: 450px;
+    font-size: 32px;
 }
 .event-left {
 	float: left;
@@ -1560,7 +1583,7 @@ ul.as-selections {
 }
 
 .interested_list .waitingList a {
-    color: orange;
+    color: #FF8600;
 }
 .interested_list .waitingList{
     float: left;
@@ -1672,8 +1695,10 @@ ul.as-selections {
 	margin-left: 0;
 }
 /*** notification/event page ***/
-.notifications {
-	margin-top: 10px;
+.notifications-title {
+	background: url('../images/notifications-line.png');
+	background-repeat: no-repeat;
+	background-position: 200px 20px;
 }
 .notification .notification-object {
 	overflow: hidden;

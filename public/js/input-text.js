@@ -55,9 +55,10 @@ $.fn.defaultText = function(options) {
         topPos = '7px';
         leftPos = '7px'
     }
-
+    var $div;
     // Create div to put placeholder text in
-    var $div = $('<div class="'+this.attr('id')+'_default">' + options.text + '</div>')
+    if (!input.value.length) {
+        $div = $('<div class="'+this.attr('id')+'_default">' + options.text + '</div>')
         // Position it to the same place as the input box:
         .css({ position: 'absolute',
                top: topPos,
@@ -72,10 +73,10 @@ $.fn.defaultText = function(options) {
         })
         .addClass(options.css + ' unselectable')
         .appendTo($(this).parent());
-
+    }
     // Also add the class to the input box:
     $input
-        .addClass(options.css)
+ 
         .keyup(focus).blur(function() {
             if (!input.value.length) show();
         });
