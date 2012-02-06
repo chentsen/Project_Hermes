@@ -647,7 +647,10 @@ a.signup-button:hover {
     color: #454545;
     font-size: 18px;
 }
-.out-signup a {
+.reset-password {
+		color: orange;
+}
+.out-signup .facebook-login {
     width: 261px;
     height:70px;
     text-indent: -9999px;
