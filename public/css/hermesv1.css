@@ -1082,10 +1082,14 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .profile_eventList .own-event {
-	margin: 4px 0px 0px 2px;
+	float: left;
 }
 .profile_eventList .event-side-date {
-	margin: 2px;
+	float: left;
+}
+.profile_eventList h5 {
+	width: 120px;
+	float: right;
 }
 .event-side-date {
 	float: left;
