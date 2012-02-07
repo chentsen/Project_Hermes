@@ -593,14 +593,20 @@ a.attend-button:hover {
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
 #errors-lastName, #errors-firstName,
-#errors-city
-{
+#errors-city {
 	color: #FF8600;
 }
 #registration-gender {
 	float: left;
 	margin-top: 10px;
 	font-size: 18px;
+}
+li.email {
+	margin: 10px 0px;
+}
+
+lastName_default dimmed unselectable {
+	font-size: 20px;
 }
 
 .out-signup .alternative {
