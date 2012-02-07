@@ -620,9 +620,9 @@ a.attend-button:hover {
 	top: 5px !important;
 	line-height: 18px !important;
 }
-.out-signup.email_default.dimmed.unselectable,
-.out-signup.password_default.dimmed.unselectable {
-	font-size: 36px;
+#login.email_default.dimmed.unselectable,
+#login.password_default.dimmed.unselectable {
+	font-size: 36px !important;
 }
 .out-signup .alternative {
     text-align: center;
