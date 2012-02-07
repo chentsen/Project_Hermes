@@ -8,7 +8,9 @@ div { display: block; }
 /*** form styles*****/
 #content_area form { }
 select {
-    margin: 10px 10px 10px 15px;
+    margin: 3px 0px 5px 5px;
+    width: 141px;
+    font-size: 16px;
 }
 #editAccount select{
 	font-size: 16px;
@@ -598,7 +600,8 @@ a.attend-button:hover {
 #registration-gender {
 	float: left;
 	margin-top: 10px;
-	font-size: 18px;
+	font-size: 16px;
+	margin-left: 2px;
 }
 .email, .first_name, .last_name, .city, .password,
 .password_again, .beta-key li {
@@ -611,7 +614,7 @@ a.attend-button:hover {
 .city_default.dimmed.unselectable,
 .password_default.dimmed.unselectable,
 .password2_default.dimmed.unselectable,
-.beta-key_default.dimmed.unselectable {
+.betakey_default.dimmed.unselectable {
 	font-size: 18px !important;
 	position: absolute !important;
 	top: 5px !important;
@@ -1263,7 +1266,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 { 	position: relative;
 	width: 200px;
 	float: left;
-	margin: 10px 0px;
+	margin: 5px 0px;
 }
 
 .inner_button #register {
