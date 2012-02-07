@@ -8,7 +8,7 @@ div { display: block; }
 /*** form styles*****/
 #content_area form { }
 select {
-    margin: 3px 0px 5px 5px;
+    margin: 3px 0px 0px 5px;
     width: 141px;
     font-size: 16px;
 }
@@ -599,7 +599,7 @@ a.attend-button:hover {
 }
 #registration-gender {
 	float: left;
-	margin-top: 10px;
+	margin-top: 5px;
 	font-size: 16px;
 	margin-left: 2px;
 }
@@ -620,7 +620,10 @@ a.attend-button:hover {
 	top: 5px !important;
 	line-height: 18px !important;
 }
-
+.out-signup.email_default.dimmed.unselectable,
+.out-signup.password_default.dimmed.unselectable {
+	font-size: 36px;
+}
 .out-signup .alternative {
     text-align: center;
     font-size: 40px;
@@ -1168,7 +1171,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: 300px;
 }
 
-.button { margin-top: 10px; overflow: auto; float: left;}
+.button { margin-top: 5px; overflow: auto; float: left;}
 .inner_button {overflow: inherit;}
 /****** Buttons *********************
 *************************************
