@@ -609,9 +609,9 @@ a.attend-button:hover {
 .lastName_default.dimmed.unselectable,
 .firstName_default.dimmed.unselectable,
 .city_default.dimmed.unselectable,
-.password.dimmed.unselectable,
-.password_again.dimmed.unselectable,
-.beta-key.dimmed.unselectable {
+.password_default.dimmed.unselectable,
+.password2_default.dimmed.unselectable,
+.beta-key_default.dimmed.unselectable {
 	font-size: 18px !important;
 	position: absolute !important;
 	top: 5px !important;
@@ -1165,7 +1165,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: 300px;
 }
 
-.button { margin-top: 10px; overflow: auto;}
+.button { margin-top: 10px; overflow: auto; float: left;}
 .inner_button {overflow: inherit;}
 /****** Buttons *********************
 *************************************
@@ -1212,7 +1212,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .index #register {
-   width: 201px;
+   width: 200px;
 }
 .inner_button #login:hover, 
 .inner_button #register:hover, 
