@@ -72,6 +72,24 @@ class EventCreationController extends Hermes_Controller_SessionController{
 	    		$this->_helper->redirector('index','profile');
 	    	}	
 	}
+	
+    public function uploadPicAction(){
+    	//ajaxify this shit in the future
+    	$form = new Application_Form_EventPic();
+    	 $this->_helper->viewRenderer->setNoRender();
+    	//var_dump($_FILES);
+    	if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
+    		if($form->image->isUploaded()){
+	    		$imageModel = new Application_Model_ImageModel($this->curUser);
+	    		$imageModel->makeProfilePicture($_FILES['image']['tmp_name'],$_FILES['image']['type']);
+	    		$this->_redirect('/account-edit');
+	    		//echo 'image saved!';
+    		}
+    	}else{
+    		$this->_redirect('account-edit');
+    	}
+    	
+    }
 
 }
 

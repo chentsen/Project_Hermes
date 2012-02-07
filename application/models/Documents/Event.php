@@ -46,6 +46,13 @@ class Event{
 	
 	/** @Date*/
 	private $timestamp;
+	/**
+     * 
+     * @ReferenceOne(targetDocument="Image")
+     * 
+     */
+    private $eventPic;
+	
 	
 	public function __construct($options){
 		$this->location = $options['location'];
@@ -115,4 +122,10 @@ class Event{
 	public function getWall(){
 		return $this->wall;
 	}
+	public function getEventPic(){
+    	return $this->eventPic;
+    }
+    public function setEventPic(Image $image){
+    	$this->eventPic = $image;
+    }
 }
