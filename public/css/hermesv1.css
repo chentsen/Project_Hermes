@@ -49,9 +49,10 @@ input[type=text], input[type=password] {
         line-height: 18px;
 	border: none;
 	outline: 0;
-	width: 200px;
+	width: 198px;
 	border: 1px solid #D9DBDF;
-        padding: 0 10px;
+        padding: 0 5px;
+	float: left;
 }
 
 input:focus {
@@ -605,8 +606,9 @@ password_again, beta-key li {
 	width: 200px;
 }
 
-lastName_default dimmed unselectable {
-	font-size: 20px;
+.lastName_default.dimmed.unselectable, firstName_default.dimmed.unselectable {
+	font-size: 18px;
+	padding: 0px 3px;
 }
 
 .out-signup .alternative {
@@ -1251,7 +1253,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .password_again,
 .reglist,
 .create-text
-{ position: relative;}
+{ 	position: relative;
+	width: 200px;
+	float: left;
+	margin: 10px 0px;
+}
 
 .inner_button #register {
 }
@@ -1444,6 +1450,7 @@ ul.as-selections {
      margin: 5px;
      overflow: auto;
      padding: 5px 10px;
+     width: 200px;
 }
 .index .modalWindow {
 		margin-left: 40%;
