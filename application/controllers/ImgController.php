@@ -4,13 +4,13 @@ class ImgController extends Hermes_Controller_SessionController{
 		$this->_helper->viewRenderer->setNoRender();
 	}
 	public function profilePicAction(){
-		 $this->_helper->layout->disableLayout();
+		$this->_helper->layout->disableLayout();
 		$this->_helper->viewRenderer->setNoRender();
 		//echo "hello!";
 		$uid = $this->_request->getParam('uid');
 		if($uid){
 			$dm = Zend_Registry::get('Wildkat\DoctrineContainer')->getDocumentManager('default');
-			$user = $dm->getRepository('Documents\User')->findOneBy(array('email'=>$uid));
+			$user = $dm->getRepository('Documents\User')->findOneBy(array('uid'=>$uid));
 			//invalid user..do nothing
 			if(!$user){
 				die();

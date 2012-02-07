@@ -96,13 +96,13 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 			echo "<div class = 'user_result'>";
 			$friendRelation = new Application_Model_FriendRelation($identity);
 
-				$email = $user->result->getEmail();			
+				$uid = $user->result->getUid();			
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
 
                         //echo '<div class="indiv-result" style="">';
-						echo '<img src="/img/profile-pic/uid/'.$email.'" height=75  width=75/ </a>';
+						echo '<img src="/img/profile-pic/uid/'.$uid.'" height=75  width=75/ </a>';
 						echo "<div class='user-info'>
-								<a class='search-name' href = '/profile/public/email/{$email}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
+								<a class='search-name' href = '/profile/public/uid/{$uid}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
 								<div class='search-city'>{$user->result->getCity()}</div>
 								<div class='search-common-tags'>{$user->getCount()} tags in common</div>";
 
@@ -110,7 +110,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 	
 				//echo "Add {$user->result->getFirstName()} as a friend! <br />";
 
-				echo "<a class='add-friend' href = /friend/friendRequest/requestee/{$user->result->getEmail()}>Add</a>";
+				echo "<a class='add-friend' href = /friend/friendRequest/requestee/{$user->result->getUid()}>Add</a>";
 			}
 			echo "</div>";
 

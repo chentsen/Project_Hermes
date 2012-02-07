@@ -2,11 +2,12 @@
 namespace Documents;
 /** @Document(collection="users", repositoryClass="Repositories\User") */
 class User{
-	//EMAIL, ALTHOUGH UNIQUE, SHOULD NOT BE USED AS PRIMARY KEY, FOR INDEXING SECURITY REASONS
-	/** @Id(strategy = "NONE")*
+    //private, used internally
+	/** @Id(strategy = "INCREMENT")*
 	 *  
 	 */
 	private $uid;
+	
 	
 	/** @Field(type="string")*/
 	private $email;
@@ -99,6 +100,9 @@ class User{
 	
 	public function setEmail($email){
 		$this->email = $email;
+	}
+	public function getUserID(){
+	    return $this->userID;
 	}
 	public function setFirstName($firstName){
 		$this->firstName = $firstName;

@@ -75,11 +75,11 @@ class EventController extends Hermes_Controller_Wall_WallController
     public function responseAction(){
     	$this->_helper->ViewRenderer->setNoRender(true);
     	$eid =  $this->_request->getParam("eid");
-    	$email = $this->_request->getParam("email");
+    	$email = $this->_request->getParam("uid");
     	//response y means add user, response n means deny user
     	$response = $this->_request->getParam("response");
     	$event = $this->dm->getRepository('Documents\Event')->findOneBy(array('eid'=>$eid));
-    	$user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$email));
+    	$user = $this->dm->getRepository('Documents\User')->findOneBy(array('uid'=>$email));
     	$eventModel = new Application_Model_EventModel($event);
     	if($this->identity==$event->getCreator()->getEmail() && $response == "y"){
     		$eventModel->acceptRequest($user);
