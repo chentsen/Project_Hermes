@@ -44,12 +44,12 @@ textarea {
     width: 195px;
 }
 input[type=text], input[type=password] {
-	height: 23px;
+	height: 25px;
 	font-size: 18px; 
         line-height: 18px;
 	border: none;
 	outline: 0;
-	width: 198px;
+	width: 188px;
 	border: 1px solid #D9DBDF;
         padding: 0 5px;
 	float: left;
@@ -600,15 +600,22 @@ a.attend-button:hover {
 	margin-top: 10px;
 	font-size: 18px;
 }
-email, first_name, last_name, city, password,
-password_again, beta-key li {
+.email, .first_name, .last_name, .city, .password,
+.password_again, .beta-key li {
 	margin: 10px 0px;
 	width: 200px;
 }
-
-.lastName_default.dimmed.unselectable, firstName_default.dimmed.unselectable {
-	font-size: 18px;
-	padding: 0px 3px;
+.email_default.dimmed.unselectable,
+.lastName_default.dimmed.unselectable,
+.firstName_default.dimmed.unselectable,
+.city_default.dimmed.unselectable,
+.password.dimmed.unselectable,
+.password_again.dimmed.unselectable,
+.beta-key.dimmed.unselectable {
+	font-size: 18px !important;
+	position: absolute !important;
+	top: 5px !important;
+	line-height: 18px !important;
 }
 
 .out-signup .alternative {
