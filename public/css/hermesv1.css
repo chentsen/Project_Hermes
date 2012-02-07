@@ -48,12 +48,10 @@ input[type=text], input[type=password] {
 	font-size: 18px; 
         line-height: 18px;
 	border: none;
-	outline: 0;        
-
-
-border: 1px solid #D9DBDF;
+	outline: 0;
+	width: 200px;
+	border: 1px solid #D9DBDF;
         padding: 0 10px;
-		
 }
 
 input:focus {
@@ -601,8 +599,10 @@ a.attend-button:hover {
 	margin-top: 10px;
 	font-size: 18px;
 }
-li.email {
+email, first_name, last_name, city, password,
+password_again, beta-key li {
 	margin: 10px 0px;
+	width: 200px;
 }
 
 lastName_default dimmed unselectable {
@@ -616,7 +616,7 @@ lastName_default dimmed unselectable {
     
 }
 .index .centerform {
-	width: 201px;
+	width: 200px;
 		
 }
 .index .centerform h1 {
