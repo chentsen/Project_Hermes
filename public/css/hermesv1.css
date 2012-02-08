@@ -1278,6 +1278,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .create_date {
     position: relative;
 }
+#createEvent .center-form {
+	
+}
+
 #createEvent #createEvent_shortDescription {
     width: 175px;
     float: right;
@@ -1463,7 +1467,7 @@ ul.as-selections {
      margin: 5px;
      overflow: auto;
      padding: 5px 10px;
-     width: 200px;
+     width: 100%;
 }
 .index .modalWindow {
 		margin-left: 40%;
