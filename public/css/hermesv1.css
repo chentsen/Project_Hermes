@@ -1316,11 +1316,29 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #createEvent_submit {
 	padding: 0 93px !important;
 }
+#createEvent_shortDescription_default.dimmed.unselectable,
+#createEvent_location_default.dimmed.unselectable,
+#createEvent_longDescription_default.dimmed.unselectable {
+	position: absolute;
+	font-size: 18px;
+	
+}
+
 #createEvent .centerform {margin: 10px 0px 0px 0px;}
-#createEvent .centerform li {margin: 0px 0px; overflow: hidden;}
+#createEvent .centerform li {
+	margin: 0px 0px;
+	overflow: hidden;
+	float: left;
+	display: block;
+	width: 300px;
+}
 #createEvent .centerform li .createEvent_text { font-size: 18px; width: 100px; margin: 13px 0px; }
 #createEvent .centerform .form_date {overflow: hidden;}
-#createEvent_private { font-size: 18px;}
+#createEvent_private {
+	font-size: 18px;
+	width: 100px;
+	margin: 10px 7px 0px 13px;
+}
 /*** app style profile page ***/
 #personalDescription_description, #tag_input {
      border-radius: 5px;
