@@ -1316,9 +1316,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #createEvent_submit {
 	padding: 0 93px !important;
 }
-#createEvent_shortDescription_default.dimmed.unselectable,
-#createEvent_location_default.dimmed.unselectable,
-#createEvent_longDescription_default.dimmed.unselectable {
+.createEvent_shortDescription_default.dimmed.unselectable,
+.createEvent_location_default.dimmed.unselectable,
+.createEvent_longDescription_default.dimmed.unselectable {
 	position: absolute;
 	font-size: 18px;
 	
@@ -1509,6 +1509,7 @@ ul.as-selections {
 }
 .modalWindow #createEvent {
     color: #454545;
+    width: 300px;
 }
 .closeBox {
     position: relative
