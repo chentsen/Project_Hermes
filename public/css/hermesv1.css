@@ -42,11 +42,10 @@ textarea {
 #content_area input[type=text],
 #content_area input[type=password]{
     margin: 5px 0;
-    padding: 5px 0px 5px 5px;
     width: 195px;
 }
 input[type=text], input[type=password] {
-	height: 25px;
+	height: 30px;
 	font-size: 18px; 
         line-height: 18px;
 	border: none;
@@ -72,11 +71,6 @@ input[type=text]:first,input[type=password]:first {
 .focusinput {
     border: 1px solid #FC6C0C;
 }
-
-.form_date {
-    float: left;
-}
-
 .form_text {
 	line-height: 34px;
 	font-size: 14px;
@@ -617,7 +611,7 @@ a.attend-button:hover {
 .betakey_default.dimmed.unselectable {
 	font-size: 18px !important;
 	position: absolute !important;
-	top: 5px !important;
+	top: 7px !important;
 	line-height: 18px !important;
 }
 #login.email_default.dimmed.unselectable,
@@ -1311,10 +1305,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #createEvent #createEvent_longDescription {
     font-size: 18px;
     margin: 0px;
-    width: 278px;
+    width: 248px;
 }
 #createEvent_submit {
-	padding: 0 93px !important;
+	width: 270px;
 }
 .createEvent_shortDescription_default.dimmed.unselectable,
 .createEvent_location_default.dimmed.unselectable,
@@ -1330,14 +1324,21 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	overflow: hidden;
 	float: left;
 	display: block;
-	width: 300px;
+	width: 270px;
 }
-#createEvent .centerform li .createEvent_text { font-size: 18px; width: 100px; margin: 13px 0px; }
-#createEvent .centerform .form_date {overflow: hidden;}
+#createEvent .centerform li .createEvent_text {
+	font-size: 18px;
+	width: 100px;
+	margin: 13px 17px 13px 0px;
+}
+#createEvent .centerform .form_date {
+	overflow: hidden;
+	float: right;
+}
 #createEvent_private {
 	font-size: 18px;
 	width: 100px;
-	margin: 10px 7px 0px 13px;
+	margin: 10px 7px 0px 21px;
 }
 /*** app style profile page ***/
 #personalDescription_description, #tag_input {
@@ -1485,7 +1486,6 @@ ul.as-selections {
      margin: 5px;
      overflow: auto;
      padding: 5px 10px;
-     width: 100%;
 }
 .index .modalWindow {
 		margin-left: 40%;
@@ -1509,7 +1509,7 @@ ul.as-selections {
 }
 .modalWindow #createEvent {
     color: #454545;
-    width: 300px;
+    width: 270px;
 }
 .closeBox {
     position: relative
