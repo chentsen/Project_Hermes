@@ -33,6 +33,7 @@ class AccountEditController extends Hermes_Controller_SessionController
         $this->view->city = $this->city;
         $this->view->gender = $this->gender;
         $this->view->hasEmailPerm = $this->hasEmailPerm;
+	$this->view->curUser =$this->curUser;
         
         $options = array('firstName'=>$this->firstname, 'lastName'=>$this->lastname, 'gender'=>$this->gender,'city'=>$this->city,'description'=>$this->description, 'hasEmailPerm'=>$this->hasEmailPerm);
         
