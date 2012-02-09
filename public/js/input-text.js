@@ -45,11 +45,11 @@ $.fn.defaultText = function(options) {
     } else if(this.event) {
         fontsize = '18px';
         topPos = '12px';
-        leftPos = '125px'
+        leftPos = '90px'
     } else if(this.longdesc){
         fontsize = '18px';
-        topPos = '12px';
-        leftPos = '12px'
+        topPos = '11px';
+        leftPos = '10px'
     }else {
         fontsize = '18px';
         topPos = '7px';
