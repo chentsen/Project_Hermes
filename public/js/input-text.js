@@ -41,7 +41,7 @@ $.fn.defaultText = function(options) {
     if ($('.outside').length){
         fontsize = '18px';
         topPos = '7px';
-        leftPos = '0px'
+        leftPos = '6px'
     } else if(this.event) {
         fontsize = '18px';
         topPos = '12px';

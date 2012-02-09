@@ -15,16 +15,17 @@ select {
 #editAccount select{
 	font-size: 16px;
 	margin-top: 5px;
+	float: right;
 }
 .edit-gender {
 	display: block;
 	font-size: 16px;
-	margin-right: 10px;
+	margin-right: 5px;
 	margin-top: 7px;
 	float: left;
 }
 #editAccount textarea {
-        width: 245px;
+        width: 190px;
 	font-size: 18px; 
         background: #ffffff;
         outline: 0;
@@ -41,8 +42,6 @@ textarea {
 
 #content_area input[type=text],
 #content_area input[type=password]{
-    margin: 5px 0;
-    width: 195px;
 }
 input[type=text], input[type=password] {
 	height: 30px;
@@ -161,12 +160,13 @@ input[type=text]:first,input[type=password]:first {
 .account-edit .upload-image {
     border-right: 1px solid #D9DBDF;
     width: 285px;
+    padding: 0px 15px 0px 0px;
 }
 .account-edit .upload-image h1{
     text-align: center;
 }
 .account-edit .upload-image img {
-    margin: 20px 0 0 65px;
+    margin: 25px 0 0 55px;
 }
 .account-edit #editAccount h1 {
 	margin-bottom: 15px;
@@ -180,7 +180,7 @@ input[type=text]:first,input[type=password]:first {
     margin-left: 40px;
 }
 #profilePic #profilePic_submit {
-    margin-top: 60px;
+    margin-top: 58px;
     margin-left: 60px;
 }
 
@@ -190,18 +190,14 @@ input[type=text]:first,input[type=password]:first {
     margin-right: 20px;
 }
 #editAccount #submit{
-    margin-left: 50px;
+    margin-left: 32px;
     margin-top: 10px;
     float: left;
+    width: 200px;
 }
 #editAccount li{
-    width: 275px;
-}
-#editAccount #gender 
-#editAccount #firstName,
-#editAccount #lastName,
-#editAccount #city{
-    width: 250px;
+    width: 200px;
+    margin-left: 30px;
 }
 /*** profile page ****/
 .profile .questions_flow { 
@@ -512,7 +508,7 @@ a.attend-button:hover {
    .outside .page {}
 /***** landing styles********/
 .index .button input#login {
-	width: 201px;
+	width: 200px;
 }
 .index form#login { 
     float: left; 
@@ -604,18 +600,6 @@ a.attend-button:hover {
 	margin: 10px 0px;
 	width: 200px;
 }
-/*.email_default.dimmed.unselectable,
-.lastName_default.dimmed.unselectable,
-.firstName_default.dimmed.unselectable,
-.city_default.dimmed.unselectable,
-.password_default.dimmed.unselectable,
-.password2_default.dimmed.unselectable,
-.betakey_default.dimmed.unselectable {
-	font-size: 18px !important;
-	position: absolute !important;
-	top: 7px !important;
-	line-height: 18px !important;
-}*/
 #login.email_default.dimmed.unselectable,
 #login.password_default.dimmed.unselectable {
 	font-size: 36px !important;
@@ -1223,7 +1207,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit_tag:hover, 
 #submit:hover,
 #contact_submit:hover,
-#profilePic_submit:hover
+#profilePic_submit:hover,
 #wall_addPost:hover {
     background: #333333;
 }
