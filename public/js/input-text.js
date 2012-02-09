@@ -40,7 +40,7 @@ $.fn.defaultText = function(options) {
   
     if ($('.outside').length){
         fontsize = '18px';
-        topPos = '7px';
+        topPos = '7px'
     } else if(this.event) {
         fontsize = '18px';
         topPos = '12px';
