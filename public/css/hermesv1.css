@@ -192,10 +192,12 @@ input[type=text]:first,input[type=password]:first {
 #editAccount #submit{
     margin-left: 50px;
     margin-top: 10px;
+    float: left;
 }
 #editAccount li{
     width: 275px;
 }
+#editAccount #gender 
 #editAccount #firstName,
 #editAccount #lastName,
 #editAccount #city{
@@ -602,7 +604,7 @@ a.attend-button:hover {
 	margin: 10px 0px;
 	width: 200px;
 }
-.email_default.dimmed.unselectable,
+/*.email_default.dimmed.unselectable,
 .lastName_default.dimmed.unselectable,
 .firstName_default.dimmed.unselectable,
 .city_default.dimmed.unselectable,
@@ -613,7 +615,7 @@ a.attend-button:hover {
 	position: absolute !important;
 	top: 7px !important;
 	line-height: 18px !important;
-}
+}*/
 #login.email_default.dimmed.unselectable,
 #login.password_default.dimmed.unselectable {
 	font-size: 36px !important;

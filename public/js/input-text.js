@@ -39,9 +39,8 @@ $.fn.defaultText = function(options) {
     
   
     if ($('.outside').length){
-        fontsize = '24px';
-        topPos = '12px';
-        leftPos = '7px'
+        fontsize = '18px';
+        topPos = '7px';
     } else if(this.event) {
         fontsize = '18px';
         topPos = '12px';
