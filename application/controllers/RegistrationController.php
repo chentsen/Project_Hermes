@@ -17,6 +17,8 @@ class RegistrationController extends Zend_Controller_Action
 
     public function indexAction()
     {
+	$this->_helper->layout()->disableLayout();
+	$this->_helper->viewRenderer->setNoRender();
 	$auth = Zend_Auth::getInstance();
 	if($auth->hasIdentity()){
                     $this->_redirect('/profile');
@@ -71,12 +73,17 @@ class RegistrationController extends Zend_Controller_Action
 			}
 		}
 		else{
-		
+			$reg = new Application_Form_Registration();
+		    
+		    $json['form'] =  $reg->render();
+		    
+		    $this->_helper->json($json);
 			
+			$this->_redirect('/index');
 			//$this->view->errors = $form->getMessages();
 			
 		}
-			$this->view->form = $form;
+			//$this->view->form = $form;
 			
     	// action body
     }
@@ -126,7 +133,7 @@ class RegistrationController extends Zend_Controller_Action
 		    $this->_helper->json($json);
 	    }
 	    //user is logged in so we can register
-	}
+	} 
     }
     public function fbRetryAction(){
 	$form = new Application_Form_FbRegistration();

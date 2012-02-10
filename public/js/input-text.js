@@ -16,7 +16,7 @@ $.fn.defaultText = function(options) {
         this.longdesc = true;    
     }
     
-        
+    
     var input = this[0],
         event = this[1],
         $input = this,
@@ -57,7 +57,8 @@ $.fn.defaultText = function(options) {
     }
     var $div;
     // Create div to put placeholder text in
-    if (!input.value.length) {
+ 
+    if (!input.value.length){ //|| $input.attr("type") == password) {
         $div = $('<div class="'+this.attr('id')+'_default">' + options.text + '</div>')
         // Position it to the same place as the input box:
         .css({ position: 'absolute',
@@ -73,7 +74,7 @@ $.fn.defaultText = function(options) {
         })
         .addClass(options.css + ' unselectable')
         .appendTo($(this).parent());
-    }
+    
     // Also add the class to the input box:
     $input
         .keyup(focus).blur(function() {
@@ -81,4 +82,5 @@ $.fn.defaultText = function(options) {
         });
     
     return this;
+    }
 };
