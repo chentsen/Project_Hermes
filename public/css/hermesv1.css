@@ -42,7 +42,23 @@ textarea {
 
 #content_area input[type=text],
 #content_area input[type=password]{
-	margin-top: 5px;
+}
+
+.out-signup input[type=text],
+.out-signup input[type=password] {
+	height: 20px;
+	font-size: 14px;
+	border: 1px solid #D9DBDF;
+	width: 140px;
+	padding: 0 5px;
+}
+.out-signup #errors-email, .out-signup #errors-password {
+	color: #FF8600;
+	width:140px;
+	font-size: 13px;
+}
+.out-signup .email, .out-signup .password {
+	width: 140px;
 }
 input[type=text], input[type=password] {
 	height: 30px;
@@ -544,12 +560,10 @@ a.attend-button:hover {
 .out-logo .thelogo {
     float: left;
     width: 240px;
-    height: 55px;
-    margin-top: 8px;
+    height: 70px;
     text-indent: -9999px;
 }
 .out-preview {
-    margin-top: 10px;
     overflow: hidden;
 }
 #errors-email, #errors-password,
@@ -593,6 +607,7 @@ a.attend-button:hover {
 }
 .index .out-logo {
     position: relative;
+    margin-bottom: 15px;
 }
 .out-signup a {
     width: 261px;
@@ -1422,7 +1437,7 @@ ul.as-selections {
      padding: 5px 10px;
 }
 .index .modalWindow {
-		margin-left: 40%;
+		margin-left: 42%;
 }
 .modalWindow { 
     position:absolute;
