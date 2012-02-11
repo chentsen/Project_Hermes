@@ -596,7 +596,7 @@ a.attend-button:hover {
     overflow: hidden;
 }
 .homepage-bottom {
-	
+	color: #454545;
 }
 .homepage-bottom h2 {
 	text-align: center;
@@ -615,6 +615,12 @@ a.attend-button:hover {
 .guide-three {
 	width: 320px;
 	float: left;
+}
+.guide-one-image {
+	background-image: url('../images/guide-one-image.png');
+}
+.guide-two-image {
+	background-image: url('../images/guide-two-image.png');
 }
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
