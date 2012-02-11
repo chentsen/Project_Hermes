@@ -603,6 +603,7 @@ a.attend-button:hover {
 }
 .tagline {
 	text-align: center;
+	margin: 20px 0px 25px 0px;
 }
 .guide-one {
 	width: 320px;
@@ -618,9 +619,13 @@ a.attend-button:hover {
 }
 .guide-one-image {
 	background-image: url('../images/guide-one-image.png');
+	width: 327px;
+	height: 159px;
 }
 .guide-two-image {
 	background-image: url('../images/guide-two-image.png');
+	width: 287px;
+	height: 161px;
 }
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
