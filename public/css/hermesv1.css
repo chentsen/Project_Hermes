@@ -44,13 +44,30 @@ textarea {
 #content_area input[type=password]{
 }
 
-.out-signup input[type=text],
-.out-signup input[type=password] {
+.out-signup input[type=text] {
 	height: 20px;
 	font-size: 14px;
 	border: 1px solid #D9DBDF;
 	width: 140px;
 	padding: 0 5px;
+	float: left;
+}
+.out-signup input[type=password] {
+	height: 20px;
+	font-size: 14px;
+	border: 1px solid #D9DBDF;
+	width: 90px;
+	padding: 0 5px;
+	border-right: none;
+	float: left;
+}
+.out-signup .inner_button {
+	height: 22px;
+	background: #454545;
+	color: white;
+	font-size: 14px;
+	width: 50px;
+	float: left;
 }
 .out-signup #errors-email, .out-signup #errors-password {
 	color: #FF8600;
@@ -610,14 +627,8 @@ a.attend-button:hover {
     margin-bottom: 15px;
 }
 .out-signup a {
-    width: 261px;
-    height:70px;
-    text-indent: -9999px;
-    background: url('../images/facebook-login-button.png') no-repeat center center;
     display: block;
     float: right;
-    margin-top: 80px;
-    margin-right: 190px;
 }
 .facebook-login {
 	
