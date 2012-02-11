@@ -44,7 +44,7 @@ textarea {
 #content_area input[type=password]{
 }
 .out-signup .centerform {
-	
+	width: 311px;
 }
 .out-signup input[type=text] {
 	height: 20px;
@@ -566,7 +566,6 @@ a.attend-button:hover {
 /***** landing styles********/
 .index form#login { 
     float: right; 
-    width: 311px;
 }
 .index #registration{float: left; }
 .cms-text {
@@ -595,6 +594,27 @@ a.attend-button:hover {
 }
 .out-preview {
     overflow: hidden;
+}
+.homepage-bottom {
+	
+}
+.homepage-bottom h2 {
+	text-align: center;
+}
+.tagline {
+	text-align: center;
+}
+.guide-one {
+	width: 320px;
+	float: left;
+}
+.guide-two {
+	width: 320px;
+	float: left;
+}
+.guide-three {
+	width: 320px;
+	float: left;
 }
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
