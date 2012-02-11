@@ -61,6 +61,9 @@ textarea {
 	border-right: none;
 	float: left;
 }
+.out-signup .password {
+	width: 90px !important;
+}
 .out-signup .inner_button {
 	height: 22px;
 	background: #454545;
@@ -69,12 +72,18 @@ textarea {
 	width: 50px;
 	float: left;
 }
+.out-signup input#login {
+	width: 50px;
+	height: 22px;
+	padding: 0;
+	float: left;
+}
 .out-signup #errors-email, .out-signup #errors-password {
 	color: #FF8600;
 	width:140px;
 	font-size: 13px;
 }
-.out-signup .email, .out-signup .password {
+.out-signup .email {
 	width: 140px;
 }
 input[type=text], input[type=password] {
@@ -97,7 +106,7 @@ input[type="submit"] {
     font-size: 20px;
     border: none;
 }
-input[type=text]:first,input[type=password]:first {
+input[type=text]:first, input[type=password]:first {
     border-top: none;
 }
 
