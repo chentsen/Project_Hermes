@@ -543,8 +543,8 @@ a.attend-button:hover {
 }
 .out-logo .thelogo {
     float: left;
-    width: 321px;
-    height: 100px;
+    width: 240px;
+    height: 55px;
     margin-top: 8px;
     text-indent: -9999px;
 }
@@ -594,29 +594,6 @@ a.attend-button:hover {
 .index .out-logo {
     position: relative;
 }
-.index .out-logo .signup-button {
-    float: right;
-    font-size: 40px;
-    margin: 40px 80px 0 0;
-    font-weight: bold;
-    color: #ff8600;
-}
-
-a.signup-button:hover {
-    color: #24A3DF;
-    display: block;
-}
-
-.index .out-signup h1 {
-    font-size: 26px;
-}
-.index .signup-or {
-    position: absolute;
-    top: 100px;
-    right: 490px;
-    color: #454545;
-    font-size: 18px;
-}
 .out-signup a {
     width: 261px;
     height:70px;
@@ -626,6 +603,9 @@ a.signup-button:hover {
     float: right;
     margin-top: 80px;
     margin-right: 190px;
+}
+.facebook-login {
+	
 }
 .out-signup a:hover {
 }
