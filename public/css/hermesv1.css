@@ -42,6 +42,7 @@ textarea {
 
 #content_area input[type=text],
 #content_area input[type=password]{
+	margin-top: 5px;
 }
 input[type=text], input[type=password] {
 	height: 30px;
@@ -547,42 +548,10 @@ a.attend-button:hover {
     margin-top: 8px;
     text-indent: -9999px;
 }
-
-.out-slogan {  margin-bottom: 0px;}
-.out-slogan h1 {
-    color: #454545;
-    font-size: 40px;
-}
-
 .out-preview {
     margin-top: 10px;
     overflow: hidden;
 }
-.out-preview ul {
-
-    overflow: hidden;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    
-}
-.out-preview ul li  {
-    float: left;
-}
-.out-preview ul li h3 {
-    font-weight: normal;
-    font-size: 18px;
-    color: #454545;
-}
-.out-one h3 {margin-left: 25px;}
-.out-one img {margin-right: 22px;}
-.out-two h3{ margin-left: 10px;}
-.out-three h3{}
-.out-three {margin-right: 10px;}
-.out-preview ul li h1 {
-    font-size: 100px;
-    margin-top: 20px;
-}
-
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
 #errors-lastName, #errors-firstName,
