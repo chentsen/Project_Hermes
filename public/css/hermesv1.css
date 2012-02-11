@@ -43,7 +43,9 @@ textarea {
 #content_area input[type=text],
 #content_area input[type=password]{
 }
-
+.out-signup .centerform {
+	
+}
 .out-signup input[type=text] {
 	height: 20px;
 	font-size: 14px;
@@ -72,6 +74,7 @@ textarea {
 	width: 50px;
 	float: left;
 	margin-top: 5px;
+	line-height: 13px;
 }
 .out-signup input#login {
 	width: 50px;
@@ -79,6 +82,14 @@ textarea {
 	padding: 0;
 	float: left;
 	font-size: 14px;
+}
+.out-signup input#login:hover {
+	width: 50px;
+	height: 22px;
+	padding: 0;
+	float: left;
+	font-size: 14px;
+	background-color: #333333;
 }
 .out-signup #errors-email, .out-signup #errors-password {
 	color: #FF8600;
@@ -554,15 +565,8 @@ a.attend-button:hover {
    .outside .page {}
 /***** landing styles********/
 .index form#login { 
-    float: left; 
-    margin-left: 200px;
-    padding: 10px 40px 40px 0px;
-}
-
-.index form#login { 
-    float: left; 
-    margin-left: 200px;
-    padding: 40px 40px 40px 0px; 
+    float: right; 
+    width: 311px;
 }
 .index #registration{float: left; }
 .cms-text {
@@ -1128,7 +1132,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border: 1px solid #D9DBDF !important;
 }
 .centerform {
-    width: 300px;
+    width: 200px;
 }
 
 .button { margin-top: 5px; overflow: auto; float: left;}
