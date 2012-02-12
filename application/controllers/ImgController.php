@@ -10,6 +10,7 @@ class ImgController extends Hermes_Controller_SessionController{
 		$uid = $this->_request->getParam('uid');
 		if($uid){
 			$dm = Zend_Registry::get('Wildkat\DoctrineContainer')->getDocumentManager('default');
+			$uid = intval($uid);
 			$user = $dm->getRepository('Documents\User')->find($uid);
 			//invalid user..do nothing
 			if(!$user){

@@ -19,7 +19,7 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
 		<div class="profile_header">
                 <h1 class="big_name"><?= $this->name; ?></h1>
                 <? if (!$this->isFriend && $this->createdFriendRequest){?>
-                                <a class="add-friend" href ="/friend/friendRequest/requestee/<?= $this->email; ?>">Add friend</a>
+                                <a class="add-friend" href ="/friend/friendRequest/requestee/<?= $this->user->getUid(); ?>">Add friend</a>
                   <? }?>
 		<div class ="user_details">
                 <h3><?=$gender?> <?=$this->user->getCity()?></h3>

@@ -100,7 +100,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
 
                         //echo '<div class="indiv-result" style="">';
-						echo '<img src="/img/profile-pic/uid/'.$uid.'" height=75  width=75/ </a>';
+						echo '<img src="/img/profile-pic/uid/'.$uid.'" height=75  width=75 /> </a>';
 						echo "<div class='user-info'>
 								<a class='search-name' href = '/profile/public/uid/{$uid}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
 								<div class='search-city'>{$user->result->getCity()}</div>

@@ -1,5 +1,5 @@
 <?php
-//use Documents\User;
+use Documents\User;
 use Documents\Event;
 class Application_Model_Search_Process{
 	private $dm;
@@ -24,9 +24,10 @@ class Application_Model_Search_Process{
 	
 	private function processUsers($document){
 		try{
-			$user = $this->dm->getRepository('Documents\User')->find($document['id']);
+			//var_dump($document);
+			$user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$document['users_email']));
 			if($user){
-			echo '<br>'.$user->getEmail();
+				//echo '<br>'.$user->getEmail();
 				return $user;			
 			}
 		}catch(Exception $ex){

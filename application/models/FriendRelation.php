@@ -21,9 +21,9 @@ class Application_Model_FriendRelation{
 	private function removeFriend(User $friend){
 		//find the friend and remove from both stacks, the friend and them as well.
 	}
-	public function createFriendRequest($friendIdentity){
+	public function createFriendRequest($uid){
 		
-		$friendUser = $this->dm->getRepository('Documents\User')->findOneBy(array('uid'=>$friendIdentity));
+		$friendUser = $this->dm->getRepository('Documents\User')->find(intval($uid));
 	//	echo $friendUser->getEmail();
 		//echo $friendUser;
                 //echo $friendIdentity;
@@ -51,7 +51,7 @@ class Application_Model_FriendRelation{
 		//tomorrow 1 test isFriend is working 2create an accept friend request page 3 and a reject friend page 4 create addFriendRejectFriend implementation
 	}
 	public function isRequested($friendIdentity){
-		$friendUser = $this->dm->getRepository('Documents\User')->findOneBy(array('uid'=>$friendIdentity));
+		$friendUser = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$friendIdentity));
 		$friendRequest = $this->dm->getRepository('Documents\FriendRequest')->findOneBy(array('requester.$id'=>$friendUser->getUid(),'requestee.$id'=>$this->currentUser->getUid()));
 		$friendRequest2 = $this->dm->getRepository('Documents\FriendRequest')->findOneBy(array('requester.$id'=>$this->currentUser->getUid(),'requestee.$id'=>$friendUser->getUid()));
 		//if this request doesn't already exist between these two people..figure out how to do more efficiently later
