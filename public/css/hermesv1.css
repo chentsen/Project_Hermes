@@ -630,6 +630,7 @@ a.attend-button:hover {
 	background-image: url('../images/guide-two-image.png');
 	width: 287px;
 	height: 161px;
+	margin-left: 20px;
 }
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
@@ -648,8 +649,8 @@ a.attend-button:hover {
 	margin: 10px 0px;
 	width: 200px;
 }
-#login.email_default.dimmed.unselectable,
-#login.password_default.dimmed.unselectable {
+.out-signup.email_default.dimmed.unselectable,
+.out-signup.password_default.dimmed.unselectable {
 	font-size: 14px;
 	position: absolute;
 	top: 7px;
