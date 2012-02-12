@@ -25,11 +25,10 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
         $areFriends = $this->curUser->getFriends();		
         if (!empty($areFriends)){
 			//use a for loop
-			for($i = 0; $i < count($areFriends); $i++) {
-				if($areFriends[$i]->hasEmailPerm())
-                {
-				$this->emailCollect[$i] = $areFriends[$i]->getEmail();
-                }  
+		for($i = 0; $i < count($areFriends); $i++) {
+		    if($areFriends[$i]->hasEmailPerm()){
+				    $this->emailCollect[$i] = $areFriends[$i]->getEmail();
+		    }  
             }
 		
             return $this->emailCollect;
@@ -47,7 +46,8 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 			$mail->setFrom('no-reply@plumetype.com', 'Plumetype Friend Feed');
 			$mail->addTo($identity);
 			foreach($emails as $email){
-			$mail->addBcc($email);
+			    echo 'EMAIL IS'.$email;
+			    $mail->addBcc($email);
 			}
 			$mail->setSubject($subject);
 			$mail->send();  
