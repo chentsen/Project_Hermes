@@ -30,7 +30,7 @@ class Application_Form_Login extends Zend_Form
 													'messages'=>array('regexNotMatch' => "Incorrect password.")))
 				 ->addValidator('StringLength',false,array('max'=>20))
 				 ->setRequired(true)
-				 ->addValidator('NotEmpty', true, array(
+				 ->addValidator('isEmpty', true, array(
      					'messages' => array(
           				'isEmpty' => 'A password is required.'
     					 )
