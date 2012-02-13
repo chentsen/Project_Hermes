@@ -99,6 +99,7 @@ textarea {
 	color: #FF8600;
 	width: 151px;
 	font-size: 13px;
+	float: left;
 }
 .out-signup .email {
 	width: 140px;
@@ -613,6 +614,9 @@ a.attend-button:hover {
 	width: 320px;
 	float: left;
 }
+.guide-one h2 {
+	margin-top: 30px;
+}
 .guide-two {
 	width: 320px;
 	float: left;
@@ -655,6 +659,9 @@ a.attend-button:hover {
 	position: absolute;
 	top: 7px;
 	left: 6px;
+}
+#login input#email.dimmed {
+	font-size: 14px;
 }
 .out-signup .alternative {
     text-align: center;
