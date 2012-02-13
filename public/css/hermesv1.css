@@ -676,16 +676,19 @@ a.attend-button:hover {
 .index .out-signup {
     overflow: hidden;
     position: relative;
+    float: right;
+    width:311px;
 }
 .index .out-logo {
     position: relative;
-    margin-bottom: 15px;
 }
 .out-signup a {
     display: block;
     float: right;
 }
-.facebook-login {
+.facebook-login a {
+	color: #454545;
+	display: block;
 	
 }
 .out-signup a:hover {
