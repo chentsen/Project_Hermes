@@ -572,6 +572,7 @@ a.attend-button:hover {
 .index form#login { 
     float: right;
     padding: 0 0 2px 0px;
+    border-bottom: 1px solid #D9DBDF;
 }
 .index #registration{float: left; }
 .cms-text {
@@ -583,7 +584,7 @@ a.attend-button:hover {
     padding: 20px;
 }
 .out-logo {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     overflow: auto;
 }
 .out-logo .logo {
@@ -624,8 +625,6 @@ a.attend-button:hover {
 	width: 320px;
 	float: left;
 	height: 225px;
-	border-right: solid 1px #B4BCCD;
-	border-left: solid 1px #B4BCCD;
 }
 .guide-three {
 	width: 320px;
@@ -695,6 +694,7 @@ a.attend-button:hover {
 	height: 16px;
 }
 .out-signup a:hover {
+	color: #FF8600;
 }
 
 /**top menu**/
