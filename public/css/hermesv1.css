@@ -602,39 +602,46 @@ a.attend-button:hover {
 }
 .homepage-bottom {
 	color: #454545;
+	height: 290px;
+	margin-bottom: 20px;
 }
 .homepage-bottom h2 {
 	text-align: center;
 }
 .tagline {
 	text-align: center;
-	margin: 20px 0px 35px 0px;
+	margin: 30px 0px 20px 0px;
 }
 .guide-one {
 	width: 320px;
 	float: left;
 }
 .guide-one h2 {
-	margin-top: 30px;
+	margin: 25px 0px 0px 45px;
 }
 .guide-two {
 	width: 320px;
 	float: left;
+	height: 225px;
+	border-right: solid 1px #B4BCCD;
+	border-left: solid 1px #B4BCCD;
 }
 .guide-three {
 	width: 320px;
 	float: left;
+	margin-top: 196px;
 }
 .guide-one-image {
 	background-image: url('../images/guide-one-image.png');
 	width: 311px;
 	height: 156px;
+	margin: 15px 0px 25px 0px;
 }
 .guide-two-image {
 	background-image: url('../images/guide-two-image.png');
 	width: 287px;
 	height: 161px;
-	margin-left: 20px;
+	margin: 15px 0px 20px 20px;
 }
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
@@ -653,21 +660,17 @@ a.attend-button:hover {
 	margin: 10px 0px;
 	width: 200px;
 }
-.out-signup#login.email_default.dimmed.unselectable,
-.out-signup#login.password_default.dimmed.unselectable {
+#login.ul.centerform.li.email.email_default.dimmed.unselectable,
+#login.ul.centerform.li.password.password_default.dimmed.unselectable {
 	font-size: 14px;
 	position: absolute;
 	top: 7px;
 	left: 6px;
 }
-#login input#email.dimmed {
-	font-size: 14px;
-}
 .out-signup .alternative {
     text-align: center;
     font-size: 40px;
     margin: 20px auto;
-    
 }
 .index .centerform h1 {
 	margin-bottom: 5px;
@@ -683,13 +686,10 @@ a.attend-button:hover {
     position: relative;
 }
 .out-signup a {
-    display: block;
-    float: right;
-}
-.facebook-login a {
+	float: right;
 	color: #454545;
 	display: block;
-	
+	text-align: center;
 }
 .out-signup a:hover {
 }
