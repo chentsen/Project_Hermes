@@ -570,7 +570,8 @@ a.attend-button:hover {
    .outside .page {}
 /***** landing styles********/
 .index form#login { 
-    float: right; 
+    float: right;
+    padding: 0 0 2px 0px;
 }
 .index #registration{float: left; }
 .cms-text {
@@ -582,7 +583,7 @@ a.attend-button:hover {
     padding: 20px;
 }
 .out-logo {
-    margin: 10px 0px;
+    margin-bottom: 10px;
     overflow: auto;
 }
 .out-logo .logo {
@@ -660,8 +661,8 @@ a.attend-button:hover {
 	margin: 10px 0px;
 	width: 200px;
 }
-#login.ul.centerform.li.email.email_default.dimmed.unselectable,
-#login.ul.centerform.li.password.password_default.dimmed.unselectable {
+#login.email_default.dimmed.unselectable,
+#login.password_default.dimmed.unselectable {
 	font-size: 14px;
 	position: absolute;
 	top: 7px;
@@ -690,6 +691,8 @@ a.attend-button:hover {
 	color: #454545;
 	display: block;
 	text-align: center;
+	margin: 2px 40px 0px 0px;
+	height: 16px;
 }
 .out-signup a:hover {
 }

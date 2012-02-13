@@ -17,7 +17,7 @@ class Application_Form_Login extends Zend_Form
 		$email->setRequired(true)
 			  ->addValidator('EmailAddress',true, array(
      			'messages' => array(
-          			'emailAddressInvalidFormat' => 'Please enter a valid email address.'
+          			'emailAddressInvalidFormat' => 'Please enter a valid email.'
     			 )))
 			  ->addValidator('NotEmpty', true, array(
      			'messages' => array(
