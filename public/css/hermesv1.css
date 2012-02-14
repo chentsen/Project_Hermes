@@ -570,7 +570,16 @@ a.attend-button:hover {
 	margin-top: 7px;
 }
 .about-logo .logo {
-	margin-top: 7px;
+    width: inherit;
+    height: inherit;
+    display: block;
+    background: url('../images/plumetype-flat.png') no-repeat;
+}
+.about-logo .thelogo {
+    float: left;
+    width: 240px;
+    height: 70px;
+    text-indent: -9999px;
 }
 .prepend-logo {margin-right: 12px;}
 /***** site exterior **********/
