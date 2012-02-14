@@ -639,7 +639,7 @@ a.attend-button:hover {
 	float: left;
 }
 .guide-one h2 {
-	margin: 25px 0px 0px 0px;
+	margin: 25px 15px 0px 0px;
 }
 .guide-two {
 	width: 320px;
@@ -1573,7 +1573,7 @@ ul.as-selections {
 }
 /****  dialog ****/
 .modalWindow .view-wrapped {
-    width: 430px;
+    width: 340px;
     overflow: hidden;
 }
 .modalWindow #view-content {
@@ -1584,6 +1584,10 @@ ul.as-selections {
 }
 .required {
 	font-size: 16px;
+}
+.questions_1.form.li {
+	float: left;
+	display: block;
 }
 
 /*** flash messages***/
