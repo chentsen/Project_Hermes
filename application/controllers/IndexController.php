@@ -33,6 +33,7 @@ class IndexController extends Zend_Controller_Action
 		$reg->addIdentical($_POST['password']);
 		//Betakey Validation -- remove when full release
 		$keyValid = $this->dm->getRepository('Documents\Betakey')->findOneBy(array('key'=>$_POST['betakey']));
+		
 		if($this->getRequest()->isPost() && $reg->isValid($this->_request->getPost())){
 			if(!$keyValid){
 				$this->view->errors = array("betaExists"=>array("Invalid betakey, please enter the key you received in your invite to try out Plumetype."));

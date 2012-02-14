@@ -10,7 +10,7 @@ class ProfileController extends Hermes_Controller_SessionController
                 $this->firstname = $this->curUser->getFirstName();
                 $this->lastname = $this->curUser->getLastName();
 				$this->email = $this->curUser->getEmail();
-                /* Initialize action controller here */
+        /* Initialize action controller here */
         $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
     	if($this->_helper->FlashMessenger->hasMessages()){

@@ -69,5 +69,14 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 		$this->sendEmail($subject, $email, $htmlBody, $identity);
 	
 	}
+	public function sendPasswordReset($newPassword, $user, $emailHelper, $identity, $subject) {
+		$fullName = $user->getFirstName() . " " . $user->getLastName();
+		
+		$htmlBody = $emailHelper->GenerateEmail('_email_password_reset.phtml',
+											 array(	'name'=>$fullName,
+													'password'=>$newPassword
+														));
+		$this->sendEmail($subject, $user->getEmail(), $htmlBody, $identity);
+	}
     
 }
