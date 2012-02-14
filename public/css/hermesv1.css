@@ -567,12 +567,15 @@ a.attend-button:hover {
 	color: #454545;
 }
 .about-logo {
-	margin-top: 7px;
+	margin-top: 12px;
+	float: left;
+	width: 960px;
 }
 .about-logo .logo {
     width: inherit;
     height: inherit;
     display: block;
+    margin-top: 7px;
     background: url('../images/plumetype-flat.png') no-repeat;
 }
 .about-logo .thelogo {
@@ -597,7 +600,8 @@ a.attend-button:hover {
     font-size: 16px;
     overflow: auto;
     color: #454545; 
-    padding: 20px;
+    padding: 10px 20px 20px 20px;
+    float: left;
 }
 .out-logo {
     margin: 10px 0px 5px 0px;
@@ -635,7 +639,7 @@ a.attend-button:hover {
 	float: left;
 }
 .guide-one h2 {
-	margin: 25px 0px 0px 45px;
+	margin: 25px 0px 0px 0px;
 }
 .guide-two {
 	width: 320px;
