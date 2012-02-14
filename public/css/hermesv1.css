@@ -561,12 +561,18 @@ a.attend-button:hover {
 }
 /*** about us ***/
 .prepend-logo,.questionmark {
-	font-size: 36px;
-	line-height: 36px;
+	font-size: 60px;
+	line-height: 60px;
 	float: left;
 	color: #454545;
-	}
-.prepend-logo {margin-right: 20px;}
+}
+.about-logo {
+	margin-top: 7px;
+}
+.about-logo .logo {
+	margin-top: 7px;
+}
+.prepend-logo {margin-right: 12px;}
 /***** site exterior **********/
   .outside #header_block {display: none;}
    .outside #content_area {margin-top:0px;}
@@ -584,12 +590,9 @@ a.attend-button:hover {
     color: #454545; 
     padding: 20px;
 }
-.custom.outside.thelogo {
-	margin-top: 5px;
-}
 .out-logo {
-    margin-bottom: 5px;
-    overflow: auto;
+    margin: 10px 0px 5px 0px;
+    overflow: hidden;
 }
 .out-logo .logo {
     width: inherit;
