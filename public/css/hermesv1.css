@@ -1568,7 +1568,7 @@ ul.as-selections {
 }
 /****  dialog ****/
 .modalWindow .view-wrapped {
-    width: 340px;
+    width: 270px;
     overflow: hidden;
 }
 .modalWindow #view-content {
@@ -1584,10 +1584,20 @@ ul.as-selections {
 	float: left;
 	display: block;
 }
+.questions_1 dt {
+	margin: 5px 0px;
+}
 .questions_1 input {
 	float: left;
 }
 
+.view-wrapped .questions-window {
+	padding: 20px;
+}
+.questions_1 {
+	display: block;
+	float: left;
+}
 /*** flash messages***/
 #flashMessages {
 }
