@@ -1287,16 +1287,16 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /** app style registration **/
 
 /** input fields **/
-#registration.email,
-#registration.password,
-#registration.first_name,
-#registration.beta-key,
-#registration.last_name,
-#registration.city,
-#registration.password,
-#registration.password_again,
-#registration.reglist,
-#registration.create-text
+.email,
+.password,
+.first_name,
+.beta-key,
+.last_name,
+.city,
+.password,
+.password_again,
+.reglist,
+.create-text
 { 	position: relative;
 	width: 200px;
 	float: left;
