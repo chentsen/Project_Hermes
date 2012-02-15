@@ -31,7 +31,7 @@ select {
         padding: 5px;    
 }
 textarea {
-        width: 250px;
+        width: 178px;
 	font-size: 24px; 
         background: #ffffff;
         outline: 0;
@@ -1393,12 +1393,20 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /** app style contact **/
 #contact #name {
     background: url("../images/name-form.png") no-repeat 10px center #f8f8f8;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 #contact #subject {
     background: url("../images/subject-form.png") no-repeat 10px center #f8f8f8;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 #contact #text {
     background: url("../images/your-text-form.png") no-repeat 10px 10px #f8f8f8;
+}
+#contact .centerform {
+	margin-left: 20px;
+	
 }
 /**** top column profile page ****/
 .top_col {
