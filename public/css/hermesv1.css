@@ -1577,11 +1577,10 @@ ul.as-selections {
 .questions-window {
 	padding: 15px;
 }
-.questions-window dt dd input {
+.questions_1 ul li dd label {
 	margin: 3px;
 }
 .questions-window h1 {
-	margin-bottom: 5px;
 }
 .required {
 	font-size: 16px;
@@ -1591,13 +1590,13 @@ ul.as-selections {
 	display: block;
 }
 .questions_1 dt {
-	margin: 5px 0px;
+	margin: 10px 0px 5px 0px;
 }
 .questions_1 dd {
 }
 .questions_1 input[type="text"] {
 	float: left;
-	width: 250px;
+	width: 233px;
 }
 .questions_1 form {
 	display: block;
