@@ -1574,7 +1574,8 @@ ul.as-selections {
     width: 100%; 
 }
 /**** dialog questions ***/
-.questions-window h1{
+.questions-window {
+	padding: 20px;
 }
 .required {
 	font-size: 16px;
