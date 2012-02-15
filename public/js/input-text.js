@@ -44,7 +44,7 @@ $.fn.defaultText = function(options) {
         leftPos = '6px'
     } else if(this.event) {
         fontsize = '18px';
-        topPos = '12px';
+        topPos = '7px';
         leftPos = '90px'
     } else if(this.longdesc){
         fontsize = '18px';

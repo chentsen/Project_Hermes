@@ -268,6 +268,7 @@ input[type=text]:first, input[type=password]:first {
     margin: 5px 0px 0px 0px;
     font-size: 14px;
     background: #24A3DF;
+    height: 16px;
 }
 .profile .questions_flow a {
     color: white;
@@ -1364,7 +1365,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 #createEvent .centerform li .createEvent_text {
 	font-size: 18px;
-	margin: 13px 17px 13px 0px;
+	margin: 8px 17px 13px 0px;
 }
 #createEvent .centerform .form_date {
 	overflow: hidden;
@@ -1419,6 +1420,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	margin: 7px 10px 12px 110px;
 	font-weight: 600;
 	float: left;
+}
+.no-quotes {
+	margin: 5px;
+	color: #FF8600;
 }
 ul.as-selections {
     box-shadow: none !important;
