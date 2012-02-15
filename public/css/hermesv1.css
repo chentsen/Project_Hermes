@@ -6,7 +6,6 @@ body {
 }
 div { display: block; }
 /*** form styles*****/
-#content_area form { }
 select {
     margin: 3px 0px 0px 5px;
     width: 141px;
@@ -1590,10 +1589,15 @@ ul.as-selections {
 .questions_1 input {
 	float: left;
 }
-.questions_1 form {
+.questions_1 {
 	display: block;
 	float: left;
 	padding: 20px;
+}
+.questions_1 submit {
+	display: block;
+	float: left;
+	color: #FF8600;
 }
 /*** flash messages***/
 #flashMessages {
