@@ -1580,9 +1580,12 @@ ul.as-selections {
 .required {
 	font-size: 16px;
 }
-.questions_1.form.li {
+.questions_1 li {
 	float: left;
 	display: block;
+}
+.questions_1 input {
+	float: left;
 }
 
 /*** flash messages***/
