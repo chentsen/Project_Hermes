@@ -6,8 +6,7 @@
 	<li class="reglist"><?= $this->element->firstName; ?></li>
 	<li class="reglist"><?= $this->element->lastName; ?></li>
 	<li class="reglist"><?= $this->element->city; ?></li>
-    <span class="edit-gender">Gender</span>
-    <li class="reglist"><?= $this->element->gender; ?></li>
+    <li class="reglist"><span class="edit-gender">Gender</span><?= $this->element->gender; ?></li>
         <li class="reglist"><?= $this->element->description;?></li>
     <li class="reglist" style="font-size: 16px; margin-top: 5px;">Receive email notifications <?= $this->element->hasEmailPerm; ?></li>
                 <?= $this->element->submit; ?> 

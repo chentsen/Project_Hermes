@@ -6,30 +6,32 @@ body {
 }
 div { display: block; }
 /*** form styles*****/
-#content_area form { }
 select {
-    margin: 10px 10px 10px 15px;
+    margin: 3px 0px 0px 5px;
+    width: 141px;
+    font-size: 16px;
 }
 #editAccount select{
 	font-size: 16px;
 	margin-top: 5px;
+	float: right;
 }
 .edit-gender {
 	display: block;
 	font-size: 16px;
-	margin-right: 10px;
+	margin-right: 5px;
 	margin-top: 7px;
 	float: left;
 }
 #editAccount textarea {
-        width: 245px;
+        width: 190px;
 	font-size: 18px; 
         background: #ffffff;
         outline: 0;
         padding: 5px;    
 }
 textarea {
-        width: 250px;
+        width: 178px;
 	font-size: 24px; 
         background: #ffffff;
         outline: 0;
@@ -39,21 +41,79 @@ textarea {
 
 #content_area input[type=text],
 #content_area input[type=password]{
-    margin: 5px 0;
-    padding: 5px 0px 5px 5px;
-    width: 195px;
+}
+.out-signup .centerform {
+	width: 311px;
+}
+.out-signup input[type=text] {
+	height: 20px;
+	font-size: 14px;
+	border: 1px solid #D9DBDF;
+	width: 140px;
+	padding: 0 5px;
+	float: left;
+}
+.out-signup input[type=password] {
+	height: 20px;
+	font-size: 14px;
+	border: 1px solid #D9DBDF;
+	width: 90px;
+	padding: 0 5px;
+	border-right: none;
+	float: left;
+}
+.out-signup .password {
+	width: 101px;
+}
+.out-signup .inner_button {
+	height: 22px;
+	background: #454545;
+	color: white;
+	font-size: 14px;
+	width: 50px;
+	float: left;
+	margin-top: 5px;
+	line-height: 13px;
+}
+.errors {
+	color: #FF8600;
+	font-size: 13px;
+}
+.out-signup input#login {
+	width: 50px;
+	height: 22px;
+	padding: 0px 0px 2px 0px;
+	float: left;
+	font-size: 14px;
+}
+.out-signup input#login:hover {
+	width: 50px;
+	height: 22px;
+	padding: 0;
+	float: left;
+	font-size: 14px;
+	background-color: #333333;
+}
+.out-signup #errors-email, .out-signup #errors-password {
+	color: #FF8600;
+	width: 151px;
+	font-size: 13px;
+	float: left;
+}
+.out-signup .email {
+	width: 140px;
+	margin-right: 20px;
 }
 input[type=text], input[type=password] {
-	height: 23px;
+	height: 30px;
 	font-size: 18px; 
         line-height: 18px;
 	border: none;
-	outline: 0;        
-
-
-border: 1px solid #D9DBDF;
-        padding: 0 10px;
-		
+	outline: 0;
+	width: 188px;
+	border: 1px solid #D9DBDF;
+        padding: 0 5px;
+	float: left;
 }
 
 input:focus {
@@ -64,18 +124,13 @@ input[type="submit"] {
     font-size: 20px;
     border: none;
 }
-input[type=text]:first,input[type=password]:first {
+input[type=text]:first, input[type=password]:first {
     border-top: none;
 }
 
 .focusinput {
     border: 1px solid #FC6C0C;
 }
-
-.form_date {
-    float: left;
-}
-
 .form_text {
 	line-height: 34px;
 	font-size: 14px;
@@ -166,12 +221,13 @@ input[type=text]:first,input[type=password]:first {
 .account-edit .upload-image {
     border-right: 1px solid #D9DBDF;
     width: 285px;
+    padding: 0px 15px 0px 0px;
 }
 .account-edit .upload-image h1{
     text-align: center;
 }
 .account-edit .upload-image img {
-    margin: 20px 0 0 65px;
+    margin: 25px 0 0 55px;
 }
 .account-edit #editAccount h1 {
 	margin-bottom: 15px;
@@ -185,7 +241,7 @@ input[type=text]:first,input[type=password]:first {
     margin-left: 40px;
 }
 #profilePic #profilePic_submit {
-    margin-top: 60px;
+    margin-top: 58px;
     margin-left: 60px;
 }
 
@@ -195,16 +251,14 @@ input[type=text]:first,input[type=password]:first {
     margin-right: 20px;
 }
 #editAccount #submit{
-    margin-left: 50px;
+    margin-left: 32px;
     margin-top: 10px;
+    float: left;
+    width: 200px;
 }
 #editAccount li{
-    width: 275px;
-}
-#editAccount #firstName,
-#editAccount #lastName,
-#editAccount #city{
-    width: 250px;
+    width: 200px;
+    margin-left: 30px;
 }
 /*** profile page ****/
 .profile .questions_flow { 
@@ -214,6 +268,7 @@ input[type=text]:first,input[type=password]:first {
     margin: 5px 0px 0px 0px;
     font-size: 14px;
     background: #24A3DF;
+    height: 16px;
 }
 .profile .questions_flow a {
     color: white;
@@ -501,45 +556,56 @@ a.attend-button:hover {
 /**** cms pages *****/
 .cms-title {font-size: 40px; margin-bottom: 15px; margin-left: 10px;}
 .cms-page {
-    font-size: 14px;
+    font-size: 16px;
     color: #454545;
-    text-shadow: 0px 1px #e5e5e5;
-    margin-bottom: 40px;
 }
 /*** about us ***/
-.prepend-logo,.questionmark {letter-spacing: -4px; font-size: 75px; line-height: 100px; float: left;}
-.prepend-logo {margin-right: 20px;}
+.prepend-logo,.questionmark {
+	font-size: 60px;
+	line-height: 60px;
+	float: left;
+	color: #454545;
+}
+.about-logo {
+	margin-top: 12px;
+	float: left;
+	width: 960px;
+}
+.about-logo .logo {
+    width: inherit;
+    height: inherit;
+    display: block;
+    margin-top: 7px;
+    background: url('../images/plumetype-flat.png') no-repeat;
+}
+.about-logo .thelogo {
+    float: left;
+    width: 240px;
+    height: 70px;
+    text-indent: -9999px;
+}
+.prepend-logo {margin-right: 12px;}
 /***** site exterior **********/
   .outside #header_block {display: none;}
    .outside #content_area {margin-top:0px;}
    .outside .page {}
 /***** landing styles********/
-.index .button input#login {
-	width: 201px;
-}
 .index form#login { 
-    float: left; 
-    margin-left: 200px;
-    padding: 10px 40px 40px 0px;
-}
-
-.index form#login { 
-    float: left; 
-    margin-left: 200px;
-    padding: 40px 40px 40px 0px; 
+    float: right;
+    padding: 0 0 2px 0px;
+    border-bottom: 1px solid #D9DBDF;
 }
 .index #registration{float: left; }
 .cms-text {
     font-size: 16px;
     overflow: auto;
-    color: white; 
-    text-shadow: 0px 1px #999; 
-    background: #aeaeae; 
-    padding: 20px;
+    color: #454545; 
+    padding: 10px 20px 20px 20px;
+    float: left;
 }
 .out-logo {
-    margin: 10px 0px;
-    overflow: auto;
+    margin: 10px 0px 5px 0px;
+    overflow: hidden;
 }
 .out-logo .logo {
     width: inherit;
@@ -549,69 +615,77 @@ a.attend-button:hover {
 }
 .out-logo .thelogo {
     float: left;
-    width: 321px;
-    height: 100px;
-    margin-top: 8px;
+    width: 240px;
+    height: 70px;
     text-indent: -9999px;
 }
-
-.out-slogan {  margin-bottom: 0px;}
-.out-slogan h1 {
-    color: #454545;
-    font-size: 40px;
-}
-
 .out-preview {
-    margin-top: 10px;
     overflow: hidden;
 }
-.out-preview ul {
-
-    overflow: hidden;
-    margin-bottom: 20px;
-    margin-left: 100px;
-    
+.homepage-bottom {
+	color: #454545;
+	height: 290px;
+	margin-bottom: 20px;
 }
-.out-preview ul li  {
-    float: left;
+.homepage-bottom h2 {
+	text-align: center;
 }
-.out-preview ul li h3 {
-    font-weight: normal;
-    font-size: 18px;
-    color: #454545;
+.tagline {
+	text-align: center;
+	margin: 30px 0px 20px 0px;
 }
-.out-one h3 {margin-left: 25px;}
-.out-one img {margin-right: 22px;}
-.out-two h3{ margin-left: 10px;}
-.out-three h3{}
-.out-three {margin-right: 10px;}
-.out-preview ul li h1 {
-    font-size: 100px;
-    margin-top: 20px;
+.guide-one {
+	width: 320px;
+	float: left;
 }
-
+.guide-one h2 {
+	margin: 25px 15px 0px 0px;
+}
+.guide-two {
+	width: 320px;
+	float: left;
+	height: 225px;
+}
+.guide-three {
+	width: 320px;
+	float: left;
+	margin-top: 196px;
+}
+.guide-one-image {
+	background-image: url('../images/guide-one-image.png');
+	width: 311px;
+	height: 156px;
+	margin: 15px 0px 25px 0px;
+}
+.guide-two-image {
+	background-image: url('../images/guide-two-image.png');
+	width: 287px;
+	height: 161px;
+	margin: 15px 0px 20px 20px;
+}
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
 #errors-lastName, #errors-firstName,
-#errors-city
-{
+#errors-city {
 	color: #FF8600;
 }
 #registration-gender {
 	float: left;
-	margin-top: 10px;
-	font-size: 18px;
+	margin-top: 5px;
+	font-size: 16px;
+	margin-left: 2px;
 }
-
+#login.email_default.dimmed.unselectable,
+#login.password_default.dimmed.unselectable {
+	font-size: 14px;
+	position: absolute;
+	top: 7px;
+	left: 6px;
+}
 .out-signup .alternative {
     text-align: center;
     font-size: 40px;
     margin: 20px auto;
-    
-}
-.index .centerform {
-	width: 201px;
-		
 }
 .index .centerform h1 {
 	margin-bottom: 5px;
@@ -620,47 +694,24 @@ a.attend-button:hover {
 .index .out-signup {
     overflow: hidden;
     position: relative;
+    float: right;
+    width:311px;
 }
 .index .out-logo {
     position: relative;
 }
-.index .out-logo .signup-button {
-    float: right;
-    font-size: 40px;
-    margin: 40px 80px 0 0;
-    font-weight: bold;
-    color: #ff8600;
-}
 
-a.signup-button:hover {
-    color: #24A3DF;
-    display: block;
-}
+.out-signup a {
+	float: right;
+	color: #454545;
+	display: block;
+	text-align: center;
+	margin: 2px 40px 0px 0px;
+	height: 16px;
 
-.index .out-signup h1 {
-    font-size: 26px;
-}
-.index .signup-or {
-    position: absolute;
-    top: 100px;
-    right: 490px;
-    color: #454545;
-    font-size: 18px;
-}
-.reset-password {
-		color: orange;
-}
-.out-signup .facebook-login {
-    width: 261px;
-    height:70px;
-    text-indent: -9999px;
-    background: url('../images/facebook-login-button.png') no-repeat center center;
-    display: block;
-    float: right;
-    margin-top: 80px;
-    margin-right: 190px;
 }
 .out-signup a:hover {
+	color: #FF8600;
 }
 
 /**top menu**/
@@ -1150,10 +1201,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border: 1px solid #D9DBDF !important;
 }
 .centerform {
-    width: 300px;
+    width: 200px;
 }
 
-.button { margin-top: 10px; overflow: auto;}
+.button { margin-top: 5px; overflow: auto; float: left;}
 .inner_button {overflow: inherit;}
 /****** Buttons *********************
 *************************************
@@ -1200,7 +1251,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 .index #register {
-   width: 201px;
+   width: 200px;
 }
 .inner_button #login:hover, 
 .inner_button #register:hover, 
@@ -1209,7 +1260,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit_tag:hover, 
 #submit:hover,
 #contact_submit:hover,
-#profilePic_submit:hover
+#profilePic_submit:hover,
 #wall_addPost:hover {
     background: #333333;
 }
@@ -1248,7 +1299,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .password_again,
 .reglist,
 .create-text
-{ position: relative;}
+{ 	position: relative;
+	width: 200px;
+	float: left;
+	margin: 5px 0px;
+}
 
 .inner_button #register {
 }
@@ -1256,6 +1311,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .create_date {
     position: relative;
 }
+#createEvent .center-form {
+	
+}
+
 #createEvent #createEvent_shortDescription {
     width: 175px;
     float: right;
@@ -1285,16 +1344,40 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #createEvent #createEvent_longDescription {
     font-size: 18px;
     margin: 0px;
-    width: 278px;
+    width: 248px;
 }
 #createEvent_submit {
-	padding: 0 93px !important;
+	width: 270px;
 }
+.createEvent_shortDescription_default.dimmed.unselectable,
+.createEvent_location_default.dimmed.unselectable,
+.createEvent_longDescription_default.dimmed.unselectable {
+	position: absolute;
+	font-size: 18px;
+	
+}
+
 #createEvent .centerform {margin: 10px 0px 0px 0px;}
-#createEvent .centerform li {margin: 0px 0px; overflow: hidden;}
-#createEvent .centerform li .createEvent_text { font-size: 18px; width: 100px; margin: 13px 0px; }
-#createEvent .centerform .form_date {overflow: hidden;}
-#createEvent_private { font-size: 18px;}
+#createEvent .centerform li {
+	margin: 0px 0px;
+	overflow: hidden;
+	float: left;
+	display: block;
+	width: 270px;
+}
+#createEvent .centerform li .createEvent_text {
+	font-size: 18px;
+	margin: 8px 17px 13px 0px;
+}
+#createEvent .centerform .form_date {
+	overflow: hidden;
+	float: right;
+}
+#createEvent_private {
+	font-size: 18px;
+	width: 100px;
+	margin: 10px 7px 0px 21px;
+}
 /*** app style profile page ***/
 #personalDescription_description, #tag_input {
      border-radius: 5px;
@@ -1312,12 +1395,53 @@ html .icon_bar ul li .sub-settings .last-setting a{
 /** app style contact **/
 #contact #name {
     background: url("../images/name-form.png") no-repeat 10px center #f8f8f8;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 #contact #subject {
     background: url("../images/subject-form.png") no-repeat 10px center #f8f8f8;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 #contact #text {
     background: url("../images/your-text-form.png") no-repeat 10px 10px #f8f8f8;
+}
+#contact .centerform {
+	margin-left: 90px;
+}
+#contact_submit { 
+  height: 35px;
+  display: block;
+  background: #454545;
+  color: white;
+  padding: 0 50px;
+  width: 200px;
+}
+.contact-text {
+    font-size: 16px;
+    overflow: auto;
+    color: #454545; 
+    padding: 10px 20px 20px 20px;
+    float: left;
+    width: 410px;
+}
+.contact-logo {
+	margin-top: 12px;
+	float: left;
+	width: 960px;
+}
+.contact .logo {
+    width: inherit;
+    height: inherit;
+    display: block;
+    margin-top: 7px;
+    background: url('../images/plumetype-flat.png') no-repeat;
+}
+.contact .thelogo {
+    float: left;
+    width: 240px;
+    height: 70px;
+    text-indent: -9999px;
 }
 /**** top column profile page ****/
 .top_col {
@@ -1339,6 +1463,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	margin: 7px 10px 12px 110px;
 	font-weight: 600;
 	float: left;
+}
+.no-quotes {
+	margin: 5px;
+	color: #FF8600;
 }
 ul.as-selections {
     box-shadow: none !important;
@@ -1443,7 +1571,7 @@ ul.as-selections {
      padding: 5px 10px;
 }
 .index .modalWindow {
-		margin-left: 40%;
+		margin-left: 42%;
 }
 .modalWindow { 
     position:absolute;
@@ -1464,6 +1592,7 @@ ul.as-selections {
 }
 .modalWindow #createEvent {
     color: #454545;
+    width: 270px;
 }
 .closeBox {
     position: relative
@@ -1486,19 +1615,72 @@ ul.as-selections {
 }
 /****  dialog ****/
 .modalWindow .view-wrapped {
-    width: 430px;
+    width: 245px;
     overflow: hidden;
 }
 .modalWindow #view-content {
     width: 100%; 
 }
 /**** dialog questions ***/
-.questions-window h1{
+.questions-window {
+	padding: 15px;
+}
+
+.questions-window h1 {
 }
 .required {
 	font-size: 16px;
 }
-
+.questions_1 li,
+.questions_2 li,
+.questions_3 li,
+.questions_4 li {
+	float: left;
+	display: block;
+}
+.questions_1 dt,
+.questions_2 dt,
+.questions_3 dt,
+.questions_4 dt {
+	margin: 10px 0px 5px 0px;
+}
+.questions_1 dd {
+}
+.questions_1 input[type="text"],
+.questions_2 input[type="text"],
+.questions_3 input[type="text"],
+.questions_4 input[type="text"] {
+	float: left;
+	width: 233px;
+}
+.questions_1 form,
+.questions_2 form,
+.questions_3 form,
+.questions_4 form {
+	display: block;
+	float: left;
+}
+.questions_1 .submit,
+.questions_2 .submit,
+.questions_3 .submit,
+.questions_4 .submit {
+	display: block;
+	float: left;
+	color: #FFFFFF;
+	background-color: #454545;
+	height: 30px;
+	line-height: 30px;
+	width: 245px;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+}
+.questions_1 .submit:hover,
+.questions_2 .submit:hover,
+.questions_3 .submit:hover,
+.questions_4 .submit:hover {
+	background-color: #333;
+}
 /*** flash messages***/
 #flashMessages {
 }

@@ -15,30 +15,26 @@
 
 <?=$this->DisplayFlashMessages($this->flashMessages); ?>
 <div class="out-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1>
-
- <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form'});Dialog.doValidate();Dialog.loadLoginData()">Sign up!</a>
-
+<div class="out-signup">
+       <?= $this->form ?>
+        <a class="facebook-login" href="#" onclick="FBI.authenticate(); ">Want to login with Facebook? Click here.</a>
+        <!--Dialog.showDialog({elementSelector:'#fb_ajax_form'})-->
+    </div>
 </div>
 
 <?php } ?>
 <div id="home">
-   
-    <div class="out-slogan"><h1>Make friends with awesome people 
-who share your interests.</h1></div>
     <div class="out-preview">
-        <ul>
-            <li class="out-one"><img width="250" src="<?php echo $this->baseUrl();?>/images/list-interests.png"/><h3>List your interests.</h3></li>
-            
-            <li class="out-two"><img width="250" src="<?php echo $this->baseUrl();?>/images/find-events.png" /><h3>Find events near you.</h3></li>
-           
-            <li class="out-three"><img width="250" src="<?php echo $this->baseUrl();?>/images/meet-people.png" /><h3>Go out and meet cool people.</h3></li>
-        </ul>
+         <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form'});Dialog.doValidate();Dialog.loadLoginData()">
+         <img width="960" src="<?php echo $this->baseUrl();?>/images/plumetype-banner.png"/>
+         </a>    
     </div>
-    <div class="out-signup">
-       <?= $this->form ?>
-      <div class="signup-or">or</div>
-        <a class="facebook-login" href="#" onclick="FBI.authenticate(); ">Facebook Login</a>
-        <!--Dialog.showDialog({elementSelector:'#fb_ajax_form'})-->
+    <div class="homepage-bottom">
+      <h1 class="tagline">PlumeType is your 3 step guide to meeting cool people.</h1>
+      <div class="guide-one"><div class="guide-one-image"></div><h2>List your interests</h2></div>
+      <div class="guide-two"><div class="guide-two-image"></div><h2>Find events near you</h2></div>
+      <div class="guide-three"><h2>Go out and make friends</h2></div>
+    </div>
 </div>
 
 <style type="text/css">

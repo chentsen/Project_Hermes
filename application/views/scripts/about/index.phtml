@@ -1,7 +1,7 @@
 <?php $auth = Zend_Auth::getInstance();
         if(!$auth->hasIdentity()){ ?>
 
-<div class="out-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
+<div class="about-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
 
 <?php } else { ?>
 <h1 class="cms-title">About Us</h1>
@@ -19,26 +19,15 @@
     <p>With the internet, it's relatively easier to find people who share your interests. But what happens after you find someone? You communicate through IM a couple of times and maybe meet up after a few months if you're lucky. Online meetings come with so many barriers: people are wary of strangers, you'll have conflicting schedules, and you're often restricted by your locations.
         </p><br/>
         <p>
-We believe that by streamlining the whole process, from finding someone to meeting up with them, we can make it easier for you to create new friendships.  With PlumeType, it only takes 3 steps:
-        </p></div><br/>
+We believe that by streamlining the whole process, from finding someone to meeting up with them, we can make it easier for you to create new friendships.  With PlumeType, it's a simple matter of listing your interests, finding events, and going out and having fun. 
+        </p></div>
         <div class="out-preview">
-        <ul>
-            <li class="out-one"><img width="250" src="<?php echo $this->baseUrl();?>/images/list-interests.png"/><h3>List your interests.</h3></li>
-            
-            <li class="out-two"><img width="250" src="<?php echo $this->baseUrl();?>/images/find-events.png" /><h3>Find events near you.</h3></li>
-           
-            <li class="out-three"><img width="250" src="<?php echo $this->baseUrl();?>/images/meet-people.png" /><h3>Go out and meet cool people.</h3></li>
-        </ul>
-    </div>
         
-      
-    <div class="cms-text">
-        <p>Interest-based tags help narrow down your search criteria, while meetups centered around group events create a more comfortable atmosphere for people to make friends and have fun. These are the two core features that make PlumeType work.</p>
     </div>
     </div>
 <script type="text/javascript">
-    $('.out-logo').prepend('<h1 class="prepend-logo">What is</h1>');
-    $('.out-logo').append('<h1 class="questionmark">?</h1>');
+    $('.about-logo').prepend('<h1 class="prepend-logo">What is</h1>');
+    $('.about-logo').append('<h1 class="questionmark">?</h1>');
 </script>
 <style type="text/css">
     .right-block {display: none;}
