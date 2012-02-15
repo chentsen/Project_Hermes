@@ -1406,7 +1406,14 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 #contact .centerform {
 	margin-left: 90px;
-	
+}
+#contact_submit { 
+  height: 35px;
+  display: block;
+  background: #454545;
+  color: white;
+  padding: 0 50px;
+  width: 200px;
 }
 .contact-text {
     font-size: 16px;
