@@ -1567,7 +1567,7 @@ ul.as-selections {
 }
 /****  dialog ****/
 .modalWindow .view-wrapped {
-    width: 270px;
+    width: 245px;
     overflow: hidden;
 }
 .modalWindow #view-content {
@@ -1575,7 +1575,13 @@ ul.as-selections {
 }
 /**** dialog questions ***/
 .questions-window {
-	padding: 20px;
+	padding: 15px;
+}
+.questions-window dt dd input {
+	margin: 3px;
+}
+.questions-window h1 {
+	margin-bottom: 5px;
 }
 .required {
 	font-size: 16px;
@@ -1588,7 +1594,6 @@ ul.as-selections {
 	margin: 5px 0px;
 }
 .questions_1 dd {
-	margin-left: 30px;
 }
 .questions_1 input[type="text"] {
 	float: left;
@@ -1601,7 +1606,17 @@ ul.as-selections {
 .questions_1 .submit {
 	display: block;
 	float: left;
-	color: #FF8600;
+	color: #FFFFFF;
+	background-color: #454545;
+	height: 30px;
+	line-height: 30px;
+	width: 216px;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+}
+.questions_1 .submit:hover {
+	background-color: #333;
 }
 /*** flash messages***/
 #flashMessages {
