@@ -1,7 +1,7 @@
 <?php $auth = Zend_Auth::getInstance();
         if(!$auth->hasIdentity()){ ?>
 
-<div class="out-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
+<div class="contact-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
 
 <?php } else { ?>
 <h1 class="cms-title">Contact Us</h1>
@@ -11,7 +11,7 @@
         <?=$this->DisplayFlashMessages($this->flashMessages); ?>
     </p>
     <div class="cms-page">
-        <div class="cms-text">
+        <div class="contact-text">
         <p>Site not working? Have any questions? Want to learn more about PlumeType? Fill in the contact form below and we'll get back to you ASAP. We're also open to chat about pretty much anything, so feel free to just drop in and say hi!</p>
          <?= $this->form ?>
         </div></div>

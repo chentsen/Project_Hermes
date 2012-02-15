@@ -1408,6 +1408,32 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	margin-left: 20px;
 	
 }
+.contact-text {
+    font-size: 16px;
+    overflow: auto;
+    color: #454545; 
+    padding: 10px 20px 20px 20px;
+    float: left;
+    width: 410px;
+}
+.contact-logo {
+	margin-top: 12px;
+	float: left;
+	width: 960px;
+}
+.contact .logo {
+    width: inherit;
+    height: inherit;
+    display: block;
+    margin-top: 7px;
+    background: url('../images/plumetype-flat.png') no-repeat;
+}
+.contact .thelogo {
+    float: left;
+    width: 240px;
+    height: 70px;
+    text-indent: -9999px;
+}
 /**** top column profile page ****/
 .top_col {
     position: relative;
