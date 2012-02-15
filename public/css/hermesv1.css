@@ -1590,15 +1590,15 @@ ul.as-selections {
 .questions_1 dd {
 	margin-left: 30px;
 }
-.questions_1 input {
+.questions_1 input[type="text"] {
 	float: left;
+	width: 250px;
 }
 .questions_1 form {
 	display: block;
 	float: left;
-	padding: 20px;
 }
-.questions_1 submit {
+.questions_1 .submit {
 	display: block;
 	float: left;
 	color: #FF8600;
