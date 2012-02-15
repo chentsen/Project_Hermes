@@ -1586,10 +1586,13 @@ ul.as-selections {
 .questions_1 dt {
 	margin: 5px 0px;
 }
+.questions_1 dd {
+	margin-left: 30px;
+}
 .questions_1 input {
 	float: left;
 }
-.questions_1 {
+.questions_1 form {
 	display: block;
 	float: left;
 	padding: 20px;
