@@ -1,4 +1,5 @@
 <?php
+use Documents\User;
 use Documents\Feed\FeedObject\FeedObject;
 use Documents\Feed\FeedObject\EventFeedObject;
 use Documents\Feed\FeedObject\FriendAcceptFeedObject;
@@ -36,7 +37,7 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
         }
         
     }
-    public function sendEmail($subject, $emails, $htmlBody, $identity)
+    public function sendEmail($subject, $emails = null, $htmlBody, $identity)
     {        
 			$mail = new Zend_Mail();
 			$mail->setReplyTo('no-reply@plumetype.com', 'Plumetype');
@@ -69,14 +70,15 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 		$this->sendEmail($subject, $email, $htmlBody, $identity);
 	
 	}
-	public function sendPasswordReset($newPassword, $user, $emailHelper, $identity, $subject) {
+	public function sendPasswordReset($newPassword, $email, $emailHelper, $identity, $subject) {
+		$user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$identity));
 		$fullName = $user->getFirstName() . " " . $user->getLastName();
 		
 		$htmlBody = $emailHelper->GenerateEmail('_email_password_reset.phtml',
 											 array(	'name'=>$fullName,
 													'password'=>$newPassword
 														));
-		$this->sendEmail($subject, $user->getEmail(), $htmlBody, $identity);
+		$this->sendEmail($subject, null, $htmlBody, $identity);
 	}
     
 }

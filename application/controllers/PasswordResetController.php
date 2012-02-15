@@ -11,7 +11,7 @@ class PasswordResetController extends Zend_Controller_Action
     	$bootstrap = $this->getInvokeArg('bootstrap');
     	$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
     	
-		$this->userSettings = new Application_Model_UserSettings($this->mongoContainer);
+		//$this->userSettings = new Application_Model_UserSettings($this->mongoContainer);
     	/* Initialize action controller here */
         $this->dm = Zend_Registry::get('Wildkat\DoctrineContainer')->getDocumentManager('default');
     	$this->url = Zend_Registry::get('config')->siteInformation->url;
@@ -25,26 +25,24 @@ class PasswordResetController extends Zend_Controller_Action
         $this->view->form = $form;
     }
     public function resetpasswordAction() {
+        $this->_helper->layout()->disableLayout();
         $this->_helper->viewRenderer->setNoRender();
-        $newPassword = $this->randString(8);
         
-        $this->curUser = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$_POST['email']));
+        $form = new Application_Form_PasswordReset();
+        //move into index
+        if ($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())) {
         $userSettings = new Application_Model_UserSettings($this->mongoContainer,$curUser);
-    	if($userSettings->resetPassword($newPassword, $_POST['email'])) {
-        //$this->view->successMessage = '<h1 class="regsuccess">You have successfully changed your password.</h1>';
-            //$this->_redirect('/profile');
-            echo $newPassword;
+    	$newPass = $userSettings->resetPassword($_POST['email']);
+        $this->eventEmail = new Application_Model_EmailModel(null, $this->curUser);
+        $this->eventEmail->sendPasswordReset($newPass, null, $this->_helper->GenerateEmail, $_POST['email'], "Reset your Password");
+        //success message not appearing    
+        $this->view->successMessage = '<h1 class="regsuccess">You have successfully changed your password.</h1>';
         }
+        $this->_redirect('/index');
+        
     }
-    function randString($length, $charset='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789')
-    {
-        $str = '';
-        $count = strlen($charset);
-        while ($length--) {
-           $str .= $charset[mt_rand(0, $count-1)];
-        }
-    return $str;
-    }
+    
+    
 
 }
 

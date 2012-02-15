@@ -33,7 +33,7 @@ abstract class Hermes_Controller_SessionController extends Zend_Controller_Actio
 		    return true;
 		}
 	    }
-		if(!$request->getParam('password-reset'))
+		//if(!$request->getParam('password-reset'))
 			$this->_helper->redirector('index','index');
 	  
         }
