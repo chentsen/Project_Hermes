@@ -1577,44 +1577,60 @@ ul.as-selections {
 .questions-window {
 	padding: 15px;
 }
-.questions_1 ul li dd label {
-	margin: 3px;
-}
+
 .questions-window h1 {
 }
 .required {
 	font-size: 16px;
 }
-.questions_1 li {
+.questions_1 li,
+.questions_2 li,
+.questions_3 li,
+.questions_4 li {
 	float: left;
 	display: block;
 }
-.questions_1 dt {
+.questions_1 dt,
+.questions_2 dt,
+.questions_3 dt,
+.questions_4 dt {
 	margin: 10px 0px 5px 0px;
 }
 .questions_1 dd {
 }
-.questions_1 input[type="text"] {
+.questions_1 input[type="text"],
+.questions_2 input[type="text"],
+.questions_3 input[type="text"],
+.questions_4 input[type="text"] {
 	float: left;
 	width: 233px;
 }
-.questions_1 form {
+.questions_1 form,
+.questions_2 form,
+.questions_3 form,
+.questions_4 form {
 	display: block;
 	float: left;
 }
-.questions_1 .submit {
+.questions_1 .submit,
+.questions_2 .submit,
+.questions_3 .submit,
+.questions_4 .submit {
 	display: block;
 	float: left;
 	color: #FFFFFF;
 	background-color: #454545;
 	height: 30px;
 	line-height: 30px;
-	width: 216px;
+	width: 245px;
 	font-size: 20px;
 	text-align: center;
 	margin-top: 10px;
 }
-.questions_1 .submit:hover {
+.questions_1 .submit:hover,
+.questions_2 .submit:hover,
+.questions_3 .submit:hover,
+.questions_4 .submit:hover {
 	background-color: #333;
 }
 /*** flash messages***/
