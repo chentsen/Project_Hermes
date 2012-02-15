@@ -1590,13 +1590,10 @@ ul.as-selections {
 .questions_1 input {
 	float: left;
 }
-
-.view-wrapped .questions-window {
-	padding: 20px;
-}
-.questions_1 {
+.questions_1 form {
 	display: block;
 	float: left;
+	padding: 20px;
 }
 /*** flash messages***/
 #flashMessages {
