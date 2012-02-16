@@ -704,14 +704,13 @@ a.attend-button:hover {
     position: relative;
 }
 
-.out-signup a {
-	float: right;
-	color: #454545;
+.reset-password {
 	display: block;
-	text-align: center;
-	margin: 2px 40px 0px 0px;
-	height: 16px;
-
+	float: left;
+}
+.facebook-login {
+	display: block;
+	float: left;
 }
 .out-signup a:hover {
 	color: #FF8600;
@@ -1921,14 +1920,6 @@ ul.as-selections {
 }
 .change-password {
 	color: #FF8600;
-	display: block;
-	float: left;
-}
-.reset-password {
-	display: block;
-	float: left;
-}
-.facebook-login {
 	display: block;
 	float: left;
 }
