@@ -260,6 +260,8 @@ input[type=text]:first, input[type=password]:first {
 #editAccount li{
     width: 200px;
     margin-left: 30px;
+    font-size: 16px;
+    margin-top: 5px;
 }
 /*** profile page ****/
 .profile .questions_flow { 
