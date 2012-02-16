@@ -1307,7 +1307,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .password,
 .password_again,
 .reglist,
-.create-text
+.create-text,
+.name,
+.subject,
+.text
 { 	position: relative;
 	width: 200px;
 	float: left;
@@ -1402,18 +1405,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border-top: 1px solid #363636;
 }
 /** app style contact **/
-#contact #name {
-    background: url("../images/name-form.png") no-repeat 10px center #f8f8f8;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-#contact #subject {
-    background: url("../images/subject-form.png") no-repeat 10px center #f8f8f8;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-#contact #text {
-    background: url("../images/your-text-form.png") no-repeat 10px 10px #f8f8f8;
+.text textarea{
+		font-size: 18px;
 }
 #contact .centerform {
 	margin-left: 90px;

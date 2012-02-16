@@ -225,11 +225,16 @@ $(document).ready(function(){
     //*** end disable function
     //Non Modal Input fields
 	if (window.location.pathname=='/password-reset') {
+	  $('#email').defaultText({text: 'Email'});
+	} else if (window.location.pathname=='/password-change') {
+	  $('#originalPassword').defaultText({text: 'Original Password'});
 	  $('#password').defaultText({text: 'Password'});
 	  $('#password2').defaultText({text: 'Password Again'});
-    $('#originalPassword').defaultText({text: 'Original Password'});
- 
-	
+	}  else if (window.location.pathname=='/contact') {
+		 $('#email').defaultText({text: 'Email'});
+		 $('#name').defaultText({text: 'Name'});
+		 $('#subject').defaultText({text: 'Subject'});
+		 $('#text').defaultText({text: 'Your Text'});
 	} else {
        $('#email').defaultText({text: 'Email'});
     	  $('#password').defaultText({text: 'Password'});
