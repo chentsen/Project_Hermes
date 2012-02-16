@@ -13,6 +13,7 @@ abstract class Hermes_Controller_SessionController extends Zend_Controller_Actio
     {
 	$bootstrap = $this->getInvokeArg('bootstrap');	
         $this->identity = $this->_helper->GetIdentity->GetIdentity();
+		
                 $mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
                 $dm = $mongoContainer->getDocumentManager('default');
                 $this->curUser = $dm->getRepository('Documents\User')->findOneBy(array('email'=>$this->identity));
@@ -32,8 +33,9 @@ abstract class Hermes_Controller_SessionController extends Zend_Controller_Actio
 		    return true;
 		}
 	    }
-	    $this->_helper->redirector('index','index');
-	           
+		//if(!$request->getParam('password-reset'))
+			$this->_helper->redirector('index','index');
+	  
         }
 		//echo $this->identity;
     	/* Initialize action controller here */

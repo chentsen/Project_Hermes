@@ -700,6 +700,7 @@ a.attend-button:hover {
 .index .out-logo {
     position: relative;
 }
+
 .out-signup a {
 	float: right;
 	color: #454545;
@@ -707,6 +708,7 @@ a.attend-button:hover {
 	text-align: center;
 	margin: 2px 40px 0px 0px;
 	height: 16px;
+
 }
 .out-signup a:hover {
 	color: #FF8600;

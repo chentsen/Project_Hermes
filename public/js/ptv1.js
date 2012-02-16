@@ -224,11 +224,16 @@ $(document).ready(function(){
     $('.noSelect').disableTextSelect();
     //*** end disable function
     //Non Modal Input fields
+	if (window.location.pathname=='/password-reset') {
+	  $('#password').defaultText({text: 'Password'});
+	  $('#password2').defaultText({text: 'Password Again'});
+    $('#originalPassword').defaultText({text: 'Original Password'});
+ 
 	
-   $('#email').defaultText({text: 'Email'});
-   
-   $('#password').defaultText({text: 'Password'});
-   
+	} else {
+       $('#email').defaultText({text: 'Email'});
+    	  $('#password').defaultText({text: 'Password'});
+	}
 });
 
 

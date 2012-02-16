@@ -115,6 +115,9 @@ class User{
 	public function setPassword($hashedPassword){
 		$this->password = $hashedPassword;
 	}
+	public function getPassword() {
+		return $this->password;
+	}
 	public function setConfirmation($randomHash){
 		$this->confirmation = $randomHash;
 	}

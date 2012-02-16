@@ -164,6 +164,28 @@ class Application_Model_UserSettings{
 		$this->dm->flush();
             
         }
+		public function updatePassword($password) {
+			$hashedPassword = md5($password['originalPassword']);
+			if ($this->user->getPassword() == $hashedPassword &&
+					$password['password'] == $password['password2']) {
+				$this->user->setPassword(md5($password['password']));
+				$this->dm->persist($this->user);
+				$this->dm->flush();
+				return true;
+			}
+			return false;
+		}
+		public function resetPassword($email) {
+			$this->user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$email));
+	        $date = new DateTime();
+			$newPassword = md5($date->getTimestamp());
+			$newPassword = substr($newPassword, 0, 8);
+			$hashedPassword = md5($password);
+			$this->user->setPassword($hashedPassword);
+			$this->dm->persist($this->user);
+			$this->dm->flush();
+			return $newPassword;
+		}
 	private function encryptPassword(){
 		
 	}
