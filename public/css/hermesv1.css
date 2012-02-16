@@ -707,10 +707,15 @@ a.attend-button:hover {
 .reset-password {
 	display: block;
 	float: left;
+	color: #454545;
+	margin: 2px;
 }
 .facebook-login {
 	display: block;
 	float: left;
+	border-right: solid 1px #D9DBDF;
+	color: #454545;
+	margin: 2px;
 }
 .out-signup a:hover {
 	color: #FF8600;
