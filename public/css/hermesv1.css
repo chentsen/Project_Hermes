@@ -85,11 +85,12 @@ textarea {
 	padding: 0px 0px 2px 0px;
 	float: left;
 	font-size: 14px;
+	background-color: #454545;
 }
 .out-signup input#login:hover {
 	width: 50px;
 	height: 22px;
-	padding: 0;
+	padding: 0px 0px 2px 0px;
 	float: left;
 	font-size: 14px;
 	background-color: #333333;
@@ -1915,4 +1916,14 @@ ul.as-selections {
 }
 .event-describer {
 	margin: 5px 0px;
+}
+.change-password {
+	color: #FF8600;
+	display: block;
+	float: left;
+}
+.reset-password {
+	color: #FF8600;
+	display: block;
+	float: left;
 }
