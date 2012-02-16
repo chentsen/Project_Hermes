@@ -1925,7 +1925,10 @@ ul.as-selections {
 	float: left;
 }
 .reset-password {
-	color: #FF8600;
+	display: block;
+	float: left;
+}
+.facebook-login {
 	display: block;
 	float: left;
 }
