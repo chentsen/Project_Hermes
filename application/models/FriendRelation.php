@@ -21,9 +21,9 @@ class Application_Model_FriendRelation{
 	private function removeFriend(User $friend){
 		//find the friend and remove from both stacks, the friend and them as well.
 	}
-	public function createFriendRequest($friendIdentity){
+	public function createFriendRequest($uid){
 		
-		$friendUser = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$friendIdentity));
+		$friendUser = $this->dm->getRepository('Documents\User')->find(intval($uid));
 	//	echo $friendUser->getEmail();
 		//echo $friendUser;
                 //echo $friendIdentity;

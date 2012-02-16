@@ -16,13 +16,11 @@ class EventController extends Hermes_Controller_Wall_WallController
         $this->view->identity = $this->identity;
     	$eid = $this->_request->getParam("eid");
 		$this->view->eid = $this->_request->getParam("eid");
-    	//page that is shown depends on the user's status for now, use if statement to determine
-        //potential pages 1.Member 2.Creator 3.Public we might want to push display logic further down, at the view
-        //helper level (consult with Julian)
         $event = $this->dm->getRepository('Documents\Event')->findOneBy(array('eid'=>$eid));
         $eventModel = new Application_Model_EventModel($event);
 	
     	$this->view->event = $event;
+	$this->view->curUser = $event->getCreator();
 	$this->view->didRequest = $eventModel->hasRequestedMembership($this->identity);
         //1. if I am creator
 		$this->view->creatorName = $event->getCreator()->getFirstName(). " " .substr($event->getCreator()->getLastName(),0,1). ".";
@@ -75,11 +73,11 @@ class EventController extends Hermes_Controller_Wall_WallController
     public function responseAction(){
     	$this->_helper->ViewRenderer->setNoRender(true);
     	$eid =  $this->_request->getParam("eid");
-    	$email = $this->_request->getParam("email");
+    	$email = $this->_request->getParam("uid");
     	//response y means add user, response n means deny user
     	$response = $this->_request->getParam("response");
     	$event = $this->dm->getRepository('Documents\Event')->findOneBy(array('eid'=>$eid));
-    	$user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$email));
+    	$user = $this->dm->getRepository('Documents\User')->findOneBy(array('uid'=>$email));
     	$eventModel = new Application_Model_EventModel($event);
     	if($this->identity==$event->getCreator()->getEmail() && $response == "y"){
     		$eventModel->acceptRequest($user);

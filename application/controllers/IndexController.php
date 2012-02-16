@@ -98,6 +98,8 @@ class IndexController extends Zend_Controller_Action
     			//redirect to login page
     		}
     		else{
+			$this->_helper->flashMessenger->addMessage("Your username and/or password were not recoginized. Please try again..");
+			$this->_helper->redirector('index','index');
     			$this->view->errors = array("emailExists"=>array("Your username and/or password were not recoginized. Please try again."));
     			return;
     		}

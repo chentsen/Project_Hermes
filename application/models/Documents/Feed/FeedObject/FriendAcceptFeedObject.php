@@ -10,12 +10,12 @@ class FriendAcceptFeedObject extends FeedObject{
 	private $lastName;
 	
 	/** @String */
-	private $email; //for searching purposes later
+	private $uid; //for searching purposes later
 	
-	public function __construct($firstName,$lastName,$email,$date){
+	public function __construct($firstName,$lastName,$uid,$date){
 		$this->firstName = $firstName;
 		$this->lastName = $lastName;
-		$this->email = $email;
+		$this->uid = $uid;
 		$this->date = $date;
 	}
 	public function getFirstName(){
@@ -24,7 +24,7 @@ class FriendAcceptFeedObject extends FeedObject{
 	public function getLastName(){
 		return $this->lastName;
 	}
-	public function getEmail(){
-		return $this->email;
+	public function getUid(){
+		return $this->uid;
 	}
 }
