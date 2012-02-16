@@ -677,10 +677,10 @@ a.attend-button:hover {
 }
 .out-signup .email_default,
 .out-signup .password_default {
-	font-size: 14px;
-	position: absolute;
-	top: 7px;
-	left: 6px;
+	font-size: 14px !important;
+	position: absolute !important;
+	top: 3px !important;
+	left: 6px !important;
 }
 .out-signup .alternative {
     text-align: center;
