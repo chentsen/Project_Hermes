@@ -1229,23 +1229,21 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 
 #wall_addPost { 
-  height: 35px;
+  height: 32px;
   display: block;
   background: #454545;
   color: white;
-  margin: 5px 0px;
   float: left;
-  width: 179px;
+  width: 174px;
 }
 
 #wall_addPost:hover {
-  height: 35px;
+  height: 32px;
   display: block;
   background: #333;
   color: white;
-  margin: 5px 0px;
   float: left;
-  width: 179px;
+  width: 174px;
 }
 
 .index #register {
