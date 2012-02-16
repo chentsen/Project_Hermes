@@ -557,7 +557,10 @@ a.attend-button:hover {
 	margin-top: 3px;
 }
 /**** cms pages *****/
-.cms-title {margin-bottom: 15px;}
+.cms-title {
+	margin-bottom: 15px;
+	color: #454545;	
+}
 .cms-page {
     font-size: 16px;
     color: #454545;
@@ -714,7 +717,6 @@ a.attend-button:hover {
 .facebook-login {
 	display: block;
 	float: left;
-	border-right: solid 1px #D9DBDF;
 	color: #454545;
 	margin: 2px 0px 0px 10px;
 	padding: 2px 15px 2px 5px;
@@ -1930,12 +1932,19 @@ ul.as-selections {
 	display: block;
 	float: left;
 }
+#passwordReset .cms-text {
+	margin-left: 220px;
+}
 #passwordReset #submit {
 	height: 32px;
+}
+#passwordReset input[type="text"] {
+	border-right: none;
 }
 #passwordReset ul {
 	margin-top: 15px;
 }
 #passwordReset li {
 	height: 32px;
+	margin: 0;
 }
