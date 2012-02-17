@@ -36,7 +36,8 @@ class PasswordResetController extends Zend_Controller_Action
         $this->eventEmail = new Application_Model_EmailModel(null, $this->curUser);
         $this->eventEmail->sendPasswordReset($newPass, null, $this->_helper->GenerateEmail, $_POST['email'], "Reset your Password");
         //success message not appearing    
-        $this->view->successMessage = '<h1 class="regsuccess">You have successfully changed your password.</h1>';
+        //$this->view->successMessage = '<h1 class="regsuccess">You have successfully changed your password.</h1>';
+        $this->_helper->flashMessenger->addMessage("Please check your email to finish resetting your password.");
         }
         $this->_redirect('/index');
         

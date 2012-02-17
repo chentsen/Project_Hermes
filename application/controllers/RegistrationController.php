@@ -38,6 +38,7 @@ class RegistrationController extends Zend_Controller_Action
 			}else{
 				$this->dm->remove($keyValid);
 				$this->dm->flush();
+				
 			}	
 			
 			$activationCode = $this->userSettings->register($this->_request->getPost());
@@ -63,6 +64,7 @@ class RegistrationController extends Zend_Controller_Action
 				$mail->addTo($_POST['email']);
 				$mail->setSubject('Activate Your Plumetype Account');
 				$mail->send();
+				$this->_redirect('/index');
 				// redirect to some page and fire off email and return
 				return;	
                                 

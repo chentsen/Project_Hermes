@@ -235,7 +235,8 @@ $(document).ready(function(){
 		 $('#name').defaultText({text: 'Name'});
 		 $('#subject').defaultText({text: 'Subject'});
 		 $('#text').defaultText({text: 'Your Text'});
-	} else {
+	} else if (window.location.pathname=='/' || window.location.pathname=='/index' ||
+			   window.location.pathname=='/index#' || window.location.pathname=='/index/index'){
        $('#email').defaultText({text: 'Email'});
     	  $('#password').defaultText({text: 'Password'});
 	}

@@ -20,6 +20,7 @@ var FBI = {
                             }else if(data.form){
                                 console.log('Registration failed! Showing remaining info dialog!');
                                 Dialog.showDialog({returnedHTML:data.form});
+                                Dialog.loadBetaData();
  //                               $('.main_ajax_content').html(data.form);
                                 
                                 //redirect to page that uses session variable to show the remaining stuff still needed.

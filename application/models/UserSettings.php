@@ -180,7 +180,7 @@ class Application_Model_UserSettings{
 	        $date = new DateTime();
 			$newPassword = md5($date->getTimestamp());
 			$newPassword = substr($newPassword, 0, 8);
-			$hashedPassword = md5($password);
+			$hashedPassword = md5($newPassword);
 			$this->user->setPassword($hashedPassword);
 			$this->dm->persist($this->user);
 			$this->dm->flush();
