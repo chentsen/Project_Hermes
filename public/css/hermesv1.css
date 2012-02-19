@@ -640,6 +640,15 @@ a.attend-button:hover {
 .homepage-bottom {
 
 }
+.signin-wrapper {
+	display: block;
+	width: 400px;
+}
+.trans {
+	opacity: 0.5;
+	background-color: #454545;
+	width: 400px;
+}
 .tagline {
 	color: #FFFFFF;
 	text-align: center;
@@ -648,7 +657,7 @@ a.attend-button:hover {
 .tagline-top {
 	color: #FFFFFF;
 	text-align: center;
-	margin: 30px 0px 20px 0px;
+	margin: 65px 0px 20px 0px;
 }
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
