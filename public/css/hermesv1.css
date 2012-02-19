@@ -608,7 +608,6 @@ a.attend-button:hover {
 .index form#login { 
     float: right;
     padding: 0 0 2px 0px;
-    border-bottom: 1px solid #D9DBDF;
 }
 .index #registration{float: left; }
 .cms-text {
@@ -643,7 +642,7 @@ a.attend-button:hover {
 .tagline {
 	color: #FFFFFF;
 	text-align: center;
-	margin: 145px 0px 30px 0px;
+	margin: 165px 0px 30px 0px;
 	float: left;
 	font-size: 33px;
 }
@@ -671,6 +670,7 @@ a.attend-button:hover {
 	position: absolute !important;
 	top: 3px !important;
 	left: 6px !important;
+	color: black;`
 }
 .out-signin .alternative {
     text-align: center;
