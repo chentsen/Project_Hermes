@@ -175,15 +175,14 @@ class Application_Model_UserSettings{
 			}
 			return false;
 		}
-		public function resetPassword($email) {
-			$this->user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$email));
-	        $date = new DateTime();
-			$newPassword = md5($date->getTimestamp());
-			$newPassword = substr($newPassword, 0, 8);
-			$hashedPassword = md5($newPassword);
-			$this->user->setPassword($hashedPassword);
-			$this->dm->persist($this->user);
-			$this->dm->flush();
+		public function resetPassword() {
+			
+			$newPassword = substr(md5(time()),0,8);
+			if($this->user){
+				$this->user->setPassword($newPassword);
+				$this->dm->persist($this->user);
+				$this->dm->flush();
+			}
 			return $newPassword;
 		}
 	private function encryptPassword(){

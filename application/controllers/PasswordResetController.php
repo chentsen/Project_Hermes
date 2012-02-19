@@ -31,14 +31,19 @@ class PasswordResetController extends Zend_Controller_Action
         $form = new Application_Form_PasswordReset();
         //move into index
         if ($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())) {
-        $userSettings = new Application_Model_UserSettings($this->mongoContainer,$curUser);
-    	$newPass = $userSettings->resetPassword($_POST['email']);
-        $this->eventEmail = new Application_Model_EmailModel(null, $this->curUser);
-        $this->eventEmail->sendPasswordReset($newPass, null, $this->_helper->GenerateEmail, $_POST['email'], "Reset your Password");
-        //success message not appearing    
-        //$this->view->successMessage = '<h1 class="regsuccess">You have successfully changed your password.</h1>';
-        $this->_helper->flashMessenger->addMessage("Please check your email to finish resetting your password.");
-        }
+	    $user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$_POST['email']));
+	    if($user){
+		$userSettings = new Application_Model_UserSettings($this->mongoContainer,$user);
+		$newPass = $userSettings->resetPassword();
+		$this->eventEmail = new Application_Model_EmailModel(null, $this->curUser);
+		$this->eventEmail->sendPasswordReset($newPass, null, $this->_helper->GenerateEmail, $_POST['email'], "Reset your Password");
+		//success message not appearing    
+		//$this->view->successMessage = '<h1 class="regsuccess">You have successfully changed your password.</h1>';
+		$this->_helper->flashMessenger->addMessage("Please check your email to finish resetting your password.");
+	    }else{
+		$this->_helper->flashMessenger->addMessage("Your email address could not be located in our database!");
+	    }
+	}
         $this->_redirect('/index');
         
     }
