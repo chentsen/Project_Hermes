@@ -48,6 +48,10 @@ textarea {
 #content_area input[type=text],
 #content_area input[type=password]{
 }
+.out-signin {
+	background-color: white;
+	width: 400px;
+}
 .out-signin .centerform {
 	width: 311px;
 }
