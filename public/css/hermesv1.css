@@ -1924,6 +1924,7 @@ ul.as-selections {
 	color: #FF8600;
 	display: block;
 	float: left;
+	margin: 20px 20px 20px 80px;
 }
 #passwordReset .cms-text {
 	margin-left: 220px;

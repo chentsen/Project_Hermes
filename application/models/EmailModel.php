@@ -71,8 +71,7 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 	
 	}
 	public function sendPasswordReset($newPassword, $email, $emailHelper, $identity, $subject) {
-		$user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$identity));
-		$fullName = $user->getFirstName() . " " . $user->getLastName();
+		$fullName = $identity->getFirstName() . " " . $identity->getLastName();
 		
 		$htmlBody = $emailHelper->GenerateEmail('_email_password_reset.phtml',
 											 array(	'name'=>$fullName,
