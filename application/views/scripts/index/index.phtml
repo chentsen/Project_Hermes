@@ -15,17 +15,19 @@
 
 <?=$this->DisplayFlashMessages($this->flashMessages); ?>
 <div class="out-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1>
-<div class="out-signup">
-       <?= $this->form ?>
-        <a class="facebook-login" href="#" onclick="FBI.authenticate(); ">Login with Facebook</a><a class="reset-password" href="/password-reset">Forgot your password?</a>
-        <!--Dialog.showDialog({elementSelector:'#fb_ajax_form'})-->
-    </div>
 </div>
 
 <?php } ?>
 <div id="home">
     <div class="out-preview">
       <h1 class="tagline-top">Make friends.</h1>
+      <div class="signin-wrapper">
+      <div class="out-signin">
+       <?= $this->form ?>
+        <a class="facebook-login" href="#" onclick="FBI.authenticate(); ">Login with Facebook</a><a class="reset-password" href="/password-reset">Forgot your password?</a>
+        <!--Dialog.showDialog({elementSelector:'#fb_ajax_form'})-->
+    </div>
+      </div>
          <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form'});Dialog.doValidate();Dialog.loadLoginData()">
          </a>    
     </div>
