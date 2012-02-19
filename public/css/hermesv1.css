@@ -4,6 +4,9 @@ body {
         font-weight: 100;
 	background-color: white;
 	color: #454545;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smooth: always;
 }
 .index {
 	background-color: black;
