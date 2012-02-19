@@ -2,7 +2,12 @@ body {
 	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 14px;
         font-weight: 100;
-        color: #fff;
+        color: black;
+	background: url('../images/pt-background.jpg');
+	background-size: cover;
+	-moz-background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 div { display: block; }
 /*** form styles*****/
@@ -1931,9 +1936,6 @@ ul.as-selections {
 	color: #FF8600;
 	display: block;
 	float: left;
-}
-#passwordReset .cms-text {
-	margin-left: 220px;
 }
 #passwordReset #submit {
 	height: 32px;
