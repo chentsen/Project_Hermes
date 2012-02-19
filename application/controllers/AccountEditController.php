@@ -66,10 +66,9 @@ class AccountEditController extends Hermes_Controller_SessionController
 	    		$imageModel->makeProfilePicture($_FILES['image']['tmp_name'],$_FILES['image']['type']);
 	    		$this->_redirect('/account-edit');
 	    		//echo 'image saved!';
-                
     		}
     	}else{
-    		$this->_redirect('account-edit');
+    		$this->_redirect('/account-edit');
     	}
     	
     }
