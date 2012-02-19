@@ -28,8 +28,9 @@
                 
             </div>
                 <div class="event_location">
-                    <? if($this->event->getLongDescription() != '')?>
-                    <h4><?= $this->event->getLongDescription() ?></h4>
+                    <? if($this->event->getLongDescription()){?>
+                        <h4><?= $this->event->getLongDescription() ?></h4>
+                    <? } ?>
                 </div>
             </div>
         </div>
