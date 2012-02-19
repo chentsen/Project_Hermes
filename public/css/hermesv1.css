@@ -108,7 +108,8 @@ textarea {
 	width: 151px;
 	font-size: 13px;
 	float: left;
-	margin: 3px 0px 0px 2px;
+	margin: 3px 0px 0px 0px;
+	text-align: center;
 }
 .out-signin .email {
 	width: 140px;
@@ -706,7 +707,7 @@ a.attend-button:hover {
 	float: left;
 	color: #FFFFFF;
 	margin: 2px 0px 0px 10px;
-	padding: 2px 15px 2px 5px;
+	padding: 2px 16px 2px 5px;
 }
 .out-signin a:hover {
 	color: #FF8600;
