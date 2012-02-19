@@ -8,6 +8,7 @@ body {
 	-moz-background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	min-width: 960px;
 }
 div { display: block; }
 /*** form styles*****/
