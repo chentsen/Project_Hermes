@@ -4,6 +4,9 @@ body {
         font-weight: 100;
 	background-color: white;
 	color: #454545;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	font-smooth: always;
 }
 .index {
 	background-color: black;
@@ -75,7 +78,7 @@ textarea {
 }
 .out-signin .inner_button {
 	height: 22px;
-	background: #454545;
+	background: #FF8600;
 	color: white;
 	font-size: 14px;
 	width: 50px;
@@ -93,7 +96,7 @@ textarea {
 	padding: 0px 0px 2px 0px;
 	float: left;
 	font-size: 14px;
-	background-color: #454545;
+	background-color: #FF8600;
 }
 .out-signin input#login:hover {
 	width: 50px;
@@ -101,7 +104,7 @@ textarea {
 	padding: 0px 0px 2px 0px;
 	float: left;
 	font-size: 14px;
-	background-color: #333333;
+	background-color: #FA8300;
 }
 .out-signin #errors-email, .out-signin #errors-password {
 	color: #454545;
