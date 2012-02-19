@@ -82,7 +82,8 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 	}
 	public function sendFriendedEmail($subject, $emailHelper, $identity, $requestee) {
 		
-		
+		$htmlBody = $emailHelper->GenerateEmail('_email_friended.phtml',
+											 array(	'name'=>$fullName));
 		$this->sendEmail($subject, null, $htmlBody, $identity);
 	}
     
