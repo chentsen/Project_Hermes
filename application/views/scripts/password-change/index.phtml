@@ -1,9 +1,3 @@
-<?php $auth = Zend_Auth::getInstance();
-        if(!$auth->hasIdentity()){ ?>
-
-<div class="out-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
-<h1 class="cms-title">Change Your Password</h1>
-<?php } ?>
     <?= $this->Errors($this->errors); ?>
 	
     <p>
