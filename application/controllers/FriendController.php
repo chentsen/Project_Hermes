@@ -24,7 +24,7 @@ class FriendController extends Hermes_Controller_SessionController
         	$form = new Application_Form_Search($options);
         	$this->view->form = $form;
 			$friendRequest = $this->mongoContainer->getDocumentManager('default')->getRepository('Documents\FriendRequest')->findOneBy(array("_id"=>3));
-			var_dump($friendRequest);
+			
 			
     }
 	public function searchAction(){

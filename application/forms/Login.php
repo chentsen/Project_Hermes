@@ -31,11 +31,6 @@ class Application_Form_Login extends Zend_Form
 
 				 ->addValidator('StringLength',false,array('max'=>20))
 				 ->setRequired(true)
-				 ->addValidator('NotEmpty', true, array(
-     					'messages' => array(
-          				'isEmpty' => 'A password is required.'
-    					 )
-  				  ))
 				 ->removeDecorator('label')
 				 ->removeDecorator('htmlTag');
 		
