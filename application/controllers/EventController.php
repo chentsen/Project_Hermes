@@ -74,18 +74,26 @@ class EventController extends Hermes_Controller_Wall_WallController
     	$this->_helper->ViewRenderer->setNoRender(true);
     	$eid =  $this->_request->getParam("eid");
     	$email = $this->_request->getParam("uid");
-    	//response y means add user, response n means deny user
+    	//response y means add user, response n means deny user	
     	$response = $this->_request->getParam("response");
     	$event = $this->dm->getRepository('Documents\Event')->findOneBy(array('eid'=>$eid));
-    	$user = $this->dm->getRepository('Documents\User')->findOneBy(array('uid'=>$email));
+    	$user = $this->dm->getRepository('Documents\User')->find(intval($email));
     	$eventModel = new Application_Model_EventModel($event);
+	$data = array();
     	if($this->identity==$event->getCreator()->getEmail() && $response == "y"){
     		$eventModel->acceptRequest($user);
-    		echo 'User has been accepted';
+		$data['success'] = true;
+		$data['msg'] = 'You successfully added '.$user->getFirstName().' to the event.';
+    		
     	}else if($this->identity==$event->getCreator()->getEmail() && $response == "n"){
-    		$eventModel->rejectRequest($user);
-    		echo 'User has been rejected';
-    	}
+    		$data['success'] = true;
+		$data['msg'] = 'You declined '.$user->getFirstName().'\'s request.';
+		$eventModel->rejectRequest($user);
+
+    	}else{
+	    
+	}
+	$this->_helper->json($data);
     	//is the credential = to the credential of the creator?
     	//if yes, run method with the guys email as the id and eid as the other id and generate new user and new event
     	//
