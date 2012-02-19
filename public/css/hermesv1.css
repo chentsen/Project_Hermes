@@ -3,11 +3,9 @@ body {
 	font-size: 14px;
         font-weight: 100;
         color: black;
-	background: url('../images/pt-background.jpg');
-	background-size: cover;
-	-moz-background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+	background: url('../images/pt-background.jpg') no-repeat;
+	background-position: center 0%;
+	background-size: 1440px 900px;
 	min-width: 960px;
 }
 div { display: block; }
