@@ -12,7 +12,8 @@
           ->appendStylesheet($this->baseUrl('css/smoothness/jquery-ui-1.7.3.custom.css'))
           ->appendStylesheet($this->baseUrl('css/autoSuggest.css'))
           ->appendStylesheet($this->baseUrl('css/hermesvy.css'))
-          ->appendStylesheet($this->baseUrl('css/hermesv1.css')) ; ?>
+          ->appendStylesheet($this->baseUrl('css/hermesv1.css'))
+          ->appendStylesheet($this->baseUrl('css/jquery.toastmessage.css')) ; ?>
   <?php echo $this->headLink() ?>
 
   <?php $this->headScript()
@@ -23,12 +24,14 @@
           ->appendFile($this->baseUrl('js/ptv1.js'))
        
           ->appendFile($this->baseUrl('js/jquery.autoSuggest.js'))
+          ->appendFile($this->baseUrl('js/jquery.toastmessage.js'))
           ->appendFile($this->baseUrl('js/tags.js'))
           ->appendFile($this->baseUrl('js/jquery.blockUI.js'))
           ->appendFile($this->baseUrl('js/dialog.js'))
           ->appendFile($this->baseURL('js/fb_interface.js'))
           ->appendFile($this->baseURL('js/login.js'))
           ->appendFile($this->baseURL('js/input-text.js'))
+          ->appendFile($this->baseURL('js/event.js'))
           ->appendScript("window.appID='{$appId}';window.fbAsyncInit = function() {
                 FB.init({
                     appId      : window.appID,

@@ -29,8 +29,7 @@ class Application_Form_Login extends Zend_Form
 		$password->addValidator('Regex',false,array('pattern' => '/^.*(?=.{6,20})(?=.*[\d])(?=.*[a-zA-Z])/',
 													'messages'=>array('regexNotMatch' => "Incorrect password.")))
 
-				 ->addValidator('StringLength',false,array('max'=>20))
-				 ->setRequired(true)
+
 				 ->removeDecorator('label')
 				 ->removeDecorator('htmlTag');
 		
