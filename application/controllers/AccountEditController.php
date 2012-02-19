@@ -68,7 +68,7 @@ class AccountEditController extends Hermes_Controller_SessionController
 	    		//echo 'image saved!';
     		}
     	}else{
-    		$this->_redirect('account-edit');
+    		$this->_redirect('/account-edit');
     	}
     	
     }
