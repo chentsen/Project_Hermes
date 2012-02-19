@@ -634,45 +634,17 @@ a.attend-button:hover {
     overflow: hidden;
 }
 .homepage-bottom {
-	color: #454545;
-	height: 290px;
-	margin-bottom: 20px;
-}
-.homepage-bottom h2 {
-	text-align: center;
+
 }
 .tagline {
+	color: #FFFFFF;
 	text-align: center;
 	margin: 30px 0px 20px 0px;
 }
-.guide-one {
-	width: 320px;
-	float: left;
-}
-.guide-one h2 {
-	margin: 25px 15px 0px 0px;
-}
-.guide-two {
-	width: 320px;
-	float: left;
-	height: 225px;
-}
-.guide-three {
-	width: 320px;
-	float: left;
-	margin-top: 196px;
-}
-.guide-one-image {
-	background-image: url('../images/guide-one-image.png');
-	width: 311px;
-	height: 156px;
-	margin: 15px 0px 25px 0px;
-}
-.guide-two-image {
-	background-image: url('../images/guide-two-image.png');
-	width: 287px;
-	height: 161px;
-	margin: 15px 0px 20px 20px;
+.tagline-top {
+	color: #FFFFFF;
+	text-align: center;
+	margin: 30px 0px 20px 0px;
 }
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
