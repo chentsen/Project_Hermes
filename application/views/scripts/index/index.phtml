@@ -15,28 +15,22 @@
 
 <?=$this->DisplayFlashMessages($this->flashMessages); ?>
 <div class="out-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1>
-<div class="out-signup">
-       <?= $this->form ?>
-        <a class="facebook-login" href="#" onclick="FBI.authenticate(); Dialog.loadBetaData();">Login with Facebook</a><a class="reset-password" href="/password-reset">Forgot your password?</a>
-        <!--Dialog.showDialog({elementSelector:'#fb_ajax_form'})-->
-    </div>
+
 </div>
 
 <?php } ?>
 <div id="home">
     <div class="out-preview">
-         <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form'});Dialog.doValidate();Dialog.loadLoginData()">
-         <img width="960" src="<?php echo $this->baseUrl();?>/images/plumetype-banner.png"/>
-         </a>    
-    </div>
+      <h1 class="tagline-top">Make friends.</h1>
+      <div class="out-signin">
+       <?= $this->form ?>
+        <a class="facebook-login" href="#" onclick="FBI.authenticate(); ">Login with Facebook</a><a class="reset-password" href="/password-reset">Forgot your password?</a>
+        <!--Dialog.showDialog({elementSelector:'#fb_ajax_form'})-->    
+      </div>   
     <div class="homepage-bottom">
-      <h1 class="tagline">PlumeType is your 3 step guide to meeting cool people.</h1>
-      <div class="guide-one"><div class="guide-one-image"></div><h2>List your interests</h2></div>
-      <div class="guide-two"><div class="guide-two-image"></div><h2>Find events near you</h2></div>
-      <div class="guide-three"><h2>Go out and make friends</h2></div>
+      <a href="#" class="signup-button" onclick="Dialog.showDialog({elementSelector:'#reg_ajax_form'});Dialog.doValidate();Dialog.loadLoginData()"><h1 class="tagline">Meet people who like what you like. Click anywhere and sign up now.</h1></a>
     </div>
 </div>
-
 <style type="text/css">
     .right-block {display: none;}
 </style>

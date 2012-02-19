@@ -2,7 +2,15 @@ body {
 	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 14px;
         font-weight: 100;
-        color: #fff;
+	background-color: white;
+	color: #454545;
+}
+.index {
+	background-color: black;
+	background: url('../images/pt-background.jpg') no-repeat;
+	background-position: center 0%;
+	background-size: 1440px 900px;
+	min-width: 960px;	
 }
 div { display: block; }
 /*** form styles*****/
@@ -42,10 +50,10 @@ textarea {
 #content_area input[type=text],
 #content_area input[type=password]{
 }
-.out-signup .centerform {
+.out-signin .centerform {
 	width: 311px;
 }
-.out-signup input[type=text] {
+.out-signin input[type=text] {
 	height: 20px;
 	font-size: 14px;
 	border: 1px solid #D9DBDF;
@@ -53,7 +61,7 @@ textarea {
 	padding: 0 5px;
 	float: left;
 }
-.out-signup input[type=password] {
+.out-signin input[type=password] {
 	height: 20px;
 	font-size: 14px;
 	border: 1px solid #D9DBDF;
@@ -62,10 +70,10 @@ textarea {
 	border-right: none;
 	float: left;
 }
-.out-signup .password {
+.out-signin .password {
 	width: 101px;
 }
-.out-signup .inner_button {
+.out-signin .inner_button {
 	height: 22px;
 	background: #454545;
 	color: white;
@@ -79,7 +87,7 @@ textarea {
 	color: #FF8600;
 	font-size: 13px;
 }
-.out-signup input#login {
+.out-signin input#login {
 	width: 50px;
 	height: 22px;
 	padding: 0px 0px 2px 0px;
@@ -87,7 +95,7 @@ textarea {
 	font-size: 14px;
 	background-color: #454545;
 }
-.out-signup input#login:hover {
+.out-signin input#login:hover {
 	width: 50px;
 	height: 22px;
 	padding: 0px 0px 2px 0px;
@@ -95,13 +103,15 @@ textarea {
 	font-size: 14px;
 	background-color: #333333;
 }
-.out-signup #errors-email, .out-signup #errors-password {
-	color: #FF8600;
+.out-signin #errors-email, .out-signin #errors-password {
+	color: #454545;
 	width: 151px;
 	font-size: 13px;
 	float: left;
+	margin: 3px 0px 0px 0px;
+	text-align: center;
 }
-.out-signup .email {
+.out-signin .email {
 	width: 140px;
 	margin-right: 20px;
 }
@@ -599,7 +609,6 @@ a.attend-button:hover {
 .index form#login { 
     float: right;
     padding: 0 0 2px 0px;
-    border-bottom: 1px solid #D9DBDF;
 }
 .index #registration{float: left; }
 .cms-text {
@@ -610,7 +619,7 @@ a.attend-button:hover {
     float: left;
 }
 .out-logo {
-    margin: 10px 0px 5px 0px;
+    margin-top: 30px;
     overflow: hidden;
 }
 .out-logo .logo {
@@ -629,45 +638,20 @@ a.attend-button:hover {
     overflow: hidden;
 }
 .homepage-bottom {
-	color: #454545;
-	height: 290px;
-	margin-bottom: 20px;
-}
-.homepage-bottom h2 {
-	text-align: center;
+
 }
 .tagline {
+	color: #FFFFFF;
 	text-align: center;
-	margin: 30px 0px 20px 0px;
-}
-.guide-one {
-	width: 320px;
+	margin: 165px 0px 30px 0px;
 	float: left;
+	font-size: 33px;
 }
-.guide-one h2 {
-	margin: 25px 15px 0px 0px;
-}
-.guide-two {
-	width: 320px;
-	float: left;
-	height: 225px;
-}
-.guide-three {
-	width: 320px;
-	float: left;
-	margin-top: 196px;
-}
-.guide-one-image {
-	background-image: url('../images/guide-one-image.png');
-	width: 311px;
-	height: 156px;
-	margin: 15px 0px 25px 0px;
-}
-.guide-two-image {
-	background-image: url('../images/guide-two-image.png');
-	width: 287px;
-	height: 161px;
-	margin: 15px 0px 20px 20px;
+.tagline-top {
+	color: #FFFFFF;
+	text-align: center;
+	margin: 50px 0px 80px 0px;
+	font-size: 42px;
 }
 #errors-email, #errors-password,
 #errors-password2, #errors-betakey,
@@ -681,14 +665,15 @@ a.attend-button:hover {
 	font-size: 16px;
 	margin-left: 2px;
 }
-.out-signup .email_default,
-.out-signup .password_default {
+.out-signin .email_default,
+.out-signin .password_default {
 	font-size: 14px !important;
 	position: absolute !important;
 	top: 3px !important;
 	left: 6px !important;
+	color: black;`
 }
-.out-signup .alternative {
+.out-signin .alternative {
     text-align: center;
     font-size: 40px;
     margin: 20px auto;
@@ -697,11 +682,14 @@ a.attend-button:hover {
 	margin-bottom: 5px;
 	font-size: 30px;
 }
-.index .out-signup {
+.index .out-signin {
     overflow: hidden;
     position: relative;
-    float: right;
-    width:311px;
+    float: left;
+    width: 311px;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.85);
+    margin-left: 310px;
 }
 .index .out-logo {
     position: relative;
@@ -710,18 +698,18 @@ a.attend-button:hover {
 .reset-password {
 	display: block;
 	float: left;
-	color: #454545;
+	color: #FFFFFF;
 	margin: 2px 0px 0px 12px;
 	padding: 2px 5px 2px 0px;
 }
 .facebook-login {
 	display: block;
 	float: left;
-	color: #454545;
+	color: #FFFFFF;
 	margin: 2px 0px 0px 10px;
-	padding: 2px 15px 2px 5px;
+	padding: 2px 16px 2px 5px;
 }
-.out-signup a:hover {
+.out-signin a:hover {
 	color: #FF8600;
 }
 
@@ -867,7 +855,6 @@ a.attend-button:hover {
    font-size:12px;
 }
 #footer_menu .page {
-    border-top: 1px solid #D9DBDF;
     overflow: auto;
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -883,7 +870,6 @@ a.attend-button:hover {
     margin: 7px 0;
 }
 #footer_menu .left_footer {
-        font-weight: 600;
         float: left;
 	text-align: left;
         padding: 10px;
@@ -892,15 +878,15 @@ a.attend-button:hover {
 	list-style: none;
 	display: inline;
 	padding: 0px 6px 0px 4px;
-        border-right: 1px solid #eee;
-        color: #676767;
+        color: #FFFFFF;
 }
 #footer_menu .left_footer li a {
-    color: #676767;
+    color: #FFFFFF;
     text-decoration: none;
 }
 #footer_menu .left_footer li a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #FF8600;
 }
 
 /** content area **/
@@ -1925,9 +1911,6 @@ ul.as-selections {
 	display: block;
 	float: left;
 	margin: 20px 20px 20px 80px;
-}
-#passwordReset .cms-text {
-	margin-left: 220px;
 }
 #passwordReset #submit {
 	height: 32px;
