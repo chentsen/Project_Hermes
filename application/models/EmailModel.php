@@ -80,5 +80,10 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 														));
 		$this->sendEmail($subject, null, $htmlBody, $identity);
 	}
+	public function sendFriendedEmail($subject, $emailHelper, $identity, $requestee) {
+		
+		
+		$this->sendEmail($subject, null, $htmlBody, $identity);
+	}
     
 }

@@ -39,28 +39,8 @@ class EventCreationController extends Hermes_Controller_SessionController{
 					//should just do return
 					
 					$subject= "Your friend has created an event";
-					/*$htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_send_notifications.phtml',
 
-																	  array('yourName'=>$this->curUser->getFirstName(),
-																			'name'=>$fullName,
-																			'location'=>$raw['createEvent_location'],
-																			'date'=>$dateArray,
-																			'private'=>$private
-																			));*/
 					$this->eventEmail->sendEmailNotification($raw, $this->curUser, $this->_helper->GenerateEmail, $this->identity, $subject, $emails);
-					
-                    //$fullName = $this->curUser->getFirstName() . " " . $this->curUser->getLastName();
-					//html body member of the
-					//zend pass in helper -->  
-				    /*$htmlBody = $this->_helper->GenerateEmail->GenerateEmail('_email_send_notifications.phtml',
-																	  array('yourName'=>$this->curUser->getFirstName(),
-																			'name'=>$fullName,
-																			'location'=>$raw['createEvent_location'],
-																			'date'=>$dateArray,
-																			'private'=>$private
-																			));*/
-					
-					//$this->eventEmail->sendEmail($subject, $emails, $htmlBody, $this->identity);
 					
 	    			$this->_helper->flashMessenger->addMessage("You have successfully created your event.");
 	    			
