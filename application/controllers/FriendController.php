@@ -23,7 +23,9 @@ class FriendController extends Hermes_Controller_SessionController
     		$options = array('formName'=>'friendSearch','fieldName' => 'friendSearch_field','viewScriptName'=>'_form_friendSearch.phtml','formAction'=>'/friend/friendRequest');
         	$form = new Application_Form_Search($options);
         	$this->view->form = $form;
-			echo $this->curUser->getEmail();
+			$friendRequest = $this->mongoContainer->getDocumentManager('default')->getRepository('Documents\FriendRequest')->findOneBy(array("_id"=>3));
+			var_dump($friendRequest);
+			
     }
 	public function searchAction(){
 		
@@ -57,9 +59,8 @@ class FriendController extends Hermes_Controller_SessionController
 				
 				if($this->friendRelation->isFriend($friendRequest)) {
 						$subject= "Your friend ". $this->curUser->getEmail() ." has accepted your friend request";
-				
-						$this->eventEmail->sendFriendedEmail($subject, $this->curUser, $this->_helper->GenerateEmail, $this->identity, $subject, $emails);
-					
+						$this->eventEmail->sendFriendedEmail($subject, $this->_helper->GenerateEmail, $friendRequest->getRequester(), $this->curUser);
+						
 	    		
 				}
 				$this->_redirect('/profile');

@@ -79,11 +79,14 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 														));
 		$this->sendEmail($subject, null, $htmlBody, $identity);
 	}
-	public function sendFriendedEmail($subject, $emailHelper, $identity, $requestee) {
+	public function sendFriendedEmail($subject, $emailHelper, $requester, $requestee) {
 		
+		$fullName = $requestee->getFirstName() . " " . $requestee->getLastName();
+		$yourName = $requester->getFirstName() . " " . $requester->getLastName();
 		$htmlBody = $emailHelper->GenerateEmail('_email_friended.phtml',
-											 array(	'name'=>$fullName));
-		$this->sendEmail($subject, null, $htmlBody, $identity);
+											 array(	'name'=>$fullName,
+													'yourName'=>$yourName));
+		$this->sendEmail($subject, null, $htmlBody, $requester);
 	}
     
 }
