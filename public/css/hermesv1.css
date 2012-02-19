@@ -46,11 +46,6 @@ textarea {
 #content_area input[type=text],
 #content_area input[type=password]{
 }
-.signin-wrapper {
-	background-color: white;
-	width: 400px;
-	opacity: 0.6;
-}
 .out-signin .centerform {
 	width: 311px;
 }
@@ -640,15 +635,6 @@ a.attend-button:hover {
 .homepage-bottom {
 
 }
-.signin-wrapper {
-	display: block;
-	width: 400px;
-}
-.trans {
-	opacity: 0.5;
-	background-color: #454545;
-	width: 400px;
-}
 .tagline {
 	color: #FFFFFF;
 	text-align: center;
@@ -691,7 +677,9 @@ a.attend-button:hover {
     overflow: hidden;
     position: relative;
     float: right;
-    width:311px;
+    width: 311px;
+    padding: 15px;
+    background-color: rgba(69,69,69,0.3);
 }
 .index .out-logo {
     position: relative;
