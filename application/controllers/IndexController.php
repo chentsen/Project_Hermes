@@ -36,9 +36,8 @@ class IndexController extends Zend_Controller_Action
 		
 		if($this->getRequest()->isPost() && $reg->isValid($this->_request->getPost())){
 			if(!$keyValid){
-				$this->view->errors = array("betaExists"=>array("Invalid betakey, please enter the key you received in your invite to try out Plumetype."));
 				//remove the Betakey
-				
+				$this->_helper->flashMessenger->addMessage("Invalid betakey, please enter the key you received in your invite to try out Plumetype.");
 				//end Betakey stuff
 				return;
 			}else{
