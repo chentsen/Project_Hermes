@@ -23,14 +23,14 @@ class RegistrationController extends Zend_Controller_Action
 	if($auth->hasIdentity()){
                     $this->_redirect('/profile');
                 }	
-    	$document = new SolrInputDocument();
-    	$form = new Application_Form_Registration();
+		$document = new SolrInputDocument();
+		$form = new Application_Form_Registration();
 		$form->addIdentical($_POST['password']);
 		//Betakey Validation -- remove when full release
 		$keyValid = $this->dm->getRepository('Documents\Betakey')->findOneBy(array('key'=>$_POST['betakey']));
 		if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
 			if(!$keyValid){
-				$this->_helper->flashMessenger->addMessage("Invalid betakey, please enter the key you received in your invite to try out Plumetype.");
+				$this->_helper->flashMessenger->addMessage("Invalid betakey, please enter the key you received in your invite to try out PlumeType.");
 				//remove the Betakey
 				$this->_redirect('/index');
 				//end Betakey stuff
@@ -77,16 +77,19 @@ class RegistrationController extends Zend_Controller_Action
 				//retrieve error message from application.ini here and add it to the view
 			}
 		}
-		else{
-			$reg = new Application_Form_Registration();
-		    
+		else if($this->getRequest()->isPost() && !$form->isValid($this->_request->getPost()))
+		{
+			
+			$messages = $form->getMessages();
+			foreach($messages as $message){
+			    $this->_helper->flashMessenger->addMessage($message);
+			}
+			
+		}else{
+		    $reg = new Application_Form_Registration();
 		    $json['form'] =  $reg->render();
-		    
 		    $this->_helper->json($json);
-			
-			$this->_redirect('/index');
-			//$this->view->errors = $form->getMessages();
-			
+		    $this->_redirect('/index');
 		}
 			//$this->view->form = $form;
 			
