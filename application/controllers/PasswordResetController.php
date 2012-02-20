@@ -38,7 +38,7 @@ class PasswordResetController extends Zend_Controller_Action
             $userSettings = new Application_Model_UserSettings($this->mongoContainer,$user);
             $newPass = $userSettings->resetPassword();
             $this->eventEmail = new Application_Model_EmailModel();
-            $this->eventEmail->sendPasswordReset($newPass, null, $this->_helper->GenerateEmail, $user, "Reset your Password");
+            $this->eventEmail->sendPasswordReset($newPass, $this->_helper->GenerateEmail, $user, "Reset your Password");
             $this->_helper->flashMessenger->addMessage("Please check your email to finish resetting your password.");
             } else {
                 $this->_helper->flashMessenger->addMessage("You cannot reset your password because it is tied to your Facebook account.");

@@ -46,9 +46,11 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 			$mail->setBodyHtml($htmlBody);
 			$mail->setFrom('no-reply@plumetype.com', 'Plumetype Friend Feed');
 			$mail->addTo($identity);
-			foreach($emails as $email){
-			    echo 'EMAIL IS'.$email;
-			    $mail->addBcc($email);
+			if($emails) {
+				foreach($emails as $email){
+					echo 'EMAIL IS'.$email;
+					$mail->addBcc($email);
+				}
 			}
 			$mail->setSubject($subject);
 			$mail->send();  
@@ -73,14 +75,14 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 		$this->sendEmail($subject, $email, $htmlBody, $identity);
 	
 	}
-	public function sendPasswordReset($newPassword, $email, $emailHelper, $identity, $subject) {
+	public function sendPasswordReset($newPassword, $emailHelper, $identity, $subject) {
 		$fullName = $identity->getFirstName() . " " . $identity->getLastName();
 		
 		$htmlBody = $emailHelper->GenerateEmail('_email_password_reset.phtml',
 											 array(	'name'=>$fullName,
 													'password'=>$newPassword
 														));
-		$this->sendEmail($subject, null, $htmlBody, $identity);
+		$this->sendEmail($subject, null, $htmlBody, $identity->getEmail());
 	}
 	public function sendFriendedEmail($subject, $emailHelper, $requester, $requestee) {
 		
