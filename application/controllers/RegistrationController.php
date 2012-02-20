@@ -79,11 +79,13 @@ class RegistrationController extends Zend_Controller_Action
 		}
 		else if($this->getRequest()->isPost() && !$form->isValid($this->_request->getPost()))
 		{
-			
+			//loop through errors and add them
 			$messages = $form->getMessages();
-			foreach($messages as $message){
-			    $this->_helper->flashMessenger->addMessage($message);
+			foreach($errors as $error){
+			    foreach($error as $field)
+				$this->_helper->flashMessenger->addMessage($field[0]);
 			}
+			$this->_redirect('/index');
 			
 		}else{
 		    $reg = new Application_Form_Registration();
