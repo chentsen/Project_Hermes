@@ -6,6 +6,7 @@ $eid = $this->event->getEid();
 	
 <!--<?= $this->event->getLongDescription() ?>-->
 	<div class='interested_list'>
+		<?= $this->DisplayAttendingList($this->event) ?>
 		<?= $this->DisplayInterestedList($this->event) ?>
 	</div>
  <div class ="event_wall">

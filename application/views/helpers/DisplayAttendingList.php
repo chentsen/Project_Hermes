@@ -18,5 +18,37 @@ class Zend_View_Helper_DisplayAttendingList extends Zend_View_Helper_Abstract{
 		echo '</div>';
 		
 	}
+    
+    public function DisplayMemberList($event){
+		$attendingList = $event->getMembers();
+		echo '<div class = "attendingList">';
+		foreach($attendingList as $user){
+			$eid = $event->getEid();
+			$uid = $user->getUid();
+			echo '<div class="attending-item attending-item-'.$uid.'">';
+			echo "<a href='/profile/public/uid/{$user->getUid()}'>";
+                        echo "<img src='/img/profile-pic/uid/{$user->getUid()}' height=100  width=100/></a>";
+			echo "<div class='attending-details'>{$user->getFirstName()}</div>";
+			
+			echo '</div>';
+		}
+		echo '</div>';
+		
+	}
+    
+    public function DisplayPublicList($event){
+		$attendingList = $event->getMembers();
+		echo '<div class = "attendingList">';
+		foreach($attendingList as $user){
+			$eid = $event->getEid();
+			$uid = $user->getUid();
+			
+			echo "<a href='/profile/public/uid/{$user->getUid()}'>";
+                        echo "<img src='/img/profile-pic/uid/{$user->getUid()}' height=100  width=100/></a>";
+			
+		}
+		echo '</div>';
+		
+	}
 	
 }
