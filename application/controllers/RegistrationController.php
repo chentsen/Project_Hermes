@@ -84,7 +84,7 @@ class RegistrationController extends Zend_Controller_Action
 			foreach($messages as $error){
 			    foreach($error as $field){
 				//var_dump($field);
-				$this->_helper->flashMessenger->addMessage($field[0]);
+				$this->_helper->flashMessenger->addMessage($field);
 			    }
 			}
 			$this->_redirect('/index');
