@@ -8,7 +8,7 @@ body {
 	-moz-font-smoothing: antialiased;
 	font-smooth: always;
 }
-.index {
+.index, .about, .contact, .privacy {
 	background-color: black;
 	background: url('../images/pt-background.jpg') no-repeat;
 	background-position: center 0%;
@@ -1035,6 +1035,7 @@ a.attend-button:hover {
     padding: 0;
     display: none;
     float: left;
+    color: #FFFFFF;
 }
 .icon_bar #friendRequests {
 	background: #454545;
