@@ -32,7 +32,7 @@ class RegistrationController extends Zend_Controller_Action
 			if(!$keyValid){
 				$this->view->errors = array("betaExists"=>array("Invalid betakey, please enter the key you received in your invite to try out Plumetype."));
 				//remove the Betakey
-				
+				$this->_redirect('/index');
 				//end Betakey stuff
 				return;
 			}else{
@@ -73,6 +73,7 @@ class RegistrationController extends Zend_Controller_Action
 			}
 			else{
 				$this->view->errors = array("emailExists"=>array("This email is already registered with a user account. Forgot your password? No worries, click here"));
+				$this->_redirect('/index');
 				//retrieve error message from application.ini here and add it to the view
 			}
 		}
