@@ -57,8 +57,9 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
     }
 	public function sendEmailNotification ($raw, $user, $emailHelper, $identity, $subject, $email) {
 		$dateArray = explode('/',$raw['createEvent_date']);
-		var_dump($dateArray);
-		var_dump($raw['createEvent_date']);
+		$date = new DateTime();	
+		$date->setDate($dateArray[2],$dateArray[1],$dateArray[0]);
+		$dateString = $date->format('M d, Y');
 		$private = (($raw['createEvent_private'] == 'y') ? "Yes" : "No");
 		$fullName = $user->getFirstName() . " " . $user->getLastName();
 		
@@ -66,7 +67,7 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 											 array('yourName'=>$user->getFirstName(),
 																			'name'=>$fullName,
 																			'location'=>$raw['createEvent_location'],
-																			'date'=>$dateArray,
+																			'date'=>$dateString,
 																			'private'=>$private
 																			));
 		$this->sendEmail($subject, $email, $htmlBody, $identity);
