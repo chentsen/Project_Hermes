@@ -30,11 +30,11 @@ class RegistrationController extends Zend_Controller_Action
 		$keyValid = $this->dm->getRepository('Documents\Betakey')->findOneBy(array('key'=>$_POST['betakey']));
 		if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
 			if(!$keyValid){
-				$this->view->errors = array("betaExists"=>array("Invalid betakey, please enter the key you received in your invite to try out Plumetype."));
+				$this->_helper->flashMessenger->addMessage("Invalid betakey, please enter the key you received in your invite to try out Plumetype.");
 				//remove the Betakey
 				$this->_redirect('/index');
 				//end Betakey stuff
-				return;
+				
 			}else{
 				 
 				$this->dm->remove($keyValid);
@@ -65,14 +65,14 @@ class RegistrationController extends Zend_Controller_Action
 				$mail->addTo($_POST['email']);
 				$mail->setSubject('Activate Your Plumetype Account');
 				$mail->send();
-				$this->_helper->flashMessenger->addMessage("Confirm your email now so you can start meeting people.");
+				$this->_helper->flashMessenger->addMessage("You're almost done! Check your email to confirm your account and start meeting people instantly.");
 				$this->_redirect('/index');
 				// redirect to some page and fire off email and return
 				return;	
                                 
 			}
 			else{
-				$this->view->errors = array("emailExists"=>array("This email is already registered with a user account. Forgot your password? No worries, click here"));
+				$this->_helper->flashMessenger->addMessage("This email is already registered with a user account. Forgot your password? No worries, click here");
 				$this->_redirect('/index');
 				//retrieve error message from application.ini here and add it to the view
 			}
