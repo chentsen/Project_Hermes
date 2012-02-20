@@ -1773,24 +1773,31 @@ ul.as-selections {
     margin-top: 10px;
     overflow: hidden;
 }
-
-.interested_list .waitingList a {
+.attendingList {
+		margin-top: 5px;
+		overflow: hidden;
+}
+.interested_list .waitingList a,
+.attendingList a{
     color: #FF8600;
 }
-.interested_list .waitingList{
+.interested_list .waitingList,
+.interested_list .attendingList{
     float: left;
     padding: 10px 0px;
 }
-.interested_list .waitingList .event_allow {
+.interested_list .waitingList .event_allow,
+.attendingList .event_allow{
     color: #FF8600;
     font-size: 12px;
     margin-top: 4px;
     text-align: center;
 }
-.interested_list .waitingList .waitingImg {
+.waitingList .waitingImg {
     position: relative;
 }
-.waiting-details {
+.waiting-details,
+.attending-details{
 	text-align: center;
 	font-size: 13px;
 	height: 25px;
@@ -1799,9 +1806,13 @@ ul.as-selections {
 	height: 25px;
 	margin-top: 2px;
 }
-.waiting-item {
+.waiting-item{
 	float: left;
 	margin: 0px 15px;
+}
+.attending-item {
+		float: left;
+		margin-right: 15px;
 }
 .interested_list .waitingList .waitingImg span,
 .event_wall .wall_image span
