@@ -82,8 +82,10 @@ class RegistrationController extends Zend_Controller_Action
 			//loop through errors and add them
 			$messages = $form->getMessages();
 			foreach($errors as $error){
-			    foreach($error as $field)
+			    foreach($error as $field){
+				var_dump($field);
 				$this->_helper->flashMessenger->addMessage($field[0]);
+			    }
 			}
 			$this->_redirect('/index');
 			
