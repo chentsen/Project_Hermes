@@ -636,6 +636,15 @@ a.attend-button:hover {
     width: 240px;
     height: 70px;
     text-indent: -9999px;
+	z-index: 3;
+}
+.signup-transparency {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 80%;
+		z-index: 0;
 }
 .out-preview {
     overflow: hidden;
@@ -693,6 +702,7 @@ a.attend-button:hover {
     padding: 15px;
     background-color: rgba(0, 0, 0, 0.85);
     margin-left: 310px;
+	z-index: 3;
 }
 .index .out-logo {
     position: relative;
@@ -856,6 +866,7 @@ a.attend-button:hover {
 }
 #footer_menu {
    font-size:12px;
+   z-index: 10;
 }
 #footer_menu .page {
     overflow: auto;
@@ -867,6 +878,7 @@ a.attend-button:hover {
     float: right;
 }
 #footer_menu .right_footer {
+	z-index: 3;
     float: right;
     width: 300px;
     overflow: hidden;
@@ -1296,7 +1308,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .password,
 .password_again,
 .reglist,
-.create-text
+.create-text,
+.name,
+.subject,
+.text
 { 	position: relative;
 	width: 200px;
 	float: left;
@@ -1391,18 +1406,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border-top: 1px solid #363636;
 }
 /** app style contact **/
-#contact #name {
-    background: url("../images/name-form.png") no-repeat 10px center #f8f8f8;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-#contact #subject {
-    background: url("../images/subject-form.png") no-repeat 10px center #f8f8f8;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-#contact #text {
-    background: url("../images/your-text-form.png") no-repeat 10px 10px #f8f8f8;
+.text textarea{
+		font-size: 18px;
 }
 #contact .centerform {
 	margin-left: 90px;
@@ -1584,7 +1589,7 @@ ul.as-selections {
     position:absolute;
     width:100%;
     overflow: hidden;
-    height:150%;
+    height:100%;
     z-index:2;
     top:0px;
 }
@@ -1688,7 +1693,7 @@ ul.as-selections {
     padding:5px;
     margin: 5px 0px;
     font-size: 14px;
-    background: #24A3DF;
+    background: #FF7200;
     color: #ffffff;
 }
 /***** event page ******/
@@ -1920,6 +1925,7 @@ ul.as-selections {
 	color: #FF8600;
 	display: block;
 	float: left;
+	margin: 20px 20px 20px 80px;
 }
 #passwordReset #submit {
 	height: 32px;

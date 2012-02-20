@@ -69,7 +69,7 @@ class Application_Form_EditAccount extends Zend_Form
 		$hasEmailPerm = new Zend_Form_Element_Checkbox('hasEmailPerm');
 		$hasEmailPerm->setRequired(false)
 						->setValue($options['hasEmailPerm']);
-						
+		
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->removeDecorator('label')
 				->removeDecorator('htmlTag')
@@ -79,7 +79,7 @@ class Application_Form_EditAccount extends Zend_Form
 		$description->setRequired(true)->addValidator('StringLength',array('max'=>200,'allowWhiteSpace'=>true))->setValue($options['description']);
 		$this->setDecorators(array(array('ViewScript',array('viewScript'=>'_form_accountEdit.phtml'))));
 		
-		$this->addElements(array($submit, $hasEmailPerm, $gender, $firstName, $city, $lastName,$description));
+		$this->addElements(array($submit,  $hasEmailPerm, $gender, $firstName, $city, $lastName,$description));
 		$this->setElementDecorators(array('ViewHelper'),null,false);
                 
                 

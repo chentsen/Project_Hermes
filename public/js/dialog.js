@@ -50,6 +50,7 @@ var Dialog = {
 		$('.dialogs #createEvent_shortDescription').defaultText({text: 'Eat Pizza', event: true});
 		$('.dialogs #createEvent_location').defaultText({text: 'Tony\'s Pizzeria', event: true});
 		$('.dialogs #createEvent_longDescription').defaultText({text: 'At 7pm\n155 Main St.\nSan Francisco, CA 94333', longdesc: true});
+		$('.dialogs .invisible').hide();
 	},
 	loadLoginData:function(){
 		
@@ -61,6 +62,11 @@ var Dialog = {
 		 $('.dialogs #city').defaultText({text: 'City'});
 		 $('.dialogs #password').defaultText({text: 'Password'});
 		 $('.dialogs #password2').defaultText({text: 'Password Again'});
+		 $('.dialogs #betakey').defaultText({text: 'Beta Key'});
+	},
+	loadBetaData:function(){
+		
+		 $('.dialogs #city').defaultText({text: 'City'});
 		 $('.dialogs #betakey').defaultText({text: 'Beta Key'});
 	},
 	doValidate:function() {
@@ -80,7 +86,6 @@ var Dialog = {
 	showAdvanced:function(){
 		
 					$('.invisible').toggle();
-					
 					if ($('.show-advanced a').html() == 'Include more details') {
 							$(".show-advanced a").html('Include less details');
 					} else {

@@ -4,6 +4,7 @@ use Documents\Feed\FeedObject\FeedObject;
 use Documents\Feed\FeedObject\EventFeedObject;
 use Documents\Feed\FeedObject\FriendAcceptFeedObject;
 class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
+	
 	public function constructFeedMessage(FeedObject $feedObject, $identity){
 			if($feedObject instanceof EventFeedObject){
 				$this->getEventFeedMessage($feedObject, $identity);
@@ -16,18 +17,18 @@ class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
 			}
 		}
 	public function getEventFeedMessage(FeedObject $feedObject){
-		$creatorEmail = $feedObject->getCreator()->getEmail();
-		echo "<img style='float: left; margin-right: 8px; margin-top: 1px;' src='/img/profile-pic/uid/{$creatorEmail}' width='30' height='30'/>";
-		echo "<div class='individual-object'>Your friend <a href='/profile/public/email/{$creatorEmail}'> ".addslashes($feedObject->getCreator()->getFirstName())." ".addslashes($feedObject->getCreator()->getLastName())."</a> wants to";
+		$uid = $feedObject->getCreator()->getUid();
+		echo "<img style='float: left; margin-right: 8px; margin-top: 1px;' src='/img/profile-pic/uid/{$uid}' width='30' height='30'/>";
+		echo "<div class='individual-object'>Your friend <a href='/profile/public/uid/{$uid}'> ".addslashes($feedObject->getCreator()->getFirstName())." ".addslashes($feedObject->getCreator()->getLastName())."</a> wants to";
 		echo " <a href = '/event/index/eid/". $feedObject->getEid()."'>".$feedObject->getShortDescription()."</a>.";
 		//echo '<br /> at '.$feedObject->getDate()->format('m/d');
 		echo '<br /><span>on '.$feedObject->getDate()->format('F jS, Y h:i A').'</span></div>';
 	}
 	
 	public function getFriendAcceptFeedMessage(FeedObject $feedObject){
-		$creatorEmail = $feedObject->getEmail();
+		$fid = $feedObject->getFid();
 		echo "<img style='float: left; margin-right: 8px; margin-top: 1px;' src='/images/placeholder.png' width='30' height='30'/>";
-		echo "<div class='individual-object'>You and <a href='/profile/public/email/{$creatorEmail}'> ".addslashes($feedObject->getFirstName())." ".addslashes($feedObject->getLastName())."</a> became friends.";
+		echo "<div class='individual-object'>You and <a href='/profile/public/uid/{$fid}'> ".addslashes($feedObject->getFirstName())." ".addslashes($feedObject->getLastName())."</a> became friends.";
 		echo '<br /> <span>'.$feedObject->getDate()->format('F jS, Y h:i A').'</span></div>';
 	}
 

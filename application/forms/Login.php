@@ -14,7 +14,7 @@ class Application_Form_Login extends Zend_Form
 		$this->setAction('/index/index');
 		$this->setMethod('post');
 		$email = new Zend_Form_Element_Text('email');
-		$email->setRequired(true)
+		/*$email->setRequired(true)
 			  ->addValidator('EmailAddress',true, array(
      			'messages' => array(
           			'emailAddressInvalidFormat' => 'Please enter a valid email.'
@@ -23,18 +23,13 @@ class Application_Form_Login extends Zend_Form
      			'messages' => array(
           			'isEmpty' => 'An email address is required.'
     			 )
-  				));
+  				));*/
 			  
 		$password = new Zend_Form_Element_Password('password');
 		$password->addValidator('Regex',false,array('pattern' => '/^.*(?=.{6,20})(?=.*[\d])(?=.*[a-zA-Z])/',
 													'messages'=>array('regexNotMatch' => "Incorrect password.")))
-				 ->addValidator('StringLength',false,array('max'=>20))
-				 ->setRequired(true)
-				 ->addValidator('NotEmpty', true, array(
-     					'messages' => array(
-          				'isEmpty' => 'A password is required.'
-    					 )
-  				  ))
+
+
 				 ->removeDecorator('label')
 				 ->removeDecorator('htmlTag');
 		

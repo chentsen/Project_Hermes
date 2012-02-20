@@ -6,6 +6,7 @@ use Documents\Feed\FeedObject\FriendAcceptFeedObject;
 class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayFeed{
 	public function DisplayEventFeed($identity, $length = null, $showExpired = false){
 		$user = Zend_Registry::get("Wildkat\DoctrineContainer")->getDocumentManager('default')->getRepository('Documents\User')->findOneBy(array("email"=>$identity));
+		
 		$feed = $user->getEventFeed();
 		
 		$eventFeedModel = new Application_Model_Feed_EventFeedModel($feed);

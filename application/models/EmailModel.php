@@ -26,11 +26,10 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
         $areFriends = $this->curUser->getFriends();		
         if (!empty($areFriends)){
 			//use a for loop
-			for($i = 0; $i < count($areFriends); $i++) {
-				if($areFriends[$i]->hasEmailPerm())
-                {
-				$this->emailCollect[$i] = $areFriends[$i]->getEmail();
-                }  
+		for($i = 0; $i < count($areFriends); $i++) {
+		    if($areFriends[$i]->hasEmailPerm()){
+				    $this->emailCollect[$i] = $areFriends[$i]->getEmail();
+		    }  
             }
 		
             return $this->emailCollect;
@@ -48,7 +47,8 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 			$mail->setFrom('no-reply@plumetype.com', 'Plumetype Friend Feed');
 			$mail->addTo($identity);
 			foreach($emails as $email){
-			$mail->addBcc($email);
+			    echo 'EMAIL IS'.$email;
+			    $mail->addBcc($email);
 			}
 			$mail->setSubject($subject);
 			$mail->send();  
@@ -57,6 +57,9 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
     }
 	public function sendEmailNotification ($raw, $user, $emailHelper, $identity, $subject, $email) {
 		$dateArray = explode('/',$raw['createEvent_date']);
+		$date = new DateTime();	
+		$date->setDate($dateArray[2],$dateArray[1],$dateArray[0]);
+		$dateString = $date->format('M d, Y');
 		$private = (($raw['createEvent_private'] == 'y') ? "Yes" : "No");
 		$fullName = $user->getFirstName() . " " . $user->getLastName();
 		
@@ -64,21 +67,29 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 											 array('yourName'=>$user->getFirstName(),
 																			'name'=>$fullName,
 																			'location'=>$raw['createEvent_location'],
-																			'date'=>$dateArray,
+																			'date'=>$dateString,
 																			'private'=>$private
 																			));
 		$this->sendEmail($subject, $email, $htmlBody, $identity);
 	
 	}
 	public function sendPasswordReset($newPassword, $email, $emailHelper, $identity, $subject) {
-		$user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$identity));
-		$fullName = $user->getFirstName() . " " . $user->getLastName();
+		$fullName = $identity->getFirstName() . " " . $identity->getLastName();
 		
 		$htmlBody = $emailHelper->GenerateEmail('_email_password_reset.phtml',
 											 array(	'name'=>$fullName,
 													'password'=>$newPassword
 														));
 		$this->sendEmail($subject, null, $htmlBody, $identity);
+	}
+	public function sendFriendedEmail($subject, $emailHelper, $requester, $requestee) {
+		
+		$fullName = $requestee->getFirstName() . " " . $requestee->getLastName();
+		$yourName = $requester->getFirstName() . " " . $requester->getLastName();
+		$htmlBody = $emailHelper->GenerateEmail('_email_friended.phtml',
+											 array(	'name'=>$fullName,
+													'yourName'=>$yourName));
+		$this->sendEmail($subject, null, $htmlBody, $requester);
 	}
     
 }

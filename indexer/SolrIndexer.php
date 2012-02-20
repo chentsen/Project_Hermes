@@ -90,7 +90,7 @@ define("EVENT_COLLECTION",$tokenized[1]);
 	function runIndex(){
 	       $curTime = time();
 	      $query = array('ts'=>array('$gte'=>new MongoTimestamp(time(),1)));
-	      $this->cursor = $this->collection->find($query)->tailable(true);
+	      $this->cursor = $this->collection->find()->tailable(true);
 	      //$lastValue = $this->collection->find()->
 	      $newLoop = true;
 	     
@@ -98,21 +98,22 @@ define("EVENT_COLLECTION",$tokenized[1]);
 		while(true){				
 				
 				if($this->cursor->hasNext()){
-				  // echo 'found something after'.$curTime;
+		//		  echo 'found something after'.$curTime;
 				   if($newLoop){
-					  $this->cursor->getNext();					
+					  $this->cursor->getNext();
+					 // echo 'found updated object..';
 						 //  print_r($document);
 				   }
 				   else{
 	      				  while($this->cursor->hasNext()){
 						   $document = $this->cursor->getNext();					
 						  // print_r($document);
-						   //echo 'found updated object..';
+						 //  echo 'found updated object..';
 						   $updatedDocument = $this->processObject($document);
 						   ////print_r($updatedDocument);
 						   if($updatedDocument){
 							  $this->client->addDocument($updatedDocument);
-							  // echo 'Updated something!';
+							   echo 'Updated something!';
 						   }
 					  }
 					  $this->client->commit();

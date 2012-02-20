@@ -26,10 +26,10 @@ class PasswordChangeController extends Hermes_Controller_SessionController
     	$userSettings = new Application_Model_UserSettings($this->mongoContainer,$this->curUser);
     	if($userSettings->updatePassword($this->_request->getPost())) {
         //$this->view->successMessage = '<h1 class="regsuccess">You have successfully changed your password.</h1>';
-            $this->_redirect('/profile');
-            
-            
-        } else {}
+          $this->_helper->flashMessenger->addMessage("You have successfully changed your password.");
+           
+        }
+        $this->_redirect('/profile');
     }
 
 
