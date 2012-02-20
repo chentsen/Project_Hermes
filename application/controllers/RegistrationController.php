@@ -38,7 +38,7 @@ class RegistrationController extends Zend_Controller_Action
 			}else{
 				$this->dm->remove($keyValid);
 				$this->dm->flush();
-				
+				 $this->_helper->flashMessenger->addMessage("Please confirm your email to finish registration.");
 			}	
 			
 			$activationCode = $this->userSettings->register($this->_request->getPost());
