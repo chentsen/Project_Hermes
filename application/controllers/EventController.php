@@ -28,20 +28,21 @@ class EventController extends Hermes_Controller_Wall_WallController
     		$this->_helper->ViewRenderer('index_creator');
 			$this->view->pageTitle = "I want to " .
 				$event->getShortDescription();
-			
+				$indexCreator = 'hello';
+			$this->view->indexCreator = $indexCreator;
     	}
     	else if($eventModel->isMember($this->identity,$event->getMembers())){
     		$this->_helper->ViewRenderer('index_member');
 			$this->view->pageTitle = "You want to" .
 				$event->getShortDescription();
-		
+			$this->view->indexMember = true;
     	}
     	//I'm not a member, and I'm not a creator
     	else if(!$event->isPrivate()){
     		$this->_helper->ViewRenderer('index_public');
 
 			$this->view->pageTitle = "Join " . $event->getCreator()->getFirstName() . " " .substr($event->getCreator()->getLastName(),0,1) .  ". and " .
-
+			$this->view->indexPublic = true;
 				$event->getShortDescription();
 		
     	}

@@ -32,21 +32,23 @@ class PasswordResetController extends Zend_Controller_Action
         $user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$_POST['email']));
         
         //move into index
-
-        if ($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())) {
-            if(!$user->getIsFBAccount()){
-            $userSettings = new Application_Model_UserSettings($this->mongoContainer,$user);
-            $newPass = $userSettings->resetPassword();
-            $this->eventEmail = new Application_Model_EmailModel();
-            $this->eventEmail->sendPasswordReset($newPass, null, $this->_helper->GenerateEmail, $user, "Reset your Password");
-            $this->_helper->flashMessenger->addMessage("Please check your email to finish resetting your password.");
+        if($user) {
+            if ($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())) {
+                if(!$user->getIsFBAccount()){
+                $userSettings = new Application_Model_UserSettings($this->mongoContainer,$user);
+                $newPass = $userSettings->resetPassword();
+                $this->eventEmail = new Application_Model_EmailModel();
+                $this->eventEmail->sendPasswordReset($newPass, $this->_helper->GenerateEmail, $user, "Reset your Password");
+                $this->_helper->flashMessenger->addMessage("Please check your email to finish resetting your password.");
+                } else {
+                    $this->_helper->flashMessenger->addMessage("You cannot reset your password because it is tied to your Facebook account.");
+                }
             } else {
-                $this->_helper->flashMessenger->addMessage("You cannot reset your password because it is tied to your Facebook account.");
+            $this->_helper->flashMessenger->addMessage("Your email address could not be located.");
             }
         } else {
-		$this->_helper->flashMessenger->addMessage("Your email address could not be located.");
-	    }
-        
+            $this->_helper->flashMessenger->addMessage("There is no account associated with this email address.");
+        }
         $this->_redirect('/index');
         
     }

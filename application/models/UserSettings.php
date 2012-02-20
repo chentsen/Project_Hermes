@@ -178,8 +178,10 @@ class Application_Model_UserSettings{
 		public function resetPassword() {
 			
 			$newPassword = substr(md5(time()),0,8);
+			//must hash before store into document
+			$storePassword = md5($newPassword);
 			if($this->user){
-				$this->user->setPassword($newPassword);
+				$this->user->setPassword($storePassword);
 				$this->dm->persist($this->user);
 				$this->dm->flush();
 			}
