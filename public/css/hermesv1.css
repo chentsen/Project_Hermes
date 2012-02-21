@@ -587,7 +587,7 @@ a.attend-button:hover {
 	color: #FFFFFF;
 }
 .about-logo {
-	margin-top: 30px;
+	margin: 30px 0px;
 	float: left;
 	width: 960px;
 }
@@ -1427,6 +1427,14 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 #contact .centerform {
 	margin-left: 90px;
+	width: 450px;
+}
+#contact .email {
+	float: left;
+}
+#contact .subject {
+	width: 400px;
+	float: left;
 }
 #contact_submit { 
   height: 35px;
@@ -1453,7 +1461,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: inherit;
     height: inherit;
     display: block;
-    margin-top: 7px;
     background: url('../images/plumetype-flat.png') no-repeat;
 }
 .contact .thelogo {
@@ -1463,8 +1470,14 @@ html .icon_bar ul li .sub-settings .last-setting a{
     text-indent: -9999px;
 }
 /**** PRIVACY PAGE ****/
+.privacy .questionmark {
+	font-size: 57px;
+	line-height: 43px;
+	float: left;
+	color: #FFFFFF;
+}
 .privacy-logo {
-	margin-top: 30px;
+	margin: 30px 0px;
 	float: left;
 	width: 960px;
 }
@@ -1472,7 +1485,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: inherit;
     height: inherit;
     display: block;
-    margin-top: 7px;
     background: url('../images/plumetype-flat.png') no-repeat;
 }
 .privacy .thelogo {
