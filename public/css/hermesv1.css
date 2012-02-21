@@ -1441,10 +1441,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	width: 410px;
 	float: left;
 }
-input #text {
+#contact #text {
 	width: 410px;
 }
-input #subject {
+#contact #subject {
 	width: 410px;
 }
 #contact_submit { 
