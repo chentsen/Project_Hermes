@@ -1041,6 +1041,7 @@ a.attend-button:hover {
 	padding: 5px 5px 10px 10px;
 	min-height: 100%;
 	font-size: 14px;
+	color: red;
 }
 .icon_bar ul.sub-setting2 li.friend-requests {
 	width: 200px;
