@@ -587,7 +587,7 @@ a.attend-button:hover {
 	color: #FFFFFF;
 }
 .about-logo {
-	margin: 30px 0px;
+	margin: 30px 0px 20px 255px;
 	float: left;
 	width: 960px;
 }
@@ -604,6 +604,35 @@ a.attend-button:hover {
     text-indent: -9999px;
 }
 .prepend-logo {margin-right: 12px;}
+.out-preview {
+	display: block;
+	width: 960px;
+	background-color: rgba(0,0,0,0.85);
+}
+.guide-one {
+	background: url('../images/guide-one-image.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+}
+.guide-one h2 {
+	color: #FFFFFF;
+}
+.guide-two {
+	background: url('../images/guide-two-image.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+}
+.guide-two h2 {
+	color: #FFFFFF;	
+}
+.guide-three {
+	background: url('../images/guide-one.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+}
+.guide-three h2 {
+	color: #FFFFFF;	
+}
 /***** site exterior **********/
   .outside #header_block {display: none;}
    .outside #content_area {margin-top:0px;}
@@ -615,11 +644,6 @@ a.attend-button:hover {
 }
 .privacy #footer_menu {
 	
-}
-.privacy-logo {
-	margin-top: 30px;
-	float: left;
-	width: 960px;
 }
 .contact #footer_menu {
 	
@@ -660,9 +684,6 @@ a.attend-button:hover {
 		width: 100%;
 		height: 80%;
 		z-index: 0;
-}
-.out-preview {
-    overflow: hidden;
 }
 .homepage-bottom {
 
@@ -1426,7 +1447,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 		font-size: 18px;
 }
 #contact .centerform {
-	margin-left: 225px;
+	margin-left: 255px;
 	width: 410px;
 	float: left;
 	background-color: rgba(0,0,0,0.85);
@@ -1441,15 +1462,15 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	float: left;
 }
 #contact .text {
-	width: 389px;
+	width: 410px;
 	float: left;
 }
 #contact #text {
-	width: 389px;
+	width: 388px;
 	float: left;
 }
 #contact #subject {
-	width: 389px;
+	width: 398px;
 	float: left;
 }
 #contact_submit { 
@@ -1458,18 +1479,19 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: #454545;
   color: white;
   padding: 0 50px;
-  width: 200px;
+  width: 410px;
 }
 .contact-text {
     font-size: 16px;
-    overflow: auto;
+    overflow: hidden;
     color: #FFFFFF; 
-    padding: 10px 20px 20px 20px;
+    padding: 20px 20px 2px 20px;
     float: left;
     width: 410px;
+    margin-left: 255px;
 }
 .contact-logo {
-	margin-top: 30px;
+	margin: 30px 0px 20px 260px;
 	float: left;
 	width: 960px;
 }
@@ -1493,7 +1515,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	color: #FFFFFF;
 }
 .privacy-logo {
-	margin: 30px 0px;
+	margin: 30px 0px 20px 185px;
 	float: left;
 	width: 960px;
 }
