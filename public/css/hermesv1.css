@@ -615,6 +615,8 @@ a.attend-button:hover {
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
 	float: left;
+	width: 320px;
+	height: 300px;
 }
 .guide-one h2 {
 	color: #FFFFFF;
@@ -625,6 +627,8 @@ a.attend-button:hover {
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
 	float: left;
+	width: 320px;
+	height: 300px;
 }
 .guide-two h2 {
 	color: #FFFFFF;
@@ -635,6 +639,8 @@ a.attend-button:hover {
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
 	float: left;
+	width: 320px;
+	height: 300px;
 }
 .guide-three h2 {
 	color: #FFFFFF;
