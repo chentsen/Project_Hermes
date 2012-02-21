@@ -1431,10 +1431,21 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 #contact .email {
 	float: left;
+	margin-right: 10px;
 }
 #contact .subject {
-	width: 400px;
+	width: 410px;
 	float: left;
+}
+#contact .text {
+	width: 410px;
+	float: left;
+}
+input #text {
+	width: 410px;
+}
+input #subject {
+	width: 410px;
 }
 #contact_submit { 
   height: 35px;
