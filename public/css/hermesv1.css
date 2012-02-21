@@ -1426,8 +1426,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
 		font-size: 18px;
 }
 #contact .centerform {
-	margin-left: 90px;
-	width: 450px;
+	margin-left: 225px;
+	width: 410px;
+	float: left;
+	background-color: rgba(0,0,0,0.85);
+	padding: 20px;
 }
 #contact .email {
 	float: left;
@@ -1438,14 +1441,16 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	float: left;
 }
 #contact .text {
-	width: 410px;
+	width: 389px;
 	float: left;
 }
 #contact #text {
-	width: 410px;
+	width: 389px;
+	float: left;
 }
 #contact #subject {
-	width: 410px;
+	width: 389px;
+	float: left;
 }
 #contact_submit { 
   height: 35px;
