@@ -608,30 +608,37 @@ a.attend-button:hover {
 	display: block;
 	width: 960px;
 	background-color: rgba(0,0,0,0.85);
+	float: left;
 }
 .guide-one {
 	background: url('../images/guide-one-image.png');
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
+	float: left;
 }
 .guide-one h2 {
 	color: #FFFFFF;
+	float: left;
 }
 .guide-two {
 	background: url('../images/guide-two-image.png');
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
+	float: left;
 }
 .guide-two h2 {
-	color: #FFFFFF;	
+	color: #FFFFFF;
+	float: left;
 }
 .guide-three {
 	background: url('../images/guide-one.png');
 	background-position: 10px 10px;
 	background-repeat: no-repeat;
+	float: left;
 }
 .guide-three h2 {
-	color: #FFFFFF;	
+	color: #FFFFFF;
+	float: left;
 }
 /***** site exterior **********/
   .outside #header_block {display: none;}
