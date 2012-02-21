@@ -1462,6 +1462,25 @@ html .icon_bar ul li .sub-settings .last-setting a{
     height: 70px;
     text-indent: -9999px;
 }
+/**** PRIVACY PAGE ****/
+.privacy-logo {
+	margin-top: 30px;
+	float: left;
+	width: 960px;
+}
+.privacy .logo {
+    width: inherit;
+    height: inherit;
+    display: block;
+    margin-top: 7px;
+    background: url('../images/plumetype-flat.png') no-repeat;
+}
+.privacy .thelogo {
+    float: left;
+    width: 240px;
+    height: 70px;
+    text-indent: -9999px;
+}
 /**** top column profile page ****/
 .top_col {
     position: relative;
