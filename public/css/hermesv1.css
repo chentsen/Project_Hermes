@@ -182,10 +182,11 @@ input[type=text]:first, input[type=password]:first {
     z-index: 999;
 }
 #header_area {
-     background: url('../images/bg-pencil2.png') repeat #262626;
+     /*background: url('../images/bg-pencil2.png') repeat #262626;*/
      z-index: inherit;
      border-bottom: 1px solid #000;
      margin: 0 auto;
+     background-color: #000000;
      
 }
 #header_area .page {
@@ -594,7 +595,6 @@ a.attend-button:hover {
     width: inherit;
     height: inherit;
     display: block;
-    margin-top: 7px;
     background: url('../images/plumetype-flat.png') no-repeat;
 }
 .about-logo .thelogo {
@@ -616,6 +616,11 @@ a.attend-button:hover {
 .privacy #footer_menu {
 	
 }
+.privacy-logo {
+	margin-top: 30px;
+	float: left;
+	width: 960px;
+}
 .contact #footer_menu {
 	
 }
@@ -629,6 +634,7 @@ a.attend-button:hover {
     color: #FFFFFF; 
     padding: 10px 20px 20px 20px;
     float: left;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 .out-logo {
     margin-top: 30px;
@@ -1433,13 +1439,13 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .contact-text {
     font-size: 16px;
     overflow: auto;
-    color: #454545; 
+    color: #FFFFFF; 
     padding: 10px 20px 20px 20px;
     float: left;
     width: 410px;
 }
 .contact-logo {
-	margin-top: 12px;
+	margin-top: 30px;
 	float: left;
 	width: 960px;
 }
