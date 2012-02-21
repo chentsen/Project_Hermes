@@ -580,13 +580,13 @@ a.attend-button:hover {
 }
 /*** about us ***/
 .prepend-logo,.questionmark {
-	font-size: 60px;
-	line-height: 60px;
+	font-size: 57px;
+	line-height: 46px;
 	float: left;
-	color: #454545;
+	color: #FFFFFF;
 }
 .about-logo {
-	margin-top: 12px;
+	margin-top: 30px;
 	float: left;
 	width: 960px;
 }
@@ -613,11 +613,20 @@ a.attend-button:hover {
     float: right;
     padding: 0 0 2px 0px;
 }
+.privacy #footer_menu {
+	
+}
+.contact #footer_menu {
+	
+}
+.about #footer_menu {
+	
+}
 .index #registration{float: left; }
 .cms-text {
     font-size: 16px;
     overflow: auto;
-    color: #454545; 
+    color: #FFFFFF; 
     padding: 10px 20px 20px 20px;
     float: left;
 }
