@@ -1097,11 +1097,11 @@ a.attend-button:hover {
 	display: block;
 	float: left;
 }
-.friend-request-name a {
+.friend-request-name {
 	color: #FF8600;
 	margin-right: 3px;
 }
-.friend-request-name a:hover {
+.friend-request-name:hover {
 	color: #ff7e00;
 }
 .accept-ignore {
