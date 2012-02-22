@@ -938,14 +938,20 @@ a.attend-button:hover {
 	text-align: left;
         padding: 10px;
 }
+.index #footer_menu .left_footer li {
+	color: #FFFFFF;
+}
+.index #footer_menu .left_footer li a {
+	color: #FFFFFF;
+}
 #footer_menu .left_footer li{
 	list-style: none;
 	display: inline;
 	padding: 0px 6px 0px 4px;
-        color: #FFFFFF;
+        color: #000000;
 }
 #footer_menu .left_footer li a {
-    color: #FFFFFF;
+    color: #000000;
     text-decoration: none;
 }
 #footer_menu .left_footer li a:hover {
@@ -1875,7 +1881,7 @@ ul.as-selections {
 	margin: 3px 0px 0px 16px !important;
 	padding: 0px !important;
 	font-size: 15px !important;
-	color: #FF8600;
+	color: #000000;
 	height:16px;
 }
 .event_main {
