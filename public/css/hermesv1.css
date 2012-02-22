@@ -1823,15 +1823,10 @@ ul.as-selections {
 }
 
 .event_self {
-    color: white;
+    color: #000000;
     float: left;
-    height: 30px;
-    width: 180px;
-    line-height: 30px;
-    font-size: 18px;
+    font-size: 20px;
     display: block;
-    background-color: #24A3DF;
-    text-align: center;
 }
 .event_main {
     overflow: hidden;
@@ -1857,24 +1852,28 @@ ul.as-selections {
     font-size: 20px;
     padding: 5px 0px;
     margin-left: 35px;
+    float: left;
 }
 .event_date {
 	position: relative;
-	background: url('../images/event-asterisk.png');
+	background: url('../images/date-marker.png');
 	background-repeat: no-repeat;
 	background-position: 5px 8px;
+	float: left;
 }
 .event_place {
 	position: relative;
-	background: url('../images/event-asterisk.png');
+	background: url('../images/place-marker.png');
 	background-repeat: no-repeat;
 	background-position: 5px 8px;
+	float: left;
 }
 .event_location {
 	position: relative;
-	background: url('../images/event-asterisk.png');
+	background: url('../images/description-marker.png');
 	background-repeat: no-repeat;
 	background-position: 5px 8px;
+	float: left;
 }
 .interested_list {
     margin-top: 10px;
