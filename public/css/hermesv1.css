@@ -1066,9 +1066,9 @@ a.attend-button:hover {
 }
 .icon_bar ul li .sub-settings {
     position: absolute;
-    left: -80px;
-    top: 55px;
-    background: #454545;
+    left: 0px;
+    top: 54px;
+    background: black;
     margin:0;
     padding: 0;
     float: left;
@@ -1077,9 +1077,9 @@ a.attend-button:hover {
 }
 .icon_bar ul li .sub-setting2 {
     position: absolute;
-    left: -140px;
-    top: 55px;
-    background: #454545;
+    left: 0px;
+    top: 54px;
+    background: black;
     margin:0;
     padding: 0;
     display: none;
@@ -1109,6 +1109,7 @@ a.attend-button:hover {
 	display: block;
 	float: left;
 	width: 200px;
+	height: 20px;
 }
 .friend-request-accept {
 	margin: 5px 10px 15px 50px;
@@ -1124,10 +1125,14 @@ a.attend-button:hover {
 	width: 200px;
 	clear: both;
 	padding: 10px;
+	float: left;
+	display: block;
+	border-bottom: solid 1px #a3a3a3;
 }
-html .icon_bar ul li .sub-setting2 li a {
-	
+.icon_bar ul.subsetting2 li.friend-requests:last-child {
+	border-bottom: none;
 }
+
 .icon_bar ul li .sub-settings li {
     margin: 0;
     padding: 0;
@@ -1156,10 +1161,11 @@ html #friendRequests ul li .sub-setting2 li a{
     color: white;
 }
 html .icon_bar ul li .sub-settings li a:hover {
-    background: #333;
+    color: #FF8600;
 }
 html .icon_bar ul li .sub-settings .first-setting a{
     margin-bottom: 0px;
+    border-bottom: solid 1px #a3a3a3;
 }
 html .icon_bar ul li .sub-settings .last-setting a{
     margin-top: 0px;
