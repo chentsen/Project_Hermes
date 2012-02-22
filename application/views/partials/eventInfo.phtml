@@ -13,9 +13,9 @@
             </div>
             <div class="event_self">
                             <?php if ($this->event->getCreator()->getEmail() == $this->identity) {
-                echo "You own this event.";
+                echo "<h4>You own this event.</h4>";
             } else {
-                echo "You're going to this event.";
+                echo "<h4>You're going to this event.</h4>";
             } ?>
             </div>
             </div>

@@ -839,7 +839,7 @@ a.attend-button:hover {
 /*** right block area ***/
 .block-body{
     overflow: hidden;
-    color: #454545;
+    color: #000000;
 }
 
 .block-body .friend_list {
@@ -876,7 +876,7 @@ a.attend-button:hover {
     height: 100%;
 }
 .right-block a {
-    color: #454545;
+    color: #000000;
     width: 100%;
     display: block;
 }
@@ -900,7 +900,7 @@ a.attend-button:hover {
 
 .block-header h4 {
 	margin-left: 17px;
-	color: #454545;
+	color: #000000;
 }
 
 .block-close {
@@ -1866,8 +1866,11 @@ ul.as-selections {
     font-size: 20px;
     display: block;
     background: url('../images/owner-marker.png');
-    background-position: 0px 0px;
+    background-position: 0px 2px;
     background-repeat: no-repeat;
+}
+.event_self h4 {
+	margin-left: 12px;
 }
 .event_main {
     overflow: hidden;
