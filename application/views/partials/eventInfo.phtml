@@ -2,7 +2,7 @@
     <div class="view-wrapped">	 
         <div class="event_main">
                 <h1 class="event_title"><?php if($this->event->getCreator()->getEmail() == $this->identity) {
-                echo $this->event->getCreator()->getFirstName()." wants to " .$this->event->getShortDescription();
+                echo $this->event->getCreator()->getFirstName(). " " .substr($this->event->getCreator()->getLastName(),0,1)." wants to " .$this->event->getShortDescription();
                 } else {    
                 echo $this->event->getCreator()->getFirstName(). " " .substr($this->event->getCreator()->getLastName(),0,1)." wants to " .$this->event->getShortDescription();
                 }

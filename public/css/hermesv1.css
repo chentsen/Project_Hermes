@@ -1881,31 +1881,32 @@ ul.as-selections {
 	width: 300px;
 }
 .interested_list {
-    margin-top: 10px;
-    overflow: hidden;
+	margin-top: 10px;
+	overflow: hidden;
 }
 .attending-title {
 	position: relative;
-    background: url('');
-    background-repeat: no-repeat;
-    background-position: 63px 13px;
+	background: url('../images/attending-line.png');
+	background-repeat: no-repeat;
+	background-position: 63px 13px;
+	margin-bottom: 10px;
 }
 .attendingList {
-		margin-top: 5px;
-		overflow: hidden;
+	margin-top: 5px;
+	overflow: hidden;
 }
 .interested_list .waitingList a,
 .attendingList a{
-    color: #454545;
+	color: #454545;
 }
 .interested_list .waitingList a:hover,
 .attendingList a:hover{
-    color: #FF8600;
+	color: #FF8600;
 }
 .interested_list .waitingList,
 .interested_list .attendingList{
-    float: left;
-    padding: 10px 0px;
+	float: left;
+	padding: 10px 0px;
 }
 .interested_list .waitingList .event_allow,
 .attendingList .event_allow{
