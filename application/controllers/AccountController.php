@@ -22,7 +22,7 @@ class AccountController extends Zend_Controller_Action
 		if($key != ""){
 			$result = $this->userSettings->confirmAccount($key);
 			if($result){
-				$this->_helper->flashMessenger->addMessage("Registration's complete! Login using your name and password");
+				$this->_helper->flashMessenger->addMessage("Registration complete! Login using your email and password");
 			}else{
 				$this->_helper->flashMessenger->addMessage("Sorry, we couldn't verify your registration.");
 			}

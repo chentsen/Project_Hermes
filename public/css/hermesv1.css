@@ -604,7 +604,7 @@ a.attend-button:hover {
     text-indent: -9999px;
 }
 .prepend-logo {margin-right: 12px;}
-.out-preview {
+.about-text {
 	display: block;
 	width: 960px;
 	background-color: rgba(0,0,0,0.85);
