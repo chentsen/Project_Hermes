@@ -1880,6 +1880,12 @@ ul.as-selections {
     margin-top: 10px;
     overflow: hidden;
 }
+.attending-title {
+	position: relative;
+    background: url('');
+    background-repeat: no-repeat;
+    background-position: 63px 13px;
+}
 .attendingList {
 		margin-top: 5px;
 		overflow: hidden;
@@ -1933,7 +1939,6 @@ ul.as-selections {
     border-radius: 5px;
 }
 .event_wall .wall_title {
-    font-size: 26px;
     margin-bottom: 15px;
     position: relative;
     background: url('../images/event-wall-line.png');
