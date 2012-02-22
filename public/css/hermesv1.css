@@ -1526,6 +1526,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	line-height: 43px;
 	float: left;
 	color: #FFFFFF;
+	margin-left: 12px;
 }
 .privacy-logo {
 	margin: 30px 0px 20px 185px;
@@ -1792,6 +1793,14 @@ ul.as-selections {
     margin: 5px 0px;
     font-size: 14px;
     background: #FF7200;
+    color: #ffffff;
+}
+.index #flashMessages ul li {
+    position: relative;
+    text-align: center;
+    padding:5px;
+    font-size: 14px;
+    background: rgba(166, 166, 166, 0.2);
     color: #ffffff;
 }
 /***** event page ******/
