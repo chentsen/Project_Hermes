@@ -1092,6 +1092,29 @@ a.attend-button:hover {
 	min-height: 100%;
 	font-size: 14px;
 }
+.friend-request-message {
+	width: 200px;
+	display: block;
+	float: left;
+}
+.friend-request-name {
+	padding: 0px;
+	color: #FFFFFF;
+}
+.friend-request-name a:hover {
+	color: #FF8600;
+}
+.accept-ignore {
+	display: block;
+	float: left;
+	width: 200px;
+}
+.friend-request-accept {
+	margin:
+}
+.friend-request-ignore {
+	
+}
 .icon_bar ul.sub-setting2 li.friend-requests {
 	width: 200px;
 	clear: both;

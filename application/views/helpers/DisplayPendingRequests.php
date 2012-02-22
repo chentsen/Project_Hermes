@@ -13,9 +13,9 @@ class Zend_View_Helper_DisplayPendingRequests extends Zend_View_Helper_Abstract{
 			//print_r($friendRequests);
 			foreach($friendRequests as $friendRequest){
 				$lastName = substr($friendRequest->getRequester()->getLastName(),0,1);
-				echo "<a href='/profile/public/uid/{$friendRequest->getRequester()->getUid()}'>{$friendRequest->getRequester()->getFirstName()} {$lastName}.</a> would like to be your friend.";
-				echo "<a style='margin: 0; padding: 0;width: 100%;float: left;' href = '/friend/respond_friend_request/accept/yes/rid/{$friendRequest->getRequestId()}'> Accept </a>|
-					  <a style='margin: 0; padding: 0; width: 100%;float: left;' href = '/friend/respond_friend_request/accept/no/rid/{$friendRequest->getRequestId()}'> Ignore </a>";
+				echo "<div class='friend-request-message'><a class='friend-request-name' href='/profile/public/uid/{$friendRequest->getRequester()->getUid()}'>{$friendRequest->getRequester()->getFirstName()} {$lastName}.</a> would like to be your friend.</div>";
+				echo "<div class='accept-ignore'><a class='friend-request-accept' href = '/friend/respond_friend_request/accept/yes/rid/{$friendRequest->getRequestId()}'> Accept </a>|
+					  <a class='friend-request-ignore' href = '/friend/respond_friend_request/accept/no/rid/{$friendRequest->getRequestId()}'> Ignore </a></div>";
 			}
 		}
 		else echo 'You have no pending friend requests.';
