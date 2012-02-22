@@ -1892,6 +1892,10 @@ ul.as-selections {
 }
 .interested_list .waitingList a,
 .attendingList a{
+    color: #454545;
+}
+.interested_list .waitingList a:hover,
+.attendingList a:hover{
     color: #FF8600;
 }
 .interested_list .waitingList,

@@ -11,13 +11,13 @@
             <div class="event_img">
                  <img src="/img/profile-pic/uid/<?=$this->event->getCreator()->getUid() ?>" height=180  width=180/>
             </div>
-            <div class="event_self">
             </div>
             <div class="event_right">
+            <div class="event_self">
                             <?php if ($this->event->getCreator()->getEmail() == $this->identity) {
-                echo "Event Creator";
+                echo "You own this event.";
             } else {
-                echo "Event Member";
+                echo "You are attending this event.";
             } ?>
             </div>
             <div class='event_date'>
