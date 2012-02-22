@@ -1845,36 +1845,40 @@ ul.as-selections {
     float: right;
 }
 .event_main .event_right {
-    width: 450px;
+    width: 380px;
     float: left;
-    padding: 0px 0px 0px 20px;
+    padding: 0 40px 0 50px;
 }
 .event_main h4 {
     font-size: 20px;
     padding: 5px 0px;
-    margin-left: 35px;
+    margin: 1px 0px 0px 25px;
     float: left;
 }
 .event_date {
 	position: relative;
 	background: url('../images/date-marker.png');
 	background-repeat: no-repeat;
-	background-position: 5px 8px;
+	background-position: 0px 10px;
 	float: left;
+	margin-right: 50px;
+	width: 300px;
 }
 .event_place {
 	position: relative;
 	background: url('../images/place-marker.png');
 	background-repeat: no-repeat;
-	background-position: 5px 8px;
+	background-position: 0px 10px;
 	float: left;
+	width: 300px;
 }
 .event_location {
 	position: relative;
 	background: url('../images/description-marker.png');
 	background-repeat: no-repeat;
-	background-position: 5px 8px;
+	background-position: 0px 10px;
 	float: left;
+	width: 300px;
 }
 .interested_list {
     margin-top: 10px;
