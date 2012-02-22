@@ -1823,8 +1823,9 @@ ul.as-selections {
 }
 
 .event_self {
-    color: #000000;
+    color: #FF8600;
     float: left;
+    width: 400px;
     font-size: 20px;
     display: block;
 }
