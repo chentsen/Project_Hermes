@@ -12,7 +12,7 @@ class Zend_View_Helper_DisplayPendingRequests extends Zend_View_Helper_Abstract{
 		if($friendRequests){
 			//print_r($friendRequests);
 			foreach($friendRequests as $friendRequest){
-				echo "<div>{$friendRequest->getRequester()->getFirstName()} {$friendRequest->getRequester()->getLastName()} would like to be your friend.";
+				echo "<div>{$friendRequest->getRequester()->getFirstName()} {substr($friendRequest->getRequester()->getLastName(),0,1)}. would like to be your friend.";
 				echo "<a style='margin: 0; padding: 0;width: 100%;float: left;' href = '/friend/respond_friend_request/accept/yes/rid/{$friendRequest->getRequestId()}'> Accept </a>|
 					  <a style='margin: 0; padding: 0; width: 100%;float: left;' href = '/friend/respond_friend_request/accept/no/rid/{$friendRequest->getRequestId()}'> Ignore </a></div>";
 			}
