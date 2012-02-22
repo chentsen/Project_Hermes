@@ -1085,6 +1085,8 @@ a.attend-button:hover {
     display: none;
     float: left;
     color: #FFFFFF;
+    width: 200px;
+    padding: 10px;
 }
 .icon_bar #friendRequests {
 	background: #454545;
@@ -1870,7 +1872,11 @@ ul.as-selections {
     background-repeat: no-repeat;
 }
 .event_self h4 {
-	margin-left: 12px;
+	margin: 3px 0px 0px 16px !important;
+	padding: 0px !important;
+	font-size: 15px !important;
+	color: #FF8600;
+	height:16px;
 }
 .event_main {
     overflow: hidden;
