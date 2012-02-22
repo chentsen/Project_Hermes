@@ -1097,7 +1097,7 @@ a.attend-button:hover {
 	display: block;
 	float: left;
 }
-.friend-request-name {
+.friend-request-name a {
 	padding: 0px;
 	color: #FFFFFF;
 }
