@@ -73,7 +73,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					echo '</h4></div>';
 					echo '<div class="event_date"><h4>'.$feedObject->getDate()->format('M d, Y').'</h4></div>';
 					
-					echo "<div class='event_location'><h4>".$feedObject->getEvent()->getLocation()."</h4></div>
+					echo "<div class='event_place'><h4>".$feedObject->getEvent()->getLocation()."</h4></div>
 							<div class='event_location'><h4>".$feedObject->getEvent()->getLongDescription()."</h4></div>
 					</div></div>";			
 				}

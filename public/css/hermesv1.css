@@ -3,7 +3,7 @@ body {
 	font-size: 14px;
         font-weight: 100;
 	background-color: white;
-	color: #454545;
+	color: #000000;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	font-smooth: always;
@@ -1845,14 +1845,14 @@ ul.as-selections {
     float: right;
     margin-bottom: 10px;
     width: 450px;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .single-event .event_title {
     float: right;
     margin-bottom: 10px;
     width: 450px;
-    font-size: 32px;
+    font-size: 30px;
 }
 .event-left {
 	float: left;
@@ -1860,11 +1860,14 @@ ul.as-selections {
 }
 
 .event_self {
-    color: #FF8600;
+    color: #000000;
     float: left;
-    width: 400px;
+    width: 180px;
     font-size: 20px;
     display: block;
+    background: url('../images/owner-marker.png');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
 }
 .event_main {
     overflow: hidden;
@@ -1903,6 +1906,12 @@ ul.as-selections {
 }
 .event-status {
 	position: relative;
+	background: url('../images/status-marker.png');
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	float: left;
+	margin-right: 50px;
+	width: 300px;
 }
 .event_place {
 	position: relative;
@@ -1937,7 +1946,7 @@ ul.as-selections {
 }
 .interested_list .waitingList a,
 .attendingList a{
-	color: #454545;
+	color: #000000;
 }
 .interested_list .waitingList a:hover,
 .attendingList a:hover{
@@ -2021,7 +2030,7 @@ ul.as-selections {
 }
 .event_wall .wallpost a{
     margin-left: 7px;
-    color: #454545;
+    color: #000000;
     font-size: 14px;
     text-decoration: underline;
 }
