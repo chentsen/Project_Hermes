@@ -6,7 +6,7 @@ class Zend_View_Helper_DisplayPendingRequests extends Zend_View_Helper_Abstract{
 		//can possibly pass this object from calling controller, view..
 		$this->friendRelation = new Application_Model_FriendRelation($identity);
 		$friendRequests = $this->friendRelation->getRequestList();
-		
+		echo "<li class=friend-request>"
 		//echo 'found friernd';
 		if($friendRequests){
 			//print_r($friendRequests);
@@ -18,6 +18,6 @@ class Zend_View_Helper_DisplayPendingRequests extends Zend_View_Helper_Abstract{
 			}
 		}
 		else echo 'You have no pending friend requests.';
-		
+		echo "</li>"
 	}
 }

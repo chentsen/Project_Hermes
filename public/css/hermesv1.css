@@ -1102,7 +1102,8 @@ a.attend-button:hover {
 	margin-right: 3px;
 }
 .friend-request-name:hover {
-	color: #ff7e00;
+	color: #ff6600;
+	margin-right: 3px;
 }
 .accept-ignore {
 	display: block;
@@ -1114,6 +1115,10 @@ a.attend-button:hover {
 }
 .friend-request-ignore {
 	margin: 5px 0px 15px 15px;
+}
+.friend-request-accept:hover,
+.friend-request-ignore:hover {
+	color: #FF8600;
 }
 .icon_bar ul.sub-setting2 li.friend-requests {
 	width: 200px;
