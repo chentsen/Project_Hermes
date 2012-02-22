@@ -59,7 +59,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					echo "<div class='event_self'>";
 					if ($eventModel->isEventCreator($identity, $creator))
 					{ echo "You own this event.";}
-					else {echo "You are attending this event.";}
+					else {echo "You're going to this event.";}
 					echo "</div>";
 					echo "</div>";
 					echo "<div class='event_right'>";
