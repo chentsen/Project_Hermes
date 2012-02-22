@@ -1864,6 +1864,9 @@ ul.as-selections {
 	margin-right: 50px;
 	width: 300px;
 }
+.event-status {
+	position: relative;
+}
 .event_place {
 	position: relative;
 	background: url('../images/place-marker.png');
