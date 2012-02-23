@@ -1079,7 +1079,7 @@ a.attend-button:hover {
 }
 .icon_bar ul li .sub-settings {
     position: absolute;
-    left: 0px;
+    left: -80px;
     top: 54px;
     background: black;
     margin:0;
@@ -1090,7 +1090,7 @@ a.attend-button:hover {
 }
 .icon_bar ul li .sub-setting2 {
     position: absolute;
-    left: 0px;
+    left: -154px;
     top: 54px;
     background: black;
     margin:0;
@@ -1099,7 +1099,6 @@ a.attend-button:hover {
     float: left;
     color: #FFFFFF;
     width: 200px;
-    padding: 10px;
 }
 .icon_bar #friendRequests {
 	background: #454545;
@@ -1130,16 +1129,6 @@ a.attend-button:hover {
 	width: 200px;
 	height: 20px;
 }
-.friend-request-accept {
-	margin: 5px 10px 15px 50px;
-}
-.friend-request-ignore {
-	margin: 5px 0px 15px 15px;
-}
-.friend-request-accept:hover,
-.friend-request-ignore:hover {
-	color: #FF8600;
-}
 .friend-request-message {
 	width: 200px;
 	display: block;
@@ -1160,17 +1149,17 @@ a.attend-button:hover {
 	height: 20px;
 }
 .friend-request-accept {
-	margin: 5px 10px 15px 50px;
+	margin: 5px 10px 0px 36px;
 }
 .friend-request-ignore {
-	margin: 5px 0px 15px 15px;
+	margin: 5px 0px 0px 15px;
 }
 .friend-request-accept:hover,
 .friend-request-ignore:hover {
 	color: #FF8600;
 }
 .icon_bar ul.sub-setting2 li.friend-requests {
-	width: 200px;
+	width: 180px;
 	clear: both;
 	padding: 10px;
 	float: left;
