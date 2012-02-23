@@ -9,9 +9,7 @@
 			<div class="attending-item attending-item-<?= $uid ?>">
 			<a href='/profile/public/uid/<?= $user->getUid() ?>'>
             <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
-            <?php if ($this->indexCreator || $this->indexMember) { ?>
-			<div class='attending-details'><a href='/profile/public/uid/<?= $user->getUid() ?>'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?></a></div>
-            <?php } ?>        			
+			<div class='attending-details'><a href='/profile/public/uid/<?= $user->getUid() ?>'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?></a></div>       			
             
 	</div>
 	<?php } ?>
