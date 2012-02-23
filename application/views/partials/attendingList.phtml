@@ -14,6 +14,6 @@
 	</div>
 	<?php } ?>
 	<? if (!$this->indexCreator || !$this->indexMember) {if(!$this->didRequest) {?>
-		    	    <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'><h4 class="attend-text">Click to attend</h4></a>
+		    	    <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'><h4 class="attend-text"><img src='/img/profile-pic/uid/<?= $curUser->getUid() ?>' height=100  width=100/></h4></a>
 		<? } }?>
 </div>
