@@ -325,11 +325,11 @@ margin-bottom: 2px;
 .profile_eventList .eventFeedObject {
 }
 .profile_eventList .eventFeedObject a {
-	color: #454545;
+	color: #000000;
 }
 
 .profile_eventList .mini-feed {
-	color: #454545;
+	color: #000000;
 	font-size: 13px;
 }
 

@@ -12,6 +12,10 @@
             <?php if ($this->indexCreator || $this->indexMember) { ?>
 			<div class='attending-details'><a href='/profile/public/uid/<?= $user->getUid() ?>'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?></a></div>
             <?php } ?>        			
-            </div>
+            
+	</div>
 	<?php } ?>
+	<? if(!$this->didRequest) {?>
+		    	    <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'>I wanna go!</a>
+		<? } ?>
 </div>
