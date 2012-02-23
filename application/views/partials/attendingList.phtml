@@ -6,12 +6,22 @@
 			$eid = $this->event->getEid();
             $uid = $user->getUid();
     ?>
-			<div class="attending-item attending-item-<?= $uid ?>">
-			<a href='/profile/public/uid/<?= $user->getUid() ?>'>
-            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
+	    <div class="attending-item attending-item-<?= $uid ?>">
+		    <a href='/profile/public/uid/<?= $user->getUid() ?>'>
+	            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
             <?php if ($this->indexCreator || $this->indexMember) { ?>
-			<div class='attending-details'><?= $user->getFirstName() ?> is attending.</div>
+		    <div class='attending-details'><?= $user->getFirstName() ?> is attending.</div>
             <?php } ?>        			
             </div>
 	<?php } ?>
+</div>
+<div class = "attending-list-ajax" style='display:none'>
+    <div class="attending-item attending-item-<?= $uid ?>">
+		    <a href='/profile/public/uid/<?= $user->getUid() ?>'>
+	            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
+            <?php if ($this->indexCreator || $this->indexMember) { ?>
+		    <div class='attending-details'><?= $user->getFirstName() ?> is attending.</div>
+            <?php } ?>        			
+    </div>
+    
 </div>
