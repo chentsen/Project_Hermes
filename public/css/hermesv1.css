@@ -3,12 +3,12 @@ body {
 	font-size: 14px;
         font-weight: 100;
 	background-color: white;
-	color: #454545;
+	color: #000000;
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	font-smooth: always;
 }
-.index {
+.index, .about, .contact, .privacy {
 	background-color: black;
 	background: url('../images/pt-background.jpg') no-repeat;
 	background-position: center 0%;
@@ -182,10 +182,11 @@ input[type=text]:first, input[type=password]:first {
     z-index: 999;
 }
 #header_area {
-     background: url('../images/bg-pencil2.png') repeat #262626;
+     /*background: url('../images/bg-pencil2.png') repeat #262626;*/
      z-index: inherit;
      border-bottom: 1px solid #000;
      margin: 0 auto;
+     background-color: #000000;
      
 }
 #header_area .page {
@@ -324,11 +325,11 @@ margin-bottom: 2px;
 .profile_eventList .eventFeedObject {
 }
 .profile_eventList .eventFeedObject a {
-	color: #454545;
+	color: #000000;
 }
 
 .profile_eventList .mini-feed {
-	color: #454545;
+	color: #000000;
 	font-size: 13px;
 }
 
@@ -526,25 +527,33 @@ a.add-friend:hover {
 }
 a.attend-button {
 	color: #FFFFFF;
-	background-color: #9ED716;
+	background-color: #ABABAB;
 	display: block;
 	font-size: 18px;
-	height: 30px;
+	height: 100px;
 	line-height: 30px;
-	width: 180px;
-	float: right;
+	width: 100px;
+	float: left;
 	text-align: center;
 }
 a.attend-button:hover {
 	color: #FFFFFF;
-	background-color: #94ca15;
+	background-color: #FF8600;
 	display: block;
 	font-size: 18px;
-	height: 30px;
+	height: 100px;
 	line-height: 30px;
-	width: 180px;
-	float: right;
+	width: 100px;
+	float: left;
 	text-align: center;
+}
+.attend-text {
+	display: block;
+	padding: 10px;
+	font-size: 20px;
+	color: #FFFFFF;
+	margin: 20px 0px 0px 10px;
+	text-align: left;
 }
 .view_event, .join_event {
 	margin-left: 10px;
@@ -580,13 +589,13 @@ a.attend-button:hover {
 }
 /*** about us ***/
 .prepend-logo,.questionmark {
-	font-size: 60px;
-	line-height: 60px;
+	font-size: 57px;
+	line-height: 46px;
 	float: left;
-	color: #454545;
+	color: #FFFFFF;
 }
 .about-logo {
-	margin-top: 12px;
+	margin: 30px 0px 20px 255px;
 	float: left;
 	width: 960px;
 }
@@ -594,7 +603,6 @@ a.attend-button:hover {
     width: inherit;
     height: inherit;
     display: block;
-    margin-top: 7px;
     background: url('../images/plumetype-flat.png') no-repeat;
 }
 .about-logo .thelogo {
@@ -604,6 +612,48 @@ a.attend-button:hover {
     text-indent: -9999px;
 }
 .prepend-logo {margin-right: 12px;}
+.about-text {
+	display: block;
+	width: 960px;
+	background-color: rgba(0,0,0,0.85);
+	float: left;
+}
+.guide-one {
+	background: url('../images/guide-one-image.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	float: left;
+	width: 320px;
+	height: 300px;
+}
+.guide-one h2 {
+	color: #FFFFFF;
+	float: left;
+}
+.guide-two {
+	background: url('../images/guide-two-image.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	float: left;
+	width: 320px;
+	height: 300px;
+}
+.guide-two h2 {
+	color: #FFFFFF;
+	float: left;
+}
+.guide-three {
+	background: url('../images/guide-one.png');
+	background-position: 10px 10px;
+	background-repeat: no-repeat;
+	float: left;
+	width: 320px;
+	height: 300px;
+}
+.guide-three h2 {
+	color: #FFFFFF;
+	float: left;
+}
 /***** site exterior **********/
   .outside #header_block {display: none;}
    .outside #content_area {margin-top:0px;}
@@ -613,13 +663,23 @@ a.attend-button:hover {
     float: right;
     padding: 0 0 2px 0px;
 }
+.privacy #footer_menu {
+	
+}
+.contact #footer_menu {
+	
+}
+.about #footer_menu {
+	
+}
 .index #registration{float: left; }
 .cms-text {
     font-size: 16px;
     overflow: auto;
-    color: #454545; 
+    color: #FFFFFF; 
     padding: 10px 20px 20px 20px;
     float: left;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 .out-logo {
     margin-top: 30px;
@@ -645,9 +705,6 @@ a.attend-button:hover {
 		width: 100%;
 		height: 80%;
 		z-index: 0;
-}
-.out-preview {
-    overflow: hidden;
 }
 .homepage-bottom {
 
@@ -790,7 +847,7 @@ a.attend-button:hover {
 /*** right block area ***/
 .block-body{
     overflow: hidden;
-    color: #454545;
+    color: #000000;
 }
 
 .block-body .friend_list {
@@ -827,7 +884,7 @@ a.attend-button:hover {
     height: 100%;
 }
 .right-block a {
-    color: #454545;
+    color: #000000;
     width: 100%;
     display: block;
 }
@@ -851,7 +908,7 @@ a.attend-button:hover {
 
 .block-header h4 {
 	margin-left: 17px;
-	color: #454545;
+	color: #000000;
 }
 
 .block-close {
@@ -889,14 +946,20 @@ a.attend-button:hover {
 	text-align: left;
         padding: 10px;
 }
+.index #footer_menu .left_footer li {
+	color: #FFFFFF;
+}
+.index #footer_menu .left_footer li a {
+	color: #FFFFFF;
+}
 #footer_menu .left_footer li{
 	list-style: none;
 	display: inline;
 	padding: 0px 6px 0px 4px;
-        color: #FFFFFF;
+        color: #000000;
 }
 #footer_menu .left_footer li a {
-    color: #FFFFFF;
+    color: #000000;
     text-decoration: none;
 }
 #footer_menu .left_footer li a:hover {
@@ -1017,9 +1080,9 @@ a.attend-button:hover {
 }
 .icon_bar ul li .sub-settings {
     position: absolute;
-    left: -80px;
-    top: 55px;
-    background: #454545;
+    left: 0px;
+    top: 54px;
+    background: black;
     margin:0;
     padding: 0;
     float: left;
@@ -1028,13 +1091,16 @@ a.attend-button:hover {
 }
 .icon_bar ul li .sub-setting2 {
     position: absolute;
-    left: -140px;
-    top: 55px;
-    background: #454545;
+    left: 0px;
+    top: 54px;
+    background: black;
     margin:0;
     padding: 0;
     display: none;
     float: left;
+    color: #FFFFFF;
+    width: 200px;
+    padding: 10px;
 }
 .icon_bar #friendRequests {
 	background: #454545;
@@ -1042,16 +1108,52 @@ a.attend-button:hover {
 	min-height: 100%;
 	font-size: 14px;
 }
+.friend-request-message {
+	width: 200px;
+	display: block;
+	float: left;
+}
+.friend-request-name {
+	color: #FF8600;
+	margin-right: 3px;
+}
+.friend-request-name:hover {
+	color: #ff6600;
+	margin-right: 3px;
+}
+.accept-ignore {
+	display: block;
+	float: left;
+	width: 200px;
+	height: 20px;
+}
+.friend-request-accept {
+	margin: 5px 10px 15px 50px;
+}
+.friend-request-ignore {
+	margin: 5px 0px 15px 15px;
+}
+.friend-request-accept:hover,
+.friend-request-ignore:hover {
+	color: #FF8600;
+}
 .icon_bar ul.sub-setting2 li.friend-requests {
 	width: 200px;
 	clear: both;
+	padding: 10px;
+	float: left;
+	display: block;
+	border-bottom: solid 1px #a3a3a3;
 }
+.icon_bar ul.subsetting2 li.friend-requests:last-child {
+	border-bottom: none;
+}
+
 .icon_bar ul li .sub-settings li {
     margin: 0;
     padding: 0;
 }
-html .icon_bar ul li .sub-settings li a,
-html .icon_bar ul li .sub-setting2 li a{
+html .icon_bar ul li .sub-settings li a {
     text-align: right;
     padding: 10px;
     font-size: 14px;
@@ -1075,10 +1177,11 @@ html #friendRequests ul li .sub-setting2 li a{
     color: white;
 }
 html .icon_bar ul li .sub-settings li a:hover {
-    background: #333;
+    color: #FF8600;
 }
 html .icon_bar ul li .sub-settings .first-setting a{
     margin-bottom: 0px;
+    border-bottom: solid 1px #a3a3a3;
 }
 html .icon_bar ul li .sub-settings .last-setting a{
     margin-top: 0px;
@@ -1410,7 +1513,31 @@ html .icon_bar ul li .sub-settings .last-setting a{
 		font-size: 18px;
 }
 #contact .centerform {
-	margin-left: 90px;
+	margin-left: 255px;
+	width: 410px;
+	float: left;
+	background-color: rgba(0,0,0,0.85);
+	padding: 20px;
+}
+#contact .email {
+	float: left;
+	margin-right: 10px;
+}
+#contact .subject {
+	width: 410px;
+	float: left;
+}
+#contact .text {
+	width: 410px;
+	float: left;
+}
+#contact #text {
+	width: 388px;
+	float: left;
+}
+#contact #subject {
+	width: 398px;
+	float: left;
 }
 #contact_submit { 
   height: 35px;
@@ -1418,18 +1545,19 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: #454545;
   color: white;
   padding: 0 50px;
-  width: 200px;
+  width: 410px;
 }
 .contact-text {
     font-size: 16px;
-    overflow: auto;
-    color: #454545; 
-    padding: 10px 20px 20px 20px;
+    overflow: hidden;
+    color: #FFFFFF; 
+    padding: 20px 20px 2px 20px;
     float: left;
     width: 410px;
+    margin-left: 255px;
 }
 .contact-logo {
-	margin-top: 12px;
+	margin: 30px 0px 20px 260px;
 	float: left;
 	width: 960px;
 }
@@ -1437,10 +1565,34 @@ html .icon_bar ul li .sub-settings .last-setting a{
     width: inherit;
     height: inherit;
     display: block;
-    margin-top: 7px;
     background: url('../images/plumetype-flat.png') no-repeat;
 }
 .contact .thelogo {
+    float: left;
+    width: 240px;
+    height: 70px;
+    text-indent: -9999px;
+}
+/**** PRIVACY PAGE ****/
+.privacy .questionmark {
+	font-size: 57px;
+	line-height: 43px;
+	float: left;
+	color: #FFFFFF;
+	margin-left: 12px;
+}
+.privacy-logo {
+	margin: 30px 0px 20px 185px;
+	float: left;
+	width: 960px;
+}
+.privacy .logo {
+    width: inherit;
+    height: inherit;
+    display: block;
+    background: url('../images/plumetype-flat.png') no-repeat;
+}
+.privacy .thelogo {
     float: left;
     width: 240px;
     height: 70px;
@@ -1693,7 +1845,15 @@ ul.as-selections {
     padding:5px;
     margin: 5px 0px;
     font-size: 14px;
-    background: #FF7200;
+    background: #FF8600;
+    color: #ffffff;
+}
+.index #flashMessages ul li {
+    position: relative;
+    text-align: center;
+    padding:5px;
+    font-size: 14px;
+    background: rgba(166, 166, 166, 0.2);
     color: #ffffff;
 }
 /***** event page ******/
@@ -1701,14 +1861,14 @@ ul.as-selections {
     float: right;
     margin-bottom: 10px;
     width: 450px;
-    font-size: 32px;
+    font-size: 30px;
 }
 
 .single-event .event_title {
     float: right;
     margin-bottom: 10px;
     width: 450px;
-    font-size: 32px;
+    font-size: 30px;
 }
 .event-left {
 	float: left;
@@ -1716,15 +1876,21 @@ ul.as-selections {
 }
 
 .event_self {
-    color: white;
+    color: #000000;
     float: left;
-    height: 30px;
     width: 180px;
-    line-height: 30px;
-    font-size: 18px;
+    font-size: 20px;
     display: block;
-    background-color: #24A3DF;
-    text-align: center;
+    background: url('../images/owner-marker.png');
+    background-position: 0px 2px;
+    background-repeat: no-repeat;
+}
+.event_self h4 {
+	margin: 3px 0px 0px 16px !important;
+	padding: 0px !important;
+	font-size: 15px !important;
+	color: #000000;
+	height:16px;
 }
 .event_main {
     overflow: hidden;
@@ -1742,53 +1908,82 @@ ul.as-selections {
     float: right;
 }
 .event_main .event_right {
-    width: 450px;
+    width: 380px;
     float: left;
-    padding: 0px 0px 0px 20px;
+    padding: 0 40px 0 50px;
 }
 .event_main h4 {
     font-size: 20px;
-    padding: 5px 0px;
-    margin-left: 35px;
+    padding: 6px 0px 5px 0px;
+    margin: 1px 0px 0px 25px;
+    float: left;
 }
 .event_date {
 	position: relative;
-	background: url('../images/event-asterisk.png');
+	background: url('../images/date-marker.png');
 	background-repeat: no-repeat;
-	background-position: 5px 8px;
+	background-position: 0px 10px;
+	float: left;
+	margin-right: 50px;
+	width: 300px;
+}
+.event-status {
+	position: relative;
+	background: url('../images/status-marker.png');
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	float: left;
+	margin-right: 50px;
+	width: 300px;
 }
 .event_place {
 	position: relative;
-	background: url('../images/event-asterisk.png');
+	background: url('../images/place-marker.png');
 	background-repeat: no-repeat;
-	background-position: 5px 8px;
+	background-position: 0px 10px;
+	float: left;
+	width: 300px;
 }
 .event_location {
 	position: relative;
-	background: url('../images/event-asterisk.png');
+	background: url('../images/description-marker.png');
 	background-repeat: no-repeat;
-	background-position: 5px 8px;
+	background-position: 0px 10px;
+	float: left;
+	width: 300px;
 }
 .interested_list {
-    margin-top: 10px;
-    overflow: hidden;
+	margin-top: 10px;
+	overflow: hidden;
+}
+.attending-title {
+	position: relative;
+	background: url('../images/attending-line.png');
+	background-repeat: no-repeat;
+	background-position: 121px 13px;
+	margin-bottom: 10px;
 }
 .attendingList {
-		margin-top: 5px;
-		overflow: hidden;
+	margin-top: 5px;
+	overflow: hidden;
 }
 .interested_list .waitingList a,
 .attendingList a{
-    color: #FF8600;
+	color: #000000;
+}
+.interested_list .waitingList a:hover,
+.attendingList a:hover{
+	color: #FF8600;
 }
 .interested_list .waitingList,
 .interested_list .attendingList{
-    float: left;
-    padding: 10px 0px;
+	float: left;
+	padding: 10px 0px;
+	color: #000000;
 }
 .interested_list .waitingList .event_allow,
 .attendingList .event_allow{
-    color: #FF8600;
+    color: #000000;
     font-size: 12px;
     margin-top: 4px;
     text-align: center;
@@ -1796,8 +1991,7 @@ ul.as-selections {
 .waitingList .waitingImg {
     position: relative;
 }
-.waiting-details,
-.attending-details{
+.waiting-details {
 	text-align: center;
 	font-size: 13px;
 	height: 25px;
@@ -1806,9 +2000,18 @@ ul.as-selections {
 	height: 25px;
 	margin-top: 2px;
 }
+.attending-details{
+	text-align: center;
+	font-size: 13px;
+	height: 25px;
+	line-height: 13px;
+	width: 100px;
+	height: 14px;
+	margin-top: 2px;
+}
 .waiting-item{
 	float: left;
-	margin: 0px 15px;
+	margin-right: 15px;
 }
 .attending-item {
 		float: left;
@@ -1826,7 +2029,6 @@ ul.as-selections {
     border-radius: 5px;
 }
 .event_wall .wall_title {
-    font-size: 26px;
     margin-bottom: 15px;
     position: relative;
     background: url('../images/event-wall-line.png');
@@ -1860,7 +2062,7 @@ ul.as-selections {
 }
 .event_wall .wallpost a{
     margin-left: 7px;
-    color: #454545;
+    color: #000000;
     font-size: 14px;
     text-decoration: underline;
 }
