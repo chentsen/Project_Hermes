@@ -1,5 +1,4 @@
-<div class = "attendingList">
-    <h3 class="attending-title">Attending</h3>
+<h3 class="attending-title">Attending</h3>
 	<?php
     $attendingList = $this->event->getMembers();
     foreach($attendingList as $user){
@@ -17,4 +16,3 @@
 		?>
 		    	    <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'><img src='/img/profile-pic/uid/<?= $this->curUser->getUid() ?>' height=100  width=100/></a></a>
 		<? }?>
-</div>
