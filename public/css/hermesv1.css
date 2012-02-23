@@ -526,7 +526,7 @@ a.add-friend:hover {
 }
 a.attend-button {
 	color: #FFFFFF;
-	background-color: #ABABAB;
+	background-color: rgba(219,219,219,0.3);
 	display: block;
 	font-size: 18px;
 	height: 100px;
@@ -537,7 +537,7 @@ a.attend-button {
 }
 a.attend-button:hover {
 	color: #FFFFFF;
-	background-color: #FF8600;
+	background: none;
 	display: block;
 	font-size: 18px;
 	height: 100px;
@@ -553,6 +553,7 @@ a.attend-button:hover {
 	color: #FFFFFF;
 	margin: 20px 0px 0px 10px;
 	text-align: left;
+	z-index: 20;
 }
 .view_event, .join_event {
 	margin-left: 10px;
