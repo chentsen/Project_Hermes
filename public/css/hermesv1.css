@@ -2012,10 +2012,12 @@ ul.as-selections {
 }
 .event_allow {
 	color: #000000;
+	margin-left: 10px;
 }
 .event_allow a {
 	font-size: 13px;
 	color: #000000;
+	margin-right: 5px;
 }
 .event_allow a:hover {
 	color: #FF8600;
@@ -2042,6 +2044,9 @@ ul.as-selections {
 	width: 100px;
 	height: 14px;
 	margin-top: 2px;
+	color: #000000;
+}
+.attending-details a {
 	color: #000000;
 }
 .waiting-item{
