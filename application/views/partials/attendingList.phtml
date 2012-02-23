@@ -15,7 +15,7 @@
             
 	</div>
 	<?php } ?>
-	<? if ($!this->indexCreator || $!this->indexMember) {if(!$this->didRequest) {?>
+	<? if (!$this->indexCreator || !$this->indexMember) {if(!$this->didRequest) {?>
 		    	    <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'>I wanna go!</a>
 		<? } }?>
 </div>
