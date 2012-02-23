@@ -2021,6 +2021,14 @@ ul.as-selections {
 .event_allow {
 	color: #000000;
 }
+.event_allow a {
+	font-size: 13px;
+	color: #000000;
+}
+.event_allow a:hover {
+	color: #FF8600;
+	font-size: 13px;
+}
 .waitingList .waitingImg {
     position: relative;
 }
