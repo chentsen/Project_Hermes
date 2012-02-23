@@ -444,7 +444,6 @@ margin-bottom: 2px;
 }
 .user_info h2 {
     float: left;
-    text-transform: capitalize;
 }
 .user_addFriend, .user_viewProfile {
     float: right;
@@ -2019,6 +2018,9 @@ ul.as-selections {
     margin-top: 4px;
     text-align: center;
 }
+.event_allow {
+	color: #000000;
+}
 .waitingList .waitingImg {
     position: relative;
 }
@@ -2030,8 +2032,9 @@ ul.as-selections {
 	width: 100px;
 	height: 25px;
 	margin-top: 2px;
+	color: #000000;
 }
-.attending-details{
+.attending-details {
 	text-align: center;
 	font-size: 13px;
 	height: 25px;
@@ -2039,6 +2042,7 @@ ul.as-selections {
 	width: 100px;
 	height: 14px;
 	margin-top: 2px;
+	color: #000000;
 }
 .waiting-item{
 	float: left;
