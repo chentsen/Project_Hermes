@@ -553,6 +553,7 @@ a.attend-button:hover {
 	font-size: 20px;
 	color: #FFFFFF;
 	margin: 20px 0px 0px 10px;
+	text-align: left;
 }
 .view_event, .join_event {
 	margin-left: 10px;
@@ -1106,6 +1107,36 @@ a.attend-button:hover {
 	padding: 5px 5px 10px 10px;
 	min-height: 100%;
 	font-size: 14px;
+	color: red;
+}
+.friend-request-message {
+	width: 200px;
+	display: block;
+	float: left;
+}
+.friend-request-name {
+	color: #FF8600;
+	margin-right: 3px;
+}
+.friend-request-name:hover {
+	color: #ff6600;
+	margin-right: 3px;
+}
+.accept-ignore {
+	display: block;
+	float: left;
+	width: 200px;
+	height: 20px;
+}
+.friend-request-accept {
+	margin: 5px 10px 15px 50px;
+}
+.friend-request-ignore {
+	margin: 5px 0px 15px 15px;
+}
+.friend-request-accept:hover,
+.friend-request-ignore:hover {
+	color: #FF8600;
 }
 .friend-request-message {
 	width: 200px;
@@ -1491,7 +1522,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #createEvent_private {
 	font-size: 18px;
 	width: 100px;
-	margin: 10px 7px 0px 21px;
+	margin: 5px 7px 0px 21px;
 }
 /*** app style profile page ***/
 #personalDescription_description, #tag_input {
@@ -2051,6 +2082,7 @@ ul.as-selections {
     position: relative;
     width: 640px;
     margin-bottom: 10px;
+    color: #000000;
 }
 .event_wall .wall_text {
     word-wrap: break-word;	
