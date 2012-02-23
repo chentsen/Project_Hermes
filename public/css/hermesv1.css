@@ -547,6 +547,14 @@ a.attend-button:hover {
 	float: left;
 	text-align: center;
 }
+.attend-text {
+	display: block;
+	height: 100px;
+	width: 100px;
+	padding: 10px;
+	font-size: 20px;
+	color: #FFFFFF;
+}
 .view_event, .join_event {
 	margin-left: 10px;
 	font-size: 16px;
