@@ -5,10 +5,8 @@ $eid = $this->event->getEid();
 <?= $this->partial('eventInfo.phtml',array('event'=>$this->event,'identity'=>$this->identity)); ?>
 	<?= $this->partial('attendingList.phtml',array('event'=>$this->event,'identity'=>$this->identity, 'indexCreator'=>$this->indexCreator)); ?>
 <!--<?= $this->event->getLongDescription() ?>-->
-	<div class='interested_list'>
 		
 		<?= $this->DisplayInterestedList($this->event) ?>
-	</div>
  <div class ="event_wall">
     <h3 class="wall_title">Wall</h3>
     <div id="posts">
