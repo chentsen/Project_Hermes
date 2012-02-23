@@ -2048,6 +2048,10 @@ ul.as-selections {
 		margin-right: 15px;
 }
 .interested_list .waitingList .waitingImg span,
+.event_wall {
+	float: left;
+	display: block;
+}
 .event_wall .wall_image span
 {
     position: absolute;
@@ -2064,6 +2068,7 @@ ul.as-selections {
     background: url('../images/event-wall-line.png');
     background-repeat: no-repeat;
     background-position: 63px 13px;
+    float: left;
 }
 .event_wall .wall_image {
     position: relative;
