@@ -554,6 +554,7 @@ a.attend-button:hover {
 	color: #FFFFFF;
 	margin: 20px 0px 0px 10px;
 	text-align: left;
+
 }
 .view_event, .join_event {
 	margin-left: 10px;
@@ -1108,6 +1109,35 @@ a.attend-button:hover {
 	min-height: 100%;
 	font-size: 14px;
 	color: red;
+}
+.friend-request-message {
+	width: 200px;
+	display: block;
+	float: left;
+}
+.friend-request-name {
+	color: #FF8600;
+	margin-right: 3px;
+}
+.friend-request-name:hover {
+	color: #ff6600;
+	margin-right: 3px;
+}
+.accept-ignore {
+	display: block;
+	float: left;
+	width: 200px;
+	height: 20px;
+}
+.friend-request-accept {
+	margin: 5px 10px 15px 50px;
+}
+.friend-request-ignore {
+	margin: 5px 0px 15px 15px;
+}
+.friend-request-accept:hover,
+.friend-request-ignore:hover {
+	color: #FF8600;
 }
 .friend-request-message {
 	width: 200px;

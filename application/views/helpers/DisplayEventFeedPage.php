@@ -53,17 +53,17 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
             if($feedObject->getEvent())
                 {
 					echo "<div class='event_main'>";
-					echo "<h1 class='event_title'>".$feedObject->getEvent()->getCreator()->getFirstName()." ".$feedObject->getEvent()->getCreator()->getLastName()." wants to ".$feedObject->getShortDescription()."</h1>";
+					echo "<h1 class='event_title'>".$feedObject->getEvent()->getCreator()->getFirstName()." " .substr($feedObject->getEvent()->getCreator()->getLastName(),0,1)."."." wants to ".$feedObject->getShortDescription()."</h1>";
 					echo "<div class='event-left'><div class='event_img'>";
 					echo "<a href='/event/index/eid/".$feedObject->getEid()."' ><img src='/img/profile-pic/uid/".$feedObject->getEvent()->getCreator()->getUid()."' height='180' width='180' /></a></div>";
 					echo "<div class='event_self'>";
 					if ($eventModel->isEventCreator($identity, $creator))
-					{ echo "Event Creator";}
-					else {echo "Event Member";}
+					{ echo "<h4>You own this event.</h4>";}
+					else {echo "<h4>You're going to this event.</h4>";}
 					echo "</div>";
 					echo "</div>";
 					echo "<div class='event_right'>";
-					echo '<div class="event_date"><h4>';
+					echo '<div class="event-status"><h4>';
 					if( $feedObject->getDate()->format('M d, Y') == $date->format('M d, Y'))
 					{ echo "Event is today";}
 					else if ($date->getTimeStamp() < $feedObject->getDate()->getTimestamp())
@@ -73,7 +73,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					echo '</h4></div>';
 					echo '<div class="event_date"><h4>'.$feedObject->getDate()->format('M d, Y').'</h4></div>';
 					
-					echo "<div class='event_location'><h4>".$feedObject->getEvent()->getLocation()."</h4></div>
+					echo "<div class='event_place'><h4>".$feedObject->getEvent()->getLocation()."</h4></div>
 							<div class='event_location'><h4>".$feedObject->getEvent()->getLongDescription()."</h4></div>
 					</div></div>";			
 				}

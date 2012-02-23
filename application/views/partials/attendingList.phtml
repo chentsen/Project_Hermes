@@ -1,5 +1,5 @@
 <div class = "attendingList">
-    <h4>Attendees</h4>
+    <h3 class="attending-title">Attending</h3>
 	<?php
     $attendingList = $this->event->getMembers();
     foreach($attendingList as $user){
@@ -10,8 +10,12 @@
 			<a href='/profile/public/uid/<?= $user->getUid() ?>'>
             <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
             <?php if ($this->indexCreator || $this->indexMember) { ?>
-			<div class='attending-details'><?= $user->getFirstName() ?> is attending.</div>
+			<div class='attending-details'><a href='/profile/public/uid/<?= $user->getUid() ?>'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?></a></div>
             <?php } ?>        			
-            </div>
+            
+	</div>
 	<?php } ?>
+	<? if (!$this->indexCreator || !$this->indexMember) {if(!$this->didRequest) {?>
+		    	    <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'><h4 class="attend-text">Click to attend</h4></a>
+		<? } }?>
 </div>

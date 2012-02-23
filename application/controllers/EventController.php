@@ -60,7 +60,7 @@ class EventController extends Hermes_Controller_Wall_WallController
     		$eventModel = new Application_Model_EventModel($event);
     		$result = $eventModel->attendRequest($this->identity);
     		if($result){
-				$this->_helper->flashMessenger->addMessage("You have successfully indicated your interest in this event. Thanks!");
+				$this->_helper->flashMessenger->addMessage("The event owner has been notified of your interest.");
 				$this->_redirect('/profile');
 				
     		}else{
