@@ -1373,6 +1373,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: #454545;
   color: white;
   padding: 0 50px;
+  float: left;
 }
 
 #wall_addPost { 
@@ -2061,6 +2062,10 @@ ul.as-selections {
     padding:5px;
     background: green;
     border-radius: 5px;
+}
+.wall_add {
+	display: block;
+	float: left;
 }
 .event_wall .wall_title {
     margin-bottom: 15px;
