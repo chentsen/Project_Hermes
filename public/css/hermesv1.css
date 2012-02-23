@@ -527,7 +527,7 @@ a.add-friend:hover {
 }
 a.attend-button {
 	color: #FFFFFF;
-	background-color: #DBDBDB;
+	background-color: #ABABAB;
 	display: block;
 	font-size: 18px;
 	height: 100px;
@@ -549,11 +549,10 @@ a.attend-button:hover {
 }
 .attend-text {
 	display: block;
-	height: 100px;
-	width: 100px;
 	padding: 10px;
 	font-size: 20px;
 	color: #FFFFFF;
+	margin: 20px 0px 0px 10px;
 }
 .view_event, .join_event {
 	margin-left: 10px;
@@ -1914,7 +1913,7 @@ ul.as-selections {
 }
 .event_main h4 {
     font-size: 20px;
-    padding: 5px 0px;
+    padding: 6px 0px 5px 0px;
     margin: 1px 0px 0px 25px;
     float: left;
 }
@@ -1991,14 +1990,22 @@ ul.as-selections {
 .waitingList .waitingImg {
     position: relative;
 }
-.waiting-details,
-.attending-details{
+.waiting-details {
 	text-align: center;
 	font-size: 13px;
 	height: 25px;
 	line-height: 13px;
 	width: 100px;
 	height: 25px;
+	margin-top: 2px;
+}
+.attending-details{
+	text-align: center;
+	font-size: 13px;
+	height: 25px;
+	line-height: 13px;
+	width: 100px;
+	height: 14px;
 	margin-top: 2px;
 }
 .waiting-item{
