@@ -1107,6 +1107,7 @@ a.attend-button:hover {
 	padding: 5px 5px 10px 10px;
 	min-height: 100%;
 	font-size: 14px;
+	color: red;
 }
 .friend-request-message {
 	width: 200px;
