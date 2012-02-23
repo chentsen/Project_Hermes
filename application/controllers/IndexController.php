@@ -22,7 +22,7 @@ class IndexController extends Zend_Controller_Action
     {	
         
         $this->_helper->layout->setLayout('layout_outside');                
-    
+		
 		if(Application_Model_UserSettings::hasIdentity()){
                     $this->_redirect('/profile');
                 }

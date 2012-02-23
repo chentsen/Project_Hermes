@@ -93,7 +93,7 @@ class Application_Model_UserSettings{
 				//hack to cut the city into two parts
 				$city_raw = explode(',',$user_profile['location']['name']);
 				$city = ucwords(strtolower($city_raw[0]));
-				$email = ucwords(strtolower($user_profile['email']));
+				$email = strtolower($user_profile['email']);
 				$firstName = ucwords(strtolower($user_profile['first_name']));
 				$lastName = ucwords(strtolower($user_profile['last_name']));
 				$gender_raw = $user_profile['gender'];
