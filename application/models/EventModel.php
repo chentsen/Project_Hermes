@@ -14,8 +14,8 @@ class Application_Model_EventModel{
 	public function createEvent($raw){
 		//must use named indexes to work correctly
 		//print_r($raw);
-		$location = $raw['createEvent_location'];
-		$shortDescription = $raw['createEvent_shortDescription'];
+		$location = ucwords(strtolower($raw['createEvent_location']));
+		$shortDescription = ucwords(strtolower($raw['createEvent_shortDescription']));
 		$longDescription = ($raw['createEvent_longDescription'] == '') ? null : $raw['createEvent_longDescription'];
 		$private = (($raw['createEvent_private'] == 'y') ? true : false);
 		

@@ -17,7 +17,7 @@
 						<?php $auth = Zend_Auth::getInstance(); 
                     if($auth->hasIdentity()){ 
                     	$this->identity = $auth->getIdentity()?>
-						<li class="friend-requests"> <?$this->DisplayPendingRequests($this->identity); ?></li>
+						<?$this->DisplayPendingRequests($this->identity); ?>
 						<?php } ?>
 					  </ul>
                 </li>

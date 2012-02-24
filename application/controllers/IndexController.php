@@ -22,7 +22,7 @@ class IndexController extends Zend_Controller_Action
     {	
         
         $this->_helper->layout->setLayout('layout_outside');                
-    
+		
 		if(Application_Model_UserSettings::hasIdentity()){
                     $this->_redirect('/profile');
                 }
@@ -69,7 +69,7 @@ class IndexController extends Zend_Controller_Action
                                 
 			}
 			else{
-				$this->view->errors = array("emailExists"=>array("This email is already registered with a user account. Forgot your password? No worries, click here"));
+				$this->view->errors = array("emailExists"=>array("This email is already registered with a user account. Forgot your password? No worries, click here."));
 				//retrieve error message from application.ini here and add it to the view
 			}
 		}
@@ -97,14 +97,15 @@ class IndexController extends Zend_Controller_Action
     			//redirect to login page
     		}
     		else{
-			$this->_helper->flashMessenger->addMessage("Your username and/or password were not recoginized. Please try again..");
+			$this->_helper->flashMessenger->addMessage("Your email and/or password were not recognized. Please try again..");
 			$this->_helper->redirector('index','index');
-    			$this->view->errors = array("emailExists"=>array("Your username and/or password were not recoginized. Please try again."));
+    			$this->view->errors = array("emailExists"=>array("Your email and/or password were not recognized. Please try again."));
     			return;
     		}
     	}
     	else{
     		//$this->view->errors = $form->getMessages();
+			
     	}
     	$this->view->form = $form;
     	// action body

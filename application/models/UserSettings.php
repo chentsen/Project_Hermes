@@ -53,11 +53,12 @@ class Application_Model_UserSettings{
             
 		if(!$this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$userInfo['email']))){
 			$user = new User();
-			$user->setEmail($userInfo['email']);
-			$user->setFirstName($userInfo['firstName']);
-			$user->setLastName($userInfo['lastName']);
+			
+			$user->setEmail(ucwords(strtolower($userInfo['email'])));
+			$user->setFirstName(ucwords(strtolower($userInfo['firstName'])));
+			$user->setLastName(ucwords(strtolower($userInfo['lastName'])));
 			$user->setGender($userInfo['gender']);
-			$user->setCity($userInfo['city']);
+			$user->setCity(ucwords(strtolower($userInfo['city'])));
 			
 			//default email permissions to true
 			$user->setEmailPerm(true);
@@ -91,10 +92,10 @@ class Application_Model_UserSettings{
 			if(!$isRetry){
 				//hack to cut the city into two parts
 				$city_raw = explode(',',$user_profile['location']['name']);
-				$city = $city_raw[0];
-				$email = $user_profile['email'];
-				$firstName = $user_profile['first_name'];
-				$lastName = $user_profile['last_name'];
+				$city = ucwords(strtolower($city_raw[0]));
+				$email = strtolower($user_profile['email']);
+				$firstName = ucwords(strtolower($user_profile['first_name']));
+				$lastName = ucwords(strtolower($user_profile['last_name']));
 				$gender_raw = $user_profile['gender'];
 				//$setEmailPerm = $user_profile['setEmailPerm'];
 				if(!empty($gender_raw)){
@@ -154,9 +155,9 @@ class Application_Model_UserSettings{
 	}
        public function updateinfo($userInfo){
             
-                $this->user->setFirstName($userInfo['firstName']);
-                $this->user->setLastName($userInfo['lastName']);
-                $this->user->setCity($userInfo['city']);
+                $this->user->setFirstName(ucwords(strtolower($userInfo['firstName'])));
+                $this->user->setLastName(ucwords(strtolower($userInfo['lastName'])));
+                $this->user->setCity(ucwords(strtolower($userInfo['city'])));
 		$this->user->setGender($userInfo['gender']);
 		$this->user->setDescription($userInfo['description']);
 		$this->user->setEmailPerm($userInfo['hasEmailPerm']);

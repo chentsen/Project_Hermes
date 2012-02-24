@@ -60,7 +60,7 @@ class EventController extends Hermes_Controller_Wall_WallController
     		$eventModel = new Application_Model_EventModel($event);
     		$result = $eventModel->attendRequest($this->identity);
     		if($result){
-				$this->_helper->flashMessenger->addMessage("You have successfully indicated your interest in this event. Thanks!");
+				$this->_helper->flashMessenger->addMessage("The event owner has been notified of your interest.");
 				$this->_redirect('/profile');
 				
     		}else{
@@ -86,7 +86,7 @@ class EventController extends Hermes_Controller_Wall_WallController
 		$data['success'] = true;
 		$data['msg'] = 'You successfully added '.$user->getFirstName().' to the event.';
     		$data['uid'] = $user->getUid();
-		$data['firstName'] = $user->getFirstName();
+		$data['firstName'] = $user->getFirstName().' '.substr($user->getLastName(),0,1) . ".";
     	}else if($this->identity==$event->getCreator()->getEmail() && $response == "n"){
     		$data['success'] = true;
 		$data['msg'] = 'You declined '.$user->getFirstName().'\'s request.';
