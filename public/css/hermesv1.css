@@ -524,27 +524,9 @@ a.add-friend:hover {
 	padding: 5px 20px;
 	float: right;
 }
-a.attend-button {
-	color: #FFFFFF;
-	background-color: rgba(219,219,219,0.3);
-	display: block;
-	font-size: 18px;
-	height: 100px;
-	line-height: 30px;
-	width: 100px;
-	float: left;
-	text-align: center;
-}
-a.attend-button:hover {
-	color: #FFFFFF;
-	background: none;
-	display: block;
-	font-size: 18px;
-	height: 100px;
-	line-height: 30px;
-	width: 100px;
-	float: left;
-	text-align: center;
+.attend-button:hover {
+	display: none;
+	background-color: black;
 }
 .attend-text {
 	display: block;
@@ -1985,9 +1967,6 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 121px 13px;
 	margin: 10px 0px;
-}
-.attend-button img:hover {
-	display: none;
 }
 .attendingList {
 	margin-top: 5px;
