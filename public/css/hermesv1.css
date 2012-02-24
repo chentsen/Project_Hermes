@@ -1093,7 +1093,7 @@ a.add-friend:hover {
 	margin: 10px;
 }
 .friend-request-message {
-	width: 200px;
+	width: 100%;
 	display: block;
 	float: left;
 }
