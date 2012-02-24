@@ -308,7 +308,7 @@ margin-bottom: 2px;
     height: 180px;
 }
 .profile-events-header {
-	margin-top: 10px;
+	margin-top: 5px;
 	background: url('../images/events-line.png');
         background-repeat: no-repeat;
         background-position: 61px 9px;
@@ -352,6 +352,7 @@ margin-bottom: 2px;
     background: url('../images/about-me-line.png');
     background-repeat: no-repeat;
     background-position: 85px 9px;
+    color: #000000;
 }
 .profile-about-me {
 	padding: 20px 0px 10px 10px;
@@ -1044,6 +1045,7 @@ a.add-friend:hover {
 .icon_bar {
 	float: right;
 	height: 60px;
+	margin-right: 20px;
 }
 .icon_bar .top-bar {
 	height: 50px;
@@ -1229,6 +1231,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	font-size: 11px;
 	line-height: 10px;
 	padding: 3px 3px 3px 3px;
+	margin-top: 2px;
 }
 
 .profile_eventList .own-event {
@@ -1246,7 +1249,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	margin-top: 5px;
 	font-size: 15px;
 	color: #FF8600;
-	margin: 0px 0px 2px 0px;
+	margin: 0 0 0 1px;
 }
 .right_col {
     overflow: auto;
