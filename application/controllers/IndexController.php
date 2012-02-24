@@ -131,6 +131,7 @@ class IndexController extends Zend_Controller_Action
                  
 		 $json['redirect'] =  '/index';
 		 $this->_helper->json($json);
+		 return true;
                  
         }
 
