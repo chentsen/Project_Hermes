@@ -20,3 +20,4 @@ $eid = $this->event->getEid();
 	
 </div>
 </div>
+<?= $this->inlineScript()->appendScript("$(document).ready(Wall.refreshWall({eid:'{$eid}'}));");?>

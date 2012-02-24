@@ -525,8 +525,17 @@ a.add-friend:hover {
 	padding: 5px 20px;
 	float: right;
 }
-.attend-button:hover {
-	opacity: 0.1;
+.attend-img:hover {
+	opacity: .1;
+}
+.attend-img {
+		
+		display: block;
+}
+.attend-button {
+		display: block;
+		float: left;
+		
 }
 .attend-text {
 	display: block;
@@ -556,7 +565,7 @@ a.add-friend:hover {
     float: left;
     width: 140px;
 }
-.user_result img {
+.user_result img, .event_result img {
 	float: left;
 	margin-top: 3px;
 }
@@ -1291,6 +1300,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
     margin: 0px;
     padding: 0px;
     width: 280px;
+}
+.profile .add-tag-area {
+		
 }
 .profile li.as-result-item, li.as-message {
     

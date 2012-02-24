@@ -11,7 +11,7 @@ class Application_Form_EditAccount extends Zend_Form
     	parent::__construct($options);
     	
     	$this->setName('editAccount');
-		$this->setAction('/accountEdit/updateaccount');
+		$this->setAction('/account-edit/updateaccount');
 		$this->setMethod('post');
                 
 		$firstName = new Zend_Form_Element_Text('firstName');
