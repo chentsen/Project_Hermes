@@ -1986,6 +1986,9 @@ ul.as-selections {
 	background-position: 121px 13px;
 	margin: 10px 0px;
 }
+.attend-button:hover {
+	display: none;
+}
 .attendingList {
 	margin-top: 5px;
 	overflow: hidden;
