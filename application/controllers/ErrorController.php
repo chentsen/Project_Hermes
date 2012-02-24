@@ -19,13 +19,13 @@ class ErrorController extends Zend_Controller_Action
                 // 404 error -- controller or action not found
                 $this->getResponse()->setHttpResponseCode(404);
                 $priority = Zend_Log::NOTICE;
-                $this->view->message = 'Page not found';
+                $this->view->message = 'Page does not exist';
                 break;
             default:
                 // application error
                 $this->getResponse()->setHttpResponseCode(500);
                 $priority = Zend_Log::CRIT;
-                $this->view->message = 'Application error';
+                $this->view->message = 'We\'ve been notified of the error';
                 break;
         }
         
@@ -36,10 +36,12 @@ class ErrorController extends Zend_Controller_Action
         }
         
         // conditionally display exceptions
-        if ($this->getInvokeArg('displayExceptions') == true) {
-            $this->view->exception = $errors->exception;
+        //don't display for now since there is no development setting
+        if($environment == 'development') {
+            if ($this->getInvokeArg('displayExceptions') == true) {
+                $this->view->exception = $errors->exception;
+            }
         }
-        
         $this->view->request   = $errors->request;
     }
 

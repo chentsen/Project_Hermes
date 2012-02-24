@@ -38,14 +38,21 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 	private function printEventResult(Documents\Search\EventResult $event,$identity){
 		$returnString = ' ';
 		echo "<div class = 'event_result'>";
+		echo "<a href = '/event/index/eid/{$event->result->getEid()}'>";
+		echo "<img src='/img/profile-pic/uid/{$event->result->getCreator()->getUid()}' height=75  width=75 /> </a>";
+		echo "<div class='user-info'>
+				<a class='search-name' href = '/event/index/eid/{$event->result->getEid()}'>{$event->result->getCreator()->getFirstName()} wants to ".$event->result->getShortDescription()."</a>
+				<div class='search-city'>{$event->result->getCreator()->getCity()}</div>
+				<div class='search-common-tags'>{$event->getCount()} tags in common</div>";
+					/*			
 		echo '<div class = "matchingTags">';
                 echo '<div class="common_value">';
 				echo "<a href = '/event/index/eid/{$event->result->getEid()}'>";
 				echo '<div class="common_number">';
 			echo "{$event->getCount()} ";
                          echo '</div></a><div class="in_common"><h3>Tags in Common</h3></div></div>';
-                         echo "<div class='user_info'><h2>{$event->result->getCreator()->getFirstName()} wants to ".$event->result->getShortDescription()."</h2>";
-                        
+                         echo "<div class='user_info'><h2>{$event->result->getCreator()->getFirstName()} "</h2>";
+					*/
                         
 
                          //echo $identity;
@@ -54,13 +61,13 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
                                 if(!$eventModel->isMember($identity,$event->result->getMembers())&&
                                         (!$eventModel->isMember($identity,$event->result->getWaitingList()))){
                                         
-                                        echo "<a class='join_event remove-anchor' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a>";
-                                    
+                                       // echo "<a class='join_event remove-anchor' href = '/event/request/eid/{$event->result->getEid()}'>I'm down</a>";
+										//echo "<a class='add-friend' href = /friend/friendRequest/requestee/{$user->result->getUid()}>Add</a>";
                                 }
                         }	
 
-                          echo "<a class='view_event' href = '/event/index/eid/{$event->result->getEid()}'>view event details</a></div>";
-                         
+                         // echo "<a class='view_event' href = '/event/index/eid/{$event->result->getEid()}'>view event details</a></div>";
+                         echo '</div>';
                          echo "<div class='user_like'>You both like</div>";
 			if($event->match){
 				if(count($event->match) > 1){
@@ -75,7 +82,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 					echo "</div>";
 				}
 			}	
-		echo '</div>';
+		
 
 		//are you creator or member? omit interested in
 
@@ -100,6 +107,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 			//echo "You and {$user->result->getFirstName()} have {$user->getCount()} tags in common! <br />";
 
                         //echo '<div class="indiv-result" style="">';
+						echo "<a href='/profile/public/uid/{$uid}'>";
 						echo '<img src="/img/profile-pic/uid/'.$uid.'" height=75  width=75 /> </a>';
 						echo "<div class='user-info'>
 								<a class='search-name' href = '/profile/public/uid/{$uid}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
