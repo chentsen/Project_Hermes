@@ -1108,26 +1108,7 @@ a.add-friend:hover {
 .accept-ignore {
 	display: block;
 	float: left;
-	width: 200px;
-	height: 20px;
-}
-.friend-request-message {
-	width: 200px;
-	display: block;
-	float: left;
-}
-.friend-request-name {
-	color: #FF8600;
-	margin-right: 3px;
-}
-.friend-request-name:hover {
-	color: #ff6600;
-	margin-right: 3px;
-}
-.accept-ignore {
-	display: block;
-	float: left;
-	width: 200px;
+	width: 100%;
 	height: 20px;
 }
 .friend-request-accept {
