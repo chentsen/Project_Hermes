@@ -21,7 +21,7 @@ class EventController extends Hermes_Controller_Wall_WallController
 	
     	$this->view->event = $event;
 	$this->view->curUser = $this->curUser;
-
+	$this->view->eventCreator = $event->getCreator();
 	$this->view->didRequest = $eventModel->hasRequestedMembership($this->identity);
         //1. if I am creator
 		$this->view->creatorName = $event->getCreator()->getFirstName(). " " .substr($event->getCreator()->getLastName(),0,1). ".";
