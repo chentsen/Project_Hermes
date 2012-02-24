@@ -525,8 +525,7 @@ a.add-friend:hover {
 	float: right;
 }
 .attend-button:hover {
-	display: none;
-	background-color: black;
+	opacity: 0.5;
 }
 .attend-text {
 	display: block;
