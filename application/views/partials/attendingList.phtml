@@ -7,7 +7,7 @@
     ?>
 			<div class="attending-item attending-item-<?= $uid ?>">
 			<a href='/profile/public/uid/<?= $user->getUid() ?>'>
-            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
+            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=75  width=75/></a>
 			<div class='attending-details'><a href='/profile/public/uid/<?= $user->getUid() ?>'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?></a></div>       			
             
 	</div>
@@ -21,7 +21,7 @@
 <div class = "attending-list-ajax" style='display:none'>
     <div class="attending-item attending-item-<?= $uid ?>">
 		    <a href='/profile/public/uid/<?= $user->getUid() ?>'>
-	            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
+	            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=75  width=75/></a>
             <?php if ($this->indexCreator || $this->indexMember) { ?>
 		    <div class='attending-details'></div>
             <?php } ?>        			
