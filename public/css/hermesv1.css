@@ -2047,8 +2047,9 @@ ul.as-selections {
     position: relative;
     background: url('../images/event-wall-line.png');
     background-repeat: no-repeat;
-    background-position: 63px 13px;
+    background-position: 59px 13px;
     float: left;
+    width: 650px;
 }
 .event_wall .wall_image {
     position: relative;
