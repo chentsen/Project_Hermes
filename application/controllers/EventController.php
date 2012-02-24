@@ -21,6 +21,7 @@ class EventController extends Hermes_Controller_Wall_WallController
 	
     	$this->view->event = $event;
 	$this->view->curUser = $this->curUser;
+
 	$this->view->didRequest = $eventModel->hasRequestedMembership($this->identity);
         //1. if I am creator
 		$this->view->creatorName = $event->getCreator()->getFirstName(). " " .substr($event->getCreator()->getLastName(),0,1). ".";
@@ -28,7 +29,7 @@ class EventController extends Hermes_Controller_Wall_WallController
     		$this->_helper->ViewRenderer('index_creator');
 			$this->view->pageTitle = "I want to " .
 				$event->getShortDescription();
-				$indexCreator = 'hello';
+				$indexCreator = 'hello'; //??
 			$this->view->indexCreator = $indexCreator;
     	}
     	else if($eventModel->isMember($this->identity,$event->getMembers())){
@@ -85,7 +86,8 @@ class EventController extends Hermes_Controller_Wall_WallController
     		$eventModel->acceptRequest($user);
 		$data['success'] = true;
 		$data['msg'] = 'You successfully added '.$user->getFirstName().' to the event.';
-    		
+    		$data['uid'] = $user->getUid();
+		$data['firstName'] = $user->getFirstName().' '.substr($user->getLastName(),0,1) . ".";
     	}else if($this->identity==$event->getCreator()->getEmail() && $response == "n"){
     		$data['success'] = true;
 		$data['msg'] = 'You declined '.$user->getFirstName().'\'s request.';

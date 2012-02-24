@@ -19,7 +19,7 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 			 $display_length = min(count($feedObjects),$length);
 			 
 			 for($i = 0; $i < $display_length ; $i++){
-				$feedObject = $feedObjects[$i];
+				$feedObject = $feedObjects[$display_length - $i - 1];
 				
 				$date = new DateTime();				
 				$date->modify('-1 day');
