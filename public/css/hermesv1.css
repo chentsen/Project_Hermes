@@ -524,8 +524,17 @@ a.add-friend:hover {
 	padding: 5px 20px;
 	float: right;
 }
-.attend-button:hover {
-	opacity: 0.1;
+.attend-img:hover {
+	opacity: .1;
+}
+.attend-img {
+		
+		display: block;
+}
+.attend-button {
+		display: block;
+		float: left;
+		
 }
 .attend-text {
 	display: block;
