@@ -14,7 +14,7 @@ class Zend_View_Helper_DisplayInterestedList extends Zend_View_Helper_Abstract{
 			$uid = $user->getUid();
 			echo '<div class="waiting-item waiting-item-'.$uid.'">';
 			echo "<a href='/profile/public/uid/{$user->getUid()}'>";
-                        echo "<img src='/img/profile-pic/uid/{$user->getUid()}' height=75  width=75/></a>";
+                        echo "<img src='/img/profile-pic/uid/{$user->getUid()}' height=100  width=100/></a>";
 			echo "<div class='waiting-details'>{$user->getFirstName()} wants to come.</div>";
 			echo "<div class='event_allow'><a onclick=\"Event.processJoinRequest('{$eid}',{$uid},'y')\">Accept</a>    <a onclick = \"Event.processJoinRequest('{$eid}',{$uid},'n')\">Ignore</a></div>";
 			echo '</div>';
