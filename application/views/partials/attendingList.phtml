@@ -13,17 +13,21 @@
 	</div>
 	<?php } ?>
 	<? if (!($this->indexCreator || $this->indexMember) && !$this->didRequest) {
-			if($this->eventDate >= time()) {
+			if($this->isEventExpired) {
 	?>
 	
 			    <a class='attend-button' style="background: url('/img/profile-pic/uid/<?=$this->curUser->getUid()?>') no-repeat center center; background-size: 100px 100px" href = '/event/request/eid/<?= $this->eid; ?>'>
 					<img class="attend-img"  src="/images/attend-hover.png" height="100px"  width="100px" />
 				</a>
 		   <!-- <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'><img src='/img/profile-pic/uid/<?= $this->curUser->getUid() ?>' height=100  width=100/></a></a>-->
-	<? 		} else {
-				echo "<h2>The event has ended</h2>";	
-			}
-		}?>
+	<? 		}
+		
+		}
+		if($this->isEventExpired){
+			echo "<h2>The event has ended</h2>";
+
+		}
+		?>
 
 <div class = "attending-list-ajax" style='display:none'>
     <div class="attending-item attending-item-<?= $uid ?>">
