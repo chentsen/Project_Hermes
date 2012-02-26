@@ -937,10 +937,14 @@ a.add-friend:hover {
 	text-align: left;
         padding: 10px;
 }
-.index #footer_menu .left_footer li {
+.index #footer_menu .left_footer li,
+.contact #footer_menu .left_footer li,
+.about #footer_menu .left_footer li {
 	color: #FFFFFF;
 }
-.index #footer_menu .left_footer li a {
+.index #footer_menu .left_footer li a,
+.contact #footer_menu .left_footer li a,
+.about #footer_menu .left_footer li a{
 	color: #FFFFFF;
 }
 #footer_menu .left_footer li{
@@ -2070,7 +2074,7 @@ ul.as-selections {
 .event_wall .wall_name {
     font-size: 18px;
     float: left;
-    margin: 15px 10px 10px 20px;
+    margin: 25px 10px 10px 20px;
 }
 .event_wall .posts {
     overflow: hidden;
@@ -2085,7 +2089,7 @@ ul.as-selections {
 .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    margin: 15px 0px 0px 10px;
+    margin: 25px 0px 0px 6px;
     font-size: 18px;
     width: 457px;
 }
