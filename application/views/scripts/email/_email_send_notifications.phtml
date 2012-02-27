@@ -5,7 +5,7 @@
         <tr>
         <td >
             <a style="float:left; width: 240px;" href="http://plumetype.com">
-                <img style=" width: 240px; height: 55px" src="http://plumetype.com/images/plumetype-flat.png" />
+                <img style="width: 240px; height: 55px" src="http://plumetype.com/images/plumetype-flat.png" />
             </a>
         </td>
     </tr>
@@ -14,13 +14,13 @@
 		<p style="font-family: 'myriad pro', Arial, Helvetica Neue, Helvetica, sans-serif: 12px;
 					background: #FFFFFF;
                                         margin-top: 10px;">
-                <p style="margin: 20 0 0 0px;">Hi <?= $this->inputs['name'] ?>,</p>
+                <span style="margin: 20 0 0 0px;">Hi <?= $this->inputs['name'] ?>,</span>
                 <br />
-		<p style="margin: 0 0 0 0px;">Your friend <span style="color:#FF8600";><?= $this->inputs['yourName'] ?></span> has created a new <span style="color:#FF8600";><?= $this->inputs['private'] ?></span> event:</p>
+		<span style="margin: 0 0 0 0px;">Your friend <span style="color:#FF8600";><?= $this->inputs['yourName'] ?></span> has created a new <span style="color:#FF8600";><?= $this->inputs['private'] ?></span> event:</span>
                 <br />
-        <h4 style="padding: 0px; margin: 0 0 5 0px;">Event: <?= $this->inputs['shortDescription'] ?></h4>
-        <h4 style="padding: 0px; margin: 0 0 5 0px;">Location: <?= $this->inputs['location'] ?></h4>
-        <h4 style="padding: 0px; margin: 0 0 5 0px;">Date: <?= $this->inputs['date'] ?></h4>
+        <h4 style="padding: 0px; margin: 0 0 5 0px; color: #000000 !important;">Event: <?= $this->inputs['shortDescription'] ?></h4>
+        <h4 style="padding: 0px; margin: 0 0 5 0px; color: #000000 !important;">Location: <?= $this->inputs['location'] ?></h4>
+        <h4 style="padding: 0px; margin: 0 0 5 0px; color: #000000 !important;">Date: <?= $this->inputs['date'] ?></h4>
         <br />
 		Click here for more details.
         
@@ -36,7 +36,7 @@
     <tbody>
     <tr>
         <td>
-        <h4 style="color: #FFFFFF; text-align: center; margin-top: 20px;">PlumeType.com - Make friends.</h4>
+        <h4 style="color: #FFFFFF !important; text-align: center; margin-top: 20px;">PlumeType.com - Make friends.</h4>
         </td>
     </tr>
     </tbody>
