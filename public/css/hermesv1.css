@@ -1622,6 +1622,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	margin: 7px 10px 12px 110px;
 	font-weight: 600;
 	float: left;
+	color: #000000;
 }
 .no-quotes {
 	margin: 5px;
@@ -2091,7 +2092,7 @@ ul.as-selections {
     float: left;
     margin: 25px 0px 0px 6px;
     font-size: 18px;
-    width: 457px;
+    width: 430px;
 }
 .event_wall .wallpost a{
     margin-left: 7px;
