@@ -19,7 +19,7 @@ div { display: block; }
 /*** form styles*****/
 select {
     margin: 3px 0px 0px 5px;
-    width: 141px;
+    width: 140px;
     font-size: 16px;
 }
 #editAccount select{
@@ -308,7 +308,7 @@ margin-bottom: 2px;
     height: 180px;
 }
 .profile-events-header {
-	margin-top: 10px;
+	margin-top: 5px;
 	background: url('../images/events-line.png');
         background-repeat: no-repeat;
         background-position: 61px 9px;
@@ -352,6 +352,7 @@ margin-bottom: 2px;
     background: url('../images/about-me-line.png');
     background-repeat: no-repeat;
     background-position: 85px 9px;
+    color: #000000;
 }
 .profile-about-me {
 	padding: 20px 0px 10px 10px;
@@ -936,10 +937,14 @@ a.add-friend:hover {
 	text-align: left;
         padding: 10px;
 }
-.index #footer_menu .left_footer li {
+.index #footer_menu .left_footer li,
+.contact #footer_menu .left_footer li,
+.about #footer_menu .left_footer li {
 	color: #FFFFFF;
 }
-.index #footer_menu .left_footer li a {
+.index #footer_menu .left_footer li a,
+.contact #footer_menu .left_footer li a,
+.about #footer_menu .left_footer li a{
 	color: #FFFFFF;
 }
 #footer_menu .left_footer li{
@@ -1053,6 +1058,7 @@ a.add-friend:hover {
 .icon_bar {
 	float: right;
 	height: 60px;
+	margin-right: 20px;
 }
 .icon_bar .top-bar {
 	height: 50px;
@@ -1238,6 +1244,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	font-size: 11px;
 	line-height: 10px;
 	padding: 3px 3px 3px 3px;
+	margin-top: 2px;
 }
 
 .profile_eventList .own-event {
@@ -1255,7 +1262,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	margin-top: 5px;
 	font-size: 15px;
 	color: #FF8600;
-	margin: 0px 0px 2px 0px;
+	margin: 0 0 0 1px;
 }
 .right_col {
     overflow: auto;
@@ -2056,8 +2063,9 @@ ul.as-selections {
     position: relative;
     background: url('../images/event-wall-line.png');
     background-repeat: no-repeat;
-    background-position: 63px 13px;
+    background-position: 59px 13px;
     float: left;
+    width: 650px;
 }
 .event_wall .wall_image {
     position: relative;
@@ -2066,7 +2074,7 @@ ul.as-selections {
 .event_wall .wall_name {
     font-size: 18px;
     float: left;
-    margin: 15px 10px 10px 20px;
+    margin: 25px 10px 10px 20px;
 }
 .event_wall .posts {
     overflow: hidden;
@@ -2081,7 +2089,7 @@ ul.as-selections {
 .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    margin: 15px 0px 0px 10px;
+    margin: 25px 0px 0px 6px;
     font-size: 18px;
     width: 457px;
 }

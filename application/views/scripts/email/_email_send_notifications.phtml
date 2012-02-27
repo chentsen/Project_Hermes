@@ -1,33 +1,30 @@
-<table style="background: #454545;">
+<table style="background: #FFFFFF;">
     <tr><td>
     
-    <table cellpadding="0" cellspacing="0" style=" width: 700px; margin: 0 auto; border-radius: 5px; background: #ddd;">
+    <table cellpadding="0" cellspacing="0" style=" width: 700px; margin: 0 auto;">
         <tr>
         <td >
-            <a style="margin: 5px; float:left; width: 240px;" href="http://plumetype.com">
-                <img style=" width: 240px; height: 55px" src="http://plumetype.com/images/plumetype-flat.png" />
+            <a style="float:left; width: 240px;" href="http://plumetype.com">
+                <img style="width: 240px; height: 55px" src="http://plumetype.com/images/plumetype-flat.png" />
             </a>
         </td>
     </tr>
     <tr>
         <td>
-		<p style="font-family: Helvetica, Arial, sans-serif; font-size: 12px;
-					background: #eee; padding: 10px 10px 30px 30px; 
-					border-bottom-right-radius: 5px; 
-					border-bottom-left-radius: 5px;
-					min-height: 300px;
-                                        margin: 0px;">
-		<span style="font-size: 14px">Your friend <?= $this->inputs['yourName'] ?> has created a new event.</span> 
-		<br /><br/>
-        <h2>Event Information</h2></h3>
-        <h3>Friend: <?= $this->inputs['name'] ?></h3>
-        <h3>Location: <?= $this->inputs['location'] ?></h3>
-        <h3>Date: <?= $this->inputs['date'] ?></h3>
-        <h3>Private: <?= $this->inputs['private'] ?></h3>
+		<p style="font-family: 'myriad pro', Arial, Helvetica Neue, Helvetica, sans-serif: 14px;
+					background: #FFFFFF;
+					margin: 0px 0px 0px 0px;">
+                <p style="margin: 20px 0px 0px 0px !important;">Hi <?= $this->inputs['name'] ?>,</p>
+                <br />
+		<p>Your friend <span style="color: #FF8600";><?= $this->inputs['yourName'] ?></span> has created a new <span style="color:#FF8600";><?= $this->inputs['private'] ?></span> event:</p>
+                <br />
+        <h4 style="padding: 0px; margin: 0px 0px 5px 0px; color: #000000 !important; font-size: 14px !important;">Event: <?= $this->inputs['shortDescription'] ?></h4>
+        <h4 style="padding: 0px; margin: 0px 0px 5px 0px; color: #000000 !important; font-size: 14px !important;">Location: <?= $this->inputs['location'] ?></h4>
+        <h4 style="padding: 0px; margin: 0px 0px 5px 0px; color: #000000 !important; font-size: 14px !important;">Date: <?= $this->inputs['date'] ?></h4>
+        <br />
+		Click here for more details.
         
-		Join your friends events!
-        
-                <br/><br/>
+                <br /><br />
                 Sincerely,
                     <br />
                 PlumeType
@@ -35,7 +32,15 @@
         </p>
         </td>
     </tr>
-      
+    <table cellpadding="0" cellspacing="0" style="width: 700px; height: 40px; background: #000000; margin: 20 0 0 0px !important;">
+    <tbody>
+    <tr>
+        <td>
+        <h4 style="color: #FFFFFF !important; text-align: center; margin: 10px 0px 0px 0px !important;">PlumeType.com - Make friends.</h4>
+        </td>
+    </tr>
+    </tbody>
+    </table>
     </table>
     
     </td></tr>
