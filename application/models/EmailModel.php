@@ -69,6 +69,7 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 											 array('yourName'=>$user->getFirstName(),
 																			'name'=>$fullName,
 																			'location'=>$raw['createEvent_location'],
+																			'shortDescription'=>$raw['createEvent_shortDescription'],
 																			'date'=>$dateString,
 																			'private'=>$private
 																			));
