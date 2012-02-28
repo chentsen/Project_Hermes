@@ -2128,6 +2128,9 @@ ul.as-selections {
 .event_wall .delete_post:hover {
     background: url('../images/exit-button.png') no-repeat center center;
 }
+.event-ended {
+	
+}
 /*** event list page ***/
 .event-list .none-singleFound {
 	margin-top: 0;
