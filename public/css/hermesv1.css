@@ -428,7 +428,6 @@ margin-bottom: 2px;
     color: #FF8600;
 }
 .matchedTag {
-    border: 1px solid #FC6C0C;
     background: #FF8600;
     color: white;
     float: left;
@@ -503,7 +502,7 @@ a.search-name {
     font-size: 16px;
     float: left;
     padding: 4px 5px 0px 10px;
-    margin-left: 10px;
+    margin: 0px 10px;
     color: #B4BBCD;
 }
 .user_addFriend a, .user_viewProfile a {
@@ -703,7 +702,7 @@ a.add-friend:hover {
 .tagline {
 	color: #FFFFFF;
 	text-align: center;
-	margin: 165px 0px 30px 0px;
+	margin: 185px 0px 30px 0px;
 	float: left;
 	font-size: 33px;
 }

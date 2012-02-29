@@ -12,15 +12,14 @@
 	background: #000000;
 	opacity: 0.9;
 	color: #FFFFFF;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	padding-left: 6px;
-	padding-right: 6px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
 	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 14px;
 	display: block;
 	position: relative;
-	margin: 0 0 12px 0;
 }
 
 .toast-item p {
@@ -30,11 +29,12 @@
 
 .toast-item-close {
     background:url(../images/exit-button.png);
-    width:22px;
-    height:22px;
+    width: 11px;
+    height: 11px;
     position: absolute;
     top:7px;
     right:7px;
+    background-repeat: no-repeat;
 }
 
 .toast-item-image {
@@ -46,9 +46,9 @@
     float:left;
 }
 
-.toast-item-image-notice {
+/*.toast-item-image-notice {
     background:url(../images/notice.png);
-}
+}*/
 
 .toast-item-image-success {
     background:url(../images/success.png);
@@ -111,7 +111,7 @@
 .toast-position-top-right {
     position: fixed;
     top: 62px;
-    right: 120px;
+    right: 140px;
 }
 
 .toast-position-middle-left {
