@@ -525,7 +525,7 @@ a.add-friend:hover {
 	float: right;
 }
 .attend-img:hover {
-	opacity: .1;
+	opacity: 0;
 }
 .attend-img {
 		
@@ -2228,5 +2228,5 @@ ul.as-selections {
   margin-left: 0;
   width: 65px;
   padding: 3px 5px 5px 5px;
-  background-color: #rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.3);
 }
