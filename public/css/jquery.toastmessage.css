@@ -32,6 +32,7 @@
     float: right;
     display: block;
     margin: 4px 6px 0px 0px;
+    position: relative;
 }
 
 .toast-item-image {
