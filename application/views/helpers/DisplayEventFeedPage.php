@@ -36,9 +36,9 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 		//echo "</ul>";
 	}
 	//subclassed so we can construct our own custom feed message for events..
-	public function getEventFeedMessage(FeedObject $feedObject){
+	public function getEventFeedMessage(FeedObject $feedObject, $identity){
             $eventModel = new Application_Model_EventModel($event->result);
-           
+			$creator = $feedObject->getCreator()->getEmail();
            /* if ($feedObject->getCreator()->getEmail())
             {
                 
@@ -57,6 +57,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					echo "<div class='event-left'><div class='event_img'>";
 					echo "<a href='/event/index/eid/".$feedObject->getEid()."' ><img src='/img/profile-pic/uid/".$feedObject->getEvent()->getCreator()->getUid()."' height='180' width='180' /></a></div>";
 					echo "<div class='event_self'>";
+					
 					if ($eventModel->isEventCreator($identity, $creator))
 					{ echo "<h4>You own this event.</h4>";}
 					else {echo "<h4>You're going to this event.</h4>";}
