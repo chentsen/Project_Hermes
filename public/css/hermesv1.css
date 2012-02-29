@@ -2197,5 +2197,11 @@ ul.as-selections {
 	margin-right: 10px;
 }
 #passwordReset li:last-child {
-	margin: 0px;
+	margin-right: 0px !important;
+}
+
+.password-change-text {
+	display: block;
+	float: left;
+	margin-top: 10px;
 }
