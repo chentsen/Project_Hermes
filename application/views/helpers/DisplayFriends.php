@@ -14,9 +14,8 @@ class Zend_View_Helper_DisplayFriends extends Zend_View_Helper_Abstract{
 					
 					
                                         echo '<li class="friend_list"><div class="friend_pic">';
-                                        echo "<a href='/profile/public/uid/{$friend->getUid()}'>";
-                                        echo "<img src='/img/profile-pic/uid/{$friend->getUid()}' height=75  width=75/></a></div><div class='friend_name'>";
-
+                                        echo "<a class='friend-tooltip' href='#'><a href='/profile/public/uid/{$friend->getUid()}'>";
+                                        echo "<img src='/img/profile-pic/uid/{$friend->getUid()}' height=75  width=75/></a><span class='friend-tooltip-name'>{$friend->getFirstName()} " . substr($friend->getLastName(),0,1) . ".</span></a></div><div class='friend_name'>";
 					echo "{$friend->getFirstName()} " . substr($friend->getLastName(),0,1) . ".";
 					echo '</div></li>';
 					

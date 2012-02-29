@@ -2194,7 +2194,7 @@ ul.as-selections {
 }
 #passwordReset li {
 	height: 32px;
-	margin-right: 10px;
+	margin: 0px 10px 0px 0px;
 }
 #passwordReset li:last-child {
 	margin-right: 0px !important;
@@ -2204,4 +2204,37 @@ ul.as-selections {
 	display: block;
 	float: left;
 	margin-top: 10px;
+	width: 790px;
+}
+.friend-tooltip {
+  border-bottom: 1px dotted #000000;
+  color: #000000; outline: none;
+  cursor: help; text-decoration: none;
+  position: relative;
+}
+.friend-tooltip span {
+  margin-left: -999em;
+  position: absolute;
+}
+.friend-tooltip:hover span {
+  font-family: Calibri, Tahoma, Geneva, sans-serif;
+  position: absolute;
+  left: 1em;
+  top: 2em;
+  z-index: 99;
+  margin-left: 0;
+  width: 250px;
+}
+.friend-tooltip:hover img {
+  border: 0;
+  margin: -10px 0 0 -55px;
+  float: left;
+  position: absolute;
+}
+.friend-tooltip:hover em {
+  font-family: Candara, Tahoma, Geneva, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  padding: 0.2em 0 0.6em 0;
 }
