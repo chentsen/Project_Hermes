@@ -16,7 +16,7 @@ class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
 				echo 'Error! FeedObject is not valid!';
 			}
 		}
-	public function getEventFeedMessage(FeedObject $feedObject){
+	public function getEventFeedMessage(FeedObject $feedObject, $identity = null){
 		$uid = $feedObject->getCreator()->getUid();
 		echo "<img style='float: left; margin-right: 8px; margin-top: 1px;' src='/img/profile-pic/uid/{$uid}' width='30' height='30'/>";
 		echo "<div class='individual-object'>Your friend <a href='/profile/public/uid/{$uid}'> ".addslashes($feedObject->getCreator()->getFirstName())." ".addslashes($feedObject->getCreator()->getLastName())."</a> wants to";
