@@ -2170,7 +2170,7 @@ ul.as-selections {
 .event-describer {
 	margin: 5px 0px;
 }
-.password-change .cms-text {
+.password-change .cms-page .cms-text {
 	background-color: #FFFFFF;
 
 }
@@ -2179,6 +2179,9 @@ ul.as-selections {
 	display: block;
 	float: left;
 	margin: 20px 20px 20px 80px;
+}
+.password-change-text a {
+	color: #FF8600;
 }
 #passwordReset #submit {
 	height: 32px;
