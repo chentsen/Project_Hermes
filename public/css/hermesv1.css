@@ -2207,9 +2207,10 @@ ul.as-selections {
 	width: 790px;
 }
 .friend-tooltip {
-  border-bottom: 1px dotted #000000;
-  color: #000000; outline: none;
-  cursor: help; text-decoration: none;
+  color: #000000;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
   position: relative;
 }
 .friend-tooltip span {
@@ -2217,24 +2218,13 @@ ul.as-selections {
   position: absolute;
 }
 .friend-tooltip:hover span {
-  font-family: Calibri, Tahoma, Geneva, sans-serif;
+  font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
   position: absolute;
-  left: 1em;
-  top: 2em;
+  left: 10px;
+  top: 20px;
   z-index: 99;
   margin-left: 0;
   width: 250px;
-}
-.friend-tooltip:hover img {
-  border: 0;
-  margin: -10px 0 0 -55px;
-  float: left;
-  position: absolute;
-}
-.friend-tooltip:hover em {
-  font-family: Candara, Tahoma, Geneva, sans-serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  display: block;
-  padding: 0.2em 0 0.6em 0;
+  padding: 5px;
+  background-color: #FFFFFF;
 }
