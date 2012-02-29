@@ -19,7 +19,7 @@
 
 .toast-item p {
 	float: left;
-	padding: 6px 10px 10px 10px;
+	padding: 6px 0px 10px 10px;
 	width: 220px;
 	display: block;
 }
@@ -31,7 +31,7 @@
     background-repeat: no-repeat;
     float: right;
     display: block;
-    margin: 4px 6px 0px 0px;
+    margin: 5px 7px 0px 0px;
     position: relative;
 }
 
