@@ -2170,6 +2170,10 @@ ul.as-selections {
 .event-describer {
 	margin: 5px 0px;
 }
+.password-change .cms-text {
+	background-color: #FFFFFF;
+
+}
 .change-password {
 	color: #FF8600;
 	display: block;
@@ -2187,5 +2191,8 @@ ul.as-selections {
 }
 #passwordReset li {
 	height: 32px;
-	margin: 0;
+	margin-right: 10px;
+}
+#passwordReset li:last-child {
+	margin: 0px;
 }

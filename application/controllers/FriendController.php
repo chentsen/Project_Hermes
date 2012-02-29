@@ -58,7 +58,7 @@ class FriendController extends Hermes_Controller_SessionController
 				$this->eventEmail = new Application_Model_EmailModel($eid, $this->curUser);
 				
 				if($this->friendRelation->isFriend($friendRequest)) {
-						$subject= "Your friend ". $this->curUser->getEmail() ." has accepted your friend request";
+						$subject=$this->curUser->getEmail() ." has accepted your friend request";
 						$this->eventEmail->sendFriendedEmail($subject, $this->_helper->GenerateEmail, $friendRequest->getRequester(), $this->curUser);
 						
 	    		
