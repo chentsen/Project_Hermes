@@ -17,7 +17,7 @@ class Zend_View_Helper_DisplayPendingRequests extends Zend_View_Helper_Abstract{
 					  <a class='friend-request-ignore' href = '/friend/respond_friend_request/accept/no/rid/{$friendRequest->getRequestId()}'> Ignore </a></div></li>";
 			}
 		} else {
-			echo 'You have no pending friend requests.';
+			echo '<div class="no-pending">You have no pending friend requests.</div>';
 		}
 	}
 }

@@ -19,7 +19,7 @@ div { display: block; }
 /*** form styles*****/
 select {
     margin: 3px 0px 0px 5px;
-    width: 141px;
+    width: 140px;
     font-size: 16px;
 }
 #editAccount select{
@@ -308,7 +308,7 @@ margin-bottom: 2px;
     height: 180px;
 }
 .profile-events-header {
-	margin-top: 10px;
+	margin-top: 5px;
 	background: url('../images/events-line.png');
         background-repeat: no-repeat;
         background-position: 61px 9px;
@@ -352,6 +352,7 @@ margin-bottom: 2px;
     background: url('../images/about-me-line.png');
     background-repeat: no-repeat;
     background-position: 85px 9px;
+    color: #000000;
 }
 .profile-about-me {
 	padding: 20px 0px 10px 10px;
@@ -444,7 +445,6 @@ margin-bottom: 2px;
 }
 .user_info h2 {
     float: left;
-    text-transform: capitalize;
 }
 .user_addFriend, .user_viewProfile {
     float: right;
@@ -525,27 +525,17 @@ a.add-friend:hover {
 	padding: 5px 20px;
 	float: right;
 }
-a.attend-button {
-	color: #FFFFFF;
-	background-color: #ABABAB;
-	display: block;
-	font-size: 18px;
-	height: 100px;
-	line-height: 30px;
-	width: 100px;
-	float: left;
-	text-align: center;
+.attend-img:hover {
+	opacity: .1;
 }
-a.attend-button:hover {
-	color: #FFFFFF;
-	background-color: #FF8600;
-	display: block;
-	font-size: 18px;
-	height: 100px;
-	line-height: 30px;
-	width: 100px;
-	float: left;
-	text-align: center;
+.attend-img {
+		
+		display: block;
+}
+.attend-button {
+		display: block;
+		float: left;
+		
 }
 .attend-text {
 	display: block;
@@ -554,6 +544,7 @@ a.attend-button:hover {
 	color: #FFFFFF;
 	margin: 20px 0px 0px 10px;
 	text-align: left;
+	z-index: 20;
 }
 .view_event, .join_event {
 	margin-left: 10px;
@@ -574,7 +565,7 @@ a.attend-button:hover {
     float: left;
     width: 140px;
 }
-.user_result img {
+.user_result img, .event_result img {
 	float: left;
 	margin-top: 3px;
 }
@@ -946,10 +937,14 @@ a.attend-button:hover {
 	text-align: left;
         padding: 10px;
 }
-.index #footer_menu .left_footer li {
+.index #footer_menu .left_footer li,
+.contact #footer_menu .left_footer li,
+.about #footer_menu .left_footer li {
 	color: #FFFFFF;
 }
-.index #footer_menu .left_footer li a {
+.index #footer_menu .left_footer li a,
+.contact #footer_menu .left_footer li a,
+.about #footer_menu .left_footer li a{
 	color: #FFFFFF;
 }
 #footer_menu .left_footer li{
@@ -1063,6 +1058,7 @@ a.attend-button:hover {
 .icon_bar {
 	float: right;
 	height: 60px;
+	margin-right: 20px;
 }
 .icon_bar .top-bar {
 	height: 50px;
@@ -1080,7 +1076,7 @@ a.attend-button:hover {
 }
 .icon_bar ul li .sub-settings {
     position: absolute;
-    left: 0px;
+    left: -80px;
     top: 54px;
     background: black;
     margin:0;
@@ -1091,7 +1087,7 @@ a.attend-button:hover {
 }
 .icon_bar ul li .sub-setting2 {
     position: absolute;
-    left: 0px;
+    left: -154px;
     top: 54px;
     background: black;
     margin:0;
@@ -1100,7 +1096,6 @@ a.attend-button:hover {
     float: left;
     color: #FFFFFF;
     width: 200px;
-    padding: 10px;
 }
 .icon_bar #friendRequests {
 	background: #454545;
@@ -1109,8 +1104,11 @@ a.attend-button:hover {
 	font-size: 14px;
 	color: red;
 }
+.no-pending {
+	margin: 10px;
+}
 .friend-request-message {
-	width: 200px;
+	width: 100%;
 	display: block;
 	float: left;
 }
@@ -1125,50 +1123,21 @@ a.attend-button:hover {
 .accept-ignore {
 	display: block;
 	float: left;
-	width: 200px;
+	width: 100%;
 	height: 20px;
 }
 .friend-request-accept {
-	margin: 5px 10px 15px 50px;
+	margin: 5px 10px 0px 36px;
 }
 .friend-request-ignore {
-	margin: 5px 0px 15px 15px;
-}
-.friend-request-accept:hover,
-.friend-request-ignore:hover {
-	color: #FF8600;
-}
-.friend-request-message {
-	width: 200px;
-	display: block;
-	float: left;
-}
-.friend-request-name {
-	color: #FF8600;
-	margin-right: 3px;
-}
-.friend-request-name:hover {
-	color: #ff6600;
-	margin-right: 3px;
-}
-.accept-ignore {
-	display: block;
-	float: left;
-	width: 200px;
-	height: 20px;
-}
-.friend-request-accept {
-	margin: 5px 10px 15px 50px;
-}
-.friend-request-ignore {
-	margin: 5px 0px 15px 15px;
+	margin: 5px 0px 0px 15px;
 }
 .friend-request-accept:hover,
 .friend-request-ignore:hover {
 	color: #FF8600;
 }
 .icon_bar ul.sub-setting2 li.friend-requests {
-	width: 200px;
+	width: 180px;
 	clear: both;
 	padding: 10px;
 	float: left;
@@ -1275,6 +1244,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	font-size: 11px;
 	line-height: 10px;
 	padding: 3px 3px 3px 3px;
+	margin-top: 2px;
 }
 
 .profile_eventList .own-event {
@@ -1292,7 +1262,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	margin-top: 5px;
 	font-size: 15px;
 	color: #FF8600;
-	margin: 0px 0px 2px 0px;
+	margin: 0 0 0 1px;
 }
 .right_col {
     overflow: auto;
@@ -1335,6 +1305,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
     padding: 0px;
     width: 280px;
 }
+.profile .add-tag-area {
+		
+}
 .profile li.as-result-item, li.as-message {
     
 }
@@ -1373,6 +1346,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: #454545;
   color: white;
   padding: 0 50px;
+  float: left;
 }
 
 #wall_addPost { 
@@ -1991,7 +1965,7 @@ ul.as-selections {
 	background: url('../images/attending-line.png');
 	background-repeat: no-repeat;
 	background-position: 121px 13px;
-	margin-bottom: 10px;
+	margin: 10px 0px;
 }
 .attendingList {
 	margin-top: 5px;
@@ -2018,6 +1992,19 @@ ul.as-selections {
     margin-top: 4px;
     text-align: center;
 }
+.event_allow {
+	color: #000000;
+	margin-left: 10px;
+}
+.event_allow a {
+	font-size: 13px;
+	color: #000000;
+	margin-right: 5px;
+}
+.event_allow a:hover {
+	color: #FF8600;
+	font-size: 13px;
+}
 .waitingList .waitingImg {
     position: relative;
 }
@@ -2029,8 +2016,9 @@ ul.as-selections {
 	width: 100px;
 	height: 25px;
 	margin-top: 2px;
+	color: #000000;
 }
-.attending-details{
+.attending-details {
 	text-align: center;
 	font-size: 13px;
 	height: 25px;
@@ -2038,6 +2026,10 @@ ul.as-selections {
 	width: 100px;
 	height: 14px;
 	margin-top: 2px;
+	color: #000000;
+}
+.attending-details a {
+	color: #000000;
 }
 .waiting-item{
 	float: left;
@@ -2048,6 +2040,10 @@ ul.as-selections {
 		margin-right: 15px;
 }
 .interested_list .waitingList .waitingImg span,
+.event_wall {
+	float: left;
+	display: block;
+}
 .event_wall .wall_image span
 {
     position: absolute;
@@ -2058,12 +2054,18 @@ ul.as-selections {
     background: green;
     border-radius: 5px;
 }
+.wall_add {
+	display: block;
+	float: left;
+}
 .event_wall .wall_title {
     margin-bottom: 15px;
     position: relative;
     background: url('../images/event-wall-line.png');
     background-repeat: no-repeat;
-    background-position: 63px 13px;
+    background-position: 59px 13px;
+    float: left;
+    width: 650px;
 }
 .event_wall .wall_image {
     position: relative;
@@ -2072,7 +2074,7 @@ ul.as-selections {
 .event_wall .wall_name {
     font-size: 18px;
     float: left;
-    margin: 15px 10px 10px 20px;
+    margin: 25px 10px 10px 20px;
 }
 .event_wall .posts {
     overflow: hidden;
@@ -2087,7 +2089,7 @@ ul.as-selections {
 .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    margin: 15px 0px 0px 10px;
+    margin: 25px 0px 0px 6px;
     font-size: 18px;
     width: 457px;
 }

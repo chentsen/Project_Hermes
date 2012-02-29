@@ -155,7 +155,8 @@ class Application_Form_Questions extends Zend_Form
                                                 'Indian'=>'Indian',
                                                 'Middle Eastern'=>'Middle Eastern',
                                                 'African'=>'African',
-                                                'Mediterranean'=>'Mediterranean'
+                                                'Mediterranean'=>'Mediterranean',
+												'Mexican'=>'Mexican'
                                              ));
                 
                 $inorout = new Zend_Form_Element_MultiCheckbox('inorout');

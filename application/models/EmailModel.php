@@ -62,13 +62,14 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 		$date = new DateTime();	
 		$date->setDate($dateArray[2],$dateArray[1],$dateArray[0]);
 		$dateString = $date->format('M d, Y');
-		$private = (($raw['createEvent_private'] == 'y') ? "Yes" : "No");
+		$private = (($raw['createEvent_private'] == 'y') ? "private" : "public");
 		$fullName = $user->getFirstName() . " " . $user->getLastName();
 		
 		$htmlBody = $emailHelper->GenerateEmail('_email_send_notifications.phtml',
 											 array('yourName'=>$user->getFirstName(),
 																			'name'=>$fullName,
 																			'location'=>$raw['createEvent_location'],
+																			'shortDescription'=>$raw['createEvent_shortDescription'],
 																			'date'=>$dateString,
 																			'private'=>$private
 																			));

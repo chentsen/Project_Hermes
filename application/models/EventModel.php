@@ -57,7 +57,14 @@ class Application_Model_EventModel{
 		}
 		
 		
-	} 
+	}
+	public function isEventExpired($event) {
+		
+		if ($event->getDate()->getTimestamp() < time()) {
+			return false;
+		}
+		return true;
+	}
   public function isMember($identity,$members){
   		
 		foreach($members as $member){

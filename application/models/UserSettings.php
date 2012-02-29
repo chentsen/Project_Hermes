@@ -54,7 +54,7 @@ class Application_Model_UserSettings{
 		if(!$this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$userInfo['email']))){
 			$user = new User();
 			
-			$user->setEmail(ucwords(strtolower($userInfo['email'])));
+			$user->setEmail(strtolower($userInfo['email']));
 			$user->setFirstName(ucwords(strtolower($userInfo['firstName'])));
 			$user->setLastName(ucwords(strtolower($userInfo['lastName'])));
 			$user->setGender($userInfo['gender']);

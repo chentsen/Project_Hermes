@@ -12,7 +12,7 @@ var Event = {
                     returnAjax.find('.attending-item').addClass('attending-item-'+data.uid);
                     returnAjax.find('img').attr('src','/img/profile-pic/uid/'+data.uid);
                     returnAjax.find('a').attr('href','/profile/public/uid/'+data.uid);
-                    returnAjax.find('.attending-details').text(data.firstName);
+                    returnAjax.find('.attending-details #attending_profile').text(data.firstName);
                     $('.attendingList').append(returnAjax);
                 }else{
                     $().toastmessage('showSuccessToast', "There was an problem completing your request.");

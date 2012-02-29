@@ -88,6 +88,7 @@ class IndexController extends Zend_Controller_Action
 		//$test->testFunction();
     	$form = new Application_Form_Login();
     	$this->view->form = $form;
+		
     	if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
     		$authenticated = $this->userSettings->authenticateUser($_POST['email'], $_POST['password']);
     		

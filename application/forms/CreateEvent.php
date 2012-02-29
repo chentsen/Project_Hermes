@@ -39,8 +39,8 @@ class Application_Form_CreateEvent extends Zend_Form{
 		//$private = new Zend_Form_Element_Select('createEvent_private');
 		//$private->setMultiOptions(array("y"=>"yes","n"=>"no"));		
 		
-		$private = new Zend_Form_Element_Select('createEvent_private');
-		$private->setMultiOptions(array("n"=>"shouldn't","y"=>"should"));	
+		//$private = new Zend_Form_Element_Select('createEvent_private');
+		//$private->setMultiOptions(array("n"=>"shouldn't","y"=>"should"));	
 		
 		$longDescription = new Zend_Form_Element_Textarea('createEvent_longDescription',array("rows"=>3,'cols'=>50));
 		$longDescription->addValidator('StringLength',array('max'=>140,'allowWhiteSpace'=>true));
@@ -50,7 +50,7 @@ class Application_Form_CreateEvent extends Zend_Form{
 		
 		$moreOptions = new Zend_Form_Element_Button('createEvent_moreOptions');
 		
-		$this->addElements(array($date,$private,$location,$longDescription,$shortDescription,$submit,$moreOptions));
+		$this->addElements(array($date,$location,$longDescription,$shortDescription,$submit,$moreOptions));
 		$this->setDecorators(array(array('ViewScript',array('viewScript'=>'_form_createEvent.phtml'))));
 		$this->setElementDecorators(array('ViewHelper','Errors'),null,false);
 	}
