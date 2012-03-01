@@ -2141,7 +2141,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 200px 20px;
 }
-.notification .notification-object {
+.notification-object {
 	overflow: hidden;
 }
 .notification .notification-object,
