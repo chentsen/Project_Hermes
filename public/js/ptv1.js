@@ -126,62 +126,7 @@ $(document).ready(function(){
     }
     ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body', '.upcoming_events .block-header');
     ToggleIt('.friends_block .block-header', '.friends_block .block-body', '.friends_block .block-header'); 
-  /*
-   
-   
-     $('.loginonce').click(function(){
-            $(this).hide(2000, function(){
-            $(this).remove();
-            });
-            $.cookie('loginOnce','removed');
-     });
-     
-     var loginOnce = $.cookie('loginOnce')
-     
-     if(loginOnce == 'removed') {
-         $('.loginonce').hide();
-     }
-     
-     */
-   
-        
-       
-        //registration page
-     /* function BdOrange(nClass, rClass){
-           
-          $(nClass).focus(function(){
-          $(this).addClass('change_border_color')
-          $(this).addClass('removebg');
-          
-          });
-          $(nClass).blur(function(){
-              if ($.trim(this.value) == '') { 
-                  $(this).removeClass('removebg');
-             }
-               $(this).removeClass('change_border_color');
-               
-          });
-      }
-        BdOrange('input[type=text], input[type=password]', 'input[type=text], input[type=password]');
-        
-        BdOrange('textarea', 'textarea');
-        
-        var BdRemove = function(noClass) {
-            $(noClass).focus(function(){
-                $(this).removeClass("change_border_color");
-            });
-            
-        } 
-        BdRemove('.profile #content_area .tag_input');
-          */
-            /****** events page *******/
-     //$( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});
-      
-   
-        
-  //login page and registration remove bg
 
-     
            //email 
            function BgRemove(nClass) {
                 if($(nClass).val())

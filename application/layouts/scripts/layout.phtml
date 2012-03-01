@@ -55,10 +55,11 @@
 				<?=$event?>
 			    </div>
 			    <div class ="modalWindow"></div>
+			</div>
 			    <div class = "modalBackground" style="display:none;"></div>
 			    <div class ="dialogs"></div>	
 			<? } ?>
-			</div>
+			
 	</div>
        <?php
 	if(!$identity){ ?>
@@ -66,10 +67,11 @@
 						<div id="reg_ajax_form">	
 							<?= $reg ?>
 						</div>
-						<div class ="modalWindow"></div>	
+						<div class ="modalWindow"></div>
+	</div>
 					<div class = "modalBackground" style="display:none;"></div>
 					<div class = 'dialogs' style="display:none"></div>
-	</div>		
+		
     <?}
      echo $this->render('footer.phtml');?>     
 
