@@ -21,6 +21,15 @@
                     <h4><?= $this->event->getLongDescription() ?></h4>
                     <? } ?>
                 </div>
+                    <div class ="event_wall">
+                        <h3 class="wall_title">Wall</h3>
+                        <div id="posts">
+                        </div>
+                        <?= $this->DisplayEventWall($this->event,$this->identity) ?>
+                    </div>
+                    <div class="ajax_template" style="display:none">
+                        <?= $this->partial('wall_post.phtml') ?>
+                    </div>
             </div>
             <div class="event-left">
                 <div class="event_img">
