@@ -14,20 +14,23 @@ class Zend_View_Helper_DisplayGeneralFeed extends Application_View_Helper_Displa
 		
 				echo '<div class="notifications">';
 		if( $generalFeedModel->getFeed()){
-				echo "<ul class = 'notification-list'>";
+			 echo "<ul class = 'notification-list'>";
 			 $feed = $generalFeedModel->getFeed();
 			 $feedObjects = $feed->getFeedObjects();
-			 foreach($feedObjects as $feedObject){
-			 	
-			 	echo "<li class = 'notification-object'>";
-				if(!$feedObject->getHidden()){
-					
-					//print_r($feedObject);
-					$this->constructFeedMessage($feedObject, $identity);	
-					
+			 
+			 for($i = 0; $i < 6; $i++) {
+				if($i < 5) {
+						echo "<li class = 'notification-object'>";
+						if(!$feedObjects[$i]->getHidden()) {
+								
+								$this->constructFeedMessage($feedObjects[$i], $identity);
+						}
+						echo "</li>";
+				} else {
+						echo "<li class='view-notifications'>Click to view all Notification</li>";
 				}
-			 	echo "</li>";
 			 }
+			 
 			 echo '</ul>';
 		} else {
 				echo "<h3>No activity found</h3>";
