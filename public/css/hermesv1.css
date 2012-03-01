@@ -1875,7 +1875,7 @@ ul.as-selections {
     font-size: 28px;
 }
 .event-left {
-	float: right;
+	float: left;
 	width: 150px;
 	padding: 0px 12px 0px 0px;
 }
