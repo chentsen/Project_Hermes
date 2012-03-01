@@ -7,7 +7,7 @@
     ?>
 			<div class="attending-item attending-item-<?= $uid ?>">
 			<a href='/profile/public/uid/<?= $user->getUid() ?>'>
-            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
+            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=70  width=70/></a>
 			<div class='attending-details'><a href='/profile/public/uid/<?= $user->getUid() ?>'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?></a></div>       			
             
 	</div>
@@ -16,8 +16,8 @@
 	    if (!($this->indexCreator || $this->indexMember) && !$this->didRequest) {
 	?>
 	
-			    <a class='attend-button' style="background: url('/img/profile-pic/uid/<?=$this->curUser->getUid()?>') no-repeat center center; background-size: 100px 100px" href = '/event/request/eid/<?= $this->eid; ?>'>
-					<img class="attend-img"  src="/images/attend-hover.png" height="100px"  width="100px" />
+			    <a class='attend-button' style="background: url('/img/profile-pic/uid/<?=$this->curUser->getUid()?>') no-repeat center center; background-size: 70px 70px" href = '/event/request/eid/<?= $this->eid; ?>'>
+					<img class="attend-img"  src="/images/attend-hover.png" height="70px"  width="70px" />
 				</a>
 		   <!-- <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'><img src='/img/profile-pic/uid/<?= $this->curUser->getUid() ?>' height=100  width=100/></a></a>-->
 	<? 		}
