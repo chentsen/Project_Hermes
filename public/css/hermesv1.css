@@ -1358,9 +1358,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: url('../images/wall-comment.png') #454545;
   background-repeat: no-repeat;
   background-position: 1px 1px;
+  padding: 0px;
 }
 
-#wall_addPost:hover {
+/*#wall_addPost:hover {
   height: 28px;
   display: block;
   color: white;
@@ -1369,7 +1370,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background: url('../images/wall-comment.png') #333;
   background-repeat: no-repeat;
   background-position: 1px 1px;
-}
+}*/
 
 .index #register {
    width: 200px;
