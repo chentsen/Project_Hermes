@@ -1917,10 +1917,10 @@ ul.as-selections {
     width: 420px;
     float: right;
     padding: 0px 0px 0px 12px;
-    border-left: solid 1px black;
+    border-left: solid 1px #d9dbdf;
 }
 .event_main h4 {
-    font-size: 20px;
+    font-size: 16px;
     padding: 6px 0px 5px 0px;
     margin: 1px 0px 0px 25px;
     float: left;
@@ -1974,9 +1974,10 @@ ul.as-selections {
 	position: relative;
 	background: url('../images/attending-line.png');
 	background-repeat: no-repeat;
-	background-position: 121px 13px;
+	background-position: 96px 11px;
 	margin: 10px 0px;
 	float: left;
+	width: 150px;
 }
 .attendingList {
 	margin-top: 5px;
@@ -2049,11 +2050,20 @@ ul.as-selections {
 		float: left;
 		margin-right: 5px;
 }
-.interested_list .waitingList .waitingImg span,
-.event_wall {
+.interested_list .waitingList .waitingImg span {
 	float: right;
 	display: block;
 	width: 400px;
+}
+.event_wall {
+	margin-top: 25px;
+}
+.event-detail-wrapper {
+	min-height: 300px;
+}
+.interested-list {
+	width: 150px;
+	float: left;
 }
 .event_wall .wall_image span
 {

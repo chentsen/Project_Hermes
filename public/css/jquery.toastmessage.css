@@ -49,7 +49,9 @@
 }
 
 .toast-item-image-success {
-    background:url(../images/success.png);
+    background:url(../images/toast-notice.png);
+    background-repeat: no-repeat;
+    float: left;
 }
 
 .toast-item-image-warning {
