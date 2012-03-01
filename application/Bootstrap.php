@@ -1,5 +1,6 @@
 <?php
 use Wildkat\Application\Container\DoctrineContainer;
+require_once "Zend/Cache.php";
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
 	protected function _initDoctype()
@@ -95,6 +96,33 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		
 	}
 	*/
-
+	public function _initMemCache() {
+		$frontendOpts = array(
+			'caching' => true,
+			'lifetime' => 1800,
+			'automatic_serialization' => true
+		);
+		
+		$backendOpts = array(
+			'servers' =>array(
+				array(
+				'host' => 'localhost',
+				'port' => 11211
+				)
+			),
+			'compression' => false
+		);
+		$cache = Zend_Cache::factory('Core', 'Memcached', $frontendOpts, $backendOpts);
+		
+		Zend_Registry::set('Memcache', $cache);
+		/*** example
+		$blah = "wahahhaha";
+		$cache->save($blah, 'blahman');
+		
+		$blahman = Zend_Registry::get('Memcache')->load('blahman');
+		
+		echo $blahman;
+		***/
+	}
 }
 
