@@ -43,7 +43,7 @@ var Wall = {
 		   //alert("running" + wallpost.firstName);
 		    var wallpost = wallposts[i];
 		    var wallpost_template = $('.ajax_template .wallpost').clone();
-			wallpost_template.find('.wall_image').append('<img height="70" width="70"src="/img/profile-pic/uid/' + wallpost.uid+ '" />');
+			wallpost_template.find('.wall_image').append('<img height="50" width="50"src="/img/profile-pic/uid/' + wallpost.uid+ '" />');
 		    wallpost_template.attr('id',wallpost.postID);
 		    wallpost_template.find('.wall_name').text(wallpost.firstName+' says');
 		    wallpost_template.find('.wall_text').text(wallpost.message);
