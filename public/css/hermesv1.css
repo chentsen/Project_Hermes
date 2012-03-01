@@ -1357,7 +1357,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   width: 30px;
   background: url('../images/wall-comment.png') #454545;
   background-repeat: no-repeat;
-  background-position: 1px 1px;
+  background-position: 6px 5px;
   padding: 0px;
 }
 
@@ -1382,8 +1382,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit_tag:hover, 
 #submit:hover,
 #contact_submit:hover,
-#profilePic_submit:hover,
-#wall_addPost:hover {
+#profilePic_submit:hover {
     background: #333333;
 }
 .inner_button {overflow: hidden;}
@@ -2133,6 +2132,7 @@ ul.as-selections {
     border-right: none !important;
     font-size: 16px;
     height: 26px;
+    width: 360px;
 }
 
 #wall_comment:focus {
