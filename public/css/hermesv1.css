@@ -1974,6 +1974,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 121px 13px;
 	margin: 10px 0px;
+	float: left;
 }
 .attendingList {
 	margin-top: 5px;
@@ -2048,7 +2049,7 @@ ul.as-selections {
 }
 .interested_list .waitingList .waitingImg span,
 .event_wall {
-	float: left;
+	float: right;
 	display: block;
 	width: 400px;
 }
