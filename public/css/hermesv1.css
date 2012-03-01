@@ -1960,6 +1960,10 @@ ul.as-selections {
 	margin-top: 10px;
 	overflow: hidden;
 }
+.attending-list-ajax {
+	width:150px;
+	float: left;
+}
 .attending-title {
 	position: relative;
 	background: url('../images/attending-line.png');
@@ -2031,18 +2035,19 @@ ul.as-selections {
 .attending-details a {
 	color: #000000;
 }
-.waiting-item{
+.waiting-item {
 	float: left;
-	margin-right: 15px;
+	margin-right: 5px;
 }
 .attending-item {
 		float: left;
-		margin-right: 15px;
+		margin-right: 5px;
 }
 .interested_list .waitingList .waitingImg span,
 .event_wall {
 	float: left;
 	display: block;
+	width: 400px;
 }
 .event_wall .wall_image span
 {
