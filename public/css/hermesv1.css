@@ -263,8 +263,8 @@ input[type=text]:first, input[type=password]:first {
 
 .account-edit #editAccount {
     float: right;
-    width: 270px;
-    margin-right: 20px;
+    width: 280px;
+
 }
 #editAccount #submit{
     margin-left: 32px;
@@ -1244,7 +1244,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	font-size: 11px;
 	line-height: 10px;
 	padding: 3px 3px 3px 3px;
-	margin-top: 2px;
+	margin: 2px 0px 0px 2px;
 }
 
 .profile_eventList .own-event {
