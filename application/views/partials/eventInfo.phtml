@@ -33,5 +33,6 @@
                 echo "<h4>You're going to this event.</h4>";
             } ?>
                 </div>
+                <?= $this->partial('attendingList.phtml',array('event'=>$this->event,'identity'=>$this->identity, 'indexCreator'=>$this->indexCreator)); ?>
             </div>
         </div>
