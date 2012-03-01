@@ -1865,8 +1865,8 @@ ul.as-selections {
 .event_title {
     float: right;
     margin-bottom: 10px;
-    width: 420px;
-    font-size: 28px;
+    width: 395px;
+    font-size: 26px;
 }
 
 .single-event .event_title {
@@ -1876,7 +1876,7 @@ ul.as-selections {
     font-size: 28px;
 }
 .event-left {
-	float: left;
+	float: right;
 	width: 150px;
 	padding: 0px 12px 0px 0px;
 }
@@ -1914,7 +1914,7 @@ ul.as-selections {
     float: right;
 }
 .event_main .event_right {
-    width: 420px;
+    width: 400px;
     float: right;
     padding: 0px 0px 0px 12px;
     border-left: solid 1px #d9dbdf;
@@ -1922,7 +1922,7 @@ ul.as-selections {
 .event_main h4 {
     font-size: 16px;
     padding: 6px 0px 5px 0px;
-    margin: 1px 0px 0px 25px;
+    margin: 3px 0px 0px 30px;
     float: left;
 }
 .event_date {
@@ -1940,7 +1940,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
-	margin-left: 50px;
+	margin-left: 80px;
 	width: 300px;
 }
 .event_place {
@@ -1949,7 +1949,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
-	margin-left: 50px;
+	margin-left: 80px;
 	width: 300px;
 }
 .event_location {
@@ -1958,7 +1958,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
-	margin-left: 50px;
+	margin-left: 80px;
 	width: 300px;
 }
 .interested_list {
@@ -2059,7 +2059,7 @@ ul.as-selections {
 	margin-top: 25px;
 }
 .event-detail-wrapper {
-	min-height: 300px;
+	min-height: 155px;
 }
 .interested-list {
 	width: 150px;
