@@ -8,6 +8,7 @@ body {
 	-moz-font-smoothing: antialiased;
 	font-smooth: always;
 }
+
 .index, .about, .contact, .privacy {
 	background-color: black;
 	background: url('../images/pt-background.jpg') no-repeat black;
@@ -262,7 +263,7 @@ input[type=text]:first, input[type=password]:first {
 
 .account-edit #editAccount {
     float: right;
-    width: 280px;
+    width: 270px;
     margin-right: 20px;
 }
 #editAccount #submit{
@@ -2187,7 +2188,7 @@ ul.as-selections {
 .change-password {
 	color: #FF8600;
 	display: block;
-	float: left;
+	float: right;
 	margin: 20px 20px 20px 80px;
 }
 .password-change-text a {
