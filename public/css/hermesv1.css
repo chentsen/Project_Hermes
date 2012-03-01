@@ -2048,11 +2048,14 @@ ul.as-selections {
 		float: left;
 		margin-right: 5px;
 }
-.interested_list .waitingList .waitingImg span,
-.event_wall {
+.interested_list .waitingList .waitingImg span {
 	float: right;
 	display: block;
 	width: 400px;
+}
+.event_wall {
+	float: right;
+	display: block;
 }
 .event_wall .wall_image span
 {
