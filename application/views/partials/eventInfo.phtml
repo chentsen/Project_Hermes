@@ -1,26 +1,16 @@
 <div id="view-content">
     <div class="view-wrapped">	 
         <div class="event_main">
+            <div class="event-right">
+                <div class="event-header">
                 <h1 class="event_title"><?php if($this->event->getCreator()->getEmail() == $this->identity) {
                 echo $this->event->getCreator()->getFirstName(). " " .substr($this->event->getCreator()->getLastName(),0,1)."."." wants to " .$this->event->getShortDescription();
                 } else {    
                 echo $this->event->getCreator()->getFirstName(). " " .substr($this->event->getCreator()->getLastName(),0,1)."."." wants to " .$this->event->getShortDescription();
                 }
                 ?></h1>
-            <div class="event-left">
-            <div class="event_img">
-                 <img src="/img/profile-pic/uid/<?=$this->event->getCreator()->getUid() ?>" height=180  width=180/>
-            </div>
-            <div class="event_self">
-                            <?php if ($this->event->getCreator()->getEmail() == $this->identity) {
-                echo "<h4>You own this event.</h4>";
-            } else {
-                echo "<h4>You're going to this event.</h4>";
-            } ?>
-            </div>
-            </div>
-            <div class="event_right">
-            <div class='event_date'>
+                </div>
+                        <div class='event_date'>
                 <h4><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h4>
             </div>
              <div class='event_place'>
@@ -32,5 +22,17 @@
                         <h4><?= $this->event->getLongDescription() ?></h4>
                     <? } ?>
                 </div>
+            </div>
+            <div class="event-left">
+            <div class="event_img">
+                 <img src="/img/profile-pic/uid/<?=$this->event->getCreator()->getUid() ?>" height=150  width=150/>
+            </div>
+            <div class="event_self">
+                            <?php if ($this->event->getCreator()->getEmail() == $this->identity) {
+                echo "<h4>You own this event.</h4>";
+            } else {
+                echo "<h4>You're going to this event.</h4>";
+            } ?>
+            </div>
             </div>
         </div>

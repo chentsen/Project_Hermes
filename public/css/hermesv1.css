@@ -974,7 +974,7 @@ a.add-friend:hover {
         padding-bottom: 24px;
 }
 .view-wrapped {
-    width: 650px;
+    width: 600px;
     height: 100% !important;
     color: #454545;
     overflow: hidden;
@@ -1864,7 +1864,7 @@ ul.as-selections {
 .event_title {
     float: right;
     margin-bottom: 10px;
-    width: 380px;
+    width: 420px;
     font-size: 28px;
 }
 
@@ -1875,8 +1875,9 @@ ul.as-selections {
     font-size: 28px;
 }
 .event-left {
-	float: left;
+	float: right;
 	width: 150px;
+	padding: 0px 12px 0px 0px;
 }
 
 .event_self {
@@ -1898,7 +1899,7 @@ ul.as-selections {
 }
 .event_main {
     overflow: hidden;
-    width: 650px;
+    width: 600px;
 }
 .event_main .event_img {
     float: left;
@@ -1912,9 +1913,10 @@ ul.as-selections {
     float: right;
 }
 .event_main .event_right {
-    width: 380px;
+    width: 420px;
     float: right;
-    padding: 0 40px 0 50px;
+    padding: 0px 0px 0px 12px;
+    border-left: solid 1px black;
 }
 .event_main h4 {
     font-size: 20px;
@@ -1928,7 +1930,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
-	margin-right: 50px;
+	margin-left: 50px;
 	width: 300px;
 }
 .event-status {
@@ -1937,7 +1939,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
-	margin-right: 50px;
+	margin-left: 50px;
 	width: 300px;
 }
 .event_place {
@@ -1946,6 +1948,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
+	margin-left: 50px;
 	width: 300px;
 }
 .event_location {
@@ -1954,6 +1957,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
+	margin-left: 50px;
 	width: 300px;
 }
 .interested_list {
@@ -2027,7 +2031,6 @@ ul.as-selections {
 	font-size: 13px;
 	height: 25px;
 	line-height: 13px;
-	width: 100px;
 	height: 14px;
 	margin-top: 2px;
 	color: #000000;
@@ -2070,14 +2073,14 @@ ul.as-selections {
     background-repeat: no-repeat;
     background-position: 59px 13px;
     float: left;
-    width: 650px;
+    width: 380px;
 }
 .event_wall .wall_image {
     position: relative;
     float: left;
 }
 .event_wall .wall_name {
-    font-size: 18px;
+    font-size: 13px;
     float: left;
     margin: 25px 10px 10px 20px;
 }
@@ -2087,7 +2090,7 @@ ul.as-selections {
 .event_wall .wallpost {
     float: left;
     position: relative;
-    width: 640px;
+    width: 380px;
     margin-bottom: 10px;
     color: #000000;
 }
@@ -2096,7 +2099,7 @@ ul.as-selections {
     float: left;
     margin: 25px 0px 0px 6px;
     font-size: 18px;
-    width: 430px;
+    width: 250px;
 }
 .event_wall .wallpost a{
     margin-left: 7px;
@@ -2109,7 +2112,7 @@ ul.as-selections {
 .event_wall #wall_comment {
     float: left;
     margin: 0px;
-    width: 465px !important;
+    width: 325px !important;
     border-right: none !important;
 }
 
