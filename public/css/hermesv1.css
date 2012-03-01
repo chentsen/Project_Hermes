@@ -1356,6 +1356,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
   float: left;
   width: 30px;
   background: url('../images/wall-comment.png') #454545;
+  background-repeat: no-repeat;
+  background-position: 1px 1px;
 }
 
 #wall_addPost:hover {
@@ -1365,6 +1367,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
   float: left;
   width: 30px;
   background: url('../images/wall-comment.png') #333;
+  background-repeat: no-repeat;
+  background-position: 1px 1px;
 }
 
 .index #register {
