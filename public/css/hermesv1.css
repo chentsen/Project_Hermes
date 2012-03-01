@@ -10,7 +10,7 @@ body {
 }
 .index, .about, .contact, .privacy {
 	background-color: black;
-	background: url('../images/pt-background.jpg') no-repeat;
+	background: url('../images/pt-background.jpg') no-repeat black;
 	background-position: center 0%;
 	background-size: 1440px 900px;
 	min-width: 960px;	
@@ -339,7 +339,7 @@ margin-bottom: 2px;
 }
 .profile_rightCol {
     float: left;
-    width: 445px;
+    width: 395px;
     overflow: hidden;
     border-left: solid 1px #D9DBDF;
     padding: 0px 0px 0px 12px;
@@ -525,7 +525,7 @@ a.add-friend:hover {
 	float: right;
 }
 .attend-img:hover {
-	opacity: .1;
+	opacity: 0;
 }
 .attend-img {
 		
@@ -974,7 +974,7 @@ a.add-friend:hover {
         padding-bottom: 24px;
 }
 .view-wrapped {
-    width: 650px;
+    width: 600px;
     height: 100% !important;
     color: #454545;
     overflow: hidden;
@@ -1864,25 +1864,26 @@ ul.as-selections {
 .event_title {
     float: right;
     margin-bottom: 10px;
-    width: 450px;
-    font-size: 30px;
+    width: 420px;
+    font-size: 28px;
 }
 
 .single-event .event_title {
     float: right;
     margin-bottom: 10px;
-    width: 450px;
-    font-size: 30px;
+    width: 380px;
+    font-size: 28px;
 }
 .event-left {
 	float: left;
-	width: 180px;
+	width: 150px;
+	padding: 0px 12px 0px 0px;
 }
 
 .event_self {
     color: #000000;
     float: left;
-    width: 180px;
+    width: 150px;
     font-size: 20px;
     display: block;
     background: url('../images/owner-marker.png');
@@ -1898,13 +1899,13 @@ ul.as-selections {
 }
 .event_main {
     overflow: hidden;
-    width: 650px;
+    width: 600px;
 }
 .event_main .event_img {
     float: left;
     padding: 0px 20px 0px 0px;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
 }
 .event_main .event_img img{ 
 }
@@ -1912,9 +1913,10 @@ ul.as-selections {
     float: right;
 }
 .event_main .event_right {
-    width: 380px;
-    float: left;
-    padding: 0 40px 0 50px;
+    width: 420px;
+    float: right;
+    padding: 0px 0px 0px 12px;
+    border-left: solid 1px black;
 }
 .event_main h4 {
     font-size: 20px;
@@ -1928,7 +1930,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
-	margin-right: 50px;
+	margin-left: 50px;
 	width: 300px;
 }
 .event-status {
@@ -1937,7 +1939,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
-	margin-right: 50px;
+	margin-left: 50px;
 	width: 300px;
 }
 .event_place {
@@ -1946,6 +1948,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
+	margin-left: 50px;
 	width: 300px;
 }
 .event_location {
@@ -1954,11 +1957,17 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
+	margin-left: 50px;
 	width: 300px;
 }
 .interested_list {
 	margin-top: 10px;
 	overflow: hidden;
+}
+.attending-list-ajax {
+	width: 150px;
+	float: left;
+	display: none;
 }
 .attending-title {
 	position: relative;
@@ -1966,6 +1975,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 121px 13px;
 	margin: 10px 0px;
+	float: left;
 }
 .attendingList {
 	margin-top: 5px;
@@ -2023,7 +2033,6 @@ ul.as-selections {
 	font-size: 13px;
 	height: 25px;
 	line-height: 13px;
-	width: 100px;
 	height: 14px;
 	margin-top: 2px;
 	color: #000000;
@@ -2031,18 +2040,19 @@ ul.as-selections {
 .attending-details a {
 	color: #000000;
 }
-.waiting-item{
+.waiting-item {
 	float: left;
-	margin-right: 15px;
+	margin-right: 5px;
 }
 .attending-item {
 		float: left;
-		margin-right: 15px;
+		margin-right: 5px;
 }
 .interested_list .waitingList .waitingImg span,
 .event_wall {
-	float: left;
+	float: right;
 	display: block;
+	width: 400px;
 }
 .event_wall .wall_image span
 {
@@ -2065,14 +2075,14 @@ ul.as-selections {
     background-repeat: no-repeat;
     background-position: 59px 13px;
     float: left;
-    width: 650px;
+    width: 380px;
 }
 .event_wall .wall_image {
     position: relative;
     float: left;
 }
 .event_wall .wall_name {
-    font-size: 18px;
+    font-size: 13px;
     float: left;
     margin: 25px 10px 10px 20px;
 }
@@ -2082,7 +2092,7 @@ ul.as-selections {
 .event_wall .wallpost {
     float: left;
     position: relative;
-    width: 640px;
+    width: 380px;
     margin-bottom: 10px;
     color: #000000;
 }
@@ -2091,7 +2101,7 @@ ul.as-selections {
     float: left;
     margin: 25px 0px 0px 6px;
     font-size: 18px;
-    width: 430px;
+    width: 250px;
 }
 .event_wall .wallpost a{
     margin-left: 7px;
@@ -2104,7 +2114,7 @@ ul.as-selections {
 .event_wall #wall_comment {
     float: left;
     margin: 0px;
-    width: 465px !important;
+    width: 325px !important;
     border-right: none !important;
 }
 
@@ -2170,11 +2180,18 @@ ul.as-selections {
 .event-describer {
 	margin: 5px 0px;
 }
+.password-change .cms-page .cms-text {
+	background-color: #FFFFFF;
+
+}
 .change-password {
 	color: #FF8600;
 	display: block;
 	float: left;
 	margin: 20px 20px 20px 80px;
+}
+.password-change-text a {
+	color: #FF8600;
 }
 #passwordReset #submit {
 	height: 32px;
@@ -2187,5 +2204,39 @@ ul.as-selections {
 }
 #passwordReset li {
 	height: 32px;
-	margin: 0;
+	margin: 0px 10px 0px 0px;
+}
+#passwordReset li:last-child {
+	margin-right: 0px !important;
+}
+
+.password-change-text {
+	display: block;
+	float: left;
+	margin-top: 10px;
+	width: 790px;
+}
+.friend-tooltip {
+  color: #000000;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+.friend-tooltip span {
+  margin-left: -999em;
+  position: absolute;
+  color: #FFFFFF;
+  text-align: center;
+}
+.friend-tooltip:hover span {
+  font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  z-index: 99;
+  margin-left: 0;
+  width: 65px;
+  padding: 3px 5px 5px 5px;
+  background-color: rgba(0,0,0,0.3);
 }

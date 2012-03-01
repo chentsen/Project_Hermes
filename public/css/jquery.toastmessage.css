@@ -9,13 +9,8 @@
 
 .toast-item {
 	height: auto;
-	background: #000000;
-	opacity: 0.9;
+	opacity: 1.0;
 	color: #FFFFFF;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 5px;
-	padding-right: 10px;
 	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 14px;
 	display: block;
@@ -24,30 +19,34 @@
 
 .toast-item p {
 	float: left;
+	padding: 6px 0px 10px 10px;
+	width: 220px;
+	display: block;
 }
 
 .toast-item-close {
-    background:url(../images/exit-button.png);
+    background: url(../images/exit-button.png);
     width: 11px;
     height: 11px;
-    position: absolute;
-    top:7px;
-    right:7px;
     background-repeat: no-repeat;
+    float: right;
+    display: block;
+    margin: 5px 7px 0px 0px;
+    position: relative;
 }
 
-/*.toast-item-image {
-    width:32px;
-    height: 32px;
-    margin-left: 7px;
-    margin-top: -10px;
-    margin-right: 10px;
-    float:left;
-}*/
+.toast-item-image {
+    width: 20px;
+    height: 20px;
+    margin: 7px 1px 5px 10px;
+    float: left;
+}
 
-/*.toast-item-image-notice {
-    background:url(../images/notice.png);
-}*/
+.toast-item-image-notice {
+    background:url(../images/toast-notice.png);
+    background-repeat: no-repeat;
+    float: left;
+}
 
 .toast-item-image-success {
     background:url(../images/success.png);
@@ -109,8 +108,9 @@
 
 .toast-position-top-right {
     position: fixed;
-    top: 62px;
-    right: 140px;
+    top: 61px;
+    right: 215px;
+    background-color: #000;
 }
 
 .toast-position-middle-left {

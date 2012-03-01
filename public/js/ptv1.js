@@ -173,8 +173,8 @@ $(document).ready(function(){
 	  $('#email').defaultText({text: 'Email'});
 	} else if (window.location.pathname=='/password-change') {
 	  $('#originalPassword').defaultText({text: 'Original Password'});
-	  $('#password').defaultText({text: 'Password'});
-	  $('#password2').defaultText({text: 'Password Again'});
+	  $('#password').defaultText({text: 'New Password'});
+	  $('#password2').defaultText({text: ' New Password Again'});
 	}  else if (window.location.pathname=='/contact') {
 		 $('#email').defaultText({text: 'Email'});
 		 $('#name').defaultText({text: 'Name'});
