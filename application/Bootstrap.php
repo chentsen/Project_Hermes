@@ -97,6 +97,8 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	}
 	*/
 	public function _initMemCache() {
+		$cacheOptions = $this->getOptions('memCache');
+		
 		$frontendOpts = array(
 			'caching' => true,
 			'lifetime' => 1800,
@@ -122,6 +124,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$blahman = Zend_Registry::get('Memcache')->load('blahman');
 		
 		echo $blahman;
+		http://webhole.net/2009/11/27/how-to-cache-pages-with-zend/
 		***/
 	}
 }
