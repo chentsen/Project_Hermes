@@ -1355,7 +1355,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
   color: white;
   float: left;
   width: 30px;
-  background: url('../images/wall-comment.png') #454545;
+  background: url('../images/comment-button.png') #000000;
   background-repeat: no-repeat;
   background-position: 6px 5px;
   padding: 0px;
@@ -1869,7 +1869,7 @@ ul.as-selections {
 .event_title {
     float: right;
     margin-bottom: 10px;
-    width: 395px;
+    width: 400px;
     font-size: 26px;
 }
 
@@ -1892,11 +1892,11 @@ ul.as-selections {
     font-size: 20px;
     display: block;
     background: url('../images/owner-marker.png');
-    background-position: 0px 2px;
+    background-position: 0px 3px;
     background-repeat: no-repeat;
 }
 .event_self h4 {
-	margin: 3px 0px 0px 16px !important;
+	margin: 4px 0px 0px 16px !important;
 	padding: 0px !important;
 	font-size: 15px !important;
 	color: #000000;
@@ -1978,7 +1978,7 @@ ul.as-selections {
 	position: relative;
 	background: url('../images/attending-line.png');
 	background-repeat: no-repeat;
-	background-position: 96px 11px;
+	background-position: 112px 13px;
 	margin: 10px 0px;
 	float: left;
 	width: 150px;
@@ -2088,9 +2088,9 @@ ul.as-selections {
     position: relative;
     background: url('../images/event-wall-line.png');
     background-repeat: no-repeat;
-    background-position: 59px 13px;
+    background-position: 60px 13px;
     float: left;
-    width: 380px;
+    width: 410px;
 }
 .event_wall .wall_image {
     position: relative;
@@ -2099,7 +2099,7 @@ ul.as-selections {
 .event_wall .wall_name {
     font-size: 13px;
     float: left;
-    margin: 25px 10px 10px 20px;
+    margin: 13px 10px 10px 20px;
 }
 .event_wall .posts {
     overflow: hidden;
@@ -2114,7 +2114,7 @@ ul.as-selections {
 .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    margin: 13px 0px 0px 33px;
+    margin: 13px 0px 0px 10px;
     font-size: 16px;
     width: 250px;
 }
