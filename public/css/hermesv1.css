@@ -10,7 +10,7 @@ body {
 }
 .index, .about, .contact, .privacy {
 	background-color: black;
-	background: url('../images/pt-background.jpg') no-repeat;
+	background: url('../images/pt-background.jpg') no-repeat black;
 	background-position: center 0%;
 	background-size: 1440px 900px;
 	min-width: 960px;	
@@ -1967,6 +1967,7 @@ ul.as-selections {
 .attending-list-ajax {
 	width: 150px;
 	float: left;
+	display: none;
 }
 .attending-title {
 	position: relative;

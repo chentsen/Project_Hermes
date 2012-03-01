@@ -5,11 +5,13 @@
 			$eid = $this->event->getEid();
             $uid = $user->getUid();
     ?>
-			<div class="attending-item attending-item-<?= $uid ?>">
-			<a href='/profile/public/uid/<?= $user->getUid() ?>'>
-            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=70  width=70/></a>
-			<div class='attending-details'><a href='/profile/public/uid/<?= $user->getUid() ?>'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?></a></div>       			
-            
+	<div class="attending-item attending-item-<?= $uid ?>">
+	    <a href='/profile/public/uid/<?= $user->getUid() ?>'>
+		<img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=70  width=70/>
+	    </a>
+	    <div class='attending-details'>
+		<a href='/profile/public/uid/<?= $user->getUid() ?>'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?></a>
+	    </div>       			  
 	</div>
 	<?php } ?>
 	<? if(!$this->isEventExpired) {
@@ -29,13 +31,13 @@
 		}
 		?>
 
-<div class = "attending-list-ajax" style='display:none'>
+<div class="attending-list-ajax" style='display: none'>
     <div class="attending-item attending-item-<?= $uid ?>">
 		    <a href='/profile/public/uid/<?= $user->getUid() ?>'>
-	            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=70  width=70/></a>
+	            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=70  width=70/>
+		    </a>
             <?php if ($this->indexCreator || $this->indexMember) { ?>
 		    <div class='attending-details'></div>
             <?php } ?>        			
-    </div>
-    
+    </div> 
 </div>

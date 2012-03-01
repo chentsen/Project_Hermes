@@ -1,19 +1,18 @@
 <div id="view-content">
     <div class="view-wrapped">	 
-
         <div class="event_main">
 	    <div class="event_right">
-	    <div class="event_header">
-	    <h1 class="event_title"><?= $this->creatorName ." wants to ".$this->event->getShortDescription() ?></h1>
-	    </div>
-	                <div class='event_date'>
-                <h4><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h4>
-            </div>
+		<div class="event_header">
+		    <h1 class="event_title"><?= $this->creatorName ." wants to ".$this->event->getShortDescription() ?></h1>
+		</div>
+	        <div class='event_date'>
+		    <h4><?= date('F j\, Y',$this->event->getDate()->getTimestamp()); ?></h4>
+		</div>
 	    </div>
 	    <div class="event-left">
-	    <div class="event_img">
-                <img src="/img/profile-pic/uid/<?=$this->eventCreator->getUid() ?>" height=150  width=150/>
-	    </div>
+		<div class="event_img">
+		    <img src="/img/profile-pic/uid/<?=$this->eventCreator->getUid() ?>" height=150  width=150/>
+		</div>
 	    <?= $this->partial('attendingList.phtml',array('event'=>$this->event,'identity'=>$this->identity,'didRequest'=>$this->didRequest,'eid'=>$this->eid, 'curUser'=>$this->curUser, 'isEventExpired'=>$this->isEventExpired)); ?>
 	    </div>
 	</div>
