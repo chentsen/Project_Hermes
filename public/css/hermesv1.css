@@ -413,6 +413,19 @@ margin-bottom: 2px;
 	background-repeat: no-repeat;
 	background-position: 87px 14px;
 }
+.notifications_block {
+	position: relative;
+	background: url('../images/friends-line.png');
+	background-repeat: no-repeat;
+	background-position: 87px 14px;
+}
+.notifications_block {
+	font-size: 15px;
+	float: left;
+}
+.notifications_block img {
+	margin-right: 15px;
+}
 .so-ronery {
 	font-size: 14px;
 	text-align: center;
@@ -905,6 +918,7 @@ a.add-friend:hover {
 .block-close {
     background: url('../images/minus-button.png') no-repeat left center;
 }
+
 /**footer area and footer menu**/
 .twitter_follow{
     width: 135px;

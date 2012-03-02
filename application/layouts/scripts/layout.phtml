@@ -39,6 +39,15 @@
                                 <?= $this->DisplayEventFeed($identity, 5); ?>
                             </div>
                         </div>
+			<div class="block-item notifications_block">
+                            <div class="block-header">
+                                <h4>Notifications</h4>
+                                 </div>
+                                <div class="block-body">
+									
+                                <?= $this->DisplayGeneralFeed($identity); ?>
+                                </div>
+                        </div>
                         <div class="block-item friends_block">
                             <div class="block-header">
                                 <h4>Friends</h4>
@@ -46,19 +55,9 @@
                             <div class="block-body">
                                 <?= $this->DisplayFriends($identity); ?>
                                 </div>
-                           
                         </div>
 						
-						<div class="block-item friends_block">
-                            <div class="block-header">
-                                <h4>Friends</h4>
-                                 </div>
-                                <div class="block-body">
-									
-                                <?= $this->DisplayGeneralFeed($identity); ?>
-                                </div>
-                           
-                        </div>
+
                         </div>
                     </div>
                 </div>
