@@ -412,19 +412,21 @@ margin-bottom: 2px;
 	background: url('../images/friends-line.png');
 	background-repeat: no-repeat;
 	background-position: 87px 14px;
+	float: left;
 }
 .notifications_block {
 	position: relative;
 	background: url('../images/friends-line.png');
 	background-repeat: no-repeat;
 	background-position: 87px 14px;
+	float: left;
 }
 .notifications_block {
 	font-size: 15px;
 	float: left;
 }
 .notifications_block img {
-	margin-right: 15px;
+	margin:5px 15px 0px 10px;
 }
 .so-ronery {
 	font-size: 14px;

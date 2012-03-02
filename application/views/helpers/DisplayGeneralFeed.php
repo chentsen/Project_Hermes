@@ -27,7 +27,7 @@ class Zend_View_Helper_DisplayGeneralFeed extends Application_View_Helper_Displa
 						}
 						echo "</li>";
 				} else {
-						echo "<li class='view-notifications'>View all notification</li>";
+						echo "<li class='view-notifications'>View all notifications</li>";
 				}
 			 }
 			 
