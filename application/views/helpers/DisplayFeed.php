@@ -28,7 +28,7 @@ class Application_View_Helper_DisplayFeed extends Zend_View_Helper_Abstract{
 	public function getFriendAcceptFeedMessage(FeedObject $feedObject){
 		$fid = $feedObject->getFid();
 		echo "<img style='float: left; margin-right: 8px; margin-top: 1px;' src='/images/placeholder.png' width='30' height='30'/>";
-		echo "<div class='individual-object'>You and <a href='/profile/public/uid/{$fid}'> ".addslashes($feedObject->getFirstName())." ".addslashes($feedObject->getLastName())."</a> became friends.";
+		echo "<div class='individual-object'><a href='/profile/public/uid/{$fid}'> ".addslashes($feedObject->getFirstName())." ".addslashes($feedObject->getLastName())."</a> is now your friend.";
 		echo '<br /> <span>'.$feedObject->getDate()->format('F jS, Y h:i A').'</span></div>';
 	}
 

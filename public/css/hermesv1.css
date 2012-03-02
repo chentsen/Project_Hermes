@@ -2205,11 +2205,13 @@ ul.as-selections {
 .individual-object {
 	margin-bottom: 3px;
 	float: left;
-	font-size: 16px;
+	font-size: 15px;
 	color: #000000;
+	width: 200px
 }
 .individual-object a {
 	color: #FF8600;
+	display: inline;
 }
 .event-describer {
 	margin: 5px 0px;
