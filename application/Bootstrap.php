@@ -97,19 +97,23 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 	}
 	*/
 	public function _initMemCache() {
-		$cacheOptions = $this->getOptions('memCache');
-		
+		$caching = Zend_Registry::get('config')->memCache->caching;
+		$lifetime = Zend_Registry::get('config')->memCache->lifetime;
+		$autoSerialize = Zend_Registry::get('config')->memCache->serialization;
+		$host = Zend_Registry::get('config')->memCache->host;
+		$port = Zend_Registry::get('config')->memCache->port;
+
 		$frontendOpts = array(
-			'caching' => true,
-			'lifetime' => 1800,
-			'automatic_serialization' => true
+			'caching' => $caching,
+			'lifetime' => $lifetime,
+			'automatic_serialization' => $autoSerialize
 		);
 		
 		$backendOpts = array(
 			'servers' =>array(
 				array(
-				'host' => 'localhost',
-				'port' => 11211
+				'host' => $host,
+				'port' => $port
 				)
 			),
 			'compression' => false
@@ -117,14 +121,14 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$cache = Zend_Cache::factory('Core', 'Memcached', $frontendOpts, $backendOpts);
 		
 		Zend_Registry::set('Memcache', $cache);
-		/*** example
-		$blah = "wahahhaha";
+		/*** example */
+		/*$blah = "wahahhaha";
 		$cache->save($blah, 'blahman');
 		
 		$blahman = Zend_Registry::get('Memcache')->load('blahman');
 		
-		echo $blahman;
-		http://webhole.net/2009/11/27/how-to-cache-pages-with-zend/
+		var_dump($blahman);*/
+		/*http://webhole.net/2009/11/27/how-to-cache-pages-with-zend/
 		***/
 	}
 }
