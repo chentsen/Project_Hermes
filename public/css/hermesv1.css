@@ -2097,7 +2097,7 @@ ul.as-selections {
     float: left;
 }
 .event_wall .wall_name {
-    font-size: 13px;
+    font-size: 16px;
     float: left;
     margin: 13px 10px 10px 20px;
 }
@@ -2116,7 +2116,7 @@ ul.as-selections {
     float: left;
     margin: 13px 0px 0px 10px;
     font-size: 16px;
-    width: 250px;
+    width: 225px;
 }
 .event_wall .wallpost a{
     margin-left: 7px;
