@@ -407,34 +407,6 @@ margin-bottom: 2px;
 	background-repeat: no-repeat;
 	background-position: 320px 20px;
 }
-.friends_block {
-	position: relative;
-	background: url('../images/friends-line.png');
-	background-repeat: no-repeat;
-	background-position: 87px 14px;
-	float: left;
-}
-.notifications_block {
-	position: relative;
-	background: url('../images/friends-line.png');
-	background-repeat: no-repeat;
-	background-position: 87px 14px;
-	float: left;
-}
-.notifications_block {
-	font-size: 15px;
-	float: left;
-}
-.notifications_block img {
-	margin:5px 15px 0px 10px;
-}
-.so-ronery {
-	font-size: 14px;
-	text-align: center;
-	padding: 15px 0;
-	color: #454545;
-}
-
 /*** search page ****/
 .none-singleFound {
     margin-left: 15%;
@@ -1624,15 +1596,13 @@ ul.as-selections {
 .tags_base {
     z-index: -1;    
     min-height: 100px;
-      overflow: hidden;
-      
-      
+	overflow: hidden;
 }
 .tags {
     background: #ff8600;
     color: white;
     float: left;
-    padding: 5px 10px 7px 10px;
+    padding: 6px 10px 7px 10px;
     margin-bottom: 5px;
     cursor: pointer;
     position: relative;
@@ -2130,17 +2100,6 @@ ul.as-selections {
 .notification .notification-object span {
 	color: #bbb;
 	font-size: 12px;
-}
-.individual-object {
-	margin-bottom: 3px;
-	float: left;
-	font-size: 15px;
-	color: #000000;
-	width: 200px
-}
-.individual-object a {
-	color: #FF8600;
-	display: inline;
 }
 .event-describer {
 	margin: 5px 0px;

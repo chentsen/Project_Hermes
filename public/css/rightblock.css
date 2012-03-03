@@ -1,23 +1,23 @@
 /*** right block area ***/
-.block-body{
+.block-body {
     overflow: hidden;
     color: #000000;
 }
 
 .block-body .friend_list {
-	margin: 5px;
+    margin: 5px;
 }
 .right-block .mini-feed a {
-	width: 210px;
-	float: right;
-	min-height: 30px;
+    width: 210px;
+    float: right;
+    min-height: 30px;
 }
 
 .block-body .mini-feed {
 }
 
 .create_button {
-	margin-bottom: 7px;
+    margin-bottom: 7px;
 }
 .create_button h1{
     height: 70px;
@@ -44,7 +44,7 @@
 }
 
 .right-block a:hover {
-	color: #ff8600;
+    color: #ff8600;
 }
 
 .block-item h3 {
@@ -61,10 +61,51 @@
 }
 
 .block-header h4 {
-	margin-left: 17px;
-	color: #000000;
+    margin-left: 17px;
+    color: #000000;
 }
 
 .block-close {
     background: url('../images/minus-button.png') no-repeat left center;
+}
+.individual-object {
+    margin-bottom: 3px;
+    float: left;
+    font-size: 15px;
+    color: #000000;
+    width: 200px
+}
+.individual-object a {
+    color: #FF8600;
+    display: inline;
+}
+.individual-object span {
+    font-size: 13px;
+    color: #D9DBDF;
+}
+.friends_block {
+    position: relative;
+    background: url('../images/friends-line.png');
+    background-repeat: no-repeat;
+    background-position: 87px 14px;
+    float: left;
+}
+.notifications_block {
+    position: relative;
+    background: url('../images/friends-line.png');
+    background-repeat: no-repeat;
+    background-position: 130px 14px;
+    float: left;
+}
+.notifications_block img {
+	margin: 5px 15px 0px 10px;
+}
+.view-notifications {
+    text-align: center;
+}
+.so-ronery {
+	font-size: 14px;
+	text-align: center;
+	padding: 15px 0;
+	color: #454545;
 }
