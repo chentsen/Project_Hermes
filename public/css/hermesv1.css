@@ -1839,7 +1839,7 @@ ul.as-selections {
     border-left: solid 1px #d9dbdf;
 }
 .event_main h4 {
-    font-size: 16px;
+    font-size: 15px;
     padding: 6px 0px 5px 0px;
     margin: 3px 0px 0px 30px;
     float: left;
@@ -2012,7 +2012,7 @@ ul.as-selections {
     float: left;
 }
 .event_wall .wall_name {
-    font-size: 16px;
+    font-size: 15px;
     float: left;
     margin: 13px 10px 10px 20px;
 }
@@ -2030,7 +2030,7 @@ ul.as-selections {
     word-wrap: break-word;	
     float: left;
     margin: 13px 0px 0px 10px;
-    font-size: 16px;
+    font-size: 15px;
     width: 225px;
 }
 .event_wall .wallpost a{

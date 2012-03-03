@@ -73,15 +73,21 @@
     float: left;
     font-size: 15px;
     color: #000000;
-    width: 200px
+    width: 223px
 }
 .individual-object a {
-    color: #FF8600;
     display: inline;
 }
 .individual-object span {
     font-size: 13px;
-    color: #D9DBDF;
+    color: #aaa;
+}
+.upcoming_events {
+    position: relative;
+    background: url('../images/upcoming-events-line.png');
+    background-repeat: no-repeat;
+    background-position: 166px 14px;
+    width: 270px;
 }
 .friends_block {
     position: relative;
@@ -89,6 +95,7 @@
     background-repeat: no-repeat;
     background-position: 87px 14px;
     float: left;
+    width: 270px;
 }
 .notifications_block {
     position: relative;
@@ -96,6 +103,7 @@
     background-repeat: no-repeat;
     background-position: 130px 14px;
     float: left;
+    width: 270px;
 }
 .notifications_block img {
 	margin: 5px 15px 0px 10px;
