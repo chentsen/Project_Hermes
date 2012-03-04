@@ -1964,6 +1964,7 @@ ul.as-selections {
 .attending-item {
 		float: left;
 		margin-right: 5px;
+		margin-bottom: 5px;
 }
 .interested_list .waitingList .waitingImg span {
 	float: right;
@@ -2168,6 +2169,7 @@ ul.as-selections {
   cursor: pointer;
   text-decoration: none;
   position: relative;
+  float: left;
 }
 .event .friend-tooltip span {
   margin-left: -999em;
@@ -2179,10 +2181,11 @@ ul.as-selections {
   font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
   position: absolute;
   left: 0px;
-  top: 30px;
+  top: 27px;
   z-index: 99;
   margin-left: 0;
   width: 65px;
-  padding: 3px 5px 5px 5px;
-  background-color: rgba(0,0,0,0.3);
+  padding: 3px 0px 5px 0px;
+  background-color: rgba(235,235,235,0.3);
+  float: left;
 }
