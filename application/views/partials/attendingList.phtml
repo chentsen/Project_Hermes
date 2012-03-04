@@ -6,8 +6,9 @@
             $uid = $user->getUid();
     ?>
 	<div class="attending-item attending-item-<?= $uid ?>">
-	    <a href='/profile/public/uid/<?= $user->getUid() ?>'>
+	    <a class='friend-tooltip'  href='/profile/public/uid/<?= $user->getUid() ?>'>
 		<img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=70  width=70/>
+		<span class='friend-tooltip-name'><?= $user->getFirstName() ?> " . <?= substr($user->getLastName(),0,1) ?> . ".</span>
 	    </a>
 	    <div class='attending-details'>
 		<a href='/profile/public/uid/<?= $user->getUid() ?>'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?></a>
