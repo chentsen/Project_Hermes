@@ -2160,3 +2160,29 @@ ul.as-selections {
   padding: 3px 5px 5px 5px;
   background-color: rgba(0,0,0,0.3);
 }
+
+/*Events friend tooltip*/
+.event .friend-tooltip {
+  color: #000000;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+.event .friend-tooltip span {
+  margin-left: -999em;
+  position: absolute;
+  color: #FFFFFF;
+  text-align: center;
+}
+.event .friend-tooltip:hover span {
+  font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  z-index: 99;
+  margin-left: 0;
+  width: 65px;
+  padding: 3px 5px 5px 5px;
+  background-color: rgba(0,0,0,0.3);
+}
