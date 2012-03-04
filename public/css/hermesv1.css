@@ -1157,7 +1157,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	font-size: 10px;
 	line-height: 10px;
 	padding: 2px;
-	margin: 2px 0px 0px 5px;
+	margin: 2px 0px 0px 3px;
 }
 
 .profile_eventList .own-event {
@@ -1175,7 +1175,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	margin-top: 5px;
 	font-size: 14px;
 	color: #FF8600;
-	margin: 0 0 0 5px;
+	margin: 0 0 0 3px;
 }
 .right_col {
     overflow: auto;

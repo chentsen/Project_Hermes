@@ -8,7 +8,7 @@
     margin: 5px;
 }
 .right-block .mini-feed a {
-    width: 210px;
+    width: 215px;
     float: right;
     min-height: 30px;
 }
@@ -71,10 +71,10 @@
 }
 .individual-object {
     margin-bottom: 15px;
-    float: left;
+    float: right;
     font-size: 14px;
     color: #000000;
-    width: 223px
+    width: 214px;
 }
 .individual-object a {
     display: inline;
