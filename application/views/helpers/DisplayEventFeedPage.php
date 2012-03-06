@@ -53,15 +53,6 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
             if($feedObject->getEvent())
                 {
 					echo "<div class='event_main'>";
-					echo "<div class='event-left'><div class='event_img'>";
-					echo "<a href='/event/index/eid/".$feedObject->getEid()."' ><img src='/img/profile-pic/uid/".$feedObject->getEvent()->getCreator()->getUid()."' height='150' width='150' /></a></div>";
-					echo "<div class='event_self'>";
-					
-					if ($eventModel->isEventCreator($identity, $creator))
-					{ echo "<h4>You own this event.</h4>";}
-					else {echo "<h4>You're going to this event.</h4>";}
-					echo "</div>";
-					echo "</div>";
 					echo "<div class='event_right'>";
 					echo "<h1 class='event_title'>".$feedObject->getEvent()->getCreator()->getFirstName()." " .substr($feedObject->getEvent()->getCreator()->getLastName(),0,1)."."." wants to ".$feedObject->getShortDescription()."</h1>";
 					echo '<div class="event-status"><h4>';
@@ -73,10 +64,17 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					{ echo "Event has ended";}
 					echo '</h4></div>';
 					echo '<div class="event_date"><h4>'.$feedObject->getDate()->format('M d, Y').'</h4></div>';
-					
 					echo "<div class='event_place'><h4>".$feedObject->getEvent()->getLocation()."</h4></div>
-							<div class='event_location'><h4>".$feedObject->getEvent()->getLongDescription()."</h4></div>
-					</div></div>";			
-				}
+							<div class='event_location'><h4>".$feedObject->getEvent()->getLongDescription()."</h4></div></div>";			
+					echo "<div class='event-left'><div class='event_img'>";
+					echo "<a href='/event/index/eid/".$feedObject->getEid()."' ><img src='/img/profile-pic/uid/".$feedObject->getEvent()->getCreator()->getUid()."' height='150' width='150' /></a></div>";
+					echo "<div class='event_self'>";
+					
+					if ($eventModel->isEventCreator($identity, $creator))
+					{ echo "<h4>You own this event.</h4>";}
+					else {echo "<h4>You're going to this event.</h4>";}
+					echo "</div>";
+					echo "</div></div>";
+		}
 	}
 }
