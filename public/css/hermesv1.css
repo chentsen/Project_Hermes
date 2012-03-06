@@ -1787,8 +1787,8 @@ ul.as-selections {
 .single-event .event_title {
     float: right;
     margin-bottom: 10px;
-    width: 380px;
-    font-size: 28px;
+    width: 400px;
+    font-size: 26px;
 }
 .event-left {
 	float: right;
@@ -1834,6 +1834,13 @@ ul.as-selections {
     padding: 0px 0px 0px 12px;
     border-left: solid 1px #d9dbdf;
     min-height: 265px;
+}
+.event-list .event_main .event_right {
+    width: 400px;
+    float: right;
+    padding: 0px 0px 0px 12px;
+    border-left: solid 1px #d9dbdf;
+    min-height: 170px;
 }
 .event_main h4 {
     font-size: 15px;
