@@ -1603,6 +1603,7 @@ ul.as-selections {
     cursor: pointer;
     position: relative;
     margin-right: 20px;
+    height: 13px;
 }
 .tags-arrow {
 	width: 0;
@@ -2161,24 +2162,27 @@ ul.as-selections {
   cursor: pointer;
   text-decoration: none;
   position: relative;
-  font-size: 15px;
+  float: left;
 }
 .friend-tooltip span {
   margin-left: -999em;
   position: absolute;
-  color: #FFFFFF;
+  color: #000000;
   text-align: center;
 }
 .friend-tooltip:hover span {
   font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
   position: absolute;
   left: 0px;
-  top: 30px;
+  top: 0px;
   z-index: 99;
   margin-left: 0;
-  width: 65px;
-  padding: 3px 5px 5px 5px;
-  background-color: rgba(0,0,0,0.3);
+  width: 70px;
+  padding: 28px 0px 5px 0px;
+  background-color: rgba(235,235,235,0.5);
+  float: left;
+  height: 39px;
+  display: inline;
 }
 
 /*Events friend tooltip*/
