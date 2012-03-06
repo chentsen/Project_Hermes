@@ -1833,6 +1833,7 @@ ul.as-selections {
     float: right;
     padding: 0px 0px 0px 12px;
     border-left: solid 1px #d9dbdf;
+    min-height: 265px;
 }
 .event_main h4 {
     font-size: 15px;
@@ -2143,6 +2144,7 @@ ul.as-selections {
   cursor: pointer;
   text-decoration: none;
   position: relative;
+  font-size: 15px;
 }
 .friend-tooltip span {
   margin-left: -999em;
@@ -2181,11 +2183,12 @@ ul.as-selections {
   font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
   position: absolute;
   left: 0px;
-  top: 27px;
+  top: 0px;
   z-index: 99;
   margin-left: 0;
-  width: 65px;
-  padding: 3px 0px 5px 0px;
+  width: 70px;
+  padding: 28px 0px 5px 0px;
   background-color: rgba(235,235,235,0.3);
   float: left;
+  height: 42px;
 }

@@ -53,7 +53,6 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
             if($feedObject->getEvent())
                 {
 					echo "<div class='event_main'>";
-					echo "<h1 class='event_title'>".$feedObject->getEvent()->getCreator()->getFirstName()." " .substr($feedObject->getEvent()->getCreator()->getLastName(),0,1)."."." wants to ".$feedObject->getShortDescription()."</h1>";
 					echo "<div class='event-left'><div class='event_img'>";
 					echo "<a href='/event/index/eid/".$feedObject->getEid()."' ><img src='/img/profile-pic/uid/".$feedObject->getEvent()->getCreator()->getUid()."' height='150' width='150' /></a></div>";
 					echo "<div class='event_self'>";
@@ -64,6 +63,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					echo "</div>";
 					echo "</div>";
 					echo "<div class='event_right'>";
+					echo "<h1 class='event_title'>".$feedObject->getEvent()->getCreator()->getFirstName()." " .substr($feedObject->getEvent()->getCreator()->getLastName(),0,1)."."." wants to ".$feedObject->getShortDescription()."</h1>";
 					echo '<div class="event-status"><h4>';
 					if( $feedObject->getDate()->format('M d, Y') == $date->format('M d, Y'))
 					{ echo "Event is today";}
