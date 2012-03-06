@@ -1842,6 +1842,16 @@ ul.as-selections {
     border-left: solid 1px #d9dbdf;
     min-height: 170px;
 }
+.event-feed-title {
+	font-size: 26px;
+	width: 400px;
+	margin-bottom: 10px;
+	float: right;
+	color: #000000;
+}
+.event-feed-title:hover {
+	color: #FF8600;
+}
 .event_main h4 {
     font-size: 15px;
     padding: 6px 0px 5px 0px;
