@@ -2208,4 +2208,5 @@ ul.as-selections {
   background-color: rgba(235,235,235,0.5);
   float: left;
   height: 39px;
+  display: inline;
 }
