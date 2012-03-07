@@ -954,8 +954,8 @@ a.add-friend:hover {
 .search_friend_form input {
     padding: 0px 30px 0px 10px;
     width: 230px;
-    height: 30px;
-    font-size: 16px;
+    height: 24px;
+    font-size: 15px;
 }
 
 .search_friend_submit 
