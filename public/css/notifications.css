@@ -40,3 +40,6 @@
     display: inline;
     color: #FF8600;
 }
+.notification .view-notifications {
+    display: none;
+}
