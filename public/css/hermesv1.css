@@ -176,7 +176,7 @@ input[type=text]:first, input[type=password]:first {
 #header_block {
     top: 0;
     left: 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     -moz-box-shadow:0 1px 1px #111;
     -webkit-box-shadow: 0 1px 1px #1;
@@ -192,20 +192,22 @@ input[type=text]:first, input[type=password]:first {
      
 }
 #header_area .page {
-        height: 60px;
+        height: 53px;
        z-index: inherit;
 }
 /**logo**/
 #logo {
         float: left;
-        width: 193px;
-        height: 60px;
+        width: 162px;
+        height: 41px;
+	margin-top: 7px;
+	margin-left: 23px;
 }
 #logo h1{
         background: url('../images/plumetype-logo1.png') no-repeat top center;
         text-indent: -9999px;
-        width: 193px;
-        height: 60px;
+        width: 162px;
+        height: 41px;
 }
 /**** colors and clears *****/
 .orange { color: #FF8600; }
@@ -881,7 +883,7 @@ a.add-friend:hover {
 
 /** content area **/
 #content_area {
-	margin-top: 80px;
+	margin-top: 20px;
 }
 #content_area a {
 /**		color: #454545;**/
