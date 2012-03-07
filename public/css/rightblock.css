@@ -16,7 +16,7 @@
 .create_button {
     margin-bottom: 7px;
 }
-.create_button h1{
+.create_button h1 {
     height: 70px;
     width: 270px;
     margin: 0;
@@ -24,7 +24,7 @@
     text-indent: -9999px;
     background: url('../images/create-event.png') no-repeat top center;
 }
-.create_button h1:hover{
+.create_button h1:hover {
     background: url('../images/create-event-hover.png') no-repeat top center;
 }
 .right-block { 
@@ -67,11 +67,10 @@
     background: url('../images/minus-button.png') no-repeat left center;
 }
 .notifications_block .individual-object {
-    margin-bottom: 15px;
     float: right;
     font-size: 14px;
     color: #000000;
-    width: 214px;
+    width: 219px !important;
 }
 .individual-object a {
     display: inline;
@@ -101,27 +100,29 @@
 }
 
 .event-list ul.event-object {	
-	margin: 10px 0px 10px 4px;
+    margin: 10px 0px 10px 4px;
 }
 .notifications_block .notification-object {
-	overflow: hidden;
+    overflow: hidden;
 }
 .notifications_block .notification-object span {
-	color: #bbb;
-	font-size: 12px;
+    color: #bbb;
+    font-size: 12px;
 }
 .notifications_block .notification-object {	
-	margin: 0px;
+    margin: 0px;
 }
 .notifications_block img {
-	margin: 5px 15px 0px 10px;
+    margin: 5px 15px 0px 10px;
 }
-.view-notifications {
+.notifications_block .view-notifications {
     text-align: center;
+    display: block;
+    
 }
 .so-ronery {
-	font-size: 14px;
-	text-align: center;
-	padding: 15px 0;
-	color: #454545;
+    font-size: 14px;
+    text-align: center;
+    padding: 15px 0;
+    color: #454545;
 }
