@@ -106,7 +106,7 @@
 .notification-object {
 	overflow: hidden;
 }
-.notification .notification-object span {
+.block-body .notification-object span {
 	color: #bbb;
 	font-size: 12px;
 }
