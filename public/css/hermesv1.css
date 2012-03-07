@@ -34,6 +34,7 @@ select {
 	margin-right: 5px;
 	margin-top: 7px;
 	float: left;
+	color: #000000;
 }
 #editAccount textarea {
         width: 190px;
@@ -233,6 +234,7 @@ input[type=text]:first, input[type=password]:first {
 .account-edit #image {
 	margin-top: 20px;
 	margin-left: 20px;
+	color: #000000;
 }
 .account-edit .upload-image {
     border-right: 1px solid #D9DBDF;
@@ -257,8 +259,8 @@ input[type=text]:first, input[type=password]:first {
     margin-left: 40px;
 }
 #profilePic #profilePic_submit {
-    margin-top: 58px;
-    margin-left: 60px;
+    margin-top: 24px;
+    margin-left: 64px;
 }
 
 .account-edit #editAccount {
@@ -277,6 +279,7 @@ input[type=text]:first, input[type=password]:first {
     margin-left: 30px;
     font-size: 16px;
     margin-top: 5px;
+    color: #000000;
 }
 /*** profile page ****/
 .profile .questions_flow { 
@@ -1256,7 +1259,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 { 
   height: 35px;
   display: block;
-  background: #454545;
+  background: #000000;
   color: white;
   padding: 0 50px;
   float: left;
@@ -1273,18 +1276,6 @@ html .icon_bar ul li .sub-settings .last-setting a{
   background-position: 6px 5px;
   padding: 0px;
 }
-
-/*#wall_addPost:hover {
-  height: 28px;
-  display: block;
-  color: white;
-  float: left;
-  width: 30px;
-  background: url('../images/wall-comment.png') #333;
-  background-repeat: no-repeat;
-  background-position: 1px 1px;
-}*/
-
 .index #register {
    width: 200px;
 }
@@ -1296,7 +1287,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit:hover,
 #contact_submit:hover,
 #profilePic_submit:hover {
-    background: #333333;
+	color: #FF8600;
 }
 .inner_button {overflow: hidden;}
 .inner_button .register_button {
@@ -2093,42 +2084,19 @@ ul.as-selections {
 	margin-top: 0;
 	margin-left: 0;
 }
-/*** notification/event page ***/
-.notifications-title {
-	background: url('../images/notifications-line.png');
-	background-repeat: no-repeat;
-	background-position: 200px 20px;
-}
-.notification-object {
-	overflow: hidden;
-}
-.notification .notification-object,
-.event-list ul.event-object {	
-	margin: 10px 0px 10px 4px;
-}
-.single-event {
-    margin: 0 !important;
-    padding: 20px 10px;
-}
-.single-event a {
-	margin: 0px 0px 10px 0px;
-}
-.notification .notification-object span {
-	color: #bbb;
-	font-size: 12px;
-}
-.event-describer {
-	margin: 5px 0px;
-}
+
 .password-change .cms-page .cms-text {
 	background-color: #FFFFFF;
 
 }
 .change-password {
-	color: #FF8600;
+	color: #000000;
 	display: block;
 	float: right;
-	margin: 20px 20px 20px 80px;
+	margin: 20px 30px 20px 36px;
+}
+.change-password:hover {
+	color: #FF8600;
 }
 .password-change-text a {
 	color: #FF8600;

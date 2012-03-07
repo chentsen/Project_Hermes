@@ -13,9 +13,6 @@
     min-height: 30px;
 }
 
-.block-body .mini-feed {
-}
-
 .create_button {
     margin-bottom: 7px;
 }
@@ -79,10 +76,6 @@
 .individual-object a {
     display: inline;
 }
-.individual-object span {
-    font-size: 13px;
-    color: #aaa;
-}
 .upcoming_events {
     position: relative;
     background: url('../images/upcoming-events-line.png');
@@ -105,6 +98,17 @@
     background-position: 130px 14px;
     float: left;
     width: 270px;
+}
+
+.event-list ul.event-object {	
+	margin: 10px 0px 10px 4px;
+}
+.notification-object {
+	overflow: hidden;
+}
+.notification .notification-object span {
+	color: #bbb;
+	font-size: 12px;
 }
 .notifications_block img {
 	margin: 5px 15px 0px 10px;
