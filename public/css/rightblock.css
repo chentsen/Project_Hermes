@@ -106,11 +106,11 @@
 .notification-object {
 	overflow: hidden;
 }
-.block-body .notification-object span {
+.notifications_block .notification-object span {
 	color: #bbb;
 	font-size: 12px;
 }
-.block-body .notification-object {	
+.notifications_block .notification-object {	
 	margin: 0px;
 }
 .notifications_block img {
