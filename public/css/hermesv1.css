@@ -201,7 +201,6 @@ input[type=text]:first, input[type=password]:first {
         width: 162px;
         height: 41px;
 	margin-top: 7px;
-	margin-left: 23px;
 }
 #logo h1{
         background: url('../images/plumetype-logo1.png') no-repeat top center;
@@ -976,7 +975,6 @@ a.add-friend:hover {
 /***icon bar ****/
 .icon_bar {
 	float: right;
-	height: 60px;
 	margin-right: 60px;
 }
 .icon_bar .top-bar {
@@ -996,7 +994,7 @@ a.add-friend:hover {
 .icon_bar ul li .sub-settings {
     position: absolute;
     left: -80px;
-    top: 54px;
+    top: 49px;
     background: black;
     margin:0;
     padding: 0;
@@ -1007,7 +1005,7 @@ a.add-friend:hover {
 .icon_bar ul li .sub-setting2 {
     position: absolute;
     left: -154px;
-    top: 54px;
+    top: 49px;
     background: black;
     margin:0;
     padding: 0;
