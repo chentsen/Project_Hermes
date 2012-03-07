@@ -99,8 +99,9 @@
     width: 270px;
 }
 
+.notifications_block .notification-object,
 .event-list ul.event-object {	
-    margin: 10px 0px 10px 4px;
+    margin: 10px 0px 10px 4px !important;
 }
 .notifications_block .notification-object {
     overflow: hidden;
@@ -118,7 +119,6 @@
 .notifications_block .view-notifications {
     text-align: center;
     display: block !important;
-    
 }
 .so-ronery {
     font-size: 14px;

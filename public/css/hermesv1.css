@@ -1589,12 +1589,11 @@ ul.as-selections {
     background: #ff8600;
     color: white;
     float: left;
-    padding: 6px 10px 7px 10px;
+    padding: 5px 10px 7px 10px;
     margin-bottom: 5px;
     cursor: pointer;
     position: relative;
     margin-right: 20px;
-    height: 13px;
 }
 .tags-arrow {
 	width: 0;
