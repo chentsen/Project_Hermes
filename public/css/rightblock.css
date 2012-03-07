@@ -110,6 +110,9 @@
 	color: #bbb;
 	font-size: 12px;
 }
+.block-body .notification-object {	
+	margin: 0px;
+}
 .notifications_block img {
 	margin: 5px 15px 0px 10px;
 }
