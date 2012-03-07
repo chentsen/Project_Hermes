@@ -117,7 +117,7 @@
 }
 .notifications_block .view-notifications {
     text-align: center;
-    display: block;
+    display: block !important;
     
 }
 .so-ronery {
