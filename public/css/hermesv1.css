@@ -1522,8 +1522,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border: 1px solid #D9DBDF;
     margin: 10px 0px;
 }
+.tag_input_wrapper:focus {
+	border: 1px solid #000000;
+}
 .tag-wrapper {
-		float: left;
+	float: left;
 }
 .enter-tag {
 	font-size: 15px;
