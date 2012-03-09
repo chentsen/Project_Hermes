@@ -658,6 +658,16 @@ a.add-friend:hover {
 	
 }
 .index #registration{float: left; }
+.privacy .cms-text {
+    font-size: 16px;
+    overflow: auto;
+    color: #FFFFFF; 
+    padding: 10px 20px 20px 20px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 107px !important;
+}
+
 .cms-text {
     font-size: 16px;
     overflow: auto;
