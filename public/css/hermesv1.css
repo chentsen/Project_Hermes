@@ -9,6 +9,12 @@ body {
 	font-smooth: always;
 }
 
+p {
+	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-size: 14px;
+        font-weight: 100;
+}
+
 .index, .about, .contact, .privacy {
 	background-color: black;
 	background: url('../images/pt-background.jpg') no-repeat black;
@@ -857,12 +863,14 @@ a.add-friend:hover {
 }
 .index #footer_menu .left_footer li,
 .contact #footer_menu .left_footer li,
-.about #footer_menu .left_footer li {
+.about #footer_menu .left_footer li,
+.privacy #footer_menu .left_footer li {
 	color: #FFFFFF;
 }
 .index #footer_menu .left_footer li a,
 .contact #footer_menu .left_footer li a,
-.about #footer_menu .left_footer li a{
+.about #footer_menu .left_footer li a,
+.privacy #footer_menu .left_footer li a {
 	color: #FFFFFF;
 }
 #footer_menu .left_footer li{
