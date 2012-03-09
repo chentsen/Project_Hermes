@@ -15,17 +15,12 @@
 </head>
 <body class="<?= $this->LayoutClass() ?>">
 <div id="fb-root"></div>
-
-
-
-
 <div class="custom<?php 
         if(!$identity){ echo ' outside'; }?>">
     <?php echo $this->render('header.phtml') ?>
     
  	<div id="content_area">
  		<div class="page">     
-                   
 		    <div class="main_ajax_content">
 			<?php echo $this->layout()->content ?>
 		    </div>
@@ -36,45 +31,47 @@
                         <div class="create_button">
                             <a href="#" onclick="Dialog.showDialog({elementSelector:'#event_ajax_form',func:Dialog.loadEventDatePicker})"><h1>Create Event</h1></a>
                         </div>
-                        
-                         <div class="block-item upcoming_events">
+                        <div class="block-item upcoming_events">
                             <div class="block-header">
                                 <h4>Upcoming Events</h4>
+                            </div>
+                            <div class="block-body">
+                                <?= $this->DisplayEventFeed($identity, 5); ?>
+                            </div>
+                        </div>
+			<div class="block-item notifications_block">
+                            <div class="block-header">
+                                <h4>Notifications</h4>
                                  </div>
                                 <div class="block-body">
-                                <?= $this->DisplayEventFeed($identity, 5); ?>
+									
+                                <?= $this->DisplayGeneralFeed($identity); ?>
                                 </div>
-                           
                         </div>
                         <div class="block-item friends_block">
                             <div class="block-header">
                                 <h4>Friends</h4>
-                                 </div>
-                                <div class="block-body">
-									
+                            </div>
+                            <div class="block-body">
                                 <?= $this->DisplayFriends($identity); ?>
                                 </div>
-                           
                         </div>
+						
 
                         </div>
                     </div>
+                </div>
                      <!-- Dialog Stuff -->
-					<div class = "footer_ajax" style="display:none">
-						<div id="event_ajax_form">	
-							<?=$event?>
-						</div>
-						<div class ="modalWindow">
-						</div>
-				    
-					</div>
-					<div class = "modalBackground" style="display:none;"></div>
-					<div class ="dialogs"></div>	
-                                        
-                 
-
-	<? } ?>
+			<div class = "footer_ajax" style="display:none">
+			    <div id="event_ajax_form">	
+				<?=$event?>
+			    </div>
+			    <div class ="modalWindow"></div>
 			</div>
+			    <div class = "modalBackground" style="display:none;"></div>
+			    <div class ="dialogs"></div>	
+			<? } ?>
+			
 	</div>
        <?php
 	if(!$identity){ ?>
@@ -82,14 +79,11 @@
 						<div id="reg_ajax_form">	
 							<?= $reg ?>
 						</div>
-						<div class ="modalWindow">
-                                                    
-						</div>	
-					</div>
+						<div class ="modalWindow"></div>
+	</div>
 					<div class = "modalBackground" style="display:none;"></div>
-					<div class = 'dialogs' style="display:none">
-					</div>
-	</div>		
+					<div class = 'dialogs' style="display:none"></div>
+		
     <?}
      echo $this->render('footer.phtml');?>     
 

@@ -2,18 +2,19 @@
     <div class="page">
 			<ul class="left_footer">
                             <li><a href="<?= $this->url(array('controller'=>'about','action'=>'index'));?>">About Us</a></li>
-                            <!--<li><a href="http://plumetype.com/blog">Blog</a></li>-->
+				<!--<li><a href="http://plumetype.com/blog">Blog</a></li>-->
 				<li><a href="<?= $this->url(array('controller'=>'contact','action'=>'index'));?>">Contact Us</a></li>
 				<li><a href="<?= $this->url(array('controller'=>'privacy','action'=>'index'));?>">Privacy Policy</a></li>
                                 <li class="last-child">© 2012 PlumeType.com</li>
-                                
 				<!--<li>Sitemap</li>-->
 			</ul>
     <ul class="right_footer">
                 <li class="twitter_follow"><a href="https://twitter.com/PlumeType" class="twitter-follow-button" data-button="grey" data-text-color="#FFFFFF" data-link-color="#00AEFF" data-show-count="false">Follow @PlumeType</a>
-        <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script></li>
-                <li class="fb_like"><div id="fb-root"></div>
-        <script>(function(d, s, id) {
+		    <script src="//platform.twitter.com/widgets.js" type="text/javascript"></script>
+		</li>
+                <li class="fb_like">
+		    <div id="fb-root"></div>
+	<script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
           if (d.getElementById(id)) {return;}
           js = d.createElement(s); js.id = id;
@@ -21,7 +22,8 @@
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
-        <div class="fb-like" data-href="http://www.facebook.com/PlumeType" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div></li>
+        <div class="fb-like" data-href="http://www.facebook.com/PlumeType" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+		</li>
     </ul>
     </div>
 </div>

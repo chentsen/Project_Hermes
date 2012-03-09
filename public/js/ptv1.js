@@ -82,12 +82,6 @@ $(document).ready(function(){
    $('.remove-anchor').click(function(){
 	  $(this).hide('slow');
 	  });
-    /*** remove background image on any form input that has been submitted incorrectly **/
-			if($('input[type="text"]').val())
-                {
-					 
-					 $('input[type="text"]').addClass('removebg');	  
-				}
     
     /***** click menu top *****/
 	$('.icon_bar ul .friends-button').click(function(){
@@ -126,62 +120,7 @@ $(document).ready(function(){
     }
     ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body', '.upcoming_events .block-header');
     ToggleIt('.friends_block .block-header', '.friends_block .block-body', '.friends_block .block-header'); 
-  /*
-   
-   
-     $('.loginonce').click(function(){
-            $(this).hide(2000, function(){
-            $(this).remove();
-            });
-            $.cookie('loginOnce','removed');
-     });
-     
-     var loginOnce = $.cookie('loginOnce')
-     
-     if(loginOnce == 'removed') {
-         $('.loginonce').hide();
-     }
-     
-     */
-   
-        
-       
-        //registration page
-     /* function BdOrange(nClass, rClass){
-           
-          $(nClass).focus(function(){
-          $(this).addClass('change_border_color')
-          $(this).addClass('removebg');
-          
-          });
-          $(nClass).blur(function(){
-              if ($.trim(this.value) == '') { 
-                  $(this).removeClass('removebg');
-             }
-               $(this).removeClass('change_border_color');
-               
-          });
-      }
-        BdOrange('input[type=text], input[type=password]', 'input[type=text], input[type=password]');
-        
-        BdOrange('textarea', 'textarea');
-        
-        var BdRemove = function(noClass) {
-            $(noClass).focus(function(){
-                $(this).removeClass("change_border_color");
-            });
-            
-        } 
-        BdRemove('.profile #content_area .tag_input');
-          */
-            /****** events page *******/
-     //$( "#createEvent_date" ).datepicker({dateFormat: 'dd/mm/yy'});
-      
-   
-        
-  //login page and registration remove bg
-
-     
+    ToggleIt('.notifications_block .block-header', '.notifications_block .block-body', '.notifications_block .block-header'); 
            //email 
            function BgRemove(nClass) {
                 if($(nClass).val())
@@ -228,8 +167,8 @@ $(document).ready(function(){
 	  $('#email').defaultText({text: 'Email'});
 	} else if (window.location.pathname=='/password-change') {
 	  $('#originalPassword').defaultText({text: 'Original Password'});
-	  $('#password').defaultText({text: 'Password'});
-	  $('#password2').defaultText({text: 'Password Again'});
+	  $('#password').defaultText({text: 'New Password'});
+	  $('#password2').defaultText({text: ' New Password Again'});
 	}  else if (window.location.pathname=='/contact') {
 		 $('#email').defaultText({text: 'Email'});
 		 $('#name').defaultText({text: 'Name'});

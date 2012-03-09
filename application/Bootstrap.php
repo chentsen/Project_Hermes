@@ -1,5 +1,6 @@
 <?php
 use Wildkat\Application\Container\DoctrineContainer;
+require_once "Zend/Cache.php";
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
 	protected function _initDoctype()
@@ -95,6 +96,40 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		
 	}
 	*/
+	public function _initMemCache() {
+		$caching = Zend_Registry::get('config')->memCache->caching;
+		$lifetime = Zend_Registry::get('config')->memCache->lifetime;
+		$autoSerialize = Zend_Registry::get('config')->memCache->serialization;
+		$host = Zend_Registry::get('config')->memCache->host;
+		$port = Zend_Registry::get('config')->memCache->port;
 
+		$frontendOpts = array(
+			'caching' => $caching,
+			'lifetime' => $lifetime,
+			'automatic_serialization' => $autoSerialize
+		);
+		
+		$backendOpts = array(
+			'servers' =>array(
+				array(
+				'host' => $host,
+				'port' => $port
+				)
+			),
+			'compression' => false
+		);
+		$cache = Zend_Cache::factory('Core', 'Memcached', $frontendOpts, $backendOpts);
+		
+		Zend_Registry::set('Memcache', $cache);
+		/*** example */
+		/*$blah = "wahahhaha";
+		$cache->save($blah, 'blahman');
+		
+		$blahman = Zend_Registry::get('Memcache')->load('blahman');
+		
+		var_dump($blahman);*/
+		/*http://webhole.net/2009/11/27/how-to-cache-pages-with-zend/
+		***/
+	}
 }
 

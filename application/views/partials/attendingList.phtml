@@ -7,37 +7,35 @@
             $uid = $user->getUid();
 	    
     ?>
-	    
-	    <div class="attending-item attending-item-<?= $uid ?>">
-			<a href='/profile/public/uid/<?= $user->getUid() ?>'>
-		        <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
-	    	        <div class='attending-details'>
-			    <a href='/profile/public/uid/<?= $user->getUid() ?>'>
-				<?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?>
-			    </a>
-			</div>       			
-            
-	    </div>
+	<div class="attending-item attending-item-<?= $uid ?>">
+	    <a class='friend-tooltip'  href='/profile/public/uid/<?= $user->getUid() ?>'>
+		<img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=70  width=70/>
+		<span class='friend-tooltip-name'><?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) ?>.</span>
+	    </a>			  
+	</div>
 	<?php } ?>
 	<? if(!$this->isEventExpired) {
 		if (!($this->indexCreator || $this->indexMember) && !$this->didRequest) {
 	?>
-	    <a class='attend-button' style="background: url('/img/profile-pic/uid/<?=$this->curUser->getUid()?>') no-repeat center center; background-size: 100px 100px" href = '/event/request/eid/<?= $this->eid; ?>'>
-			<img class="attend-img"  src="/images/attend-hover.png" height="100px"  width="100px" />
-	    </a>
+	
+			    <a class='attend-button' style="background: url('/img/profile-pic/uid/<?=$this->curUser->getUid()?>') no-repeat center center; background-size: 70px 70px" href = '/event/request/eid/<?= $this->eid; ?>'>
+					<img class="attend-img"  src="/images/attend-hover.png" height="70px"  width="70px" />
+				</a>
 		   <!-- <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'><img src='/img/profile-pic/uid/<?= $this->curUser->getUid() ?>' height=100  width=100/></a></a>-->
 	<? 		}
 		}
 		else {
-			echo "<h2>The event has ended</h2>";
+			echo "<h3 class='event-ended'>This event has already ended.</h2>";
+
 		}
 	?>
 	
 
-<div class = "attending-list-ajax" style='display:none'>
+<div class="attending-list-ajax" style='display: none'>
     <div class="attending-item attending-item-<?= $uid ?>">
 		    <a href='/profile/public/uid/<?= $user->getUid() ?>'>
-	            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=100  width=100/></a>
+	            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=70  width=70/>
+		    </a>
             <?php if ($this->indexCreator || $this->indexMember) { ?>
 		    <div class='attending-details'>
 			<a id="attending_profile" href='/profile/public/uid/<?= $user->getUid() ?>'>
@@ -45,6 +43,5 @@
 			</a>
 		    </div>
             <?php } ?>        			
-    </div>
-    
+    </div> 
 </div>
