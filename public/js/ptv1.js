@@ -82,12 +82,6 @@ $(document).ready(function(){
    $('.remove-anchor').click(function(){
 	  $(this).hide('slow');
 	  });
-    /*** remove background image on any form input that has been submitted incorrectly **/
-			if($('input[type="text"]').val())
-                {
-					 
-					 $('input[type="text"]').addClass('removebg');	  
-				}
     
     /***** click menu top *****/
 	$('.icon_bar ul .friends-button').click(function(){
@@ -126,7 +120,7 @@ $(document).ready(function(){
     }
     ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body', '.upcoming_events .block-header');
     ToggleIt('.friends_block .block-header', '.friends_block .block-body', '.friends_block .block-header'); 
-
+    ToggleIt('.notifications_block .block-header', '.notifications_block .block-body', '.notifications_block .block-header'); 
            //email 
            function BgRemove(nClass) {
                 if($(nClass).val())
