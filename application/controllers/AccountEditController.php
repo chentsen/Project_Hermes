@@ -18,8 +18,8 @@ class AccountEditController extends Hermes_Controller_SessionController
                 /* Initialize action controller here */
                 $bootstrap = $this->getInvokeArg('bootstrap');
 		$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
-        /* Initialize action controller here */
-        $this->view->pageTitle = "Edit Your Account";
+		/* Initialize action controller here */
+		$this->view->pageTitle = "Edit Your Account";
         
         
 
@@ -62,9 +62,21 @@ class AccountEditController extends Hermes_Controller_SessionController
     	//var_dump($_FILES);
     	if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
     		if($form->image->isUploaded()){
+		    $filePath = $_FILES['image']['tmp_name'];
+		    $pathInfo = pathinfo($filePath);
+		    echo $filePath;
+		    
+		    //print_r($pathInfo);
+		    $type = explode('/',$_FILES['image']['type']);
+		    //$extension = str_replace('/','',$_FILES['image']['type']);
+		    $image_name = 'profile_pic_'.$this->curUser->getUid().'.'.$type[1];
+		    //echo $image_name;
+		    Application_Model_ImageModel::scaleImage($filePath,300,300,'/image/profile/'.$image_name,$type[1]);
+		    /*
 	    		$imageModel = new Application_Model_ImageModel($this->curUser);
+			
 	    		$imageModel->makeProfilePicture($_FILES['image']['tmp_name'],$_FILES['image']['type']);
-	    		$this->_redirect('/account-edit');
+	    		$this->_redirect('/account-edit');*/
 	    		//echo 'image saved!';
     		}
     	}else{

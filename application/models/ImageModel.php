@@ -31,6 +31,49 @@ class Application_Model_ImageModel extends Application_Model_BaseModel{
 				die();
 			}
 	}
-	
+	public static function scaleImage($source, $max_width, $max_height, $destination,$ext) {
+		$destinationRoot = Zend_Registry::get('config')->siteInformation->static_path;
+		$destination = $destinationRoot.$destination;
+		list($width, $height) = getimagesize($source);
+		if ($width > 150 || $height > 150) {
+		    $ratioh = $max_height / $height;
+		    $ratiow = $max_width / $width;
+		    $ratio = min($ratioh, $ratiow);
+		    // New dimensions
+		    $newwidth = intval($ratio * $width);
+		    $newheight = intval($ratio * $height);
+	    
+		    $newImage = imagecreatetruecolor($newwidth, $newheight);
+	    
+		    $exts = array("gif", "jpg", "jpeg", "png");
+		    $pathInfo = pathinfo($source);
+			
+		
+		    $sourceImage = null;
+	    
+		    // Generate source image depending on file type
+		    switch ($ext) {
+		    case "jpg":
+		    case "jpeg":
+			$sourceImage = imagecreatefromjpeg($source);
+			break;
+		    case "gif":
+			$sourceImage = imagecreatefromgif($source);
+			break;
+		    case "png":
+			$sourceImage = imagecreatefrompng($source);
+			break;
+		    }
+	    
+		    imagecopyresampled($newImage, $sourceImage, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
+	    
+		    // Output file depending on type
+		
+		
+			imagejpeg($newImage, $destination);
+			
+		
+		}
+	}
 
 }

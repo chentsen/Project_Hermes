@@ -13,11 +13,13 @@ abstract class Hermes_Controller_SessionController extends Zend_Controller_Actio
     {
 	$bootstrap = $this->getInvokeArg('bootstrap');	
         $this->identity = $this->_helper->GetIdentity->GetIdentity();
-		
+	    		
                 $mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
                 $dm = $mongoContainer->getDocumentManager('default');
                 $this->curUser = $dm->getRepository('Documents\User')->findOneBy(array('email'=>$this->identity));
-                //echo $this->identity;
+                //may break something.
+		$this->view->curUser = $this->curUser;
+		//echo $this->identity;
                 
         //if i'm not logged in then redirect to login page no matter what.
 	if(!$this->identity){
