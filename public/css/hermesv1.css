@@ -8,9 +8,10 @@ body {
 	-moz-font-smoothing: antialiased;
 	font-smooth: always;
 }
+
 .index, .about, .contact, .privacy {
 	background-color: black;
-	background: url('../images/pt-background.jpg') no-repeat;
+	background: url('../images/pt-background.jpg') no-repeat black;
 	background-position: center 0%;
 	background-size: 1440px 900px;
 	min-width: 960px;	
@@ -33,6 +34,7 @@ select {
 	margin-right: 5px;
 	margin-top: 7px;
 	float: left;
+	color: #000000;
 }
 #editAccount textarea {
         width: 190px;
@@ -174,7 +176,7 @@ input[type=text]:first, input[type=password]:first {
 #header_block {
     top: 0;
     left: 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     -moz-box-shadow:0 1px 1px #111;
     -webkit-box-shadow: 0 1px 1px #1;
@@ -190,20 +192,21 @@ input[type=text]:first, input[type=password]:first {
      
 }
 #header_area .page {
-        height: 60px;
+        height: 53px;
        z-index: inherit;
 }
 /**logo**/
 #logo {
         float: left;
-        width: 193px;
-        height: 60px;
+        width: 162px;
+        height: 41px;
+	margin-top: 7px;
 }
 #logo h1{
         background: url('../images/plumetype-logo1.png') no-repeat top center;
         text-indent: -9999px;
-        width: 193px;
-        height: 60px;
+        width: 162px;
+        height: 41px;
 }
 /**** colors and clears *****/
 .orange { color: #FF8600; }
@@ -232,6 +235,7 @@ input[type=text]:first, input[type=password]:first {
 .account-edit #image {
 	margin-top: 20px;
 	margin-left: 20px;
+	color: #000000;
 }
 .account-edit .upload-image {
     border-right: 1px solid #D9DBDF;
@@ -256,14 +260,14 @@ input[type=text]:first, input[type=password]:first {
     margin-left: 40px;
 }
 #profilePic #profilePic_submit {
-    margin-top: 58px;
-    margin-left: 60px;
+    margin-top: 24px;
+    margin-left: 64px;
 }
 
 .account-edit #editAccount {
     float: right;
     width: 280px;
-    margin-right: 20px;
+
 }
 #editAccount #submit{
     margin-left: 32px;
@@ -276,6 +280,7 @@ input[type=text]:first, input[type=password]:first {
     margin-left: 30px;
     font-size: 16px;
     margin-top: 5px;
+    color: #000000;
 }
 /*** profile page ****/
 .profile .questions_flow { 
@@ -316,11 +321,8 @@ margin-bottom: 2px;
 }
 
 .profile_eventList {
-		width: 180px;
-		overflow: hidden;
-}
-.eventFeedObject:first-child {
-	border-top: none;
+	width: 180px;
+	overflow: hidden;
 }
 .profile_eventList .eventFeedObject {
 }
@@ -339,7 +341,7 @@ margin-bottom: 2px;
 }
 .profile_rightCol {
     float: left;
-    width: 445px;
+    width: 395px;
     overflow: hidden;
     border-left: solid 1px #D9DBDF;
     padding: 0px 0px 0px 12px;
@@ -406,19 +408,6 @@ margin-bottom: 2px;
 	background-repeat: no-repeat;
 	background-position: 320px 20px;
 }
-.friends_block {
-	position: relative;
-	background: url('../images/friends-line.png');
-	background-repeat: no-repeat;
-	background-position: 87px 14px;
-}
-.so-ronery {
-	font-size: 14px;
-	text-align: center;
-	padding: 15px 0;
-	color: #454545;
-}
-
 /*** search page ****/
 .none-singleFound {
     margin-left: 15%;
@@ -525,7 +514,7 @@ a.add-friend:hover {
 	float: right;
 }
 .attend-img:hover {
-	opacity: .1;
+	opacity: 0;
 }
 .attend-img {
 		
@@ -834,76 +823,6 @@ a.add-friend:hover {
 #login_link {
 	
 }
-/*** right block area ***/
-.block-body{
-    overflow: hidden;
-    color: #000000;
-}
-
-.block-body .friend_list {
-	margin: 5px;
-}
-.right-block .mini-feed a {
-	width: 210px;
-	float: right;
-	min-height: 30px;
-}
-
-.block-body .mini-feed {
-}
-
-.create_button {
-	margin-bottom: 7px;
-}
-.create_button h1{
-    height: 70px;
-    width: 270px;
-    margin: 0;
-    padding: 0;
-    text-indent: -9999px;
-    background: url('../images/create-event.png') no-repeat top center;
-}
-.create_button h1:hover{
-    background: url('../images/create-event-hover.png') no-repeat top center;
-}
-.right-block { 
-    float: left;
-    width: 270px;
-    padding: 0px 0px 0px 12px;
-    border-left: solid 1px #D9DBDF;
-    height: 100%;
-}
-.right-block a {
-    color: #000000;
-    width: 100%;
-    display: block;
-}
-
-.right-block a:hover {
-	color: #ff8600;
-}
-
-.block-item h3 {
-    font-family: "Myriad Pro" ,verdana , tahoma, helvetica, sans-serif;
-    text-transform: uppercase;
-    margin-left: 4px;
-    font-weight: 500;
-}
-    
-.block-header {
-    padding: 5px;
-    background: url('../images/plus-button.png') no-repeat left center;
-    margin-bottom: 5px;
-}
-
-.block-header h4 {
-	margin-left: 17px;
-	color: #000000;
-}
-
-.block-close {
-    background: url('../images/minus-button.png') no-repeat left center;
-}
 /**footer area and footer menu**/
 .twitter_follow{
     width: 135px;
@@ -963,7 +882,7 @@ a.add-friend:hover {
 
 /** content area **/
 #content_area {
-	margin-top: 80px;
+	margin-top: 20px;
 }
 #content_area a {
 /**		color: #454545;**/
@@ -974,7 +893,7 @@ a.add-friend:hover {
         padding-bottom: 24px;
 }
 .view-wrapped {
-    width: 650px;
+    width: 600px;
     height: 100% !important;
     color: #454545;
     overflow: hidden;
@@ -1036,8 +955,8 @@ a.add-friend:hover {
 .search_friend_form input {
     padding: 0px 30px 0px 10px;
     width: 230px;
-    height: 30px;
-    font-size: 16px;
+    height: 24px;
+    font-size: 15px;
 }
 
 .search_friend_submit 
@@ -1045,9 +964,9 @@ a.add-friend:hover {
     float: right;
 }
 .search_friend_submit input {
-    margin-left: -70px;
-    width: 30px;
-    height: 30px;
+    margin-left: -63px;
+    width: 20px;
+    height: 20px;
     margin-top: 3px;
     border: none;
     background: url('../images/search.png') no-repeat top center;
@@ -1056,8 +975,7 @@ a.add-friend:hover {
 /***icon bar ****/
 .icon_bar {
 	float: right;
-	height: 60px;
-	margin-right: 20px;
+	margin-right: 60px;
 }
 .icon_bar .top-bar {
 	height: 50px;
@@ -1076,7 +994,7 @@ a.add-friend:hover {
 .icon_bar ul li .sub-settings {
     position: absolute;
     left: -80px;
-    top: 54px;
+    top: 49px;
     background: black;
     margin:0;
     padding: 0;
@@ -1087,7 +1005,7 @@ a.add-friend:hover {
 .icon_bar ul li .sub-setting2 {
     position: absolute;
     left: -154px;
-    top: 54px;
+    top: 49px;
     background: black;
     margin:0;
     padding: 0;
@@ -1214,16 +1132,15 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 .eventFeedObject, .generalFeedObject {
     padding: 6px 0px 6px 5px;
-    color: #454545;
     overflow: hidden;
 }
 
 .profile_eventList .mini-feed {
-		width: 170px;
+	width: 170px;
 }
 .mini-feed {
-		width: 265px;
-		float: left;
+	width: 265px;
+	float: left;
 }
 .mini-feed h4 {
 }
@@ -1240,10 +1157,10 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	display: block;
 	background-color: #FF8600;
 	color: white;
-	font-size: 11px;
+	font-size: 10px;
 	line-height: 10px;
-	padding: 3px 3px 3px 3px;
-	margin-top: 2px;
+	padding: 2px;
+	margin: 2px 0px 0px 3px;
 }
 
 .profile_eventList .own-event {
@@ -1259,9 +1176,9 @@ html .icon_bar ul li .sub-settings .last-setting a{
 .event-side-date {
 	float: left;
 	margin-top: 5px;
-	font-size: 15px;
+	font-size: 14px;
 	color: #FF8600;
-	margin: 0 0 0 1px;
+	margin: 0 0 0 3px;
 }
 .right_col {
     overflow: auto;
@@ -1342,30 +1259,23 @@ html .icon_bar ul li .sub-settings .last-setting a{
 { 
   height: 35px;
   display: block;
-  background: #454545;
+  background: #000000;
   color: white;
   padding: 0 50px;
   float: left;
 }
 
 #wall_addPost { 
-  height: 32px;
+  height: 28px;
   display: block;
-  background: #454545;
   color: white;
   float: left;
-  width: 174px;
+  width: 30px;
+  background: url('../images/comment-button.png') #000000;
+  background-repeat: no-repeat;
+  background-position: 6px 5px;
+  padding: 0px;
 }
-
-#wall_addPost:hover {
-  height: 32px;
-  display: block;
-  background: #333;
-  color: white;
-  float: left;
-  width: 174px;
-}
-
 .index #register {
    width: 200px;
 }
@@ -1376,9 +1286,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
 #submit_tag:hover, 
 #submit:hover,
 #contact_submit:hover,
-#profilePic_submit:hover,
-#wall_addPost:hover {
-    background: #333333;
+#profilePic_submit:hover {
+	color: #FF8600;
 }
 .inner_button {overflow: hidden;}
 .inner_button .register_button {
@@ -1613,8 +1522,11 @@ html .icon_bar ul li .sub-settings .last-setting a{
     border: 1px solid #D9DBDF;
     margin: 10px 0px;
 }
+.tag_input_wrapper:focus {
+	border: 1px solid #000000;
+}
 .tag-wrapper {
-		float: left;
+	float: left;
 }
 .enter-tag {
 	font-size: 15px;
@@ -1674,9 +1586,7 @@ ul.as-selections {
 .tags_base {
     z-index: -1;    
     min-height: 100px;
-      overflow: hidden;
-      
-      
+	overflow: hidden;
 }
 .tags {
     background: #ff8600;
@@ -1864,33 +1774,34 @@ ul.as-selections {
 .event_title {
     float: right;
     margin-bottom: 10px;
-    width: 450px;
-    font-size: 30px;
+    width: 400px;
+    font-size: 26px;
 }
 
 .single-event .event_title {
     float: right;
     margin-bottom: 10px;
-    width: 450px;
-    font-size: 30px;
+    width: 400px;
+    font-size: 26px;
 }
 .event-left {
-	float: left;
-	width: 180px;
+	float: right;
+	width: 150px;
+	padding: 0px 12px 0px 0px;
 }
 
 .event_self {
     color: #000000;
     float: left;
-    width: 180px;
+    width: 150px;
     font-size: 20px;
     display: block;
     background: url('../images/owner-marker.png');
-    background-position: 0px 2px;
+    background-position: 0px 3px;
     background-repeat: no-repeat;
 }
 .event_self h4 {
-	margin: 3px 0px 0px 16px !important;
+	margin: 4px 0px 0px 16px !important;
 	padding: 0px !important;
 	font-size: 15px !important;
 	color: #000000;
@@ -1898,13 +1809,13 @@ ul.as-selections {
 }
 .event_main {
     overflow: hidden;
-    width: 650px;
+    width: 600px;
 }
 .event_main .event_img {
     float: left;
     padding: 0px 20px 0px 0px;
-    height: 180px;
-    width: 180px;
+    height: 150px;
+    width: 150px;
 }
 .event_main .event_img img{ 
 }
@@ -1912,14 +1823,33 @@ ul.as-selections {
     float: right;
 }
 .event_main .event_right {
-    width: 380px;
-    float: left;
-    padding: 0 40px 0 50px;
+    width: 400px;
+    float: right;
+    padding: 0px 0px 0px 12px;
+    border-left: solid 1px #d9dbdf;
+    min-height: 265px;
+}
+.event-list .event_main .event_right {
+    width: 400px;
+    float: right;
+    padding: 0px 0px 0px 12px;
+    border-left: solid 1px #d9dbdf;
+    min-height: 170px;
+}
+.event-feed-title {
+	font-size: 26px;
+	width: 400px;
+	margin-bottom: 10px;
+	float: right;
+	color: #000000;
+}
+.event-feed-title:hover {
+	color: #FF8600;
 }
 .event_main h4 {
-    font-size: 20px;
+    font-size: 15px;
     padding: 6px 0px 5px 0px;
-    margin: 1px 0px 0px 25px;
+    margin: 3px 0px 0px 30px;
     float: left;
 }
 .event_date {
@@ -1928,7 +1858,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
-	margin-right: 50px;
+	margin-left: 80px;
 	width: 300px;
 }
 .event-status {
@@ -1937,7 +1867,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
-	margin-right: 50px;
+	margin-left: 80px;
 	width: 300px;
 }
 .event_place {
@@ -1946,6 +1876,7 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
+	margin-left: 80px;
 	width: 300px;
 }
 .event_location {
@@ -1954,18 +1885,26 @@ ul.as-selections {
 	background-repeat: no-repeat;
 	background-position: 0px 10px;
 	float: left;
+	margin-left: 80px;
 	width: 300px;
 }
 .interested_list {
 	margin-top: 10px;
 	overflow: hidden;
 }
+.attending-list-ajax {
+	width: 150px;
+	float: left;
+	display: none;
+}
 .attending-title {
 	position: relative;
 	background: url('../images/attending-line.png');
 	background-repeat: no-repeat;
-	background-position: 121px 13px;
+	background-position: 112px 13px;
 	margin: 10px 0px;
+	float: left;
+	width: 150px;
 }
 .attendingList {
 	margin-top: 5px;
@@ -2023,7 +1962,6 @@ ul.as-selections {
 	font-size: 13px;
 	height: 25px;
 	line-height: 13px;
-	width: 100px;
 	height: 14px;
 	margin-top: 2px;
 	color: #000000;
@@ -2031,18 +1969,29 @@ ul.as-selections {
 .attending-details a {
 	color: #000000;
 }
-.waiting-item{
+.waiting-item {
 	float: left;
-	margin-right: 15px;
+	margin-right: 5px;
 }
 .attending-item {
 		float: left;
-		margin-right: 15px;
+		margin-right: 5px;
+		margin-bottom: 5px;
 }
-.interested_list .waitingList .waitingImg span,
-.event_wall {
-	float: left;
+.interested_list .waitingList .waitingImg span {
+	float: right;
 	display: block;
+	width: 400px;
+}
+.event_wall {
+	margin-top: 25px;
+}
+.event-detail-wrapper {
+	min-height: 155px;
+}
+.interested-list {
+	width: 150px;
+	float: left;
 }
 .event_wall .wall_image span
 {
@@ -2059,22 +2008,22 @@ ul.as-selections {
 	float: left;
 }
 .event_wall .wall_title {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     position: relative;
     background: url('../images/event-wall-line.png');
     background-repeat: no-repeat;
-    background-position: 59px 13px;
+    background-position: 60px 13px;
     float: left;
-    width: 650px;
+    width: 410px;
 }
 .event_wall .wall_image {
     position: relative;
     float: left;
 }
 .event_wall .wall_name {
-    font-size: 18px;
+    font-size: 15px;
     float: left;
-    margin: 25px 10px 10px 20px;
+    margin: 13px 10px 10px 20px;
 }
 .event_wall .posts {
     overflow: hidden;
@@ -2082,16 +2031,16 @@ ul.as-selections {
 .event_wall .wallpost {
     float: left;
     position: relative;
-    width: 640px;
+    width: 380px;
     margin-bottom: 10px;
     color: #000000;
 }
 .event_wall .wall_text {
     word-wrap: break-word;	
     float: left;
-    margin: 25px 0px 0px 6px;
-    font-size: 18px;
-    width: 430px;
+    margin: 13px 0px 0px 10px;
+    font-size: 15px;
+    width: 225px;
 }
 .event_wall .wallpost a{
     margin-left: 7px;
@@ -2104,8 +2053,10 @@ ul.as-selections {
 .event_wall #wall_comment {
     float: left;
     margin: 0px;
-    width: 465px !important;
     border-right: none !important;
+    font-size: 16px;
+    height: 26px;
+    width: 360px;
 }
 
 #wall_comment:focus {
@@ -2135,46 +2086,22 @@ ul.as-selections {
 	margin-top: 0;
 	margin-left: 0;
 }
-/*** notification/event page ***/
-.notifications-title {
-	background: url('../images/notifications-line.png');
-	background-repeat: no-repeat;
-	background-position: 200px 20px;
-}
-.notification-object {
-	overflow: hidden;
-}
-.notification .notification-object,
-.event-list ul.event-object {	
-	margin: 10px 0px 10px 4px;
-}
-.single-event {
-    margin: 0 !important;
-    padding: 20px 10px;
-}
-.single-event a {
-	margin: 10px 0px;
-}
-.notification .notification-object span {
-	color: #bbb;
-	font-size: 12px;
-}
-.individual-object {
-	margin-bottom: 3px;
-	float: left;
-	font-size: 16px;
-}
-.individual-object a {
-	color: #FF8600;
-}
-.event-describer {
-	margin: 5px 0px;
+
+.password-change .cms-page .cms-text {
+	background-color: #FFFFFF;
+
 }
 .change-password {
-	color: #FF8600;
+	color: #000000;
 	display: block;
-	float: left;
-	margin: 20px 20px 20px 80px;
+	float: right;
+	margin: 20px 30px 20px 36px;
+}
+.change-password:hover {
+	color: #FF8600;
+}
+.password-change-text a {
+	color: #FF8600;
 }
 #passwordReset #submit {
 	height: 32px;
@@ -2187,5 +2114,73 @@ ul.as-selections {
 }
 #passwordReset li {
 	height: 32px;
-	margin: 0;
+	margin: 0px 10px 0px 0px;
+}
+#passwordReset li:last-child {
+	margin-right: 0px !important;
+}
+
+.password-change-text {
+	display: block;
+	float: left;
+	margin-top: 10px;
+	width: 790px;
+}
+.friend-tooltip {
+  color: #000000;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  float: left;
+}
+.friend-tooltip span {
+  margin-left: -999em;
+  position: absolute;
+  color: #000000;
+  text-align: center;
+}
+.friend-tooltip:hover span {
+  font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 99;
+  margin-left: 0;
+  width: 70px;
+  padding: 28px 0px 5px 0px;
+  background-color: rgba(235,235,235,0.5);
+  float: left;
+  height: 39px;
+  display: inline;
+}
+
+/*Events friend tooltip*/
+.event .friend-tooltip {
+  color: #000000;
+  outline: none;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  float: left;
+}
+.event .friend-tooltip span {
+  margin-left: -999em;
+  position: absolute;
+  color: #000000;
+  text-align: center;
+}
+.event .friend-tooltip:hover span {
+  font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 99;
+  margin-left: 0;
+  width: 70px;
+  padding: 28px 0px 5px 0px;
+  background-color: rgba(235,235,235,0.5);
+  float: left;
+  height: 39px;
+  display: inline;
 }

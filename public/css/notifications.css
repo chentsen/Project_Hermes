@@ -1,0 +1,44 @@
+/*** notification page ***/
+.notifications-title {
+	background: url('../images/notifications-line.png');
+	background-repeat: no-repeat;
+	background-position: 200px 20px;
+}
+.notification .notification-object {
+	overflow: hidden;
+}
+.notification .notification-object,
+.event-list ul.event-object {	
+	margin: 10px 0px 10px 4px;
+}
+.single-event {
+    margin: 0 !important;
+    padding: 20px 10px;
+}
+.single-event a {
+	margin: 0px 0px 10px 0px;
+}
+.notification .notification-object span {
+	color: #bbb;
+	font-size: 12px;
+}
+.event-describer {
+	margin: 5px 0px;
+}
+.notification .individual-object {
+    float: left;
+    font-size: 14px;
+    color: #000000;
+    width: 340px;
+}
+.notification .individual-object a {
+    display: inline;
+    color: #000000;
+}
+.notification .individual-object a:hover {
+    display: inline;
+    color: #FF8600;
+}
+.notification .view-notifications {
+    display: none;
+}
