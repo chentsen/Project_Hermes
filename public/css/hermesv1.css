@@ -678,11 +678,11 @@ a.add-friend:hover {
 	z-index: 3;
 }
 .signup-transparency {
-		position: fixed;
+		position: absolute;
 		top: 0;
 		left: 0;
 		width: 100%;
-		height: 80%;
+		height: 600px;
 		z-index: 0;
 }
 .homepage-bottom {
