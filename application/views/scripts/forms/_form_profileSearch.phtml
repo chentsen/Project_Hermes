@@ -14,11 +14,14 @@
                       <img height="50" src="<?= $this->baseUrl('images/friends-icon.png') ?>" />
 					  
 					  <ul class="sub-setting2">
-						<?php $auth = Zend_Auth::getInstance(); 
-                    if($auth->hasIdentity()){ 
-                    	$this->identity = $auth->getIdentity()?>
+						<?php $auth = Application_Model_UserSettings::hasIdentity();
+					
+						if($auth){ 
+                    	$this->identity = $auth; ?>
+						
 						<?$this->DisplayPendingRequests($this->identity); ?>
 						<?php } ?>
+					  
 					  </ul>
                 </li>
                 <li class="notifications-button">
