@@ -37,7 +37,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 	}
 	private function printEventResult(Documents\Search\EventResult $event,$identity){
 		$returnString = ' ';
-		echo "<div class = 'event_result'>";
+		echo "<li class = 'event_result'>";
 		echo "<a href = '/event/index/eid/{$event->result->getEid()}'>";
 		echo "<img src='/img/profile-pic/uid/{$event->result->getCreator()->getUid()}' height=75  width=75 /> </a>";
 		echo "<div class='user-info'>
