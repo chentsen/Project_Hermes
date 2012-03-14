@@ -1,11 +1,9 @@
 <h3 class="attending-title">Attending</h3>
-
-    <?php
-        $attendingList = $this->event->getMembers();
-        foreach($attendingList as $user){
-	    $eid = $this->event->getEid();
+	<?php 
+    $attendingList = $this->event->getMembers();
+    foreach($attendingList as $user){
+			$eid = $this->event->getEid();
             $uid = $user->getUid();
-	    
     ?>
 	<div class="attending-item attending-item-<?= $uid ?>">
 	    <a class='friend-tooltip'  href='/profile/public/uid/<?= $user->getUid() ?>'>
@@ -15,7 +13,7 @@
 	</div>
 	<?php } ?>
 	<? if(!$this->isEventExpired) {
-		if (!($this->indexCreator || $this->indexMember) && !$this->didRequest) {
+	    if (!($this->indexCreator || $this->indexMember) && !$this->didRequest) {
 	?>
 	
 			    <a class='attend-button' style="background: url('/img/profile-pic/uid/<?=$this->curUser->getUid()?>') no-repeat center center; background-size: 70px 70px" href = '/event/request/eid/<?= $this->eid; ?>'>
@@ -23,13 +21,13 @@
 				</a>
 		   <!-- <a class='attend-button' href = '/event/request/eid/<?= $this->eid; ?>'><img src='/img/profile-pic/uid/<?= $this->curUser->getUid() ?>' height=100  width=100/></a></a>-->
 	<? 		}
+		
 		}
 		else {
 			echo "<h3 class='event-ended'>This event has already ended.</h2>";
 
 		}
-	?>
-	
+		?>
 
 <div class="attending-list-ajax" style='display: none'>
     <div class="attending-item attending-item-<?= $uid ?>">
@@ -37,11 +35,7 @@
 	            <img src='/img/profile-pic/uid/<?= $user->getUid() ?>' height=70  width=70/>
 		    </a>
             <?php if ($this->indexCreator || $this->indexMember) { ?>
-		    <div class='attending-details'>
-			<a id="attending_profile" href='/profile/public/uid/<?= $user->getUid() ?>'>
-				<?= $user->getFirstName() ?> <?= substr($user->getLastName(),0,1) . "."?>
-			</a>
-		    </div>
+		    <div class='attending-details'></div>
             <?php } ?>        			
     </div> 
 </div>

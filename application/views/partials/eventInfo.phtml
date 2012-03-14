@@ -44,7 +44,7 @@
                 echo "<h4>You're going to this event.</h4>";
             } ?>
                 </div>
-                <?= $this->partial('attendingList.phtml',array('event'=>$this->event,'identity'=>$this->identity, 'indexCreator'=>$this->indexCreator)); ?>
+                <?= $this->partial('attendingList.phtml',array('event'=>$this->event,'identity'=>$this->identity, 'indexCreator'=>$this->indexCreator, 'isEventExpired'=>$this->isEventExpired)); ?>
                 <div class="interested-list"><?= $this->DisplayInterestedList($this->event) ?></div>
             </div>
         </div>
