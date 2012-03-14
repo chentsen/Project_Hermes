@@ -2,22 +2,10 @@
 $this->headScript()->appendFile($this->baseUrl('js/wall.js'));
 $eid = $this->event->getEid();
 ?>
-<?= $this->partial('eventInfo.phtml',array('event'=>$this->event,'identity'=>$this->identity)); ?>
-	<div class="attendingList">
-	<?= $this->partial('attendingList.phtml',array('event'=>$this->event,'identity'=>$this->identity, 'indexCreator'=>$this->indexCreator,'isEventExpired'=>$this->isEventExpired)); ?>
-<!--<?= $this->event->getLongDescription() ?>-->
-		
-		<?= $this->DisplayInterestedList($this->event) ?>
-	</div>
- <div class ="event_wall">
-    <h3 class="wall_title">Wall</h3>
-    <div id="posts">
-    </div>
-		<?= $this->DisplayEventWall($this->event,$this->identity) ?>
- </div>
- <div class="ajax_template" style="display:none">
-     <?= $this->partial('wall_post.phtml') ?>
- </div>
+	<?= $this->partial('eventInfo.phtml',array('event'=>$this->event,'identity'=>$this->identity, 'indexCreator'=>$this->indexCreator)); ?>
+	
+	<?= $this->DisplayInterestedList($this->event) ?>
+ 
 	
 </div>
 </div>

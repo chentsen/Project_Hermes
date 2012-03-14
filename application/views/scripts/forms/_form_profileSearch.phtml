@@ -11,23 +11,26 @@
             <ul class="top-bar">
                 <li class="friends-button">
                   
-                      <img height="50" src="<?= $this->baseUrl('images/friends-icon.png') ?>" />
+                      <img height="40" src="<?= $this->baseUrl('images/friends-icon.png') ?>" />
 					  
 					  <ul class="sub-setting2">
-						<?php $auth = Zend_Auth::getInstance(); 
-                    if($auth->hasIdentity()){ 
-                    	$this->identity = $auth->getIdentity()?>
+						<?php $auth = Application_Model_UserSettings::hasIdentity();
+					
+						if($auth){ 
+                    	$this->identity = $auth; ?>
+						
 						<?$this->DisplayPendingRequests($this->identity); ?>
 						<?php } ?>
+					  
 					  </ul>
                 </li>
                 <li class="notifications-button">
                   <a href="<?= $this->url(array('controller'=>'notification','action'=>'index')) ?>">
-                      <img height="50" src="<?= $this->baseUrl('images/notifications-icon.png') ?>" /></a>
+                      <img height="40" src="<?= $this->baseUrl('images/notifications-icon.png') ?>" /></a>
                 </li>
                  <li class="settings-button">
                   
-                     <img height="50" src="<?= $this->baseUrl('images/settings.png') ?>" />
+                     <img height="40" src="<?= $this->baseUrl('images/settings.png') ?>" />
                    
                      <ul class="sub-settings">
                          <li class="first-setting"><a href="<?= $this->url(array('controller'=>'account-edit','action'=>'index')) ?>">Edit Account Info</a></li>

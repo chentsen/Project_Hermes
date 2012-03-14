@@ -10,7 +10,8 @@ class IndexController extends Zend_Controller_Action
 		}
     	$bootstrap = $this->getInvokeArg('bootstrap');
     	$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
-    	
+
+
 		$this->userSettings = new Application_Model_UserSettings($this->mongoContainer);
     	/* Initialize action controller here */
         $this->dm = Zend_Registry::get('Wildkat\DoctrineContainer')->getDocumentManager('default');

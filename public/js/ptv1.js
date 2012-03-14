@@ -82,12 +82,6 @@ $(document).ready(function(){
    $('.remove-anchor').click(function(){
 	  $(this).hide('slow');
 	  });
-    /*** remove background image on any form input that has been submitted incorrectly **/
-			if($('input[type="text"]').val())
-                {
-					 
-					 $('input[type="text"]').addClass('removebg');	  
-				}
     
     /***** click menu top *****/
 	$('.icon_bar ul .friends-button').click(function(){
@@ -125,8 +119,7 @@ $(document).ready(function(){
       
     }
     ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body', '.upcoming_events .block-header');
-    ToggleIt('.friends_block .block-header', '.friends_block .block-body', '.friends_block .block-header'); 
-          
+    ToggleIt('.friends_block .block-header', '.friends_block .block-body', '.friends_block .block-header');           
 
 		 
       /** disable highlights ***/
@@ -152,8 +145,8 @@ $(document).ready(function(){
 	  $('#email').defaultText({text: 'Email'});
 	} else if (window.location.pathname=='/password-change') {
 	  $('#originalPassword').defaultText({text: 'Original Password'});
-	  $('#password').defaultText({text: 'Password'});
-	  $('#password2').defaultText({text: 'Password Again'});
+	  $('#password').defaultText({text: 'New Password'});
+	  $('#password2').defaultText({text: ' New Password Again'});
 	}  else if (window.location.pathname=='/contact') {
 		 $('#email').defaultText({text: 'Email'});
 		 $('#name').defaultText({text: 'Name'});

@@ -37,11 +37,11 @@ class ErrorController extends Zend_Controller_Action
         
         // conditionally display exceptions
         //don't display for now since there is no development setting
-        if($environment == 'development') {
+     
             if ($this->getInvokeArg('displayExceptions') == true) {
                 $this->view->exception = $errors->exception;
             }
-        }
+        
         $this->view->request   = $errors->request;
     }
 

@@ -1,12 +1,13 @@
 <?php
 $this->headScript()->appendFile($this->baseUrl('js/questions.js'));
+$imgPath = Application_Model_Utils_ImageUtil::getProfilePicURL($this->curUser);
 ?>
 <div id="view-content">
     <div class="view-wrapped">
 <div class="top-block">
     <div class="upload-image float_left">
 <h1>Upload picture</h1>
-<img src="/img/profile-pic/uid/<?=$this->curUser->getUid() ?>" height=180  width=180/>
+<img src="<?= $imgPath; ?>" height=180  width=180/>
 
         <?= $this->profilePic_form; ?>
         

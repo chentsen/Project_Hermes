@@ -58,7 +58,7 @@
 	var settings = {
 				inEffect: 			{opacity: 'show'},	// in effect
 				inEffectDuration: 	600,				// in effect duration in miliseconds
-				stayTime: 			3000,				// time in miliseconds before the item has to disappear
+				stayTime: 			6000,				// time in miliseconds before the item has to disappear default 3000
 				text: 				'',					// content of the item. Might be a string or a jQuery object. Be aware that any jQuery object which is acting as a message will be deleted when the toast is fading away.
 				sticky: 			false,				// should the toast item sticky or not?
 				type: 				'notice', 			// notice, warning, error, success
