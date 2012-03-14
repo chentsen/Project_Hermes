@@ -840,10 +840,16 @@ a.add-friend:hover {
 .fb_like{
     width: 100px;
 }
+.custom .outside #footer_menu {
+	font-size:12px;
+   z-index: 10;
+   float: left;
+}
 #footer_menu {
    font-size:12px;
    z-index: 10;
    float: left;
+   margin-left: 120px;
 }
 #footer_menu .page {
     overflow: auto;
