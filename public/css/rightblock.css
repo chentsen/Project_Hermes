@@ -54,7 +54,7 @@
     
 .block-header {
     padding: 5px;
-    background: url('../images/plus-button.png') no-repeat left center;
+    /*background: url('../images/plus-button.png') no-repeat left center;*/
     margin-bottom: 5px;
 }
 

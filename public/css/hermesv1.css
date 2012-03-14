@@ -402,12 +402,6 @@ margin-bottom: 2px;
 }
 .friend_list {float: left; margin: 12px 14px 2px 14px;}
 
-.upcoming_events {
-	position: relative;
-	background: url('../images/upcoming-events-line.png');
-	background-repeat: no-repeat;
-	background-position: 166px 14px;
-}
 .events-list-title {
 	background: url('../images/event-list-line.png');
 	background-repeat: no-repeat;
