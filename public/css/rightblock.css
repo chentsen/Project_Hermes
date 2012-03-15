@@ -17,9 +17,9 @@
     margin-bottom: 7px;
 }
 .create_button h1 {
-    height: 70px;
-    width: 270px;
-    margin: 0;
+    height: 55px;
+    width: 250px;
+    margin: 7px 0px 13px 0px;
     padding: 0;
     text-indent: -9999px;
     background: url('../images/create-event.png') no-repeat top center;
