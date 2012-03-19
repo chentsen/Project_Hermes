@@ -5,10 +5,12 @@
 }
 
 .block-body .friend_list {
-    margin: 0px 7px 0px 0px;
+    margin: 2px 7px 5px 0px;
+    width: 30px;
+    height: 30px;
 }
 .right-block .mini-feed a {
-    width: 215px;
+    width: 224px;
     float: right;
     min-height: 30px;
 }
@@ -53,7 +55,7 @@
 }
     
 .block-header {
-    padding: 5px;
+    padding: 5px 0px 5px 0px;
     /*background: url('../images/plus-button.png') no-repeat left center;*/
 }
 
@@ -68,7 +70,7 @@
     float: right;
     font-size: 14px;
     color: #000000;
-    width: 214px !important;
+    width: 229px !important;
 }
 .individual-object a {
     display: inline;
@@ -99,7 +101,7 @@
 
 .notifications_block .notification-object,
 .event-list ul.event-object {	
-    margin: 7px 0px 10px 4px !important;
+    margin: 0px 0px 10px 4px !important;
 }
 .notifications_block .notification-object {
     overflow: hidden;
@@ -112,7 +114,9 @@
     margin: 0px;
 }
 .notifications_block img {
-    margin: 5px 15px 0px 10px;
+    margin: 2px 0px 0px 0px !important;
+    height: 30px;
+    width: 30px;
 }
 .notifications_block .view-notifications {
     text-align: center;
