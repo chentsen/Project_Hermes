@@ -381,7 +381,7 @@ margin-bottom: 2px;
 #friendsList ul {
 	overflow: hidden;
 	width: 260px;
-	margin: 7px auto 5px auto;
+	margin: 0px auto 5px auto;
 }
 .friends-title {
 	background: url('../images/friends-all-line.png');
@@ -1952,7 +1952,9 @@ ul.as-selections {
 }
 .event_allow {
 	color: #000000;
-	margin-left: 10px;
+	width: 70px;
+	text-align: center;
+	height: 70px;
 }
 .event_allow a {
 	font-size: 13px;
@@ -1969,10 +1971,8 @@ ul.as-selections {
 .waiting-details {
 	text-align: center;
 	font-size: 13px;
-	height: 25px;
 	line-height: 13px;
-	width: 100px;
-	height: 25px;
+	width: 70px;
 	margin-top: 2px;
 	color: #000000;
 }
