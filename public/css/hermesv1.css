@@ -1005,7 +1005,8 @@ a.add-friend:hover {
 .icon_bar .top-bar .friends-button{
 	list-style: none;
 	float: left;
-	position: relative; 
+	position: relative;
+	cursor: pointer;
 }
 .icon_bar ul li a {
 	float: left;
