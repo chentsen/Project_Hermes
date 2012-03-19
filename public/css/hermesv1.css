@@ -1151,7 +1151,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     min-height: 400px;
 }
 .eventFeedObject, .generalFeedObject {
-    padding: 6px 0px 6px 5px;
+    padding: 6px 0px 6px 2px;
     overflow: hidden;
 }
 
@@ -1180,7 +1180,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	font-size: 10px;
 	line-height: 10px;
 	padding: 2px;
-	margin: 2px 0px 0px 8px;
+	margin: 2px 0px 0px 0px;
 }
 
 .profile_eventList .own-event {
@@ -1195,10 +1195,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
 }
 .event-side-date {
 	float: left;
-	margin-top: 5px;
 	font-size: 14px;
 	color: #FF8600;
-	margin: 0 0 0 8px;
 }
 .right_col {
     overflow: auto;
