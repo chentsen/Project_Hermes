@@ -33,7 +33,7 @@ class Zend_View_Helper_DisplayGeneralFeed extends Application_View_Helper_Displa
 			 
 			 echo '</ul>';
 		} else {
-				echo "<h3>No activity found</h3>";
+				echo "<a class='so-ronery'>No activity found</a>";
 		}
 		echo "</div>";
 	}

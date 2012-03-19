@@ -25,8 +25,8 @@ p {
 div { display: block; }
 /*** form styles*****/
 select {
-    margin: 3px 0px 0px 5px;
-    width: 140px;
+    margin: 2px 0px 0px 5px;
+    width: 139px;
     font-size: 16px;
 }
 #editAccount select{
@@ -1005,7 +1005,8 @@ a.add-friend:hover {
 .icon_bar .top-bar .friends-button{
 	list-style: none;
 	float: left;
-	position: relative; 
+	position: relative;
+	cursor: pointer;
 }
 .icon_bar ul li a {
 	float: left;
