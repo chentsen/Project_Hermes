@@ -67,7 +67,7 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
 					echo "<div class='event_place'><h4>".$feedObject->getEvent()->getLocation()."</h4></div>
 							<div class='event_location'><h4>".$feedObject->getEvent()->getLongDescription()."</h4></div></div>";			
 					echo "<div class='event-left'><div class='event_img'>";
-					echo "<a href='/event/index/eid/".$feedObject->getEid()."' ><img src='/img/profile-pic/uid/".$feedObject->getEvent()->getCreator()->getUid()."' height='150' width='150' /></a></div>";
+					echo "<a href='/event/index/eid/".$feedObject->getEid()."' ><img src='".Application_Model_Utils_ImageUtil::getProfilePicURL($feedObject->getEvent->getCreator())."' height='150' width='150' /></a></div>";
 					echo "<div class='event_self'>";
 					
 					if ($eventModel->isEventCreator($identity, $creator))

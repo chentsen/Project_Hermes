@@ -35,7 +35,7 @@
             </div>
             <div class="event-left">
                 <div class="event_img">
-                 <img src="/img/profile-pic/uid/<?=$this->event->getCreator()->getUid() ?>" height=150  width=150/>
+                 <img src="<?= Application_Model_Utils_ImageUtil::getProfilePicURL($this->event->getCreator()) ?>" height=150  width=150/>
                 </div>
                 <div class="event_self">
                             <?php if ($this->event->getCreator()->getEmail() == $this->identity) {

@@ -9,6 +9,12 @@ body {
 	font-smooth: always;
 }
 
+p {
+	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
+	font-size: 14px;
+        font-weight: 100;
+}
+
 .index, .about, .contact, .privacy {
 	background-color: black;
 	background: url('../images/pt-background.jpg') no-repeat black;
@@ -87,6 +93,7 @@ textarea {
 	float: left;
 	margin-top: 5px;
 	line-height: 13px;
+	margin-left: -1px;
 }
 .errors {
 	color: #FF8600;
@@ -107,6 +114,7 @@ textarea {
 	float: left;
 	font-size: 14px;
 	background-color: #FF7200;
+	color: white;
 }
 .out-signin #errors-email, .out-signin #errors-password {
 	color: #454545;
@@ -393,10 +401,7 @@ margin-bottom: 2px;
     float: right;
 }
 .friend_list {float: left; margin: 12px 14px 2px 14px;}
-.friends_block .view-friends,
-.upcoming_events .view-events {
-	text-align: center;
-}
+
 .upcoming_events {
 	position: relative;
 	background: url('../images/upcoming-events-line.png');
@@ -494,6 +499,7 @@ a.search-name {
     margin: 0px 10px;
     color: #B4BBCD;
 }
+.event result li:nth-of-child()
 .user_addFriend a, .user_viewProfile a {
     font-size: 16px;
     color: #FF8600;
@@ -652,6 +658,16 @@ a.add-friend:hover {
 	
 }
 .index #registration{float: left; }
+.privacy .cms-text {
+    font-size: 16px;
+    overflow: auto;
+    color: #FFFFFF; 
+    padding: 10px 20px 20px 20px;
+    float: left;
+    background-color: rgba(0, 0, 0, 0.85);
+    margin-bottom: 107px !important;
+}
+
 .cms-text {
     font-size: 16px;
     overflow: auto;
@@ -833,6 +849,7 @@ a.add-friend:hover {
 #footer_menu {
    font-size:12px;
    z-index: 10;
+   float: left;
 }
 #footer_menu .page {
     overflow: auto;
@@ -857,12 +874,14 @@ a.add-friend:hover {
 }
 .index #footer_menu .left_footer li,
 .contact #footer_menu .left_footer li,
-.about #footer_menu .left_footer li {
+.about #footer_menu .left_footer li,
+.privacy #footer_menu .left_footer li {
 	color: #FFFFFF;
 }
 .index #footer_menu .left_footer li a,
 .contact #footer_menu .left_footer li a,
-.about #footer_menu .left_footer li a{
+.about #footer_menu .left_footer li a,
+.privacy #footer_menu .left_footer li a {
 	color: #FFFFFF;
 }
 #footer_menu .left_footer li{
@@ -1160,7 +1179,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	font-size: 10px;
 	line-height: 10px;
 	padding: 2px;
-	margin: 2px 0px 0px 3px;
+	margin: 2px 0px 0px 8px;
 }
 
 .profile_eventList .own-event {
@@ -1178,7 +1197,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
 	margin-top: 5px;
 	font-size: 14px;
 	color: #FF8600;
-	margin: 0 0 0 3px;
+	margin: 0 0 0 8px;
 }
 .right_col {
     overflow: auto;

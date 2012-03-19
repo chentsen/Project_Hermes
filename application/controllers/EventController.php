@@ -88,6 +88,7 @@ class EventController extends Hermes_Controller_Wall_WallController
 		$data['success'] = true;
 		$data['msg'] = 'You successfully added '.$user->getFirstName().' to the event.';
     		$data['uid'] = $user->getUid();
+		$data['imgSrc'] = Application_Model_Utils_ImageUtil::getProfilePicURL($user);
 		$data['firstName'] = $user->getFirstName().' '.substr($user->getLastName(),0,1) . ".";
     	}else if($this->identity==$event->getCreator()->getEmail() && $response == "n"){
     		$data['success'] = true;
