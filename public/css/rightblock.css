@@ -5,7 +5,7 @@
 }
 
 .block-body .friend_list {
-    margin: 0px 7px 7px 0px;
+    margin: 2px 7px 5px 0px;
     width: 30px;
     height: 30px;
 }
@@ -101,7 +101,7 @@
 
 .notifications_block .notification-object,
 .event-list ul.event-object {	
-    margin: 7px 0px 10px 4px !important;
+    margin: 0px 0px 10px 4px !important;
 }
 .notifications_block .notification-object {
     overflow: hidden;

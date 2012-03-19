@@ -381,7 +381,7 @@ margin-bottom: 2px;
 #friendsList ul {
 	overflow: hidden;
 	width: 260px;
-	margin: 0 auto 5px auto;
+	margin: 7px auto 5px auto;
 }
 .friends-title {
 	background: url('../images/friends-all-line.png');
@@ -1151,7 +1151,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     min-height: 400px;
 }
 .eventFeedObject, .generalFeedObject {
-    padding: 6px 0px 6px 2px;
+    padding: 0px 0px 6px 2px;
     overflow: hidden;
 }
 
@@ -1919,10 +1919,11 @@ ul.as-selections {
 	position: relative;
 	background: url('../images/attending-line.png');
 	background-repeat: no-repeat;
-	background-position: 112px 13px;
+	background-position: 90px 8px;
 	margin: 10px 0px;
 	float: left;
 	width: 150px;
+	font-size: 18px;
 }
 .attendingList {
 	margin-top: 5px;
@@ -2030,9 +2031,10 @@ ul.as-selections {
     position: relative;
     background: url('../images/event-wall-line.png');
     background-repeat: no-repeat;
-    background-position: 60px 13px;
+    background-position: 45px 8px;
     float: left;
     width: 410px;
+    font-size: 18px;
 }
 .event_wall .wall_image {
     position: relative;
