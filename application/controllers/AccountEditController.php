@@ -64,12 +64,12 @@ class AccountEditController extends Hermes_Controller_SessionController
     		if($form->image->isUploaded()){
 		    $filePath = $_FILES['image']['tmp_name'];
 		    $pathInfo = pathinfo($filePath);
-		    echo $filePath;
+		   // echo $filePath;
 		    
 		    //print_r($pathInfo);
 		    $type = explode('/',$_FILES['image']['type']);
 		    //$extension = str_replace('/','',$_FILES['image']['type']);
-		    $image_name = 'profile_pic_'.$this->curUser->getUid().'.'.$type[1];
+		    $image_name = 'profile_pic_'.$this->curUser->getUid().'.jpeg';
 		    //echo $image_name;
 		    Application_Model_ImageModel::scaleImage($filePath,300,300,'/image/profile/'.$image_name,$type[1]);
 		    /*
