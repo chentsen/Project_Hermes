@@ -4,6 +4,7 @@ $imgPath = Application_Model_Utils_ImageUtil::getProfilePicURL($this->curUser);
 ?>
 <div id="view-content">
     <div class="view-wrapped">
+        <?=$this->DisplayFlashMessages($this->flashMessages); ?>
 <div class="top-block">
     <div class="upload-image float_left">
 <h1>Upload picture</h1>
