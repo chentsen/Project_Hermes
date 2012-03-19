@@ -10,7 +10,7 @@ var Event = {
                     $().toastmessage('showSuccessToast', data.msg);
                     var returnAjax = $('.attending-list-ajax .attending-item').clone();
                     returnAjax.find('.attending-item').addClass('attending-item-'+data.uid);
-                    returnAjax.find('img').attr('src','/img/profile-pic/uid/'+data.uid);
+                    returnAjax.find('img').attr('src',data.imgSrc);
                     returnAjax.find('a').attr('href','/profile/public/uid/'+data.uid);
                     returnAjax.find('.attending-details #attending_profile').text(data.firstName);
                     $('.attendingList').append(returnAjax);
