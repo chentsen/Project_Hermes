@@ -119,29 +119,7 @@ $(document).ready(function(){
       
     }
     ToggleIt('.upcoming_events .block-header', '.upcoming_events .block-body', '.upcoming_events .block-header');
-    ToggleIt('.friends_block .block-header', '.friends_block .block-body', '.friends_block .block-header'); 
-    ToggleIt('.notifications_block .block-header', '.notifications_block .block-body', '.notifications_block .block-header'); 
-           //email 
-           function BgRemove(nClass) {
-                if($(nClass).val())
-                {
-                        $(nClass).focus(function(){
-								$(nClass).addClass('removebg');
-                });
-						$(nClass).blur(function(){
-						 $(nClass).removeClass('removebg');
-						});
-				}
-               
-           }
-		   BgRemove('#email');
-          BgRemove('#firstName');
-          BgRemove('#lastName');
-          BgRemove('#city');
-		  BgRemove('#password');
-		  BgRemove('#password2');
-          BgRemove('#betakey');
-          
+    ToggleIt('.friends_block .block-header', '.friends_block .block-body', '.friends_block .block-header');           
 
 		 
       /** disable highlights ***/
