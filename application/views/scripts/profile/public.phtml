@@ -8,7 +8,7 @@ $gender = ($this->user->getGender() == 'n') ? '':($this->user->getGender().',');
         <div class="view-wrapped">
 		<div class="profile_leftCol">
 			<div class="profile_image">
-				<img src="/img/profile-pic/uid/<?=$this->user->getUid();?>" height="180" width="180" />
+				<img src="<?=Application_Model_Utils_ImageUtil::getProfilePicURL($this->user);?>" height="180" width="180" />
 			</div>
 			<div class="profile-events-header">
 				<h4>Events</h4>

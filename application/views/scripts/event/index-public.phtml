@@ -11,7 +11,7 @@
 	    </div>
 	    <div class="event-left">
 		<div class="event_img">
-		    <img src="/img/profile-pic/uid/<?=$this->eventCreator->getUid() ?>" height=150  width=150/>
+		    <img src="<?=Application_Model_Utils_ImageUtil::getProfilePicURL($this->eventCreator) ?>" height=150  width=150/>
 		</div>
 	    <?= $this->partial('attendingList.phtml',array('event'=>$this->event,'identity'=>$this->identity,'didRequest'=>$this->didRequest,'eid'=>$this->eid, 'curUser'=>$this->curUser, 'isEventExpired'=>$this->isEventExpired)); ?>
 	    </div>

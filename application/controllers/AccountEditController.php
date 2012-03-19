@@ -5,7 +5,9 @@ class AccountEditController extends Hermes_Controller_SessionController
 
     public function init()
     {
-        
+        if($this->_helper->FlashMessenger->hasMessages()){
+			$this->view->flashMessages = $this->_helper->FlashMessenger->getMessages();
+	}
         parent::init();
      
         $this->view->identity = $this->identity;
@@ -64,14 +66,19 @@ class AccountEditController extends Hermes_Controller_SessionController
     		if($form->image->isUploaded()){
 		    $filePath = $_FILES['image']['tmp_name'];
 		    $pathInfo = pathinfo($filePath);
-		    echo $filePath;
+		   // echo $filePath;
 		    
 		    //print_r($pathInfo);
 		    $type = explode('/',$_FILES['image']['type']);
 		    //$extension = str_replace('/','',$_FILES['image']['type']);
-		    $image_name = 'profile_pic_'.$this->curUser->getUid().'.'.$type[1];
+		    $image_name = 'profile_pic_'.$this->curUser->getUid().'.jpeg';
 		    //echo $image_name;
+		    $this->_helper->flashMessenger->addMessage("Image uploaded! It may take some time to update.");
 		    Application_Model_ImageModel::scaleImage($filePath,300,300,'/image/profile/'.$image_name,$type[1]);
+		    $this->_redirect('/account-edit');
+		    
+		    //return image path
+		    //return json_encode(array('path'=>Application_Model_Utils_ImageUtil::getProfilePicURL($this->curUser)));
 		    /*
 	    		$imageModel = new Application_Model_ImageModel($this->curUser);
 			

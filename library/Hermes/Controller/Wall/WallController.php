@@ -38,6 +38,7 @@ abstract class Hermes_Controller_Wall_WallController extends Hermes_Controller_S
 			$wallPostA['message'] = $wallPost->getMessage();
 			$wallPostA['postID'] = $wallPost->getPostID();
 			$wallPostA['uid'] = $poster->getUid();
+			$wallPostA['imgSrc'] = Application_Model_Utils_ImageUtil::getProfilePicURL($poster);
 			if($poster->getEmail() == $this->curUser->getEmail())
 				$wallPostA['isPoster'] = true;
 			else

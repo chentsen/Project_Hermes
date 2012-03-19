@@ -53,24 +53,24 @@ class Application_Model_ImageModel extends Application_Model_BaseModel{
 	    
 		    // Generate source image depending on file type
 		    switch ($ext) {
-		    case "jpg":
-		    case "jpeg":
-			$sourceImage = imagecreatefromjpeg($source);
-			break;
-		    case "gif":
-			$sourceImage = imagecreatefromgif($source);
-			break;
-		    case "png":
-			$sourceImage = imagecreatefrompng($source);
-			break;
+			case "jpg":
+			case "jpeg":
+			    $sourceImage = imagecreatefromjpeg($source);
+			    break;
+			case "gif":
+			    $sourceImage = imagecreatefromgif($source);
+			    break;
+			case "png":
+			    $sourceImage = imagecreatefrompng($source);
+			    break;
 		    }
-	    
+			
 		    imagecopyresampled($newImage, $sourceImage, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
 	    
 		    // Output file depending on type
 		
 		
-			imagejpeg($newImage, $destination);
+		imagejpeg($newImage, $destination);
 			
 		
 		}
