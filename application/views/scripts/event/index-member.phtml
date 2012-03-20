@@ -3,7 +3,7 @@ $this->headScript()->appendFile($this->baseUrl('js/wall.js'));
 $eid = $this->event->getEid();
 ?>
 
-<?= $this->partial('eventInfo.phtml',array('event'=>$this->event,'identity'=>$this->identity, 'indexMember'=>$this->indexMember, 'isEventExpired'=>$this->isEventExpired)); ?>
+<?= $this->partial('eventInfo.phtml',array('event'=>$this->event,'identity'=>$this->identity, 'indexMember'=>$this->indexMember, 'isEventExpired'=>$this->isEventExpired, 'didRequest'=>$this->didRequest, 'curUser'=>$this->curUser)); ?>
 
 </div>
 </div>
