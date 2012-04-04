@@ -108,7 +108,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 
                         //echo '<div class="indiv-result" style="">';
 						echo "<a href='/profile/public/uid/{$uid}'>";
-						echo '<img src="'.Application_Model_Utils_ImageUtil::getProfilePicURL($uid).'" height=75  width=75 /> </a>';
+						echo '<img src="'.Application_Model_Utils_ImageUtil::getProfilePicURL($user->result).'" height=75  width=75 /> </a>';
 						echo "<div class='user-info'>
 								<a class='search-name' href = '/profile/public/uid/{$uid}'>{$user->result->getFirstName()} {$user->result->getLastName()}</a>
 								<div class='search-city'>{$user->result->getCity()}</div>
