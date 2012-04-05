@@ -39,7 +39,7 @@ class Zend_View_Helper_DisplaySearchResults extends Zend_View_Helper_Abstract{
 		$returnString = ' ';
 		echo "<li class = 'event_result'>";
 		echo "<a href = '/event/index/eid/{$event->result->getEid()}'>";
-		echo "<img src='".Application_Model_Utils_ImageUtil::getProfilePicURL($event->result->getCreator()->getUid())."' height=75  width=75 /> </a>";
+		echo "<img src='".Application_Model_Utils_ImageUtil::getProfilePicURL($event->result->getCreator())."' height=75  width=75 /> </a>";
 		echo "<div class='user-info'>
 				<a class='search-name' href = '/event/index/eid/{$event->result->getEid()}'>{$event->result->getCreator()->getFirstName()} wants to ".$event->result->getShortDescription()."</a>
 				<div class='search-city'>{$event->result->getCreator()->getCity()}</div>
