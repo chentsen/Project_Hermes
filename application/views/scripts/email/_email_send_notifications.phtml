@@ -1,39 +1,7 @@
-<table style="background: #FFFFFF;">
-    <tr><td>
-    
-    <table cellpadding="0" cellspacing="0" style=" width: 700px; margin: 0 auto;">
-        <tr>
-        <td >
-            <a style="float:left; width: 240px;" href="http://plumetype.com">
-                <img style="width: 240px; height: 55px" src="http://plumetype.com/images/plumetype-flat.png" />
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-		<p style="font-family: 'myriad pro', Arial, Helvetica Neue, Helvetica, sans-serif: 14px;
-					background: #FFFFFF;
-					margin: 0px 0px 0px 0px;">
-                <p style="margin: 20px 0px 0px 0px !important;">Hi,</p>
-                <br />
-		<p>Your friend <span style="color: #FF8600";><?= $this->inputs['yourName'] ?></span> has created a new <span style="color:#FF8600";><?= $this->inputs['private'] ?></span> event:</p>
-                <br />
-        <h4 style="padding: 0px; margin: 0px 0px 5px 0px; color: #000000 !important; font-size: 14px !important;">Event: <?= $this->inputs['shortDescription'] ?></h4>
-        <h4 style="padding: 0px; margin: 0px 0px 5px 0px; color: #000000 !important; font-size: 14px !important;">Location: <?= $this->inputs['location'] ?></h4>
-        <h4 style="padding: 0px; margin: 0px 0px 5px 0px; color: #000000 !important; font-size: 14px !important;">Date: <?= $this->inputs['date'] ?></h4>
-        <br />
-		Click here for more details.
-        
-                <br /><br />
-                Sincerely,
-                    <br />
-                <a href="http://www.plumetype.com" style="color: #FF8600 !important;">PlumeType</a>
-	        
-        </p>
-        </td>
-    </tr>
-
-    </table>
-    
-    </td></tr>
-</table>
+<?php
+	$stringInjection = "Your friend".$this->inputs['theirName']."has created a new event:<br/>
+						Event:". $this->inputs['shortDescription']."<br/>
+						Location:" .$this->inputs['location']. "<br/>
+						Date:" .$this->inputs['date']. "<br/>";
+?>
+<?= $this->partial('emailTemplate.phtml', array('name'=>$this->inputs['name'], '$stringInjection'=>$stringInjection))?>

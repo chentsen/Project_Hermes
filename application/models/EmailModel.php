@@ -45,8 +45,8 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 			$mail->addHeader('X-Mailer:', 'PHP/'.phpversion());
 			$mail->setBodyHtml($htmlBody);
 			$mail->setFrom('no-reply@plumetype.com', 'Plumetype.com');
-			if($identity)
-				$mail->addTo($identity);
+
+			$mail->addTo($identity);
 			if($emails) {
 				foreach($emails as $email){
 					//echo 'EMAIL IS'.$email;
@@ -60,23 +60,27 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
     }
 	public function sendEmailNotification ($raw, $user, $emailHelper, $identity, $subject, $email) {
 		
+		
 		//redo this use recursion or iterative
 		$dateArray = explode('/',$raw['createEvent_date']);
 		$date = new DateTime();	
 		$date->setDate($dateArray[2],$dateArray[1],$dateArray[0]);
 		$dateString = $date->format('M d, Y');
 		$private = (($raw['createEvent_private'] == 'y') ? "private" : "public");
-		$fullName = $user->getFirstName() . " " . $user->getLastName();
+		$theirName = $user->getFirstName() . " " . $user->getLastName();
 		
+		foreach($email as $indivEmails) {
+		$emailUser = $dm->getRepository('Documents\User')->findOneBy(array('email'=>$indivEmails));
 		$htmlBody = $emailHelper->GenerateEmail('_email_send_notifications.phtml',
-											 array('yourName'=>$user->getFirstName(),
-																			'name'=>$fullName,
+											 array('name'=>$indivEmails->getFirstName(),
+																			'theirName'=>$fullName,
 																			'location'=>$raw['createEvent_location'],
 																			'shortDescription'=>$raw['createEvent_shortDescription'],
 																			'date'=>$dateString,
 																			'private'=>$private
 																			));
-		$this->sendEmail($subject, $email, $htmlBody);
+		$this->sendEmail($subject, null, $htmlBody, $indivEmails);
+		}
 	
 	}
 	public function sendPasswordReset($newPassword, $emailHelper, $identity, $subject) {
