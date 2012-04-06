@@ -10,15 +10,11 @@ class PasswordResetController extends Zend_Controller_Action
 		}
     	$bootstrap = $this->getInvokeArg('bootstrap');
     	$this->mongoContainer = $bootstrap->getResource('DoctrineMongoContainer');
-    	
-		//$this->userSettings = new Application_Model_UserSettings($this->mongoContainer);
-    	/* Initialize action controller here */
         $this->dm = Zend_Registry::get('Wildkat\DoctrineContainer')->getDocumentManager('default');
     	$this->url = Zend_Registry::get('config')->siteInformation->url;
         
         
     }
-
     public function indexAction()
     {
         $form = new Application_Form_PasswordReset();
@@ -30,8 +26,7 @@ class PasswordResetController extends Zend_Controller_Action
         
         $form = new Application_Form_PasswordReset();
         $user = $this->dm->getRepository('Documents\User')->findOneBy(array('email'=>$_POST['email']));
-        
-        //move into index
+
         if($user) {
             if ($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())) {
                 if(!$user->getIsFBAccount()){

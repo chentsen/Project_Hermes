@@ -36,7 +36,7 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
         }
         
     }
-    public function sendEmail($subject, $emails = null, $htmlBody, $identity)
+    public function sendEmail($subject, $emails = null, $htmlBody, $identity = null)
     {        
 			$mail = new Zend_Mail();
 			$mail->setReplyTo('no-reply@plumetype.com', 'Plumetype');
@@ -44,20 +44,23 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 			$mail->addHeader('Content-Transfer-Encoding', '8bit');
 			$mail->addHeader('X-Mailer:', 'PHP/'.phpversion());
 			$mail->setBodyHtml($htmlBody);
-			$mail->setFrom('no-reply@plumetype.com', 'Plumetype Friend Feed');
-			$mail->addTo($identity);
+			$mail->setFrom('no-reply@plumetype.com', 'Plumetype.com');
+			if($identity)
+				$mail->addTo($identity);
 			if($emails) {
 				foreach($emails as $email){
-					echo 'EMAIL IS'.$email;
+					//echo 'EMAIL IS'.$email;
 					$mail->addBcc($email);
 				}
 			}
 			$mail->setSubject($subject);
 			$mail->send();  
 			
-			
+			//redo this one too
     }
 	public function sendEmailNotification ($raw, $user, $emailHelper, $identity, $subject, $email) {
+		
+		//redo this use recursion or iterative
 		$dateArray = explode('/',$raw['createEvent_date']);
 		$date = new DateTime();	
 		$date->setDate($dateArray[2],$dateArray[1],$dateArray[0]);
@@ -73,7 +76,7 @@ class Application_Model_EmailModel extends Application_View_Helper_DisplayFeed{
 																			'date'=>$dateString,
 																			'private'=>$private
 																			));
-		$this->sendEmail($subject, $email, $htmlBody, $identity);
+		$this->sendEmail($subject, $email, $htmlBody);
 	
 	}
 	public function sendPasswordReset($newPassword, $emailHelper, $identity, $subject) {

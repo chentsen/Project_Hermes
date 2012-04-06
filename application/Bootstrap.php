@@ -3,6 +3,10 @@ use Wildkat\Application\Container\DoctrineContainer;
 require_once "Zend/Cache.php";
 class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
+	protected function _initRequest() {
+		$this->bootstrap('FrontController');
+		$front = $this->getResource('FrontController');
+	}
 	protected function _initDoctype()
     {
     $this->bootstrap('view');

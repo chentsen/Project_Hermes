@@ -2,7 +2,8 @@
 class Zend_View_Helper_DisplayFriends extends Zend_View_Helper_Abstract{
 	//eventually incorporate pagination
 	private $friendRelation;
-	public function DisplayFriends($identity){
+
+	public function DisplayFriends($identity, $baseUrl){
 		$this->friendRelation = new Application_Model_FriendRelation($identity);
 		if($this->friendRelation){
 			$list = $this->friendRelation->getFriendList();
@@ -16,7 +17,7 @@ class Zend_View_Helper_DisplayFriends extends Zend_View_Helper_Abstract{
                                         echo '<li class="friend_list"><div class="friend_pic">';
                                         echo "<a class='friend-tooltip'  href='/profile/public/uid/{$friend->getUid()}'>";
 
-                                        echo "<img src='".Application_Model_Utils_ImageUtil::getProfilePicURL($friend)."' height=30  width=30
+                                        echo "<img src='".$baseUrl.Application_Model_Utils_ImageUtil::getProfilePicURL($friend)."' height=30  width=30
 										title='{$friend->getFirstName()} ".substr($friend->getLastName(),0,1).".'/></a></div>";
 
 					echo '</li>';

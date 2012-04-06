@@ -39,7 +39,7 @@ class EventCreationController extends Hermes_Controller_SessionController{
 					//should just do return
 					
 					$subject= "Your friend has created an event";
-
+					
 					$this->eventEmail->sendEmailNotification($raw, $this->curUser, $this->_helper->GenerateEmail, $this->identity, $subject, $emails);
 					
 	    			$this->_helper->flashMessenger->addMessage("You have successfully created your event.");
