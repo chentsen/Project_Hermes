@@ -7,7 +7,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-font-smoothing: antialiased;
 	font-smooth: always;
-}
+} 
 .index, .about, .contact, .privacy {
 	background-color: black;
 	background: url('../images/pt-background.jpg') no-repeat;
