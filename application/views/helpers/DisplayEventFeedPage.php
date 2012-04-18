@@ -47,10 +47,8 @@ class Zend_View_Helper_DisplayEventFeedPage extends Application_View_Helper_Disp
                
             }*/
 		    $date = new DateTime();
-		
-	
-            
-            if($feedObject->getEvent())
+			
+			if($feedObject->getEvent())
                 {
 					echo "<div class='event_main'>";
 					echo "<div class='event_right'>";

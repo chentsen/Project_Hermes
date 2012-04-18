@@ -8,7 +8,7 @@ body {
 	-moz-font-smoothing: antialiased;
 	font-smooth: always;
 }
-
+a { color: #FF8600; }
 p {
 	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 14px;

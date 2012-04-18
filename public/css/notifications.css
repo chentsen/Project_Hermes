@@ -33,11 +33,11 @@
 }
 .notification .individual-object a {
     display: inline;
-    color: #000000;
 }
 .notification .individual-object a:hover {
     display: inline;
     color: #FF8600;
+	text-decoration: underline;
 }
 .notification .view-notifications {
     display: none;

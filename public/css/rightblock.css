@@ -37,7 +37,6 @@
     height: 100%;
 }
 .right-block a {
-    color: #000000;
     width: 100%;
     display: block;
     font-size: 14px;
@@ -45,6 +44,7 @@
 
 .right-block a:hover {
     color: #ff8600;
+	text-decoration: underline;
 }
 
 .block-item h3 {

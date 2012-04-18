@@ -15,11 +15,10 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 		if( $eventFeedModel->getFeed()){
 			 $feed = $eventFeedModel->getFeed();
 			 $feedObjects = $feed->getFeedObjects();
-			 $length = ($length) ? $length : count($feedObjects);
 			 $display_length = min(count($feedObjects),$length);
 			 
-			 for($i = 0; $i < $display_length ; $i++){
-				$feedObject = $feedObjects[$display_length - $i - 1];
+			 for($i = 0; $i < count($feedObjects); $i++){
+				$feedObject = $feedObjects[$i];
 				
 				$date = new DateTime();				
 				$date->modify('-1 day');
@@ -38,12 +37,10 @@ class Zend_View_Helper_DisplayEventFeed extends Application_View_Helper_DisplayF
 			 	echo "</li>";
 			 }		
 		}
-		if($i >= $length && $length > 4)
-			$html = '<a class="view-events" href="/event-list">View all events</a>';
-		if($i == 0 && $length > 4)
+		
+		if($i == 0)
 			$html = '<a class="so-ronery">You have no events right now.</a>';
-		else if ($i == 0 && $length <4)
-		   $html = 'Not attending any events yet.';
+		
 		echo $html;
 		echo "</ul>";
 	}
