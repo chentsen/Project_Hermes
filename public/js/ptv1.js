@@ -141,18 +141,18 @@ $(document).ready(function(){
     $('.noSelect').disableTextSelect();
     //*** end disable function
     //Non Modal Input fields
-	if (window.location.pathname.match(/^\/password-reset\//)) {
+	if (window.location.pathname.match(/^\/password-reset/)) {
 	  $('#email').defaultText({text: 'Email'});
-	} else if (window.location.pathname.match(/^\/password-change\//)) {
+	} else if (window.location.pathname.match(/^\/password-change/)) {
 	  $('#originalPassword').defaultText({text: 'Original Password'});
 	  $('#password').defaultText({text: 'New Password'});
 	  $('#password2').defaultText({text: ' New Password Again'});
-	}  else if (window.location.pathname.match(/^\/contact\//)) {
+	}  else if (window.location.pathname.match(/^\/contact/)) {
 		 $('#email').defaultText({text: 'Email'});
 		 $('#name').defaultText({text: 'Name'});
 		 $('#subject').defaultText({text: 'Subject'});
 		 $('#text').defaultText({text: 'Your Text'});
-	} else if (window.location.pathname=='/' || window.location.pathname.match(/^\/index\//)){
+	} else if (window.location.pathname=='/' || window.location.pathname.match(/^\/index/)){
        $('#email').defaultText({text: 'Email'});
     	  $('#password').defaultText({text: 'Password'});
 	}

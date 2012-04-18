@@ -25,7 +25,7 @@
 					  </ul>
                 </li>
                 <li class="notifications-button">
-                  <a href="<?= $this->url(array('controller'=>'notification','action'=>'index')) ?>">
+                  <a href="<?= $this->url(array('controller'=>'notification','action'=>'index'), null, true) ?>">
                       <img height="40" src="<?= $this->baseUrl('images/notifications-icon.png') ?>" title="Notifications"/></a>
                 </li>
                  <li class="settings-button">
@@ -33,7 +33,7 @@
                      <img height="40" src="<?= $this->baseUrl('images/settings.png') ?>" title="Settings"/>
                    
                      <ul class="sub-settings">
-                         <li class="first-setting"><a href="<?= $this->url(array('controller'=>'account-edit','action'=>'index')) ?>">Edit Account Info</a></li>
+                         <li class="first-setting"><a href="<?= $this->url(array('controller'=>'account-edit','action'=>'index'), null, true) ?>">Edit Account Info</a></li>
                          <li class="last-setting"><a onclick = "Login.logout()"/>Logout</a></li>
                      </ul>
                  </li>
