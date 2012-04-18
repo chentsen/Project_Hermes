@@ -1,7 +1,7 @@
 body { 
 	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 14px;
-        font-weight: 100;
+    font-weight: 100;
 	background-color: white;
 	color: #000000;
 	-webkit-font-smoothing: antialiased;
@@ -12,7 +12,7 @@ body {
 p {
 	font-family: "myriad pro",Arial, Helvetica Neue, Helvetica, sans-serif;
 	font-size: 14px;
-        font-weight: 100;
+	font-weight: 100;
 }
 
 .index, .about, .contact, .privacy {
@@ -44,7 +44,7 @@ select {
 }
 #editAccount textarea {
         width: 190px;
-	font-size: 18px; 
+		font-size: 18px; 
         background: #ffffff;
         outline: 0;
         padding: 5px;    
@@ -567,14 +567,9 @@ a.add-friend:hover {
     color: #454545;
 }
 /*** about us ***/
-.prepend-logo,.questionmark {
-	font-size: 57px;
-	line-height: 46px;
-	float: left;
-	color: #FFFFFF;
-}
+
 .about-logo {
-	margin: 30px 0px 20px 255px;
+	margin: 30px 0px 20px 0px;
 	float: left;
 	width: 960px;
 }
@@ -590,7 +585,7 @@ a.add-friend:hover {
     height: 70px;
     text-indent: -9999px;
 }
-.prepend-logo {margin-right: 12px;}
+
 .about-text {
 	display: block;
 	width: 960px;
@@ -642,32 +637,16 @@ a.add-friend:hover {
     float: right;
     padding: 0 0 2px 0px;
 }
-.privacy #footer_menu {
-	
-}
-.contact #footer_menu {
-	
-}
-.about #footer_menu {
-	
-}
-.index #registration{float: left; }
-.privacy .cms-text {
-    font-size: 16px;
-    overflow: auto;
-    color: #FFFFFF; 
-    padding: 10px 20px 20px 20px;
-    float: left;
-    background-color: rgba(0, 0, 0, 0.85);
-    margin-bottom: 107px !important;
-}
 
+.index #registration{float: left; }
+
+.out-signin .errors li { width: 150px; margin-top: 30px}
 .cms-text {
+		min-height: 454px;
     font-size: 16px;
     overflow: auto;
     color: #FFFFFF; 
     padding: 10px 20px 20px 20px;
-    float: left;
     background-color: rgba(0, 0, 0, 0.85);
 }
 .out-logo {
@@ -840,21 +819,17 @@ a.add-friend:hover {
 .fb_like{
     width: 100px;
 }
-.custom .outside #footer_menu {
-	font-size:12px;
-   z-index: 10;
-   float: left;
+#footer-container {
+		width: 960px;
+		margin: 0 auto;
 }
 #footer_menu {
+		height: 32px;
    font-size:12px;
    z-index: 10;
-   float: left;
-   margin-left: 120px;
-}
-#footer_menu .page {
-    overflow: auto;
-    margin-bottom: 0px;
-    padding-bottom: 0px;
+   
+   width: 100%;
+   
 }
 #footer_menu .right_footer li {
     display: inline;
@@ -1487,7 +1462,7 @@ html .icon_bar ul li .sub-settings .last-setting a{
     margin-left: 255px;
 }
 .contact-logo {
-	margin: 30px 0px 20px 260px;
+	margin: 30px 0px 20px 0px;
 	float: left;
 	width: 960px;
 }
@@ -1504,15 +1479,8 @@ html .icon_bar ul li .sub-settings .last-setting a{
     text-indent: -9999px;
 }
 /**** PRIVACY PAGE ****/
-.privacy .questionmark {
-	font-size: 57px;
-	line-height: 43px;
-	float: left;
-	color: #FFFFFF;
-	margin-left: 12px;
-}
 .privacy-logo {
-	margin: 30px 0px 20px 185px;
+	margin: 30px 0px 20px 0px;
 	float: left;
 	width: 960px;
 }

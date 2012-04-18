@@ -1,18 +1,12 @@
-<?php $auth = Zend_Auth::getInstance();
-        if(!$auth->hasIdentity()){ ?>
-
-<div class="privacy-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1><h1 class="questionmark">privacy policy</h1></div>
-
-<?php } else { ?>
+<div class="privacy-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
 <h1 class="cms-title">Privacy</h1>
-<?php } ?>
     <?= $this->Errors($this->errors); ?>
     <p>
         <?=$this->DisplayFlashMessages($this->flashMessages); ?>
     </p>
     
    
-    <div class="cms-text" style="margin-bottom: 60px;">
+    <div class="cms-text">
     <p>(You = the user, We = PlumeType)
 <br/>
 <p>We collect all data input onto the site. This includes: any personal information you choose to share, your tags and any text written. </p>

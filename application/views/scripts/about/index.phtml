@@ -1,40 +1,25 @@
-<?php $auth = Zend_Auth::getInstance();
-        if(!$auth->hasIdentity()){ ?>
-
 <div class="about-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
-
-<?php } else { ?>
 <h1 class="cms-title">About Us</h1>
-<?php } ?>
-
     <?= $this->Errors($this->errors); ?>
     <p>
         <?=$this->DisplayFlashMessages($this->flashMessages); ?>
     </p>
-    
-
-    <div class="cms-page">
-        <div class="cms-text"><p>We've always felt that making friends (both online and offline) is a tricky task. In real life, it's hard to find people you genuinely connect with. You'd have to make a real effort to socialize and go out in order to even get a shot at these connections. 
-    </p><br/>
-    <p>With the internet, it's relatively easier to find people who share your interests. But what happens after you find someone? You communicate through IM a couple of times and maybe meet up after a few months if you're lucky. Online meetings come with so many barriers: people are wary of strangers, you'll have conflicting schedules, and you're often restricted by your locations.
-        </p><br/>
-        <p>
-We believe that by streamlining the whole process, from finding someone to meeting up with them, we can make it easier for you to create new friendships.  With PlumeType, it takes 3 steps: 
-        </p></div>
-        <div class="about-text">
-        <div class="guide-one">
-                <h2>List your interests</h2>        
+        <div class="cms-text">
+                <p>
+                        We've always felt that making friends (both online and offline) is a tricky task. In real life, it's hard to find people you genuinely connect with. You'd have to make a real effort to socialize and go out in order to even get a shot at these connections. 
+                </p>
+                <br/>
+                <p>
+                        With the internet, it's relatively easier to find people who share your interests. But what happens after you find someone? You communicate through IM a couple of times and maybe meet up after a few months if you're lucky. Online meetings come with so many barriers: people are wary of strangers, you'll have conflicting schedules, and you're often restricted by your locations.
+                </p>
+                <br/>
+                <p>
+                        We believe that by streamlining the whole process, from finding someone to meeting up with them, we can make it easier for you to create new friendships.
+                </p>
         </div>
-        <div class="guide-two">
-                <h2>Find events around you</h2>
-        </div>
-        <div class="guide-three">
-                <h2>Go out and have fun</h3>
-        </div>
-    </div>
+     
 <script type="text/javascript">
-    $('.about-logo').prepend('<h1 class="prepend-logo">What is</h1>');
-    $('.about-logo').append('<h1 class="questionmark">?</h1>');
+    
 </script>
 <style type="text/css">
     .right-block {display: none;}

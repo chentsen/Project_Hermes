@@ -80,28 +80,27 @@ class IndexController extends Zend_Controller_Action
 			//$this->view->errors = $form->getMessages();
 			
 		}
-			$this->view->reg = $reg;
-                        
-                        
-                        
-       
-		//$test = new Application_Model_Feed_EventFeedModel();	
-		//$test->testFunction();
-    	$form = new Application_Form_Login();
+		$this->view->reg = $reg;
+
+		$postEmail = array('postedEmail'=>$this->_getParam('postedEmail'));
+    	$form = new Application_Form_Login($postEmail);
     	$this->view->form = $form;
+	
 		
     	if($this->getRequest()->isPost() && $form->isValid($this->_request->getPost())){
     		$authenticated = $this->userSettings->authenticateUser($_POST['email'], $_POST['password']);
-    		
+    	
     		if($authenticated){
     			$this->_helper->redirector('index','profile');
     			//$this->view->message = "SUCCESS";
     			//redirect to login page
     		}
     		else{
-			$this->_helper->flashMessenger->addMessage("Your email and/or password were not recognized. Please try again..");
-			$this->_helper->redirector('index','index');
-    			$this->view->errors = array("emailExists"=>array("Your email and/or password were not recognized. Please try again."));
+				$this->_helper->flashMessenger->addMessage("Your email and/or password were not recognized. Please try again..");
+				$this->_helper->redirector('index', 'index', null, array('postedEmail'=>$_POST['email']));
+				
+			
+				//$this->view->errors = array("emailExists"=>array("Your email and/or password were not recognized. Please try again."));
     			return;
     		}
     	}
@@ -109,9 +108,8 @@ class IndexController extends Zend_Controller_Action
     		//$this->view->errors = $form->getMessages();
 			
     	}
-    	$this->view->form = $form;
-    	// action body
-        
+		$this->view->form = $form;
+		
     }
     public function ajaxformAction()
 	{

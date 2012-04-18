@@ -1,11 +1,5 @@
-<?php $auth = Zend_Auth::getInstance();
-        if(!$auth->hasIdentity()){ ?>
-
 <div class="contact-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
-
-<?php } else { ?>
 <h1 class="cms-title">Contact Us</h1>
-<?php } ?>
     <?= $this->Errors($this->errors); ?>
     <p>
         <?=$this->DisplayFlashMessages($this->flashMessages); ?>
@@ -17,7 +11,7 @@
     <?= $this->form ?>
     </div>
 <script type="text/javascript">
-    $('.contact-logo').prepend('<h1 class="prepend-logo">Contact</h1>');
+ 
    
 </script>
 <style type="text/css">

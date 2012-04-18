@@ -68,7 +68,7 @@ class Application_Form_EditAccount extends Zend_Form
   				  ));
 		$hasEmailPerm = new Zend_Form_Element_Checkbox('hasEmailPerm');
 		$hasEmailPerm->setRequired(false)
-						->setValue($options['hasEmailPerm']);
+					->setValue($options['hasEmailPerm']);
 		
 		$submit = new Zend_Form_Element_Submit('submit');
 		$submit->removeDecorator('label')

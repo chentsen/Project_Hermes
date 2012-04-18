@@ -19,12 +19,10 @@
   <?php echo $this->headLink() ?>
 
   <?php $this->headScript()
-          ->appendFile('https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
-          ->appendFile('https://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js')
-         
+          ->appendFile($this->baseUrl('js/jquery/jquery-1.7.2.min.js'))
+          ->appendFile($this->baseUrl('js/jquery/js/jquery-ui-1.8.16.custom.min.js'))
           ->appendFile($this->baseUrl('js/jquery.cookie.js'))
           ->appendFile($this->baseUrl('js/ptv1.js'))
-       
           ->appendFile($this->baseUrl('js/jquery.autoSuggest.js'))
           ->appendFile($this->baseUrl('js/jquery.toastmessage.js'))
           ->appendFile($this->baseUrl('js/tags.js'))
@@ -49,8 +47,6 @@
                 js.src = '//connect.facebook.net/en_US/all.js';
                 d.getElementsByTagName('head')[0].appendChild(js);
             }(document));")
-         
-            //http://code.drewwilson.com/entry/autosuggest-jquery-plugin
     ?>
   
   <?php echo $this->headScript() ?>
