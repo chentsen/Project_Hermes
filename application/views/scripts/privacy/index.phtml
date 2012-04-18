@@ -1,4 +1,9 @@
+<?php $auth = Zend_Auth::getInstance();
+        if(!$auth->hasIdentity()){ ?>
+
 <div class="privacy-logo"><h1 class="thelogo"><a class="logo" href="<?= $this->url(array('controller'=>'index','action'=>'index'));?>">PlumeType</a></h1></div>
+
+<?php } ?>
 <h1 class="cms-title">Privacy</h1>
     <?= $this->Errors($this->errors); ?>
     <p>
