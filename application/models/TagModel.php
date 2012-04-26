@@ -72,7 +72,8 @@ class Application_Model_TagModel{
 		foreach($tagNamesArray as $tagName){
 			if(empty($tagName) || strpos($tagName,'"') || strpos($tagName,'\'') || empty($tagName))
 				continue;
-			$this->addTag($tagName,false,false);			
+			$cleanTagName = preg_replace('/[^a-z0-9]/i', '_', $tagName);
+			$this->addTag($cleanTagName,false,false);			
 		}
 		$this->dm->flush();
 		return true;
